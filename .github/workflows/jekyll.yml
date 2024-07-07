@@ -42,6 +42,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          external_repository: jayarnim/blog-dist-repo
+          external_repository: jayarnim/jayarnim.github.io
           publish_branch: main
           publish_dir: ./_site
