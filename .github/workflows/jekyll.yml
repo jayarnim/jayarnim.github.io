@@ -18,6 +18,7 @@ jobs:
           repository: username/blog-docs-repo
           path: docs
           token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          ref: main
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
