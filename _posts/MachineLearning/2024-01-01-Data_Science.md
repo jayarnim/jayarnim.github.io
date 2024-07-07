@@ -9,7 +9,8 @@ image:
   path: /img/MachineLearning/Thumbnail.jpg
 ---
 
-# Data-Driven Decision Making
+## Data-Driven Decision Making
+-----
 
 ### 데이터 기반 의사결정
 
