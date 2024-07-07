@@ -6,7 +6,7 @@ categories: [Artificial Intelligence, Machine Learning]
 tags: [writing]
 math: true
 image:
-  path: /img/MachineLearning/Thumbnail.jpg
+  path: /_post_refer_img/MachineLearning/Thumbnail.jpg
 ---
 
 ## Data-Driven Decision Making

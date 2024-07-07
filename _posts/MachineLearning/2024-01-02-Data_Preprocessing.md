@@ -6,13 +6,13 @@ categories: [Artificial Intelligence, Machine Learning]
 tags: [writing]
 math: true
 image:
-  path: /img/MachineLearning/Thumbnail.jpg
+  path: /_post_refer_img/MachineLearning/Thumbnail.jpg
 ---
 
 ## Data Preprocessing
 -----
 
-![01](/img/MachineLearning/02-01.jpg){: width="100%"}
+![01](/_post_refer_img/MachineLearning/02-01.jpg){: width="100%"}
 
 - **정의** : 데이터를 분석에 사용할 수 있는 형식의 데이터로 만드는 일련의 과정
 
@@ -71,7 +71,7 @@ image:
 
 - **이상치의 탐지** : Turkey Fence 기법
 
-    ![02](/img/MachineLearning/02-02.png){: width="100%"}
+    ![02](/_post_refer_img/MachineLearning/02-02.png){: width="100%"}
 
     $$\begin{aligned}
     Outliers
@@ -85,7 +85,7 @@ image:
 ## Data Transformation
 -----
 
-![03](/img/MachineLearning/02-03.png){: width="100%"}
+![03](/_post_refer_img/MachineLearning/02-03.png){: width="100%"}
 
 ### z-Score 정규화
 
