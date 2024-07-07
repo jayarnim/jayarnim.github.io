@@ -15,7 +15,7 @@ jobs:
       - name: Checkout docs repository
         uses: actions/checkout@v2
         with:
-          repository: username/blog-docs-repo
+          repository: jayarnim/blog-docs-repo
           path: docs
           token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           ref: main
