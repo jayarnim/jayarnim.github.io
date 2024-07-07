@@ -9,7 +9,7 @@ image:
   path: /img/MachineLearning/Thumbnail.jpg
 ---
 
-# 💡 Data-Driven Decision Making
+# Data-Driven Decision Making
 
 -----
 
