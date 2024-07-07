@@ -23,7 +23,7 @@ html {
     }
   }
 
-  font-size: 16px;
+  font-size: 18px;
 }
 
 body {
@@ -514,41 +514,41 @@ main {
   display: inline-flex;
 }
 
-.shimmer {
-  overflow: hidden;
-  position: relative;
-  background: var(--img-bg);
+// .shimmer {
+//   overflow: hidden;
+//   position: relative;
+//   background: var(--img-bg);
 
-  &::before {
-    content: '';
-    position: absolute;
-    background: var(--shimmer-bg);
-    height: 100%;
-    width: 100%;
-    -webkit-animation: shimmer 1.3s infinite;
-    animation: shimmer 1.3s infinite;
-  }
+//   &::before {
+//     content: '';
+//     position: absolute;
+//     background: var(--shimmer-bg);
+//     height: 100%;
+//     width: 100%;
+//     -webkit-animation: shimmer 1.3s infinite;
+//     animation: shimmer 1.3s infinite;
+//   }
 
-  @-webkit-keyframes shimmer {
-    0% {
-      transform: translateX(-100%);
-    }
+//   @-webkit-keyframes shimmer {
+//     0% {
+//       transform: translateX(-100%);
+//     }
 
-    100% {
-      transform: translateX(100%);
-    }
-  }
+//     100% {
+//       transform: translateX(100%);
+//     }
+//   }
 
-  @keyframes shimmer {
-    0% {
-      transform: translateX(-100%);
-    }
+//   @keyframes shimmer {
+//     0% {
+//       transform: translateX(-100%);
+//     }
 
-    100% {
-      transform: translateX(100%);
-    }
-  }
-}
+//     100% {
+//       transform: translateX(100%);
+//     }
+//   }
+// }
 
 .embed-video {
   width: 100%;
@@ -702,7 +702,9 @@ $btn-mb: 0.5rem;
   }
 
   #avatar {
-    display: block;
+    display: flex; /* Flexbox로 변경 */
+    justify-content: center; /* 가로 가운데 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
     width: 7rem;
     height: 7rem;
     overflow: hidden;
@@ -710,6 +712,9 @@ $btn-mb: 0.5rem;
     transform: translateZ(0); /* fixed the zoom in Safari */
 
     img {
+      width: 120%; /* 이미지 크기를 확대 */
+      height: 120%; /* 이미지 크기를 확대 */
+      object-fit: cover; /* 부모 요소에 맞게 확대 */
       transition: transform 0.5s;
 
       &:hover {
