@@ -9,22 +9,19 @@ image:
   path: /img/MachineLearning/Thumbnail.jpg
 ---
 
-# 💡 Naive Bayes
+## Naive Bayes
 -----
 
 - **정의** : 조건부 확률에 기초하여 관측치의 범주를 판별하는 알고리즘
 
-    - **조건부 확률의 이해**
+- **조건부 확률의 이해**
 
-        $$\begin{aligned}
-        P(B|A)
-        &= \frac{P(A,B)}{P(A)}
-        \end{aligned}$$
+    $$\begin{aligned}P(B|A)&= \frac{P(A,B)}{P(A)}\end{aligned}$$
 
-        - $$P(B|A)$$ : 사건 $$A$$ 가 발생한 상태에서 사건 $$B$$ 가 발생할 확률
-        - $$P(A,B)$$ : 사건 $$A$$,$$B$$ 가 공동으로 발생할 확률
-        - $$P(A)$$ : 사건 $$A$$ 가 발생할 확률
-        - $$P(B)$$ : 사건 $$B$$ 가 발생할 확률
+    - $$P(B|A)$$ : 사건 $$A$$ 가 발생한 상태에서 사건 $$B$$ 가 발생할 확률
+    - $$P(A,B)$$ : 사건 $$A$$, $$B$$ 가 공동으로 발생할 확률
+    - $$P(A)$$ : 사건 $$A$$ 가 발생할 확률
+    - $$P(B)$$ : 사건 $$B$$ 가 발생할 확률
 
 - **한계점** : Class Conditional Independent Assumption
 
@@ -35,7 +32,7 @@ image:
         &= P(X_{1}|Y) \times P(X_{2}|Y) \times \cdots \times P(X_{n}|Y)
         \end{aligned}$$
 
-# 💡 결정 함수 도출
+## 결정 함수 도출
 -----
 
 - **문제 정의**
@@ -76,7 +73,7 @@ image:
     &= \frac{\prod_{k=1}^{n}{P(X_{k}=x_{k}|Y=i)} \cdot P(Y=i)}{\sum_{j}{\prod_{k=1}^{n}{P(X_{k}=x_{k}|Y=j)}}}
     \end{aligned}$$
 
-# 💡 라플라스 평활화
+## 라플라스 평활화
 -----
 
 - **라플라스 평활화(Laplace Smoothing)** : 훈련 데이터 세트에 존재하지 않는 사례 $$\overrightarrow{x}_{k}$$ 에 대한 확률을 $$0$$ 으로 부여하는 것을 방지하기 위한 기법
@@ -93,7 +90,7 @@ image:
     - $$\text{count}(Y)$$ : 범주 $$Y$$ 의 출현 빈도
     - $$\alpha$$ : 라플라스 평활화 강도
 
-# 💡 [sklearn.naive_bayes.MultinomialNB](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html)
+## [sklearn.naive_bayes.MultinomialNB](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html)
 -----
 
 ```py

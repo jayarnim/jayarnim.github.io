@@ -56,7 +56,8 @@ image:
 
     > 제품 배포 및 시스템 유지 보수
 
-# 💡 Data Science
+## Data Science
+-----
 
 ### 데이터 과학의 이해
 
@@ -103,7 +104,8 @@ image:
         - **군집화(Clustering)** : 유사한 개체들의 집단을 만든 후 새 개체가 어떤 집단과 유사한지 예측하는 방법론
         - **차원축소(Dimension Reduction)** : 고차원 데이터를 저차원 데이터로 변환하는 방법론
 
-# 💡 [Scikit-Learn Library](https://scikit-learn.org/stable/#)
+## [Scikit-Learn Library](https://scikit-learn.org/stable/#)
+-----
 
 - **API 사용 방법**
 

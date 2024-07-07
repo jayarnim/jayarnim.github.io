@@ -9,8 +9,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout main repository
         uses: actions/checkout@v3
+
+      - name: Checkout docs repository
+        uses: actions/checkout@v2
+        with:
+          repository: username/blog-docs-repo
+          path: docs
+          token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -22,16 +29,18 @@ jobs:
           gem install bundler
           bundle install
 
+      - name: Copy posts and images from docs repository to main repository
+        run: |
+          cp -r docs/posts/* _posts/
+          cp -r docs/_post_refer_imgs/* _post_refer_imgs/
+
       - name: Build site
         run: bundle exec jekyll build
-
-      - name: Copy static images to _site
-        run: |
-          mkdir -p _site/img
-          cp -R _img/* _site/img
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          external_repository: jayarnim/blog-dist-repo
+          publish_branch: main
           publish_dir: ./_site

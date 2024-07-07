@@ -9,7 +9,7 @@ image:
   path: /img/MachineLearning/Thumbnail.jpg
 ---
 
-# 💡 Decision Tree
+## Decision Tree
 -----
 
 - **정의** : **순도(Uniformity)**를 최대로 가져가는 이진 판별 규칙들로 구성된 **수형도(Tree)**를 세우고 관측치를 분류하는 알고리즘
@@ -25,7 +25,7 @@ image:
     - **리프 노드(Leaf Node)** : 하위 노드가 존재하지 않는 노드로서 최종 범주
     - **서브트리(Subtree)** : 어떠한 규칙 노드를 루트 노드로 가지는 하위 트리로서 판별 규칙 집합의 부분집합
 
-# 💡 재귀적 분기(Recursive Partitioning)
+## 재귀적 분기(Recursive Partitioning)
 -----
 
 - **정의** : **판별 규칙을 기준으로** 상위 노드를 분할하여 **순도가 높은** 하위 노드를 생성하는 반복적인 과정
@@ -102,7 +102,7 @@ image:
     - $c$ : 범주 갯수
     - $p_{i}$ : 노드 $N_{k}$ 에서 $i$ 번째 범주에 속하는 관측치 비율
 
-# 💡 가지치기(Pruning)
+## 가지치기(Pruning)
 -----
 
 ![05](/img/MachineLearning/04-05.png){: width="100%"}
@@ -136,7 +136,7 @@ image:
     - $L(T)$ : $T$ 의 훈련 관측치에 대한 예측 손실
     - $R_{\alpha}(T)$ : 타깃 노드의 비용 복잡도 지수
 
-# 💡 DTR
+## DTR
 -----
 
 ![06](/img/MachineLearning/04-06.png){: width="100%"}
@@ -147,7 +147,7 @@ image:
     \hat{X}_{i}
     &= \text{arg} \min_{X_{i}}{\{J(X_{1},\hat{x}_{1}),J(X_{2},\hat{x}_{2}),\cdots,J(X_{n},\hat{x}_{n})\}}\\
     \hat{x}_{i}
-    &= \text{arg| \min_{x_{i}}{J(X_{i},x_{i})}\\
+    &= \text{arg} \min_{x_{i}}{J(X_{i},x_{i})}\\
     J(X_{i},x_{i})
     &= \frac{m_{left}}{m}L_{left}+\frac{m_{right}}{m}L_{right}
     \end{aligned}$$
@@ -170,7 +170,7 @@ image:
         &= \sum_{i=1}^{m}{(y_{i}-\hat{y}_{i})^2}
         \end{aligned}$$
 
-# 💡 [sklearn.tree.DecisionTreeClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier)
+## [sklearn.tree.DecisionTreeClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier)
 -----
 
 ```python

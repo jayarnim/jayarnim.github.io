@@ -9,7 +9,7 @@ image:
   path: /img/MachineLearning/Thumbnail.jpg
 ---
 
-# Classification Metrics
+## Classification Metrics
 -----
 
 ### Confusion Matrix

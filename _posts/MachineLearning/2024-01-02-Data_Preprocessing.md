@@ -9,7 +9,7 @@ image:
   path: /img/MachineLearning/Thumbnail.jpg
 ---
 
-# 💡 Data Preprocessing
+## Data Preprocessing
 -----
 
 ![01](/img/MachineLearning/02-01.jpg){: width="100%"}
@@ -50,7 +50,7 @@ image:
 
     - **Data Reduction** : 고차원 데이터를 저차원 데이터로 변환하는 절차
 
-# 💡 Data Cleansing
+## Data Cleansing
 -----
 
 ### 결측치 처리
@@ -82,7 +82,7 @@ image:
     - **상한값($X_{upper}$)** : $Q_3+IQR \times 1.5$
     - **사분위 범위(InterQuartile Range; IQR)** : $Q_3 - Q_1$
 
-# 💡 Data Transformation
+## Data Transformation
 -----
 
 ![03](/img/MachineLearning/02-03.png){: width="100%"}
