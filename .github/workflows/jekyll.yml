@@ -29,7 +29,7 @@ jobs:
           gem install bundler
           bundle install
 
-      - name: Copy posts and images from docs repository to main repository
+      - name: Copy posts and images from docs repo to main repo
         run: |
           cp -r docs/posts/* _posts/
           cp -r docs/_post_refer_imgs/* _post_refer_imgs/
