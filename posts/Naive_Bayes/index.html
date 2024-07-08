@@ -806,7 +806,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="630 words"
+  title="638 words"
 >
   <em>3 min</em> read</span>
 
@@ -829,16 +829,7 @@
 \[\begin{aligned}P(B|A)&amp;= \frac{P(A,B)}{P(A)}\end{aligned}\]
 
     <ul>
-      <li>
-        <div class="table-wrapper"><table>
-          <tbody>
-            <tr>
-              <td>$$P(B</td>
-              <td>A)\(: 사건\)A\(가 발생한 상태에서 사건\)B$$ 가 발생할 확률</td>
-            </tr>
-          </tbody>
-        </table></div>
-      </li>
+      <li>\(P(B \vert A)\) : 사건 \(A\) 가 발생한 상태에서 사건 \(B\) 가 발생할 확률</li>
       <li>\(P(A,B)\) : 사건 \(A\), \(B\) 가 공동으로 발생할 확률</li>
       <li>\(P(A)\) : 사건 \(A\) 가 발생할 확률</li>
       <li>\(P(B)\) : 사건 \(B\) 가 발생할 확률</li>
@@ -886,28 +877,10 @@
   \end{aligned}\]
 
     <ul>
-      <li>
-        <div class="table-wrapper"><table>
-          <tbody>
-            <tr>
-              <td>$$P(Y=i</td>
-              <td>X_{1}=x_{1},X_{2}=x_{2},\cdots,X_{n}=x_{n})\(: 관측치 벡터\)\overrightarrow{x}=(x_{1},x_{2},\cdots,x_{n})\(가 주어졌을 때, 해당 관측치의 범주\)Y$$ 가 $i$ 일 확률</td>
-            </tr>
-          </tbody>
-        </table></div>
-      </li>
-      <li>
-        <div class="table-wrapper"><table>
-          <tbody>
-            <tr>
-              <td>$$P(X_{1}=x_{1},X_{2}=x_{2},\cdots,X_{n}=x_{n}</td>
-              <td>Y=i)\(: 범주\)Y=i\(가 주어졌을 때, 관측치 벡터\)\overrightarrow{x}\(가\)(x_{1},x_{2},\cdots,x_{n})$$ 일 확률</td>
-            </tr>
-          </tbody>
-        </table></div>
-      </li>
+      <li>\(P(Y=i \vert X_{1}=x_{1},X_{2}=x_{2},\cdots,X_{n}=x_{n})\) : 관측치 벡터 \(\overrightarrow{x}=(x_{1},x_{2},\cdots,x_{n})\) 가 주어졌을 때, 해당 관측치의 범주 \(Y\) 가 $i$ 일 확률</li>
+      <li>\(P(X_{1}=x_{1},X_{2}=x_{2},\cdots,X_{n}=x_{n} \vert Y=i)\) : 범주 \(Y=i\) 가 주어졌을 때, 관측치 벡터 \(\overrightarrow{x}\) 가 \((x_{1},x_{2},\cdots,x_{n})\) 일 확률</li>
       <li>\(P(Y=i)\) : 범주 \(Y\) 가 \(i\) 일 확률</li>
-      <li>\(P(X_{1}=x_{1},X_{2}=x_{2},\cdots,X_{n}=x_{n})\) : 관측치 벡터 \(\overrightarrow{x}$ 가 $(x_{1},x_{2},\cdots,x_{n})\) 일 확률</li>
+      <li>\(P(X_{1}=x_{1},X_{2}=x_{2},\cdots,X_{n}=x_{n})\) : 관측치 벡터 \(\overrightarrow{x}\) 가 \((x_{1},x_{2},\cdots,x_{n})\) 일 확률</li>
     </ul>
   </li>
   <li>
@@ -944,16 +917,7 @@
   = \frac{\text{count}(\overrightarrow{x}_{k},Y)+\alpha}{\text{count}(Y)+2\alpha}\]
 
     <ul>
-      <li>
-        <div class="table-wrapper"><table>
-          <tbody>
-            <tr>
-              <td>$$P(\overrightarrow{x}_{k}</td>
-              <td>Y)\(: 관측치 벡터\)\overrightarrow{x}_{k}\(가 범주\)Y$$ 에 속할 조건부 확률</td>
-            </tr>
-          </tbody>
-        </table></div>
-      </li>
+      <li>\(P(\overrightarrow{x}_{k} \vert Y)\) : 관측치 벡터 \(\overrightarrow{x}_{k}\) 가 범주 \(Y\) 에 속할 조건부 확률</li>
       <li>\(\text{count}(\overrightarrow{x}_{k},Y)\) : 관측치 벡터 \(\overrightarrow{x}_{k}\) 와 범주 \(Y\) 의 동시 출현 빈도</li>
       <li>\(\text{count}(Y)\) : 범주 \(Y\) 의 출현 빈도</li>
       <li>\(\alpha\) : 라플라스 평활화 강도</li>
@@ -997,7 +961,7 @@
       <div class="post-meta mb-3">
         <i class="far fa-folder-open fa-fw me-1"></i>
         
-          <a href="/categories/artificial-intelligence/">Artificial Intelligence</a>,
+          <a href="/categories/machine-learning-techs/">Machine Learning Techs</a>,
           <a href="/categories/machine-learning/">Machine Learning</a>
       </div>
     
@@ -1008,6 +972,11 @@
         <i class="fa fa-tags fa-fw me-1"></i>
         
           <a
+            href="/tags/machine-learning/"
+            class="post-tag no-text-decoration"
+          >Machine Learning</a>
+        
+          <a
             href="/tags/supervised-learning/"
             class="post-tag no-text-decoration"
           >Supervised Learning</a>
@@ -1016,6 +985,11 @@
             href="/tags/classification/"
             class="post-tag no-text-decoration"
           >Classification</a>
+        
+          <a
+            href="/tags/bayesian/"
+            class="post-tag no-text-decoration"
+          >Bayesian</a>
         
       </div>
     
@@ -1120,35 +1094,35 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Hierarchical_Clustering/">Hierarchical Clustering</a>
+          <a href="/posts/Bayes_Estimator/">Bayes Estimator</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/DBSCAN/">DBSCAN</a>
+          <a href="/posts/Prob_Dist_Functions/">Prob. Dist. Functions</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/kMeans/">k-Means</a>
+          <a href="/posts/Prior_Prob_Dist/">Prior Prob. Dist.</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Clustering/">What? Clustering</a>
+          <a href="/posts/MC/">Monte Carlo Simulation</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/tSNE/">tSNE</a>
+          <a href="/posts/Bayesian/">What? Bayesian</a>
         </li>
       
     </ul>
@@ -1207,119 +1181,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1364,6 +1225,356 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
     
   
@@ -1379,6 +1590,75 @@
     
     
     
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     
@@ -1401,10 +1681,22 @@
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/supervised-learning/">Supervised Learning</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/unsupervised-learning/">Unsupervised Learning</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/supervised-learning/">Supervised Learning</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/classification/">Classification</a>
@@ -1413,16 +1705,10 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/clustering/">Clustering</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/data-mining/">Data Mining</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/feature-engineering/">Feature Engineering</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/metric/">Metric</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/regression/">Regression</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/cross-validation/">Cross Validation</a>
       
     </div>
   </section>
@@ -1526,7 +1812,103 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -1674,50 +2056,6 @@
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
-          <a href="/posts/SVM/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1704553200"
-  data-df="ll"
-  
->
-  Jan  7, 2024
-</time>
-
-              <h4 class="pt-0 my-2">Support Vector Machine</h4>
-              <div class="text-muted">
-                <p>Support Vector Machine
-
-
-
-  
-    정의 : 마진(Margin)을 최대로 가져가는 초평면(Hyper Plane)을 규칙으로 하여 관측치를 분류하는 알고리즘
-
-    
-  
-  
-    용어의 이해
-
-    
-
-    
-      초평면(Hyper Plane) : 범주를 구분하는 경계
-      서포트 벡터(Support Vect...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
           <a href="/posts/kNN/" class="post-preview card h-100">
             <div class="card-body">
               <!--
@@ -1800,6 +2138,50 @@
     
       루트 노드(Root Node) : 깊이가 0인 꼭대기 노드로서 최상위 노드
       결정 노드(Decisio...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/SVM/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1704553200"
+  data-df="ll"
+  
+>
+  Jan  7, 2024
+</time>
+
+              <h4 class="pt-0 my-2">Support Vector Machine</h4>
+              <div class="text-muted">
+                <p>Support Vector Machine
+
+
+
+  
+    정의 : 마진(Margin)을 최대로 가져가는 초평면(Hyper Plane)을 규칙으로 하여 관측치를 분류하는 알고리즘
+
+    
+  
+  
+    용어의 이해
+
+    
+
+    
+      초평면(Hyper Plane) : 범주를 구분하는 경계
+      서포트 벡터(Support Vect...</p>
               </div>
             </div>
           </a>
@@ -1941,119 +2323,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2098,6 +2367,356 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
     
   
@@ -2113,6 +2732,75 @@
     
     
     
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     
@@ -2135,10 +2823,22 @@
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/supervised-learning/">Supervised Learning</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/unsupervised-learning/">Unsupervised Learning</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/supervised-learning/">Supervised Learning</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/classification/">Classification</a>
@@ -2147,16 +2847,10 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/clustering/">Clustering</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/data-mining/">Data Mining</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/feature-engineering/">Feature Engineering</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/metric/">Metric</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/regression/">Regression</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/cross-validation/">Cross Validation</a>
       
     </div>
   </section>

@@ -39,12 +39,12 @@
 <meta property="og:site_name" content="Data Scientist" />
 <meta property="og:image" content="https://jayarnim.github.io/_post_refer_img/MachineLearning/Thumbnail.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-01-10T00:00:00+09:00" />
+<meta property="article:published_time" content="2024-01-09T00:00:00+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/MachineLearning/Thumbnail.jpg" />
 <meta property="twitter:title" content="Curse of Dimensionality" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-01-10T00:00:00+09:00","datePublished":"2024-01-10T00:00:00+09:00","description":"Curse of Dimensionality","headline":"Curse of Dimensionality","image":"https://jayarnim.github.io/_post_refer_img/MachineLearning/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/Curse_of_Dimensionality/"},"url":"https://jayarnim.github.io/posts/Curse_of_Dimensionality/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-01-09T00:00:00+09:00","datePublished":"2024-01-09T00:00:00+09:00","description":"Curse of Dimensionality","headline":"Curse of Dimensionality","image":"https://jayarnim.github.io/_post_refer_img/MachineLearning/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/Curse_of_Dimensionality/"},"url":"https://jayarnim.github.io/posts/Curse_of_Dimensionality/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -938,13 +938,13 @@
 
 <time
   
-  data-ts="1704812400"
+  data-ts="1704726000"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Jan 10, 2024
+  Jan  9, 2024
 </time>
 
       </span>
@@ -1002,7 +1002,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="758 words"
+  title="775 words"
 >
   <em>4 min</em> read</span>
 
@@ -1021,7 +1021,7 @@
   <li>
     <p><strong>정의</strong> : 고차원일수록 알고리즘이 제대로 학습하지 못하는 현상</p>
 
-    <p><a href="/_post_refer_img/MachineLearning/10-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/10-01.png" alt="01" width="100%" loading="lazy"></a></p>
+    <p><a href="/_post_refer_img/MachineLearning/09-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/09-01.png" alt="01" width="100%" loading="lazy"></a></p>
 
     <ul>
       <li>관측치 간 거리가 기하급수적으로 멀어짐에 따라 차원별 학습 가능한 관측치가 희소해짐</li>
@@ -1030,7 +1030,7 @@
   <li>
     <p><strong>차원 축소의 당위성</strong></p>
 
-    <p><a href="/_post_refer_img/MachineLearning/10-02.jpeg" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/10-02.jpeg" alt="02" width="100%" loading="lazy"></a></p>
+    <p><a href="/_post_refer_img/MachineLearning/09-02.jpeg" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/09-02.jpeg" alt="02" width="100%" loading="lazy"></a></p>
 
     <blockquote>
       <h4 id="manifold-hypothesis"><span class="me-2">Manifold hypothesis</span><a href="#manifold-hypothesis" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
@@ -1060,13 +1060,13 @@
   </li>
   <li><strong>차원 추출(Feature Extraction)</strong> : 원본의 특징을 보존하는 새로운 차원을 추출하는 방법
     <ul>
-      <li>$\argmax_{\overrightarrow{w}}{\sigma^{2}}$
+      <li>$\text{arg} \max_{\overrightarrow{w}}{\sigma^{2}}$
         <ul>
           <li>주성분 분석(<code class="language-plaintext highlighter-rouge">P</code>rinciple <code class="language-plaintext highlighter-rouge">C</code>omponent <code class="language-plaintext highlighter-rouge">A</code>nalysis; PCA)</li>
           <li>선형 판별 분석(<code class="language-plaintext highlighter-rouge">L</code>inear <code class="language-plaintext highlighter-rouge">D</code>iscriminant <code class="language-plaintext highlighter-rouge">A</code>nalysis; LDA)</li>
         </ul>
       </li>
-      <li>$\argmax_{\overrightarrow{w}}{dist}$
+      <li>$\text{arg} \max_{\overrightarrow{w}}{dist}$
         <ul>
           <li>다차원 척도법(<code class="language-plaintext highlighter-rouge">M</code>ulti-<code class="language-plaintext highlighter-rouge">D</code>imensional <code class="language-plaintext highlighter-rouge">S</code>caling; MDS)</li>
         </ul>
@@ -1107,40 +1107,13 @@
 \[\begin{aligned}
   \text{OR}(Y|X)
   &amp;= \frac{\text{odds}(X=1)}{\text{odds}(X=0)}\\
-  &amp;= \frac{\frac{P(Y=1\big|X=1)}{1-P(Y=1\big|X=1)}}{\frac{P(Y=1\big|X=0)}{1-P(Y=1\big|X=0)}}
+  &amp;= \frac{\frac{P(Y=1 \vert X=1)}{1-P(Y=1 \vert X=1)}}{\frac{P(Y=1 \vert X=0)}{1-P(Y=1 \vert X=0)}}
   \end{aligned}\]
 
     <ul>
-      <li>
-        <div class="table-wrapper"><table>
-          <tbody>
-            <tr>
-              <td>$\text{OR}(Y</td>
-              <td>X) = 1$ : $X$ 의 변동이 $Y$ 의 변동에 영향을 미치지 않음</td>
-            </tr>
-          </tbody>
-        </table></div>
-      </li>
-      <li>
-        <div class="table-wrapper"><table>
-          <tbody>
-            <tr>
-              <td>$\text{OR}(Y</td>
-              <td>X) &lt; 1$ : $X$ 는 $Y$ 와 음의 상관관계에 있음</td>
-            </tr>
-          </tbody>
-        </table></div>
-      </li>
-      <li>
-        <div class="table-wrapper"><table>
-          <tbody>
-            <tr>
-              <td>$\text{OR}(Y</td>
-              <td>X) &gt; 1$ : $X$ 는 $Y$ 와 양의 상관관게에 있음</td>
-            </tr>
-          </tbody>
-        </table></div>
-      </li>
+      <li>\(\text{OR}(Y \vert X) = 1\) : $X$ 의 변동이 $Y$ 의 변동에 영향을 미치지 않음</li>
+      <li>\(\text{OR}(Y\vert X) &lt; 1\) : $X$ 는 $Y$ 와 음의 상관관계에 있음</li>
+      <li>\(\text{OR}(Y \vert X) &gt; 1\) : $X$ 는 $Y$ 와 양의 상관관게에 있음</li>
     </ul>
   </li>
   <li>
@@ -1157,7 +1130,7 @@
         <p>$X=1$ 일 때의 로지스틱 회귀식</p>
 
 \[\begin{aligned}
-  \ln{\displaystyle\frac{P(Y=1 \Big| X=1)}{1-P(Y=1 \Big| X=1)}}
+  \ln{\displaystyle\frac{P(Y=1 \vert X=1)}{1-P(Y=1 \vert X=1)}}
   &amp;= \beta_0 + \beta_1 \times 1 \\
   &amp;= \beta_0 + \beta_1
   \end{aligned}\]
@@ -1166,7 +1139,7 @@
         <p>$X=0$ 일 때의 로지스틱 회귀식</p>
 
 \[\begin{aligned}
-  \ln{\displaystyle\frac{P(Y=1 \Big| X=0)}{1-P(Y=1 \Big| X=0)}}
+  \ln{\displaystyle\frac{P(Y=1 \vert X=0)}{1-P(Y=1 \vert X=0)}}
   &amp;= \beta_0 + \beta_1 \times 0 \\
   &amp;= \beta_0
   \end{aligned}\]
@@ -1175,25 +1148,18 @@
         <p>두 회귀식을 빼면 다음과 같음</p>
 
 \[\begin{aligned}
-  &amp;\ln{\displaystyle\frac{P(Y=1 \Big| X=1)}{1-P(Y=1 \Big| X=1)}} - \ln{\displaystyle\frac{P(Y=1 \Big| X=0)}{1-P(Y=1 \Big| X=0)}}\\
-  &amp;= \ln{\frac{\frac{P(Y=1 \big| X=1)}{1-P(Y=1 \big| X=1)}}{\frac{P(Y=1 \big| X=0)}{1-P(Y=1 \big| X=0)}}}\\
+  &amp;\ln{\displaystyle\frac{P(Y=1 \vert X=1)}{1-P(Y=1 \vert X=1)}} - \ln{\displaystyle\frac{P(Y=1 \vert X=0)}{1-P(Y=1 \vert X=0)}}\\
+  &amp;= \ln{\frac{\frac{P(Y=1 \vert X=1)}{1-P(Y=1 \vert X=1)}}{\frac{P(Y=1 \vert X=0)}{1-P(Y=1 \vert X=0)}}}\\
   &amp;= (\beta_0 + \beta_1) - \beta_0\\
   &amp;= \beta_1
   \end{aligned}\]
       </li>
       <li>
-        <div class="table-wrapper"><table>
-          <tbody>
-            <tr>
-              <td>따라서 설명변수 $X$ 의 가중치 $\beta_1$ 과 승산비 $\text{OR}(Y</td>
-              <td>X)$ 간에는 다음과 같은 관계가 성립함</td>
-            </tr>
-          </tbody>
-        </table></div>
+        <p>따라서 설명변수 $X$ 의 가중치 $\beta_1$ 과 승산비 $\text{OR}(Y|X)$ 간에는 다음과 같은 관계가 성립함</p>
 
 \[\begin{aligned}
   \therefore \text{OR}(Y|X)
-  &amp;= \frac{\frac{P(Y=1 \big| X=1)}{1-P(Y=1 \big| X=1)}}{\frac{P(Y=1 \big| X=0)}{1-P(Y=1 \big| X=0)}} \\
+  &amp;= \frac{\frac{P(Y=1 \vert X=1)}{1-P(Y=1 \vert X=1)}}{\frac{P(Y=1 \vert X=0)}{1-P(Y=1 \vert X=0)}} \\
   &amp;= \exp[\beta_1]
   \end{aligned}\]
       </li>
@@ -1208,21 +1174,21 @@
     <p><strong>Forward Selection</strong> : 어떤 변수도 선택되지 않은 상태에서 가장 설명력이 좋은 변수를 하나씩 추가하는 방법</p>
 
 \[\begin{aligned}
-  \hat{x}_{i}&amp;=\argmax_{x_{i}}R^2[y,f(x_{i})]\\
-  \hat{x}_{j}&amp;=\argmax_{x_{j}}R^2[y,f(x_{j \ne i};\hat{x}_{i})]\\
-  \hat{x}_{k}&amp;=\argmax_{x_{k}}R^2[y,f(x_{k \ne i,j};\hat{x}_{i},\hat{x}_{j})]
-  \end{aligned}\\
-  \vdots\]
+  \hat{x}_{i}&amp;=\text{arg} \max_{x_{i}}R^2[y,f(x_{i})]\\
+  \hat{x}_{j}&amp;=\text{arg} \max_{x_{j}}R^2[y,f(x_{j \ne i};\hat{x}_{i})]\\
+  \hat{x}_{k}&amp;=\text{arg} \max_{x_{k}}R^2[y,f(x_{k \ne i,j};\hat{x}_{i},\hat{x}_{j})]\\
+  &amp;\vdots
+  \end{aligned}\]
   </li>
   <li>
     <p><strong>Backward Elimination</strong> : 모든 변수가 포함된 상태에서 시작하여 불필요한 변수를 하나씩 제거하는 방법</p>
 
 \[\begin{aligned}
-  \hat{x}_{i}&amp;=\argmax_{x_{i}}R^2[y,f(\not{x_{i}})]\\
-  \hat{x}_{j}&amp;=\argmax_{x_{j}}R^2[y,f(\not{x_{j \ne i}};\not{\hat{x}_{i}})]\\
-  \hat{x}_{k}&amp;=\argmax_{x_{k}}R^2[y,f(\not{x_{k \ne i,j}};\not{\hat{x}_{i}},\not{\hat{x}_{j}})]
-  \end{aligned}\\
-  \vdots\]
+  \hat{x}_{i}&amp;=\text{arg} \max_{x_{i}}R^2[y,f(\not{x_{i}})]\\
+  \hat{x}_{j}&amp;=\text{arg} \max_{x_{j}}R^2[y,f(\not{x_{j \ne i}};\not{\hat{x}_{i}})]\\
+  \hat{x}_{k}&amp;=\text{arg} \max_{x_{k}}R^2[y,f(\not{x_{k \ne i,j}};\not{\hat{x}_{i}},\not{\hat{x}_{j}})]\\
+  &amp;\vdots
+  \end{aligned}\]
   </li>
   <li>
     <p><strong>Stepwise Selection</strong> : 어떤 변수도 선택되지 않은 상태에서 Forward Selection 과 Backward Elimination 을 번갈아 수행하는 방법</p>
@@ -1242,7 +1208,7 @@
 
     <ul>
       <li>
-        <p>$\hat{L}$ : 모델 적합도로서 $\overrightarrow{x}<em>{i}$ 가 주어졌을 때 $y</em>{i}$ 가 발생할 가능성</p>
+        <p>$\hat{L}$ : 모델 적합도로서 \(\overrightarrow{x}_{i}\) 가 주어졌을 때 $y_{i}$ 가 발생할 가능성</p>
 
 \[\begin{aligned}
   \hat{L}
@@ -1283,7 +1249,7 @@
       <div class="post-meta mb-3">
         <i class="far fa-folder-open fa-fw me-1"></i>
         
-          <a href="/categories/artificial-intelligence/">Artificial Intelligence</a>,
+          <a href="/categories/machine-learning-techs/">Machine Learning Techs</a>,
           <a href="/categories/machine-learning/">Machine Learning</a>
       </div>
     
@@ -1292,6 +1258,11 @@
     
       <div class="post-tags">
         <i class="fa fa-tags fa-fw me-1"></i>
+        
+          <a
+            href="/tags/machine-learning/"
+            class="post-tag no-text-decoration"
+          >Machine Learning</a>
         
           <a
             href="/tags/unsupervised-learning/"
@@ -1406,35 +1377,35 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Hierarchical_Clustering/">Hierarchical Clustering</a>
+          <a href="/posts/Bayes_Estimator/">Bayes Estimator</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/DBSCAN/">DBSCAN</a>
+          <a href="/posts/Prob_Dist_Functions/">Prob. Dist. Functions</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/kMeans/">k-Means</a>
+          <a href="/posts/Prior_Prob_Dist/">Prior Prob. Dist.</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Clustering/">What? Clustering</a>
+          <a href="/posts/MC/">Monte Carlo Simulation</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/tSNE/">tSNE</a>
+          <a href="/posts/Bayesian/">What? Bayesian</a>
         </li>
       
     </ul>
@@ -1493,119 +1464,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1650,6 +1508,356 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
     
   
@@ -1665,6 +1873,75 @@
     
     
     
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     
@@ -1687,10 +1964,22 @@
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/supervised-learning/">Supervised Learning</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/unsupervised-learning/">Unsupervised Learning</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/supervised-learning/">Supervised Learning</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/classification/">Classification</a>
@@ -1699,16 +1988,10 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/clustering/">Clustering</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/data-mining/">Data Mining</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/feature-engineering/">Feature Engineering</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/metric/">Metric</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/regression/">Regression</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/cross-validation/">Cross Validation</a>
       
     </div>
   </section>
@@ -1860,19 +2143,67 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -1960,6 +2291,46 @@
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
+          <a href="/posts/PCA_LDA/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1704812400"
+  data-df="ll"
+  
+>
+  Jan 10, 2024
+</time>
+
+              <h4 class="pt-0 my-2">PCA & LDA</h4>
+              <div class="text-muted">
+                <p>Prerequisite
+
+
+Projection
+
+
+
+
+  
+    벡터 $\overrightarrow{a}$ 를 벡터 $\overrightarrow{b}$ 에 정사영했을 때, 정사영 벡터 $\text{proj}_{\overrightarrow{b}}(\overrightarrow{a})$ 는 다음과 같음
+
+\[\begin{aligned}
+  \cos{90...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
           <a href="/posts/tSNE/" class="post-preview card h-100">
             <div class="card-body">
               <!--
@@ -1972,11 +2343,11 @@
 
 <time
   
-  data-ts="1704985200"
+  data-ts="1704898800"
   data-df="ll"
   
 >
-  Jan 12, 2024
+  Jan 11, 2024
 </time>
 
               <h4 class="pt-0 my-2">tSNE</h4>
@@ -2005,46 +2376,6 @@ t-distributed Stochastic Neighbor Embedding
         </article>
       
         <article class="col">
-          <a href="/posts/PCA&LDA/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1704898800"
-  data-df="ll"
-  
->
-  Jan 11, 2024
-</time>
-
-              <h4 class="pt-0 my-2">PCA & LDA</h4>
-              <div class="text-muted">
-                <p>Prerequisite
-
-
-Projection
-
-
-
-
-  
-    벡터 $\overrightarrow{a}$ 를 벡터 $\overrightarrow{b}$ 에 정사영했을 때, 정사영 벡터 $\text{proj}_{\overrightarrow{b}}(\overrightarrow{a})$ 는 다음과 같음
-
-\[\begin{aligned}
-  \cos{90...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
           <a href="/posts/Hierarchical_Clustering/" class="post-preview card h-100">
             <div class="card-body">
               <!--
@@ -2057,11 +2388,11 @@ Projection
 
 <time
   
-  data-ts="1705330800"
+  data-ts="1705244400"
   data-df="ll"
   
 >
-  Jan 16, 2024
+  Jan 15, 2024
 </time>
 
               <h4 class="pt-0 my-2">Hierarchical Clustering</h4>
@@ -2097,17 +2428,17 @@ Hierarchical Clustering
 
   
     <a
-      href="/posts/Logistic_Regression/"
+      href="/posts/Regression/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>Logistic Regression</p>
+      <p>Regression</p>
     </a>
   
 
   
     <a
-      href="/posts/PCA&LDA/"
+      href="/posts/PCA_LDA/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
@@ -2218,119 +2549,6 @@ Hierarchical Clustering
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2375,6 +2593,356 @@ Hierarchical Clustering
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
     
   
@@ -2390,6 +2958,75 @@ Hierarchical Clustering
     
     
     
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     
@@ -2412,10 +3049,22 @@ Hierarchical Clustering
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/supervised-learning/">Supervised Learning</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/unsupervised-learning/">Unsupervised Learning</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/supervised-learning/">Supervised Learning</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/classification/">Classification</a>
@@ -2424,16 +3073,10 @@ Hierarchical Clustering
         <a class="post-tag btn btn-outline-primary" href="/tags/clustering/">Clustering</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/data-mining/">Data Mining</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/feature-engineering/">Feature Engineering</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/metric/">Metric</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/regression/">Regression</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/cross-validation/">Cross Validation</a>
       
     </div>
   </section>
