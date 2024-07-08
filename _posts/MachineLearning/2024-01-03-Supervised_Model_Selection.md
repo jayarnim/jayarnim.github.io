@@ -2,8 +2,8 @@
 order: 3
 title: Supervised Model Selection
 date: 2024-01-03
-categories: [Artificial Intelligence, Machine Learning]
-tags: [Supervised Learning, Metric, Cross Validation]
+categories: [Machine Learning Techs, Machine Learning]
+tags: [Machine Learning, Supervised Learning, Metric, Cross Validation]
 math: true
 image:
   path: /_post_refer_img/MachineLearning/Thumbnail.jpg

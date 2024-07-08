@@ -6,32 +6,35 @@ order: 4
 
 Hi there! I'm dreaming of becoming an **expert in recommendation systems**. I graduated from the Department of Economics and deeply researched Business Economics, including Consumer Theory, Game Theory, Information Economics, etc. While completing my major, I became interested in consumers' preferences and choices. So, I want to conduct research on analyzing personal freedom of expression, defining personal preference, predicting personal choices, and recommending goods or services. Now, I am pursuing a Master's degree in Data Science at The Graduate School of Kookmin University, under the guidance of Prof. Je-hyuk Lee.
 
-Research Interest
+## Research Interest
 ------
 - Recommender System
+- Graph Neural Networks
+- Bayesian Modeling
 
-Degree
+## Degree
 ------
 - **Master’s Course in Data Science**, *2023.09 - Present*\\
+Concentration in Recommender System\\
 The Graduate School, Kookmin Univ., South Korea
 - **B.E. in Economics**, *2016.03 - 2023.08*\\
 Concentration in Business Economics\\
 College of Economics & Commerce, Kookmin Univ., South Korea
 
-Education
+## Experience
+-----
+- **The Data Mining Lab**, *2024.01 - Present*\\
+Dept of Data Science, The Graduate School, Kookmin Univ., South Korea
+- **Kookmin Univ. Economic Association(KMEA)**, *2016.03 - 2022.08*\\
+College of Economics & Commerce, Kookmin Univ., South Korea
+
+## Education
 -----
 - **Bigdata Boot Camp 15th**, *2022.08 - 2023.02*\\
 [Playdata](https://playdata.io/), [Encore](https://www.en-core.com/), South Korea\\
 [Certificate](https://drive.google.com/file/d/1UTcsno2MvuBFCY7hYENZAB8XnrceS6L6/view?usp=sharing)
 
-Experience
------
-- **Kookmin Univ. Economic Association(KMEA)**, *2016.03 - 2022.08*\\
-College of Economics & Commerce, Kookmin Univ., South Korea
-- **The Data Mining Lab**, *2024.01 - Present*\\
-The Graduate School, Kookmin Univ., South Korea
-
-Honors & Awards
+## Honors & Awards
 -----
 - 🏆 [**Paper Competition 6th**](https://www.klip.or.kr/kha/contest_write.php?idx=416&startPage=0&part_idx=7&s_i=&s_o=&search_kind=&top_navi=1&sub_navi=12&part_idx=7), *2019*\\
 [Foundation of Korea Logistics Industry Promotion(KLIP)](https://www.klip.or.kr/main/main.php), South Korea\\

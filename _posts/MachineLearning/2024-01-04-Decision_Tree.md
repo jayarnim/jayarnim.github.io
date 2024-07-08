@@ -2,8 +2,8 @@
 order: 4
 title: Decision Tree
 date: 2024-01-04
-categories: [Artificial Intelligence, Machine Learning]
-tags: [Supervised Learning, Classification]
+categories: [Machine Learning Techs, Machine Learning]
+tags: [Machine Learning, Supervised Learning, Classification]
 math: true
 image:
   path: /_post_refer_img/MachineLearning/Thumbnail.jpg

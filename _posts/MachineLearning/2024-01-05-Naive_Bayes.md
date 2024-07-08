@@ -2,8 +2,8 @@
 order: 5
 title: Naive Bayes
 date: 2024-01-05
-categories: [Artificial Intelligence, Machine Learning]
-tags: [Supervised Learning, Classification]
+categories: [Machine Learning Techs, Machine Learning]
+tags: [Machine Learning, Supervised Learning, Classification, Bayesian]
 math: true
 image:
   path: /_post_refer_img/MachineLearning/Thumbnail.jpg
@@ -18,7 +18,7 @@ image:
 
     $$\begin{aligned}P(B|A)&= \frac{P(A,B)}{P(A)}\end{aligned}$$
 
-    - $$P(B|A)$$ : 사건 $$A$$ 가 발생한 상태에서 사건 $$B$$ 가 발생할 확률
+    - $$P(B \vert A)$$ : 사건 $$A$$ 가 발생한 상태에서 사건 $$B$$ 가 발생할 확률
     - $$P(A,B)$$ : 사건 $$A$$, $$B$$ 가 공동으로 발생할 확률
     - $$P(A)$$ : 사건 $$A$$ 가 발생할 확률
     - $$P(B)$$ : 사건 $$B$$ 가 발생할 확률
@@ -52,10 +52,10 @@ image:
     &= \frac{P(X_{1}=x_{1},X_{2}=x_{2},\cdots,X_{n}=x_{n}|Y=i) \cdot P(Y=i)}{P(X_{1}=x_{1},X_{2}=x_{2},\cdots,X_{n}=x_{n})}
     \end{aligned}$$
 
-    - $$P(Y=i|X_{1}=x_{1},X_{2}=x_{2},\cdots,X_{n}=x_{n})$$ : 관측치 벡터 $$\overrightarrow{x}=(x_{1},x_{2},\cdots,x_{n})$$ 가 주어졌을 때, 해당 관측치의 범주 $$Y$$ 가 $i$ 일 확률
-    - $$P(X_{1}=x_{1},X_{2}=x_{2},\cdots,X_{n}=x_{n}|Y=i)$$ : 범주 $$Y=i$$ 가 주어졌을 때, 관측치 벡터 $$\overrightarrow{x}$$ 가 $$(x_{1},x_{2},\cdots,x_{n})$$ 일 확률
+    - $$P(Y=i \vert X_{1}=x_{1},X_{2}=x_{2},\cdots,X_{n}=x_{n})$$ : 관측치 벡터 $$\overrightarrow{x}=(x_{1},x_{2},\cdots,x_{n})$$ 가 주어졌을 때, 해당 관측치의 범주 $$Y$$ 가 $i$ 일 확률
+    - $$P(X_{1}=x_{1},X_{2}=x_{2},\cdots,X_{n}=x_{n} \vert Y=i)$$ : 범주 $$Y=i$$ 가 주어졌을 때, 관측치 벡터 $$\overrightarrow{x}$$ 가 $$(x_{1},x_{2},\cdots,x_{n})$$ 일 확률
     - $$P(Y=i)$$ : 범주 $$Y$$ 가 $$i$$ 일 확률
-    - $$P(X_{1}=x_{1},X_{2}=x_{2},\cdots,X_{n}=x_{n})$$ : 관측치 벡터 $$\overrightarrow{x}$ 가 $(x_{1},x_{2},\cdots,x_{n})$$ 일 확률
+    - $$P(X_{1}=x_{1},X_{2}=x_{2},\cdots,X_{n}=x_{n})$$ : 관측치 벡터 $$\overrightarrow{x}$$ 가 $$(x_{1},x_{2},\cdots,x_{n})$$ 일 확률
 
 - **클래스 조건부 독립 가정 하 다변량 조건부 확률을 단변량 조건부 확률로 변환할 수 있음**
 
@@ -85,7 +85,7 @@ image:
     = \frac{\text{count}(\overrightarrow{x}_{k},Y)+\alpha}{\text{count}(Y)+2\alpha}
     $$
 
-    - $$P(\overrightarrow{x}_{k}|Y)$$ : 관측치 벡터 $$\overrightarrow{x}_{k}$$ 가 범주 $$Y$$ 에 속할 조건부 확률
+    - $$P(\overrightarrow{x}_{k} \vert Y)$$ : 관측치 벡터 $$\overrightarrow{x}_{k}$$ 가 범주 $$Y$$ 에 속할 조건부 확률
     - $$\text{count}(\overrightarrow{x}_{k},Y)$$ : 관측치 벡터 $$\overrightarrow{x}_{k}$$ 와 범주 $$Y$$ 의 동시 출현 빈도
     - $$\text{count}(Y)$$ : 범주 $$Y$$ 의 출현 빈도
     - $$\alpha$$ : 라플라스 평활화 강도

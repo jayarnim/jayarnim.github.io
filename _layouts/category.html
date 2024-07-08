@@ -14,6 +14,7 @@ layout: page
 
   <ul class="content ps-0">
     {% assign sorted_posts = page.posts | sort: 'order' %}
+    {% assign sorted_posts = sorted_posts | sort: 'date' %}
     {% for post in sorted_posts %}
       <li class="d-flex justify-content-between px-md-3">
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
