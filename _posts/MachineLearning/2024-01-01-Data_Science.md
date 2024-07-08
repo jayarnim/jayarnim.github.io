@@ -3,7 +3,6 @@ order: 1
 title: What? Data Science
 date: 2024-01-01
 categories: [Artificial Intelligence, Machine Learning]
-tags: [writing]
 math: true
 image:
   path: /_post_refer_img/MachineLearning/Thumbnail.jpg

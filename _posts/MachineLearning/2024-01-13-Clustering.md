@@ -1,13 +1,18 @@
-# Index
-
-1. What? Cluster Analysis
-2. Metrics
-
-<hr></br>
+---
+order: 13
+title: What? Clustering
+date: 2024-01-13
+categories: [Artificial Intelligence, Machine Learning]
+tags: [Unsupervised Learning, Clustering, Metric]
+math: true
+image:
+  path: /_post_refer_img/MachineLearning/Thumbnail.jpg
+---
 
 ## What? Cluster Analysis
+-----
 
-### 💡 Cluster Analysis
+### Cluster Analysis
 
 - **정의** : 표본을 관측치 간 유사성과 상이성을 계산하여 k개의 군집으로 분할하는 작업
 
@@ -15,11 +20,11 @@
 
 - **목표** : 군집 내 응집도 최대화 및 군집 간 분리도 최대화
 
-    <p align="center"><img alt="군집화목표" src="https://github.com/jayarnim/jayarnim/assets/116495744/10be2560-d7ea-4fc9-aaa9-3f85eaac58b8" width=80%></p>
+    ![01](/_post_refer_img/MachineLearning/13-01.png){: width="100%"}
 
 - **판별 분석과 비교**
 
-    <p align="center"><img alt="분류와군집의비교" src="https://github.com/jayarnim/jayarnim/assets/116495744/0fe4326f-2a10-4236-ad7c-f15b58aa9185" width=80%></p>
+    ![02](/_post_refer_img/MachineLearning/13-02.png){: width="100%"}
 
     - **판별 분석(Classification Analysis)**
         - **학습 방식** : 지도학습(훈련 관측치의 정답 정보를 사전에 알고 있음)
@@ -29,27 +34,26 @@
         - **학습 방식** : 비지도학습(훈련 관측치의 정답 정보를 사전에 알 수 없거나 존재하지 않음)
         - **학습 목표** : 주어진 표본을 분할하는 여러 개의 군집을 탐색함
 
-### 💡 구분
+### 구분
 
 - **관측치 중복 여부에 따른 구분**
 
-    <p align="center"><img alt="중복여부" src="https://github.com/jayarnim/jayarnim/assets/116495744/cb85a880-4899-47df-9b85-284b85090dfe" width=80%></p>
+    ![03](/_post_refer_img/MachineLearning/13-03.png){: width="100%"}
 
     - **Hard(or Crisp) Clustering** : 관측치가 하나의 군집에만 할당됨
     - **Soft(or Fuzzy) Clustering** : 관측치가 여러 개의 군집에 할당될 수 있음
 
 - **군집 간 위계 여부에 따른 구분**
 
-    <p align="center"><img alt="계층여부" src="https://github.com/jayarnim/jayarnim/assets/116495744/27bf6947-dd2a-425f-b3ce-ddb8cade0989" width=80%></p>
+    ![04](/_post_refer_img/MachineLearning/13-04.png){: width="100%"}
 
     - **Partitional Clustering** : 군집 간 위계가 존재하지 않음
     - **Hierarchical Clustering** : 군집 간 위계가 존재함
 
-</br>
-
 ## Metrics
+-----
 
-### 💡 군집화 유효성 평가 기준
+### 군집화 유효성 평가 기준
 
 - **External** : 정답 정보와의 비교
     - Rand Statistic
@@ -70,7 +74,7 @@
     - SD Validity Index
     - **Silhouette**
 
-### 💡 External Metrics
+### External Metrics
 
 - **V-Measure** : 정확성과 완전성의 조화평균
 
@@ -102,7 +106,7 @@
 
     - $P(k|c)$ : 클래스 $C=c$ 가 주어졌을 때, 군집 $K=k$ 가 발생할 가능성
 
-### 💡 Internal Metrics
+### Internal Metrics
 
 - **Sum of Squared Error(SSE)** : 각 군집의 중심점 벡터와 해당 군집 내 관측치 벡터 간 거리 자승으로 측정한 **군집 응집도**
 
@@ -116,7 +120,7 @@
     - $\overrightarrow{x}_{i} \in C_{k}$ : 군집 $C_{k}$ 의 $i$ 번째 관측치 벡터
     - $\overrightarrow{\mu}_{k} \in C_{k}$ : 군집 $C_{k}$ 의 중심 벡터
 
-### 💡 Relative Metrics
+### Relative Metrics
 
 - **Dunn Index** : 군집 내 응집도(Cohesion) 최대값 대비 군집 간 분리도(Separation) 최소값 비율
 
@@ -138,12 +142,10 @@
     - $a(\overrightarrow{x}_{i})$ : 관측치 벡터 $\overrightarrow{x}_{i}$ 기준 군집 내 응집도로서, 해당 관측치와 같은 군집에 속한 관측치와의 평균 거리
     - $b(\overrightarrow{x}_{i})$ : 관측치 벡터 $\overrightarrow{x}_{i}$ 기준 군집 간 분리도로서, 해당 관측치와 다른 군집에 속한 관측치와의 평균 거리 중 최소값
 
-</br><hr>
+-----
 
-#### 이미지 출처
+### 이미지 출처
 
 - https://www.scaler.com/topics/supervised-and-unsupervised-learning/
-
 - https://towardsdatascience.com/a-brief-introduction-to-unsupervised-learning-20db46445283
-
 - https://tyami.github.io/machine%20learning/clustering/

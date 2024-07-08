@@ -1,29 +1,33 @@
-# Index
-
-1. What? Hierarchical Clustering
-2. `sklearn.cluster.AgglomerativeClustering`
-
-<hr></br>
+---
+order: 16
+title: Hierarchical Clustering
+date: 2024-01-16
+categories: [Artificial Intelligence, Machine Learning]
+tags: [Unsupervised Learning, Clustering]
+math: true
+image:
+  path: /_post_refer_img/MachineLearning/Thumbnail.jpg
+---
 
 ## What? Hierarchical Clustering
+-----
 
-### 💡 Hierarchical Clustering
+### Hierarchical Clustering
 
 - **정의** : 계층적 트리모형을 활용하여 개별 개체들을 유사한 개체/군집과 계층적으로 통합하거나, 표본을 유의미하게 구분되는 지점에서 계층적으로 분할해가는 알고리즘
 
 - **덴드로그램(Dendrogram)** : 결합 혹은 분할하는 순서를 나타내는 계층적 트리모형
 
-    <p align="center"><img alt="덴드로그램" src="https://github.com/jayarnim/jayarnim/assets/116495744/d9fc5800-1012-4dfe-95f3-19bd62aac7f4" width=80%></p>
+    ![01](/_post_refer_img/MachineLearning/16-01.png){: width="100%"}
 
 - **종류**
 
-    <p align="center"><img alt="종류" src="https://github.com/jayarnim/jayarnim/assets/116495744/23998ba5-6998-4317-bfa2-2380a82b9590" width=80%></p>
+    ![02](/_post_refer_img/MachineLearning/16-02.png){: width="100%"}
 
     - **상향식 군집화(Agglomerative Clustering)** : 개별 개체들을 유사한 개체/군집과 계층적으로 통합해가는 방식
-
     - **하향식 군집화(Divisive Clustering)** : 표본을 유의미하게 구분되는 지점마다 계층적으로 분할해가는 방식
 
-### 💡 How to Agglomerative Clustering
+### How to Agglomerative Clustering
 
 1. 모든 개체를 개별 군집으로서 정의함
 
@@ -52,7 +56,7 @@
 
 5. 모든 개체가 하나의 군집으로 통합될 때까지 ③, ④의 과정을 반복함
 
-### 💡 How to Calculate Distance
+### How to Calculate Distance
 
 - **Single Linkage(Minimum Distance)** : 각 군집에 속한 개체들 사이 거리 최소값
 
@@ -95,9 +99,8 @@
     &= \mathbf{A} \cup \mathbf{B}
     \end{aligned}$$
 
-</br>
-
-## [`sklearn.cluster.AgglomerativeClustering`](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html)
+## [sklearn.cluster.AgglomerativeClustering](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html)
+-----
 
 ```py
 from sklearn.cluster import AgglomerativeClustering
@@ -121,10 +124,9 @@ from sklearn.cluster import AgglomerativeClustering
 
 - `memory(default : None)` : 계산된 거리 행렬을 저장할 위치
 
-</br><hr>
+-----
 
-#### 이미지 출처
+### 이미지 출처
 
 - https://towardsdatascience.com/hierarchical-clustering-explained-e59b13846da8
-
 - https://harshsharma1091996.medium.com/hierarchical-clustering-996745fe656b

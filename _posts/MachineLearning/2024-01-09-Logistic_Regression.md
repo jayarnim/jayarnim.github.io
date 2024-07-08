@@ -1,22 +1,22 @@
 ---
-order: 11
+order: 9
 title: Logistic Regression
-date: 2024-01-11
+date: 2024-01-09
 categories: [Artificial Intelligence, Machine Learning]
-tags: [writing]
+tags: [Supervised Learning, Regression]
 math: true
 image:
-  path: /img/MachineLearning/Thumbnail.jpg
+  path: /_post_refer_img/MachineLearning/Thumbnail.jpg
 ---
 
-# 💡 What? Logistic Regression
+## What? Logistic Regression
 -----
 
 ### Logistic Regression
 
 - **정의** : 회귀 기법을 판별분석에 활용하는 비선형 함수 알고리즘
 
-    <p align="center"><img src="https://user-images.githubusercontent.com/116495744/221402155-596e45c2-5d0d-40a6-ae23-9589b48f807c.png" width=80%></p>
+    ![01](/_post_refer_img/MachineLearning/09-01.png){: width="100%"}
 
     $$
     P(c=1)
@@ -97,20 +97,20 @@ image:
     &= \frac{1}{1+\exp[-(\beta_{0}+\beta_{1}x_{1}+\cdots+\beta_{d}x_{d})]}
     \end{aligned}$$
 
-# 💡 [`sklearn.linear_model.LogisticRegression`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html#sklearn-linear-model-logisticregression)
+## [sklearn.linear_model.LogisticRegression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html#sklearn-linear-model-logisticregression)
 -----
 
 ```python
 from sklearn.linear_model import LogisticRegression
 ```
 
-### 💡 General HyperParameter
+### General HyperParameter
 
 - `random_state(default : None)`
 - `warm_start(default : False)` : 동작 메시지 출력 여부 설정
 - `n_jobs(default : None)` : 병렬로 작업할 코어 갯수
 
-### 💡 Model HyperParameter
+### Model HyperParameter
 
 - `solver(default : 'lbfgs')` : 회귀식 종류로서 그 아규먼트에 따라 `penalty` 의 아규먼트가 한정됨
     - `'lbfgs'` : `l2` or `None`
@@ -127,17 +127,11 @@ from sklearn.linear_model import LogisticRegression
     - `'ovr'` : One VS Rest
     - `'multinomial'` : `solver` 아규먼트가 `'liblinear'` 인 경우 적용 불가
 
-### 💡 To Prevent OverFitting
-
-#### About Iteration
+### To Prevent OverFitting
 
 - `max_iter(default : 100)` : 최적 회귀계수 탐색 최대 횟수
 
-#### About Early Stopping
-
 - `tol(default : 0.0001)` : 허용 오차
-
-#### About Penalty
 
 - `penalty(default : l2)` : 가중치 규제 방법
     - `None`
@@ -149,9 +143,8 @@ from sklearn.linear_model import LogisticRegression
 
 - `l1_ratio(default : None)` : `elasticnet` 설정 시 전체 규제 강도 대비 `l1` 규제 비중
 
-### 💡 To Prevent Underfitting
+### To Prevent Underfitting
 
 - `class_weight(default : None)` : 가중할 범주와 그 값
-
     - `'balanced'`
     - `dictionary type`

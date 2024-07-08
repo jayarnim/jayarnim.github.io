@@ -3,10 +3,10 @@ order: 5
 title: Naive Bayes
 date: 2024-01-05
 categories: [Artificial Intelligence, Machine Learning]
-tags: [writing]
+tags: [Supervised Learning, Classification]
 math: true
 image:
-  path: /img/MachineLearning/Thumbnail.jpg
+  path: /_post_refer_img/MachineLearning/Thumbnail.jpg
 ---
 
 ## Naive Bayes

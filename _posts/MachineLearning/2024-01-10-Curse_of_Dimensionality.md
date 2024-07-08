@@ -1,28 +1,33 @@
-# Index
-
-1. Curse of Dimensionality
-2. Feature Selection
-
-<hr></br>
+---
+order: 10
+title: Curse of Dimensionality
+date: 2024-01-10
+categories: [Artificial Intelligence, Machine Learning]
+tags: [Unsupervised Learning, Feature Engineering]
+math: true
+image:
+  path: /_post_refer_img/MachineLearning/Thumbnail.jpg
+---
 
 ## Curse of Dimensionality
+-----
 
-### 💡 차원의 저주
+### 차원의 저주
 
 - **정의** : 고차원일수록 알고리즘이 제대로 학습하지 못하는 현상
 
-    <p align="center"><img alt="차원의저주" src="https://github.com/jayarnim/jayarnim/assets/116495744/0ee13c18-824c-4676-a4bb-a9b874ba4baf" width=80%></p>
+    ![01](/_post_refer_img/MachineLearning/10-01.png){: width="100%"}
 
     - 관측치 간 거리가 기하급수적으로 멀어짐에 따라 차원별 학습 가능한 관측치가 희소해짐
 
 - **차원 축소의 당위성**
 
-    <p align="center"><img alt="다양체학습" src="https://user-images.githubusercontent.com/116495744/224497076-8a2e6100-88a5-444c-abb9-377e61e961ee.jpeg" width=80%></p>
+    ![02](/_post_refer_img/MachineLearning/10-02.jpeg){: width="100%"}
 
     > #### Manifold hypothesis
     > Many high-dimensional data sets that occur in the real world actually lie along low-dimensional latent manifolds inside that high-dimensional space.
 
-### 💡 차원 축소 기법의 종류
+### 차원 축소 기법의 종류
 
 - **차원 선택(Feature Selection)** : 유효한 차원을 선별하는 방법
     - **Filter Approach**
@@ -46,14 +51,13 @@
         - LLE(`L`ocally `L`inear `E`mbedding)
         - ISOMAP(`ISO`metric feature `MAP`ping)
 
-</br>
-
 ## Feature Selection
+-----
 
 > #### Occam's Razor
 > Entities should not be multiplied beyond necessity.
 
-### 💡 Filter Approach
+### Filter Approach
 
 - **승산(Odds)** : 변수 $Y$ 가 반응할 가능성이 반응하지 않을 가능성보다 몇 배 높은가
 
@@ -116,7 +120,7 @@
         &= \exp[\beta_1]
         \end{aligned}$$
 
-### 💡 Wrapper Approach
+### Wrapper Approach
 
 - **Forward Selection** : 어떤 변수도 선택되지 않은 상태에서 가장 설명력이 좋은 변수를 하나씩 추가하는 방법
 
@@ -140,7 +144,7 @@
 
 - **Stepwise Selection** : 어떤 변수도 선택되지 않은 상태에서 Forward Selection 과 Backward Elimination 을 번갈아 수행하는 방법
 
-### 💡 Metrics
+### Metrics
 
 - **Akaike Information Criteria(AIC)**
 
@@ -167,10 +171,9 @@
     &= -2\ln{\hat{L}}+k\ln{n}
     \end{aligned}$$
 
-</br><hr>
+-----
 
-#### 이미지 출처
+### 이미지 출처
 
 - https://www.incodom.kr/%EC%B0%A8%EC%9B%90%EC%B6%95%EC%86%8C#h_85f3fb207a586b3f9b5702a3be7799e1
-
 - http://matrix.skku.ac.kr/math4ai-intro/W12/

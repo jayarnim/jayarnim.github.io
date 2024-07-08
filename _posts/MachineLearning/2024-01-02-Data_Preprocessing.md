@@ -3,7 +3,7 @@ order: 2
 title: Data Preprocessing
 date: 2024-01-02
 categories: [Artificial Intelligence, Machine Learning]
-tags: [writing]
+tags: [Feature Engineering]
 math: true
 image:
   path: /_post_refer_img/MachineLearning/Thumbnail.jpg
