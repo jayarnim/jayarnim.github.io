@@ -10,6 +10,7 @@ image:
 ---
 
 ## Discrete Prob. Dist.
+-----
 
 ### 이산 균등 분포(Discrete Uniform Dist.)
 
@@ -156,9 +157,8 @@ image:
     \mathbb{Cov}\big[X_{i},X_{j}\big]=-n \cdot p_{i} \cdot p_{j}
     $$
 
-</br>
-
 ## Continuous Prob. Dist.
+-----
 
 ### 균등 분포(Uniform Dist.)
 
@@ -209,13 +209,9 @@ image:
     $$
 
     - $X$ : 베타 분포를 따르는 확률 변수
-
     - $x$ : 주로 성공 가능성
-
     - $\alpha$ : 주로 성공 횟수로서, 클수록 우편향된 형태의 분포가 됨
-
     - $\beta$ : 주로 실패 횟수로서, 클수록 좌편향된 형태의 분포가 됨
-
     - $\Gamma(\cdot)$ : 감마 함수
 
         $$\begin{aligned}
@@ -434,7 +430,6 @@ image:
     $$
 
     - $X$ : 카이제곱 분포를 따르는 확률변수
-
     - $x > 0$ : $k$ 개의 독립적인 표준 정규 분포 $N(0,1)$ 를 따르는 확률변수 $Z_{i}$ 의 자승의 합
 
         $$
@@ -512,14 +507,11 @@ image:
     \end{aligned}$$
 
     - $X$ : 위샤트 분포를 따른 확률변수
-
-    - $\mathbf{X}=\sum_{i=1}^{n}{\overrightarrow{z}_{i} \cdot \overrightarrow{z}_{i}^{T}}$ : $p \times p$ 양정치 행렬(Positive Definite Matrix)
-        - 표준 정규 분포 $N(0,1)$ 를 따르는 $p$ 차원 벡터 $\overrightarrow{z}_{1},\overrightarrow{z}_{2},\cdots,\overrightarrow{z}_{n}$ 생성
-        - 외적 $\overrightarrow{z}_{i} \cdot \overrightarrow{z}_{i}^{T}$ 을 통해 $p \times p$ 양정치 행렬 $n$ 개 생성
+    - $$\mathbf{X}=\sum_{i=1}^{n}{\overrightarrow{z}_{i} \cdot \overrightarrow{z}_{i}^{T}}$$ : $p \times p$ 양정치 행렬(Positive Definite Matrix)
+        - 표준 정규 분포 $$N(0,1)$$ 를 따르는 $$p$$ 차원 벡터 $$\overrightarrow{z}_{1},\overrightarrow{z}_{2},\cdots,\overrightarrow{z}_{n}$$ 생성
+        - 외적 $$\overrightarrow{z}_{i} \cdot \overrightarrow{z}_{i}^{T}$$ 을 통해 $$p \times p$$ 양정치 행렬 $$n$$ 개 생성
         - $n$ 개의 $p \times p$ 양정치 행렬을 덧셈하여 $\mathbf{X}$ 생성
-
     - $n>p-1$ : 자유도로서 $\overrightarrow{z}_{i} \sim N(0,1)$ 갯수
-
     - $\mathbf{V}>0$ : 양정치 행렬로서, 벡터 $\overrightarrow{z}_{i} \sim N(0,1)$ 간 공분산을 조정함으로써 분포의 형태와 스케일을 결정
 
     - $\Gamma(\cdot)$ : 감마 함수
