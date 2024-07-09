@@ -1761,7 +1761,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="2198 words"
+  title="2197 words"
 >
   <em>12 min</em> read</span>
 
@@ -1772,6 +1772,7 @@
 
   <div class="content">
     <h2 id="discrete-prob-dist"><span class="me-2">Discrete Prob. Dist.</span><a href="#discrete-prob-dist" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
 
 <h3 id="이산-균등-분포discrete-uniform-dist"><span class="me-2">이산 균등 분포(Discrete Uniform Dist.)</span><a href="#이산-균등-분포discrete-uniform-dist" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -1929,9 +1930,8 @@
   </li>
 </ul>
 
-<p>&lt;/br&gt;</p>
-
 <h2 id="continuous-prob-dist"><span class="me-2">Continuous Prob. Dist.</span><a href="#continuous-prob-dist" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
 
 <h3 id="균등-분포uniform-dist"><span class="me-2">균등 분포(Uniform Dist.)</span><a href="#균등-분포uniform-dist" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -1984,18 +1984,10 @@
 \[P(X=x) = \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)} x^{\alpha-1} (1-x)^{\beta-1}\]
 
     <ul>
-      <li>
-        <p>$X$ : 베타 분포를 따르는 확률 변수</p>
-      </li>
-      <li>
-        <p>$x$ : 주로 성공 가능성</p>
-      </li>
-      <li>
-        <p>$\alpha$ : 주로 성공 횟수로서, 클수록 우편향된 형태의 분포가 됨</p>
-      </li>
-      <li>
-        <p>$\beta$ : 주로 실패 횟수로서, 클수록 좌편향된 형태의 분포가 됨</p>
-      </li>
+      <li>$X$ : 베타 분포를 따르는 확률 변수</li>
+      <li>$x$ : 주로 성공 가능성</li>
+      <li>$\alpha$ : 주로 성공 횟수로서, 클수록 우편향된 형태의 분포가 됨</li>
+      <li>$\beta$ : 주로 실패 횟수로서, 클수록 좌편향된 형태의 분포가 됨</li>
       <li>
         <p>$\Gamma(\cdot)$ : 감마 함수</p>
 
@@ -2229,17 +2221,13 @@
 \[P(X=x) = \frac{1}{2^{\frac{k}{2}}\cdot \Gamma\left(\frac{k}{2}\right)}x^{\frac{k}{2}-1}\exp(-\frac{x}{2})\]
 
     <ul>
-      <li>
-        <p>$X$ : 카이제곱 분포를 따르는 확률변수</p>
-      </li>
+      <li>$X$ : 카이제곱 분포를 따르는 확률변수</li>
       <li>
         <p>$x &gt; 0$ : $k$ 개의 독립적인 표준 정규 분포 $N(0,1)$ 를 따르는 확률변수 $Z_{i}$ 의 자승의 합</p>
 
 \[x = \sum_{i=1}^{k}{Z_{i}^{2}} \quad \text{for} \; Z_{i} \sim N(0,1)\]
       </li>
-      <li>
-        <p>$k$ : 자유도로서 확률변수 $z_{i}$ 의 갯수</p>
-      </li>
+      <li>$k$ : 자유도로서 확률변수 $z_{i}$ 의 갯수</li>
     </ul>
   </li>
   <li>
@@ -2317,19 +2305,15 @@
   \end{aligned}\]
 
     <ul>
-      <li>
-        <p>$X$ : 위샤트 분포를 따른 확률변수</p>
-      </li>
-      <li>$\mathbf{X}=\sum_{i=1}^{n}{\overrightarrow{z}<em>{i} \cdot \overrightarrow{z}</em>{i}^{T}}$ : $p \times p$ 양정치 행렬(Positive Definite Matrix)
+      <li>$X$ : 위샤트 분포를 따른 확률변수</li>
+      <li>\(\mathbf{X}=\sum_{i=1}^{n}{\overrightarrow{z}_{i} \cdot \overrightarrow{z}_{i}^{T}}\) : $p \times p$ 양정치 행렬(Positive Definite Matrix)
         <ul>
-          <li>표준 정규 분포 $N(0,1)$ 를 따르는 $p$ 차원 벡터 $\overrightarrow{z}<em>{1},\overrightarrow{z}</em>{2},\cdots,\overrightarrow{z}_{n}$ 생성</li>
-          <li>외적 $\overrightarrow{z}<em>{i} \cdot \overrightarrow{z}</em>{i}^{T}$ 을 통해 $p \times p$ 양정치 행렬 $n$ 개 생성</li>
+          <li>표준 정규 분포 \(N(0,1)\) 를 따르는 \(p\) 차원 벡터 \(\overrightarrow{z}_{1},\overrightarrow{z}_{2},\cdots,\overrightarrow{z}_{n}\) 생성</li>
+          <li>외적 \(\overrightarrow{z}_{i} \cdot \overrightarrow{z}_{i}^{T}\) 을 통해 \(p \times p\) 양정치 행렬 \(n\) 개 생성</li>
           <li>$n$ 개의 $p \times p$ 양정치 행렬을 덧셈하여 $\mathbf{X}$ 생성</li>
         </ul>
       </li>
-      <li>
-        <p>$n&gt;p-1$ : 자유도로서 $\overrightarrow{z}_{i} \sim N(0,1)$ 갯수</p>
-      </li>
+      <li>$n&gt;p-1$ : 자유도로서 $\overrightarrow{z}_{i} \sim N(0,1)$ 갯수</li>
       <li>
         <p>$\mathbf{V}&gt;0$ : 양정치 행렬로서, 벡터 $\overrightarrow{z}_{i} \sim N(0,1)$ 간 공분산을 조정함으로써 분포의 형태와 스케일을 결정</p>
       </li>
@@ -2675,6 +2659,80 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2868,88 +2926,6 @@
     
     
     
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -3302,6 +3278,9 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/math/">Math</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/dev-env/">Dev. Env.</a>
       
         
@@ -3309,9 +3288,6 @@
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/git/">GIT</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/math/">Math</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/unsupervised-learning/">Unsupervised Learning</a>
@@ -3762,6 +3738,80 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -3955,88 +4005,6 @@
     
     
     
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -4389,6 +4357,9 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/math/">Math</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/dev-env/">Dev. Env.</a>
       
         
@@ -4396,9 +4367,6 @@
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/git/">GIT</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/math/">Math</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/unsupervised-learning/">Unsupervised Learning</a>

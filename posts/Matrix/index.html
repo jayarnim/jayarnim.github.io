@@ -1509,6 +1509,80 @@ j&amp;=1, 2, \cdots, p
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -1702,88 +1776,6 @@ j&amp;=1, 2, \cdots, p
     
     
     
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2136,6 +2128,9 @@ j&amp;=1, 2, \cdots, p
         <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/math/">Math</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/dev-env/">Dev. Env.</a>
       
         
@@ -2143,9 +2138,6 @@ j&amp;=1, 2, \cdots, p
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/git/">GIT</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/math/">Math</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/unsupervised-learning/">Unsupervised Learning</a>
@@ -2289,6 +2281,54 @@ j&amp;=1, 2, \cdots, p
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -2304,7 +2344,7 @@ j&amp;=1, 2, \cdots, p
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
-          <a href="/posts/Vector/" class="post-preview card h-100">
+          <a href="/posts/Matrix_Decomposition/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -2316,32 +2356,34 @@ j&amp;=1, 2, \cdots, p
 
 <time
   
-  data-ts="1688137200"
+  data-ts="1688569200"
   data-df="ll"
   
 >
-  Jul  1, 2023
+  Jul  6, 2023
 </time>
 
-              <h4 class="pt-0 my-2">Vector</h4>
+              <h4 class="pt-0 my-2">Matrix Decomposition</h4>
               <div class="text-muted">
-                <p>What? Vector
+                <p>Matrix Decomposition
 
 
 
-  벡터(Vector) : 벡터 공간의 원소로서 크기와 원점으로부터 뱡향을 가지는 물리량
+  
+    정의 : 하나의 행렬을 특정한 구조를 가진 다른 행렬의 합과 곱으로 나타내는 작업
+  
+  
+    종류
     
-      원소(Element) : 벡터를 구성하는 요소
-      차원(Dimension) : 원소의 갯수
-      
-        부분벡터(Sub-Vector) : 임의의 벡터 $\overrightarrow{a}$ 에 대...</p>
+      스펙트럼 분해(Spectral Decomposition) : 대칭행렬에 대한 분해
+      특이값 분해(Singular Value Decomposition; SVD) : ...</p>
               </div>
             </div>
           </a>
         </article>
       
         <article class="col">
-          <a href="/posts/Integration/" class="post-preview card h-100">
+          <a href="/posts/Eigen/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -2353,44 +2395,35 @@ j&amp;=1, 2, \cdots, p
 
 <time
   
-  data-ts="1689001200"
+  data-ts="1688482800"
   data-df="ll"
   
 >
-  Jul 11, 2023
+  Jul  5, 2023
 </time>
 
-              <h4 class="pt-0 my-2">Integration</h4>
+              <h4 class="pt-0 my-2">Eigen</h4>
               <div class="text-muted">
-                <p>적분의 이해
+                <p>고유값과 고유벡터
 
-
-적분(Integration)
 
 
   
-    정의 : 매우 작은 양을 쌓아가는 방법
+    정의
 
-    
-  
-  
-    미분과의 관계
-    
-      
-        미분
-
-\[f(x)
-  = F(x) \times \displaystyle\frac{1}{\Delta x}\]
-
-        
-          $F(x)$ 의 $x$ 에 대...</p>
+\[\begin{aligned}
+  \begin{pmatrix}
+  a_{11}&amp;amp;a_{12}&amp;amp;\cdots&amp;amp;a_{1n}\\
+  a_{21}&amp;amp;a_{22}&amp;amp;\cdots&amp;amp;a_{1n}\\
+  \vdots&amp;amp;\vdots&amp;amp;\ddots&amp;amp;\vdots\\
+  a_{...</p>
               </div>
             </div>
           </a>
         </article>
       
         <article class="col">
-          <a href="/posts/Partial_Derivative/" class="post-preview card h-100">
+          <a href="/posts/Linear_Transformation/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -2402,27 +2435,34 @@ j&amp;=1, 2, \cdots, p
 
 <time
   
-  data-ts="1688914800"
+  data-ts="1688396400"
   data-df="ll"
   
 >
-  Jul 10, 2023
+  Jul  4, 2023
 </time>
 
-              <h4 class="pt-0 my-2">Partial Derivative</h4>
+              <h4 class="pt-0 my-2">Linear Transformation</h4>
               <div class="text-muted">
-                <p>편미분(Partial Derivative)
+                <p>Linear Transformation
 
+
+선형변환
 
 
   
-    정의 : 다변수함수 $y=f(x,\cdots)$ 에 대하여, 변수 $x$ 를 제외한 모든 변수를 일정한 상수로 고정하였을 때 $x$ 축에 평행한 방향에 대한 $y$ 의 순간변화율
+    정의 : 하나의 벡터를 입력하여 다른 벡터를 출력하는 함수
 
     
-      
-        $z$ 에 대한 $x,y$ 의 2변수함수 $f$ 를 상정하자
+  
+  
+    기하학적 의미 : 평면을 휘어트리지 않는 선에서 벡터 공간을 늘리고 뒤틀어서 입력 벡터가 나타내는 직선을 출력 벡터가 나타내는 직선으로 변화하는 과정
 
-\[z=f(x...</p>
+    
+  
+  성질
+    
+      $...</p>
               </div>
             </div>
           </a>
@@ -2457,7 +2497,7 @@ j&amp;=1, 2, \cdots, p
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>Linear_equation</p>
+      <p>Linear Equation</p>
     </a>
   
 </nav>
@@ -2638,6 +2678,80 @@ j&amp;=1, 2, \cdots, p
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2831,88 +2945,6 @@ j&amp;=1, 2, \cdots, p
     
     
     
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -3265,6 +3297,9 @@ j&amp;=1, 2, \cdots, p
         <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/math/">Math</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/dev-env/">Dev. Env.</a>
       
         
@@ -3272,9 +3307,6 @@ j&amp;=1, 2, \cdots, p
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/git/">GIT</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/math/">Math</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/unsupervised-learning/">Unsupervised Learning</a>
