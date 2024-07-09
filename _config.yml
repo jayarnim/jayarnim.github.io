@@ -16,7 +16,7 @@ timezone: Asia/Seoul
 
 title: Data Scientist # the main title
 
-tagline: Expert in Recommender System # it will display as the subtitle
+tagline: Recommender System # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
