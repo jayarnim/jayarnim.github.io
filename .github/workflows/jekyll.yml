@@ -1,4 +1,4 @@
-name: Jekyll site CI
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -6,19 +6,15 @@ on:
       - main
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout main repository
-        uses: actions/checkout@v3
 
-      - name: Checkout docs repository
+    steps:
+      - name: Checkout config-repo
         uses: actions/checkout@v2
         with:
-          repository: jayarnim/blog-docs-repo
-          path: docs
+          repository: jayarnim/TechLog-config
           token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          ref: main
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -37,4 +33,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_branch: main
           publish_dir: ./_site
+          external_repository: jayarnim/jayarnim.github.io
