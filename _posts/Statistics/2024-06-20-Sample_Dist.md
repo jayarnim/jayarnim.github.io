@@ -224,4 +224,4 @@ image:
 | 두 집단 간 비율 비교 | $\pi_1 - \pi_2$ | $p_1 - p_2$ | $n_i p_i > 5$ <br> $n_i (1-p_i)>5$ | $H_0: \pi_1-\pi_2=0$ | Z-test | `statsmodels.stats.proportion.proportions_ztest` |
 | 적합성 검정 | $\pi_1, \cdots, \pi_m$ | $p_1, \cdots, p_m$ | $n_i p_i > 5$ <br> $n_i (1-p_i)>5$ | $H_0: \pi_1=p_{0}^{(1)}, \cdots, \pi_m=p_{0}^{(m)}$ | Chi-square test | `scipy.stats.chisquare` |
 | 독립성 검정 | | | $n_i p_i > 5$ <br> $n_i (1-p_i)>5$ | $H_0:$ 두 범주형 변수가 독립 | Chi-square test | `scipy.stats.chi2_contingency` |
-| 양적변수와의 상관관계 | $\beta_0, \beta_1$ <br> $(logit(p)=\beta_0+\beta_1 x)$ | $\hat{\beta}_0, \hat{\beta}_1$ | $Y \sim B$ | $H_0: \beta_i=0$ | Logistic regression | `sklearn.linear_models.LogisticRegression` |
+| 양적변수와의 상관관계 | $\beta_0, \beta_1$ <br> $(\pi=\beta_0+\beta_1 x)$ | $\hat{\beta}_0, \hat{\beta}_1$ | $Y \sim B$ | $H_0: \beta_i=0$ | Logistic regression | `sklearn.linear_models.LogisticRegression` |
