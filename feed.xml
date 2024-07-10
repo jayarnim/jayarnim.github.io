@@ -4,7 +4,7 @@
   <id>https://jayarnim.github.io/</id>
   <title>Data Scientist</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-07-10T10:59:47+09:00</updated>
+  <updated>2024-07-11T03:01:17+09:00</updated>
   <author>
     <name>jayarnim</name>
     <uri>https://jayarnim.github.io/</uri>
@@ -22,9 +22,9 @@
   <entry>
     <title>Bayes Estimator</title>
     <link href="https://jayarnim.github.io/posts/Bayes_Estimator/" rel="alternate" type="text/html" title="Bayes Estimator" />
-    <published>2024-06-21T00:00:00+09:00</published>
+    <published>2024-07-04T00:00:00+09:00</published>
   
-    <updated>2024-06-21T00:00:00+09:00</updated>
+    <updated>2024-07-04T00:00:00+09:00</updated>
   
     <id>https://jayarnim.github.io/posts/Bayes_Estimator/</id>
     <content src="https://jayarnim.github.io/posts/Bayes_Estimator/" />
@@ -55,66 +55,11 @@
 
   
   <entry>
-    <title>Prob. Dist. Functions</title>
-    <link href="https://jayarnim.github.io/posts/Prob_Dist_Functions/" rel="alternate" type="text/html" title="Prob. Dist. Functions" />
-    <published>2024-06-20T00:00:00+09:00</published>
-  
-    <updated>2024-06-20T00:00:00+09:00</updated>
-  
-    <id>https://jayarnim.github.io/posts/Prob_Dist_Functions/</id>
-    <content src="https://jayarnim.github.io/posts/Prob_Dist_Functions/" />
-    <author>
-      <name>jayarnim</name>
-    </author>
-
-  
-    
-    <category term="Statistical Techs" />
-    
-    <category term="Bayesian Modeling" />
-    
-  
-
-  <summary>Discrete Prob. Dist.
-
-
-이산 균등 분포(Discrete Uniform Dist.)
-
-
-
-
-  
-    정의 : 실현 가능한 각각의 결과가 동일한 확률로 발생하는 분포
-
-\[X \sim \text{DiscreteUniform}(a,b)\]
-
-    
-      $1,2,3,4,5,6$ 까지 눈금이 있는 주사위를 굴릴 때, 각 눈금이 나올 확률의 분포
-    
-  
-  
-    확률 질량 함수(Prob. Mass Function, PMF)
-
-\[P(X=k)=\frac{1}{n}\]
-
-    
-      $X$ : 이산 균등 분포를 따르는 확률변수
-      $k=a,\cdots,b$ : 발생 가능한 결과
-      $n$ : 발생 가능한 결과의 갯수
-    
-  
-  
-    기대값(Ex...</summary>
-
-  </entry>
-
-  
-  <entry>
     <title>Prior Prob. Dist.</title>
     <link href="https://jayarnim.github.io/posts/Prior_Prob_Dist/" rel="alternate" type="text/html" title="Prior Prob. Dist." />
-    <published>2024-06-19T00:00:00+09:00</published>
+    <published>2024-07-03T00:00:00+09:00</published>
   
-    <updated>2024-06-19T00:00:00+09:00</updated>
+    <updated>2024-07-03T00:00:00+09:00</updated>
   
     <id>https://jayarnim.github.io/posts/Prior_Prob_Dist/</id>
     <content src="https://jayarnim.github.io/posts/Prior_Prob_Dist/" />
@@ -151,9 +96,9 @@
   <entry>
     <title>Monte Carlo Simulation</title>
     <link href="https://jayarnim.github.io/posts/MC/" rel="alternate" type="text/html" title="Monte Carlo Simulation" />
-    <published>2024-06-18T00:00:00+09:00</published>
+    <published>2024-07-02T00:00:00+09:00</published>
   
-    <updated>2024-06-18T00:00:00+09:00</updated>
+    <updated>2024-07-02T00:00:00+09:00</updated>
   
     <id>https://jayarnim.github.io/posts/MC/</id>
     <content src="https://jayarnim.github.io/posts/MC/" />
@@ -199,9 +144,9 @@ example 원주율 구하기
   <entry>
     <title>What? Bayesian</title>
     <link href="https://jayarnim.github.io/posts/Bayesian/" rel="alternate" type="text/html" title="What? Bayesian" />
-    <published>2024-06-17T00:00:00+09:00</published>
+    <published>2024-07-01T00:00:00+09:00</published>
   
-    <updated>2024-06-17T00:00:00+09:00</updated>
+    <updated>2024-07-01T00:00:00+09:00</updated>
   
     <id>https://jayarnim.github.io/posts/Bayesian/</id>
     <content src="https://jayarnim.github.io/posts/Bayesian/" />
@@ -245,6 +190,49 @@ example 원주율 구하기
 \[\theta=\mu, \sigma^2, p, \cdots\]
       
      ...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Sample Dist.</title>
+    <link href="https://jayarnim.github.io/posts/Sample_Dist/" rel="alternate" type="text/html" title="Sample Dist." />
+    <published>2024-06-20T00:00:00+09:00</published>
+  
+    <updated>2024-06-20T00:00:00+09:00</updated>
+  
+    <id>https://jayarnim.github.io/posts/Sample_Dist/</id>
+    <content src="https://jayarnim.github.io/posts/Sample_Dist/" />
+    <author>
+      <name>jayarnim</name>
+    </author>
+
+  
+    
+    <category term="Statistical Techs" />
+    
+    <category term="Statistics" />
+    
+  
+
+  <summary>Random Sample
+
+
+Population &amp;amp;amp; Sample
+
+
+  모수는 그 값이 알려져 있지 않은 고정된 수이다. 이 값을 추정하기 위하여 표본의 통계량을 사용하므로, 통계량은 모수의 추정량이라 할 수 있다. 그런데 모집단에서 어떤 표본을 추출하느냐에 따라 통계량의 실현값이 달라진다. 따라서 모수는 상수(Constant), 통계량은 확률변수(Random Variable)라고 볼 수 있다.
+
+
+
+  모집단(Population)의 모수(Parameter)
+    
+      모평균 : $\mu = E(X)$
+      모분산 : $\sigma^2 = Var(X)$
+      모표준편차 : $\sigma = \sqrt{Var(X)}$
+    
+  
+  표본(Sample)의 통계량(Statist...</summary>
 
   </entry>
 

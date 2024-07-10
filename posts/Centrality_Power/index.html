@@ -771,39 +771,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -909,7 +876,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="2289 words"
+  title="2207 words"
 >
   <em>12 min</em> read</span>
 
@@ -1014,6 +981,41 @@
           <li>$\max(\sum_{i=1}^{g}{C_{D}(N_{*})-C_{D}(N_i)})$</li>
           <li>이론상으로 성립 가능한 네트워크 연결 정도 중심성 최대값</li>
           <li>즉, 액터 갯수가 $g$ 인 스타 네트워크의 연결 정도 중심성~</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="한계점"><span class="me-2">한계점</span><a href="#한계점" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li><strong>간접적인 연결관계를 간과함</strong>
+    <ul>
+      <li>연결 정도 중심성은 <strong>직접적인 연결관계만을 고려하기 때문에</strong> 그 의미가 지역에 한정될 수 있음</li>
+      <li>즉, <strong>지역에서는 중심적이지만 전역에서는 중심적이지 않은 경우</strong> 중요도가 왜곡될 수 있음
+        <ul>
+          <li>예컨대 액터의 연결 정도는 높지만, 그 알터들의 연결 정도는 낮은 경우</li>
+        </ul>
+      </li>
+      <li>전역에서의 구조적 위치를 파악하기 위해서는 <strong>간접적인 연결관계까지 고려할 필요가 있음</strong></li>
+    </ul>
+  </li>
+  <li><strong>네트워크 구조의 영향력을 간과함</strong>
+    <ul>
+      <li>네트워크 구조에 따른 액터의 <strong>구조적 위치와 파워 간 불일치 현상</strong></li>
+      <li><strong>Positive Network</strong>
+        <ul>
+          <li>연결관계가 보완적 성격을 가지는 네트워크</li>
+          <li>커뮤니케이션 네트워크 등</li>
+          <li>중요도가 높은 액터와 연결관계를 가질수록 파워가 높아짐</li>
+        </ul>
+      </li>
+      <li><strong>Negative Network</strong>
+        <ul>
+          <li>연결관계가 경쟁적 성격을 가지는 네트워크</li>
+          <li>Zero-Sum 원칙에 기초하는 자원 교환 네트워크, 협상 네트워크 등</li>
+          <li>중요도가 낮은 액터와 연결관계를 가질수록 파워가 높아짐</li>
         </ul>
       </li>
     </ul>
@@ -1143,26 +1145,6 @@
 <h2 id="고유벡터-중심성"><span class="me-2">고유벡터 중심성</span><a href="#고유벡터-중심성" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<h3 id="연결-정도-중심성의-한계점"><span class="me-2">연결 정도 중심성의 한계점</span><a href="#연결-정도-중심성의-한계점" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li><strong>간접적인 연결관계를 간과함</strong>
-    <ul>
-      <li>
-        <p>연결 정도 중심성은 <strong>직접적인 연결관계만을 고려하기 때문에</strong> 그 의미가 지역에 한정될 수 있음</p>
-      </li>
-      <li>즉, <strong>지역에서는 중심적이지만 전역에서는 중심적이지 않은 경우</strong> 중요도가 왜곡될 수 있음
-        <ul>
-          <li>예컨대 액터의 연결 정도는 높지만, 그 알터들의 연결 정도는 낮은 경우</li>
-        </ul>
-      </li>
-      <li>전역에서의 구조적 위치를 파악하기 위해서는 <strong>간접적인 연결관계까지 고려할 필요가 있음</strong></li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="고유벡터-중심성eigenvector-centrality"><span class="me-2">고유벡터 중심성(Eigenvector Centrality)</span><a href="#고유벡터-중심성eigenvector-centrality" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
 <ul>
   <li>
     <p><strong>정의</strong> : 알터들의 연결 정도를 가중하여 계산한 연결 정도 중심성</p>
@@ -1205,39 +1187,6 @@
 
 <h2 id="베타-중심성"><span class="me-2">베타 중심성</span><a href="#베타-중심성" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
-
-<h3 id="연결-정도-중심성의-한계점-1"><span class="me-2">연결 정도 중심성의 한계점</span><a href="#연결-정도-중심성의-한계점-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li><strong>간접적인 연결관계를 간과함</strong>
-    <ul>
-      <li>파워는 인접한 액터뿐만 아니라 멀리 떨어져 있는 액터에 대한 접근성과도 관련이 있음</li>
-    </ul>
-  </li>
-  <li><strong>네트워크 구조의 영향력을 간과함</strong>
-    <ul>
-      <li>
-        <p>네트워크 구조에 따른 액터의 <strong>구조적 위치와 파워 간 불일치 현상</strong></p>
-      </li>
-      <li><strong>Positive Network</strong>
-        <ul>
-          <li>연결관계가 보완적 성격을 가지는 네트워크</li>
-          <li>커뮤니케이션 네트워크 등</li>
-          <li>중요도가 높은 액터와 연결관계를 가질수록 파워가 높아짐</li>
-        </ul>
-      </li>
-      <li><strong>Negative Network</strong>
-        <ul>
-          <li>연결관계가 경쟁적 성격을 가지는 네트워크</li>
-          <li>Zero-Sum 원칙에 기초하는 자원 교환 네트워크, 협상 네트워크 등</li>
-          <li>중요도가 낮은 액터와 연결관계를 가질수록 파워가 높아짐</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="베타-중심성beta-centrality"><span class="me-2">베타 중심성(Beta Centrality)</span><a href="#베타-중심성beta-centrality" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
@@ -1457,13 +1406,6 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Prob_Dist_Functions/">Prob. Dist. Functions</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
           <a href="/posts/Prior_Prob_Dist/">Prior Prob. Dist.</a>
         </li>
       
@@ -1479,6 +1421,13 @@
         
         <li class="text-truncate lh-lg">
           <a href="/posts/Bayesian/">What? Bayesian</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/Sample_Dist/">Sample Dist.</a>
         </li>
       
     </ul>
@@ -1567,75 +1516,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1659,210 +1539,6 @@
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2048,46 +1724,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2107,6 +1743,218 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
     
   
@@ -2139,7 +1987,104 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -2185,6 +2130,66 @@
     
     
     
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
     
   
     
@@ -2233,6 +2238,9 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/math/">Math</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/dev-env/">Dev. Env.</a>
       
         
@@ -2252,9 +2260,6 @@
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
       
     </div>
   </section>
@@ -2658,75 +2663,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2750,210 +2686,6 @@
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -3139,46 +2871,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3198,6 +2890,218 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
     
   
@@ -3230,7 +3134,104 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -3276,6 +3277,66 @@
     
     
     
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
     
   
     
@@ -3324,6 +3385,9 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/math/">Math</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/dev-env/">Dev. Env.</a>
       
         
@@ -3343,9 +3407,6 @@
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
       
     </div>
   </section>
