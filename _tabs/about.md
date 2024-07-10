@@ -9,15 +9,16 @@ Hi there! I'm dreaming of becoming an **expert in recommendation systems**. I gr
 ## Research Interest
 ------
 - Recommender System
+- Topic Modeling
 - Graph Neural Networks
 - Bayesian Modeling
 
 ## Degree
 ------
-- **Master’s Course in Data Science**, *2023.09 - Present*\\
+- 🎓 **Master’s Course in Data Science**, *2023.09 - Present*\\
 Concentration in Recommender System\\
 The Graduate School, Kookmin Univ., South Korea
-- **B.E. in Economics**, *2016.03 - 2023.08*\\
+- 🎓 **B.E. in Economics**, *2016.03 - 2023.08*\\
 Concentration in Business Economics\\
 College of Economics & Commerce, Kookmin Univ., South Korea
 

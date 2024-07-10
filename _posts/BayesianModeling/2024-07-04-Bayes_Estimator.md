@@ -1,9 +1,9 @@
 ---
-order: 5
+order: 4
 title: Bayes Estimator
-date: 2024-06-21
+date: 2024-07-04
 categories: [Statistical Techs, Bayesian Modeling]
-tags: [Statistics, Bayesian]
+tags: [Statistics, Bayesian, Optimization, Loss Function]
 math: true
 image:
   path: /_post_refer_img/BayesianModeling/Thumbnail.jpeg

@@ -1,12 +1,12 @@
 ---
-order: 4
+order: 3
 title: Prob. Dist. Functions
-date: 2024-06-20
-categories: [Statistical Techs, Bayesian Modeling]
+date: 2024-06-19
+categories: [Statistical Techs, Statistics]
 tags: [Statistics]
 math: true
 image:
-  path: /_post_refer_img/BayesianModeling/Thumbnail.jpeg
+  path: /_post_refer_img/Statistics/Thumbnail.png
 ---
 
 ## Discrete Prob. Dist.
@@ -14,7 +14,7 @@ image:
 
 ### 이산 균등 분포(Discrete Uniform Dist.)
 
-![01](/_post_refer_img/BayesianModeling/04-01.png){: width="100%"}
+![01](/_post_refer_img/Statistics/03-01.png){: width="100%"}
 
 - **정의** : 실현 가능한 각각의 결과가 동일한 확률로 발생하는 분포
 
@@ -48,7 +48,7 @@ image:
 
 ### 이항 분포(Bi-Nomial Dist.)
 
-![02](/_post_refer_img/BayesianModeling/04-02.png){: width="100%"}
+![02](/_post_refer_img/Statistics/03-02.png){: width="100%"}
 
 - **정의** : 고정된 횟수($n$)의 독립적인 베르누이 시행에서 성공 횟수를 나타내는 분포
 
@@ -84,7 +84,7 @@ image:
 
 ### 포아송 분포(Poisson Dist.)
 
-![03](/_post_refer_img/BayesianModeling/04-03.png){: width="100%"}
+![03](/_post_refer_img/Statistics/03-03.png){: width="100%"}
 
 - **정의** : 단위 시간 혹은 공간 안에서 사건 발생 횟수를 나타내는 분포
 
@@ -162,7 +162,7 @@ image:
 
 ### 균등 분포(Uniform Dist.)
 
-![04](/_post_refer_img/BayesianModeling/04-04.png){: width="100%"}
+![04](/_post_refer_img/Statistics/03-04.png){: width="100%"}
 
 - **정의** : 주어진 구간에서 모든 값이 일정한 확률을 가지는 분포
 
@@ -192,7 +192,7 @@ image:
 
 ### 베타 분포(Beta Dist.)
 
-![05](/_post_refer_img/BayesianModeling/04-05.png){: width="100%"}
+![05](/_post_refer_img/Statistics/03-05.png){: width="100%"}
 
 - **정의** : 두 매개변수 $\alpha$ 와 $\beta$ 에 의해 모양이 결정되는, $0$ 과 $1$ 사이의 값에 대한 확률 분포
 
@@ -234,7 +234,7 @@ image:
 
 ### 지수 분포(Exponential Dist.)
 
-![06](/_post_refer_img/BayesianModeling/04-06.png){: width="100%"}
+![06](/_post_refer_img/Statistics/03-06.png){: width="100%"}
 
 - **정의** : 단일 사건의 대기 시간을 나타내는 분포
 
@@ -268,7 +268,7 @@ image:
 
 ### 감마 분포(Gamma Dist.)
 
-![07](/_post_refer_img/BayesianModeling/04-07.png){: width="100%"}
+![07](/_post_refer_img/Statistics/03-07.png){: width="100%"}
 
 - **정의** : 여러 지수적 사건의 총 대기 시간을 나타내는 분포
 
@@ -304,7 +304,7 @@ image:
 
 ### 역감마 분포(Inverse-Gamma Dist.)
 
-![08](/_post_refer_img/BayesianModeling/04-08.png){: width="100%"}
+![08](/_post_refer_img/Statistics/03-08.png){: width="100%"}
 
 - **정의** : 감마 분포의 역수를 따르는 확률 분포
 
@@ -340,7 +340,7 @@ image:
 
 ### 정규 분포(Normal Dist.)
 
-![09](/_post_refer_img/BayesianModeling/04-09.png){: width="100%"}
+![09](/_post_refer_img/Statistics/03-09.png){: width="100%"}
 
 - **정의** : 자연 및 사회 과학에서 발생하는 대부분의 현상을 설명하는 대표적인 분포
 
@@ -371,7 +371,7 @@ image:
 
 ### 비중심 T-분포(Non-central T-Dist.)
 
-![10](/_post_refer_img/BayesianModeling/04-10.png){: width="100%"}
+![10](/_post_refer_img/Statistics/03-10.png){: width="100%"}
 
 - **정의** : 평균이 $0$ 이 아닌 정규 분포에 기반한 표본 평균의 분포
 
@@ -415,7 +415,7 @@ image:
 
 ### 카이제곱 분포(Chi-Squared Dist.)
 
-![11](/_post_refer_img/BayesianModeling/04-11.png){: width="100%"}
+![11](/_post_refer_img/Statistics/03-11.png){: width="100%"}
 
 - **정의** : 표준 정규 분포를 따르는 독립적인 확률변수들의 자승의 합이 특정 값일 확률에 대한 분포
 
@@ -452,7 +452,7 @@ image:
 
 ### 스케일된 역 카이제곱 분포(Scaled Inverse-Chi-Squared Dist.)
 
-![12](/_post_refer_img/BayesianModeling/04-12.png){: width="100%"}
+![12](/_post_refer_img/Statistics/03-12.png){: width="100%"}
 
 - **정의** : 카이제곱 분포의 역수를 따르는 확률 분포
 

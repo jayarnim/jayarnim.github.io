@@ -43,7 +43,7 @@ image:
 ## 테일러 급수
 -----
 
-<p align="center"><img alt="선형근사" src="https://github.com/jayarnim/jayarnim/assets/116495744/ddc659f5-4b17-4ba2-99f0-8a42e27e50a3" width=80%></p>
+![02](/_post_refer_img/Calculus/03-02.png){: width="100%"}
 
 - **테일러 다항식(Taylor Polynomial)** : $x=a$ 에서 미분 가능한 함수 $y=f(x)$ 에 대하여, $y=f(x)$ 와 $x=a$ 에서 근사하는 $n$ 차 함수
 
