@@ -30,7 +30,7 @@ jobs:
       - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          GEM_HOST_API_KEY: ${{ secrets.GEM_HOST_API_KEY }}
+          # GEM_HOST_API_KEY: ${{ secrets.GEM_HOST_API_KEY }}
 
   publish:
     needs: release
