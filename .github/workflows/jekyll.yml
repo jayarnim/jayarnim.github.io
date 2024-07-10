@@ -1,4 +1,4 @@
-name: Deploy to GitHub Page
+name: Jekyll site CI
 
 on:
   push:
@@ -6,15 +6,11 @@ on:
       - main
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout config-repo
-        uses: actions/checkout@v2
-        with:
-          repository: jayarnim/TechLog-config
-          token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+      - name: Checkout main repository
+        uses: actions/checkout@v3
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -29,15 +25,8 @@ jobs:
       - name: Build site
         run: bundle exec jekyll build
 
-      - name: Set Git user
-        run: |
-          git config --global user.email "jayarnim727@gmail.com"
-          git config --global user.name "jayarnim"
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          external_repository: jayarnim/jayarnim.github.io
-          publish_branch: main
           publish_dir: ./_site
