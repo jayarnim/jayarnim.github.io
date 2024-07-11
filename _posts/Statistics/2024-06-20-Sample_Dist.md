@@ -81,7 +81,7 @@ image:
     - 모집단의 평균을 추정하기 위해 여러 표본을 뽑을 때 표본 비율의 추정치들의 분포
 
         $$
-        \overline{P} \sim N(\pi, \displaystyle\frac{\pi(1-\pi)}{n}) \quad (\text{s.t.}\;n>30)
+        P \sim N(\pi, \displaystyle\frac{\pi(1-\pi)}{n}) \quad (\text{s.t.}\;n>30)
         $$
 
 ### Statistics
