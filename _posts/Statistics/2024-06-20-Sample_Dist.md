@@ -73,7 +73,16 @@ image:
 
 - **표본분포(Sampling Distribution)** : 모수에 대한 추정량의 확률분포
     - 모집단의 평균을 추정하기 위해 여러 표본을 뽑을 때 표본 평균의 추정치들의 분포
+
+        $$
+        \overline{X} \sim N(\mu, \displaystyle\frac{\sigma^2}{n}) \quad (\text{s.t.}\;n>30)
+        $$
+
     - 모집단의 평균을 추정하기 위해 여러 표본을 뽑을 때 표본 비율의 추정치들의 분포
+
+        $$
+        \overline{P} \sim N(\pi, \displaystyle\frac{\pi(1-\pi)}{n}) \quad (\text{s.t.}\;n>30)
+        $$
 
 ### Statistics
 
