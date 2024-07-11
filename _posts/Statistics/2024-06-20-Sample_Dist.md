@@ -116,7 +116,7 @@ image:
 
     $$\begin{aligned}
     SE
-    &=\frac{\sigma^2}{n}\\
+    &=\sqrt{\frac{\sigma^2}{n}}\\
     &=E\left[\vert\overline{x}_{i}-\mu\vert\right]
     \end{aligned}$$
 
