@@ -635,17 +635,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -661,28 +650,6 @@
       
         
         
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
       
 
       
@@ -865,9 +832,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1498 words"
+  title="1348 words"
 >
-  <em>8 min</em> read</span>
+  <em>7 min</em> read</span>
 
         </div>
       </div>
@@ -887,16 +854,38 @@
 <ul>
   <li><strong>모집단(Population)의 모수(Parameter)</strong>
     <ul>
-      <li>모평균 : $\mu = E(X)$</li>
-      <li>모분산 : $\sigma^2 = Var(X)$</li>
-      <li>모표준편차 : $\sigma = \sqrt{Var(X)}$</li>
+      <li><strong>모평균</strong> : $\mu$</li>
+      <li><strong>모분산</strong> : $\sigma^2$</li>
     </ul>
   </li>
   <li><strong>표본(Sample)의 통계량(Statistic)</strong>
     <ul>
-      <li>표본평균 : $\overline{X}$</li>
-      <li>표본분산 : $S^2$</li>
-      <li>표본표준편차 : $S$</li>
+      <li>
+        <p><strong>표본평균</strong> : $\overline{X}$</p>
+
+\[\begin{aligned}
+  \overline{X}
+  &amp;= \frac{1}{n}(X_{1}+X_{2}+\cdots+X_{n}) \quad \text{for}\; X_{\forall} \in \Omega\\
+  &amp;= \frac{1}{n}\sum_{i=1}^{n}{X_{i}}
+  \end{aligned}\]
+      </li>
+      <li>
+        <p><strong>표본분산</strong> : $S^2$</p>
+
+\[\begin{aligned}
+  S^2
+  &amp;= \frac{1}{\nu}\left[\vert X_{1} - \overline{X}\vert^2 + \vert X_{2} - \overline{X}\vert^2 + \cdots + \vert X_{n} - \overline{X}\vert^2 \right]\\
+  &amp;= \frac{1}{\nu}\sum_{i=1}^{n}(X_{i}-\overline{X})^2
+  \end{aligned}\]
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">note</code> <strong>자유도(Degree of Freedom; $\nu$)</strong> : 주어진 자료 내에서 독립적으로 변할 수 있는 확률변수의 수</p>
+        <ul>
+          <li>어떠한 자료에 대하여 그 기술통계량이 주어지는 경우, 특정 관측치의 정보가 불분명하더라도 해당 관측치가 취할 수 있는 값은 제한되어 있음</li>
+          <li>표본분산 $S^2$ 을 계산하기 위해서는 표본평균 $\overline{X}$ 을 먼저 계산해야 하므로, 분산 계산 시 동원되는 관측치 중 독립적으로 변할 수 있는 관측치의 수는 $n-1$ 임</li>
+          <li>이 경우 관측치 수 $n$ 이 아니라 자유도 $\nu=n-1$ 로 나눈 값이 모분산 $\sigma^2$ 의 비편향 추정량임</li>
+        </ul>
+      </li>
     </ul>
   </li>
 </ul>
@@ -920,8 +909,8 @@
     <p>원소 $X_1, X_2, X_3, \cdots, X_n$ 이 모두 모집단의 분포를 따르는 확률변수이고,</p>
 
 \[\begin{aligned}
-  E(X_{i^{\forall}})&amp;=\mu \\
-  Var(X_{i^{\forall}})&amp;=\sigma^2
+  E\left[X_{i^{\forall}}\right]&amp;=\mu \\
+  Var\left[X_{i^{\forall}}\right]&amp;=\sigma^2
   \end{aligned}\]
   </li>
   <li>
@@ -980,9 +969,9 @@
 
 \[\begin{aligned}
   E\left[\overline{X}\right]
-  &amp;= E\left[\frac{1}{n}(X_1+X_2+X_3+\cdots+X_n)\right]\\
-  &amp;=\frac{1}{n}\bigg[E\left[X_1+X_2+X_3+\cdots+X_n\right]\bigg]\\
-  &amp;=\frac{1}{n}\bigg[E\left[X_1\right]+E\left[X_2\right]+E\left[X_3\right]+\cdots+E\left[X_n\right]\bigg]\\
+  &amp;= E\left[\frac{1}{n}(\overline{x}_1+\overline{x}_2+\cdots+\overline{x}_n)\right]\\
+  &amp;=\frac{1}{n}\bigg[E\left[\overline{x}_1+\overline{x}_2+\cdots+\overline{x}_n\right]\bigg]\\
+  &amp;=\frac{1}{n}\bigg[E\left[\overline{x}_1\right]+E\left[\overline{x}_2\right]+\cdots+E\left[\overline{x}_n\right]\bigg]\\
   &amp;=\frac{1}{n}(\mu + \cdots + \mu)\\
   &amp;=\mu
   \end{aligned}\]
@@ -992,11 +981,11 @@
 
 \[\begin{aligned}
   Var\left[\overline{X}\right]
-  &amp;= Var\left[\frac{1}{n}(X_1+X_2+X_3+\cdots+X_n)\right]\\
-  &amp;=Var\left[\frac{1}{n}X_1\right]+Var\left[\frac{1}{n}X_2\right]+Var\left[\frac{1}{n}X_3\right]+\cdots+Var\left[\frac{1}{n}X_n\right]\\
-  &amp;(\because Cov\left[X_i, X_j\right]=0)\\
-  &amp;=\frac{1}{n^2}Var\left[X_1\right]+\frac{1}{n^2}Var\left[X_2\right]+\frac{1}{n^2}Var\left[X_3\right]+\cdots+\frac{1}{n^2}Var\left[X_n\right]\\
-  &amp;=\frac{1}{n^2}\sigma^2 + \frac{1}{n^2}\sigma^2 +\frac{1}{n^2}\sigma^2 + \cdots + \frac{1}{n^2}\sigma^2\\
+  &amp;= Var\left[\frac{1}{n}(\overline{x}_1+\overline{x}_2+\cdots+\overline{x}_n)\right]\\
+  &amp;=Var\left[\frac{1}{n}\overline{x}_1\right]+Var\left[\frac{1}{n}\overline{x}_2\right]+\cdots+Var\left[\frac{1}{n}\overline{x}_n\right]\\
+  &amp;(\because Cov\left[\overline{x}_i, \overline{x}_j\right]=0)\\
+  &amp;=\frac{1}{n^2}Var\left[\overline{x}_1\right]+\frac{1}{n^2}Var\left[\overline{x}_2\right]+\cdots+\frac{1}{n^2}Var\left[\overline{x}_n\right]\\
+  &amp;=\frac{1}{n^2}\sigma^2 + \frac{1}{n^2}\sigma^2 + \cdots + \frac{1}{n^2}\sigma^2\\
   &amp;=\frac{1}{n^2}(\sigma^2 + \cdots + \sigma^2)\\
   &amp;=\frac{\sigma^2}{n}
   \end{aligned}\]
@@ -1005,7 +994,7 @@
     <p><strong>표준오차(Standard Error; $SE$)</strong> : $\overline{X}$ 의 표준편차</p>
 
     <blockquote>
-      <p>표본 $sample1, sample2, \cdots$ 에 의해 얻어진 추정량 $\overline{X}$ 의 실현값 $\overline{x_1}, \overline{x_2}, \overline{x_3}, \cdots$ 은 $\mu$ 를 기준으로 얼마나 널리 퍼져 있는가</p>
+      <p>표본 $sample1, sample2, \cdots$ 에 의해 얻어진 추정량 $\overline{X}$ 의 실현값 $\overline{x}_1, \overline{x}_2, \cdots$ 은 $\mu$ 를 기준으로 얼마나 널리 퍼져 있는가</p>
     </blockquote>
 
 \[\begin{aligned}
@@ -1070,8 +1059,7 @@
         <p>확률변수 $X$ 의 기대값</p>
 
 \[\begin{aligned}
-  E(X)
-  &amp;=\mu \\
+  E\left[X\right]
   &amp;=1\times\pi + 0\times(1-\pi) \\
   &amp;=\pi
   \end{aligned}\]
@@ -1080,8 +1068,7 @@
         <p>확률변수 $X$ 의 분산</p>
 
 \[\begin{aligned}
-  Var(X)
-  &amp;=\sigma^2 \\
+  Var\left[X\right]
   &amp;=(1-\pi)^2\times\pi + (0-\pi)^2\times(1-\pi) \\
   &amp;=\pi(1-\pi)
   \end{aligned}\]
@@ -1102,19 +1089,30 @@
 
 \[\begin{aligned}
   P
-  &amp;= \overline{X} \\
-  &amp;= \frac{1}{n}\displaystyle\sum_{i=1}^{n}{X_i}
+  &amp;= \frac{1}{n}\displaystyle\sum_{i=1}^{n}{p_i}
   \end{aligned}\]
   </li>
   <li>
-    <p><strong>표본비율의 분산 도출</strong></p>
+    <p><strong>$P$ 의 기대값</strong> : $E\left[P\right]=\pi$</p>
 
 \[\begin{aligned}
-  &amp;Var\left[\frac{1}{n}(X_1+X_2+\cdots+X_n)\right]\\
-  &amp;= Var\left[\frac{1}{n}X_1\right]+Var\left[\frac{1}{n}X_2\right]+\cdots+Var\left[\frac{1}{n}X_n\right]\\
-  &amp;= \frac{1}{n^2}Var\left[X_1\right]+\frac{1}{n^2}Var\left[X_2\right]+\cdots+\frac{1}{n^2}Var\left[X_n\right]\\
-  &amp;= \frac{1}{n^2}(\sigma^2+\sigma^2+\cdots+\sigma^2)\\
-  &amp;= \frac{1}{n^2}\times n\times \sigma^2\\
+  E\left[P\right]
+  &amp;= E\left[\frac{1}{n}(p_1+p_2+\cdots+p_n)\right]\\
+  &amp;=\frac{1}{n}\bigg[E\left[p_1+p_2+\cdots+p_n\right]\bigg]\\
+  &amp;=\frac{1}{n}\bigg[E\left[p_1\right]+E\left[p_2\right]+\cdots+E\left[p_n\right]\bigg]\\
+  &amp;=\frac{1}{n}(\pi + \cdots + \pi)\\
+  &amp;=\pi
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>$P$ 의 분산</strong> : $Var\left[P\right]=\displaystyle\frac{\pi(1-\pi)}{n}$</p>
+
+\[\begin{aligned}
+  Var\left[P\right]
+  &amp;= Var\left[\frac{1}{n}(p_1+p_2+\cdots+p_n)\right]\\
+  &amp;= Var\left[\frac{1}{n}p_1\right]+Var\left[\frac{1}{n}p_2\right]+\cdots+Var\left[\frac{1}{n}p_n\right]\\
+  &amp;= \frac{1}{n^2}Var\left[p_1\right]+\frac{1}{n^2}Var\left[p_2\right]+\cdots+\frac{1}{n^2}Var\left[p_n\right]\\
+  &amp;= \frac{1}{n^2}\Big[\pi(1-\pi)+\cdots+\pi(1-\pi)\Big]\\
   &amp;= \frac{\pi(1-\pi)}{n}
   \end{aligned}\]
   </li>
@@ -1128,135 +1126,6 @@
 \[P \sim N(\pi, \frac{\pi(1-\pi)}{n})\]
   </li>
 </ul>
-
-<h2 id="inference"><span class="me-2">Inference</span><a href="#inference" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<h3 id="수치형-변수의-평균에-대한-추론"><span class="me-2">수치형 변수의 평균에 대한 추론</span><a href="#수치형-변수의-평균에-대한-추론" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<div class="table-wrapper"><table>
-  <thead>
-    <tr>
-      <th>문제</th>
-      <th>관심모수</th>
-      <th>점추정량</th>
-      <th>가정체크</th>
-      <th>검정가설</th>
-      <th>검정방법</th>
-      <th>Python Module</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>단일 집단의 평균</td>
-      <td>$\mu$</td>
-      <td>$\bar{X}$</td>
-      <td>$n&gt;30$ or $X \sim N$</td>
-      <td>$H_0: \mu=\mu_0$</td>
-      <td>One-sample T-test</td>
-      <td><code class="language-plaintext highlighter-rouge">statsmodels.stats.ttest_mean</code></td>
-    </tr>
-    <tr>
-      <td>두 집단 간 평균 비교 <br /> (독립표본)</td>
-      <td>$\mu_1-\mu_2$</td>
-      <td>\(\bar{X}_{1} - \bar{X}_{2}\)</td>
-      <td>$(n_1 + n_2)&gt;30$ or $X_{1}\sim N, X_{2} \sim N$</td>
-      <td>$H_0: \mu_1 - \mu_2 = 0$</td>
-      <td>Two-sample t-test</td>
-      <td><code class="language-plaintext highlighter-rouge">statsmodels.stats.weightstats.ttest_ind</code></td>
-    </tr>
-    <tr>
-      <td>두 집단 간 평균 비교 <br /> (쌍체표본)</td>
-      <td>$\mu_d$</td>
-      <td>$\bar{x}_d$</td>
-      <td>$n&gt;30$ or $X \sim N$</td>
-      <td>$H_0: \mu_d=0$</td>
-      <td>Paired t-test</td>
-      <td><code class="language-plaintext highlighter-rouge">statsmodels.stats.ttest_mean</code></td>
-    </tr>
-    <tr>
-      <td>셋 이상 그룹 간 평균 비교</td>
-      <td>$\mu_1, \cdots, \mu_m$</td>
-      <td>$\bar{X}_1, \cdots, \bar{X}_m$</td>
-      <td>$n_i&gt;30$ or $X_{i} \sim N$ <br /> $\sigma_{i}^{2}=\sigma_{j}^{2}$</td>
-      <td>$H_0: \mu_1 = \cdots = \mu_m$</td>
-      <td>ANOVA</td>
-      <td><code class="language-plaintext highlighter-rouge">statsmodels.stats.anova.AnovaRM</code></td>
-    </tr>
-    <tr>
-      <td>양적변수 간의 상관관계</td>
-      <td>$\beta_0, \beta_1$ <br /> $(y=\beta_0+\beta_1 x + \epsilon)$</td>
-      <td>$\hat{\beta}_0, \hat{\beta}_1$</td>
-      <td>반응변수와 설명변수 간 선형성 <br /> 설명변수 간 독립성 <br /> 오차의 등분산성 <br /> 오차의 정규성</td>
-      <td>$H_0: \beta_i=0$</td>
-      <td>Regression</td>
-      <td><code class="language-plaintext highlighter-rouge">statsmodels.api.OLS</code></td>
-    </tr>
-  </tbody>
-</table></div>
-
-<h3 id="범주형-변수의-비율에-대한-추론"><span class="me-2">범주형 변수의 비율에 대한 추론</span><a href="#범주형-변수의-비율에-대한-추론" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<div class="table-wrapper"><table>
-  <thead>
-    <tr>
-      <th>문제</th>
-      <th>관심모수</th>
-      <th>점추정량</th>
-      <th>가정체크</th>
-      <th>검정가설</th>
-      <th>검정방법</th>
-      <th>Python Module</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>단일 집단의 비율</td>
-      <td>$\pi$</td>
-      <td>$p$</td>
-      <td>$np&gt;5$ <br /> $n(1-p)&gt;5$</td>
-      <td>$H_0: \pi=\pi_0$</td>
-      <td>Z-test</td>
-      <td><code class="language-plaintext highlighter-rouge">statsmodels.stats.proportion.proportions_ztest</code></td>
-    </tr>
-    <tr>
-      <td>두 집단 간 비율 비교</td>
-      <td>$\pi_1 - \pi_2$</td>
-      <td>$p_1 - p_2$</td>
-      <td>$n_i p_i &gt; 5$ <br /> $n_i (1-p_i)&gt;5$</td>
-      <td>$H_0: \pi_1-\pi_2=0$</td>
-      <td>Z-test</td>
-      <td><code class="language-plaintext highlighter-rouge">statsmodels.stats.proportion.proportions_ztest</code></td>
-    </tr>
-    <tr>
-      <td>적합성 검정</td>
-      <td>$\pi_1, \cdots, \pi_m$</td>
-      <td>$p_1, \cdots, p_m$</td>
-      <td>$n_i p_i &gt; 5$ <br /> $n_i (1-p_i)&gt;5$</td>
-      <td>$H_0: \pi_1=p_{0}^{(1)}, \cdots, \pi_m=p_{0}^{(m)}$</td>
-      <td>Chi-square test</td>
-      <td><code class="language-plaintext highlighter-rouge">scipy.stats.chisquare</code></td>
-    </tr>
-    <tr>
-      <td>독립성 검정</td>
-      <td> </td>
-      <td> </td>
-      <td>$n_i p_i &gt; 5$ <br /> $n_i (1-p_i)&gt;5$</td>
-      <td>$H_0:$ 두 범주형 변수가 독립</td>
-      <td>Chi-square test</td>
-      <td><code class="language-plaintext highlighter-rouge">scipy.stats.chi2_contingency</code></td>
-    </tr>
-    <tr>
-      <td>양적변수와의 상관관계</td>
-      <td>$\beta_0, \beta_1$ <br /> $(\pi=\beta_0+\beta_1 x)$</td>
-      <td>$\hat{\beta}_0, \hat{\beta}_1$</td>
-      <td>$Y \sim B$</td>
-      <td>$H_0: \beta_i=0$</td>
-      <td>Logistic regression</td>
-      <td><code class="language-plaintext highlighter-rouge">sklearn.linear_models.LogisticRegression</code></td>
-    </tr>
-  </tbody>
-</table></div>
 
   </div>
 
@@ -1412,7 +1281,7 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Sample_Dist/">Sample Dist.</a>
+          <a href="/posts/Summarize_Statistical_Methods/">Summarize Statistical Method</a>
         </li>
       
     </ul>
@@ -1673,6 +1542,8 @@
     
     
     
+    
+      
     
   
     
@@ -2385,6 +2256,42 @@
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -2400,7 +2307,7 @@
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
-          <a href="/posts/Prob_Dist_Functions/" class="post-preview card h-100">
+          <a href="/posts/Summarize_Statistical_Methods/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -2412,37 +2319,45 @@
 
 <time
   
-  data-ts="1718722800"
+  data-ts="1719068400"
   data-df="ll"
   
 >
-  Jun 19, 2024
+  Jun 23, 2024
 </time>
 
-              <h4 class="pt-0 my-2">Prob. Dist. Functions</h4>
+              <h4 class="pt-0 my-2">Summarize Statistical Method</h4>
               <div class="text-muted">
-                <p>Discrete Prob. Dist.
+                <p>Summary
 
 
-이산 균등 분포(Discrete Uniform Dist.)
-
-
+수치형 변수의 평균에 대한 추론
 
 
   
-    정의 : 실현 가능한 각각의 결과가 동일한 확률로 발생하는 분포
-
-\[X \sim \text{DiscreteUniform}(a,b)\]
-
     
-      $1,2,3,4,5,6$ 까지 눈금이 있는 주사위를 굴릴 때, 각 눈금이 나...</p>
+      문제
+      관심모수
+      점추정량
+      가정체크
+      검정가설
+      검정방법
+      Python Module
+    
+  
+  
+    
+      단일 집단의 평균
+      $\mu$
+      $\bar{X}$
+      $n&amp;gt;30$...</p>
               </div>
             </div>
           </a>
         </article>
       
         <article class="col">
-          <a href="/posts/Probability/" class="post-preview card h-100">
+          <a href="/posts/A_B_Test/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -2454,37 +2369,39 @@
 
 <time
   
-  data-ts="1718636400"
+  data-ts="1718982000"
   data-df="ll"
   
 >
-  Jun 18, 2024
+  Jun 22, 2024
 </time>
 
-              <h4 class="pt-0 my-2">Probability</h4>
+              <h4 class="pt-0 my-2">A/B Test</h4>
               <div class="text-muted">
-                <p>Probability
+                <p>What? A/B Test
 
 
-Random Experiment
+Two Sample t-Test
 
 
-  확률실험(Random Experiment) : 사건의 불확실성을 가진 프로세스
-    
-      사건의 불확실성 : 결과(Outcome)를 사전에 알 수 없는 성질
-    
-  
-  표본공간(Sample Space) : 확률실험에서 발생 가능한 모든 결과의 집합
-    
-      
- ...</p>
+Independent Sample t-Test
+
+Paired Sample t-Test
+
+ANOVA
+
+
+Test of Independence
+
+
+Bonus Goodness-of-Fit Test</p>
               </div>
             </div>
           </a>
         </article>
       
         <article class="col">
-          <a href="/posts/Statistics/" class="post-preview card h-100">
+          <a href="/posts/Statistical_Inference/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -2496,32 +2413,35 @@ Random Experiment
 
 <time
   
-  data-ts="1718550000"
+  data-ts="1718895600"
   data-df="ll"
   
 >
-  Jun 17, 2024
+  Jun 21, 2024
 </time>
 
-              <h4 class="pt-0 my-2">What? Statistics</h4>
+              <h4 class="pt-0 my-2">Statistical Inference</h4>
               <div class="text-muted">
-                <p>What? Statistics
+                <p>Estimation
 
 
-통계학의 정의
+Point Estimator
 
 
   
-    통계학(Statistics)
+    점 추정량(Point Estimator) : 모수를 추정하는 하나의 값(Single Value)
 
     
-      의사결정에 필요한 정보를 얻기 위하여 데이터를 수집(Collect), 정리(Summarize), 분석(Analyze), 해석(Interpret)하는 방법을 연구하는 학문
-    
-  
-  
-    종류
-    
-      기술통계학(Des...</p>
+      
+        
+           
+          표기
+          평균
+          분산
+          비율
+        
+      
+   ...</p>
               </div>
             </div>
           </a>
@@ -2552,11 +2472,11 @@ Random Experiment
 
   
     <a
-      href="/posts/Bayesian/"
+      href="/posts/Statistical_Inference/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>What? Bayesian</p>
+      <p>Statistical Inference</p>
     </a>
   
 </nav>
@@ -2865,6 +2785,8 @@ Random Experiment
     
     
     
+    
+      
     
   
     

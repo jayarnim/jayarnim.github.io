@@ -1984,9 +1984,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="2197 words"
+  title="1977 words"
 >
-  <em>12 min</em> read</span>
+  <em>10 min</em> read</span>
 
         </div>
       </div>
@@ -2163,19 +2163,10 @@
 <h3 id="중심-위치-측도"><span class="me-2">중심 위치 측도</span><a href="#중심-위치-측도" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
-  <li><strong>평균(Mean)</strong> : 관측치들의 합을 그 갯수로 나눈 값
-    <ul>
-      <li>
-        <p><strong>모평균(Population Mean; $\mu$)</strong></p>
+  <li>
+    <p><strong>평균(Mean; $\mu$)</strong> : 관측치들의 합을 그 갯수로 나눈 값</p>
 
 \[\mu = \frac{1}{N}\sum_{i=1}^{N}X_{i}\]
-      </li>
-      <li>
-        <p><strong>표본평균(Sample Mean; $\overline{x}$)</strong></p>
-
-\[\overline{x} = \frac{1}{n}\sum_{i=1}^{n}x_{i}\]
-      </li>
-    </ul>
   </li>
   <li>
     <p><strong>중위수(Median; $Q_2$)</strong> : 모든 관측치를 크기에 따라 오름차순 정렬했을 때 중앙에 오는 값</p>
@@ -2213,43 +2204,18 @@
 
 \[\text{MAD} = \frac{1}{N}\sum_{i=1}^{N} \vert X_{i}-\mu \vert\]
   </li>
-  <li><strong>분산(Variance)</strong> : 관측치와 평균 간 편차 자승의 평균
-    <ul>
-      <li>
-        <p><strong>모분산(Population Variance; $\sigma^2$)</strong></p>
+  <li>
+    <p><strong>분산(Variance; $\sigma^2$)</strong> : 관측치와 평균 간 편차 자승의 평균</p>
 
 \[\sigma^2 = \frac{1}{N}\sum_{i=1}^{N}(X_{i}-\mu)^2\]
-      </li>
-      <li>
-        <p><strong>표본분산(Sample Variance; $s^2$)</strong></p>
-
-\[s^2 = \frac{1}{n-1}\sum_{i=1}^{n}(x_{i}-\overline{x})^2\]
-      </li>
-      <li>
-        <p><code class="language-plaintext highlighter-rouge">note</code> <strong>자유도(Degree of Freedom; <code class="language-plaintext highlighter-rouge">n-i</code>)</strong> : 주어진 자료 내에서 독립적으로 변할 수 있는 값들의 수</p>
-        <ul>
-          <li>어떠한 자료에 대하여 그 기술통계량이 주어지는 경우, 어떤 관측치의 정보가 불분명하더라도 해당 관측치들이 취할 수 있는 값은 제한되어 있음</li>
-          <li>분산을 계산하기 위해서는 평균을 먼저 계산해야 하므로, 분산 계산 시 동원되는 관측치 중 독립적으로 변할 수 있는 값의 수는 <code class="language-plaintext highlighter-rouge">n-1</code> 임</li>
-          <li>이 경우 <code class="language-plaintext highlighter-rouge">n</code> 이 아니라 <code class="language-plaintext highlighter-rouge">n-1</code> 로 나눈 값이 모분산 $\sigma^2$ 의 비편향 추정량임</li>
-        </ul>
-      </li>
-    </ul>
   </li>
-  <li><strong>표준편차(Standard Deviation)</strong> : 분산의 자승근
-    <ul>
-      <li>
-        <p><strong>모표준편차(Population Standard Variance; $\sigma$)</strong></p>
+  <li>
+    <p><strong>표준편차(Standard Deviation; $\sigma$)</strong> : 분산의 자승근</p>
 
 \[\sigma = \sqrt{\frac{1}{N}\sum_{i=1}^{N}(X_{i}-\mu)^2}\]
-      </li>
-      <li>
-        <p><strong>표본표준편차(Sample Standard Variance; $s$)</strong></p>
 
-\[s = \sqrt{\frac{1}{n-1}\sum_{i=1}^{n}(x_{i}-\overline{x})^2}\]
-      </li>
-      <li>
-        <p>자료에서 사용된 단위와 동일한 단위로 측정되므로 해석에 용이함</p>
-      </li>
+    <ul>
+      <li>자료에서 사용된 단위와 동일한 단위로 측정되므로 해석에 용이함</li>
     </ul>
   </li>
 </ul>
@@ -2584,7 +2550,7 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Sample_Dist/">Sample Dist.</a>
+          <a href="/posts/Summarize_Statistical_Methods/">Summarize Statistical Method</a>
         </li>
       
     </ul>
@@ -2845,6 +2811,8 @@
     
     
     
+    
+      
     
   
     
@@ -3557,6 +3525,42 @@
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -3572,7 +3576,7 @@
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
-          <a href="/posts/Sample_Dist/" class="post-preview card h-100">
+          <a href="/posts/Summarize_Statistical_Methods/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -3584,29 +3588,45 @@
 
 <time
   
-  data-ts="1718809200"
+  data-ts="1719068400"
   data-df="ll"
   
 >
-  Jun 20, 2024
+  Jun 23, 2024
 </time>
 
-              <h4 class="pt-0 my-2">Sample Dist.</h4>
+              <h4 class="pt-0 my-2">Summarize Statistical Method</h4>
               <div class="text-muted">
-                <p>Random Sample
+                <p>Summary
 
 
-Population &amp;amp; Sample
+수치형 변수의 평균에 대한 추론
 
 
-  모수는 그 값이 알려져 있지 않은 고정된 수이다. 이 값을 추정하기 위하여 표본의 통계량을 사용하므로, 통계량은 모수의 추정량이라 할 수 있다. 그런데 모집단에서 어떤 표본을 추출하느냐에 따라 통계량의 실현값이 달라진다. 따라서 모수는 상수(Constant), 통계량은 확률...</p>
+  
+    
+      문제
+      관심모수
+      점추정량
+      가정체크
+      검정가설
+      검정방법
+      Python Module
+    
+  
+  
+    
+      단일 집단의 평균
+      $\mu$
+      $\bar{X}$
+      $n&amp;gt;30$...</p>
               </div>
             </div>
           </a>
         </article>
       
         <article class="col">
-          <a href="/posts/Prob_Dist_Functions/" class="post-preview card h-100">
+          <a href="/posts/A_B_Test/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -3618,37 +3638,39 @@ Population &amp;amp; Sample
 
 <time
   
-  data-ts="1718722800"
+  data-ts="1718982000"
   data-df="ll"
   
 >
-  Jun 19, 2024
+  Jun 22, 2024
 </time>
 
-              <h4 class="pt-0 my-2">Prob. Dist. Functions</h4>
+              <h4 class="pt-0 my-2">A/B Test</h4>
               <div class="text-muted">
-                <p>Discrete Prob. Dist.
+                <p>What? A/B Test
 
 
-이산 균등 분포(Discrete Uniform Dist.)
+Two Sample t-Test
 
 
+Independent Sample t-Test
+
+Paired Sample t-Test
+
+ANOVA
 
 
-  
-    정의 : 실현 가능한 각각의 결과가 동일한 확률로 발생하는 분포
+Test of Independence
 
-\[X \sim \text{DiscreteUniform}(a,b)\]
 
-    
-      $1,2,3,4,5,6$ 까지 눈금이 있는 주사위를 굴릴 때, 각 눈금이 나...</p>
+Bonus Goodness-of-Fit Test</p>
               </div>
             </div>
           </a>
         </article>
       
         <article class="col">
-          <a href="/posts/Probability/" class="post-preview card h-100">
+          <a href="/posts/Statistical_Inference/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -3660,30 +3682,35 @@ Population &amp;amp; Sample
 
 <time
   
-  data-ts="1718636400"
+  data-ts="1718895600"
   data-df="ll"
   
 >
-  Jun 18, 2024
+  Jun 21, 2024
 </time>
 
-              <h4 class="pt-0 my-2">Probability</h4>
+              <h4 class="pt-0 my-2">Statistical Inference</h4>
               <div class="text-muted">
-                <p>Probability
+                <p>Estimation
 
 
-Random Experiment
+Point Estimator
 
 
-  확률실험(Random Experiment) : 사건의 불확실성을 가진 프로세스
-    
-      사건의 불확실성 : 결과(Outcome)를 사전에 알 수 없는 성질
-    
   
-  표본공간(Sample Space) : 확률실험에서 발생 가능한 모든 결과의 집합
+    점 추정량(Point Estimator) : 모수를 추정하는 하나의 값(Single Value)
+
     
       
- ...</p>
+        
+           
+          표기
+          평균
+          분산
+          비율
+        
+      
+   ...</p>
               </div>
             </div>
           </a>
@@ -4027,6 +4054,8 @@ Random Experiment
     
     
     
+    
+      
     
   
     

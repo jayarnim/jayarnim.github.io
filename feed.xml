@@ -4,7 +4,7 @@
   <id>https://jayarnim.github.io/</id>
   <title>Data Scientist</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-07-11T11:16:26+09:00</updated>
+  <updated>2024-07-14T01:58:01+09:00</updated>
   <author>
     <name>jayarnim</name>
     <uri>https://jayarnim.github.io/</uri>
@@ -195,14 +195,14 @@ example 원주율 구하기
 
   
   <entry>
-    <title>Sample Dist.</title>
-    <link href="https://jayarnim.github.io/posts/Sample_Dist/" rel="alternate" type="text/html" title="Sample Dist." />
-    <published>2024-06-20T00:00:00+09:00</published>
+    <title>Summarize Statistical Method</title>
+    <link href="https://jayarnim.github.io/posts/Summarize_Statistical_Methods/" rel="alternate" type="text/html" title="Summarize Statistical Method" />
+    <published>2024-06-23T00:00:00+09:00</published>
   
-    <updated>2024-06-20T00:00:00+09:00</updated>
+    <updated>2024-06-23T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/Sample_Dist/</id>
-    <content src="https://jayarnim.github.io/posts/Sample_Dist/" />
+    <id>https://jayarnim.github.io/posts/Summarize_Statistical_Methods/</id>
+    <content src="https://jayarnim.github.io/posts/Summarize_Statistical_Methods/" />
     <author>
       <name>jayarnim</name>
     </author>
@@ -215,24 +215,38 @@ example 원주율 구하기
     
   
 
-  <summary>Random Sample
+  <summary>Summary
 
 
-Population &amp;amp;amp; Sample
+수치형 변수의 평균에 대한 추론
 
 
-  모수는 그 값이 알려져 있지 않은 고정된 수이다. 이 값을 추정하기 위하여 표본의 통계량을 사용하므로, 통계량은 모수의 추정량이라 할 수 있다. 그런데 모집단에서 어떤 표본을 추출하느냐에 따라 통계량의 실현값이 달라진다. 따라서 모수는 상수(Constant), 통계량은 확률변수(Random Variable)라고 볼 수 있다.
-
-
-
-  모집단(Population)의 모수(Parameter)
+  
     
-      모평균 : $\mu = E(X)$
-      모분산 : $\sigma^2 = Var(X)$
-      모표준편차 : $\sigma = \sqrt{Var(X)}$
+      문제
+      관심모수
+      점추정량
+      가정체크
+      검정가설
+      검정방법
+      Python Module
     
   
-  표본(Sample)의 통계량(Statist...</summary>
+  
+    
+      단일 집단의 평균
+      $\mu$
+      $\bar{X}$
+      $n&amp;amp;gt;30$ or $X \sim N$
+      $H_0: \mu=\mu_0$
+      One Sample t-Test
+      statsmodels.stats.ttest_mean
+    
+    
+      두 집단 간 평균 비교  (독립표본)
+      $\mu_1-\mu_2$
+      \(\bar{X}_{1} - \bar{X}_{2}\)
+      $(n_...</summary>
 
   </entry>
 
