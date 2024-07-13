@@ -14,7 +14,7 @@ image:
 
 ### Confusion Matrix
 
-![01](/_post_refer_img/MachineLearning/03-01.jpg){: width="100%"}
+![01](/_post_refer_img/MachineLearning/03-01.png){: width="100%"}
 
 - **`TP`(True Positive)** : 긍정으로 예측한 것(Possitive) 중 옳게 예측한(True) 항목
 - **`TN`(True Negative)** : 부정인 것(Negative) 중 옳게 예측한(True) 항목

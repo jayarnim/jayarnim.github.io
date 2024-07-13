@@ -179,9 +179,11 @@ image:
 
 ### 오류와 신뢰성
 
+![05](/_post_refer_img/Statistics/05-05.png){: width="100%"}
+
 - **오류(Error)** : 사실과 다르게 판단함
 
-    ![05](/_post_refer_img/Statistics/05-05.jpg){: width="100%"}
+    ![06](/_post_refer_img/Statistics/05-06.png){: width="100%"}
 
     - **제1종 오류(Type 1 Error)** : 귀무가설이 참일 때 귀무가설을 기각하는 오류
     - **제1종 오류(Type 2 Error)** : 귀무가설이 거짓일 때 귀무가설을 기각하지 않는 오류
@@ -208,11 +210,11 @@ image:
 
 ### 검정통계량과 유의확률 도출
 
-![06](/_post_refer_img/Statistics/05-06.png){: width="100%"}
+![07](/_post_refer_img/Statistics/05-07.png){: width="100%"}
 
 - **검정통계량(Test Statistic)** : 귀무가설이 참이라고 가정했을 때 얻은 결과
 
-    ![07](/_post_refer_img/Statistics/05-07.png){: width="100%"}
+    ![08](/_post_refer_img/Statistics/05-08.png){: width="100%"}
 
     $$\begin{aligned}
     Z
@@ -235,7 +237,7 @@ image:
 
 - **유의확률(Significance Probability Value; $\text{p-value}$)** : 검정통계량($Z$)보다 극단적인 결과($Y$)가 관측될 확률로서, 표본이 귀무가설과 양립하는 정도
 
-    ![08](/_post_refer_img/Statistics/05-08.jpg){: width="100%"}
+    ![09](/_post_refer_img/Statistics/05-09.jpg){: width="100%"}
 
     $$\begin{aligned}
     \text{p-value}
@@ -279,7 +281,7 @@ image:
 
 - **스튜던트 t 분포($t(\nu)$)** : 표준정규분포를 따르는 확률변수 $Z$ 와 자유도가 $\nu$ 인 카이제곱분포를 따르는 확률변수 $V$ 로 구성되는 확률변수의 분포
 
-    ![09](/_post_refer_img/Statistics/05-09.png){: width="100%"}
+    ![10](/_post_refer_img/Statistics/05-10.png){: width="100%"}
 
     $$
     T=\frac{Z}{\sqrt{\displaystyle\frac{V}{\nu}}} \quad \text{for}\;Z \sim N(0,1),\; V \sim \chi^2(\nu)
@@ -309,4 +311,5 @@ image:
 
 ### 이미지 출처
 
+- https://u5man.medium.com/to-err-is-human-what-the-heck-is-type-i-and-type-ii-error-b2c78190a45c
 - https://wikidocs.net/163986
