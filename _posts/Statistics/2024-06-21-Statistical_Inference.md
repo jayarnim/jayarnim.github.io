@@ -38,8 +38,8 @@ image:
     &= 0
     \end{aligned}$$
 
-    - $Bias(\hat{\theta})$ : 모수 $\theta$ 의 추정량 $\hat{\theta}$ 의 **편향(Bias)**
-    - $E(\hat{\theta})$ : 모수 $\theta$ 의 추정량 $U$ 에 대하여 그 기대값
+    - $Bias(\hat{\theta})$ : 모수 $\theta$ 의 추정량 $\hat{\theta}$ 에 대하여 그 **편향(Bias)**
+    - $E(\hat{\theta})$ : 모수 $\theta$ 의 추정량 $\hat{\theta}$ 에 대하여 그 기대값
 
 - **예시**
     - 표본평균 $\overline{X}$ 은 모평균 $\mu$ 의 불편 추정량임
@@ -50,12 +50,12 @@ image:
 - **정의** : 모수의 불편 추정량 가운데에서 분산이 최소인 불편 추정량
 
     $$\begin{aligned}
-    \min{MSE(\hat{\theta})}
+    \min{MSE(\theta, \hat{\theta})}
     &= \min{E\left[(\hat{\theta}-\theta)^2\right]}\\
     &= \min{\bigg[Var(\hat{\theta}) + Bias(\hat{\theta})^2\bigg]}
     \end{aligned}$$
 
-    - $MSE(\hat{\theta})$ : 모수 $\theta$ 의 추정량 $\hat{\theta}$ 에 대한 **평균자승오차(Mean Squared Error)**
+    - $MSE(\theta, \hat{\theta})$ : 모수 $\theta$ 의 추정량 $\hat{\theta}$ 에 대한 **평균자승오차(Mean Squared Error)**
     - $E[(\hat{\theta}-\theta)^2]$ : 모수 $\theta$ 의 추정량 $\hat{\theta}$ 에 대하여 그 오차 자승의 기대값
 
 - **예시**
@@ -149,7 +149,7 @@ image:
 
 ### 종류
 
-- **양측검정(Two-Sided Test)** : 검정통계량이 기각치 이하이거나 이상이면 귀무가설을 기각하는 검정
+- **양측검정(Two-Sided Test)** : 귀무가설에 대한 기각역을 양측에 설정하는 검정
 
     ![02](/_post_refer_img/Statistics/05-02.jpeg){: width="100%"}
 
@@ -158,8 +158,8 @@ image:
     H_1&:\;\mu\ne70
     \end{aligned}$$
 
-- **단측검정(One-Sided Test)** : 기각치를 이하 혹은 이상의 단측에만 설정하는 검정
-    - **우측검정** : 기각역이 우측에 위치한 검정
+- **단측검정(One-Sided Test)** : 귀무가설에 대한 기각역을 단측에만 설정하는 검정
+    - **우측검정** : 기각역을 우측에만 설정하는 검정
 
         ![03](/_post_refer_img/Statistics/05-03.jpeg){: width="100%"}
 
@@ -168,7 +168,7 @@ image:
         H_1&:\;\mu > 70
         \end{aligned}$$
 
-    - **좌측검정** : 기각역이 좌측에 위치한 검정
+    - **좌측검정** : 기각역을 좌측에만 설정하는 검정
 
         ![04](/_post_refer_img/Statistics/05-04.jpeg){: width="100%"}
 
