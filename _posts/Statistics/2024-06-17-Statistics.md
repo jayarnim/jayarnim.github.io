@@ -105,18 +105,11 @@ image:
 
 ### 중심 위치 측도
 
-- **평균(Mean)** : 관측치들의 합을 그 갯수로 나눈 값
-    - **모평균(Population Mean; $\mu$)**
+- **평균(Mean; $\mu$)** : 관측치들의 합을 그 갯수로 나눈 값
 
-        $$
-        \mu = \frac{1}{N}\sum_{i=1}^{N}X_{i}
-        $$
-        
-    - **표본평균(Sample Mean; $\overline{x}$)**
-
-        $$
-        \overline{x} = \frac{1}{n}\sum_{i=1}^{n}x_{i}
-        $$
+    $$
+    \mu = \frac{1}{N}\sum_{i=1}^{N}X_{i}
+    $$
 
 - **중위수(Median; $Q_2$)** : 모든 관측치를 크기에 따라 오름차순 정렬했을 때 중앙에 오는 값
 
@@ -148,36 +141,17 @@ image:
     \text{MAD} = \frac{1}{N}\sum_{i=1}^{N} \vert X_{i}-\mu \vert
     $$
 
-- **분산(Variance)** : 관측치와 평균 간 편차 자승의 평균
-    - **모분산(Population Variance; $\sigma^2$)**
+- **분산(Variance; $\sigma^2$)** : 관측치와 평균 간 편차 자승의 평균
 
-        $$
-        \sigma^2 = \frac{1}{N}\sum_{i=1}^{N}(X_{i}-\mu)^2
-        $$
-        
-    - **표본분산(Sample Variance; $s^2$)**
+    $$
+    \sigma^2 = \frac{1}{N}\sum_{i=1}^{N}(X_{i}-\mu)^2
+    $$
 
-        $$
-        s^2 = \frac{1}{n-1}\sum_{i=1}^{n}(x_{i}-\overline{x})^2
-        $$
-            
-    - `note` **자유도(Degree of Freedom; `n-i`)** : 주어진 자료 내에서 독립적으로 변할 수 있는 값들의 수
-        - 어떠한 자료에 대하여 그 기술통계량이 주어지는 경우, 어떤 관측치의 정보가 불분명하더라도 해당 관측치들이 취할 수 있는 값은 제한되어 있음
-        - 분산을 계산하기 위해서는 평균을 먼저 계산해야 하므로, 분산 계산 시 동원되는 관측치 중 독립적으로 변할 수 있는 값의 수는 `n-1` 임
-        - 이 경우 `n` 이 아니라 `n-1` 로 나눈 값이 모분산 $\sigma^2$ 의 비편향 추정량임
+- **표준편차(Standard Deviation; $\sigma$)** : 분산의 자승근
 
-- **표준편차(Standard Deviation)** : 분산의 자승근
-    - **모표준편차(Population Standard Variance; $\sigma$)**
-
-        $$
-        \sigma = \sqrt{\frac{1}{N}\sum_{i=1}^{N}(X_{i}-\mu)^2}
-        $$
-
-    - **표본표준편차(Sample Standard Variance; $s$)**
-
-        $$
-        s = \sqrt{\frac{1}{n-1}\sum_{i=1}^{n}(x_{i}-\overline{x})^2}
-        $$
+    $$
+    \sigma = \sqrt{\frac{1}{N}\sum_{i=1}^{N}(X_{i}-\mu)^2}
+    $$
 
     - 자료에서 사용된 단위와 동일한 단위로 측정되므로 해석에 용이함
 

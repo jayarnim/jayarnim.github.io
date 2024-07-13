@@ -17,14 +17,30 @@ image:
 > 모수는 그 값이 알려져 있지 않은 고정된 수이다. 이 값을 추정하기 위하여 표본의 통계량을 사용하므로, 통계량은 모수의 추정량이라 할 수 있다. 그런데 모집단에서 어떤 표본을 추출하느냐에 따라 통계량의 실현값이 달라진다. 따라서 모수는 **상수(Constant)**, 통계량은 **확률변수(Random Variable)**라고 볼 수 있다.
 
 - **모집단(Population)의 모수(Parameter)**
-    - 모평균 : $\mu = E(X)$
-    - 모분산 : $\sigma^2 = Var(X)$
-    - 모표준편차 : $\sigma = \sqrt{Var(X)}$
+    - **모평균** : $\mu$
+    - **모분산** : $\sigma^2$
 
 - **표본(Sample)의 통계량(Statistic)**
-    - 표본평균 : $\overline{X}$
-    - 표본분산 : $S^2$
-    - 표본표준편차 : $S$
+    - **표본평균** : $\overline{X}$
+
+        $$\begin{aligned}
+        \overline{X}
+        &= \frac{1}{n}(X_{1}+X_{2}+\cdots+X_{n}) \quad \text{for}\; X_{\forall} \in \Omega\\
+        &= \frac{1}{n}\sum_{i=1}^{n}{X_{i}}
+        \end{aligned}$$
+
+    - **표본분산** : $S^2$
+
+        $$\begin{aligned}
+        S^2
+        &= \frac{1}{\nu}\left[\vert X_{1} - \overline{X}\vert^2 + \vert X_{2} - \overline{X}\vert^2 + \cdots + \vert X_{n} - \overline{X}\vert^2 \right]\\
+        &= \frac{1}{\nu}\sum_{i=1}^{n}(X_{i}-\overline{X})^2
+        \end{aligned}$$
+
+    - `note` **자유도(Degree of Freedom; $\nu$)** : 주어진 자료 내에서 독립적으로 변할 수 있는 확률변수의 수
+        - 어떠한 자료에 대하여 그 기술통계량이 주어지는 경우, 특정 관측치의 정보가 불분명하더라도 해당 관측치가 취할 수 있는 값은 제한되어 있음
+        - 표본분산 $S^2$ 을 계산하기 위해서는 표본평균 $\overline{X}$ 을 먼저 계산해야 하므로, 분산 계산 시 동원되는 관측치 중 독립적으로 변할 수 있는 관측치의 수는 $n-1$ 임
+        - 이 경우 관측치 수 $n$ 이 아니라 자유도 $\nu=n-1$ 로 나눈 값이 모분산 $\sigma^2$ 의 비편향 추정량임
 
 ### Random Sample
 
@@ -43,8 +59,8 @@ image:
 - 원소 $X_1, X_2, X_3, \cdots, X_n$ 이 모두 모집단의 분포를 따르는 확률변수이고,
 
     $$\begin{aligned}
-    E(X_{i^{\forall}})&=\mu \\
-    Var(X_{i^{\forall}})&=\sigma^2
+    E\left[X_{i^{\forall}}\right]&=\mu \\
+    Var\left[X_{i^{\forall}}\right]&=\sigma^2
     \end{aligned}$$
 
 - 원소 $X_1, X_2, X_3, \cdots, X_n$ 이 모두 통계적으로 독립인 경우
@@ -90,9 +106,9 @@ image:
 
     $$\begin{aligned}
     E\left[\overline{X}\right]
-    &= E\left[\frac{1}{n}(X_1+X_2+X_3+\cdots+X_n)\right]\\
-    &=\frac{1}{n}\bigg[E\left[X_1+X_2+X_3+\cdots+X_n\right]\bigg]\\
-    &=\frac{1}{n}\bigg[E\left[X_1\right]+E\left[X_2\right]+E\left[X_3\right]+\cdots+E\left[X_n\right]\bigg]\\
+    &= E\left[\frac{1}{n}(\overline{x}_1+\overline{x}_2+\cdots+\overline{x}_n)\right]\\
+    &=\frac{1}{n}\bigg[E\left[\overline{x}_1+\overline{x}_2+\cdots+\overline{x}_n\right]\bigg]\\
+    &=\frac{1}{n}\bigg[E\left[\overline{x}_1\right]+E\left[\overline{x}_2\right]+\cdots+E\left[\overline{x}_n\right]\bigg]\\
     &=\frac{1}{n}(\mu + \cdots + \mu)\\
     &=\mu
     \end{aligned}$$
@@ -101,18 +117,18 @@ image:
 
     $$\begin{aligned}
     Var\left[\overline{X}\right]
-    &= Var\left[\frac{1}{n}(X_1+X_2+X_3+\cdots+X_n)\right]\\
-    &=Var\left[\frac{1}{n}X_1\right]+Var\left[\frac{1}{n}X_2\right]+Var\left[\frac{1}{n}X_3\right]+\cdots+Var\left[\frac{1}{n}X_n\right]\\
-    &(\because Cov\left[X_i, X_j\right]=0)\\
-    &=\frac{1}{n^2}Var\left[X_1\right]+\frac{1}{n^2}Var\left[X_2\right]+\frac{1}{n^2}Var\left[X_3\right]+\cdots+\frac{1}{n^2}Var\left[X_n\right]\\
-    &=\frac{1}{n^2}\sigma^2 + \frac{1}{n^2}\sigma^2 +\frac{1}{n^2}\sigma^2 + \cdots + \frac{1}{n^2}\sigma^2\\
+    &= Var\left[\frac{1}{n}(\overline{x}_1+\overline{x}_2+\cdots+\overline{x}_n)\right]\\
+    &=Var\left[\frac{1}{n}\overline{x}_1\right]+Var\left[\frac{1}{n}\overline{x}_2\right]+\cdots+Var\left[\frac{1}{n}\overline{x}_n\right]\\
+    &(\because Cov\left[\overline{x}_i, \overline{x}_j\right]=0)\\
+    &=\frac{1}{n^2}Var\left[\overline{x}_1\right]+\frac{1}{n^2}Var\left[\overline{x}_2\right]+\cdots+\frac{1}{n^2}Var\left[\overline{x}_n\right]\\
+    &=\frac{1}{n^2}\sigma^2 + \frac{1}{n^2}\sigma^2 + \cdots + \frac{1}{n^2}\sigma^2\\
     &=\frac{1}{n^2}(\sigma^2 + \cdots + \sigma^2)\\
     &=\frac{\sigma^2}{n}
     \end{aligned}$$
 
 - **표준오차(Standard Error; $SE$)** : $\overline{X}$ 의 표준편차
     
-    > 표본 $sample1, sample2, \cdots$ 에 의해 얻어진 추정량 $\overline{X}$ 의 실현값 $\overline{x_1}, \overline{x_2}, \overline{x_3}, \cdots$ 은 $\mu$ 를 기준으로 얼마나 널리 퍼져 있는가
+    > 표본 $sample1, sample2, \cdots$ 에 의해 얻어진 추정량 $\overline{X}$ 의 실현값 $\overline{x}_1, \overline{x}_2, \cdots$ 은 $\mu$ 를 기준으로 얼마나 널리 퍼져 있는가
 
     $$\begin{aligned}
     SE
@@ -166,8 +182,7 @@ image:
     - 확률변수 $X$ 의 기대값
 
         $$\begin{aligned}
-        E(X)
-        &=\mu \\
+        E\left[X\right]
         &=1\times\pi + 0\times(1-\pi) \\
         &=\pi
         \end{aligned}$$
@@ -175,8 +190,7 @@ image:
     - 확률변수 $X$ 의 분산
 
         $$\begin{aligned}
-        Var(X)
-        &=\sigma^2 \\
+        Var\left[X\right]
         &=(1-\pi)^2\times\pi + (0-\pi)^2\times(1-\pi) \\
         &=\pi(1-\pi)
         \end{aligned}$$
@@ -189,18 +203,28 @@ image:
 
     $$\begin{aligned}
     P
-    &= \overline{X} \\
-    &= \frac{1}{n}\displaystyle\sum_{i=1}^{n}{X_i}
+    &= \frac{1}{n}\displaystyle\sum_{i=1}^{n}{p_i}
     \end{aligned}$$
 
-- **표본비율의 분산 도출**
+- **$P$ 의 기대값** : $E\left[P\right]=\pi$
 
     $$\begin{aligned}
-    &Var\left[\frac{1}{n}(X_1+X_2+\cdots+X_n)\right]\\
-    &= Var\left[\frac{1}{n}X_1\right]+Var\left[\frac{1}{n}X_2\right]+\cdots+Var\left[\frac{1}{n}X_n\right]\\
-    &= \frac{1}{n^2}Var\left[X_1\right]+\frac{1}{n^2}Var\left[X_2\right]+\cdots+\frac{1}{n^2}Var\left[X_n\right]\\
-    &= \frac{1}{n^2}(\sigma^2+\sigma^2+\cdots+\sigma^2)\\
-    &= \frac{1}{n^2}\times n\times \sigma^2\\
+    E\left[P\right]
+    &= E\left[\frac{1}{n}(p_1+p_2+\cdots+p_n)\right]\\
+    &=\frac{1}{n}\bigg[E\left[p_1+p_2+\cdots+p_n\right]\bigg]\\
+    &=\frac{1}{n}\bigg[E\left[p_1\right]+E\left[p_2\right]+\cdots+E\left[p_n\right]\bigg]\\
+    &=\frac{1}{n}(\pi + \cdots + \pi)\\
+    &=\pi
+    \end{aligned}$$
+
+- **$P$ 의 분산** : $Var\left[P\right]=\displaystyle\frac{\pi(1-\pi)}{n}$
+
+    $$\begin{aligned}
+    Var\left[P\right]
+    &= Var\left[\frac{1}{n}(p_1+p_2+\cdots+p_n)\right]\\
+    &= Var\left[\frac{1}{n}p_1\right]+Var\left[\frac{1}{n}p_2\right]+\cdots+Var\left[\frac{1}{n}p_n\right]\\
+    &= \frac{1}{n^2}Var\left[p_1\right]+\frac{1}{n^2}Var\left[p_2\right]+\cdots+\frac{1}{n^2}Var\left[p_n\right]\\
+    &= \frac{1}{n^2}\Big[\pi(1-\pi)+\cdots+\pi(1-\pi)\Big]\\
     &= \frac{\pi(1-\pi)}{n}
     \end{aligned}$$
 
@@ -211,26 +235,3 @@ image:
     $$
     P \sim N(\pi, \frac{\pi(1-\pi)}{n})
     $$
-
-## Inference
------
-
-### 수치형 변수의 평균에 대한 추론
-
-| 문제 | 관심모수 | 점추정량 | 가정체크 | 검정가설 | 검정방법 | Python Module |
-|---|---|---|---|---|---|---|
-| 단일 집단의 평균 | $\mu$ | $\bar{X}$ | $n>30$ or $X \sim N$ | $H_0: \mu=\mu_0$ | One-sample T-test | `statsmodels.stats.ttest_mean` |
-| 두 집단 간 평균 비교 <br> (독립표본) | $\mu_1-\mu_2$ | $$\bar{X}_{1} - \bar{X}_{2}$$ | $(n_1 + n_2)>30$ or $X_{1}\sim N, X_{2} \sim N$ | $H_0: \mu_1 - \mu_2 = 0$ | Two-sample t-test | `statsmodels.stats.weightstats.ttest_ind` |
-| 두 집단 간 평균 비교 <br> (쌍체표본)  | $\mu_d$ | $\bar{x}_d$ | $n>30$ or $X \sim N$ | $H_0: \mu_d=0$ | Paired t-test | `statsmodels.stats.ttest_mean` |
-| 셋 이상 그룹 간 평균 비교 | $\mu_1, \cdots, \mu_m$ |  $\bar{X}_1, \cdots, \bar{X}_m$ |  $n_i>30$ or $X_{i} \sim N$ <br> $\sigma_{i}^{2}=\sigma_{j}^{2}$ | $H_0: \mu_1 = \cdots = \mu_m$ | ANOVA | `statsmodels.stats.anova.AnovaRM` |
-| 양적변수 간의 상관관계 | $\beta_0, \beta_1$ <br> $(y=\beta_0+\beta_1 x + \epsilon)$ | $\hat{\beta}_0, \hat{\beta}_1$ | 반응변수와 설명변수 간 선형성 <br> 설명변수 간 독립성 <br> 오차의 등분산성 <br> 오차의 정규성 | $H_0: \beta_i=0$ | Regression | `statsmodels.api.OLS` |
-
-### 범주형 변수의 비율에 대한 추론
-
-| 문제 | 관심모수 | 점추정량 | 가정체크 | 검정가설 | 검정방법 | Python Module |
-|---|---|---|---|---|---|---|
-| 단일 집단의 비율 | $\pi$ | $p$ | $np>5$ <br> $n(1-p)>5$ | $H_0: \pi=\pi_0$ | Z-test | `statsmodels.stats.proportion.proportions_ztest` |
-| 두 집단 간 비율 비교 | $\pi_1 - \pi_2$ | $p_1 - p_2$ | $n_i p_i > 5$ <br> $n_i (1-p_i)>5$ | $H_0: \pi_1-\pi_2=0$ | Z-test | `statsmodels.stats.proportion.proportions_ztest` |
-| 적합성 검정 | $\pi_1, \cdots, \pi_m$ | $p_1, \cdots, p_m$ | $n_i p_i > 5$ <br> $n_i (1-p_i)>5$ | $H_0: \pi_1=p_{0}^{(1)}, \cdots, \pi_m=p_{0}^{(m)}$ | Chi-square test | `scipy.stats.chisquare` |
-| 독립성 검정 | | | $n_i p_i > 5$ <br> $n_i (1-p_i)>5$ | $H_0:$ 두 범주형 변수가 독립 | Chi-square test | `scipy.stats.chi2_contingency` |
-| 양적변수와의 상관관계 | $\beta_0, \beta_1$ <br> $(\pi=\beta_0+\beta_1 x)$ | $\hat{\beta}_0, \hat{\beta}_1$ | $Y \sim B$ | $H_0: \beta_i=0$ | Logistic regression | `sklearn.linear_models.LogisticRegression` |
