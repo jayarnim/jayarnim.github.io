@@ -35,6 +35,6 @@ image:
 ## refer.
 -----
 
-### Shapiro-Wilk Test
+### 정규성 검정(Shapiro-Wilk Test)
 
-### Levene’s Test
+### 등분산 검정(Levene’s Test)
