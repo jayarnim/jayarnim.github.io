@@ -202,18 +202,14 @@ image:
 - **확률분포함수** : 확률변수를 정의역으로, 그 분포를 치역으로 가지는 함수
 
     $$\begin{aligned}
-    f(x)=P(x)
+    f(x)=P(X=x)
     \end{aligned}$$
 
 - **누적분포함수(Cumulative Distribution Function)** : 확률변수 $X$ 에 대하여 그 값이 특정한 값 $k$ 이하일 확률에 대한 함수
 
     $$\begin{aligned}
     F(k)
-    &=P(X \le k) \\
-    &=\begin{cases}
-    \displaystyle\sum_{x=1}^{k}f(x),\quad \text{if X is discrete}\\
-    \displaystyle\int_{}^{k}f(x)dx,\quad \text{if X is continuous}
-    \end{cases}
+    &=P(X \le k)
     \end{aligned}$$
 
 ### Example
