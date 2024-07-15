@@ -5,6 +5,8 @@ date: 2023-07-07
 categories: [Math, Calculus]
 tags: [Math]
 math: true
+description: >-
+  Based on the lecture “Mathematics for Artificial Intelligence (2022-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data & Management, College of Business Administration, Kookmin Univ.
 image:
   path: /_post_refer_img/Calculus/Thumbnail.jpg
 ---

@@ -5,6 +5,8 @@ date: 2024-01-15
 categories: [Machine Learning Techs, Machine Learning]
 tags: [Machine Learning, Unsupervised Learning, Clustering]
 math: true
+description: >-
+  Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
   path: /_post_refer_img/MachineLearning/Thumbnail.jpg
 ---
