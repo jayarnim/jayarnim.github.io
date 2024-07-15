@@ -4,7 +4,7 @@
   <id>https://jayarnim.github.io/</id>
   <title>Data Scientist</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-07-15T20:53:32+09:00</updated>
+  <updated>2024-07-16T01:04:54+09:00</updated>
   <author>
     <name>jayarnim</name>
     <uri>https://jayarnim.github.io/</uri>
@@ -40,16 +40,7 @@
     
   
 
-  <summary>Bayes Estimator
-
-
-
-  사후확률 $\theta \vert X$ 을 추정하기 위해, 확률분포 $P(\theta \vert X) \propto \mathcal{L}(\theta) \cdot \pi(\theta)$ 로부터 $n$ 번의 샘플링을 통해 $n$ 개의 샘플 $\theta^{(1)},\theta^{(2)},\cdots,\theta^{(n)}$ 을 도출했다고 하자. 그렇다면 이들 중 무엇을 모수 $\theta \vert X$ 의 추정치 $\hat{\theta}$ 로 사용하는 것이 적절할까?
-
-
-
-  
-    Bayes’ Risk : 사후확률분포 $P(\theta \vert X)$ 를 사용하여 계산된, 모수 $\theta$ 에 대하여 추정치 $\hat{\theta}$ 를 선택할 때의 기대 ...</summary>
+  <summary>Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp;amp; Management, College of Business Administration, Kookmin Univ.</summary>
 
   </entry>
 
@@ -75,20 +66,7 @@
     
   
 
-  <summary>사전확률분포의 결정
-
-
-
-  
-    사전확률분포의 결정은 모델링의 일부임
-
-    
-      모형이 적합한 이후에는 사후확률분포를 살펴보아야 하고, 이치에 맞는지 확인해야 한다. 만일 사후확률분포가 이치에 맞지 않는다면 모형에 포함되지 않은 사전 정보가 추가로 필요하다는 것을 의미한다. 그리고 이전에 사용한 사전확률분포의 가정에 위배된다는 것을 의미한다. 그래서 이전으로 돌아가 사전확률분포가 외부 정보와 조화되도록 변경하는 것이 적절하다. (Andrew Gelman)
-    
-  
-  사전확률분포의 결정은 해결하려는 문제에 따라 달라지며, 어느 것이 항상 최선의 대안이라고 볼 수 없음
-    
-      과학 연구의 경우, 결과에 대한 편향을 제거하기 위하여 객관적인 사전확률분포(Objective ...</summary>
+  <summary>Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp;amp; Management, College of Business Administration, Kookmin Univ.</summary>
 
   </entry>
 
@@ -114,29 +92,7 @@
     
   
 
-  <summary>Monte Carlo Simulation
-
-
-
-  
-    정의 : 복잡한 시스템이나 수학적 문제의 결과를 예측하기 위해 확률적 샘플링을 사용하는 방법
-  
-  
-    절차 : 무작위 샘플을 반복 생성하여 문제의 수치적 근사치를 얻음
-    
-      문제 정의 : 해결하려는 문제를 수학적 모형으로 정의함
-      확률분포 설정 : 변수들에 대한 무작위 샘플을 생성하기 위해 각 변수들의 확률분포를 설정함
-      샘플링 : 설정된 확률분포에서 무작위 샘플을 반복하여 추출함
-      모형 계산 : 각 샘플을 모형에 투입하여 결과를 계산함
-      결과 분석
-    
-  
-
-
-example 원주율 구하기
-
-
-  한 변의 길이가 2인 정사각형 내부에 점을 무작위로 찍었을 때, 그 점이 정사각형에 ...</summary>
+  <summary>Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp;amp; Management, College of Business Administration, Kookmin Univ.</summary>
 
   </entry>
 
@@ -162,34 +118,7 @@ example 원주율 구하기
     
   
 
-  <summary>Compare Frequentist and Bayesian
-
-
-빈도주의자 vs. 베이지안
-
-
-  사건 $X$ 가 발생할 확률 $P(X)$ 의 정의
-    
-      
-        빈도주의자(Frequentist) : 어떤 사건이 발생하는 장기적인 빈도
-
-\[P(X)\]
-      
-      
-        베이지안(Bayesian) : 어떤 사건이 발생할 것이라는 믿음 혹은 확신의 척도
-
-\[P(X \vert \theta)\]
-      
-    
-  
-  모수 $\theta$ 의 이해
-    
-      
-        빈도주의자(Frequentist) : 사건 발생 빈도에 대한 분포를 묘사하는 고정된 상수
-
-\[\theta=\mu, \sigma^2, p, \cdots\]
-      
-     ...</summary>
+  <summary>Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp;amp; Management, College of Business Administration, Kookmin Univ.</summary>
 
   </entry>
 
@@ -215,36 +144,7 @@ example 원주율 구하기
     
   
 
-  <summary>수치형 변수의 평균에 대한 추론
-
-
-
-  
-    
-      문제
-      관심모수
-      점추정량
-      가정체크
-      검정가설
-      검정방법
-      Python Module
-    
-  
-  
-    
-      단일 집단의 평균
-      $\mu$
-      $\bar{X}$
-      $n&amp;amp;gt;30$ or $X \sim N$
-      $H_0: \mu=\mu_0$
-      One Sample t-Test
-      statsmodels.stats.ttest_mean
-    
-    
-      두 집단 간 평균 비교  (독립표본)
-      $\mu_1-\mu_2$
-      \(\bar{X}_{1} - \bar{X}_{2}\)
-      $(n_1 + n_2)&amp;amp;...</summary>
+  <summary>Based on the following lectures &amp;lt;br&amp;gt; (1) “Statistics (2018-1)” by Prof. Sang Ah Lee, Dept. of Economics, College of Economics &amp;amp; Commerce, Kookmin Univ. &amp;lt;br&amp;gt; (2) &amp;quot;Statistical Models and Application (2024-1)&amp;quot; by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ.</summary>
 
   </entry>
 
