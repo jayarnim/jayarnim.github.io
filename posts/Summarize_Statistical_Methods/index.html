@@ -32,8 +32,8 @@
 <meta name="generator" content="Jekyll v4.3.3" />
 <meta property="og:title" content="Summarize Statistical Method" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Summary" />
-<meta property="og:description" content="Summary" />
+<meta name="description" content="수치형 변수의 평균에 대한 추론" />
+<meta property="og:description" content="수치형 변수의 평균에 대한 추론" />
 <link rel="canonical" href="https://jayarnim.github.io/posts/Summarize_Statistical_Methods/" />
 <meta property="og:url" content="https://jayarnim.github.io/posts/Summarize_Statistical_Methods/" />
 <meta property="og:site_name" content="Data Scientist" />
@@ -44,7 +44,7 @@
 <meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/Statistics/Thumbnail.png" />
 <meta property="twitter:title" content="Summarize Statistical Method" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-06-23T00:00:00+09:00","datePublished":"2024-06-23T00:00:00+09:00","description":"Summary","headline":"Summarize Statistical Method","image":"https://jayarnim.github.io/_post_refer_img/Statistics/Thumbnail.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/Summarize_Statistical_Methods/"},"url":"https://jayarnim.github.io/posts/Summarize_Statistical_Methods/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-06-23T00:00:00+09:00","datePublished":"2024-06-23T00:00:00+09:00","description":"수치형 변수의 평균에 대한 추론","headline":"Summarize Statistical Method","image":"https://jayarnim.github.io/_post_refer_img/Statistics/Thumbnail.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/Summarize_Statistical_Methods/"},"url":"https://jayarnim.github.io/posts/Summarize_Statistical_Methods/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -624,6 +624,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -639,28 +650,6 @@
       
         
         
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
       
 
       
@@ -788,9 +777,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="376 words"
+  title="1149 words"
 >
-  <em>2 min</em> read</span>
+  <em>6 min</em> read</span>
 
         </div>
       </div>
@@ -798,10 +787,8 @@
   </header>
 
   <div class="content">
-    <h2 id="summary"><span class="me-2">Summary</span><a href="#summary" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="수치형-변수의-평균에-대한-추론"><span class="me-2">수치형 변수의 평균에 대한 추론</span><a href="#수치형-변수의-평균에-대한-추론" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
-
-<h3 id="수치형-변수의-평균에-대한-추론"><span class="me-2">수치형 변수의 평균에 대한 추론</span><a href="#수치형-변수의-평균에-대한-추론" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <div class="table-wrapper"><table>
   <thead>
@@ -837,7 +824,7 @@
     <tr>
       <td>두 집단 간 평균 비교 <br /> (쌍체표본)</td>
       <td>$\mu_d$</td>
-      <td>$\bar{x}_d$</td>
+      <td>$\bar{X}_d$</td>
       <td>$n&gt;30$ or $X \sim N$</td>
       <td>$H_0: \mu_d=0$</td>
       <td>Paired t-Test</td>
@@ -864,7 +851,8 @@
   </tbody>
 </table></div>
 
-<h3 id="범주형-변수의-비율에-대한-추론"><span class="me-2">범주형 변수의 비율에 대한 추론</span><a href="#범주형-변수의-비율에-대한-추론" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h2 id="범주형-변수의-비율에-대한-추론"><span class="me-2">범주형 변수의 비율에 대한 추론</span><a href="#범주형-변수의-비율에-대한-추론" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
 
 <div class="table-wrapper"><table>
   <thead>
@@ -932,7 +920,159 @@
 
 <h3 id="정규성-검정shapiro-wilk-test"><span class="me-2">정규성 검정(Shapiro-Wilk Test)</span><a href="#정규성-검정shapiro-wilk-test" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
+<ul>
+  <li><strong>귀무가설과 대립가설 설정</strong>
+    <ul>
+      <li>$H_{0}:\quad X \sim N(\mu, \sigma^2)$</li>
+      <li>$H_{1}:\quad X \not\sim N(\mu, \sigma^2)$</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>검정통계량 도출</strong></p>
+
+\[W=\frac{\left(\sum_{i=1}^{n} \alpha_{i} X_{i}\right)^2}{\sum_{i=1}^{n}\left(X_{i} - \overline{X}\right)^2}\]
+
+    <ul>
+      <li>
+        <p>$\overrightarrow{X}$ : 표본의 관측치 $X_{i}$ 를 크기에 따라 오름차순 정렬한 순위 통계량 벡터</p>
+
+\[\begin{aligned}
+  \overrightarrow{X}
+  =\begin{pmatrix} X_{1}&amp;X_{2}&amp;\cdots&amp;X_{n} \end{pmatrix}^{T}
+  \end{aligned}\]
+
+        <ul>
+          <li>$\overline{X}=\displaystyle\frac{1}{n}\sum_{i=1}^{n}{X_{i}}$ : 표본평균</li>
+        </ul>
+      </li>
+      <li>
+        <p>$\overrightarrow{\alpha}$ : 순위 통계량 벡터 $\overrightarrow{X}$ 의 계수 벡터</p>
+
+\[\overrightarrow{\alpha}=\displaystyle\frac{\overrightarrow{m}^{T}\mathbb{V}^{-1}}{\Vert \mathbb{V}^{-1}\overrightarrow{m} \Vert}\]
+
+        <ul>
+          <li>
+            <p>$\overrightarrow{m}$ : 기대 순위 통계량 벡터</p>
+
+\[\overrightarrow{m}=\begin{pmatrix} E\left[X_{1}\right]&amp;E\left[X_{2}\right]&amp;\cdots&amp;E\left[X_{n} \right]\end{pmatrix}^{T}\]
+          </li>
+          <li>
+            <p>$\mathbb{V}$ : 기대 순위 통계량의 공분산 행렬</p>
+
+\[\mathbb{V}_{i,j}=\text{Cov}\Big[E\left[X_{i}\right],E\left[X_{j}\right]\Big]\]
+          </li>
+          <li>$\overrightarrow{m}^{T}\mathbb{V}^{-1}$ : $\mathbb{V}^{-1}$ 에 의해 선형 변환되어 상호 독립된 기대 순위 통계량 벡터</li>
+          <li>$\Vert \mathbb{V}^{-1}\overrightarrow{m} \Vert$ : 정규화 항</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>표본 $Y \sim N(0,1)$ 를 활용한 경험적 분포 생성</strong>
+    <ol>
+      <li>
+        <p>표준정규분포로부터 $n$ 개의 관측치로 구성된 표본을 반복적으로 생성</p>
+
+\[\begin{aligned}
+ \overrightarrow{Y}^{(k)}
+ =\begin{pmatrix} Y_{1}^{(k)}&amp;Y_{2}^{(k)}&amp;\cdots&amp;Y_{k}^{(k)} \end{pmatrix}^{T} \quad \text{for}\; Y^{(k)}_{i} \sim N(0,1)
+ \end{aligned}\]
+      </li>
+      <li>
+        <p>각 표본에 대하여 검정통계량 도출</p>
+
+\[W^{(k)}=\frac{\left(\sum_{i=1}^{k} \alpha_{i} Y_{i}\right)^2}{\sum_{i=1}^{k}\left(Y_{i} - \overline{Y}\right)^2}\]
+      </li>
+      <li>
+        <p>$n$ 의 크기에 따른 $W$ 의 경험적 분포 도출</p>
+
+\[f_{W}:n \rightarrow W\]
+      </li>
+      <li>
+        <p>$W$ 의 경험적 분포에서 특정 $w$ 값보다 작거나 같은 값을 가질 확률 도출</p>
+
+\[\begin{aligned}
+ \text{p-value}
+ &amp;=F_{W}(w)\\
+ &amp;=P(W \le w)
+ \end{aligned}\]
+      </li>
+    </ol>
+  </li>
+  <li><strong>표본 $X$ 에 대한 검정통계량 $W$ 의 $\text{p-value}$ 와 유의수준 $\alpha$ 비교</strong>
+    <ul>
+      <li>
+        <p>$F_{W}(W) \le \alpha$ : $X \not\sim N(\mu, \sigma^2)$</p>
+
+        <blockquote>
+          <p>귀무가설이 참이라는 가정 하에 도출된 검정통계량보다 극단적인 실현값이 발생할 가능성이 현저히 낮다. 이는 귀무가설이 참이라는 가정 하에 표본이 실현될 가능성이 현저히 낮음을 의미한다. 따라서 유의수준 $\alpha$ 하 귀무가설을 기각한다.</p>
+        </blockquote>
+      </li>
+      <li>
+        <p>$\alpha &lt; F_{W}(W)$ : $X \sim N(\mu, \sigma^2)$</p>
+
+        <blockquote>
+          <p>귀무가설이 참이라는 가정 하에 도출된 검정통계량보다 극단적인 실현값이 발생할 가능성이 어느 정도 존재한다. 이는 귀무가설이 참이라는 가정 하에 표본이 실현될 가능성이 현저히 낮다고 볼 수 없음을 의미한다. 따라서 유의수준 $\alpha$ 하 귀무가설을 기각하지 않는다.</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+</ul>
+
 <h3 id="등분산-검정levenes-test"><span class="me-2">등분산 검정(Levene’s Test)</span><a href="#등분산-검정levenes-test" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li><strong>관심 모수에 대한 점 추정량 도출</strong>
+    <ul>
+      <li><strong>관심 모수</strong> : \(\sigma_{1}^{2},\sigma_{2}^{2},\cdots,\sigma_{k}^{2}\)</li>
+      <li><strong>점 추정량</strong> : \(S_{1}^{2},S_{2}^{2},\cdots,S_{k}^{2}\)</li>
+    </ul>
+  </li>
+  <li><strong>귀무가설과 대립가설 설정</strong>
+    <ul>
+      <li>$H_{0}:\quad$ 모든 $i$ 에 대하여 $\displaystyle\frac{\sigma_{i}^{2}}{\sigma_{j \ne i}^{2}}=1$</li>
+      <li>$H_{1}:\quad$ 어떤 $i$ 에 대하여 $\displaystyle\frac{\sigma_{i}^{2}}{\sigma_{j \ne i}^{2}} \ne 1$</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>검정통계량 도출</strong></p>
+
+\[F=\frac{\text{SSB} / (k-1)}{\text{SSW} / (N-k)} \sim F(k-1, N-k)\]
+
+    <ul>
+      <li>
+        <p><strong>SSB(Sum of Square Between)</strong> : 집단 간 편차 자승의 합</p>
+
+\[\text{SSB}=\sum_{i=1}^{k}{N_{i}\left(\overline{Z}^{(i)}-\overline{Z}\right)^2} \sim \chi^2(k-1)\]
+
+        <ul>
+          <li>$\overline{Z}^{(i)}$ : $i$ 번째 집단에 대하여 그 절대편차 \(Z^{(i)}_{\forall}\) 의 평균</li>
+          <li>$\overline{Z}$ : 모든 관측치 $X^{(\forall)}_{\forall}$ 에 대하여 그 절대편차 \(Z^{(\forall)}_{\forall}\) 의 평균</li>
+          <li>$k$ : 표본 내 집단 갯수</li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>SSW(Sum of Within)</strong> : 집단 내 편차 자승의 합</p>
+
+\[\text{SSW}=\sum_{i=1}^{k}\sum_{j=1}^{N_{i}}{\left(Z^{(i)}_{j}-\overline{Z}^{(i)}\right)^2} \sim \chi^2(N-k)\]
+
+        <ul>
+          <li>
+            <p>\(Z^{(i)}_{j}\) : \(i\) 번째 집단의 \(j\) 번째 관측치 \(X^{(i)}_{j}\) 의 절대편차</p>
+
+\[Z^{(i)}_{j}=\left\vert X^{(i)}_{j}-\overline{X}^{(i)} \right\vert\]
+          </li>
+          <li>$\overline{Z}^{(i)}$ : $i$ 번째 집단에 대하여 그 절대편차 \(Z^{(i)}_{\forall}\) 의 평균</li>
+          <li>$N$ : 표본 내 관측치 갯수</li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>F-Dist.($F(\nu_1, \nu_2)$)</strong> : 서로 독립인 확률변수 $V_{1}\sim\chi^2(\nu_1),V_{2}\sim\chi^2(\nu_2)$ 간 비율로 구성되는 확률변수의 분포</p>
+
+\[F=\frac{V_1/\nu_1}{V_2/\nu_2} \sim F(\nu_1,\nu_2)\]
+      </li>
+    </ul>
+  </li>
+</ul>
 
   </div>
 
