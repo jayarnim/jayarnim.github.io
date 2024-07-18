@@ -4,7 +4,7 @@
   <id>https://jayarnim.github.io/</id>
   <title>Data Scientist</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-07-16T01:04:54+09:00</updated>
+  <updated>2024-07-19T03:15:00+09:00</updated>
   <author>
     <name>jayarnim</name>
     <uri>https://jayarnim.github.io/</uri>
@@ -124,14 +124,14 @@
 
   
   <entry>
-    <title>Summarize Statistical Method</title>
-    <link href="https://jayarnim.github.io/posts/Summarize_Statistical_Methods/" rel="alternate" type="text/html" title="Summarize Statistical Method" />
-    <published>2024-06-23T00:00:00+09:00</published>
+    <title>Multiple Linear Regression Analysis</title>
+    <link href="https://jayarnim.github.io/posts/Multiple_Linear_Regression_Analysis/" rel="alternate" type="text/html" title="Multiple Linear Regression Analysis" />
+    <published>2024-06-25T00:00:00+09:00</published>
   
-    <updated>2024-06-23T00:00:00+09:00</updated>
+    <updated>2024-06-25T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/Summarize_Statistical_Methods/</id>
-    <content src="https://jayarnim.github.io/posts/Summarize_Statistical_Methods/" />
+    <id>https://jayarnim.github.io/posts/Multiple_Linear_Regression_Analysis/</id>
+    <content src="https://jayarnim.github.io/posts/Multiple_Linear_Regression_Analysis/" />
     <author>
       <name>jayarnim</name>
     </author>
@@ -140,11 +140,11 @@
     
     <category term="Statistical Techs" />
     
-    <category term="Statistics" />
+    <category term="Regression Analysis" />
     
   
 
-  <summary>Based on the following lectures &amp;lt;br&amp;gt; (1) “Statistics (2018-1)” by Prof. Sang Ah Lee, Dept. of Economics, College of Economics &amp;amp; Commerce, Kookmin Univ. &amp;lt;br&amp;gt; (2) &amp;quot;Statistical Models and Application (2024-1)&amp;quot; by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ.</summary>
+  <summary>Based on the lecture &amp;quot;Statistical Models and Application (2024-1)&amp;quot; by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ.</summary>
 
   </entry>
 
