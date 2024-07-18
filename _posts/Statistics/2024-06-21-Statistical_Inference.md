@@ -3,7 +3,7 @@ order: 5
 title: Statistical Inference
 date: 2024-06-21
 categories: [Statistical Techs, Statistics]
-tags: [Statistics]
+tags: [Statistics, z Test, t Test]
 math: true
 description: >-
   Based on the following lectures <br>

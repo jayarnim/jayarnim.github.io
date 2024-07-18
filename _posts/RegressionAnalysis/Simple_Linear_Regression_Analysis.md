@@ -1,10 +1,15 @@
-## Index
-
-1. 회귀분석
-2. 최소자승법
-3. 최소자승법에 의한 회귀계수 추정량 도출
-
-<hr></br>
+---
+order: 1
+title: Simple Linear Regression Analysis
+date: 2024-06-24
+categories: [Statistical Techs, Regression Analysis]
+tags: [Statistics, Regression, OLS, R2]
+math: true
+description: >-
+  Based on the lecture "Statistical Models and Application (2024-1)" by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ.
+image:
+  path: /_post_refer_img/RegressionAnalysis/Thumbnail.jpg
+---
 
 ## 회귀분석
 
