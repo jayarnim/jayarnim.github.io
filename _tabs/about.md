@@ -25,7 +25,7 @@ College of Economics & Commerce, Kookmin Univ., South Korea
 ## Experience
 -----
 - **The Data Mining Lab**, *2024.01 - Present*\\
-Director Je-hyuk Lee\\
+Director Je-Hyuk Lee\\
 Dept. of Data Science, The Graduate School, Kookmin Univ., South Korea
 - **Kookmin Univ. Economic Association(KMEA)**, *2016.03 - 2019.08*\\
 Director Deok-Ju Jang, Jae-Hyun Nam\\
