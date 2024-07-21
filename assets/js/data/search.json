@@ -5,7 +5,7 @@
     "url": "/posts/Bayes_Estimator/",
     "categories": "Statistical Techs, Bayesian Modeling",
     "tags": "Statistics, Bayesian, Optimization, Loss Function",
-    "date": "2024-07-04 00:00:00 +0900",
+    "date": "2024-07-18 00:00:00 +0900",
     
 
 
@@ -22,7 +22,7 @@
     "url": "/posts/Prior_Prob_Dist/",
     "categories": "Statistical Techs, Bayesian Modeling",
     "tags": "Statistics, Bayesian",
-    "date": "2024-07-03 00:00:00 +0900",
+    "date": "2024-07-17 00:00:00 +0900",
     
 
 
@@ -39,7 +39,7 @@
     "url": "/posts/MC/",
     "categories": "Statistical Techs, Bayesian Modeling",
     "tags": "Statistics, Bayesian, Markov Chain",
-    "date": "2024-07-02 00:00:00 +0900",
+    "date": "2024-07-16 00:00:00 +0900",
     
 
 
@@ -56,7 +56,7 @@
     "url": "/posts/Bayesian/",
     "categories": "Statistical Techs, Bayesian Modeling",
     "tags": "Statistics, Bayesian, Optimization, MLE",
-    "date": "2024-07-01 00:00:00 +0900",
+    "date": "2024-07-15 00:00:00 +0900",
     
 
 
@@ -72,8 +72,8 @@
     "title": "Multiple Linear Regression Analysis",
     "url": "/posts/Multiple_Linear_Regression_Analysis/",
     "categories": "Statistical Techs, Regression Analysis",
-    "tags": "Statistics, Regression",
-    "date": "2024-06-26 00:00:00 +0900",
+    "tags": "Statistics, Regression, f Test",
+    "date": "2024-07-10 00:00:00 +0900",
     
 
 
@@ -89,8 +89,8 @@
     "title": "Estimate Regression Coefficient",
     "url": "/posts/Estimate_Regression_Coefficient/",
     "categories": "Statistical Techs, Regression Analysis",
-    "tags": "Statistics, Regression, OLS",
-    "date": "2024-06-25 00:00:00 +0900",
+    "tags": "Statistics, Regression, Estimation, OLS",
+    "date": "2024-07-09 00:00:00 +0900",
     
 
 
@@ -106,8 +106,8 @@
     "title": "Simple Linear Regression Analysis",
     "url": "/posts/Simple_Linear_Regression_Analysis/",
     "categories": "Statistical Techs, Regression Analysis",
-    "tags": "Statistics, Regression, R2",
-    "date": "2024-06-24 00:00:00 +0900",
+    "tags": "Statistics, Regression, t Test, Goodness of Fit Test, R2",
+    "date": "2024-07-08 00:00:00 +0900",
     
 
 
@@ -124,7 +124,7 @@
     "url": "/posts/Summarize_Statistical_Methods/",
     "categories": "Statistical Techs, Statistics",
     "tags": "Statistics, Normality Test, Shapiro-Wilk Test, Homogeneity of Variance Test, Levene’s Test, ANOVA",
-    "date": "2024-06-23 00:00:00 +0900",
+    "date": "2024-07-07 00:00:00 +0900",
     
 
 
@@ -141,7 +141,7 @@
     "url": "/posts/A_B_Test/",
     "categories": "Statistical Techs, Statistics",
     "tags": "Statistics, A/B Test, Two Sample t Test, Paired Sample t Test, Goodness of Fit Test, Test of Independence",
-    "date": "2024-06-22 00:00:00 +0900",
+    "date": "2024-07-06 00:00:00 +0900",
     
 
 
@@ -157,8 +157,8 @@
     "title": "Statistical Inference",
     "url": "/posts/Statistical_Inference/",
     "categories": "Statistical Techs, Statistics",
-    "tags": "Statistics, z Test, t Test",
-    "date": "2024-06-21 00:00:00 +0900",
+    "tags": "Statistics, Estimation, z Test, t Test",
+    "date": "2024-07-05 00:00:00 +0900",
     
 
 
@@ -175,7 +175,7 @@
     "url": "/posts/Sample_Dist/",
     "categories": "Statistical Techs, Statistics",
     "tags": "Statistics",
-    "date": "2024-06-20 00:00:00 +0900",
+    "date": "2024-07-04 00:00:00 +0900",
     
 
 
@@ -192,7 +192,7 @@
     "url": "/posts/Prob_Dist_Functions/",
     "categories": "Statistical Techs, Statistics",
     "tags": "Statistics",
-    "date": "2024-06-19 00:00:00 +0900",
+    "date": "2024-07-03 00:00:00 +0900",
     
 
 
@@ -209,7 +209,7 @@
     "url": "/posts/Probability/",
     "categories": "Statistical Techs, Statistics",
     "tags": "Statistics",
-    "date": "2024-06-18 00:00:00 +0900",
+    "date": "2024-07-02 00:00:00 +0900",
     
 
 
@@ -226,7 +226,7 @@
     "url": "/posts/Statistics/",
     "categories": "Statistical Techs, Statistics",
     "tags": "Statistics",
-    "date": "2024-06-17 00:00:00 +0900",
+    "date": "2024-07-01 00:00:00 +0900",
     
 
 
@@ -311,7 +311,7 @@
     "url": "/posts/RNN/",
     "categories": "Machine Learning Techs, Deep Learning",
     "tags": "Deep Learning, NLP",
-    "date": "2024-01-23 00:00:00 +0900",
+    "date": "2024-01-26 00:00:00 +0900",
     
 
 
@@ -328,7 +328,7 @@
     "url": "/posts/CNN/",
     "categories": "Machine Learning Techs, Deep Learning",
     "tags": "Deep Learning, CV",
-    "date": "2024-01-22 00:00:00 +0900",
+    "date": "2024-01-25 00:00:00 +0900",
     
 
 
@@ -345,7 +345,7 @@
     "url": "/posts/Optimizer/",
     "categories": "Machine Learning Techs, Deep Learning",
     "tags": "Deep Learning, Optimization",
-    "date": "2024-01-21 00:00:00 +0900",
+    "date": "2024-01-24 00:00:00 +0900",
     
 
 
@@ -362,7 +362,7 @@
     "url": "/posts/Activation_Functions/",
     "categories": "Machine Learning Techs, Deep Learning",
     "tags": "Deep Learning",
-    "date": "2024-01-20 00:00:00 +0900",
+    "date": "2024-01-23 00:00:00 +0900",
     
 
 
@@ -379,7 +379,7 @@
     "url": "/posts/DNN/",
     "categories": "Machine Learning Techs, Deep Learning",
     "tags": "Deep Learning",
-    "date": "2024-01-19 00:00:00 +0900",
+    "date": "2024-01-22 00:00:00 +0900",
     
 
 

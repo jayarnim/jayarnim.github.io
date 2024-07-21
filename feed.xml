@@ -4,7 +4,7 @@
   <id>https://jayarnim.github.io/</id>
   <title>Data Scientist</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-07-21T18:56:49+09:00</updated>
+  <updated>2024-07-21T22:32:22+09:00</updated>
   <author>
     <name>jayarnim</name>
     <uri>https://jayarnim.github.io/</uri>
@@ -22,9 +22,9 @@
   <entry>
     <title>Bayes Estimator</title>
     <link href="https://jayarnim.github.io/posts/Bayes_Estimator/" rel="alternate" type="text/html" title="Bayes Estimator" />
-    <published>2024-07-04T00:00:00+09:00</published>
+    <published>2024-07-18T00:00:00+09:00</published>
   
-    <updated>2024-07-04T00:00:00+09:00</updated>
+    <updated>2024-07-18T00:00:00+09:00</updated>
   
     <id>https://jayarnim.github.io/posts/Bayes_Estimator/</id>
     <content src="https://jayarnim.github.io/posts/Bayes_Estimator/" />
@@ -48,9 +48,9 @@
   <entry>
     <title>Prior Prob. Dist.</title>
     <link href="https://jayarnim.github.io/posts/Prior_Prob_Dist/" rel="alternate" type="text/html" title="Prior Prob. Dist." />
-    <published>2024-07-03T00:00:00+09:00</published>
+    <published>2024-07-17T00:00:00+09:00</published>
   
-    <updated>2024-07-03T00:00:00+09:00</updated>
+    <updated>2024-07-17T00:00:00+09:00</updated>
   
     <id>https://jayarnim.github.io/posts/Prior_Prob_Dist/</id>
     <content src="https://jayarnim.github.io/posts/Prior_Prob_Dist/" />
@@ -74,9 +74,9 @@
   <entry>
     <title>Monte Carlo Simulation</title>
     <link href="https://jayarnim.github.io/posts/MC/" rel="alternate" type="text/html" title="Monte Carlo Simulation" />
-    <published>2024-07-02T00:00:00+09:00</published>
+    <published>2024-07-16T00:00:00+09:00</published>
   
-    <updated>2024-07-02T00:00:00+09:00</updated>
+    <updated>2024-07-16T00:00:00+09:00</updated>
   
     <id>https://jayarnim.github.io/posts/MC/</id>
     <content src="https://jayarnim.github.io/posts/MC/" />
@@ -100,9 +100,9 @@
   <entry>
     <title>What? Bayesian</title>
     <link href="https://jayarnim.github.io/posts/Bayesian/" rel="alternate" type="text/html" title="What? Bayesian" />
-    <published>2024-07-01T00:00:00+09:00</published>
+    <published>2024-07-15T00:00:00+09:00</published>
   
-    <updated>2024-07-01T00:00:00+09:00</updated>
+    <updated>2024-07-15T00:00:00+09:00</updated>
   
     <id>https://jayarnim.github.io/posts/Bayesian/</id>
     <content src="https://jayarnim.github.io/posts/Bayesian/" />
@@ -126,9 +126,9 @@
   <entry>
     <title>Multiple Linear Regression Analysis</title>
     <link href="https://jayarnim.github.io/posts/Multiple_Linear_Regression_Analysis/" rel="alternate" type="text/html" title="Multiple Linear Regression Analysis" />
-    <published>2024-06-26T00:00:00+09:00</published>
+    <published>2024-07-10T00:00:00+09:00</published>
   
-    <updated>2024-06-26T00:00:00+09:00</updated>
+    <updated>2024-07-10T00:00:00+09:00</updated>
   
     <id>https://jayarnim.github.io/posts/Multiple_Linear_Regression_Analysis/</id>
     <content src="https://jayarnim.github.io/posts/Multiple_Linear_Regression_Analysis/" />
