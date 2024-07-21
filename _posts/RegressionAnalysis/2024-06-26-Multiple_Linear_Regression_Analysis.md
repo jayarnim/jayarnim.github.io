@@ -1,7 +1,7 @@
 ---
-order: 2
+order: 3
 title: Multiple Linear Regression Analysis
-date: 2024-06-25
+date: 2024-06-26
 categories: [Statistical Techs, Regression Analysis]
 tags: [Statistics, Regression]
 math: true
@@ -16,25 +16,25 @@ image:
 
 - **정의** : 설명변수가 여러 개인(Multi-Variate) 선형 회귀 모형(Linear Regression Model)
 
-    ![01](/_post_refer_img/RegressionAnalysis/02-01.png){: width="100%"}
+    ![01](/_post_refer_img/RegressionAnalysis/03-01.png){: width="100%"}
 
     $$
-    y^{(k)}=\beta_{0}+\beta_{1}x_{1}^{(k)}+\beta_{2}x_{2}^{(k)}+\cdots+\beta_{p}x_{p}^{(k)}+\epsilon^{(k)}
+    y^{(k)}=\beta_{0}+\beta_{1}x_{1}^{(k)}+\beta_{2}x_{2}^{(k)}+\cdots+\beta_{p}x_{p}^{(k)}+\varepsilon^{(k)}
     $$
 
 - **VS. Simple Linear Regression**
 
-    ![02](/_post_refer_img/RegressionAnalysis/02-02.jpeg){: width="100%"}
+    ![02](/_post_refer_img/RegressionAnalysis/03-02.jpeg){: width="100%"}
 
     - **Simple Linear Regression**
 
         $$\begin{aligned}
         \text{Sales}^{(k)}
-        &=\beta_{0}+\beta_{1} \cdot \text{TV}^{(k)}+\epsilon^{(k)}\\
+        &=\beta_{0}+\beta_{1} \cdot \text{TV}^{(k)}+\varepsilon^{(k)}\\
         \text{Sales}^{(k)}
-        &=\beta_{0}+\beta_{2} \cdot \text{Radio}^{(k)}+\epsilon^{(k)}\\
+        &=\beta_{0}+\beta_{2} \cdot \text{Radio}^{(k)}+\varepsilon^{(k)}\\
         \text{Sales}^{(k)}
-        &=\beta_{0}+\beta_{3} \cdot \text{News}^{(k)}+\epsilon^{(k)}
+        &=\beta_{0}+\beta_{3} \cdot \text{News}^{(k)}+\varepsilon^{(k)}
         \end{aligned}$$
 
         > 회귀계수 $\beta_{i}$ 은 다른 요인($X_{j \ne i}$)들의 변화에 따른 매출($\text{Sales}$)의 변동성을 통제하지 않은 상태에서 추정되었다. 때문에 해당 요인($X_{i}$)과 다른 요인들 간 상관관계가 있을 경우, $\beta_{i}$ 은 다른 요인들의 변화가 매출에 미치는 영향력을 포함하게 된다. 따라서 $\beta_{i}$ 은 $X_{i}$ 가 $\text{Sales}$ 에 미치는 순수한 영향력이라 볼 수 없다.
@@ -42,7 +42,7 @@ image:
     - **Multiple Linear Regression**
 
         $$
-        \text{Sales}^{(k)}=\beta_{0}+\beta_{1} \cdot \text{TV}^{(k)}+\beta_{2} \cdot \text{Radio}^{(k)}+\beta_{3} \cdot \text{News}^{(k)}+\epsilon^{(k)}
+        \text{Sales}^{(k)}=\beta_{0}+\beta_{1} \cdot \text{TV}^{(k)}+\beta_{2} \cdot \text{Radio}^{(k)}+\beta_{3} \cdot \text{News}^{(k)}+\varepsilon^{(k)}
         $$
 
         > 회귀계수 $\beta_{i}$ 은 다른 요인($X_{j \ne i}$)들의 변화에 따른 매출($\text{Sales}$)의 변동성을 통제한 상태에서 추정되었다. 따라서 $\beta_{i}$ 은 $X_{i}$ 가 $\text{Sales}$ 에 미치는 순수한 영향력이라 볼 수 있다.
@@ -102,7 +102,7 @@ image:
 
     > 설명변수 $X_{i}$ 의 회귀계수 $\beta_{i}$ 는 다른 모든 설명변수가 일정할 때 $X_{i}$ 가 $1$ 단위 변화함에 따른 $Y$ 변화 단위의 추정치이다. 즉, 다른 모든 설명변수에 대하여 변동이 없는 상태에서, $X_{i}$ 가 $1$ 단위 변화했을 때 $Y$ 가 $\beta_{i}$ 만큼 변화할 것이라 추정된다.
 
-## 모형의 유의성 검정
+## 회귀계수의 유의성 검정: F-검정
 -----
 
 - **정의** : 반응변수에 대한 설명변수들의 설명력이 통계적으로 유의한가에 관한 검정
@@ -172,7 +172,7 @@ image:
     - $RSS_{0}$ : 설명변수 $X_{3}, X_{4}$ 를 추가하지 않은 모형에 의해 설명되지 않는 반응변수의 변동성
 
         $$\begin{aligned}
-        RSS
+        RSS_{0}
         &= \sum{\left[y^{(i)}-\left(\beta_0 + \beta_1 x^{(i)}_1 + \beta_2 x^{(i)}_2 \right) \right]^2}
         \end{aligned}$$
 

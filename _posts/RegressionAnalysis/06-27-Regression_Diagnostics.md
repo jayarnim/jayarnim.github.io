@@ -1,10 +1,15 @@
-## Index
-
-1. 선형회귀모형의 고전적 가정
-2. 반응변수와 설명변수 간 선형관계의 이해
-3. 좋은 성질을 가지는 최소자승추정량의 이해
-
-<hr></br>
+---
+order: 4
+title: Regression Diagnostics
+date: 2024-06-27
+categories: [Statistical Techs, Regression Analysis]
+tags: [Statistics, Regression]
+math: true
+description: >-
+  Based on the lecture "Statistical Models and Application (2024-1)" by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ.
+image:
+  path: /_post_refer_img/RegressionAnalysis/Thumbnail.jpg
+---
 
 ## 선형회귀모형의 고전적 가정
 
@@ -27,6 +32,17 @@
 - `A.5` **관측치 간 오차항의 자기상관 없음(No Autocorrelation) 가정**
 
     >$Cov(\varepsilon_i, \varepsilon_j)=0$ If $i \ne j$
+
+- `A.6` **오차의 정규성 가정(Normality Assumption)**
+    - 최소자승추정량에 대하여 가설검정하기 위해서는 고전적 가정에 더하여 오차항의 분포에 관한 가정이 필요함
+
+        >$\varepsilon_i$ is Normally Distributed For Every $i=1,\cdots,n$
+
+    - 고전적 가정과 오차의 정규성 가정을 종합하면 다음이 성립함
+
+        $$
+        \varepsilon_{i^\forall} \sim N(0, \sigma^2)
+        $$
 
 </br>
 
@@ -74,56 +90,7 @@
     &= \beta_1 + \displaystyle\sum_{i=1}^{n}w_i\varepsilon_i
     \end{aligned}$$
 
-</br>
-
-## 좋은 성질을 가지는 최소자승추정량의 이해
-
-- **고전적 가정(Classical Assumptions) 하에서 최소자승추정량은 좋은 성질을 가짐**
-    - **불편성(Unbiasedness)**
-
-        $$
-        Bias(\hat{\beta})=E(\hat{\beta}) - \beta=0
-        $$
-
-    - **효율성(Efficiency)**
-
-        $$\begin{aligned}
-        \min MSE(\hat{\beta})
-        &= \min E((\hat{\beta}-\beta)^2) \\
-        &= \min (Var(\hat{\beta}) + Bias(\hat{\beta})^2)
-        \end{aligned}$$
-
-- **불편성(Unbiasedness)**
-    - **증명** ($\hat{\beta_0}$ 생략)
-
-        $$\begin{aligned}
-        E(\hat{\beta_1})
-        &= E(\beta_1 + \displaystyle\sum_{i=1}^{n}w_i\varepsilon_i) \\
-        &= E(\beta_1) + E(\displaystyle\sum_{i=1}^{n}w_i\varepsilon_i) \\
-        &= \beta_1 + \displaystyle\sum_{i=1}^{n}E(w_i\varepsilon_i) \\
-        &= \beta_1\;(\because A.2\;and\;A.3) \\
-        \\
-        \therefore Bias(\hat{\beta_1}) &= 0
-        \end{aligned}$$
-
-- **효율성(Efficiency)**
-    - **Gauss-Markov Theorem** : 최소자승추정량 $\hat{\beta_1}, \hat{\beta_0}$ 은 그 모수 $\beta_1, \beta_0$ 의 선형불편추정량 중 가장 효율적인 추정량임
-
-        >Given the classical assumptions, the OLS estimators are BLUE(Best Linear Unbiased Estimators). That is, They are the most efficient in the class of linear unbiased estimators.
-
-    - **최소자승추정량의 분산**
-        - $Var(\hat{\beta_1}) = \displaystyle\frac{\sigma^2}{\displaystyle\sum_{i}(X_i-\overline{X})^2}$
-        - $Var(\hat{\beta_0}) = \displaystyle\frac{\sigma^2}{n}\displaystyle\frac{\displaystyle\sum_{i}X_i^2}{\displaystyle\sum_{i}(X_i-\overline{X})^2}$
-
-    - **증명** ($\hat{\beta_0}$ 생략)
-        $$\begin{aligned}
-        Var(\hat{\beta_1})
-        &= E[(\hat{\beta_1}-E(\hat{\beta_1}))]^2 \\
-        &= E[(\hat{\beta_1}-\beta_1)]^2\;(\because\;Bias(\hat{\beta_1})=0) \\
-        &= E(\displaystyle\sum_{i=1}^{n}w_i\varepsilon_i)^2 \\
-        &= E(\displaystyle\sum_{i}w_i^2\varepsilon_i^2 + \displaystyle\sum_{i}\displaystyle\sum_{i\ne j}w_iw_j\varepsilon_i\varepsilon_j) \\
-        &= \displaystyle\sum_{i}w_i^2E(\varepsilon_i^2)+ \displaystyle\sum_{i\ne j}w_iw_jE(\varepsilon_i\varepsilon_j) \\
-        &= \displaystyle\sum_{i}w_i^2\sigma^2\;(\because A.2,\;A.3\;and\;A.5) \\
-        &= \sigma^2\displaystyle\sum_{i}w_i^2 \\
-        &= \displaystyle\frac{\sigma^2}{\displaystyle\sum_{i}(X_i-\overline{X})^2}
-        \end{aligned}$$
+- **최소자승추정량은 다음을 만족함**
+    - $\overline{Y}=\hat{\beta_0}+\hat{\beta_1}\overline{X}$
+    - $\overline{e}=\displaystyle\frac{1}{n}\displaystyle\sum_{i=1}^{n}e_i=0$
+    - $\displaystyle\sum_{i=1}^{n}e_iX_i=0$

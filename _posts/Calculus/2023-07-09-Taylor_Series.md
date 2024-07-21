@@ -2,8 +2,8 @@
 order: 3
 title: Taylor Series
 date: 2023-07-09
-categories: [Math, Calculus]
-tags: [Math]
+categories: [Mathematical Techs, Calculus]
+tags: [Mathematics]
 math: true
 description: >-
   Based on the lecture “Mathematics for Artificial Intelligence (2022-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data & Management, College of Business Administration, Kookmin Univ.

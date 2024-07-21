@@ -1,3 +1,16 @@
+---
+order: 6
+title: Logistic Regression Analysis
+date: 2024-06-29
+categories: [Statistical Techs, Regression Analysis]
+tags: [Statistics, Regression]
+math: true
+description: >-
+  Based on the lecture "Statistical Models and Application (2024-1)" by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ.
+image:
+  path: /_post_refer_img/RegressionAnalysis/Thumbnail.jpg
+---
+
 ### Filter Approach
 
 - **승산(Odds)** : 변수 $Y$ 가 반응할 가능성이 반응하지 않을 가능성보다 몇 배 높은가
