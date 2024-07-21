@@ -695,6 +695,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -702,6 +713,49 @@
   
   
 
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
   
 
   
@@ -807,9 +861,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="520 words"
+  title="846 words"
 >
-  <em>2 min</em> read</span>
+  <em>4 min</em> read</span>
 
         </div>
       </div>
@@ -847,10 +901,15 @@
       </li>
     </ul>
   </li>
-  <li>
-    <p><strong>단순 선형 회귀 모형(Linear Regression Model)</strong> : 반응변수와 <strong>단일 설명변수</strong> 간 선형 상관관계를 모델링하는 모형</p>
+</ul>
 
-    <p><a href="/_post_refer_img/RegressionAnalysis/01-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RegressionAnalysis/01-01.png" alt="01" width="100%" loading="lazy"></a></p>
+<h3 id="simple-linear-regression-model"><span class="me-2">Simple Linear Regression Model</span><a href="#simple-linear-regression-model" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p><a href="/_post_refer_img/RegressionAnalysis/01-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RegressionAnalysis/01-01.png" alt="01" width="100%" loading="lazy"></a></p>
+
+<ul>
+  <li>
+    <p><strong>단순 선형 회귀 모형(Simple Linear Regression Model)</strong> : 반응변수와 <strong>단일 설명변수</strong> 간 선형 상관관계를 모델링하는 모형</p>
 
 \[\begin{aligned}
   Y
@@ -858,22 +917,25 @@
   y_{i}
   &amp;=\beta_0+\beta_1 x_{i}+\varepsilon_{i}
   \end{aligned}\]
+  </li>
+  <li><strong>회귀계수(Regression Coefficient)</strong> : 모형이 추론하고자 하는 모수(Parameter)로서 상수
+    <ul>
+      <li><strong>편향(Bias; $\beta_0$)</strong> : 설명변수의 값이 $0$ 일 때 종속변수의 값</li>
+      <li><strong>가중치(Weight; $\beta_1$)</strong> : 설명변수가 종속변수에 미치는 영향력의 방향과 강도</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>오차항(Error Term; $\varepsilon$)</strong> : 확률변수</p>
+
+\[\begin{aligned}
+  \varepsilon = y-\left(\beta_{0} + \beta_{1} x \right) \sim N(0, \sigma^2)
+  \end{aligned}\]
 
     <ul>
-      <li><strong>모수(Parameter)</strong> : 회귀계수(Regression Coefficient; $\beta$)
-        <ul>
-          <li>편향(Bias; $\beta_0$)</li>
-          <li>설명변수 $X$ 에 대한 가중치(Weight; $\beta_1$)</li>
-        </ul>
-      </li>
-      <li><strong>오차항(Error Term; $\varepsilon$)</strong> : 확률변수
-        <ul>
-          <li>
-            <p><strong>잔차(Residual; $\epsilon$)</strong> : 최적 회귀계수 하 오차항의 추정치</p>
+      <li>
+        <p><strong>잔차(Residual; $\epsilon$)</strong> : 최적 회귀계수 하 오차항의 추정치</p>
 
 \[\epsilon=y-\left(\hat{\beta}_{0} + \hat{\beta}_{1} x \right)\]
-          </li>
-        </ul>
       </li>
     </ul>
   </li>
@@ -914,6 +976,76 @@
 \[\begin{aligned}
   T = \frac{\hat{\beta}_{1}-0}{\mathbb{SE}\left[\hat{\beta}_{1}\right]} \sim t(n-2)
   \end{aligned}\]
+  </li>
+</ul>
+
+<h2 id="goodness-of-fit"><span class="me-2">Goodness of Fit</span><a href="#goodness-of-fit" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><strong>적합도(Goodness of Fit)</strong> : 모형이 반응변수의 변동을 얼마나 잘 설명하고 있는가</p>
+  </li>
+  <li>
+    <p><strong>반응변수(Response Variable)</strong></p>
+    <ul>
+      <li>$y_{i}=\beta_{0}+\beta_{1}x_{i}+\varepsilon_{i}$</li>
+      <li>$\hat{y}=\beta_{0}+\beta_{1}x$</li>
+      <li>$\overline{y}=\beta_{0}+\beta_{1}\overline{x} \quad \text{s.t.}\; \varepsilon \sim N(0, \sigma^2)$</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="variation-of-the-response-variable"><span class="me-2">Variation of the Response Variable</span><a href="#variation-of-the-response-variable" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+\[\begin{aligned}
+\sum_{i=1}^{n}{\left(y_{i}-\overline{y}\right)^2}
+&amp;= \sum_{i=1}^{n}{\left[\left(\hat{y}_{i} + \varepsilon_{i}\right) -\overline{y}\right]^{2}} \\
+&amp;= \sum_{i=1}^{n}{\left[\left(\hat{y}_{i} -\overline{y}\right) + \varepsilon_i \right]^{2}} \\
+&amp;= \sum_{i=1}^{n}{\left[\left(\hat{y}_{i} -\overline{y}\right)^2 + \varepsilon_{i}^{2} + 2 \times \varepsilon_{i} \times \left(\hat{y}_{i}-\overline{y}\right)\right]} \\
+&amp;= \sum_{i=1}^{n}{\left(\hat{y}_{i} -\overline{y}\right)^{2}} + \sum_{i=1}^{n}{\varepsilon_{i}^2} + 2\times\sum_{i=1}^{n}{\varepsilon_{i}\left(\hat{y}_{i}-\overline{y}\right)} \\
+&amp;= \sum_{i=1}^{n}{\left(\hat{y}_{i} -\overline{y}\right)^2} + \sum_{i=1}^{n}{\varepsilon_{i}^{2}}\quad(\because \sum_{i=1}^{n}{\hat{y}_{i}-\overline{y}} = 0)
+\end{aligned}\]
+
+<ul>
+  <li>
+    <p><strong>총변동(Total Sum of Square; TSS)</strong> : 반응변수의 총 변동성</p>
+
+\[TSS=\sum_{i=1}^{n}{\left(y_{i}-\overline{y}\right)^2}\]
+  </li>
+  <li>
+    <p><strong>회귀변동(Explained Sum of Square; ESS)</strong> : 모형에 의해 설명되는 반응변수의 변동성</p>
+
+\[ESS=\sum_{i=1}^{n}{\left(\hat{y}_{i}-\overline{y}\right)^2}\]
+  </li>
+  <li>
+    <p><strong>잔차변동(Residual Sum of Square; RSS)</strong> : 모형에 의해 설명되지 않는 반응변수의 변동성</p>
+
+\[\begin{aligned}
+  RSS
+  &amp;=\sum_{i=1}^{n}{\left(y_{i}-\hat{y}_{i}\right)^{2}}\\
+  &amp;=\sum_{i=1}^{n}{\varepsilon_{i}^{2}}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h3 id="coefficient-of-determination"><span class="me-2">Coefficient of Determination</span><a href="#coefficient-of-determination" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p><strong>결정계수(Coefficient of Determination; $R^2$)</strong> : 총변동 대비 회귀변동의 비율로 측정된 적합도</p>
+
+\[\begin{aligned}
+  R^2
+  &amp;= \frac{ESS}{TSS} \\
+  &amp;= \frac{ESS}{ESS + RSS} \\
+  &amp;= 1 - \frac{RSS}{TSS}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>Adjusted Coefficient of Determination($\text{Adj.}R^2$)</strong> : 설명변수의 갯수 $p$ 가 많을수록 적합도가 높게 측정되는 경향을 조정한 결정계수</p>
+
+\[\text{Adj.}R^2 = \frac{(n-1)R^2-p}{n-p-1}\]
   </li>
 </ul>
 
