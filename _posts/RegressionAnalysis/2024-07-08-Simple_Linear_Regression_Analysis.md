@@ -67,14 +67,9 @@ image:
 
 - **관심 모수에 대한 점 추정량 도출**
     - **관심 모수** : $\beta_{1}$
-    - **최소자승추정량** : $$\hat{\beta}_{1} \sim N(\mathbb{E}\left[\hat{\beta}_{1}\right], \mathbb{SE}\left[\hat{\beta}_{1}\right]^2) \quad \text{s.t.}\;n>30$$
-        
-        $$\begin{aligned}
-        \mathbb{E}\left[\hat{\beta}_{1}\right]
-        &= \beta_{1}\\
-        \mathbb{SE}\left[\hat{\beta}_{1}\right]^2
-        &= \sigma^2\left[\displaystyle\frac{1}{\sum_{i=1}^{n}{(x_{i}-\overline{x})^2}}\right] \quad \text{s.t.}\;\varepsilon \sim N(0,\sigma^2)
-        \end{aligned}$$
+    - **점 추정량** : $$\hat{\beta}_{1} \sim N(\mathbb{E}\left[\hat{\beta}_{1}\right], \mathbb{SE}\left[\hat{\beta}_{1}\right]^2) \quad \text{s.t.}\;n>30$$
+        - **최소자승추정량의 평균** : $$\mathbb{E}\left[\hat{\beta}_{1}\right] = \beta_{1}$$
+        - **최소자승추정량의 분산** : $$\mathbb{SE}\left[\hat{\beta}_{1}\right]^2 = \sigma^2\left[\displaystyle\frac{1}{\sum_{i=1}^{n}{(x_{i}-\overline{x})^2}}\right] \quad \text{s.t.}\;\varepsilon \sim N(0,\sigma^2)$$
 
 - **귀무가설과 대립가설 설정**
     - $H_{0}: \quad \beta_{1} = 0$

@@ -1,7 +1,7 @@
 ---
 order: 6
 title: Logistic Regression Analysis
-date: 2024-06-29
+date: 2024-07-13
 categories: [Statistical Techs, Regression Analysis]
 tags: [Statistics, Regression]
 math: true

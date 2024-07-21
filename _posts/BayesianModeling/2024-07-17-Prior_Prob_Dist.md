@@ -108,6 +108,20 @@ X_{i} \vert \theta &\sim N(\theta, 5^2)\\
     | $N(\mu, \Sigma) \\ (\text{known} \; \mu)$ | $\text{Inv-Wishart}(\nu_{0}, S_{0})$ | $\text{Inv-Wishart}(\nu_{0}+n, S_{0} + n \cdot \bar{S})$ |
 
 ## Jeffreys Priors
+-----
+
+- **Jeffreys Priors** : 모수 공간에 대해 불변성을 보장함으로써 변수 변환 후에도 객관성을 보존하는 사전분포
+
+    $$
+    \pi_{J}(\theta) \propto \sqrt{\mathbf{I}(\theta)}
+    $$
+
+    - $\sqrt{\mathbf{I}(\theta)}$ : Fisher Information
+
+        $$\begin{aligned}
+        \mathbf{I}(\theta)
+        &= - \mathbb{E}\bigg[\frac{\text{d}^{2}}{\text{d}\theta^{2}}\log{\mathcal{L}(\theta)}\bigg]
+        \end{aligned}$$
 
 ### Transformation Variant
 
@@ -145,18 +159,3 @@ X_{i} \vert \theta &\sim N(\theta, 5^2)\\
     - 변환 후 : $\psi \sim \text{Logistic}(0,1)$
 
         ![04](/_post_refer_img/BayesianModeling/03-04.png){: width="100%"}
-
-### Jeffreys Priors
-
-- **정의** : 모수 공간에 대해 불변성을 보장함으로써 변수 변환 후에도 객관성을 보존하는 사전분포
-
-    $$
-    \pi_{J}(\theta) \propto \sqrt{\mathbf{I}(\theta)}
-    $$
-
-    - $\sqrt{\mathbf{I}(\theta)}$ : Fisher Information
-
-        $$\begin{aligned}
-        \mathbf{I}(\theta)
-        &= - \mathbb{E}\bigg[\frac{\text{d}^{2}}{\text{d}\theta^{2}}\log{\mathcal{L}(\theta)}\bigg]
-        \end{aligned}$$

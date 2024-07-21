@@ -1,7 +1,7 @@
 ---
 order: 5
 title: Regression Issues
-date: 2024-06-28
+date: 2024-07-12
 categories: [Statistical Techs, Regression Analysis]
 tags: [Statistics, Regression]
 math: true

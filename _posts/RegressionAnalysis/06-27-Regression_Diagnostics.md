@@ -1,7 +1,7 @@
 ---
 order: 4
 title: Regression Diagnostics
-date: 2024-06-27
+date: 2024-07-11
 categories: [Statistical Techs, Regression Analysis]
 tags: [Statistics, Regression]
 math: true
