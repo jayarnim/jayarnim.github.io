@@ -1,7 +1,7 @@
 ---
 order: 6
 title: Interlock
-date: 2023-08-06
+date: 2023-07-22
 categories: [AI Dev. Env., GIT]
 tags: [Dev. Env., DVCS, GIT]
 math: true
