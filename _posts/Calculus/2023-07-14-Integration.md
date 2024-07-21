@@ -1,7 +1,7 @@
 ---
 order: 5
 title: Integration
-date: 2023-07-11
+date: 2023-07-14
 categories: [Mathematical Techs, Calculus]
 tags: [Mathematics]
 math: true

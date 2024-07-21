@@ -1,7 +1,7 @@
 ---
 order: 6
 title: Matrix Decomposition
-date: 2023-07-06
+date: 2023-07-08
 categories: [Mathematical Techs, Linear Algebra]
 tags: [Mathematics]
 math: true

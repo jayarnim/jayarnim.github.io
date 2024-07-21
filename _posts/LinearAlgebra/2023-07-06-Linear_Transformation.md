@@ -1,7 +1,7 @@
 ---
 order: 4
 title: Linear Transformation
-date: 2023-07-04
+date: 2023-07-06
 categories: [Mathematical Techs, Linear Algebra]
 tags: [Mathematics]
 math: true

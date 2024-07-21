@@ -1,7 +1,7 @@
 ---
 order: 2
 title: Differentiation
-date: 2023-07-08
+date: 2023-07-11
 categories: [Mathematical Techs, Calculus]
 tags: [Mathematics]
 math: true
