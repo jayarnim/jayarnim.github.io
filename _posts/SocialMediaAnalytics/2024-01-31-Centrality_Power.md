@@ -1,7 +1,7 @@
 ---
 order: 3
 title: Centrality and Power
-date: 2024-02-03
+date: 2024-01-31
 categories: [AI & Data Mining, Social Media Analytics]
 tags: [Data Mining, Social Media, Social Network, Graph]
 math: true
