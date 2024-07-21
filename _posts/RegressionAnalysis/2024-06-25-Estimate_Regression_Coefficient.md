@@ -132,25 +132,25 @@ $$\begin{aligned}
 y_{i}
 &= \beta_{0}+\beta_{1}x_{i}+\varepsilon_{i}\\
 \overline{y}
-&= \beta_{0}+\beta_{1}\overline{x}+\varoverline{\epsilon}\\
+&= \beta_{0}+\beta_{1}\overline{x}+\overline{\varepsilon}\\
 \\
 \therefore
 (y_{i}-\overline{y})
-&= \beta_{1}(x_{i}-\overline{x}) + (\varepsilon_{i}-\overline{\epsilon})\\
+&= \beta_{1}(x_{i}-\overline{x}) + (\varepsilon_{i}-\overline{\varepsilon})\\
 \\
 \therefore
 (x_{i}-\overline{x})(y_{i}-\overline{y})
-&= \beta_{1}(x_{i}-\overline{x})^{2} + \varepsilon_{i}(x_{i}-\overline{x}) = \overline{\epsilon}(x_{i}-\overline{x})\\
+&= \beta_{1}(x_{i}-\overline{x})^{2} + \varepsilon_{i}(x_{i}-\overline{x}) = \overline{\varepsilon}(x_{i}-\overline{x})\\
 \\
 \therefore
 \hat{\beta}_{1}
-&= \beta_{1}+\frac{\sum_{i=1}^{n}{(x_{i}-\overline{x})\epsilon_{i}}}{\sum_{i=1}^{n}{(x_{i-\overline{x}})^2}}+\overline{\epsilon} \cdot \frac{\sum_{i=1}^{n}{(x_{i}-\overline{x})}}{\sum_{i=1}^{n}{(x_{i}-\overline{x})^2}}\\
-&= \beta_{1}+\frac{\sum_{i=1}^{n}{(x_{i}-\overline{x})\varepsilon_{i}}}{\sum_{i=1}^{n}{(x_{i-\overline{x}})^2}} \quad \text{s.t.}\;\epsilon \sim N(0,\sigma^2)\\
+&= \beta_{1}+\frac{\sum_{i=1}^{n}{(x_{i}-\overline{x})\varepsilon_{i}}}{\sum_{i=1}^{n}{(x_{i-\overline{x}})^2}}+\overline{\varepsilon} \cdot \frac{\sum_{i=1}^{n}{(x_{i}-\overline{x})}}{\sum_{i=1}^{n}{(x_{i}-\overline{x})^2}}\\
+&= \beta_{1}+\frac{\sum_{i=1}^{n}{(x_{i}-\overline{x})\varepsilon_{i}}}{\sum_{i=1}^{n}{(x_{i-\overline{x}})^2}} \quad \text{s.t.}\;\varepsilon \sim N(0,\sigma^2)\\
 \\
 \mathbb{E}\left[\hat{\beta}_{1}\right]
 &= \beta_{1} + \mathbb{E}\left[\frac{\sum_{i=1}^{n}{(x_{i}-\overline{x})\varepsilon_{i}}}{\sum_{i=1}^{n}{(x_{i}-\overline{x})^2}}\right]\\
-&= \beta_{1} + \frac{\sum_{i=1}^{n}{(x_{i}-\overline{x}) \mathbb{E}\left[\varepsilon_{i}\right]}}{\sum_{i=1}^{n}{(x_{i}-\overline{x})^2}} \quad \text{s.t.}\;\mathbb{E}\left[\epsilon_{i}\vert x_{i}\right]=\mathbb{E}\left[\varepsilon_{i}\right]\\
-&= \beta_{1} \quad \text{s.t.}\;\epsilon \sim N(0,\sigma^2)
+&= \beta_{1} + \frac{\sum_{i=1}^{n}{(x_{i}-\overline{x}) \mathbb{E}\left[\varepsilon_{i}\right]}}{\sum_{i=1}^{n}{(x_{i}-\overline{x})^2}} \quad \text{s.t.}\;\mathbb{E}\left[\varepsilon_{i}\vert x_{i}\right]=\mathbb{E}\left[\varepsilon_{i}\right]\\
+&= \beta_{1} \quad \text{s.t.}\;\varepsilon \sim N(0,\sigma^2)
 \end{aligned}$$
 
 ### $\hat{\beta}_{0}$
@@ -185,17 +185,17 @@ $$
 $$\begin{aligned}
 \hat{\beta}_{1}
 &= \frac{\sum_{i=1}^{n}{(x_{i}-\overline{x})(y_{i}-\overline{y})}}{\sum_{i=1}^{n}{(x_{i}-\overline{x})^{2}}}\\
-&= \beta_{1}+\frac{\sum_{i=1}^{n}{(x_{i}-\overline{x})\varepsilon_{i}}}{\sum_{i=1}^{n}{(x_{i}-\overline{x})^{2}}} \quad \text{s.t.}\;\epsilon \sim N(0,\sigma^2)\\
+&= \beta_{1}+\frac{\sum_{i=1}^{n}{(x_{i}-\overline{x})\varepsilon_{i}}}{\sum_{i=1}^{n}{(x_{i}-\overline{x})^{2}}} \quad \text{s.t.}\;\varepsilon \sim N(0,\sigma^2)\\
 \\
 \mathbb{Var}\left[\hat{\beta}_{1}\right]
 &= \mathbb{Var}\left[\beta_{1}+\frac{\sum_{i=1}^{n}{(x_{i}-\overline{x})\varepsilon_{i}}}{\sum_{i=1}^{n}{(x_{i}-\overline{x})^{2}}}\right]\\
 &= \mathbb{Var}\left[\frac{\sum_{i=1}^{n}{(x_{i}-\overline{x})\varepsilon_{i}}}{\sum_{i=1}^{n}{(x_{i}-\overline{x})^{2}}}\right]\\
 &= \left(\frac{1}{\sum_{i=1}^{n}{(x_{i}-\overline{x})^{2}}}\right)^{2} \cdot \mathbb{Var}\left[\sum_{i=1}^{n}{(x_{i}-\overline{x})\varepsilon_{i}}\right] \quad \text{s.t.}\;\mathbb{E}\left[\varepsilon_{i} \vert x_{i}\right] = \mathbb{E}\left[\varepsilon_{i}\right]\\
 \\
-\mathbb{Var}\left[\sum_{i=1}^{n}{(x_{i}-\overline{x})\epsilon_{i}}\right]
+\mathbb{Var}\left[\sum_{i=1}^{n}{(x_{i}-\overline{x})\varepsilon_{i}}\right]
 &= \sum_{i=1}^{n}{\mathbb{Var}\left[(x_{i}-\overline{x})\varepsilon_{i}\right]} \quad \text{s.t.} \; \mathbb{Cov}\left[\varepsilon_{i},\varepsilon_{j}\right]=0\\
 &= \sum_{i=1}^{n}{(x_{i}-\overline{x})^{2}\mathbb{Var}\left[\varepsilon_{i}\right]} \quad \text{s.t.} \; \mathbb{E}\left[\varepsilon_{i} \vert x_{i}\right]=\mathbb{E}\left[\varepsilon_{i}\right]\\
-&= \sigma^{2}\sum_{i=1}^{n}{(x_{i}-\overline{x})^{2}} \quad \text{s.t.}\;\epsilon \sim N(0, \sigma^2)\\
+&= \sigma^{2}\sum_{i=1}^{n}{(x_{i}-\overline{x})^{2}} \quad \text{s.t.}\;\varepsilon \sim N(0, \sigma^2)\\
 \\
 \therefore
 \mathbb{Var}\left[\hat{\beta}_{1}\right]
@@ -222,7 +222,7 @@ $$\begin{aligned}
     &= \left(\frac{1}{n}\right)^{2} \cdot \mathbb{Var}\left[\sum_{i=1}^{n}{y_{i}}\right]\\
     &= \left(\frac{1}{n}\right)^{2} \cdot \sum_{i=1}^{n}{\mathbb{Var}\left[y_{i}\right]} \quad \text{s.t.}\;\mathbb{Cov}\left[\varepsilon_{i},\varepsilon_{j}\right]=0\\
     &= \left(\frac{1}{n}\right)^{2} \cdot \sum_{i=1}^{n}{\mathbb{Var}\left[\varepsilon_{i}\right]} \quad \left(\because y_{i}=\beta_{0} + \beta_{1}x_{i} + \varepsilon_{i} \right)\\
-    &= \frac{\sigma^2}{n} \quad \text{s.t.}\;\epsilon \sim N(0, \sigma^2)
+    &= \frac{\sigma^2}{n} \quad \text{s.t.}\;\varepsilon \sim N(0, \sigma^2)
     \end{aligned}$$
 
 - $\mathbb{Var}\left[\hat{\beta}_{1}\overline{x}\right]$
@@ -237,11 +237,11 @@ $$\begin{aligned}
 
     $$\begin{aligned}
     \mathbb{Cov}\left[\overline{y}, \hat{\beta}_{1}\overline{x}\right]
-    &= \mathbb{Cov}\left[\beta_{0}+\beta_{1}\overline{x}+\overline{\epsilon}, \hat{\beta}_{1}\overline{x}\right]\\
-    &= \overline{x} \cdot \mathbb{Cov}\left[\overline{\epsilon},\hat{\beta}_{1}\right]\\
-    &= \overline{x} \cdot \mathbb{E}\left[\left(\hat{\beta}_{1}-\mathbb{E}\left[\hat{\beta}_{1}\right]\right)\cdot\left(\overline{\epsilon}-\mathbb{E}\left[\overline{\epsilon}\right]\right)\right]\\
-    &= \overline{x} \cdot \mathbb{E}\left[\left(\hat{\beta}_{1}-\beta_{1}\right)\cdot\left(\overline{\epsilon}-\mathbb{E}\left[\overline{\epsilon}\right]\right)\right] \quad (\because \mathbb{E}\left[\hat{\beta}_{1}\right] = \beta_{1})\\
-    &= \overline{x} \cdot \mathbb{E}\left[\left(\hat{\beta}_{1}-\beta_{1}\right)\cdot\left(0-0\right)\right] \quad \text{s.t.} \; \epsilon \sim N(0, \sigma^2)\\
+    &= \mathbb{Cov}\left[\beta_{0}+\beta_{1}\overline{x}+\overline{\varepsilon}, \hat{\beta}_{1}\overline{x}\right]\\
+    &= \overline{x} \cdot \mathbb{Cov}\left[\overline{\varepsilon},\hat{\beta}_{1}\right]\\
+    &= \overline{x} \cdot \mathbb{E}\left[\left(\hat{\beta}_{1}-\mathbb{E}\left[\hat{\beta}_{1}\right]\right)\cdot\left(\overline{\varepsilon}-\mathbb{E}\left[\overline{\varepsilon}\right]\right)\right]\\
+    &= \overline{x} \cdot \mathbb{E}\left[\left(\hat{\beta}_{1}-\beta_{1}\right)\cdot\left(\overline{\varepsilon}-\mathbb{E}\left[\overline{\varepsilon}\right]\right)\right] \quad (\because \mathbb{E}\left[\hat{\beta}_{1}\right] = \beta_{1})\\
+    &= \overline{x} \cdot \mathbb{E}\left[\left(\hat{\beta}_{1}-\beta_{1}\right)\cdot\left(0-0\right)\right] \quad \text{s.t.} \; \varepsilon \sim N(0, \sigma^2)\\
     &= 0
     \end{aligned}$$
 
