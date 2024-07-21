@@ -31,9 +31,11 @@ image:
         - 독립변수(Independent Variable)
         - 외생변수(Exogenous Variable)
 
-- **단순 선형 회귀 모형(Linear Regression Model)** : 반응변수와 **단일 설명변수** 간 선형 상관관계를 모델링하는 모형
+### Simple Linear Regression Model
 
-    ![01](/_post_refer_img/RegressionAnalysis/01-01.png){: width="100%"}
+![01](/_post_refer_img/RegressionAnalysis/01-01.png){: width="100%"}
+
+- **단순 선형 회귀 모형(Simple Linear Regression Model)** : 반응변수와 **단일 설명변수** 간 선형 상관관계를 모델링하는 모형
 
     $$\begin{aligned}
     Y
@@ -42,16 +44,21 @@ image:
     &=\beta_0+\beta_1 x_{i}+\varepsilon_{i}
     \end{aligned}$$
 
-    - **모수(Parameter)** : 회귀계수(Regression Coefficient; $\beta$)
-        - 편향(Bias; $\beta_0$)
-        - 설명변수 $X$ 에 대한 가중치(Weight; $\beta_1$)
+- **회귀계수(Regression Coefficient)** : 모형이 추론하고자 하는 모수(Parameter)로서 상수
+    - **편향(Bias; $\beta_0$)** : 설명변수의 값이 $0$ 일 때 종속변수의 값
+    - **가중치(Weight; $\beta_1$)** : 설명변수가 종속변수에 미치는 영향력의 방향과 강도
 
-    - **오차항(Error Term; $\varepsilon$)** : 확률변수
-        - **잔차(Residual; $\epsilon$)** : 최적 회귀계수 하 오차항의 추정치
+- **오차항(Error Term; $\varepsilon$)** : 확률변수
 
-            $$
-            \epsilon=y-\left(\hat{\beta}_{0} + \hat{\beta}_{1} x \right)
-            $$
+    $$\begin{aligned}
+    \varepsilon = y-\left(\beta_{0} + \beta_{1} x \right) \sim N(0, \sigma^2)
+    \end{aligned}$$
+
+    - **잔차(Residual; $\epsilon$)** : 최적 회귀계수 하 오차항의 추정치
+
+        $$
+        \epsilon=y-\left(\hat{\beta}_{0} + \hat{\beta}_{1} x \right)
+        $$
 
 ## 회귀계수의 유의성 검정: T-검정
 -----
@@ -78,3 +85,61 @@ image:
     $$\begin{aligned}
     T = \frac{\hat{\beta}_{1}-0}{\mathbb{SE}\left[\hat{\beta}_{1}\right]} \sim t(n-2)
     \end{aligned}$$
+
+## Goodness of Fit
+-----
+
+- **적합도(Goodness of Fit)** : 모형이 반응변수의 변동을 얼마나 잘 설명하고 있는가
+
+- **반응변수(Response Variable)**
+    - $y_{i}=\beta_{0}+\beta_{1}x_{i}+\varepsilon_{i}$
+    - $\hat{y}=\beta_{0}+\beta_{1}x$
+    - $\overline{y}=\beta_{0}+\beta_{1}\overline{x} \quad \text{s.t.}\; \varepsilon \sim N(0, \sigma^2)$
+
+### Variation of the Response Variable
+
+$$\begin{aligned}
+\sum_{i=1}^{n}{\left(y_{i}-\overline{y}\right)^2}
+&= \sum_{i=1}^{n}{\left[\left(\hat{y}_{i} + \varepsilon_{i}\right) -\overline{y}\right]^{2}} \\
+&= \sum_{i=1}^{n}{\left[\left(\hat{y}_{i} -\overline{y}\right) + \varepsilon_i \right]^{2}} \\
+&= \sum_{i=1}^{n}{\left[\left(\hat{y}_{i} -\overline{y}\right)^2 + \varepsilon_{i}^{2} + 2 \times \varepsilon_{i} \times \left(\hat{y}_{i}-\overline{y}\right)\right]} \\
+&= \sum_{i=1}^{n}{\left(\hat{y}_{i} -\overline{y}\right)^{2}} + \sum_{i=1}^{n}{\varepsilon_{i}^2} + 2\times\sum_{i=1}^{n}{\varepsilon_{i}\left(\hat{y}_{i}-\overline{y}\right)} \\
+&= \sum_{i=1}^{n}{\left(\hat{y}_{i} -\overline{y}\right)^2} + \sum_{i=1}^{n}{\varepsilon_{i}^{2}}\quad(\because \sum_{i=1}^{n}{\hat{y}_{i}-\overline{y}} = 0)
+\end{aligned}$$
+
+- **총변동(Total Sum of Square; TSS)** : 반응변수의 총 변동성
+
+    $$
+    TSS=\sum_{i=1}^{n}{\left(y_{i}-\overline{y}\right)^2}
+    $$
+
+- **회귀변동(Explained Sum of Square; ESS)** : 모형에 의해 설명되는 반응변수의 변동성
+
+    $$
+    ESS=\sum_{i=1}^{n}{\left(\hat{y}_{i}-\overline{y}\right)^2}
+    $$
+
+- **잔차변동(Residual Sum of Square; RSS)** : 모형에 의해 설명되지 않는 반응변수의 변동성
+
+    $$\begin{aligned}
+    RSS
+    &=\sum_{i=1}^{n}{\left(y_{i}-\hat{y}_{i}\right)^{2}}\\
+    &=\sum_{i=1}^{n}{\varepsilon_{i}^{2}}
+    \end{aligned}$$
+
+### Coefficient of Determination
+
+- **결정계수(Coefficient of Determination; $R^2$)** : 총변동 대비 회귀변동의 비율로 측정된 적합도
+
+    $$\begin{aligned}
+    R^2
+    &= \frac{ESS}{TSS} \\
+    &= \frac{ESS}{ESS + RSS} \\
+    &= 1 - \frac{RSS}{TSS}
+    \end{aligned}$$
+
+- **Adjusted Coefficient of Determination($\text{Adj.}R^2$)** : 설명변수의 갯수 $p$ 가 많을수록 적합도가 높게 측정되는 경향을 조정한 결정계수
+
+    $$
+    \text{Adj.}R^2 = \frac{(n-1)R^2-p}{n-p-1}
+    $$

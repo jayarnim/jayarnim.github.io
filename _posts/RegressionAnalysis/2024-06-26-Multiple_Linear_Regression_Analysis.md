@@ -118,13 +118,13 @@ image:
     = \frac{ESS/p}{RSS/(n-p-1)} \sim F(p, n-p-1)
     $$
 
-    - **$ESS$(Explained Sum of Square)** : 모형에 의해 설명되는 반응변수의 변동성
+    - **회귀변동(Explained Sum of Square; ESS)** : 모형에 의해 설명되는 반응변수의 변동성
 
         $$
         ESS=TSS-RSS
         $$
 
-    - **$TSS$(Total Sum of Square)** : 반응변수의 총 변동성
+    - **총변동(Total Sum of Square; TSS)** : 반응변수의 총 변동성
 
         $$\begin{aligned}
         TSS
@@ -132,7 +132,7 @@ image:
         &= \sum{\left(y^{(i)}-\overline{y} \right)^2}
         \end{aligned}$$
 
-    - **$RSS$(Residual Sum of Square)** : 모형에 의해 설명되지 않는 반응변수의 변동성
+    - **잔차변동(Residual Sum of Square)** : 모형에 의해 설명되지 않는 반응변수의 변동성
 
         $$\begin{aligned}
         RSS
