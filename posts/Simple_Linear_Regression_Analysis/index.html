@@ -861,7 +861,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="846 words"
+  title="863 words"
 >
   <em>4 min</em> read</span>
 
@@ -952,15 +952,11 @@
   <li><strong>관심 모수에 대한 점 추정량 도출</strong>
     <ul>
       <li><strong>관심 모수</strong> : $\beta_{1}$</li>
-      <li>
-        <p><strong>최소자승추정량</strong> : \(\hat{\beta}_{1} \sim N(\mathbb{E}\left[\hat{\beta}_{1}\right], \mathbb{SE}\left[\hat{\beta}_{1}\right]^2) \quad \text{s.t.}\;n&gt;30\)</p>
-
-\[\begin{aligned}
-  \mathbb{E}\left[\hat{\beta}_{1}\right]
-  &amp;= \beta_{1}\\
-  \mathbb{SE}\left[\hat{\beta}_{1}\right]^2
-  &amp;= \sigma^2\left[\displaystyle\frac{1}{\sum_{i=1}^{n}{(x_{i}-\overline{x})^2}}\right] \quad \text{s.t.}\;\varepsilon \sim N(0,\sigma^2)
-  \end{aligned}\]
+      <li><strong>점 추정량</strong> : \(\hat{\beta}_{1} \sim N(\mathbb{E}\left[\hat{\beta}_{1}\right], \mathbb{SE}\left[\hat{\beta}_{1}\right]^2) \quad \text{s.t.}\;n&gt;30\)
+        <ul>
+          <li><strong>최소자승추정량의 평균</strong> : \(\mathbb{E}\left[\hat{\beta}_{1}\right] = \beta_{1}\)</li>
+          <li><strong>최소자승추정량의 분산</strong> : \(\mathbb{SE}\left[\hat{\beta}_{1}\right]^2 = \sigma^2\left[\displaystyle\frac{1}{\sum_{i=1}^{n}{(x_{i}-\overline{x})^2}}\right] \quad \text{s.t.}\;\varepsilon \sim N(0,\sigma^2)\)</li>
+        </ul>
       </li>
     </ul>
   </li>

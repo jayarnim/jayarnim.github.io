@@ -978,17 +978,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -1096,7 +1085,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1187 words"
+  title="1185 words"
 >
   <em>6 min</em> read</span>
 
@@ -1269,6 +1258,26 @@ X_{i} \vert \theta &amp;\sim N(\theta, 5^2)\\
 </ul>
 
 <h2 id="jeffreys-priors"><span class="me-2">Jeffreys Priors</span><a href="#jeffreys-priors" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><strong>Jeffreys Priors</strong> : 모수 공간에 대해 불변성을 보장함으로써 변수 변환 후에도 객관성을 보존하는 사전분포</p>
+
+\[\pi_{J}(\theta) \propto \sqrt{\mathbf{I}(\theta)}\]
+
+    <ul>
+      <li>
+        <p>$\sqrt{\mathbf{I}(\theta)}$ : Fisher Information</p>
+
+\[\begin{aligned}
+  \mathbf{I}(\theta)
+  &amp;= - \mathbb{E}\bigg[\frac{\text{d}^{2}}{\text{d}\theta^{2}}\log{\mathcal{L}(\theta)}\bigg]
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+</ul>
 
 <h3 id="transformation-variant"><span class="me-2">Transformation Variant</span><a href="#transformation-variant" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -1311,27 +1320,6 @@ X_{i} \vert \theta &amp;\sim N(\theta, 5^2)\\
         <p>변환 후 : $\psi \sim \text{Logistic}(0,1)$</p>
 
         <p><a href="/_post_refer_img/BayesianModeling/03-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/03-04.png" alt="04" width="100%" loading="lazy"></a></p>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="jeffreys-priors-1"><span class="me-2">Jeffreys Priors</span><a href="#jeffreys-priors-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li>
-    <p><strong>정의</strong> : 모수 공간에 대해 불변성을 보장함으로써 변수 변환 후에도 객관성을 보존하는 사전분포</p>
-
-\[\pi_{J}(\theta) \propto \sqrt{\mathbf{I}(\theta)}\]
-
-    <ul>
-      <li>
-        <p>$\sqrt{\mathbf{I}(\theta)}$ : Fisher Information</p>
-
-\[\begin{aligned}
-  \mathbf{I}(\theta)
-  &amp;= - \mathbb{E}\bigg[\frac{\text{d}^{2}}{\text{d}\theta^{2}}\log{\mathcal{L}(\theta)}\bigg]
-  \end{aligned}\]
       </li>
     </ul>
   </li>
