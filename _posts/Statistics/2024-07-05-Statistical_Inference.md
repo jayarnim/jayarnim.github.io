@@ -1,9 +1,9 @@
 ---
 order: 5
 title: Statistical Inference
-date: 2024-06-21
+date: 2024-07-05
 categories: [Statistical Techs, Statistics]
-tags: [Statistics, z Test, t Test]
+tags: [Statistics, Estimation, z Test, t Test]
 math: true
 description: >-
   Based on the following lectures <br>

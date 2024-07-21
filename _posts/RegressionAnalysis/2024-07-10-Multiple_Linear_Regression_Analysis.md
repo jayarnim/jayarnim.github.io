@@ -1,9 +1,9 @@
 ---
 order: 3
 title: Multiple Linear Regression Analysis
-date: 2024-06-26
+date: 2024-07-10
 categories: [Statistical Techs, Regression Analysis]
-tags: [Statistics, Regression]
+tags: [Statistics, Regression, f Test]
 math: true
 description: >-
   Based on the lecture "Statistical Models and Application (2024-1)" by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ.

@@ -1,7 +1,7 @@
 ---
 order: 3
 title: Prob. Dist. Functions
-date: 2024-06-19
+date: 2024-07-03
 categories: [Statistical Techs, Statistics]
 tags: [Statistics]
 math: true

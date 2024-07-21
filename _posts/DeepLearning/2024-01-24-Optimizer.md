@@ -1,7 +1,7 @@
 ---
 order: 3
 title: Optimizer
-date: 2024-01-21
+date: 2024-01-24
 categories: [Machine Learning Techs, Deep Learning]
 tags: [Deep Learning, Optimization]
 math: true

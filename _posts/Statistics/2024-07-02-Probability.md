@@ -1,7 +1,7 @@
 ---
 order: 2
 title: Probability
-date: 2024-06-18
+date: 2024-07-02
 categories: [Statistical Techs, Statistics]
 tags: [Statistics]
 math: true

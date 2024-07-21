@@ -1,7 +1,7 @@
 ---
 order: 4
 title: Bayes Estimator
-date: 2024-07-04
+date: 2024-07-18
 categories: [Statistical Techs, Bayesian Modeling]
 tags: [Statistics, Bayesian, Optimization, Loss Function]
 math: true

@@ -1,7 +1,7 @@
 ---
 order: 1
 title: What? Statistics
-date: 2024-06-17
+date: 2024-07-01
 categories: [Statistical Techs, Statistics]
 tags: [Statistics]
 math: true

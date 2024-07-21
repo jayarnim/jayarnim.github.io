@@ -1,7 +1,7 @@
 ---
 order: 7
 title: Summarize Statistical Method
-date: 2024-06-23
+date: 2024-07-07
 categories: [Statistical Techs, Statistics]
 tags: [Statistics, Normality Test, Shapiro-Wilk Test, Homogeneity of Variance Test, Levene’s Test, ANOVA]
 math: true

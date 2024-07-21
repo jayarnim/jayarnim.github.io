@@ -1,9 +1,9 @@
 ---
 order: 2
 title: Estimate Regression Coefficient
-date: 2024-06-25
+date: 2024-07-09
 categories: [Statistical Techs, Regression Analysis]
-tags: [Statistics, Regression, OLS]
+tags: [Statistics, Regression, Estimation, OLS]
 math: true
 description: >-
   Based on the lecture "Statistical Models and Application (2024-1)" by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ.

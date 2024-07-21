@@ -1,9 +1,9 @@
 ---
 order: 1
 title: Simple Linear Regression Analysis
-date: 2024-06-24
+date: 2024-07-08
 categories: [Statistical Techs, Regression Analysis]
-tags: [Statistics, Regression, R2]
+tags: [Statistics, Regression, t Test, Goodness of Fit Test, R2]
 math: true
 description: >-
   Based on the lecture "Statistical Models and Application (2024-1)" by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ.

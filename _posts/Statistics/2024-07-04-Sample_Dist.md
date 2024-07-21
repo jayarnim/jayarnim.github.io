@@ -1,7 +1,7 @@
 ---
 order: 4
 title: Sample Dist.
-date: 2024-06-20
+date: 2024-07-04
 categories: [Statistical Techs, Statistics]
 tags: [Statistics]
 math: true

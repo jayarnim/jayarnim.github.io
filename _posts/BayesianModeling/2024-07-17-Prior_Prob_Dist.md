@@ -1,7 +1,7 @@
 ---
 order: 3
 title: Prior Prob. Dist.
-date: 2024-07-03
+date: 2024-07-17
 categories: [Statistical Techs, Bayesian Modeling]
 tags: [Statistics, Bayesian]
 math: true

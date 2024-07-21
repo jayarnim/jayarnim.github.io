@@ -1,7 +1,7 @@
 ---
 order: 2
 title: Activation Functions
-date: 2024-01-20
+date: 2024-01-23
 categories: [Machine Learning Techs, Deep Learning]
 tags: [Deep Learning]
 math: true
