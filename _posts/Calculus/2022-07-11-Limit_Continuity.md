@@ -1,7 +1,7 @@
 ---
 order: 1
 title: Limit and Continuity
-date: 2023-07-10
+date: 2022-07-11
 categories: [Mathematical Techs, Calculus]
 tags: [Mathematics]
 math: true

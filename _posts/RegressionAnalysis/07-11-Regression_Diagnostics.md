@@ -12,6 +12,7 @@ image:
 ---
 
 ## 선형회귀모형의 고전적 가정
+-----
 
 - `A.1` **반응변수와 설명변수의 선형성 가정**
 
@@ -23,15 +24,23 @@ image:
 
 - `A.3` **오차항의 기대값에 관한 가정**
 
-    >$E(\varepsilon_i)=0$ For Every $i=1,\cdots,n$
+    >$\mahtbb{E}\left[\varepsilon_i\right]=0$ For Every $i=1,\cdots,n$
 
 - `A.4` **오차항의 등분산성(Homoskedasticity) 가정**
 
-    >$Var(\varepsilon_i)=\sigma^2$ For Every $i=1,\cdots,n$
+    >$\mathbb{Var}\left[\varepsilon_i\right]=\sigma^2$ For Every $i=1,\cdots,n$
 
 - `A.5` **관측치 간 오차항의 자기상관 없음(No Autocorrelation) 가정**
 
-    >$Cov(\varepsilon_i, \varepsilon_j)=0$ If $i \ne j$
+    >$\mathbb{Cov}\left[\varepsilon_i, \varepsilon_j\right]=0$ If $i \ne j$
+
+### 오차항의 조건부 독립성
+
+- 기대값
+
+    $$\begin{aligned}
+    \mathbb{E}\left[Y^{(i)} \vert X^{(i)}_{1}, X^{(i)}_{2}, \cdots, X^{(i)}_{k}\right]
+    \end{aligned}$$
 
 - `A.6` **오차의 정규성 가정(Normality Assumption)**
     - 최소자승추정량에 대하여 가설검정하기 위해서는 고전적 가정에 더하여 오차항의 분포에 관한 가정이 필요함

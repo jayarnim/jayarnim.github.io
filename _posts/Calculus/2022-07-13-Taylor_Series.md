@@ -1,7 +1,7 @@
 ---
 order: 3
 title: Taylor Series
-date: 2023-07-12
+date: 2022-07-13
 categories: [Mathematical Techs, Calculus]
 tags: [Mathematics]
 math: true

@@ -1,7 +1,7 @@
 ---
 order: 3
 title: Linear Equation
-date: 2023-07-05
+date: 2022-07-06
 categories: [Mathematical Techs, Linear Algebra]
 tags: [Mathematics]
 math: true

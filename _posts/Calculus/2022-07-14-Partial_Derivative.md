@@ -1,7 +1,7 @@
 ---
 order: 4
 title: Partial Derivative
-date: 2023-07-13
+date: 2022-07-14
 categories: [Mathematical Techs, Calculus]
 tags: [Mathematics]
 math: true

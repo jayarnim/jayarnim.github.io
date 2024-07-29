@@ -1,7 +1,7 @@
 ---
 order: 4
 title: Commit Control
-date: 2023-07-20
+date: 2023-03-09
 categories: [AI Dev. Env., GIT]
 tags: [Dev. Env., DVCS, GIT]
 math: true
