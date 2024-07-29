@@ -651,7 +651,7 @@
     "url": "/posts/SubTree/",
     "categories": "AI Dev. Env., GIT",
     "tags": "Dev. Env., DVCS, GIT",
-    "date": "2023-07-23 00:00:00 +0900",
+    "date": "2023-03-12 00:00:00 +0900",
     
 
 
@@ -668,7 +668,7 @@
     "url": "/posts/Interlock/",
     "categories": "AI Dev. Env., GIT",
     "tags": "Dev. Env., DVCS, GIT",
-    "date": "2023-07-22 00:00:00 +0900",
+    "date": "2023-03-11 00:00:00 +0900",
     
 
 
@@ -685,7 +685,7 @@
     "url": "/posts/Branch/",
     "categories": "AI Dev. Env., GIT",
     "tags": "Dev. Env., DVCS, GIT",
-    "date": "2023-07-21 00:00:00 +0900",
+    "date": "2023-03-10 00:00:00 +0900",
     
 
 
@@ -702,7 +702,7 @@
     "url": "/posts/Commit_Control/",
     "categories": "AI Dev. Env., GIT",
     "tags": "Dev. Env., DVCS, GIT",
-    "date": "2023-07-20 00:00:00 +0900",
+    "date": "2023-03-09 00:00:00 +0900",
     
 
 
@@ -719,7 +719,7 @@
     "url": "/posts/File_Control/",
     "categories": "AI Dev. Env., GIT",
     "tags": "Dev. Env., DVCS, GIT",
-    "date": "2023-07-19 00:00:00 +0900",
+    "date": "2023-03-08 00:00:00 +0900",
     
 
 
@@ -736,7 +736,7 @@
     "url": "/posts/Commit/",
     "categories": "AI Dev. Env., GIT",
     "tags": "Dev. Env., DVCS, GIT",
-    "date": "2023-07-18 00:00:00 +0900",
+    "date": "2023-03-07 00:00:00 +0900",
     
 
 
@@ -753,7 +753,7 @@
     "url": "/posts/Git/",
     "categories": "AI Dev. Env., GIT",
     "tags": "Dev. Env., DVCS, GIT",
-    "date": "2023-07-17 00:00:00 +0900",
+    "date": "2023-03-06 00:00:00 +0900",
     
 
 
@@ -770,7 +770,7 @@
     "url": "/posts/Integration/",
     "categories": "Mathematical Techs, Calculus",
     "tags": "Mathematics",
-    "date": "2023-07-14 00:00:00 +0900",
+    "date": "2022-07-15 00:00:00 +0900",
     
 
 
@@ -787,7 +787,7 @@
     "url": "/posts/Partial_Derivative/",
     "categories": "Mathematical Techs, Calculus",
     "tags": "Mathematics",
-    "date": "2023-07-13 00:00:00 +0900",
+    "date": "2022-07-14 00:00:00 +0900",
     
 
 
@@ -804,7 +804,7 @@
     "url": "/posts/Taylor_Series/",
     "categories": "Mathematical Techs, Calculus",
     "tags": "Mathematics",
-    "date": "2023-07-12 00:00:00 +0900",
+    "date": "2022-07-13 00:00:00 +0900",
     
 
 
@@ -821,7 +821,7 @@
     "url": "/posts/Differentiation/",
     "categories": "Mathematical Techs, Calculus",
     "tags": "Mathematics",
-    "date": "2023-07-11 00:00:00 +0900",
+    "date": "2022-07-12 00:00:00 +0900",
     
 
 
@@ -838,7 +838,7 @@
     "url": "/posts/Limit_Continuity/",
     "categories": "Mathematical Techs, Calculus",
     "tags": "Mathematics",
-    "date": "2023-07-10 00:00:00 +0900",
+    "date": "2022-07-11 00:00:00 +0900",
     
 
 
@@ -855,7 +855,7 @@
     "url": "/posts/Matrix_Decomposition/",
     "categories": "Mathematical Techs, Linear Algebra",
     "tags": "Mathematics",
-    "date": "2023-07-08 00:00:00 +0900",
+    "date": "2022-07-09 00:00:00 +0900",
     
 
 
@@ -872,7 +872,7 @@
     "url": "/posts/Eigen/",
     "categories": "Mathematical Techs, Linear Algebra",
     "tags": "Mathematics",
-    "date": "2023-07-07 00:00:00 +0900",
+    "date": "2022-07-08 00:00:00 +0900",
     
 
 
@@ -889,7 +889,7 @@
     "url": "/posts/Linear_Transformation/",
     "categories": "Mathematical Techs, Linear Algebra",
     "tags": "Mathematics",
-    "date": "2023-07-06 00:00:00 +0900",
+    "date": "2022-07-07 00:00:00 +0900",
     
 
 
@@ -906,7 +906,7 @@
     "url": "/posts/Linear_Equation/",
     "categories": "Mathematical Techs, Linear Algebra",
     "tags": "Mathematics",
-    "date": "2023-07-05 00:00:00 +0900",
+    "date": "2022-07-06 00:00:00 +0900",
     
 
 
@@ -923,7 +923,7 @@
     "url": "/posts/Matrix/",
     "categories": "Mathematical Techs, Linear Algebra",
     "tags": "Mathematics",
-    "date": "2023-07-04 00:00:00 +0900",
+    "date": "2022-07-05 00:00:00 +0900",
     
 
 
@@ -940,7 +940,7 @@
     "url": "/posts/Vector/",
     "categories": "Mathematical Techs, Linear Algebra",
     "tags": "Mathematics",
-    "date": "2023-07-03 00:00:00 +0900",
+    "date": "2022-07-04 00:00:00 +0900",
     
 
 
@@ -950,6 +950,176 @@
     
     "snippet": "What? Vector  벡터(Vector) : 벡터 공간의 원소로서 크기와 원점으로부터 뱡향을 가지는 물리량          원소(Element) : 벡터를 구성하는 요소      차원(Dimension) : 원소의 갯수              부분벡터(Sub-Vector) : 임의의 벡터 $\\overrightarrow{a}$ 에 대하여 그 부분 공...",
     "content": "What? Vector  벡터(Vector) : 벡터 공간의 원소로서 크기와 원점으로부터 뱡향을 가지는 물리량          원소(Element) : 벡터를 구성하는 요소      차원(Dimension) : 원소의 갯수              부분벡터(Sub-Vector) : 임의의 벡터 $\\overrightarrow{a}$ 에 대하여 그 부분 공간으로 구성된 벡터\\[\\overrightarrow{a_{r:s}}=\\begin{pmatrix}a_r\\\\a_{r+1}\\\\a_{r+2}\\\\\\vdots\\\\a_{s} \\end{pmatrix}\\]              특수한 벡터                  영벡터(Zero Vector) : 벡터 공간에서의 덧셈에 대한 항등원이 되는 벡터\\[\\overrightarrow{0}=\\begin{pmatrix}0\\\\0\\\\\\vdots\\\\0 \\end{pmatrix}\\]                    단위벡터(Unit Vector) : 길이가 1인 벡터\\[(\\overrightarrow{e_{i}})_{j}=\\begin{cases}1,\\;if\\;j=i\\\\0,\\;if\\;j \\ne i\\end{cases}\\]\\[\\overrightarrow{e_{1}}=\\begin{pmatrix}1\\\\0\\\\0\\\\\\vdots\\\\0 \\end{pmatrix},   \\overrightarrow{e_{2}}=\\begin{pmatrix}0\\\\1\\\\0\\\\\\vdots\\\\0 \\end{pmatrix},   \\overrightarrow{e_{3}}=\\begin{pmatrix}0\\\\0\\\\1\\\\\\vdots\\\\0 \\end{pmatrix}\\]              벡터의 기하학적 해석          직각좌표계에 표현된 벡터 공간의 원소                  직각좌표계(Catesian Coordinate System) : 좌표축과 평행한 단위벡터끼리 항상 서로 수직한 모든 좌표계                    좌표평면상 하나의 점      좌표평면상 원점의 위치 이동              좌표평면상 단위벡터의 선형 결합\\[\\begin{pmatrix}3\\\\2 \\end{pmatrix} = 3 \\times \\overrightarrow{e_{1}} + 2 \\times \\overrightarrow{e_{2}}\\]            Vector Operation  스칼라-벡터 곱셈                  스칼라와 벡터의 곱셈은 벡터의 모든 원소에 대한 스칼라 곱으로 정의함\\[\\alpha \\times \\overrightarrow{a} = \\begin{pmatrix}\\alpha \\times a_{1}\\\\\\alpha \\times a_{2}\\\\\\vdots\\\\\\alpha \\times a_{n}\\end{pmatrix}\\]                    기하학적으로 봤을 때 이는 벡터를 스칼라 비율로 확대 혹은 축소하는 작업으로 해석할 수 있음                            벡터에 음수를 곱하면 벡터의 방향이 원점에 대하여 반대가 됨                      덧셈과 뺄셈                  차원이 $n$ 으로 동일한 벡터 $\\overrightarrow{a}, \\overrightarrow{b}$ 의 덧셈 혹은 뺄셈을 대응 원소의 합 혹은 차로 정의함\\[\\begin{pmatrix}a_{1}\\\\a_{2}\\\\\\vdots\\\\a_{n}\\end{pmatrix} + \\begin{pmatrix}b_{1}\\\\b_{2}\\\\\\vdots\\\\b_{n}\\end{pmatrix} = \\begin{pmatrix}a_{1}+b_{1}\\\\a_{2}+b_{2}\\\\\\vdots\\\\a_{n}+b_{n} \\end{pmatrix}\\]                    기하학적으로 봤을 때 이는 벡터 $\\overrightarrow{a}$ 를 방향 $\\overrightarrow{b}$ 으로 폭 $\\Vert \\overrightarrow{b} \\Vert$ 만큼 평행이동하는 작업으로 해석할 수 있음                              덧셈                                            뺄셈                                          Linear Combination      선형 결합(Linear Combination)\\[\\alpha_{1}\\overrightarrow{a_{1}} + \\alpha_{2}\\overrightarrow{a_{2}} + \\cdots + \\alpha_{p}\\overrightarrow{a_{p}}\\]          차원이 $n$ 으로 동일한 임의의 벡터와 스칼라에 대하여, 각 항에 스칼라를 곱하거나 상호 더함으로써 일련의 항으로 구성하는 작업        선형 종속(Linearly Dependent) : 어떤 벡터가 다른 벡터들의 선형 결합으로 표현 가능한 경우                  좌표평면상에서 어떤 벡터가 다른 벡터들을 선형 결합한 결과와 겹치는 경우                            $n$ 차원 벡터 $\\overrightarrow{a_{1}}, \\overrightarrow{a_{2}}, \\cdots, \\overrightarrow{a_{p}}$ 와 스칼라 $\\alpha_{1}, \\alpha_{2}, \\cdots, \\alpha_{p}$ 에 대하여 다음을 만족하는 경우\\[\\alpha_{1}\\overrightarrow{a_{1}} + \\alpha_{2}\\overrightarrow{a_{2}} + \\cdots + \\alpha_{p}\\overrightarrow{a_{p}} = 0, \\alpha^{\\forall} \\ne 0\\]              선형 독립(Linearly Independent) : 어떤 벡터가 다른 벡터들의 선형 결합으로 표현될 수 없는 경우                  좌표평면상에서 어떤 벡터가 다른 벡터들을 선형 결합한 결과와 겹치지 않는 경우                            $n$ 차원 벡터 $\\overrightarrow{a_{1}}, \\overrightarrow{a_{2}}, \\cdots, \\overrightarrow{a_{p}}$ 와 스칼라 $\\alpha_{1}, \\alpha_{2}, \\cdots , \\alpha_{p}$ 에 대하여 다음을 만족하는 경우\\[\\alpha_{1}\\overrightarrow{a_{1}} + \\alpha_{2}\\overrightarrow{a_{2}} + \\cdots + \\alpha_{p}\\overrightarrow{a_{p}} = 0 \\Rightarrow \\alpha^{\\forall} = 0\\]              기저(Basis)          $n$ 차원에 대하여 선형 독립인 벡터들의 집합      $n$ 차원 기저벡터의 최대 갯수는 $n$ 개임            $span$\\[\\overrightarrow{x} = \\alpha_{1}\\overrightarrow{a_{1}} + \\alpha_{2}\\overrightarrow{a_{2}} + \\cdots + \\alpha_{n}\\overrightarrow{a_{n}}\\]          주어진 벡터들의 선형 결합으로 나타낼 수 있는 벡터의 집합, 혹은 그러한 작업      $n$ 차원의 모든 기저벡터들을 $span$ 하면 해당 공간을 모두 나타낼 수 있음      Inner Product and Norm      내적(Inner Product)\\[\\begin{aligned}  \\overrightarrow{a}\\cdot\\overrightarrow{b}&amp;=&lt;\\overrightarrow{a},\\overrightarrow{b}&gt;\\\\  &amp;=\\overrightarrow{a^{T}}\\overrightarrow{b}\\\\  &amp;=\\sum_{i}^{n}a_{i}b_{i}  \\end{aligned}\\]          차원이 $n$ 으로 동일한 두 벡터에 대하여 이를 대표하는 하나의 스칼라로 수렴하는 작업            유클리디안 노름(L-2 Norm)\\[\\Vert \\overrightarrow{a} \\Vert=\\sqrt{\\overrightarrow{a}^T\\cdot\\overrightarrow{a}}\\]                  정의 : 벡터의 규모(Magnitude) 혹은 길이(Length)                    성질                  $\\Vert \\overrightarrow{a} \\Vert \\ge0$          $\\Vert \\overrightarrow{a} \\Vert =0\\Rightarrow\\overrightarrow{a}=\\overrightarrow{0}$          $\\Vert \\alpha\\overrightarrow{a} \\Vert =\\vert \\alpha \\vert \\times \\Vert \\overrightarrow{a}\\Vert$          $\\Vert \\overrightarrow{a}+\\overrightarrow{b}\\Vert\\le\\Vert\\overrightarrow{a}\\Vert+\\Vert\\overrightarrow{b}\\Vert$                          코사인 유사도(Cosine Similarity) : 두 벡터의 사이각 $\\theta$ 의 코사인 값을 이용하여 측정한 벡터 간 유사도\\[cos\\theta=\\frac{\\overrightarrow{a}\\cdot\\overrightarrow{b}}{\\Vert\\overrightarrow{a}\\Vert\\times\\Vert\\overrightarrow{b}\\Vert}\\]          $\\theta$ : 임의의 벡터 $\\overrightarrow{a}, \\overrightarrow{b}$ 를 좌표평면상에 나타냈을 때, 두 벡터가 이루는 각도              $\\Vert\\overrightarrow{a}\\Vert \\cos{\\theta}$ : $\\overrightarrow{a}$ 를 $\\overrightarrow{b}$ 에 정사영(Projection)하여 얻은 벡터의 길이                    해석                  $-1\\le \\cos{\\theta} \\ge1$          $\\cos{\\theta} = -1$ : 음의 유사도를 가진다고 볼 수 있으며 기하학적으로 상반된 방향성을 가짐          $\\cos{\\theta} = 1$ : 양의 유사도를 가진다고 볼 수 있으며 기하학적으로 동일한 방향성을 가짐          $\\cos{\\theta} = 0$ : 유사하다고 볼 수 없으며 기하학적으로 직교함                          직교정규벡터(Orthonomal Vector) : 임의의 벡터에 대하여 해당 벡터와 직교하면서 그 노름이 1인 벡터          정규벡터(Normal Vector) : 노름이 1인 벡터      상호직교(Mutually Orthonal)                              수학적으로 봤을 때 내적값이 0인 관계\\[\\overrightarrow{a}\\perp\\overrightarrow{b}\\Leftrightarrow\\overrightarrow{a}\\cdot\\overrightarrow{b}=0\\]                                기하학적으로 봤을 때 사잇각이 90도인 관계\\[\\overrightarrow{a}\\perp\\overrightarrow{b}\\Leftrightarrow\\frac{\\overrightarrow{a}\\cdot\\overrightarrow{b}}{||\\overrightarrow{a}||\\times||\\overrightarrow{b}||}=cos90^\\circ\\]                              "
+  },
+  
+  {
+    "title": "Welfare Economics (3) Social Choice",
+    "url": "/posts/Welfare_Economics_3/",
+    "categories": "Economics, Microeconomics",
+    "tags": "Economics, Microeconomics, Welfare Economics, Social Choice",
+    "date": "2019-07-24 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "Welfare Economics (2) Pareto Efficiency",
+    "url": "/posts/Welfare_Economics_2/",
+    "categories": "Economics, Microeconomics",
+    "tags": "Economics, Microeconomics, Welfare Economics, Pareto Efficiency, Pareto, Efficiency",
+    "date": "2019-07-23 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "Welfare Economics (1) Theorems of Welfare Economics",
+    "url": "/posts/Welfare_Economics_1/",
+    "categories": "Economics, Microeconomics",
+    "tags": "Economics, Microeconomics, Welfare Economics",
+    "date": "2019-07-22 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "Perfect Competition Theory",
+    "url": "/posts/Perfect_Competition_Theory/",
+    "categories": "Economics, Microeconomics",
+    "tags": "Economics, Microeconomics, Equilibrium, Competition Theory, Perfect Competition Theory",
+    "date": "2019-07-21 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "Producer Theory (3) Joint Production",
+    "url": "/posts/Producer_Theory_3/",
+    "categories": "Economics, Microeconomics",
+    "tags": "Economics, Microeconomics, Optimization, Producer Theory",
+    "date": "2019-07-20 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "Producer Theory (2) Profit Maximization",
+    "url": "/posts/Producer_Theory_2/",
+    "categories": "Economics, Microeconomics",
+    "tags": "Economics, Microeconomics, Optimization, Producer Theory",
+    "date": "2019-07-19 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "Producer Theory (1) Output Maximization under Cost Constraint",
+    "url": "/posts/Producer_Theory_1/",
+    "categories": "Economics, Microeconomics",
+    "tags": "Economics, Microeconomics, Optimization, Producer Theory",
+    "date": "2019-07-18 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "Consumer Theory (2) Demand Response to Changes in Market Demend Determinants",
+    "url": "/posts/Consumer_Theory_2/",
+    "categories": "Economics, Microeconomics",
+    "tags": "Economics, Microeconomics, Optimization, Consumer Theory",
+    "date": "2019-07-17 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "Demand Response to Changes in Market Demend Determinants      상품 공간(Commodity Space) : 두 재화 $X,Y$ 로 구성되는 상품묶음을 표현하는 좌표평면        가격-수량 평면(Price-Quantity Plane) : 임의의 재화 $X$ 에 대하여 그 시장가격 $P_{X}$ 에 따른...",
+    "content": "Demand Response to Changes in Market Demend Determinants      상품 공간(Commodity Space) : 두 재화 $X,Y$ 로 구성되는 상품묶음을 표현하는 좌표평면        가격-수량 평면(Price-Quantity Plane) : 임의의 재화 $X$ 에 대하여 그 시장가격 $P_{X}$ 에 따른 수요량 $Q_{X}$ 을 표현하는 좌표평면        소득-수량 평면(Income-Quantity Plane) : 임의의 재화 $X$ 에 대하여 소득수준(혹은 예산제약) $M$ 에 따른 수요량 $Q_{X}$ 을 표현하는 좌표평면  Price Changes  가정 : 대체 관계에 있는 정상재 $X,Y$ 에 대하여, $Y$ 재 시장가격 $P_{Y}$ 와 소득수준 $M$ 이 일정한 상황에서 $X$ 재 시장가격 $P_{X}$ 는 지속적으로 감소하는 추세에 있다.            현상      상품 공간 상의 표현                  $\\displaystyle\\frac{P_{X}}{P_{Y}}$ 이 감소함      예산선의 기울기가 점차 완만해짐              $X$ 단위 실질소득수준 $\\displaystyle\\frac{M}{P_{X}}$ 이 증가함      예산선의 $X$ 절편이 점차 원점에서 멀어짐              $Q_{X}^{*}$ 가 증가함      무차별곡선과 예산선의 접점이 점차 오른쪽으로 이동함            가격소비곡선(Price Consumption Curve; PCC) : 상품 공간에서 시장가격의 변화에 따른 최적 선택의 변화 양상을 나타낸 곡선            개별수요곡선(Individual Demand Curve) : 가격-수량 평면에서 시장가격의 변화에 따른 최적 선택 하 수요량의 변화 양상을 나타낸 곡선                      개별수요곡선의 기울기 $\\left(\\displaystyle\\frac{\\Delta P_X}{\\Delta Q_X}\\right)$ 와 개별수요의 가격 탄력성 $\\varepsilon_{P}$ 의 관계\\[\\begin{aligned}  \\varepsilon_{P}  &amp;= -\\frac{\\Delta Q_X/Q_X}{\\Delta P_X/P_X}\\\\  &amp;= -\\frac{\\Delta Q_X}{\\Delta P_X} \\cdot \\frac{P_X}{Q_X}\\\\  &amp;= -\\left(\\frac{\\Delta P_{X}}{\\Delta Q_{X}}\\right)^{-1} \\cdot \\frac{P_X}{Q_X}  \\end{aligned}\\]            Income Changes  가정 : 정상재 $X,Y$ 에 대하여, 그 시장가격 $P_{X},P_{Y}$ 이 일정한 상황에서 소득수준 $M$ 이 지속적으로 상승하는 추세에 있다.            현상      상품 공간 상의 표현                  예산규모 $M$ 이 증가함      예산선이 원점에서 점차 멀어짐              $X$ 단위 실질소득수준 $\\displaystyle\\frac{M}{P_{X}}$ 이 증가함      예산선의 $X$ 절편이 점차 원점에서 멀어짐              $Y$ 단위 실질소득수준 $\\displaystyle\\frac{M}{P_{Y}}$ 이 증가함      예산선의 $Y$ 절편이 점차 원점에서 멀어짐              \\(Q_{X}^{*}, Q_{Y}^{*}\\) 가 증가함      무차별곡선과 예산선의 접점이 점차 우상향함            소득소비곡선(Income Consumption Curve; ICC) : 상품 공간에서 소득수준의 변화에 따른 최적 선택의 변화 양상을 나타낸 곡선            엥겔곡선(Engel Curve; EC) : 소득-수량 평면에서 소득수준의 변화에 따른 최적 선택 하 수요량의 변화 양상을 나타낸 곡선                      엥겔곡선의 기울기 $\\left(\\displaystyle\\frac{\\Delta M}{\\Delta Q_X}\\right)$ 와 개별수요의 소득 탄력성 $\\varepsilon_{M}$ 의 관계\\[\\begin{aligned}  \\varepsilon_{M}  &amp;= -\\frac{\\Delta Q_X/Q_X}{\\Delta M/M}\\\\  &amp;= -\\frac{\\Delta Q_X}{\\Delta M} \\cdot \\frac{M}{Q_X}\\\\  &amp;= -\\left(\\frac{\\Delta M}{\\Delta Q_{X}}\\right)^{-1} \\cdot \\frac{M}{Q_X}  \\end{aligned}\\]            Price Effect  가정 : 대체 관계에 있는 정상재 $X,Y$ 에 대하여, $Y$ 의 시장가격 $P_Y$ 가 일정한 상태에서 $X$ 의 시장가격 $P_{X}$ 이 지속적으로 감소하는 추세에 있다.            현상      상품 공간 상의 표현                  $X$ 단위 실질소득수준 $\\displaystyle\\frac{M}{P_X}$ 이 증가함      예산선의 $X$ 절편이 점차 원점에서 멀어짐              $\\displaystyle\\frac{P_X}{P_Y}$ 이 감소함      예산선의 기울기가 점차 완만해짐              \\(Q_{X}^{*}\\) 가 증가함      무차별곡선과 예산선의 접점이 점차 오른쪽으로 이동함            가격 효과(Price Effect) : 특정 재화의 가격 변동이 해당 재화의 수요량에 미치는 총 효과            $\\text{Price Effect} = \\text{Substitution Effect} + \\text{Income Effect}$                      $E_1 \\rightarrow E_3$ : 대체 효과                  대체 관계에 있는 재화 $X,Y$ 에 대하여, 동일한 효용수준을 유지하는 경우, $Y$ 에 대한 $X$ 의 상대가격 $-\\displaystyle\\frac{\\Delta Y}{\\Delta X}=\\displaystyle\\frac{P_X}{P_Y}$ 이 감소함에 따라 $Y$ 단위당 기회비용이 증가하므로 $Y$ 의 개별수요량 $Q_Y$ 일부가 $X$ 의 개별수요량 $Q_X$ 으로 대체될 수 있음                            $E_3 \\rightarrow E_2$ : 소득 효과                  정상재 $X$ 에 대하여, $X$ 단위 실질소득수준 $\\displaystyle\\frac{M}{P_X}$ 이 증가함에 따라 $X$ 의 개별수요량 $Q_X$ 이 증가할 수 있음                    Price Effect Analysis      대체 효과(Substitution Effect; $E_1 \\rightarrow E_3$) : 특정 재화의 가격이 감소했을 때, 동일한 효용 수준을 유지하면서 상대적으로 더 저렴해진 재화를 더 많이 소비하고, 더 비싸진 재화를 덜 소비하는 효과              동일한 효용 수준을 유지하므로 무차별곡선에 변화가 없음      상대가격 $\\displaystyle\\frac{P_X}{P_Y}$ 이 감소하므로 예산선의 기울기가 완만해짐      최적 선택 하 $Q_Y$ 일부가 $Q_X$ 으로 대체되므로 예산선과 무차별곡선의 접점이 우하향함            소득 효과(Income Effect; $E_3 \\rightarrow E_2$) : 특정 재화의 가격이 감소했을 때, 소비자가 동일한 예산 제약 하에서 취득 가능한 수량(구매력)이 증가하여 효용 수준이 변화하는 효과              상대가격 $\\displaystyle\\frac{P_X}{P_Y}$ 이 대체 효과 이후와 동일하므로 예산선은 대체 효과로 인해 완만해진 예산선과 평행함      실질 소득 수준이 증가하므로 예산선은 원점에서 멀어짐                  $X$ 에 대한 구매력 $\\displaystyle\\frac{M}{P_X}$ 이 증가하므로 $X$ 절편이 우측으로 이동함          $Y$ 에 대한 구매력 $\\displaystyle\\frac{M}{P_Y}$ 에는 변화가 없으므로 $Y$ 절편은 대체 효과 이전으로 회귀함                    VariationCompensating Variation      보상 변화(Compensating Variation; CV) : 특정 재화의 가격이 변화했을 때, 이전과 동일한 효용 수준을 누리기 위해 보상 받아야 하는 추가 소득              $P_X$ 가 감소함에 따라 상대가격 $\\displaystyle\\frac{P_X}{P_Y}$ 이 감소하고, $X$ 에 대한 구매력 $\\displaystyle\\frac{M}{P_X}$ 이 증가하였음. 가격체계를 임의로 조정할 수 없는 상태에서 이전과 동일한 효용 수준으로 회귀하기 위해서는, 가격 변화 이전에 누렸던 효용 수준 하에서 최적 선택이 이루어지도록 예산 규모를 조정해야 함. 즉, 예산선의 기울기가 완만해진 상태에서 기울기를 임의로 조정할 수 없는 경우, 가격 변화 이전의 무차별곡선과 접하는 수준까지 예산선을 평행이동해야 함. 예산선 평행이동 폭이 보상 변화가 됨.            보상수요곡선(Compensated Demand Curve) : 가격 효과를 반영한 개별수요곡선에서 소득 효과를 제외한 대체 효과, 혹은 보상 변화만을 반영한 개별수요곡선      Equivalent Variation      대등 변화(Equivalent Variation; EV) : 특정 재화의 가격이 변화했다고 가정했을 때 누릴 수 있는 효용 수준과 대등한 효용 수준을 누리기 위해 필요한 추가 소득              $P_X$ 가 감소한다고 가정한다면, 상대가격 $\\displaystyle\\frac{P_X}{P_Y}$ 이 감소하고, $X$ 에 대한 구매력 $\\displaystyle\\frac{M}{P_X}$ 이 증가할 것임. 이에 따라 누릴 수 있는 효용 수준이 상승할 것임. 실제로는 가격체계에 변함이 없는 상태에서 가정과 대등한 효용 수준을 누리기 위해서는, 가격 변화 이후 누릴 수 있는 효용 수준 하에서 최적 선택이 이루어지도록 예산 규모를 조정해야 함. 즉, 예산선의 기울기에 변함이 없는 경우, 가격 변화 이후의 무차별곡선과 접하는 수준까지 예산선을 평행이동해야 함. 예산선 평행이동 폭이 대등 변화가 됨.      "
+  },
+  
+  {
+    "title": "Consumer Theory (1) Utility Maximization under Budget Constraint",
+    "url": "/posts/Consumer_Theory_1/",
+    "categories": "Economics, Microeconomics",
+    "tags": "Economics, Microeconomics, Optimization, Consumer Theory",
+    "date": "2019-07-16 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "UtilityPreference System  선호체계(Preference System) : 상품묶음 간 선호관계를 평가하는 주관적 척도                  상품묶음(Commodity Bundle) : 개별소비자가 선택 가능한 여러 상품에 대하여 각 품목의 수량 조합\\[(X,Y)=(x,y)\\]                    선호관계(Pr...",
+    "content": "UtilityPreference System  선호체계(Preference System) : 상품묶음 간 선호관계를 평가하는 주관적 척도                  상품묶음(Commodity Bundle) : 개별소비자가 선택 가능한 여러 상품에 대하여 각 품목의 수량 조합\\[(X,Y)=(x,y)\\]                    선호관계(Preference Relation) : 임의의 상품묶음과 다른 상품묶음 간 선호의 우열관계\\[(x,y) \\succ (x', y')\\]              선호체계의 공리                  완비성(Completeness); 동일한 품목의 수량을 나타내는 상품묶음 사이의 선호관계를 비교할 수 있다.\\[A \\succ B \\; \\text{or} \\; B \\succ A \\; \\text{or} \\; A \\sim B \\quad \\text{for}\\;(A, B)^{\\forall} \\in X\\]                    이행성(Transitivity); 동일한 품목의 수량을 나타내는 상품묶음 A, B, C에 대하여 A보다 B를 선호하고, B보다 C를 선호하면 A보다 C를 선호한다.\\[A \\succ B \\; \\text{and} \\; B \\succ C \\implies A \\succ C \\quad \\text{for}\\; (A, B, C)^{\\forall} \\in X\\]                    강단조성(Strong Monotonicity); 상품묶음이 나타내는 두 가지 상품 중에서 임의의 상품에 대하여 다른 상품의 수량이 일정하다면 해당 상품의 수량이 더 높은 상품묶음을 선호한다.\\[x_i \\ge y_i \\; \\text{for all} \\; i \\; \\text{and} \\; x_i &gt; y_i \\; \\text{for some} \\; i \\implies A \\succ B \\quad \\text{for} \\; (A, B)^{\\forall} \\in X\\]                    연속성(Continuity); 두 상품묶음에 대한 선호도의 차이는 두 상품묶음이 나타내는 수량의 차이에 비례한다.\\[A \\succ B \\; \\text{and} \\; C \\approx A \\implies C \\succ B \\quad \\text{for}\\;(A, B, C)^{\\forall} \\in X\\]                    볼록성(Convexity); 극단적인 수량의 조합을 나타내는 상품묶음보다는 두 가지 상품의 수량이 고루 섞여 있는 상품묶음을 선호한다.\\[\\begin{aligned} \\lambda A + (1 - \\lambda)B \\succ A \\quad \\text{for} \\quad &amp;\\lambda^{\\forall} \\in (0, 1)\\\\ &amp;(A, B)^{\\forall} \\in X \\end{aligned}\\]            Utility      효용함수(Utility Function) : 상품묶음과 선호도 값 사이의 상관관계를 나타내는 함수\\[\\begin{aligned}  U^{(1)}:&amp; \\quad U(A)=10, U(B)=20, U(C)=30\\\\  U^{(2)}:&amp; \\quad U(A)=40, U(B)=60, U(C)=80  \\end{aligned}\\]          $U^{(1)}$ 과 $U^{(2)}$ 는 상품에 대하여 선호도 값을 다르게 매겼으나, 선호관계를 동일하게 평가하였음. 따라서 두 효용함수는 실질적으로는 무차별함. 이처럼 효용함수는 선호도 값의 기수성이 아니라 서수성이 중요함.            무차별곡선(Indifference curve) : X재 수량을 X축으로, Y재 수량을 Y축으로 하는 좌표평면 위에 효용수준이 무차별한 상품묶음을 이은 곡선    \\[U(x,y)=u_{i}\\]          완비성(Completeness); 동일한 효용함수의 상이한 효용수준을 나타내는 두 개의 무차별곡선은 교차하지 않는다.      이행성(Transitivity); 무차별곡선은 원점에서 멀수록 더 높은 효용수준을 나타낸다.      강단조성(Strong Monotonicity); 무차별곡선은 우하향한다.      연속성(Continuity); 제1사분면 위에 존재하는 임의의 점에 대하여 그 점을 지나는 무차별곡선이 하나 존재한다.      볼록성(Convexity); 무차별곡선은 원점에 대하여 볼록한 모양을 가진다.      Subjective Rate of Substitution\\[\\Delta X \\cdot MU_{X} + \\Delta Y \\cdot MU_{Y} = 0\\]      한계효용(Marginal Utility; MU) : 임의의 상품을 한 단위 추가 소비함으로써 추가로 누릴 수 있는 효용수준\\[MU_{X}=\\frac{\\partial U}{\\partial X}\\]        한계대체율(Marginal Rate of Substitution; MRS) : 임의의 상품에 대하여, 동일한 효용수준에서 해당 상품을 한 단위 추가 소비하기 위해 포기해야 하는 관련재 단위로써 표현된 한계효용\\[\\begin{aligned}  MRS_{X,Y}  &amp;= -\\frac{\\Delta Y}{\\Delta X}\\\\  &amp;= \\frac{MU_{X}}{MU_{Y}}  \\end{aligned}\\]        한계대체율 체감의 법칙 : 임의의 상품에 대하여, 해당 상품의 보유량이 증가할수록 동일한 효용수준에서 해당 상품을 한 단위 추가 소비하기 위해 포기해야 하는 관련재 단위가 감소하는 현상\\[\\frac{\\partial}{\\partial X} MRS_{X,Y} \\prec 0\\]  Budget Constraint      예산선(Budget Line) : 주어진 예산($M$)과 가격 상황($P_{X}, P_{Y}$)에 맞게 취득할 수 있는 상품묶음들의 집합    \\[\\begin{aligned}  (x,y) \\quad \\text{s.t.}\\; x \\cdot P_{X} + y \\cdot P_{Y} \\le M  \\end{aligned}\\]        Objective Rate of Substitution\\[\\Delta X \\cdot P_{X} + \\Delta Y \\cdot P_{Y} = 0\\]                  상대가격(Relative Price) : 임의의 상품에 대하여, 동일한 예산수준에서 해당 상품을 한 단위 추가 취득하기 위해 포기해야 하는 관련재 단위로 표현된 시장가격\\[\\begin{aligned}  RP_{X,Y}  &amp;= - \\frac{\\Delta Y}{\\Delta X}\\\\  &amp;= \\frac{P_{X}}{P_{Y}}  \\end{aligned}\\]            Utility Maximization under Budget Constraint\\[\\begin{aligned}\\max{U(x,y)} \\quad \\text{s.t.} \\; x \\cdot P_{X} + y \\cdot P_{Y} \\le M\\end{aligned}\\]      무차별곡선의 접선의 기울기 : Y재에 대한 X재의 주관적 교환비율로서 한계대체율\\[-\\frac{\\Delta Y}{\\Delta X}=\\frac{MU_{X}}{MU_{Y}}\\]        예산선의 기울기 : Y재에 대한 X재의 객관적 교환비율로서 상대가격\\[-\\frac{\\Delta Y}{\\Delta X}=\\frac{P_{X}}{P_{Y}}\\]        예산선과 무차별곡선의 접점 : 예산제약 하 효용을 극대화하는 상품묶음\\[\\begin{aligned}  \\frac{MU_{X}}{MU_{Y}}=-\\frac{\\Delta Y}{\\Delta X}=\\frac{P_{X}}{P_{Y}}  \\end{aligned}\\]                  최적 선택 하에서는 $\\displaystyle\\frac{MU_{X}}{P_{X}}$ 과 $\\displaystyle\\frac{MU_{Y}}{P_{Y}}$ 이 일치함\\[\\frac{MU_{X}}{MU_{Y}}=\\frac{P_{X}}{P_{Y}} \\Leftrightarrow \\frac{MU_{X}}{P_{X}}=\\frac{MU_{Y}}{P_{Y}}\\]                  $\\displaystyle\\frac{MU_{X}}{P_{X}}$ : 화폐 단위당 취득 가능한 X재 단위에서 누릴 수 있는 한계효용          $\\displaystyle\\frac{MU_{Y}}{P_{Y}}$ : 화폐 단위당 취득 가능한 Y재 단위에서 누릴 수 있는 한계효용                    이미지 출처  https://enotesworld.com/price-budget-line-or-budget-constraint/"
+  },
+  
+  {
+    "title": "What? Microeconomics",
+    "url": "/posts/What_Micro/",
+    "categories": "Economics, Microeconomics",
+    "tags": "Economics, Microeconomics, Optimization, Equilibrium",
+    "date": "2019-07-15 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "What? Microeconomics  미시경제학(Microeconomics) : 한 사회 구성원들의 경제 활동 과정을 연구하는 학문          경제 활동 : 경제주체가 주어진 제약 하에서 욕망을 최대한 충족시키는 자원 조합을 취득하기 위한 활동        경제제도(Economy) : 경제주체가 주어진 제약 하에서 욕망을 최대한 충족시키는 자원...",
+    "content": "What? Microeconomics  미시경제학(Microeconomics) : 한 사회 구성원들의 경제 활동 과정을 연구하는 학문          경제 활동 : 경제주체가 주어진 제약 하에서 욕망을 최대한 충족시키는 자원 조합을 취득하기 위한 활동        경제제도(Economy) : 경제주체가 주어진 제약 하에서 욕망을 최대한 충족시키는 자원 조합을 취득할 수 있도록 마련한 절차          시장경제체제(Market Economy) : 한 사회의 자원 배분이 그 구성원들의 경제 활동으로써(혹은 시장 수요와 공급에 의해) 결정되는 제도      계획경제체제(Command Economy) : 한 사회의 자원 배분 및 그 구성원들의 경제 활동이 정부에 의해 결정되는 제도        시장경제체제의 운용 원리          모든 선택에는 대가가 있다.      선택의 대가는 그것을 얻기 위해 포기한 것이다.      합리적 판단은 한계적으로 이루어진다.      경제주체는 경제적 유인에 반응한다.      자유거래는 모든 경제주체를 이롭게 한다.      일반적으로 시장이 경제활동을 조직하는 좋은 수단이다.      경우에 따라 정부가 시장의 성과를 개선할 수 있다.      한 나라의 생활수준은 그 나라의 생산 능력에 달려 있다.      통화량이 지나치게 증가하면 물가는 상승한다.      단기적으로는 인플레이션과 실업 사이에 상충관계가 있다.      Equilibrium      보이지 않는 손(Invisible Hand)          시장 참여자들이 자신의 이익을 추구하는 과정에서 가격 메커니즘을 통해 사회 전체의 자원 배분이 효율적으로 이루어지는 현상, 혹은 이러한 현상을 가능케 하는 메커니즘              교환(Exchange) : 이상적인 자원 조합을 구성하기 위해 상대가격이 낮은 자원을 지불하여 상대가격이 높은 자원을 구입하는 행위      상대가격(Relative Price) : 다른 자원의 단위로 측정한 어떤 자원의 가치로서, 시장 참여자 상호간에 합의된 자원 간 상대적 교환 비율      가격(Price) : 화폐로써 수량화된 자원의 가치로서, 화폐 단위당 자원의 절대적 교환 비율            최적화(Optimization) : 시장 참여자들이 제약 하에서 목표를 최대화하거나 최소화하는 과정으로서, 경제 활동 혹은 경제 활동의 결과 실현된 상태    수요자의 최적 의사결정          쾌락의 최대화 : 동일한 가치를 지불함으로써 취득 가능한 자원 단위를 최대화함      고통의 최소화 : 동일한 자원 단위를 취득하기 위해 지불해야 하는 가치를 최소화함      최대지불의사(Willingness to Pay; WTP) : 어떤 시장 참여자가 특정 자원을 취득하기 위해 포기할 수 있는 최대 가치        공급자의 최적 의사결정          쾌락의 극대화 : 동일한 자원 단위를 지불함으로써 취득 가능한 가치를 최대화함      고통의 최소화 : 동일한 가치를 취득하기 위해 교환해야 하는 자원 단위를 최소화함      유보가격(Reservation Price) : 어떤 시장 참여자가 특정 자원을 포기하는 대신 취득하고자 하는 최소 가치            균형(Equilibrium) : 자원의 교환 가치를 낮추려는 힘과 높이려는 힘이 맞아떨어져서 외부 교란 요인이 없는 한 유지되는 상태              존재성 : 균형이 존재하는 성질      유용성 : 균형이 적을수록 유용한 성질      안정성 : 다수의 균형이 존재하는 경우 안정적인 균형이 선호되는 성질      Market DemandDeterminants      시장수요결정변수(Market Demand Determinants) : 임의의 자원을 교환하는 시장에서 해당 자원의 시장수요($Y$)를 결정하는 요인($X$)\\[f_{D}:P;M,P_{R},N \\rightarrow Q_{D}\\]        가격(Price; $P$) : 수요자가 자원을 취득하기 위해 지불해야 할 가치                  수요의 법칙(Law of Demand; LOD) : 가격과 수요량 간 음의 상관관계\\[\\frac{\\Delta Q_{D}}{\\Delta P} &lt; 0\\]                  소득수준(Income; $M$) : 수요자가 자원을 취득하기 위해 지불 가능한 예산 규모        관련재의 가격(Prices of Substitutes and Complements; $P_{R}$)        수요자 수(Population; $N$)  Elasticity  수요의 탄력성(Elasticity of Demand) : 시장수요결정변수의 변화에 따른 시장수요의 변동성          $\\varepsilon &gt; 1$ : 시장수요결정변수에 대하여 탄력적      $\\varepsilon = 1$ : 시장수요결정변수에 대하여 단위탄력적      $\\varepsilon &lt; 1$ : 시장수요결정변수에 대하여 비탄력적            수요량의 가격 탄력성(Price Elasticity of Demand; PED) : 가격의 단위 변화에 따른 시장수요량의 변동성\\[\\varepsilon_{P}=-\\frac{\\Delta Q_{D}/Q_D}{\\Delta P/P} \\quad (\\because \\text{LOD})\\]        수요의 소득 탄력성(Income Elasticity of Demand; IED) : 소득수준의 단위 변화에 따른 시장수요의 변동성\\[\\varepsilon_{M}=\\frac{\\Delta Q_{D}/Q_D}{\\Delta M/M}\\]                  정상재(Normal Goods) : 소득수준의 변동성과 시장수요의 변동성이 비례하는 자원\\[\\varepsilon_{M} &gt; 0\\]                              사치재(Luxury Goods) : 소득수준의 단위 변화에 따른 수요의 변동성이 탄력적인 자원\\[\\varepsilon_{M} &gt; 1\\]                                필수재(Necessities) : 소득수준의 단위 변화에 따른 수요의 변동성이 비탄력적인 자원\\[0 &lt; \\varepsilon_{M} &lt; 1\\]                                      열등재(Inferior Goods) : 소득수준의 변동성과 시장수요의 변동성이 반비례하는 자원\\[\\varepsilon_{M} &lt; 0\\]                  수요의 교차 탄력성(Cross-Price Elasticity of Demand; XED) : 관련재 가격의 단위 변화에 따른 시장수요의 변동성\\[\\varepsilon_{C}=\\frac{\\Delta Q_{D}/Q_D}{\\Delta P_{R}/P_R}\\]                  대체재(Substitutes) : 어떤 자원의 가격이 상승할 때 다른 자원의 시장수요가 증가하는 경우\\[\\varepsilon_{C} &gt; 0\\]                    보완재(Complements) : 어떤 자원의 가격이 상승할 때 다른 자원의 시장수요가 감소하는 경우\\[\\varepsilon_{C} &lt; 0\\]                    독립재(Unrelated Goods) : 어떤 자원의 가격 변동성이 다른 자원의 시장수요 변동성에 영향을 미치지 않는 경우\\[\\varepsilon_{C} = 0\\]            Market SupplyDeterminants      시장공급결정변수(Market Supply Determinants) : 임의의 자원을 교환하는 시장에서 해당 자원의 시장공급($Y$)을 결정하는 요인($X$)\\[f_{S}:P;w,v,H,C \\rightarrow Q_{D}\\]        가격(Price; $P$) : 공급자가 자원 단위를 공급함으로써 취득하는 가치                  공급의 법칙(Law of Supply; LOS) : 가격과 공급량 간 양의 상관관계\\[\\frac{\\Delta Q_{S}}{\\Delta P} &gt; 0\\]              자원 생산 시 투입되는 생산요소의 단위당 가격          임금(Wage; $w$) : 노동의 단위당 가격      임대료(Rent; $v$) : 자본의 단위당 가격            기술수준(Hechnics; $H$)    공급자 수(Population; $C$)Elasticity  공급의 탄력성(Elasticity of Supply) : 시장공급결정변수의 변화에 따른 시장공급의 변동성          $\\epsilon &gt; 1$ : 시장공급결정변수에 대하여 탄력적      $\\epsilon = 1$ : 시장공급결정변수에 대하여 단위탄력적      $\\epsilon &lt; 1$ : 시장공급결정변수에 대하여 비탄력적            공급량의 가격 탄력성(Price Elasticity of Supply) : 가격의 단위 변화에 따른 시장공급량의 변동성\\[\\epsilon_{P}=\\frac{\\Delta Q_{S}/Q_S}{\\Delta P/P} \\quad (\\because \\text{LOS})\\]  이미지 출처  https://policonomics.com/supply-and-demand/  https://thismatter.com/economics/supply.htm"
   }
   
 ]
