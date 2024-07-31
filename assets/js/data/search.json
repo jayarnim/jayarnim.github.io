@@ -953,6 +953,159 @@
   },
   
   {
+    "title": "Economic Growth Theory (4) Government Expenditure",
+    "url": "/posts/Economic_Growth_Theory_4/",
+    "categories": "Economics, Macroeconomics",
+    "tags": "Economics, Macroeconomics, Economic Growth Theory, Government Expenditure",
+    "date": "2019-08-08 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "Economic Growth Theory (3) Invest",
+    "url": "/posts/Economic_Growth_Theory_3/",
+    "categories": "Economics, Macroeconomics",
+    "tags": "Economics, Macroeconomics, Economic Growth Theory, Invest",
+    "date": "2019-08-07 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "Economic Growth Theory (2) Consumption",
+    "url": "/posts/Economic_Growth_Theory_2/",
+    "categories": "Economics, Macroeconomics",
+    "tags": "Economics, Macroeconomics, Economic Growth Theory, Consumption",
+    "date": "2019-08-06 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "Economic Growth Theory (1) Economic Growth Model",
+    "url": "/posts/Economic_Growth_Theory_1/",
+    "categories": "Economics, Macroeconomics",
+    "tags": "Economics, Macroeconomics, Economic Growth Theory, Solow Model, AK Model, Two-Sector Model",
+    "date": "2019-08-05 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "Keynesian Economics (2) AD-AS Model",
+    "url": "/posts/Keynesian_Economics_2/",
+    "categories": "Economics, Macroeconomics",
+    "tags": "Economics, Macroeconomics, Keynesian Economics",
+    "date": "2019-08-02 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "Keynesian Economics (1) IS-LM Model",
+    "url": "/posts/Keynesian_Economics_1/",
+    "categories": "Economics, Macroeconomics",
+    "tags": "Economics, Macroeconomics, Keynesian Economics",
+    "date": "2019-08-01 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "Classical Economics (2) Money Market",
+    "url": "/posts/Classical_Economics_2/",
+    "categories": "Economics, Macroeconomics",
+    "tags": "Economics, Macroeconomics, Classical Economics",
+    "date": "2019-07-31 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "Classical Economics (1) Goods Market",
+    "url": "/posts/Classical_Economics_1/",
+    "categories": "Economics, Macroeconomics",
+    "tags": "Economics, Macroeconomics, Classical Economics",
+    "date": "2019-07-30 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "What? Macroeconomics",
+    "url": "/posts/What_Macro/",
+    "categories": "Economics, Macroeconomics",
+    "tags": "Economics, Macroeconomics",
+    "date": "2019-07-29 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
     "title": "Welfare Economics (3) Social Choice",
     "url": "/posts/Welfare_Economics_3/",
     "categories": "Economics, Microeconomics",
@@ -1051,7 +1204,7 @@
 
     
     "snippet": "Revenue      총수익(Total Revenue; TR) : 개별생산자가 재화를 공급하고서 취득할 수 있는 수익의 총합\\[\\begin{aligned}  TR(Q \\vert \\alpha, \\beta)  &amp;=P \\cdot Q\\\\  &amp;=\\left(\\alpha - \\beta \\cdot Q \\right) \\cdot Q  \\end{align...",
-    "content": "Revenue      총수익(Total Revenue; TR) : 개별생산자가 재화를 공급하고서 취득할 수 있는 수익의 총합\\[\\begin{aligned}  TR(Q \\vert \\alpha, \\beta)  &amp;=P \\cdot Q\\\\  &amp;=\\left(\\alpha - \\beta \\cdot Q \\right) \\cdot Q  \\end{aligned}\\]          $P=\\alpha - \\beta \\cdot Q$ : 단위당 시장가격      $Q$ : 총 공급량            평균수익(Average Revenue; AR) : 개별생산자가 재화 단위당 취득할 수 있는 수익\\[\\begin{aligned}  AR(Q \\vert \\alpha, \\beta)  &amp;= \\frac{TR(Q \\vert \\alpha, \\beta)}{Q}\\\\  &amp;= P  \\end{aligned}\\]        한계수익(Marginal Revenue; MR) : 개별생산자가 재화를 한 단위 추가 공급했을 때 추가 취득할 수 있는 수익\\[\\begin{aligned}  MR(Q \\vert \\alpha, \\beta)  &amp;= \\frac{\\partial TR(Q \\vert \\alpha, \\beta)}{\\partial Q}\\\\  &amp;= \\alpha - 2 \\beta \\cdot Q  \\end{aligned}\\]        $\\max{TR}$    \\[\\begin{aligned}  \\frac{\\partial TR(Q \\vert \\alpha, \\beta)}{\\partial Q}  &amp;= MR(Q)\\\\  &amp;= P \\cdot \\left(1 + \\frac{Q / \\Delta Q}{P / \\Delta P}\\right)\\\\  &amp;= P \\cdot \\left(1 - \\frac{1}{\\varepsilon_{P}} \\right)\\\\  &amp;= 0  \\end{aligned}\\]    \\[\\therefore \\max{TR(Q \\vert \\alpha, \\beta)} \\quad \\text{for} \\; \\varepsilon_{P}=1\\]  CostShort-Term Cost      단기총비용(Short-Term Total Cost; STC) : 개별생산자가 재화를 총 $Q$ 단위 공급하기 위해 지불해야 하는 비용\\[\\begin{aligned}  STC(Q \\vert K) &amp;= STVC(Q) + STFC\\\\  STVC(Q) &amp;= L \\cdot w\\\\  STFC &amp;= \\overline{K} \\cdot v  \\end{aligned}\\]        단기평균비용(Short-Term Average Cost; SAC) : 개별생산자가 재화 단위당 지불해야 하는 비용\\[\\begin{aligned}  SAC(Q \\vert K)  &amp;= \\frac{STC(Q \\vert K)}{Q}\\\\  &amp;= \\frac{STVC(Q)}{Q} + \\frac{STFC}{Q}  \\end{aligned}\\]        단기한계비용(Short-Term Marginal Cost; SMC) :  Long-Term Cost      장기평균비용(Long-Term Average Cost; LAC) : 각 생산량 수준($Q$)에서 단기평균비용이 최저인 점들의 집합      \\[LAC(Q)=\\min_{K}{SAC(Q \\vert K)}\\]        장기한계비용(Long-Term Marginal Cost; LMC) : 각 생산량 수준($Q$)에서 채택된 단기평균비용곡선에 대응하는 단기한계비용곡선 점들의 집합      \\[\\begin{aligned}  LMC(Q)&amp;= SMC\\left(Q \\vert \\hat{K} \\right)\\\\  \\hat{K}&amp;= \\text{arg} \\min_{K}{SAC\\left(Q \\vert K \\right)}  \\end{aligned}\\]  Profit Maximization      양의 이윤을 극대화하는 생산량 도출\\[Q_{S}^{*}= \\text{arg} \\max{\\pi(Q)}\\]        이윤 함수(Profit Function)\\[\\pi(Q) = TR(Q) - TC(Q)\\]        일계 조건\\[\\begin{aligned}  \\frac{\\partial \\pi(Q)}{\\partial Q}  &amp;= \\frac{\\partial TR(Q)}{\\partial Q} - \\frac{\\partial TC(Q)}{\\partial Q}\\\\  &amp;= MR(Q) - MC(Q)\\\\  &amp;=0\\\\\\\\  \\therefore MR(Q)&amp;=MC(Q)  \\end{aligned}\\]        이계 조건\\[\\begin{aligned}  \\frac{\\partial^2 \\pi(Q)}{\\partial Q^2}  &amp;= \\frac{\\partial}{\\partial Q} \\frac{\\partial \\pi(Q)}{\\partial Q}\\\\  &amp;= \\frac{\\partial MR(Q)}{\\partial Q} - \\frac{\\partial MC(Q)}{\\partial Q}\\\\  &amp;&lt; 0\\\\\\\\  \\therefore \\frac{\\partial MR(Q)}{\\partial Q} &amp;&lt; \\frac{\\partial MC(Q)}{\\partial Q}  \\end{aligned}\\]  "
+    "content": "Revenue      총수익(Total Revenue; TR) : 개별생산자가 재화를 공급하고서 취득할 수 있는 수익의 총합\\[\\begin{aligned}  TR(Q \\vert \\alpha, \\beta)  &amp;=P \\cdot Q\\\\  &amp;=\\left(\\alpha - \\beta \\cdot Q \\right) \\cdot Q  \\end{aligned}\\]          $P=\\alpha - \\beta \\cdot Q$ : 단위당 시장가격      $Q$ : 총 공급량            평균수익(Average Revenue; AR) : 개별생산자가 재화 단위당 취득할 수 있는 수익\\[\\begin{aligned}  AR(Q \\vert \\alpha, \\beta)  &amp;= \\frac{TR(Q \\vert \\alpha, \\beta)}{Q}\\\\  &amp;= P  \\end{aligned}\\]        한계수익(Marginal Revenue; MR) : 개별생산자가 재화를 한 단위 추가 공급했을 때 추가 취득할 수 있는 수익\\[\\begin{aligned}  MR(Q \\vert \\alpha, \\beta)  &amp;= \\frac{\\partial TR(Q \\vert \\alpha, \\beta)}{\\partial Q}\\\\  &amp;= \\alpha - 2 \\beta \\cdot Q  \\end{aligned}\\]        $\\max{TR}$    \\[\\begin{aligned}  \\frac{\\partial TR(Q \\vert \\alpha, \\beta)}{\\partial Q}  &amp;= MR(Q)\\\\  &amp;= P \\cdot \\left(1 + \\frac{Q / \\Delta Q}{P / \\Delta P}\\right)\\\\  &amp;= P \\cdot \\left(1 - \\frac{1}{\\varepsilon_{P}} \\right)\\\\  &amp;= 0  \\end{aligned}\\]    \\[\\therefore \\hat{P},\\hat{Q} = \\text{arg}\\max{TR(Q \\vert \\alpha, \\beta)} \\quad \\text{for} \\; \\varepsilon_{P}=1\\]  CostShort-Term Cost      단기총비용(Short-Term Total Cost; STC) : 개별생산자가 재화를 총 $Q$ 단위 공급하기 위해 지불해야 하는 비용\\[\\begin{aligned}  STC(Q \\vert K) &amp;= STVC(Q) + STFC\\\\  STVC(Q) &amp;= L \\cdot w\\\\  STFC &amp;= \\overline{K} \\cdot v  \\end{aligned}\\]        단기평균비용(Short-Term Average Cost; SAC) : 개별생산자가 재화 단위당 지불해야 하는 비용\\[\\begin{aligned}  SAC(Q \\vert K)  &amp;= \\frac{STC(Q \\vert K)}{Q}\\\\  &amp;= \\frac{STVC(Q)}{Q} + \\frac{STFC}{Q}  \\end{aligned}\\]        단기한계비용(Short-Term Marginal Cost; SMC) : 개별생산자가 재화 단위를 추가할 때 추가 지불해야 하는 비용\\[\\begin{aligned}  SMC(Q \\vert K)  &amp;= \\frac{\\partial STC(Q \\vert K)}{\\partial Q}\\\\  &amp;= \\frac{\\partial STVC(Q)}{\\partial Q} + \\frac{\\partial STFC}{\\partial Q}\\\\  &amp;= \\frac{\\partial STVC(Q)}{\\partial Q} \\quad \\left(\\because \\frac{\\partial STFC}{\\partial Q} = 0 \\right)  \\end{aligned}\\]  Long-Term Cost      장기평균비용(Long-Term Average Cost; LAC) : 각 생산량 수준($Q$)에서 단기평균비용이 최저인 점들의 집합      \\[LAC(Q)=\\min_{K}{SAC(Q \\vert K)}\\]        장기한계비용(Long-Term Marginal Cost; LMC) : 각 생산량 수준($Q$)에서 채택된 단기평균비용곡선에 대응하는 단기한계비용곡선 점들의 집합      \\[\\begin{aligned}  LMC(Q)&amp;= SMC\\left(Q \\vert \\hat{K} \\right)\\\\  \\hat{K}&amp;= \\text{arg} \\min_{K}{SAC\\left(Q \\vert K \\right)}  \\end{aligned}\\]  Profit Maximization      양의 이윤을 극대화하는 생산량 도출\\[Q_{S}^{*}= \\text{arg} \\max{\\pi(Q)}\\]        이윤 함수(Profit Function)\\[\\pi(Q) = TR(Q) - TC(Q)\\]        일계 조건\\[\\begin{aligned}  \\frac{\\partial \\pi(Q)}{\\partial Q}  &amp;= \\frac{\\partial TR(Q)}{\\partial Q} - \\frac{\\partial TC(Q)}{\\partial Q}\\\\  &amp;= MR(Q) - MC(Q)\\\\  &amp;=0\\\\\\\\  \\therefore MR(Q)&amp;=MC(Q)  \\end{aligned}\\]        이계 조건\\[\\begin{aligned}  \\frac{\\partial^2 \\pi(Q)}{\\partial Q^2}  &amp;= \\frac{\\partial}{\\partial Q} \\frac{\\partial \\pi(Q)}{\\partial Q}\\\\  &amp;= \\frac{\\partial MR(Q)}{\\partial Q} - \\frac{\\partial MC(Q)}{\\partial Q}\\\\  &amp;&lt; 0\\\\\\\\  \\therefore \\frac{\\partial MR(Q)}{\\partial Q} &amp;&lt; \\frac{\\partial MC(Q)}{\\partial Q}  \\end{aligned}\\]  "
   },
   
   {
