@@ -101,13 +101,13 @@ image:
 - **수요량의 가격 탄력성(Price Elasticity of Demand; PED)** : 가격의 단위 변화에 따른 시장수요량의 변동성
 
     $$
-    \varepsilon_{P}=-\frac{\Delta Q_{D}/Q_D}{\Delta P/P} \quad (\because \text{LOD})
+    \varepsilon_{P}:= -\frac{\Delta Q_{D}/Q_D}{\Delta P/P} \quad (\because \text{LOD})
     $$
 
 - **수요의 소득 탄력성(Income Elasticity of Demand; IED)** : 소득수준의 단위 변화에 따른 시장수요의 변동성
 
     $$
-    \varepsilon_{M}=\frac{\Delta Q_{D}/Q_D}{\Delta M/M}
+    \varepsilon_{M}:= \frac{\Delta Q_{D}/Q_D}{\Delta M/M}
     $$
 
     - **정상재(Normal Goods)** : 소득수준의 변동성과 시장수요의 변동성이 비례하는 자원
@@ -137,7 +137,7 @@ image:
 - **수요의 교차 탄력성(Cross-Price Elasticity of Demand; XED)** : 관련재 가격의 단위 변화에 따른 시장수요의 변동성
 
     $$
-    \varepsilon_{C}=\frac{\Delta Q_{D}/Q_D}{\Delta P_{R}/P_R}
+    \varepsilon_{C}:= \frac{\Delta Q_{D}/Q_D}{\Delta P_{R}/P_R}
     $$
 
     - **대체재(Substitutes)** : 어떤 자원의 가격이 상승할 때 다른 자원의 시장수요가 증가하는 경우
@@ -197,7 +197,7 @@ image:
 - **공급량의 가격 탄력성(Price Elasticity of Supply)** : 가격의 단위 변화에 따른 시장공급량의 변동성
 
     $$
-    \epsilon_{P}=\frac{\Delta Q_{S}/Q_S}{\Delta P/P} \quad (\because \text{LOS})
+    \epsilon_{P}:= \frac{\Delta Q_{S}/Q_S}{\Delta P/P} \quad (\because \text{LOS})
     $$
 
 -----

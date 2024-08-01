@@ -14,9 +14,6 @@ image:
 ## Revenue
 -----
 
-![01](/_post_refer_img/Microeconomics/05-01.png){: width="100%"}
-![02](/_post_refer_img/Microeconomics/05-02.png){: width="100%"}
-
 - **총수익(Total Revenue; TR)** : 개별생산자가 재화를 공급하고서 취득할 수 있는 수익의 총합
 
     $$\begin{aligned}
@@ -44,23 +41,23 @@ image:
     &= \alpha - 2 \beta \cdot Q
     \end{aligned}$$
 
-- **$\max{TR}$**
+### $\max{TR}$
 
-    ![03](/_post_refer_img/Microeconomics/05-03.png){: width="100%"}
+![03](/_post_refer_img/Microeconomics/05-03.png){: width="100%"}
 
-    $$\begin{aligned}
-    \frac{\partial TR(Q \vert \alpha, \beta)}{\partial Q}
-    &= MR(Q)\\
-    &= P \cdot \left(1 + \frac{Q / \Delta Q}{P / \Delta P}\right)\\
-    &= P \cdot \left(1 - \frac{1}{\varepsilon_{P}} \right)\\
-    &= 0
-    \end{aligned}$$
+$$\begin{aligned}
+\frac{\partial TR(Q \vert \alpha, \beta)}{\partial Q}
+&= MR(Q)\\
+&= P \cdot \left(1 + \frac{Q / \Delta Q}{P / \Delta P}\right)\\
+&= P \cdot \left(1 - \frac{1}{\varepsilon_{P}} \right)\\
+&= 0
+\end{aligned}$$
 
-    ![04](/_post_refer_img/Microeconomics/05-04.png){: width="100%"}
+![04](/_post_refer_img/Microeconomics/05-04.png){: width="100%"}
 
-    $$
-    \therefore \hat{P},\hat{Q} = \text{arg}\max{TR(Q \vert \alpha, \beta)} \quad \text{for} \; \varepsilon_{P}=1
-    $$
+$$
+\therefore \hat{Q} = \text{arg}\max{TR(Q \vert \alpha, \beta)} \quad \text{for} \; \varepsilon_{P}=1
+$$
 
 ## Cost
 -----
@@ -121,6 +118,7 @@ image:
 -----
 
 ![11](/_post_refer_img/Microeconomics/05-11.png){: width="100%"}
+![02](/_post_refer_img/Microeconomics/05-02.png){: width="100%"}
 ![12](/_post_refer_img/Microeconomics/05-12.png){: width="100%"}
 
 - **양의 이윤을 극대화하는 생산량 도출**

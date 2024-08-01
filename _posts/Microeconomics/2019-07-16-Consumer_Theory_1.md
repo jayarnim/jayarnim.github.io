@@ -42,7 +42,7 @@ image:
         A \succ B \; \text{and} \; B \succ C \implies A \succ C \quad \text{for}\; (A, B, C)^{\forall} \in X
         $$
 
-    3. **강단조성(Strong Monotonicity)**; 상품묶음이 나타내는 두 가지 상품 중에서 임의의 상품에 대하여 다른 상품의 수량이 일정하다면 해당 상품의 수량이 더 높은 상품묶음을 선호한다.
+    3. **강단조성(Strong Monotonicity)**; 상품묶음이 나타내는 두 가지 재화 중에서 임의의 재화에 대하여 다른 재화의 수량이 일정하다면 해당 상품의 수량이 더 높은 상품묶음을 선호한다.
 
         $$
         x_i \ge y_i \; \text{for all} \; i \; \text{and} \; x_i > y_i \; \text{for some} \; i \implies A \succ B \quad \text{for} \; (A, B)^{\forall} \in X
@@ -54,7 +54,7 @@ image:
         A \succ B \; \text{and} \; C \approx A \implies C \succ B \quad \text{for}\;(A, B, C)^{\forall} \in X
         $$
 
-    5. **볼록성(Convexity)**; 극단적인 수량의 조합을 나타내는 상품묶음보다는 두 가지 상품의 수량이 고루 섞여 있는 상품묶음을 선호한다.
+    5. **볼록성(Convexity)**; 극단적인 수량의 조합을 나타내는 상품묶음보다는 두 가지 재화의 수량이 고루 섞여 있는 상품묶음을 선호한다.
 
         $$\begin{aligned}
         \lambda A + (1 - \lambda)B \succ A \quad \text{for} \quad
@@ -71,9 +71,9 @@ image:
     U^{(2)}:& \quad U(A)=40, U(B)=60, U(C)=80
     \end{aligned}$$
 
-    > $U^{(1)}$ 과 $U^{(2)}$ 는 상품에 대하여 선호도 값을 다르게 매겼으나, 선호관계를 동일하게 평가하였음. 따라서 두 효용함수는 실질적으로는 무차별함. 이처럼 효용함수는 선호도 값의 기수성이 아니라 서수성이 중요함.
+    > $U^{(1)}$ 과 $U^{(2)}$ 는 재화에 대하여 선호도 값을 다르게 매겼으나, 선호관계를 동일하게 평가하였음. 따라서 두 효용함수는 실질적으로는 무차별함. 이처럼 효용함수는 선호도 값의 기수성이 아니라 서수성이 중요함.
 
-- **무차별곡선(Indifference curve)** : X재 수량을 X축으로, Y재 수량을 Y축으로 하는 좌표평면 위에 효용수준이 무차별한 상품묶음을 이은 곡선
+- **무차별곡선(Indifference curve)** : 재화 $X,Y$ 에 대하여, 동일한(무차별한) 효용 수준을 누릴 수 있는 상품묶음 $(X, Y)$ 의 집합
 
     ![01](/_post_refer_img/Microeconomics/02-01.png){: width="100%"}
 
@@ -89,26 +89,26 @@ image:
 
 ### Subjective Rate of Substitution
 
-- **한계효용(Marginal Utility; MU)** : 임의의 상품을 한 단위 추가 소비함으로써 추가로 누릴 수 있는 효용수준
+- **한계효용(Marginal Utility; MU)** : 임의의 재화를 한 단위 추가 소비함으로써 추가로 누릴 수 있는 효용 수준
 
     $$
-    MU_{X}=\frac{\partial U}{\partial X}
+    MU_{X}:= \frac{\partial U}{\partial X}
     $$
 
-- **한계대체율(Marginal Rate of Substitution; MRS)** : 임의의 상품에 대하여, 동일한 효용수준에서 해당 상품을 한 단위 추가 소비하기 위해 포기해야 하는 관련재 단위
+- **한계대체율(Marginal Rate of Substitution; MRS)** : 재화 $X,Y$ 에 대하여, 동일한 효용 수준에서 해당 재화를 한 단위 추가 소비하기 위해 포기해야 하는 관련재 소비분
 
     $$
     \Delta X \cdot MU_{X} + \Delta Y \cdot MU_{Y} = 0
     $$
 
     $$
-    \therefore -\frac{\Delta Y}{\Delta X} = \frac{MU_{X}}{MU_{Y}} = MRS_{X,Y}
+    \therefore MRS_{X,Y}:= -\frac{\Delta Y}{\Delta X} = \frac{MU_{X}}{MU_{Y}}
     $$
 
-- **한계대체율 체감의 법칙** : 임의의 상품에 대하여, 해당 상품의 보유량이 증가할수록 동일한 효용수준에서 해당 상품을 한 단위 추가 소비하기 위해 포기해야 하는 관련재 단위가 감소하는 현상
+- **한계대체율 체감의 법칙** : 임의의 상품에 대하여, 해당 상품의 보유량이 증가할수록 동일한 효용수준에서 해당 상품을 한 단위 추가 소비하기 위해 포기해야 하는 관련재 소비분이 감소하는 현상
 
     $$
-    \frac{\partial}{\partial X} MRS_{X,Y} \prec 0
+    \frac{\partial MRS_{X,Y}}{\partial X} \prec 0
     $$
 
 ## Budget Constraint
@@ -122,7 +122,7 @@ image:
     (x,y) \quad \text{s.t.}\; x \cdot P_{X} + y \cdot P_{Y} \le M
     \end{aligned}$$
 
-- **상대가격(Relative Price)** : 임의의 상품에 대하여, 동일한 예산수준에서 해당 상품을 한 단위 추가 취득하기 위해 포기해야 하는 관련재 단위
+- **상대가격(Relative Price)** : 재화 $X,Y$ 에 대하여, 동일한 예산 수준에서 특정 재화를 한 단위 추가 소비하기 위해 포기해야 하는 관련재 소비분
 
     $$
     \Delta X \cdot P_{X} + \Delta Y \cdot P_{Y} = 0
@@ -153,7 +153,7 @@ $$
     -\frac{\Delta Y}{\Delta X}=\frac{P_{X}}{P_{Y}}
     $$
 
-- **예산선과 무차별곡선의 접점** : 예산제약 하 효용을 극대화하는 상품묶음
+- **예산선과 무차별곡선의 접점** : 예산 제약 하 효용을 극대화하는 상품묶음
 
     $$\begin{aligned}
     \frac{MU_{X}}{MU_{Y}}=-\frac{\Delta Y}{\Delta X}=\frac{P_{X}}{P_{Y}}

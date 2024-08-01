@@ -79,7 +79,7 @@ image:
     - **노동의 한계생산(Marginal Production of Labor; $MP_L$)** : 노동 단위 추가 투입 시 가능한 추가 생산량
 
         $$
-        MP_L = \frac{\partial}{\partial L}TP_L
+        MP_L = \frac{\partial TP_L}{\partial L}
         $$
 
 - **한계기술대체율(Marginal Rate of Technical Substitution; MRTS)** : 동일한 생산량 수준에서 특정 생산요소를 한 단위 추가 투입하기 위해 포기해야 하는 다른 생산요소 단위
@@ -89,13 +89,13 @@ image:
     $$
 
     $$
-    \therefore -\frac{\Delta K}{\Delta L} = \frac{MP_L}{MP_K} = MRTS_{L,K}
+    \therefore MRTS_{L,K}:= -\frac{\Delta K}{\Delta L} = \frac{MP_L}{MP_K}
     $$
 
-- **한계기술대체율 체감의 법칙** : 특정 생산요소의 투입량이 증가할수록 동일한 생산량 수준에서 해당 생산요소를 한 단위 추가하기 위해 포기해야 하는 다른 생산요소의 단위가 감소하는 현상
+- **한계기술대체율 체감의 법칙** : 특정 생산요소의 투입량이 증가할수록 동일한 생산량 수준에서 해당 생산요소를 한 단위 추가 투입하기 위해 포기해야 하는 다른 생산요소의 투입분이 감소하는 현상
 
     $$
-    \frac{\partial}{\partial L} MRTS_{L,K} \prec 0
+    \frac{\partial MRTS_{L,K}}{\partial L} \prec 0
     $$
 
 ## Cost Constraint
@@ -103,13 +103,13 @@ image:
 
 ![03](/_post_refer_img/Microeconomics/04-03.png){: width="100%"}
 
-- **등비용선(Isocost Line)** : 주어진 비용($C$)과 요소가격 상황($P_L=w,P_K=v$)에 맞게 취득할 수 있는 요소조합의 집합
+- **등비용곡선(Iso-Cost Curve)** : 주어진 비용($C$)과 요소가격 상황($P_L=w,P_K=v$)에 맞게 취득할 수 있는 요소조합의 집합
 
     $$
     (L,K) \quad \text{s.t.} \; L \cdot w + K \cdot v \le C
     $$
 
-- **상대가격(Relative Price)** : 특정 생산요소에 대하여, 동일한 비용 수준에서 해당 생산요소를 한 단위 추가 투입하기 위해 포기해야 하는 다른 생산요소의 단위로 표현된 시장가격
+- **상대가격(Relative Price)** : 특정 생산요소에 대하여, 동일한 비용 수준에서 해당 생산요소를 한 단위 추가 투입하기 위해 포기해야 하는 다른 생산요소의 투입분
 
     $$
     \Delta L \cdot w + \Delta K \cdot v = 0
@@ -131,16 +131,16 @@ $$
 - **등량곡선의 접선의 기울기** : 노동의 자본에 대한 한계기술대체율 $MRTS_{L,K}$
 
     $$
-    -\frac{\Delta K}{\Delta L} = \frac{MP_L}{MP_K} = MRTS_{L,K}
+    -\frac{\Delta K}{\Delta L} = \frac{MP_L}{MP_K}
     $$
 
-- **등비용선의 기울기** : 노동의 자본에 대한 상대가격
+- **등비용곡선의 기울기** : 노동의 자본에 대한 상대가격
 
     $$
     -\frac{\Delta K}{\Delta L} = \frac{w}{v}
     $$
 
-- **등비용선과 등량곡선의 접점** : 비용제약 하 생산량을 극대화하는 요소조합
+- **등비용곡선과 등량곡선의 접점** : 비용 제약 하 생산량을 극대화하는 요소조합
 
     $$\begin{aligned}
     \frac{MP_L}{MP_K}=-\frac{\Delta K}{\Delta L}=\frac{w}{v}
