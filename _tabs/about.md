@@ -4,14 +4,13 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-Hi there! I'm dreaming of becoming an **expert in recommender systems**. I graduated from the Department of Economics and deeply researched Business Economics, including Consumer Theory, Game Theory, Information Economics, etc. While completing my major, I became interested in consumers' preferences and choices. So, I want to conduct research on analyzing personal freedom of expression, defining personal preference, predicting personal choices, and recommending goods or services. Now, I am pursuing a Master's degree in Data Science at The Graduate School of Kookmin University, under the guidance of Prof. Je-hyuk Lee.
+Hi there! I'm dreaming of becoming an Data Scientist, **expert in recommender systems**. I graduated from the Department of Economics and deeply researched Business Economics, including Consumer Theory, Game Theory, Information Economics, etc. While completing my major, I became interested in consumers' preferences and choices. So, I want to conduct research on curating items that match consumer preferences under information uncertainty about their tastes. Now, I am pursuing a Master's degree in Data Science at The Graduate School of Kookmin University, under the guidance of Prof. Je-Hyuk Lee.
 
 ## Research Interest
 ------
 - Recommender System
-- Topic Modeling
-- Graph Neural Networks
 - Bayesian Modeling
+- Deep Learning Techs, such as GNNs
 
 ## Degree
 ------
@@ -24,7 +23,7 @@ College of Economics & Commerce, Kookmin Univ., South Korea
 
 ## Experience
 -----
-- **The Data Mining Lab**, *2024.01 - Present*\\
+- **Data Mining Lab**, *2024.01 - Present*\\
 Director Je-Hyuk Lee\\
 Dept. of Data Science, The Graduate School, Kookmin Univ., South Korea
 - **Kookmin Univ. Economic Association(KMEA)**, *2016.03 - 2019.08*\\
