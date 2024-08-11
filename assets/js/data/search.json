@@ -1,6 +1,227 @@
 [
   
   {
+    "title": "BDNet",
+    "url": "/posts/BDNet/",
+    "categories": "AI & Data Mining, Recommender System",
+    "tags": "Paper Review, Data Mining, RecSys, Collaborative Filtering, Latent Factor Model, Deep Learning, BNN",
+    "date": "2024-08-07 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "Language Model (2) Deep Learning Techs",
+    "url": "/posts/Langs_Model_2/",
+    "categories": "AI & Data Mining, Text Analytics",
+    "tags": "Data Mining, Text Mining",
+    "date": "2024-08-03 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "Language Model (1) Statistical Techs",
+    "url": "/posts/Langs_Model_1/",
+    "categories": "AI & Data Mining, Text Analytics",
+    "tags": "Data Mining, Text Mining",
+    "date": "2024-08-02 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "Topic Modeling",
+    "url": "/posts/Topic_Modeling/",
+    "categories": "AI & Data Mining, Text Analytics",
+    "tags": "Data Mining, Text Mining",
+    "date": "2024-08-01 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "Document Representation",
+    "url": "/posts/Document_Representation/",
+    "categories": "AI & Data Mining, Text Analytics",
+    "tags": "Data Mining, Text Mining",
+    "date": "2024-07-31 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "NVMF",
+    "url": "/posts/NVMF/",
+    "categories": "AI & Data Mining, Recommender System",
+    "tags": "Paper Review, Data Mining, RecSys, Collaborative Filtering, Latent Factor Model, Deep Learning, Autoencoder, Bayesian",
+    "date": "2024-07-31 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "Word Representation",
+    "url": "/posts/Word_Representation/",
+    "categories": "AI & Data Mining, Text Analytics",
+    "tags": "Data Mining, Text Mining",
+    "date": "2024-07-30 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "Text Data Preprocessing",
+    "url": "/posts/Text_Data_Preprocessing/",
+    "categories": "AI & Data Mining, Text Analytics",
+    "tags": "Data Mining, Text Mining",
+    "date": "2024-07-29 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "BPMF",
+    "url": "/posts/BPMF/",
+    "categories": "AI & Data Mining, Recommender System",
+    "tags": "Paper Review, Data Mining, RecSys, Collaborative Filtering, Latent Factor Model, Bayesian",
+    "date": "2024-07-24 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "Bayesian Neural Networks",
+    "url": "/posts/Bayesian_Neural_Networks/",
+    "categories": "Statistical Techs, Bayesian Modeling",
+    "tags": "Statistics, Bayesian, Deep Learning, BNN",
+    "date": "2024-07-22 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "Bayesian Multi Armed Bandits",
+    "url": "/posts/Bayesian_Multi_Armed_Bandits/",
+    "categories": "Statistical Techs, Bayesian Modeling",
+    "tags": "Statistics, Bayesian, MAB, Multi Armed Bandits",
+    "date": "2024-07-21 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "Bayesian Regression",
+    "url": "/posts/Bayesian_Regression/",
+    "categories": "Statistical Techs, Bayesian Modeling",
+    "tags": "Statistics, Bayesian, Regression",
+    "date": "2024-07-20 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "Bayesian A/B Test",
+    "url": "/posts/Bayesian_A_B_Test/",
+    "categories": "Statistical Techs, Bayesian Modeling",
+    "tags": "Statistics, Bayesian, A/B Test",
+    "date": "2024-07-19 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
     "title": "Bayes Estimator",
     "url": "/posts/Bayes_Estimator/",
     "categories": "Statistical Techs, Bayesian Modeling",
@@ -15,6 +236,23 @@
     
     "snippet": "Bayes Estimator  사후확률 $\\theta \\vert X$ 을 추정하기 위해, 확률분포 $P(\\theta \\vert X) \\propto \\mathcal{L}(\\theta) \\cdot \\pi(\\theta)$ 로부터 $n$ 번의 샘플링을 통해 $n$ 개의 샘플 $\\theta^{(1)},\\theta^{(2)},\\cdots,\\theta^{(n)}$...",
     "content": "Bayes Estimator  사후확률 $\\theta \\vert X$ 을 추정하기 위해, 확률분포 $P(\\theta \\vert X) \\propto \\mathcal{L}(\\theta) \\cdot \\pi(\\theta)$ 로부터 $n$ 번의 샘플링을 통해 $n$ 개의 샘플 $\\theta^{(1)},\\theta^{(2)},\\cdots,\\theta^{(n)}$ 을 도출했다고 하자. 그렇다면 이들 중 무엇을 모수 $\\theta \\vert X$ 의 추정치 $\\hat{\\theta}$ 로 사용하는 것이 적절할까?      Bayes’ Risk : 사후확률분포 $P(\\theta \\vert X)$ 를 사용하여 계산된, 모수 $\\theta$ 에 대하여 추정치 $\\hat{\\theta}$ 를 선택할 때의 기대 손실(Expected Loss)\\[\\begin{aligned}  \\mathcal{R}(\\hat{\\theta})  &amp;= \\mathbb{E}_{\\theta \\vert X}\\left[\\text{Loss}(\\theta, \\hat{\\theta})\\right]\\\\  &amp;= \\int{\\text{Loss}(\\theta, \\hat{\\theta}) \\cdot P(\\theta \\vert X)}\\text{d}\\theta  \\end{aligned}\\]                  모수 $\\theta \\vert X$ 를 알 수 없으므로, $n$ 번의 샘플링을 통해 도출한 $n$ 개의 샘플 $\\theta^{(1)},\\theta^{(2)},\\cdots,\\theta^{(n)} \\sim P(\\theta \\vert X)$ 를 사용하여 근사함\\[\\begin{aligned}  \\mathcal{R}(\\hat{\\theta})  &amp;= \\mathbb{E}_{\\theta \\vert X}\\left[\\text{Loss}(\\theta, \\hat{\\theta})\\right]\\\\  &amp;\\approx \\frac{1}{N}\\sum_{i=1}^{N}{\\text{Loss}(\\theta^{(i)}, \\hat{\\theta})}  \\end{aligned}\\]                  Bayes Estimator : 모수 $\\theta$ 에 대하여, Bayes’ Risk 를 최소화시키는 추정치 $\\hat{\\theta}$\\[\\begin{aligned}  \\hat{\\theta}  &amp;= \\text{arg} \\min_{\\hat{\\theta}}{\\mathcal{R}(\\hat{\\theta})}  \\end{aligned}\\]                  Posterior Mean : Bayes’ Least Square (BLS) Estimator\\[\\begin{aligned}  \\hat{\\theta}  &amp;= \\text{arg} \\min_{\\hat{\\theta}}{\\mathbb{E}_{\\theta \\vert X}\\left[(\\theta-\\hat{\\theta})^2\\right]}\\\\  &amp;= \\mathbb{E}_{\\theta \\vert X}(\\theta)  \\end{aligned}\\]                    Posterior Median\\[\\begin{aligned}  \\hat{\\theta}  &amp;= \\text{arg} \\min_{\\hat{\\theta}}{\\mathbb{E}_{\\theta \\vert X}\\left[ \\vert \\theta-\\hat{\\theta} \\vert \\right]}\\\\  &amp;= \\tilde{\\theta}  \\end{aligned}\\]                    Posterior mode : Maximum a posteriori (MAP) Estimator\\[\\begin{aligned}  \\hat{\\theta}  &amp;= \\text{arg} \\min_{\\hat{\\theta}}{\\mathbb{E}_{\\theta \\vert X}\\left[1_{\\hat{\\theta} \\ne \\theta}\\right]}\\\\  &amp;= \\text{arg} \\max_{\\theta}{P(\\theta \\vert X)}  \\end{aligned}\\]            Loss FunctionContinuous Prob. Variable      Squared Error Loss\\[\\begin{aligned}  \\text{Loss}(\\theta, \\hat{\\theta})  &amp;= (\\theta - \\hat{\\theta})^2  \\end{aligned}\\]        Asymmetric Squared Error Loss\\[\\text{Loss}(\\theta, \\hat{\\theta})  = \\begin{cases}\\begin{aligned}  &amp;(\\theta - \\hat{\\theta})^2 \\quad &amp;\\text{if}\\;\\hat{\\theta} &lt; \\theta&amp;\\\\  &amp;c \\cdot (\\theta - \\hat{\\theta})^2 \\quad &amp;\\text{if}\\;\\hat{\\theta} \\ge \\theta&amp;,\\;0&lt;c&lt;1  \\end{aligned}\\end{cases}\\]        Absolute Error Loss\\[\\begin{aligned}  \\text{Loss}(\\theta, \\hat{\\theta})  =  \\vert  \\theta - \\hat{\\theta}  \\vert   \\end{aligned}\\]  Discrete Prob. Variable      Zero-One Loss\\[\\begin{aligned}  \\text{Loss}(\\theta, \\hat{\\theta})  &amp;= 1_{\\hat{\\theta} \\ne \\theta}\\\\  &amp;= \\begin{cases}\\begin{aligned}  &amp;0 \\quad &amp;\\text{if}\\;\\hat{\\theta} = \\theta\\\\  &amp;1 \\quad &amp;\\text{if}\\;\\hat{\\theta} \\ne \\theta  \\end{aligned}\\end{cases}  \\end{aligned}\\]        Binary Cross Entropy Loss\\[\\begin{aligned}  \\text{Loss}(\\theta, \\hat{\\theta})  = -\\left[\\hat{\\theta} \\cdot \\log{\\theta}+(1-\\hat{\\theta})\\cdot\\log{(1-\\theta)}\\right] \\quad \\text{for}\\;&amp;\\hat{\\theta}\\in\\{0,1\\},\\\\&amp;\\theta\\in[0,1]  \\end{aligned}\\]                  관측치 $\\hat{\\theta}$ 가 $\\theta$ 를 확률로 가지는 베르누이 분포로부터 생성된다고 하자\\[\\begin{aligned}  \\hat{\\theta} \\sim \\text{Bernoulli}(\\theta)  \\end{aligned}\\]                    $\\hat{\\theta}$ 에 대한 확률질량함수는 다음과 같음\\[P(\\hat{\\theta};\\theta)=\\theta^{\\hat{\\theta}} \\cdot (1-\\theta)^{1-\\hat{\\theta}}\\]                    이를 $\\theta$ 에 대한 로그 우도 함수로 해석할 수 있음\\[\\begin{aligned}  \\log{\\mathcal{L}(\\theta)}  &amp;= \\log{P(\\hat{\\theta} \\vert \\theta)}\\\\  &amp;= \\hat{\\theta} \\cdot \\log{\\theta} + (1-\\hat{\\theta}) \\cdot \\log{(1-\\theta)}  \\end{aligned}\\]                    $\\theta$ 를 모수, $\\hat{\\theta}$ 를 추정치에 대응하여 손실함수를 구성하면 다음과 같음\\[\\begin{aligned}  \\text{Loss}(\\theta,\\hat{\\theta})  &amp;= -\\log{\\mathcal{L}(\\theta)}\\\\  &amp;= -\\log{P(\\hat{\\theta} \\vert \\theta)}\\\\  &amp;= - \\left[\\hat{\\theta} \\cdot \\log{\\theta} + (1-\\hat{\\theta}) \\cdot \\log{(1-\\theta)}\\right]  \\end{aligned}\\]                  Categorical Cross Entropy Loss\\[\\begin{aligned}  \\text{Loss}(\\theta, \\hat{\\theta})  = -\\sum_{i=1}^{K}{\\hat{\\theta}_{i}\\cdot\\log{\\theta_{i}}} \\quad \\text{for}\\;&amp;\\hat{\\theta}_{i}\\in\\{0,1\\},\\\\&amp;\\theta_{i}\\in[0,1]  \\end{aligned}\\]                  관측치 $\\hat{\\theta}$ 가 $\\theta$ 를 확률로 가지는 카테고리 분포로부터 생성된다고 하자\\[\\begin{aligned}  \\hat{\\theta} \\sim \\text{Categorical}(\\theta)  \\end{aligned}\\]                    $\\hat{\\theta}$ 에 대한 확률질량함수는 다음과 같음\\[P(\\hat{\\theta};\\theta)=\\prod_{i=1}^{K}{\\theta_{i}^{\\hat{\\theta}_{i}}}\\]                    이를 $\\theta$ 에 대한 로그 우도 함수로 해석할 수 있음\\[\\begin{aligned}  \\log{\\mathcal{L}(\\theta)}  &amp;= \\log{P(\\hat{\\theta} \\vert \\theta)}\\\\  &amp;= \\sum_{i=1}^{K}{\\hat{\\theta}_{i} \\cdot \\log{\\theta_{i}}}  \\end{aligned}\\]                    $\\theta$ 를 모수, $\\hat{\\theta}$ 를 추정치에 대응하여 손실함수를 구성하면 다음과 같음\\[\\begin{aligned}  \\text{Loss}(\\theta,\\hat{\\theta})  &amp;= -\\log{\\mathcal{L}(\\theta)}\\\\  &amp;= -\\log{P(\\hat{\\theta} \\vert \\theta)}\\\\  &amp;= - \\sum_{i=1}^{K}{\\hat{\\theta}_{i} \\cdot \\log{\\theta_{i}}}  \\end{aligned}\\]            "
+  },
+  
+  {
+    "title": "BERT4REC",
+    "url": "/posts/BERT4REC/",
+    "categories": "AI & Data Mining, Recommender System",
+    "tags": "Paper Review, Data Mining, RecSys, Sequential RecSys, Deep Learning, BERT",
+    "date": "2024-07-17 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
   },
   
   {
@@ -65,7 +303,7 @@
 
     
     "snippet": "Compare Frequentist and Bayesian빈도주의자 vs. 베이지안  사건 $X$ 가 발생할 확률 $P(X)$ 의 정의                  빈도주의자(Frequentist) : 어떤 사건이 발생하는 장기적인 빈도\\[P(X)\\]                    베이지안(Bayesian) : 어떤 사건이 발생할 것이라는 믿음 ...",
-    "content": "Compare Frequentist and Bayesian빈도주의자 vs. 베이지안  사건 $X$ 가 발생할 확률 $P(X)$ 의 정의                  빈도주의자(Frequentist) : 어떤 사건이 발생하는 장기적인 빈도\\[P(X)\\]                    베이지안(Bayesian) : 어떤 사건이 발생할 것이라는 믿음 혹은 확신의 척도\\[P(X \\vert \\theta)\\]              모수 $\\theta$ 의 이해                  빈도주의자(Frequentist) : 사건 발생 빈도에 대한 분포를 묘사하는 고정된 상수\\[\\theta=\\mu, \\sigma^2, p, \\cdots\\]                    베이지안(Bayesian) : 사건 발생에 대한 믿음의 분포를 묘사하는 수로서, 확률적으로 변하는 수\\[\\theta \\sim F\\]            표본의 크기가 충분하다면      빈도주의자의 결론과 베이지안의 결론은 일치함\\[\\lim_{n \\rightarrow \\infty}{P(\\theta \\vert X_{1},X_{2},\\cdots,X_{n})} \\approx \\mu, \\sigma^2, p, \\cdots\\]          사건 발생에 대한 믿음은 신규 관측치에 의해 끊임없이 갱신되어 사건 발생에 대한 장기적인 빈도로 수렴함      표본의 크기가 충분하지 않다면  표본의 크기는 결코 크지 않다. 만일 N이 충분한 추정을 얻기에 부족하다면 더 많은 데이터(또는 더 많은 가정)을 확보해야 한다. 그러나 일단 N이 충분히 크다면 데이터를 나눠 더 많은 것(가령 여론조사에서 전국적으로 훌륭한 추정을 얻었다면 남과 여, 지역별, 연령대별 그룹 등으로 나눠 추정할 수 있다)을 얻을 수 있다. N은 충분하지 않다. 만약 충분하더라도 여러분은 이미 더 많은 데이터가 필요한 다음 문제에 직면하기 때문이다. (Andrew Gelman)      빈도주의자(Frequentist) : 모수(미지의 상수)에 대한 신뢰구간을 확대함으로써 모수 추정 과정 상의 불확실성을 최소화함\\[\\text{CI}_{\\theta}=\\bar{X}\\pm Z\\cdot\\frac{\\sigma}{\\sqrt{n}}\\]          $\\text{CI}_{\\theta}$ : 모수 $\\theta$ 에 대한 신뢰구간      $\\bar{X}$ : 표본 평균      $Z$ : 신뢰수준에 해당하는 Z-value      $\\sigma$ : 모표준편차      $n$ : 표본의 크기            베이지안(Bayesian) : 모수(확률변수)에 대한 사전확률을 도입함으로써 모수 자체의 불확실성을 모형화함\\[P(\\theta \\vert X)=\\frac{P(X \\vert \\theta)\\cdot P(\\theta)}{P(X)}\\]          $P(\\theta)$ : 모수 $\\theta$ 에 대한 사전확률(Prior Probability)      $P(\\theta \\vert X)$ : 관측치 $X$ 가 주어졌을 때 모수 $\\theta$ 에 대한 사후확률(Posterior Probability)      $P(X \\vert \\theta)$ : 모수 $\\theta$ 가 주어졌을 때 관측치 $X$ 가 발생할 가능성으로서 우도(Likelihood)              $P(X)$ : 관측치 $X$ 의 주변확률\\[P(X)=\\begin{cases}\\begin{aligned}  \\int{P(X \\vert \\theta)P(\\theta)\\text{d}\\theta},\\;&amp;\\text{where X is continuous}\\\\  \\sum_{\\theta}{P(X \\vert \\theta)P(\\theta)},\\;&amp;\\text{where X is discrete}  \\end{aligned}\\end{cases}\\]            Bayesian Framework베이즈 정리      베이즈 정리(Bayes’ Theorem)          사상 $A_{1},A_{2},\\cdots,A_{n}$ 이 표본공간 $S$ 의 분할이고, $P(A_{i})&gt;0,P(X)&gt;0$ 이면 $X$ 에 대한 $A_{k}$ 의 조건부 확률은 다음과 같음    \\[\\begin{aligned}  P(A_{k} \\vert X)  &amp;=\\frac{P(A_{k} \\cap X)}{P(X)}\\\\  &amp;=\\frac{P(A_{k})\\cdot P(X \\vert A_{k})}{P(X)}\\\\  &amp;=\\frac{P(A_{k})\\cdot P(X \\vert A_{k})}{\\sum_{i=1}^{n}{P(A_{i}) \\cdot P(X \\vert A_{i})}} \\propto P(A_{k})\\cdot P(X \\vert A_{k})  \\end{aligned}\\]          $P(A_{k})$ : $A_{k}$ 의 사전확률      $P(A_{k} \\vert X)$ : $X$ 가 주어졌을 때 $A_{k}$ 의 사후확률      $P(X \\vert A_{k})$ : $A_{k}$ 가 주어졌을 때 $X$ 의 우도      $P(X)$ : $X$ 의 주변확률            확률밀도함수(혹은 확률질량함수)로 표현한 베이즈 정리\\[P(\\theta \\vert X)=\\frac{\\pi(\\theta)\\cdot P(X \\vert \\theta)}{P(X)} \\propto \\pi(\\theta)\\cdot P(X \\vert \\theta)\\]          $\\theta$ : 모수      $X$ : 관측된 데이터      $\\pi(\\theta)$ : $\\theta$ 의 사전분포      $P(\\theta \\vert X)$ : $\\theta$ 의 사후분포      $P(X \\vert \\theta)$ : $\\theta$ 에 대한 $X$ 의 우도함수      $P(X)$ : $X$ 의 주변확률      베이지안의 최적 모수 탐색 방법  사전확률(Prior Probability) : 사건 발생 전, 가지고 있는 정보를 기초로 하여 설정된 초기 믿음          사전에 공정한 동전이라는 정보가 주어졌다고 하자              앞면이 나올 확률 $\\theta$ 에 대한 사전확률분포\\[P(\\theta)=\\frac{1}{2}\\]              사후확률(Posterior Probability) : 사건 발생 후, 추가된 정보를 고려하여 갱신된 믿음          동전이 앞으로 떨어지는 것을 관측했다고 하자              추가된 정보($X$)를 고려하여 갱신된 앞면이 나올 확률 $\\theta \\vert X$ 에 대한 사후확률분포\\[P(\\theta \\vert X)= 1\\]              최대우도추정법(Maximum Likelihood Estimation, MLE) : 관측치가 주어졌을 때, 해당 관측치가 발생할 가능성이 가장 높은 모수(parameter)의 값을 찾는 방법          우도(Likelihood) : 모수의 특정 값이 주어졌을 때, 관측치가 실제로 발생할 가능성              우도함수(Likelihood Function) : 모수 $\\theta$ 에 관한 관측치가 실제로 발생할 가능성의 함수\\[\\begin{aligned}  \\mathcal{L}(\\theta)  &amp;=P(X \\vert \\theta)\\\\  &amp;=\\prod_{i=1}^{n}{f(x_{i} \\vert \\theta)}  \\end{aligned}\\]                  $f(X_{i} \\vert \\theta)$ : 모수가 $\\theta$ 로 주어졌을 때 관측치 $X_{i}$ 에 대한 확률밀도함수 혹은 확률질량함수                            최우추정량(Maximum Likelihood Estimator; MLE) : 우도를 최대화하는 모수\\[\\hat{\\theta}=\\text{arg}\\max_{\\theta}{\\mathcal{L}(\\theta)}\\]            [example] 동전 던지기  동전을 던졌을 때 앞면이 나올 확률을 $\\theta$ 라고 하자. $\\theta$ 에 대한 정보가 아무것도 없다고 가정하자. 즉, $\\theta$ 는 0과 1 사이의 무작위수일 것이라고 믿어지고 있다. 동전을 두 번 던졌는데 두 번 다 앞면이 나왔다. 그렇다면 $\\theta$ 에 대한 믿음은 어떻게 변화할까?      문제에서 주어진 정보\\[\\begin{aligned}  \\theta &amp;\\sim \\text{Uniform}(0,1)\\\\  X \\vert \\theta &amp;\\sim \\text{Bin}(n,\\theta)  \\end{aligned}\\]        목적 함수 정의\\[P(\\theta \\vert X)=\\frac{\\pi(\\theta)P(X \\vert \\theta)}{P(X)} \\propto \\pi(\\theta)P(X \\vert \\theta)\\]                  $\\pi(\\theta)$ : $\\theta$ 에 대한 사전확률\\[\\pi(\\theta)=1 \\quad \\because \\theta \\sim \\text{Uniform}(0,1)\\]                    $P(X \\vert \\theta)$ : $\\theta$ 에 대한 $X$ 의 우도함수 혹은 확률질량함수\\[P(X \\vert \\theta)=\\frac{n!}{X!(n-X)!} \\cdot \\theta^{X} \\cdot (1-\\theta)^{n-X} \\quad \\because X \\vert \\theta \\sim \\text{Bin}(n,\\theta)\\]                    $P(X)$ : $X$ 의 주변확률로서 정규화 상수($\\theta$ 에 대한 함수가 아니므로 이후 생략)\\[\\begin{aligned}  P(X)  &amp;= \\int_{0}^{1}{\\frac{n!}{X!(n-X)!} \\cdot \\theta^{X} \\cdot (1-\\theta)^{n-X}}\\text{d}\\theta\\\\  &amp;= \\frac{n!}{X!(n-X)!} \\cdot \\int_{0}^{1}{\\theta^{X} \\cdot (1-\\theta)^{n-X}}\\text{d}\\theta\\\\  &amp;= \\frac{n!}{X!(n-X)!} \\cdot \\text{B}(X+1,n-X+1)\\\\  &amp;= \\frac{n!}{X!(n-X)!} \\cdot \\frac{\\Gamma(X+1)\\Gamma(n-X+1)}{\\Gamma(n+2)} \\quad \\because (X+1),(n-X+1) \\in \\mathbf{R}^{+}\\\\  &amp;= \\frac{n!}{X!(n-X)!} \\cdot \\frac{X!(n-X)!}{(n+1)!} \\quad \\because (X+1),(n-X+1) \\in \\mathbf{Z}^{+}\\\\  &amp;= \\frac{1}{n+1}  \\end{aligned}\\]                              $\\text{B}(\\alpha,\\beta)$ : 베타함수\\[\\begin{aligned}  \\text{B}(\\alpha,\\beta)  &amp;= \\int_{0}^{1}{t^{\\alpha-1}(1-t)^{\\beta-1}}\\text{d}t\\\\  &amp;= \\frac{\\Gamma(\\alpha)\\Gamma(\\beta)}{\\Gamma(\\alpha+\\beta)} \\quad \\text{where}\\; \\alpha,\\beta \\in \\mathbf{R}^{+}  \\end{aligned}\\]                                $\\Gamma(n)$ : 감마함수\\[\\begin{aligned}  \\Gamma(n)  &amp;= \\int_{0}^{\\infty}{t^{(n-1)}e^{-t}}\\text{d}t\\\\  &amp;= (n-1)! \\quad \\text{where}\\; n \\in \\mathbf{Z}^{+}  \\end{aligned}\\]                                    결론 : $\\theta$ 의 사후확률은 베타분포 $\\text{Beta}(3,1)$ 을 따름\\[\\begin{aligned}  P(\\theta \\vert X)  &amp;\\propto \\pi(\\theta)P(X \\vert \\theta)\\\\  &amp;= \\frac{n!}{X!(n-X)!} \\cdot \\theta^{X} \\cdot (1-\\theta)^{n-X}\\\\  \\\\  \\therefore P(\\theta \\vert X)  &amp;\\sim \\text{Beta}(X+1,n-X+1)  \\end{aligned}\\]                  $\\text{Beta}(\\alpha,\\beta)$ : 베타분포\\[f(x)  = \\frac{x^{\\alpha-1}(1-x)^{\\beta-1}}{\\text{B}(\\alpha,\\beta)}  \\sim \\text{Beta}(\\alpha,\\beta)\\]            "
+    "content": "Compare Frequentist and Bayesian빈도주의자 vs. 베이지안  사건 $X$ 가 발생할 확률 $P(X)$ 의 정의                  빈도주의자(Frequentist) : 어떤 사건이 발생하는 장기적인 빈도\\[P(X)\\]                    베이지안(Bayesian) : 어떤 사건이 발생할 것이라는 믿음 혹은 확신의 척도\\[P(X \\vert \\theta)\\]              모수 $\\theta$ 의 이해                  빈도주의자(Frequentist) : 사건 발생 빈도를 묘사하는 상수\\[\\theta=\\mu, \\sigma^2, p, \\cdots\\]                    베이지안(Bayesian) : 사건 발생에 대한 믿음의 분포를 묘사하는 확률변수\\[\\theta \\sim F\\]            표본의 크기가 충분하다면      빈도주의자의 결론과 베이지안의 결론은 일치함\\[\\lim_{n \\rightarrow \\infty}{P(\\theta \\vert X_{1},X_{2},\\cdots,X_{n})} \\approx \\mu, \\sigma^2, p, \\cdots\\]          사건 발생에 대한 믿음은 신규 관측치에 의해 끊임없이 갱신되어 사건 발생에 대한 장기적인 빈도로 수렴함      표본의 크기가 충분하지 않다면  표본의 크기는 결코 크지 않다. 만일 N이 충분한 추정을 얻기에 부족하다면 더 많은 데이터(또는 더 많은 가정)을 확보해야 한다. 그러나 일단 N이 충분히 크다면 데이터를 나눠 더 많은 것(가령 여론조사에서 전국적으로 훌륭한 추정을 얻었다면 남과 여, 지역별, 연령대별 그룹 등으로 나눠 추정할 수 있다)을 얻을 수 있다. N은 충분하지 않다. 만약 충분하더라도 여러분은 이미 더 많은 데이터가 필요한 다음 문제에 직면하기 때문이다. (Andrew Gelman)      빈도주의자(Frequentist) : 모수(미지의 상수)에 대한 신뢰구간을 확대함으로써 모수 추정 과정 상의 불확실성을 최소화함\\[\\text{CI}_{\\theta}=\\bar{X}\\pm Z\\cdot\\frac{\\sigma}{\\sqrt{n}}\\]        베이지안(Bayesian) : 모수(확률변수)에 대한 사전확률을 도입함으로써 모수 자체의 불확실성을 모형화함\\[P(\\theta \\vert X)=\\frac{P(X \\vert \\theta)\\cdot P(\\theta)}{P(X)}\\]  Bayesian Framework베이즈 정리      베이즈 정리(Bayes’ Theorem)          사상 $A_{1},A_{2},\\cdots,A_{n}$ 이 표본공간 $S$ 의 분할이고, $P(A_{i})&gt;0,P(X)&gt;0$ 이면 $X$ 에 대한 $A_{k}$ 의 조건부 확률은 다음과 같음    \\[\\begin{aligned}  P(A_{k} \\vert X)  &amp;=\\frac{P(A_{k} \\cap X)}{P(X)}\\\\  &amp;=\\frac{P(A_{k})\\cdot P(X \\vert A_{k})}{P(X)}\\\\  &amp;=\\frac{P(A_{k})\\cdot P(X \\vert A_{k})}{\\sum_{i=1}^{n}{P(A_{i}) \\cdot P(X \\vert A_{i})}} \\propto P(A_{k})\\cdot P(X \\vert A_{k})  \\end{aligned}\\]          $P(A_{k} \\vert X)$ : 사건 $X$ 발생 조건부 $A_k$ 가 발생할 확률      $P(A_{k})$ : 사건 $A_{k}$ 가 발생할 확률      $P(X \\vert A_{k})$ : 사건 $A_{k}$ 발생 조건부 $X$ 가 발생할 확률      $P(X)$ : 사건 $X$ 가 발생할 확률            확률분포함수로 표현한 베이즈 정리\\[P(\\theta \\vert \\mathcal{D})=\\frac{P(\\theta) \\cdot P(\\mathcal{D} \\vert \\theta)}{P(\\mathcal{D})} \\propto \\pi(\\theta) \\cdot \\mathcal{L}(\\theta)\\]          $\\theta$ : 모수      $\\mathcal{D}$ : 관측된 데이터      $P(\\theta \\vert \\mathcal{D})$ : $\\theta$ 의 사후확률분포      $\\pi(\\theta)=P(\\theta)$ : $\\theta$ 의 사전확률분포      $\\mathcal{L}(\\theta)=P(\\mathcal{D} \\vert \\theta)$ : $\\theta$ 에 대한 $\\mathcal{D}$ 의 우도함수      $P(\\mathcal{D})$ : $\\mathcal{D}$ 의 주변확률            사전확률분포(Prior Probability Distribution) : 사건 발생 전, 가지고 있는 정보를 기초로 하여 설정된 초기 믿음\\[\\theta \\sim P\\]        사후확률분포(Posterior Probability Distribution) : 사건 발생 후, 추가된 정보를 고려하여 갱신된 믿음\\[\\theta \\vert \\mathcal{D} \\sim P\\]        우도(Likelihood or Likelihood Function) : 모수의 특정 값이 $\\theta$ 로 주어졌을 때, 관측치 $\\mathcal{D}$ 가 실현될 가능성\\[\\begin{aligned}  \\mathcal{L}(\\theta)  &amp;=P(\\mathcal{D} \\vert \\theta)\\\\  &amp;=\\prod_{i=1}^{n}{f(X_{i} \\vert \\theta)}  \\end{aligned}\\]  [example] 동전 던지기  동전을 던졌을 때 앞면이 나올 확률을 $\\theta$ 라고 하자. $\\theta$ 에 대한 정보가 아무것도 없다고 가정하자. 즉, $\\theta$ 는 0과 1 사이의 무작위수일 것이라고 믿어지고 있다. 동전을 두 번 던졌는데 두 번 다 앞면이 나왔다. 그렇다면 $\\theta$ 에 대한 믿음은 어떻게 변화할까?      문제에서 주어진 정보\\[\\begin{aligned}  \\theta &amp;\\sim \\text{Uniform}(0,1)\\\\  X \\vert \\theta &amp;\\sim \\text{Bin}(n,\\theta)  \\end{aligned}\\]        목적 함수 정의\\[P(\\theta \\vert X)=\\frac{\\pi(\\theta)P(X \\vert \\theta)}{P(X)} \\propto \\pi(\\theta)P(X \\vert \\theta)\\]                  $\\pi(\\theta)$ : $\\theta$ 에 대한 사전확률\\[\\pi(\\theta)=1 \\quad \\because \\theta \\sim \\text{Uniform}(0,1)\\]                    $P(X \\vert \\theta)$ : $\\theta$ 에 대한 $X$ 의 우도함수 혹은 확률질량함수\\[P(X \\vert \\theta)=\\frac{n!}{X!(n-X)!} \\cdot \\theta^{X} \\cdot (1-\\theta)^{n-X} \\quad \\because X \\vert \\theta \\sim \\text{Bin}(n,\\theta)\\]                    $P(X)$ : $X$ 의 주변확률로서 정규화 상수($\\theta$ 에 대한 함수가 아니므로 이후 생략)\\[\\begin{aligned}  P(X)  &amp;= \\int_{0}^{1}{\\frac{n!}{X!(n-X)!} \\cdot \\theta^{X} \\cdot (1-\\theta)^{n-X}}\\text{d}\\theta\\\\  &amp;= \\frac{n!}{X!(n-X)!} \\cdot \\int_{0}^{1}{\\theta^{X} \\cdot (1-\\theta)^{n-X}}\\text{d}\\theta\\\\  &amp;= \\frac{n!}{X!(n-X)!} \\cdot \\text{B}(X+1,n-X+1)\\\\  &amp;= \\frac{n!}{X!(n-X)!} \\cdot \\frac{\\Gamma(X+1)\\Gamma(n-X+1)}{\\Gamma(n+2)} \\quad \\because (X+1),(n-X+1) \\in \\mathbf{R}^{+}\\\\  &amp;= \\frac{n!}{X!(n-X)!} \\cdot \\frac{X!(n-X)!}{(n+1)!} \\quad \\because (X+1),(n-X+1) \\in \\mathbf{Z}^{+}\\\\  &amp;= \\frac{1}{n+1}  \\end{aligned}\\]                              $\\text{B}(\\alpha,\\beta)$ : 베타함수\\[\\begin{aligned}  \\text{B}(\\alpha,\\beta)  &amp;= \\int_{0}^{1}{t^{\\alpha-1}(1-t)^{\\beta-1}}\\text{d}t\\\\  &amp;= \\frac{\\Gamma(\\alpha)\\Gamma(\\beta)}{\\Gamma(\\alpha+\\beta)} \\quad \\text{where}\\; \\alpha,\\beta \\in \\mathbf{R}^{+}  \\end{aligned}\\]                                $\\Gamma(n)$ : 감마함수\\[\\begin{aligned}  \\Gamma(n)  &amp;= \\int_{0}^{\\infty}{t^{(n-1)}e^{-t}}\\text{d}t\\\\  &amp;= (n-1)! \\quad \\text{where}\\; n \\in \\mathbf{Z}^{+}  \\end{aligned}\\]                                    결론 : $\\theta$ 의 사후확률은 베타분포 $\\text{Beta}(3,1)$ 을 따름\\[\\begin{aligned}  P(\\theta \\vert X)  &amp;\\propto \\pi(\\theta)P(X \\vert \\theta)\\\\  &amp;= \\frac{n!}{X!(n-X)!} \\cdot \\theta^{X} \\cdot (1-\\theta)^{n-X}\\\\  \\\\  \\therefore P(\\theta \\vert X)  &amp;\\sim \\text{Beta}(X+1,n-X+1)  \\end{aligned}\\]                  $\\text{Beta}(\\alpha,\\beta)$ : 베타분포\\[f(x)  = \\frac{x^{\\alpha-1}(1-x)^{\\beta-1}}{\\text{B}(\\alpha,\\beta)}  \\sim \\text{Beta}(\\alpha,\\beta)\\]            "
   },
   
   {
@@ -83,6 +321,23 @@
     
     "snippet": "What? Multiple Linear Regression      정의 : 설명변수가 여러 개인(Multi-Variate) 선형 회귀 모형(Linear Regression Model)    \\[y^{(k)}=\\beta_{0}+\\beta_{1}x_{1}^{(k)}+\\beta_{2}x_{2}^{(k)}+\\cdots+\\beta_{p}x_{p}^{(k)}+...",
     "content": "What? Multiple Linear Regression      정의 : 설명변수가 여러 개인(Multi-Variate) 선형 회귀 모형(Linear Regression Model)    \\[y^{(k)}=\\beta_{0}+\\beta_{1}x_{1}^{(k)}+\\beta_{2}x_{2}^{(k)}+\\cdots+\\beta_{p}x_{p}^{(k)}+\\varepsilon^{(k)}\\]        VS. Simple Linear Regression                      Simple Linear Regression\\[\\begin{aligned}  \\text{Sales}^{(k)}  &amp;=\\beta_{0}+\\beta_{1} \\cdot \\text{TV}^{(k)}+\\varepsilon^{(k)}\\\\  \\text{Sales}^{(k)}  &amp;=\\beta_{0}+\\beta_{2} \\cdot \\text{Radio}^{(k)}+\\varepsilon^{(k)}\\\\  \\text{Sales}^{(k)}  &amp;=\\beta_{0}+\\beta_{3} \\cdot \\text{News}^{(k)}+\\varepsilon^{(k)}  \\end{aligned}\\]                  회귀계수 $\\beta_{i}$ 은 다른 요인($X_{j \\ne i}$)들의 변화에 따른 매출($\\text{Sales}$)의 변동성을 통제하지 않은 상태에서 추정되었다. 때문에 해당 요인($X_{i}$)과 다른 요인들 간 상관관계가 있을 경우, $\\beta_{i}$ 은 다른 요인들의 변화가 매출에 미치는 영향력을 포함하게 된다. 따라서 $\\beta_{i}$ 은 $X_{i}$ 가 $\\text{Sales}$ 에 미치는 순수한 영향력이라 볼 수 없다.                            Multiple Linear Regression\\[\\text{Sales}^{(k)}=\\beta_{0}+\\beta_{1} \\cdot \\text{TV}^{(k)}+\\beta_{2} \\cdot \\text{Radio}^{(k)}+\\beta_{3} \\cdot \\text{News}^{(k)}+\\varepsilon^{(k)}\\]                  회귀계수 $\\beta_{i}$ 은 다른 요인($X_{j \\ne i}$)들의 변화에 따른 매출($\\text{Sales}$)의 변동성을 통제한 상태에서 추정되었다. 따라서 $\\beta_{i}$ 은 $X_{i}$ 가 $\\text{Sales}$ 에 미치는 순수한 영향력이라 볼 수 있다.                    Normal Equation      정규방정식(Normal Equation) : 최소자승법에 기초하여 추정한 가중치 벡터\\[\\begin{aligned}  \\hat{\\overrightarrow{\\beta}}  &amp;= \\text{arg} \\min_{\\overrightarrow{\\beta}}{RSS}\\\\  &amp;= (\\mathbf{X}^{T}\\mathbf{X})^{-1}\\mathbf{X}^{T}\\overrightarrow{y}  \\end{aligned}\\]    정규방정식 도출 과정                  변수 갯수가 $P$ 이고 관측치 갯수가 $N$ 인 다중 선형 회귀 모형을 선형대수로 표현하면 다음과 같음\\[\\overrightarrow{\\hat{y}} = \\mathbf{X}\\hat{\\overrightarrow{\\beta}}\\]                  $\\mathbf{X}_{N \\times P}$ : Design Matrix                            $RSS$ 도출\\[\\begin{aligned}  RSS  &amp;= \\left\\Vert \\overrightarrow{y} - \\overrightarrow{\\hat{y}} \\right\\Vert^2\\\\  &amp;= (\\overrightarrow{y}^T - \\overrightarrow{\\beta}^T \\mathbf{X}^T)(\\overrightarrow{y} - \\mathbf{X}\\overrightarrow{\\beta})\\\\  &amp;= \\overrightarrow{y}^T \\overrightarrow{y} - \\overrightarrow{y}^T \\mathbf{X} \\overrightarrow{\\beta} - \\overrightarrow{\\beta}^T \\mathbf{X}^T \\overrightarrow{y} + \\overrightarrow{\\beta}^T \\mathbf{X}^T \\mathbf{X} \\overrightarrow{\\beta}  \\end{aligned}\\]                    $\\because \\overrightarrow{y}^T \\mathbf{X} \\overrightarrow{\\beta} = \\left(\\overrightarrow{\\beta}^T \\mathbf{X}^T \\overrightarrow{y}\\right)^T = \\overrightarrow{\\beta}^T \\mathbf{X}^T \\overrightarrow{y}$\\[RSS = \\overrightarrow{y}^T \\overrightarrow{y} - 2 \\overrightarrow{\\beta}^T \\mathbf{X}^T \\overrightarrow{y} + \\overrightarrow{\\beta}^T \\mathbf{X}^T \\mathbf{X} \\overrightarrow{\\beta}\\]                    $RSS$ 를 $\\overrightarrow{\\beta}$ 에 대하여 편미분\\[\\begin{aligned}  \\frac{\\partial}{\\partial \\overrightarrow{\\beta}} RSS  &amp;= -2 \\mathbf{X}^T \\overrightarrow{y} + 2 \\mathbf{X}^T \\mathbf{X} \\overrightarrow{\\beta}\\\\  &amp;= 0 \\quad (\\because \\min_{\\overrightarrow{\\beta}}{RSS})  \\end{aligned}\\]                    $\\overrightarrow{\\beta}$ 에 대하여 정리\\[\\begin{aligned}  \\hat{\\overrightarrow{\\beta}}  &amp;= (\\mathbf{X}^{T}\\mathbf{X})^{-1}\\mathbf{X}^{T}\\overrightarrow{y}\\\\  &amp;= \\text{arg} \\min_{\\overrightarrow{\\beta}}{RSS}  \\end{aligned}\\]                  회귀계수의 해석          설명변수 $X_{i}$ 의 회귀계수 $\\beta_{i}$ 는 다른 모든 설명변수가 일정할 때 $X_{i}$ 가 $1$ 단위 변화함에 따른 $Y$ 변화 단위의 추정치이다. 즉, 다른 모든 설명변수에 대하여 변동이 없는 상태에서, $X_{i}$ 가 $1$ 단위 변화했을 때 $Y$ 가 $\\beta_{i}$ 만큼 변화할 것이라 추정된다.      회귀계수의 유의성 검정: F-검정      정의 : 반응변수에 대한 설명변수들의 설명력이 통계적으로 유의한가에 관한 검정    귀무가설과 대립가설 설정          $H_{0}: \\quad \\beta_1=\\beta_2 =\\cdots =\\beta_p=0$      $H_{1}: \\quad$ 적어도 하나의 $i$ 에 대하여 $\\beta_{i} \\ne 0$            검정통계량 도출\\[F  = \\frac{ESS/p}{RSS/(n-p-1)} \\sim F(p, n-p-1)\\]                  회귀변동(Explained Sum of Square; ESS) : 모형에 의해 설명되는 반응변수의 변동성\\[ESS=TSS-RSS\\]                    총변동(Total Sum of Square; TSS) : 반응변수의 총 변동성\\[\\begin{aligned}  TSS  &amp;= \\left\\Vert \\overrightarrow{y} - \\overline{y} \\right\\Vert^2\\\\  &amp;= \\sum{\\left(y^{(i)}-\\overline{y} \\right)^2}  \\end{aligned}\\]                    잔차변동(Residual Sum of Square) : 모형에 의해 설명되지 않는 반응변수의 변동성\\[\\begin{aligned}  RSS  &amp;= \\left\\Vert \\overrightarrow{y} - \\overrightarrow{\\hat{y}} \\right\\Vert^2\\\\  &amp;= \\sum{\\left(y^{(i)}-\\hat{y}^{(i)}\\right)^2}  \\end{aligned}\\]            부분 유의성 검정  Occam’s Razor  Entities should not be multiplied beyond necessity.      정의 : 설명변수 추가에 따른 부분적 효과의 통계적 유의성에 관한 검정    모형 예시          $y=\\beta_0 + \\beta_1 X_1 + \\beta_2 X_2 + \\varepsilon$      $y=\\beta_0 + \\beta_1 X_1 + \\beta_2 X_2 + \\beta_3 X_3 + \\beta_4 X_4 + \\varepsilon$        귀무가설과 대립가설 설정          $H_{0}: \\quad \\beta_3=\\beta_4=0$      $H_{1}: \\quad \\beta_{3} \\ne 0 \\quad \\text{or} \\quad \\beta_{4} \\ne 0$            검정통계량 도출\\[F  = \\frac{(RSS_{0}-RSS)/q}{RSS/(n-p-1)} \\sim F(q, n-p-1)\\]                  $RSS$ : 설명변수 $X_{3}, X_{4}$ 를 추가한 모형에 의해 설명되지 않는 반응변수의 변동성\\[\\begin{aligned}  RSS  &amp;= \\sum{\\left[y^{(i)}-\\left(\\beta_0 + \\beta_1 x^{(i)}_1 + \\beta_2 x^{(i)}_2 + \\beta_3 x^{(i)}_3 + \\beta_4 x^{(i)}_4 \\right) \\right]^2}  \\end{aligned}\\]                    $RSS_{0}$ : 설명변수 $X_{3}, X_{4}$ 를 추가하지 않은 모형에 의해 설명되지 않는 반응변수의 변동성\\[\\begin{aligned}  RSS_{0}  &amp;= \\sum{\\left[y^{(i)}-\\left(\\beta_0 + \\beta_1 x^{(i)}_1 + \\beta_2 x^{(i)}_2 \\right) \\right]^2}  \\end{aligned}\\]            $n$ : 관측치 갯수      $p$ : 총 설명변수 갯수      $q$ : 검정 대상 설명변수($X_{3}, X_{4}$) 를 제외한 설명변수의 갯수      이미지 출처  https://www.linkedin.com/pulse/understanding-linear-regression-basics-divyesh-sonar-snv4c/"
+  },
+  
+  {
+    "title": "SASREC",
+    "url": "/posts/SASREC/",
+    "categories": "AI & Data Mining, Recommender System",
+    "tags": "Paper Review, Data Mining, RecSys, Sequential RecSys, Deep Learning, Attention Mechanism",
+    "date": "2024-07-10 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
   },
   
   {
@@ -205,6 +460,23 @@
   },
   
   {
+    "title": "GRU4REC",
+    "url": "/posts/GRU4REC/",
+    "categories": "AI & Data Mining, Recommender System",
+    "tags": "Paper Review, Data Mining, RecSys, Sequential RecSys, Deep Learning, RNN",
+    "date": "2024-07-03 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
     "title": "Probability",
     "url": "/posts/Probability/",
     "categories": "Statistical Techs, Statistics",
@@ -239,6 +511,193 @@
   },
   
   {
+    "title": "Mult-VAE",
+    "url": "/posts/Mult-VAE/",
+    "categories": "AI & Data Mining, Recommender System",
+    "tags": "Paper Review, Data Mining, RecSys, Collaborative Filtering, Deep Learning, Autoencoder, Bayesian",
+    "date": "2024-06-05 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "CDAE",
+    "url": "/posts/CDAE/",
+    "categories": "AI & Data Mining, Recommender System",
+    "tags": "Paper Review, Data Mining, RecSys, Collaborative Filtering, Deep Learning, Autoencoder",
+    "date": "2024-05-22 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "DeepFM",
+    "url": "/posts/DeepFM/",
+    "categories": "AI & Data Mining, Recommender System",
+    "tags": "Paper Review, Data Mining, RecSys, Collaborative Filtering, Latent Factor Model, Deep Learning",
+    "date": "2024-05-01 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "Wide & Deep Learning",
+    "url": "/posts/Wide_Deep_Learning/",
+    "categories": "AI & Data Mining, Recommender System",
+    "tags": "Paper Review, Data Mining, RecSys, Collaborative Filtering, Latent Factor Model, Deep Learning",
+    "date": "2024-04-03 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "FM",
+    "url": "/posts/FM/",
+    "categories": "AI & Data Mining, Recommender System",
+    "tags": "Paper Review, Data Mining, RecSys, Collaborative Filtering, Latent Factor Model",
+    "date": "2024-03-20 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "NCF",
+    "url": "/posts/NCF/",
+    "categories": "AI & Data Mining, Recommender System",
+    "tags": "Paper Review, Data Mining, RecSys, Collaborative Filtering, Latent Factor Model, Deep Learning",
+    "date": "2024-03-06 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "FISM",
+    "url": "/posts/FISM/",
+    "categories": "AI & Data Mining, Recommender System",
+    "tags": "Paper Review, Data Mining, RecSys, Collaborative Filtering, User Free Model",
+    "date": "2024-02-29 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "SLIM",
+    "url": "/posts/SLIM/",
+    "categories": "AI & Data Mining, Recommender System",
+    "tags": "Paper Review, Data Mining, RecSys, Collaborative Filtering, User Free Model",
+    "date": "2024-02-22 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "FPMC",
+    "url": "/posts/FPMC/",
+    "categories": "AI & Data Mining, Recommender System",
+    "tags": "Paper Review, Data Mining, RecSys, Collaborative Filtering, Sequential RecSys, Latent Factor Model",
+    "date": "2024-02-15 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "TimeSVD++",
+    "url": "/posts/TimeSVD++/",
+    "categories": "AI & Data Mining, Recommender System",
+    "tags": "Paper Review, Data Mining, RecSys, Collaborative Filtering, Temporal RecSys, Latent Factor Model",
+    "date": "2024-02-08 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "SubGroup",
+    "url": "/posts/Subgroup/",
+    "categories": "AI & Data Mining, Social Media Analytics",
+    "tags": "Data Mining, Social Media, Social Network, Graph",
+    "date": "2024-02-02 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
     "title": "Structural Hole and Broker",
     "url": "/posts/Structural_Hole_Broker/",
     "categories": "AI & Data Mining, Social Media Analytics",
@@ -253,6 +712,23 @@
     
     "snippet": "구조적 공백네트워크가 액터에게 주는 효익  정보효익(Information Benefit)          정보 획득 기회      정보 획득의 신속성      보유 정보의 다양성        통제효익(Control Benefit)          교섭력      통제력      구조적 공백(Structure Hole)      정의 : 네트워크에서 액...",
     "content": "구조적 공백네트워크가 액터에게 주는 효익  정보효익(Information Benefit)          정보 획득 기회      정보 획득의 신속성      보유 정보의 다양성        통제효익(Control Benefit)          교섭력      통제력      구조적 공백(Structure Hole)      정의 : 네트워크에서 액터 간 연결관계가 성립되지 않은 지점    목적 : 정보효익과 통제효익을 에고 네트워크의 구조 관점에서 이해하기 위함          구조적 공백과 정보효익 : 양의 상관관계                  에고 네트워크에서 알터 간 연결관계가 성립되어 있을 경우          에고가 획득하는 정보 출처의 다양성이 감소함          에고가 획득하는 정보에 중복이 발생함                    구조적 공백과 통제효익 : 양의 상관관계                  에고 네트워크에서 알터 간 연결관계가 성립되어 있을 경우          알터들은 에고를 매개하지 않고서도 상호간에 정보를 교환할 수 있음          즉, 에고가 다른 알터와의 연결관계를 기반으로 알터를 교섭 및 통제하기 어려움                      에고 네트워크에서 구조적 공백의 대리변수          에고의 매개 중심성 : 구조적 공백과 양의 상관관계      밀도(알터 간 연결 정도) : 구조적 공백과 음의 상관관계      중개자(Broker)      정의 : 에고 네트워크에서 연결관계가 성립되지 아니한 두 알터에 대한 에고의 위치적 우위를 유형화하기 위해 고안된 개념    동일 그룹에 속한 알터들을 중개하는 경우          조정자 : 에고가 알터들과 동일 그룹에 속해 있는 경우      컨설턴트 : 에고가 알터들과 다른 그룹에 속해 있는 경우        다른 그룹에 속한 알터들을 중개하는 경우          연락자 : 에고가 제3의 그룹에 속해 있는 경우      대표자 : 에고가 하나의 알터와 동일 그룹에 속해 있고, 해당 알터를 대리하는 경우      문지기 : 에고가 하나의 알터와 동일 그룹에 속해 있고, 알터 간에 접촉하기 위해서는 에고의 허락이 필요한 경우      효율성과 제약성유효규모와 효율성      목적 : 에고 네트워크에서 구조적 공백에 따른 에고의 위치적 우위 정도를 파악하기 위함        유효규모 : 에고 $N_i$ 가 알터들과 중복되지 아니하고 연결된 갯수\\[\\begin{aligned}  ES(N_i)  &amp;=\\displaystyle\\sum_{j=1}^{g}{(1-R_{i,j})}\\\\  &amp;=g-R(N_i)  \\end{aligned}\\]          $R(N_{i})$ : 에고 $N_i$ 의 중복성      $R_{i,j}$ : 에고 $N_i$ 와 알터 $N_j$ 의 중복 정도      $g$ : 에고 네트워크의 크기            효율성 : 유효규모를 실제규모로 표준화한 값\\[EF(N_i)  =\\frac{ES(N_i)}{g}\\]  중복성      정의 : 에고 네트워크에서 알터 간 연결관계 성립 여부 및 그 강도        계산\\[\\begin{aligned}  R(N_{i})  &amp;=\\displaystyle\\sum_{j=1}^{g}{R_{i,j}}\\\\  &amp;=\\displaystyle\\sum_{j=1}^{g}{\\displaystyle\\sum_{q=1}^{g-1}{p_{i,q}m_{j,q}}}  \\end{aligned}\\]          $R(N_{i})$ : 에고 $N_i$ 의 중복성      $R_{i,j}$ : 에고 $N_i$ 와 알터 $N_j$ 의 중복 정도      $p_{i,q}$ : 에고 $N_i$ 의 연결 정도 대비 알터 $N_{j}$ 와 직접 접촉하기 위해 투자된 연결 정도      $m_{j,q}$ : 알터 $N_j$ 의 알터 $N_q$ 에 대한 한계 강도                  $N_j$ 의 연결관계 중 최대 강도 대비 $N_q$ 와의 연결 강도          이진 네트워크의 경우 $0$ 또는 $1$ 임                    $g$ : 에고 네트워크의 크기      제약성      목적 : 에고 네트워크에서 에고가 알터의 영향에 얼마나 취약한지를 파악하기 위함        정의 : 에고 네트워크에서 알터들의 연결관계 성립 및 그 강도가 에고의 위치적 우위를 제약하는 정도        계산\\[\\begin{aligned}  C(N_i)  &amp;=\\displaystyle\\sum_{j=1}^{g}{C_{i,j}}\\\\  &amp;=\\displaystyle\\sum_{j=1}^{g}{(p_{i,j} + \\displaystyle\\sum_{q=1}^{g-1}{p_{i,q}p_{q,j}})}  \\end{aligned}\\]          $C(N_{i})$ : 에고 $N_i$ 의 제약성      $C_{i,j}$ : 에고 $N_i$ 에 대한 알터 $N_j$ 의 제약 정도      $p_{i,j}$ : 에고 $N_i$ 의 연결 정도 대비 알터 $N_{j}$ 와 직접 접촉하기 위해 투자된 연결 정도      $p_{i,q}\\times p_{q,j}$ : 에고 $N_i$ 가 알터 $N_q$ 를 매개로 알터 $N_j$ 에 간접 접촉하기 위해 투자된 연결 정도      $g$ : 에고 네트워크의 크기      "
+  },
+  
+  {
+    "title": "BPR",
+    "url": "/posts/BPR/",
+    "categories": "AI & Data Mining, Recommender System",
+    "tags": "Paper Review, Data Mining, RecSys, Collaborative Filtering, Latent Factor Model, Pairewise Learning, Ranking Prediction",
+    "date": "2024-02-01 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
   },
   
   {
@@ -310,7 +786,7 @@
     "title": "RNN",
     "url": "/posts/RNN/",
     "categories": "Machine Learning Techs, Deep Learning",
-    "tags": "Deep Learning, NLP",
+    "tags": "Deep Learning, RNN, NLP",
     "date": "2024-01-26 00:00:00 +0900",
     
 
@@ -324,10 +800,27 @@
   },
   
   {
+    "title": "Latent Factor Model",
+    "url": "/posts/LFM/",
+    "categories": "AI & Data Mining, Recommender System",
+    "tags": "Paper Review, Data Mining, RecSys, Collaborative Filtering, Latent Factor Model",
+    "date": "2024-01-25 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
     "title": "CNN",
     "url": "/posts/CNN/",
     "categories": "Machine Learning Techs, Deep Learning",
-    "tags": "Deep Learning, CV",
+    "tags": "Deep Learning, CNN, CV",
     "date": "2024-01-25 00:00:00 +0900",
     
 
@@ -378,7 +871,7 @@
     "title": "Deep Learning WorkFlow",
     "url": "/posts/DNN/",
     "categories": "Machine Learning Techs, Deep Learning",
-    "tags": "Deep Learning",
+    "tags": "Deep Learning, FFNN",
     "date": "2024-01-22 00:00:00 +0900",
     
 
@@ -389,6 +882,23 @@
     
     "snippet": "What? Deep Learning  정의 : 심층 인공 신경망 알고리즘을 활용한 기계학습 방법          심층 신경망(Deep Artificial Neural Network; DNN) : 층을 겹겹이 쌓아올려 구성한 알고리즘      알고리즘(Algorithm) : 관측치들로부터 표현을 학습하는 수학 모델            인공 신경망과 심층...",
     "content": "What? Deep Learning  정의 : 심층 인공 신경망 알고리즘을 활용한 기계학습 방법          심층 신경망(Deep Artificial Neural Network; DNN) : 층을 겹겹이 쌓아올려 구성한 알고리즘      알고리즘(Algorithm) : 관측치들로부터 표현을 학습하는 수학 모델            인공 신경망과 심층 신경망의 구분              인공 신경망(Artificial Neural Network; ANN) : 은닉층이 하나인 신경망      심층 신경망(Deep Artificial Neural Network; DNN) : 은닉층이 둘 이상인 신경망            심층 신경망의 구성 : 완전 연결 계층(Fully Connected Layer)              입력층(Input Layer) : 관측치를 입력 받는 계층      평탄화층(Flatten Layer) : 관측치 속성의 구조를 1차원으로 평탄화하는 계층      은닉층(Hidden Layer) : 입력층과 출력층 사이에 존재하는 계층      출력층(Output Layer) : 예측값(Target value)을 출력하는 계층            학습 목표 : 모델 파라미터에 대하여, 손실을 최소화하는 아규먼트 탐색    파라미터 종류          모델 파라미터(Model Parameter)                  Weight          Bias                    하이퍼 파라미터(Hyper Parameter)                  Unit Layer          Unit Node          Activation Function          Loss Function          Optimizer          Batch Size          Epoch                    층(Layer)의 이해      정의 : 하나 이상의 텐서를 입력값으로 받고, 하나 이상의 텐서를 출력값으로 반환하는 데이터 처리 모듈            구성 : 퍼셉트론(Perceptron)            상태 : 모델 파라미터로서 가중치 행렬(Weight; $W$) 과 편향 벡터(bias; $\\overrightarrow{b}$)        연산 : 순입력 함수와 활성화 함수로 구성된 정방향 패스(Forward Path)                  순입력 함수(Net Input Function)        \\[W \\cdot \\overrightarrow{x} + \\overrightarrow{b}\\]                    활성화 함수(Activation Function)                  Relu          Tanh          Sigmoid          Step          Softmax                    학습 과정의 이해      학습 횟수의 이해              epochs : 훈련용 데이터 세트를 구성하는 모든 관측치가 신경망을 통과하는 횟수      iteration : epoch 를 1회 마치는 동안 모델 파라미터 갱신 횟수      batch_size : epoch 를 1회 마치는 동안 모델 파라미터를 1회 갱신하기 위하여 동원할 관측치 갯수            iteration 과정              Forward Path : 관측치에 대하여 순전파 연산하여 예측값을 도출함      Loss Output : 손실 함수를 통해 손실을 도출함      Backward Path : 손실을 줄이도록 각 계층의 모델 파라미터를 갱신함        학습 목적 함수 : 손실 함수(Loss Function)                  정의 : 손실을 반응변수, 모델 파라미터를 설명변수로 가지는 함수            판별 분석 : 대개 crossentropy 를 손실로 간주함                  binary_crossentropy : 이항 분류 분석 시 사용하는 크로스 엔트로피 불순도          categorical_crossentropy : 다항 분류 분석, 반응변수가 희소 행렬인 경우          sparse_categorical_crossentropy : 다항 분류 분석, 반응변수가 희소 행렬이 아닌 경우                    회귀 분석 : 대개 squared_error 를 손실로 간주함                  mean_squared_error          mean_squared_log_error          mean_absolute_error          mean_absolute_percentage_error          cosine_similarity                      학습 방식 : 경사하강법(Gadient Descent)          GD : 모든 관측치를 검토하여 가중치 갱신 방향 및 크기 결정      SGD : 일부 관측치만 확률적으로 검토함      Momentum      RMSProp      Adam      텐서플로와 케라스  텐서플로(TensorFlow) : 저수준 컴퓨팅 플랫폼          텐서(Tensor)      미분(Gradient Tape API)        케라스(Keras) : 고수준 딥러닝 API          층(Layer)      모델(Sequential API, Functional API, Model Class)      옵티마이저(Optimizer)      손실 함수(Loss Function)      성능 검증 지표(Metric)      "
+  },
+  
+  {
+    "title": "What? RecSys",
+    "url": "/posts/What_RecSys/",
+    "categories": "AI & Data Mining, Recommender System",
+    "tags": "Data Mining, Recommender System",
+    "date": "2024-01-18 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
   },
   
   {
@@ -1118,8 +1628,8 @@
 
 
     
-    "snippet": "Pareto Efficiency  자원 배분 상태에 대한 평가 기준          자원 배분의 효율성(Efficiency) : 파레토 효율성(Pareto Efficiency)      자원 배분의 형평성(Equity) : 사회후생함수(Social Welfare Function)      What? Pareto Efficiency      파레토 효율...",
-    "content": "Pareto Efficiency  자원 배분 상태에 대한 평가 기준          자원 배분의 효율성(Efficiency) : 파레토 효율성(Pareto Efficiency)      자원 배분의 형평성(Equity) : 사회후생함수(Social Welfare Function)      What? Pareto Efficiency      파레토 효율성(Pareto Efficiency) : 임의의 경제주체의 효용수준을 이전보다 불리하게 만들지 않고서는 어떤 경제주체의 효용수준도 개선할 수 없을 정도로 자원이 배분되었음        예시                            자원 배분 방법          부존자원량          총배분자원량          $A$          $B$          잉여자원량                                      배분1          100          100          30          70          0                          배분2          100          100          70          30          0                          배분3          100          100          50          50          0                          배분4          100          80          20          60          20                          배분5          100          80          60          20          20                          배분6          100          80          40          40          20                            $\\text{배분1},\\text{배분2},\\text{배분3}$ : 임의의 경제주체가 취득한 자원을 회수하지 않고서는 다른 경제주체의 자원 보유량을 개선할 수 없는 상태로서 파레토 최적인 상태임(Pareto Optimal)      $\\text{배분4},\\text{배분5},\\text{배분6}$ : 임의의 경제주체가 취득한 자원을 회수하지 않고서도 잉여자원 $20$ 으로써 다른 경제주체의 자원 보유량을 개선할 수 있는 상태로서 파레토 개선 가능한 상태임(Pareto Improvement)      따라서 $\\text{배분1},\\text{배분2},\\text{배분3}$ 은 $\\text{배분4},\\text{배분5},\\text{배분6}$ 보다 파레토 우월함(Pareto Superiority)      Condition      생산의 효율성(Productive Efficiency) : 사용 가능한 생산요소 제약 하 경제 전반의 재화 생산량을 극대화하여, 임의의 재화의 생산량을 몇 단위 포기하지 않고서는 다른 재화의 생산량을 개선하지 못하는 상태를 이룸\\[MRTS^{(X)}_{L,K}=\\frac{w}{v}=MRTS^{(Y)}_{L,K}\\]                생산요소 $L,K$ 제약 하 재화 $X,Y$ 에 대한 생산의 계약곡선                  상품 공간 상에 표현된 재화 $X,Y$ 에 대한 생산의 계약곡선으로서생산가능경계(Production Possibility Frontier; PPF)          교환의 효율성(Allocative Efficiency) : 배분 가능한 부존자원 제약 하 경제 전반의 효용을 극대화하여, 임의의 경제주체의 효용수준을 이전보다 불리하게 만들지 않고서는 다른 경제주체의 효용수준을 개선하지 못하는 상태를 이룸\\[MRS^{(A)}_{X,Y}=\\frac{P_X}{P_Y}=MRS^{(B)}_{X,Y}\\]                부존자원 $X,Y$ 제약 하 경제주체 $A,B$ 에 대한 교환의 계약곡선          총체적 효율성(Overall Efficiency) : 사용 가능한 생산요소 제약 하 극대화된 재화 생산량을 경제주체들에게 모두 배분하여 경제 전반의 효용수준을 극대화한 상태를 이룸\\[MRPT_{X,Y}=MRS_{X,Y}\\]                총체적 효율성 하에서는 재화별 한계기술대체율, 재화 간 한계생산변환율, 그리고 경제주체별 한계대체율이 일치함                  주어진 자원들과 기술 수준에서 달성 가능한 최대 효용 조합으로서효용가능경계(Utility Possibility Frontier; UPF)    Social Welfare Function      사회후생함수(Social Welfare Function) : 사회 구성원들의 효용수준($X$)과 사회후생수준($Y$) 간 상관관계를 나타내는 함수\\[SW=F\\left(U_{A},U_{B}\\right)\\]          효율성의 정의가 파레토 효율성으로써 합의된 데 반해, 형평성은 윤리적 관점에 따라 그 해석이 다양함. 이에 따라 파레토 최적 상태 하 형평성 달성도를 나타내는 사회후생함수 역시 어느 하나로 합의되지 않고 다양한 형태를 띰.            (초기) 공리주의 사회후생함수(Utilitarian Social Welfare Function) : 최대 다수의 최대 행복\\[SW=U_{A}+U_{B}\\]            롤스 사회후생함수(Rawlsian Social Welfare Function) : 최소 수혜자의 최대 이익\\[SW=\\min{\\left[U_{A},U_{B}\\right]}\\]            (실질적) 평등주의 사회후생함수(Egalitarian Social Welfare Function) : 한계효용의 평등\\[SW=\\left(U_A\\right)^{\\alpha} \\cdot \\left(U_B\\right)^{1-\\alpha}\\]      "
+    "snippet": "Pareto Efficiency      자원 배분에 관한 사회적 의사결정 기준          주어진 자원들과 기술 수준에서 달성 가능한 최대 효용 조합 하에서 형평성 있는 지점을 선택함              자원 배분의 효율성(Efficiency) : 파레토 효율성(Pareto Efficiency)      자원 배분의 형평성(Equity) : ...",
+    "content": "Pareto Efficiency      자원 배분에 관한 사회적 의사결정 기준          주어진 자원들과 기술 수준에서 달성 가능한 최대 효용 조합 하에서 형평성 있는 지점을 선택함              자원 배분의 효율성(Efficiency) : 파레토 효율성(Pareto Efficiency)      자원 배분의 형평성(Equity) : 사회후생함수(Social Welfare Function)      What? Pareto Efficiency      파레토 효율성(Pareto Efficiency) : 임의의 경제주체의 효용수준을 이전보다 불리하게 만들지 않고서는 어떤 경제주체의 효용수준도 개선할 수 없을 정도로 자원이 배분되었음        예시                            자원 배분 방법          부존자원량          총배분자원량          $A$          $B$          잉여자원량                                      배분1          100          100          30          70          0                          배분2          100          100          70          30          0                          배분3          100          100          50          50          0                          배분4          100          80          20          60          20                          배분5          100          80          60          20          20                          배분6          100          80          40          40          20                            $\\text{배분1},\\text{배분2},\\text{배분3}$ : 임의의 경제주체가 취득한 자원을 회수하지 않고서는 다른 경제주체의 자원 보유량을 개선할 수 없는 상태로서 파레토 최적인 상태임(Pareto Optimal)      $\\text{배분4},\\text{배분5},\\text{배분6}$ : 임의의 경제주체가 취득한 자원을 회수하지 않고서도 잉여자원 $20$ 으로써 다른 경제주체의 자원 보유량을 개선할 수 있는 상태로서 파레토 개선 가능한 상태임(Pareto Improvement)      따라서 $\\text{배분1},\\text{배분2},\\text{배분3}$ 은 $\\text{배분4},\\text{배분5},\\text{배분6}$ 보다 파레토 우월함(Pareto Superiority)      Condition      생산의 효율성(Productive Efficiency) : 사용 가능한 생산요소 제약 하 경제 전반의 재화 생산량을 극대화하여, 임의의 재화의 생산량을 몇 단위 포기하지 않고서는 다른 재화의 생산량을 개선하지 못하는 상태를 이룸\\[MRTS^{(X)}_{L,K}=\\frac{w}{v}=MRTS^{(Y)}_{L,K}\\]                생산요소 $L,K$ 제약 하 재화 $X,Y$ 에 대한 생산의 계약곡선                  상품 공간 상에 표현된 재화 $X,Y$ 에 대한 생산의 계약곡선으로서생산가능경계(Production Possibility Frontier; PPF)          교환의 효율성(Allocative Efficiency) : 배분 가능한 부존자원 제약 하 경제 전반의 효용을 극대화하여, 임의의 경제주체의 효용수준을 이전보다 불리하게 만들지 않고서는 다른 경제주체의 효용수준을 개선하지 못하는 상태를 이룸\\[MRS^{(A)}_{X,Y}=\\frac{P_X}{P_Y}=MRS^{(B)}_{X,Y}\\]                부존자원 $X,Y$ 제약 하 경제주체 $A,B$ 에 대한 교환의 계약곡선          총체적 효율성(Overall Efficiency) : 사용 가능한 생산요소 제약 하 극대화된 재화 생산량을 경제주체들에게 모두 배분하여 경제 전반의 효용수준을 극대화한 상태를 이룸\\[MRPT_{X,Y}=MRS_{X,Y}\\]                총체적 효율성 하에서는 재화 간 한계생산변환율과 경제주체별 재화 간 한계대체율이 일치함                  주어진 자원들과 기술 수준에서 달성 가능한 최대 효용 조합으로서효용가능경계(Utility Possibility Frontier; UPF)    Social Welfare Function      사회후생함수(Social Welfare Function) : 사회 구성원들의 효용수준($X$)과 사회후생수준($Y$) 간 상관관계를 나타내는 함수\\[SW=F\\left(U_{A},U_{B}\\right)\\]          효율성의 정의가 파레토 효율성으로써 합의된 데 반해, 형평성은 윤리적 관점에 따라 그 해석이 다양함. 이에 따라 파레토 최적 상태 하 형평성 달성도를 나타내는 사회후생함수 역시 어느 하나로 합의되지 않고 다양한 형태를 띰.            (초기) 공리주의 사회후생함수(Utilitarian Social Welfare Function) : 최대 다수의 최대 행복          비록 효용이 주관적 개념이긴 하나, 개인 간에 질적으로는 차이가 없고, 오로지 양적으로만 차이가 있음. 따라서 사회 전체의 효용수준은 그저 그 사회 구성원들이 누리는 효용의 총합에 불과함.    \\[SW=U_{A}+U_{B}\\]            롤스 사회후생함수(Rawlsian Social Welfare Function) : 최소 수혜자의 최대 이익          사회 구성원들에게 무지의 베일을 씌운 원초적 상황 하에서 민주적으로 자원 배분 정책을 수립한다고 하자. 타인의 이익에 무관심하고 오로지 자신의 이익에만 관심이 있음에도 불구하고, 사회 구성원들은 자신이 최악의 상황에 처할 가능성을 고려하여 최소극대화 원칙에 근거한 배분 정책을 수립할 것임.    \\[SW=\\min{\\left[U_{A},U_{B}\\right]}\\]            (실질적) 평등주의 사회후생함수(Egalitarian Social Welfare Function) : 한계효용의 평등          빈자에게 있어서 1원과 부자의 그것이 가지는 실질적 가치가 같다고 볼 수 없음. 따라서 사회 전체의 효용수준을 논함에 있어서 개인의 사정을 고려해야 함.    \\[SW=\\left(U_A\\right)^{\\alpha} \\cdot \\left(U_B\\right)^{1-\\alpha}\\]      Impossibility Theorem  합리성의 공리와 민주성의 공리는 상호위배된다. 따라서 사회후생수준을 평가할 수 있는, 합리적인 동시에 민주적인 사회선호체계란 존재할 수 없다. (케네스 애로우)  합리적 사회선호체계의 공리                  완비성(Completeness); 사회선호체계가 모든 사회적 상태를 비교하고 평가할 수 있어야 한다.\\[X \\neq Y \\implies X \\succeq Y \\;\\text{or}\\; Y \\succeq X \\quad\\text{for}\\quad X, Y \\in \\mathcal{S}\\]                    이행성(Transitivity); 사회적 상태 $X, Y, Z$ 에 대하여 사회선호체계가 $X$ 를 $Y$ 보다 선호하고 $Y$ 를 $Z$ 보다 선호하면 $X$ 를 $Z$ 보다 선호해야 한다.\\[X \\succeq Y \\;\\text{and}\\; Y \\succeq Z \\implies X \\succeq Z \\quad\\text{for}\\quad X, Y, Z \\in \\mathcal{S}\\]                    파레토 원칙(Pareto Principle); 임의의 사회적 상태에 대하여 모든 사회 구성원들이 해당 사회적 상태를 다른 사회적 상태보다 선호한다면, 사회선호체계 역시 해당 사회적 상태를 다른 사회적 상태보다 선호해야 한다.\\[\\begin{aligned} X \\succ_i Y \\implies X \\succ Y \\quad\\text{for}\\quad X, Y &amp;\\in \\mathcal{S},\\\\ i^{\\forall} &amp;\\in N \\end{aligned}\\]                    독립성(Independence); 사회선호체계가 두 가지 사회적 상태의 선호관계를 평가함에 있어서 이들과 무관한 것으로부터 영향을 받지 말아야 한다.\\[\\begin{aligned} X \\succ Y \\implies X \\succ^{\\prime} Y \\quad\\text{for}\\quad X, Y &amp;\\in \\mathcal{S},\\\\ Z &amp;\\in \\mathcal{S} \\setminus \\{X, Y\\} \\end{aligned}\\]              민주적 사회선호체계의 공리                  비독재성(Non-dictatorship); 사회선호체계가 사회 구성원 소수의 선호체계에 좌우되지 말아야 한다.\\[\\nexists i \\in N \\; \\text{such that} \\; X \\succ_i Y \\implies X \\succ Y \\quad\\text{for}\\quad X, Y \\in \\mathcal{S}\\]              이행성과 민주성의 동시 성립 불가능성                  사회 구성원 $A,B,C$ 가 사회적 상태 $X,Y,Z$ 에 대하여 각각 다음과 같이 평가한다고 하자\\[\\begin{aligned}  A:\\quad &amp;X \\succ_A Y \\; \\text{and} \\; Y \\succ_A Z\\\\  B:\\quad &amp;Y \\succ_B Z \\; \\text{and} \\; Z \\succ_B X\\\\  C:\\quad &amp;Z \\succ_C X \\; \\text{and} \\; X \\succ_C Y  \\end{aligned}\\]                    사회선호체계는 파레토 원칙 및 비독재성에 의해 사회적 상태를 다음과 같이 평가함\\[\\begin{aligned}  \\mathcal{S}: X \\succ Y \\; \\text{and} \\; Y \\succ Z \\; \\text{and} \\; Z \\succ X  \\end{aligned}\\]                    따라서 민주성의 공리에 기초하여 도출한 사회선호체계는 이행성을 보장하지 못함            "
   },
   
   {

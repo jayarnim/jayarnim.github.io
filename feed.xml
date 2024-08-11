@@ -4,7 +4,7 @@
   <id>https://jayarnim.github.io/</id>
   <title>Data Scientist</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-08-05T22:12:17+09:00</updated>
+  <updated>2024-08-11T22:37:41+09:00</updated>
   <author>
     <name>jayarnim</name>
     <uri>https://jayarnim.github.io/</uri>
@@ -20,131 +20,131 @@
 
   
   <entry>
-    <title>Bayes Estimator</title>
-    <link href="https://jayarnim.github.io/posts/Bayes_Estimator/" rel="alternate" type="text/html" title="Bayes Estimator" />
-    <published>2024-07-18T00:00:00+09:00</published>
+    <title>BDNet</title>
+    <link href="https://jayarnim.github.io/posts/BDNet/" rel="alternate" type="text/html" title="BDNet" />
+    <published>2024-08-07T00:00:00+09:00</published>
   
-    <updated>2024-07-18T00:00:00+09:00</updated>
+    <updated>2024-08-07T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/Bayes_Estimator/</id>
-    <content src="https://jayarnim.github.io/posts/Bayes_Estimator/" />
+    <id>https://jayarnim.github.io/posts/BDNet/</id>
+    <content src="https://jayarnim.github.io/posts/BDNet/" />
     <author>
       <name>jayarnim</name>
     </author>
 
   
     
-    <category term="Statistical Techs" />
+    <category term="AI &amp; Data Mining" />
     
-    <category term="Bayesian Modeling" />
+    <category term="Recommender System" />
     
   
 
-  <summary>Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp;amp; Management, College of Business Administration, Kookmin Univ.</summary>
+  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://link.springer.com/article/10.1007/s11704-018-8049-1&amp;quot;&amp;gt;&amp;lt;em&amp;gt;Bayesian dual neural networks for recommendation&amp;lt;/em&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Author&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;He et al.&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Publisher&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;FCS&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2019&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;</summary>
 
   </entry>
 
   
   <entry>
-    <title>Prior Prob. Dist.</title>
-    <link href="https://jayarnim.github.io/posts/Prior_Prob_Dist/" rel="alternate" type="text/html" title="Prior Prob. Dist." />
-    <published>2024-07-17T00:00:00+09:00</published>
+    <title>Language Model (2) Deep Learning Techs</title>
+    <link href="https://jayarnim.github.io/posts/Langs_Model_2/" rel="alternate" type="text/html" title="Language Model (2) Deep Learning Techs" />
+    <published>2024-08-03T00:00:00+09:00</published>
   
-    <updated>2024-07-17T00:00:00+09:00</updated>
+    <updated>2024-08-03T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/Prior_Prob_Dist/</id>
-    <content src="https://jayarnim.github.io/posts/Prior_Prob_Dist/" />
+    <id>https://jayarnim.github.io/posts/Langs_Model_2/</id>
+    <content src="https://jayarnim.github.io/posts/Langs_Model_2/" />
     <author>
       <name>jayarnim</name>
     </author>
 
   
     
-    <category term="Statistical Techs" />
+    <category term="AI &amp; Data Mining" />
     
-    <category term="Bayesian Modeling" />
+    <category term="Text Analytics" />
     
   
 
-  <summary>Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp;amp; Management, College of Business Administration, Kookmin Univ.</summary>
+  <summary>Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</summary>
 
   </entry>
 
   
   <entry>
-    <title>Monte Carlo Simulation</title>
-    <link href="https://jayarnim.github.io/posts/MC/" rel="alternate" type="text/html" title="Monte Carlo Simulation" />
-    <published>2024-07-16T00:00:00+09:00</published>
+    <title>Language Model (1) Statistical Techs</title>
+    <link href="https://jayarnim.github.io/posts/Langs_Model_1/" rel="alternate" type="text/html" title="Language Model (1) Statistical Techs" />
+    <published>2024-08-02T00:00:00+09:00</published>
   
-    <updated>2024-07-16T00:00:00+09:00</updated>
+    <updated>2024-08-02T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/MC/</id>
-    <content src="https://jayarnim.github.io/posts/MC/" />
+    <id>https://jayarnim.github.io/posts/Langs_Model_1/</id>
+    <content src="https://jayarnim.github.io/posts/Langs_Model_1/" />
     <author>
       <name>jayarnim</name>
     </author>
 
   
     
-    <category term="Statistical Techs" />
+    <category term="AI &amp; Data Mining" />
     
-    <category term="Bayesian Modeling" />
+    <category term="Text Analytics" />
     
   
 
-  <summary>Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp;amp; Management, College of Business Administration, Kookmin Univ.</summary>
+  <summary>Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</summary>
 
   </entry>
 
   
   <entry>
-    <title>What? Bayesian</title>
-    <link href="https://jayarnim.github.io/posts/Bayesian/" rel="alternate" type="text/html" title="What? Bayesian" />
-    <published>2024-07-15T00:00:00+09:00</published>
+    <title>Topic Modeling</title>
+    <link href="https://jayarnim.github.io/posts/Topic_Modeling/" rel="alternate" type="text/html" title="Topic Modeling" />
+    <published>2024-08-01T00:00:00+09:00</published>
   
-    <updated>2024-07-15T00:00:00+09:00</updated>
+    <updated>2024-08-01T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/Bayesian/</id>
-    <content src="https://jayarnim.github.io/posts/Bayesian/" />
+    <id>https://jayarnim.github.io/posts/Topic_Modeling/</id>
+    <content src="https://jayarnim.github.io/posts/Topic_Modeling/" />
     <author>
       <name>jayarnim</name>
     </author>
 
   
     
-    <category term="Statistical Techs" />
+    <category term="AI &amp; Data Mining" />
     
-    <category term="Bayesian Modeling" />
+    <category term="Text Analytics" />
     
   
 
-  <summary>Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp;amp; Management, College of Business Administration, Kookmin Univ.</summary>
+  <summary>Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</summary>
 
   </entry>
 
   
   <entry>
-    <title>Multiple Linear Regression Analysis</title>
-    <link href="https://jayarnim.github.io/posts/Multiple_Linear_Regression_Analysis/" rel="alternate" type="text/html" title="Multiple Linear Regression Analysis" />
-    <published>2024-07-10T00:00:00+09:00</published>
+    <title>Document Representation</title>
+    <link href="https://jayarnim.github.io/posts/Document_Representation/" rel="alternate" type="text/html" title="Document Representation" />
+    <published>2024-07-31T00:00:00+09:00</published>
   
-    <updated>2024-07-10T00:00:00+09:00</updated>
+    <updated>2024-07-31T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/Multiple_Linear_Regression_Analysis/</id>
-    <content src="https://jayarnim.github.io/posts/Multiple_Linear_Regression_Analysis/" />
+    <id>https://jayarnim.github.io/posts/Document_Representation/</id>
+    <content src="https://jayarnim.github.io/posts/Document_Representation/" />
     <author>
       <name>jayarnim</name>
     </author>
 
   
     
-    <category term="Statistical Techs" />
+    <category term="AI &amp; Data Mining" />
     
-    <category term="Regression Analysis" />
+    <category term="Text Analytics" />
     
   
 
-  <summary>Based on the lecture &amp;quot;Statistical Models and Application (2024-1)&amp;quot; by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ.</summary>
+  <summary>Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</summary>
 
   </entry>
 
