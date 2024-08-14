@@ -1,7 +1,7 @@
 ---
-order: 2
+order: 3
 title: Posterior Estimation
-date: 2024-07-16
+date: 2024-07-17
 categories: [Statistical Techs, Bayesian Modeling]
 tags: [Statistics, Bayesian, Markov Chain]
 math: true
