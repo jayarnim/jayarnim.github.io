@@ -1,17 +1,17 @@
 ---
 order: 4
-title: Bayes Estimator
+title: Bayes Action
 date: 2024-07-18
 categories: [Statistical Techs, Bayesian Modeling]
 tags: [Statistics, Bayesian, Optimization, Loss Function]
 math: true
 description: >-
-  Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data & Management, College of Business Administration, Kookmin Univ.
+    Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data & Management, College of Business Administration, Kookmin Univ.
 image:
-  path: /_post_refer_img/BayesianModeling/Thumbnail.jpeg
+    path: /_post_refer_img/BayesianModeling/Thumbnail.jpeg
 ---
 
-## Bayes Estimator
+## Bayes Action
 -----
 
 > 사후확률 $\theta \vert X$ 을 추정하기 위해, 확률분포 $P(\theta \vert X) \propto \mathcal{L}(\theta) \cdot \pi(\theta)$ 로부터 $n$ 번의 샘플링을 통해 $n$ 개의 샘플 $\theta^{(1)},\theta^{(2)},\cdots,\theta^{(n)}$ 을 도출했다고 하자. 그렇다면 이들 중 무엇을 모수 $\theta \vert X$ 의 추정치 $\hat{\theta}$ 로 사용하는 것이 적절할까?

@@ -1,6 +1,6 @@
 ---
 order: 2
-title: Monte Carlo Simulation
+title: Posterior Estimation
 date: 2024-07-16
 categories: [Statistical Techs, Bayesian Modeling]
 tags: [Statistics, Bayesian, Markov Chain]
@@ -61,37 +61,37 @@ image:
 - **정의** : 제안 분포로부터 추출한 관측치를 적절하게 거절하는 과정을 반복하여 표본 분포를 목표 분포와 유사한 형태로 만드는 방법
 
 - **절차**
-    - 제안 분포 $q(y)$ 로부터 관측치 $y$ 샘플링
-    - 목표 분포 $p(y \vert X)$, 제안 분포 $q(y)$, 스케일링 팩터 $M$ 에 대하여, 다음 조건을 만족하지 않으면 $y$ 를 샘플로 채택하지 않음
+    - 제안 분포 $q(\psi)$ 로부터 파라미터 $\psi$ 샘플링
+    - 목표 분포 $p(\theta \vert \mathcal{D})$, 제안 분포 $q(\psi)$, 스케일링 팩터 $M$ 에 대하여, 다음 조건을 만족하지 않으면 $\psi$ 를 샘플로 채택하지 않음
 
         $$
-        u \le \displaystyle\frac{p(y \vert X)}{M \cdot q(y)} \quad \text{s.t.} \quad u \sim \text{Uniform}(0,1)
+        u \le \displaystyle\frac{p(\psi \vert \mathcal{D})}{M \cdot q(\psi)} \quad \text{s.t.} \quad u \sim \text{Uniform}(0,1)
         $$
 
-- **목표 분포(Target Dist.)**
+- **목표 분포(Target Dist.)** : 파라미터 $\theta$ 의 사후 확률 분포
 
     $$
-    p(y \vert X) \propto p(X \vert y) \cdot p(y)
+    p(\theta \vert \mathcal{D}) \propto p(\mathcal{D} \vert \theta) \cdot p(\theta)
     $$
 
-    - $y$ : 신규 관측치로서 고려되는 값
-    - $X$ : 주어진 관측치 집합
-    - $p(X \vert y)$ : 우도 함수로서 신규 관측치가 $y$ 로 발생했을 때 관측치 집합 $X$ 가 실현될 가능성
-    - $p(y)$ : 신규 관측치의 사전 확률 분포
+    - $\theta$ : 파라미터
+    - $p(\mathcal{D} \vert \theta)$ : 파라미터 $\theta$ 의 우도 함수
+    - $p(\theta)$ : 파라미터 $\theta$ 의 사전 확률 분포
 
 - **제안 분포(Proposal Dist.)**
 
     $$
-    q(y)
+    q(\psi)
     $$
 
-    - $q(y)$ 는 $p(y \vert X)$ 와 위치 및 분포가 비슷해야 함
-    - 상수 $M$ 에 대하여, $p(y \vert X) \le M \cdot q(y)$ 를 만족해야 함
+    - $\psi$ : 파라미터로서 고려되는 샘플
+    - $q(\psi)$ 는 $p(\psi \vert \mathcal{D})$ 와 위치 및 분포가 비슷해야 함
+    - 상수 $M$ 에 대하여, $p(\psi \vert \mathcal{D}) \le M \cdot q(\psi)$ 를 만족해야 함
 
 - **거절 확률(Rejection Prob.)**
 
     $$
-    \frac{p(y \vert X)}{M \cdot q(y)} \propto \frac{p(X \vert y) \cdot p(y)}{M \cdot q(y)}
+    \frac{p(\psi \vert \mathcal{D})}{M \cdot q(\psi)} \propto \frac{p(\mathcal{D} \vert \psi) \cdot p(\psi)}{M \cdot q(\psi)}
     $$
 
 ## Markov Chain Monte Carlo
@@ -153,65 +153,65 @@ image:
     - 특정 위치에서 샘플링 시작하기
 
         $$
-        x^{(t=0)}
+        \theta^{(t=0)}
         $$
 
-    - 근방의 조약돌 분포를 조사하여 새로 이동할 위치 $y$ 탐색하기
+    - 근방의 조약돌 분포를 조사하여 새로 이동할 위치 $\psi$ 탐색하기
 
         $$
-        y=x^{(t)}+\varepsilon \quad \text{s.t.} \quad \varepsilon \sim N(0, \sigma^2)
+        \psi=\theta^{(t)}+\varepsilon \quad \text{s.t.} \quad \varepsilon \sim N(0, \sigma^2)
         $$
 
-    - 새로운 조약돌이 해당 위치 $y$ 에서 발견될 가능성을 조사하여 해당 위치를 수락할지 판단하기
+    - 새로운 조약돌이 해당 위치 $\psi$ 에서 발견될 가능성을 조사하여 해당 위치를 수락할지 판단하기
 
         $$
-        x^{(t+1)}
-        =\begin{cases}
-        y, \quad \text{if} \; u<\alpha(x^{(t)},y) \quad \text{for} \quad u \sim \text{Uniform}(0,1)\\
-        x^{(t)}, \quad \text{otherwise}
-        \end{cases}
+        \theta^{(t+1)}
+        =\begin{cases}\begin{aligned}
+        \psi, \quad &\text{if} \; u<\alpha(\theta^{(t)},\psi) \quad \text{for} \quad u \sim \text{Uniform}(0,1)\\
+        \theta^{(t)}, \quad &\text{otherwise}
+        \end{aligned}\end{cases}
         $$
 
-- **목표 분포(Target Dist.)** : 파라미터 $x^{(t)}$ 의 사후 확률 분포
+- **목표 분포(Target Dist.)** : 파라미터 $\theta^{(t)}$ 의 사후 확률 분포
 
     $$
-    p(x^{(t)}\vert X) \propto p(x^{(t)}) \cdot p(X \vert x^{(t)})
+    p(\theta^{(t)}\vert \mathcal{D}) \propto p(\theta^{(t)}) \cdot p(\mathcal{D} \vert \theta^{(t)})
     $$
 
-    - $X$ : 시계열 관측치 집합 $\{x^{(i)} \vert i \text{ is time point}\}$
-    - $p(x^{(t)})$ : 파라미터 $x^{(t)}$ 의 사전 확률 분포
-    - $p(X \vert x^{(t)})$ : 파라미터 $x^{(t)}$ 의 우도 함수로서 $x^{(t)}$ 조건부 $X$ 발생 가능성
+    - $\theta^{(t)}$ : $t$ 번째 파라미터
+    - $p(\theta^{(t)})$ : 파라미터 $\theta^{(t)}$ 의 사전 확률 분포
+    - $p(\mathcal{D} \vert \theta^{(t)})$ : 파라미터 $\theta^{(t)}$ 의 우도 함수
 
-- **제안 분포(Proposal Dist.)** : 시점 $t$ 에서 조약돌을 수집한 위치가 $x^{(t)}$ 일 때, 다음 시점 $t+1$ 에서 조약돌을 수집할 위치가 $y$ 일 가능성
+- **제안 분포(Proposal Dist.)** : 시점 $t$ 에서 수락된 파라미터 샘플 $\theta^{(t)}$ 에 기반하여 다음 시점 $t+1$ 에서 샘플링 위치 $\psi$ 를 제안하는 분포
 
     $$
-    q(y \vert x^{(t)}) = N(y;x^{(t)},\sigma^2)
+    q(\psi \vert \theta^{(t)}) = N(\psi;\theta^{(t)},\sigma^2)
     $$
 
-    - 제안 분포가 $x^{(t)}$ 을 중심으로 하는 종형 분포인 경우, 다음을 만족함
+    - 제안 분포가 $\theta^{(t)}$ 을 중심으로 하는 종형 분포인 경우, 다음을 만족함
 
         $$
-        q(y \vert x^{(t)}) = q(x^{(t)}|y)
+        q(\psi \vert \theta^{(t)}) = q(\theta^{(t)} \vert \psi)
         $$
 
-        - $q(y \vert x^{(t)})$ : 시점 $t$ 에서 조약돌을 수집한 위치가 $x^{(t)}$ 일 때, 다음 시점 $t+1$ 에서 조약돌을 수집할 위치가 $y$ 일 가능성
-        - $q(x^{(t)} \vert y)$ : 시점 $t-1$ 에서 조약돌을 수집한 위치가 $y$ 일 때, 다음 시점 $t$ 에서 조약돌을 수집할 위치가 $x^{(t)}$ 일 가능성
+        - $q(\psi \vert \theta^{(t)})$ : 시점 $t$ 에서 조약돌을 수집한 위치가 $\theta^{(t)}$ 일 때, 다음 시점 $t+1$ 에서 조약돌을 수집할 위치가 $y$ 일 가능성
+        - $q(\theta^{(t)} \vert \psi)$ : 시점 $t-1$ 에서 조약돌을 수집한 위치가 $\psi$ 일 때, 다음 시점 $t$ 에서 조약돌을 수집할 위치가 $\theta^{(t)}$ 일 가능성
 
     - $\sigma^2$ 의 크기와 샘플링 수렴 여부의 관계
 
         ![04](/_post_refer_img/BayesianModeling/02-04.png){: width="100%"}
 
-- **수락 확률(Acception Prob.)** : $y$ 를 다음 시점 $t+1$ 에서 조약돌을 수집할 위치 $x^{(t+1)}$ 로 수락할 확률
+- **수락 확률(Acception Prob.)** : $\psi$ 를 다음 시점 $t+1$ 에서 조약돌을 수집할 위치 $\theta^{(t+1)}$ 로 수락할 확률
 
     $$\begin{aligned}
-    \alpha(x^{(t)}, y)
-    &= \min{\big[1, \frac{p(y \vert X)}{p(x^{(t)} \vert X)} \cdot \frac{q(x^{(t)} \vert y)}{q(y \vert x^{(t)})}\big]}\\
-    &= \min{\big[1, \frac{p(y \vert X)}{p(x^{(t)} \vert X)}]} \quad \text{s.t.} \quad y \vert x^{(t)} \sim N(x^{(t)},\sigma^2)\\
-    &\propto \min{\big[1, \frac{p(y) \cdot p(X \vert y)}{p(x^{(t)}) \cdot p(X \vert x^{(t)})}]}
+    \alpha(\theta^{(t)}, \psi)
+    &= \min{\left[1, \frac{p(\psi \vert \mathcal{D})}{p(\theta^{(t)} \vert \mathcal{D})} \cdot \frac{q(\theta^{(t)} \vert \psi)}{q(\psi \vert \theta^{(t)})}\right]}\\
+    &= \min{\left[1, \frac{p(\psi \vert \mathcal{D})}{p(\theta^{(t)} \vert \mathcal{D})}\right]} \quad \text{s.t.} \quad \psi \vert \theta^{(t)} \sim N(\theta^{(t)},\sigma^2)\\
+    &\propto \min{\left[1, \frac{p(\psi) \cdot p(\mathcal{D} \vert \psi)}{p(\theta^{(t)}) \cdot p(\mathcal{D} \vert \theta^{(t)})}\right]}
     \end{aligned}$$
 
-    - $p(y \vert X) \propto p(y) \cdot p(X \vert y)$ : 시계열 관측치 집합 $X$ 가 주어졌을 때, 다음 시점에서 조약돌을 수집할 위치가 $y$ 일 가능성
-    - $p(x^{(t)} \vert X) \propto p(x^{(t)}) \cdot p(X \vert x^{(t)})$ : 시계열 관측치 집합 $X$ 가 주어졌을 때, 다음 시점에서 조약돌을 수집할 위치가 $x^{(t)}$ 일 가능성
+    - $p(\psi \vert \mathcal{D}) \propto p(\psi) \cdot p(\mathcal{D} \vert \psi)$ : 목표 분포 $p$ 에 대하여 샘플 $\psi$ 의 사후 확률로서, 다음 시점에서 조약돌을 수집할 위치가 $\psi$ 일 가능성
+    - $p(\theta^{(t)} \vert \mathcal{D}) \propto p(\theta^{(t)}) \cdot p(\mathcal{D} \vert \theta^{(t)})$ : 목표 분포 $p$ 에 대하여 $t$ 번째 파라미터 $\theta^{(t)}$ 의 사후 확률로서, 다음 시점에서 조약돌을 수집할 위치가 $\theta^{(t)}$ 일 가능성
 
 ### Auto-Correlation
 
