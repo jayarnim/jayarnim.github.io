@@ -39,12 +39,12 @@
 <meta property="og:site_name" content="Data Scientist" />
 <meta property="og:image" content="https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-07-17T00:00:00+09:00" />
+<meta property="article:published_time" content="2024-07-16T00:00:00+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg" />
 <meta property="twitter:title" content="Prior Determination" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-17T00:00:00+09:00","datePublished":"2024-07-17T00:00:00+09:00","description":"Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp; Management, College of Business Administration, Kookmin Univ.","headline":"Prior Determination","image":"https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/Prior/"},"url":"https://jayarnim.github.io/posts/Prior/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-16T00:00:00+09:00","datePublished":"2024-07-16T00:00:00+09:00","description":"Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp; Management, College of Business Administration, Kookmin Univ.","headline":"Prior Determination","image":"https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/Prior/"},"url":"https://jayarnim.github.io/posts/Prior/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -978,6 +978,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -1021,13 +1032,13 @@
 
 <time
   
-  data-ts="1721142000"
+  data-ts="1721055600"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Jul 17, 2024
+  Jul 16, 2024
 </time>
 
       </span>
@@ -1129,36 +1140,16 @@
   </li>
 </ul>
 
-<h3 id="jeffreys-priors"><span class="me-2">Jeffreys Priors</span><a href="#jeffreys-priors" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="transformation-variant-of-flat-prior-dist"><span class="me-2">Transformation Variant of Flat Prior Dist.</span><a href="#transformation-variant-of-flat-prior-dist" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
-    <p><strong>Jeffreys Priors</strong> : 모수 공간에 대해 불변성을 보장함으로써 변수 변환 후에도 객관성을 보존하는 사전분포</p>
-
-\[\pi_{J}(\theta) \propto \sqrt{\mathbf{I}(\theta)}\]
-
-    <ul>
-      <li>
-        <p>$\sqrt{\mathbf{I}(\theta)}$ : Fisher Information</p>
-
-\[\begin{aligned}
-  \mathbf{I}(\theta)
-  &amp;= \mathbb{E}\left[\frac{\text{d}^{2}}{\text{d}\theta^{2}}\log{\mathcal{L}(\theta)}\right]
-  \end{aligned}\]
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>Transformation Variant of Flat Prior Dist.</strong></p>
-
-    <ul>
-      <li>
-        <p>모수 $\theta$ 가 균등 분포 $\text{Uniform}(0,1)$ 를 따르는 객관적인 사전확률이라고 하자</p>
+    <p>모수 $\theta$ 가 균등 분포 $\text{Uniform}(0,1)$ 를 따르는 객관적인 사전확률이라고 하자</p>
 
 \[\theta \sim \text{Uniform}(0,1)\]
-      </li>
-      <li>
-        <p>모수 $\theta$ 를 $\log{\displaystyle\frac{\theta}{1-\theta}}$ 로 변수 변환한 $\psi$ 는 로지스틱 분포 $\text{Logistic}(0,1)$ 을 따르게 됨</p>
+  </li>
+  <li>
+    <p>모수 $\theta$ 를 $\log{\displaystyle\frac{\theta}{1-\theta}}$ 로 변수 변환한 $\psi$ 는 로지스틱 분포 $\text{Logistic}(0,1)$ 을 따르게 됨</p>
 
 \[\begin{aligned}
   \psi
@@ -1176,70 +1167,20 @@
 
   \therefore \psi &amp;\sim \text{Logistic}(0,1)
   \end{aligned}\]
-      </li>
-      <li>
-        <p>즉, 모수 $\theta$ 의 변수 변환에 의하여 사전분포의 객관성이 상실되었음</p>
-
-        <ul>
-          <li>
-            <p>변환 전 : $\theta \sim \text{Uniform}(0,1)$</p>
-
-            <p><a href="/_post_refer_img/BayesianModeling/03-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/03-03.png" alt="03" width="100%" loading="lazy"></a></p>
-          </li>
-          <li>
-            <p>변환 후 : $\psi \sim \text{Logistic}(0,1)$</p>
-
-            <p><a href="/_post_refer_img/BayesianModeling/03-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/03-04.png" alt="04" width="100%" loading="lazy"></a></p>
-          </li>
-        </ul>
-      </li>
-    </ul>
   </li>
   <li>
-    <p><strong>Transformation Invariance of Jeffreys Priors</strong></p>
+    <p>즉, 모수 $\theta$ 의 변수 변환에 의하여 사전분포의 객관성이 상실되었음</p>
 
     <ul>
       <li>
-        <p>변수 $\theta$ 에 대한 확률분포가 그 피셔 정보의 자승근에 비례하도록 정의되었다고 하자</p>
+        <p>변환 전 : $\theta \sim \text{Uniform}(0,1)$</p>
 
-\[p(\theta) \propto \sqrt{I(\theta)}\]
+        <p><a href="/_post_refer_img/BayesianModeling/03-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/03-03.png" alt="03" width="100%" loading="lazy"></a></p>
       </li>
       <li>
-        <p>변수 $\theta$ 의 피셔 정보 $I(\theta)$ 는 다음과 같음</p>
+        <p>변환 후 : $\psi \sim \text{Logistic}(0,1)$</p>
 
-\[I(\theta) = \mathbb{E}\left[\left(\frac{\partial \log{\mathcal{L}(\theta)}}{\partial \theta}\right)^{2}\right]\]
-      </li>
-      <li>
-        <p>함수 $g$ 를 통해 변수 $\theta$ 를 변수 $\psi$ 로 변환한다고 하자</p>
-
-\[\psi = g(\theta)\]
-      </li>
-      <li>
-        <p>변환 변수 $\psi$ 의 확률분포 또한 그 피셔 정보의 자승근에 비례하게 됨</p>
-
-\[p(\psi) \propto \sqrt{I(\psi)}\]
-      </li>
-      <li>
-        <p>변환 변수 $\psi$ 의 피셔 정보 $I(\psi)$ 는 다음과 같음</p>
-
-\[\begin{aligned}
-  \frac{\partial \log{\mathcal{L}(\psi)}}{\partial \psi}
-  &amp;=\frac{\partial \log{\mathcal{L}(\theta)}}{\partial \theta} \cdot \frac{\partial \theta}{\partial \psi}\\
-  \\
-  \therefore I(\psi)
-  &amp;=\mathbb{E}\left[\left(\frac{\partial \log{\mathcal{L}(\theta)}}{\partial \theta} \cdot \frac{\partial \theta}{\partial \psi} \right)^{2}\right]\\
-  &amp;=\mathbb{E}\left[\left(\frac{\partial \log{\mathcal{L}(\theta)}}{\theta}\right)^{2}\right] \cdot \left(\frac{d\theta}{d\psi}\right)^{2}\\
-  &amp;=I(\theta) \cdot \left(\frac{d\theta}{d\psi}\right)^{2}
-  \end{aligned}\]
-      </li>
-      <li>
-        <p>따라서 변환 변수 $\psi$ 의 확률분포는 기본 변수 $\theta$ 의 확률분포의 형태를 유지하되, 자코비안 행렬식 $\left\vert \displaystyle\frac{d\theta}{d\psi} \right\vert$ 로 보정된 양상을 띠게 됨</p>
-
-\[\begin{aligned}
-  p(\psi) &amp;\propto \sqrt{I(\psi)}\\
-  &amp;= \sqrt{I(\theta) \cdot \left(\frac{d\theta}{d\psi}\right)^{2}}\\
-  &amp;= \sqrt{I(\theta)} \cdot \left\vert \frac{d\theta}{d\psi} \right\vert
-  \end{aligned}\]
+        <p><a href="/_post_refer_img/BayesianModeling/03-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/03-04.png" alt="04" width="100%" loading="lazy"></a></p>
       </li>
     </ul>
   </li>
@@ -1316,6 +1257,75 @@
   &amp;= f_{\theta}(\theta)\\
   \therefore f_{\psi}(\psi)
   &amp;= f_{\theta}(\theta) \cdot \left\vert \frac{\Delta\theta}{\Delta\psi} \right\vert
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="jeffreys-priors"><span class="me-2">Jeffreys Priors</span><a href="#jeffreys-priors" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p><strong>Jeffreys Priors</strong> : 모수 공간에 대해 불변성을 보장함으로써 변수 변환 후에도 객관성을 보존하는 사전분포</p>
+
+\[\pi_{J}(\theta) \propto \sqrt{\mathbf{I}(\theta)}\]
+
+    <ul>
+      <li>
+        <p>$\sqrt{\mathbf{I}(\theta)}$ : Fisher Information</p>
+
+\[\begin{aligned}
+  \mathbf{I}(\theta)
+  &amp;= \mathbb{E}\left[\frac{\text{d}^{2}}{\text{d}\theta^{2}}\log{\mathcal{L}(\theta)}\right]
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Transformation Invariance of Jeffreys Priors</strong></p>
+
+    <ul>
+      <li>
+        <p>변수 $\theta$ 에 대한 확률분포가 그 피셔 정보의 자승근에 비례하도록 정의되었다고 하자</p>
+
+\[p(\theta) \propto \sqrt{I(\theta)}\]
+      </li>
+      <li>
+        <p>변수 $\theta$ 의 피셔 정보 $I(\theta)$ 는 다음과 같음</p>
+
+\[I(\theta) = \mathbb{E}\left[\left(\frac{\partial \log{\mathcal{L}(\theta)}}{\partial \theta}\right)^{2}\right]\]
+      </li>
+      <li>
+        <p>함수 $g$ 를 통해 변수 $\theta$ 를 변수 $\psi$ 로 변환한다고 하자</p>
+
+\[\psi = g(\theta)\]
+      </li>
+      <li>
+        <p>변환 변수 $\psi$ 의 확률분포 또한 그 피셔 정보의 자승근에 비례하게 됨</p>
+
+\[p(\psi) \propto \sqrt{I(\psi)}\]
+      </li>
+      <li>
+        <p>변환 변수 $\psi$ 의 피셔 정보 $I(\psi)$ 는 다음과 같음</p>
+
+\[\begin{aligned}
+  \frac{\partial \log{\mathcal{L}(\psi)}}{\partial \psi}
+  &amp;=\frac{\partial \log{\mathcal{L}(\theta)}}{\partial \theta} \cdot \frac{\partial \theta}{\partial \psi}\\
+  \\
+  \therefore I(\psi)
+  &amp;=\mathbb{E}\left[\left(\frac{\partial \log{\mathcal{L}(\theta)}}{\partial \theta} \cdot \frac{\partial \theta}{\partial \psi} \right)^{2}\right]\\
+  &amp;=\mathbb{E}\left[\left(\frac{\partial \log{\mathcal{L}(\theta)}}{\theta}\right)^{2}\right] \cdot \left(\frac{d\theta}{d\psi}\right)^{2}\\
+  &amp;=I(\theta) \cdot \left(\frac{d\theta}{d\psi}\right)^{2}
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>따라서 변환 변수 $\psi$ 의 확률분포는 기본 변수 $\theta$ 의 확률분포의 형태를 유지하되, 자코비안 행렬식 $\left\vert \displaystyle\frac{d\theta}{d\psi} \right\vert$ 로 보정된 양상을 띠게 됨</p>
+
+\[\begin{aligned}
+  p(\psi) &amp;\propto \sqrt{I(\psi)}\\
+  &amp;= \sqrt{I(\theta) \cdot \left(\frac{d\theta}{d\psi}\right)^{2}}\\
+  &amp;= \sqrt{I(\theta)} \cdot \left\vert \frac{d\theta}{d\psi} \right\vert
   \end{aligned}\]
       </li>
     </ul>
@@ -3773,19 +3783,19 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -3959,21 +3969,21 @@
 
   
     <a
-      href="/posts/Posterior/"
+      href="/posts/Bayesian/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>Posterior Estimation</p>
+      <p>What? Bayesian</p>
     </a>
   
 
   
     <a
-      href="/posts/BERT4REC/"
+      href="/posts/Posterior/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>BERT4REC</p>
+      <p>Posterior Estimation</p>
     </a>
   
 </nav>
