@@ -595,10 +595,162 @@
   
 
   
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
 
   
   
 
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
   
 
   
@@ -704,9 +856,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="0 words"
+  title="812 words"
 >
-  <em>1 min</em> read</span>
+  <em>4 min</em> read</span>
 
         </div>
       </div>
@@ -714,7 +866,327 @@
   </header>
 
   <div class="content">
-    
+    <h2 id="frequentist-estimation"><span class="me-2">Frequentist Estimation</span><a href="#frequentist-estimation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><strong>다중선형회귀모형(Multiple Linear Regression Model)</strong></p>
+
+\[\begin{aligned}
+  \overrightarrow{y}
+  &amp;= \mathbf{X}\overrightarrow{\beta} + \overrightarrow{\varepsilon}
+  \quad \text{for} \quad \overrightarrow{\varepsilon} \sim N(0, \sigma^2\mathbf{I})\\
+  \therefore \overrightarrow{y}
+  &amp;= \mathbf{X}\overrightarrow{\hat{\beta}}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h3 id="ols"><span class="me-2">OLS</span><a href="#ols" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p><strong>최소자승법(Least Square Estimation; OLS)</strong> : 잔차 자승의 합을 최소화하는 회귀계수를 탐색하는 방법</p>
+
+\[\begin{aligned}
+  \overrightarrow{\hat{\beta}}_{OLS}
+  &amp;= \text{arg}\min_{\beta}{RSS}\\
+  &amp;= (\mathbf{X}^{T}\mathbf{X})^{-1}\mathbf{X}^{T}\overrightarrow{y}
+  \end{aligned}\]
+
+    <ul>
+      <li>
+        <p><strong>Residual Sum of Square(RSS)</strong> : 잔차 자승의 합</p>
+
+\[\begin{aligned}
+  RSS
+  &amp;= \sum_{i}{(y_{i}-\hat{y}_{i})^2}\\
+  &amp;= \vert \overrightarrow{y} - \overrightarrow{\hat{y}} \vert^{2}\\
+  &amp;= (\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="mle"><span class="me-2">MLE</span><a href="#mle" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p><strong>최우추정법(Maximum Liklihood Estimation; MLE)</strong> : 우도를 최대화하는 회귀계수를 탐색하는 방법</p>
+
+\[\begin{aligned}
+  \overrightarrow{\hat{\beta}}_{MLE}
+  &amp;= \text{arg}\max{\mathcal{L}(\overrightarrow{\beta}, \sigma^2)}
+  \end{aligned}\]
+
+    <ul>
+      <li>
+        <p><strong>우도(Liklihood)</strong> : 파라미터 $\theta$ 가 주어졌을 때, 관측치 $y$ 가 발생할 확률</p>
+
+\[\begin{aligned}
+  \overrightarrow{y}
+  &amp;\sim N(\mathbf{X}\overrightarrow{\beta}, \sigma^2\mathbf{I}) \quad (\because \overrightarrow{\varepsilon} \sim N(0, \sigma^2\mathbf{I}))\\
+  \\
+  \therefore \mathcal{L}(\overrightarrow{\beta}, \sigma^2)
+  &amp;= P(\overrightarrow{y} \,\vert\, \overrightarrow{\beta}, \sigma^2)\\
+  &amp;= \frac{1}{(2\pi\sigma^2)^{n/2}} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot(\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})\right]}
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="hatbeta_mlehatbeta_ols"><span class="me-2">\(\hat{\beta}_{MLE}=\hat{\beta}_{OLS}\)</span><a href="#hatbeta_mlehatbeta_ols" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+\[\begin{aligned}
+\mathcal{L}(\overrightarrow{\beta}, \sigma^2)
+&amp;\propto \log{\mathcal{L}(\overrightarrow{\beta}, \sigma^2)}\\
+&amp;= -\frac{n}{2}\cdot\log{2\pi\sigma^2}-\frac{1}{2\sigma^2}\cdot(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})\\
+&amp;\propto -\frac{1}{2\sigma^2}\cdot(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})\\
+&amp;\propto -(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})\\
+\\
+\therefore \text{arg}\max_{\beta}{\mathcal{L}(\overrightarrow{\beta}, \sigma^2)}
+&amp;= \text{arg}\max_{\beta}{\log{\mathcal{L}(\overrightarrow{\beta}, \sigma^2)}}\\
+&amp;= \text{arg}\max_{\beta}{-(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})}\\
+&amp;= \text{arg}\min_{\beta}{(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})}\\
+&amp;= \text{arg}\min_{\beta}{RSS}
+\end{aligned}\]
+
+<h2 id="non-information-prior-determination"><span class="me-2">Non-information Prior Determination</span><a href="#non-information-prior-determination" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<h3 id="liklihood-function-transformation"><span class="me-2">Liklihood Function Transformation</span><a href="#liklihood-function-transformation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p><strong>다중선형회귀모형의 우도 함수</strong></p>
+
+\[\begin{aligned}
+  \mathcal{L}(\beta, \sigma^2)
+  &amp;= (2\pi\sigma^2)^{-n/2} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})\right]} \quad (\because \overrightarrow{y} \sim N(\mathbf{X}\overrightarrow{\beta}, \sigma^2\mathbf{I}))\\
+  &amp;\propto (\sigma^2)^{-n/2} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})\right]}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>$(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})$ 변형</strong></p>
+
+\[\begin{aligned}
+  (\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})
+  &amp;= \left[(\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}}) + (\mathbf{X}\overrightarrow{\hat{\beta}}-\mathbf{X}\overrightarrow{\beta})\right]^{T}\left[(\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}}) + (\mathbf{X}\overrightarrow{\hat{\beta}}-\mathbf{X}\overrightarrow{\beta})\right]\\
+  &amp;= (\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})\\
+  &amp;\quad + (\mathbf{X}\overrightarrow{\hat{\beta}}-\mathbf{X}\overrightarrow{\beta})^{T}(\mathbf{X}\overrightarrow{\hat{\beta}}-\mathbf{X}\overrightarrow{\beta})\\
+  &amp;\quad + 2 \cdot (\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})^{T}(\mathbf{X}\overrightarrow{\hat{\beta}}-\mathbf{X}\overrightarrow{\beta})\\
+  \\
+  (\mathbf{X}\overrightarrow{\hat{\beta}}-\mathbf{X}\overrightarrow{\beta})^{T}(\mathbf{X}\overrightarrow{\hat{\beta}}-\mathbf{X}\overrightarrow{\beta})
+  &amp;= (\overrightarrow{\beta} - \overrightarrow{\hat{\beta}})^{T}(\mathbf{X}^{T}\mathbf{X})(\overrightarrow{\beta} - \overrightarrow{\hat{\beta}})\\
+  2 \cdot (\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})^{T}(\mathbf{X}\overrightarrow{\hat{\beta}}-\mathbf{X}\overrightarrow{\beta})
+  &amp;=0\\
+  \\
+  \therefore (\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})
+  &amp;= (\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}}) + (\overrightarrow{\beta} - \overrightarrow{\hat{\beta}})^{T}(\mathbf{X}^{T}\mathbf{X})(\overrightarrow{\beta} - \overrightarrow{\hat{\beta}})\\
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>우도 함수에 대입</strong></p>
+
+\[\begin{aligned}
+  \mathcal{L}(\beta, \sigma^2)
+  &amp;\propto (\sigma^2)^{-n/2}\\
+  &amp;\quad \cdot \exp{\left[-\frac{1}{2\sigma^2}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})\right]}\\
+  &amp;\quad \cdot \exp{\left[-\frac{1}{2\sigma^2}(\overrightarrow{\beta} - \overrightarrow{\hat{\beta}})^{T}(\mathbf{X}^{T}\mathbf{X})(\overrightarrow{\beta} - \overrightarrow{\hat{\beta}})\right]}\\
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>잔차 분산 및 자유도 정의</strong></p>
+
+\[\begin{aligned}
+  s^{2}
+  &amp;= \frac{1}{\nu} \cdot RSS\\
+  &amp;= \frac{1}{\nu} \cdot (\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})\\
+  \nu
+  &amp;= n-k
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>우도 함수에 대입</strong></p>
+
+\[\begin{aligned}
+  \therefore \mathcal{L}(\beta, \sigma^2)
+  &amp;\propto (\sigma^2)^{-\nu/2} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot \nu s^2\right]}\\
+  &amp;\quad \times (\sigma^2)^{-(n-\nu)/2} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot (\overrightarrow{\beta} - \overrightarrow{\hat{\beta}})^{T}(\mathbf{X}^{T}\mathbf{X})(\overrightarrow{\beta} - \overrightarrow{\hat{\beta}})\right]}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h3 id="prior-determination-of-beta-sigma2"><span class="me-2">Prior Determination of $\beta, \sigma^2$</span><a href="#prior-determination-of-beta-sigma2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+\[\begin{aligned}
+P(\beta, \sigma^2)
+&amp;= P(\beta ; \sigma^2) \cdot P(\sigma^2)\\
+&amp;= P(\beta) \cdot P(\sigma^2) \quad (\because \text{i.i.d})\\
+&amp;= 1 \times \frac{1}{\sigma^2}
+\end{aligned}\]
+
+<ul>
+  <li>
+    <p><strong>Jacobian Change of $\sigma^2$ for Relaxing Range Constraints</strong></p>
+
+\[\begin{aligned}
+  \psi
+  &amp;= \log{\sigma^2}\\
+  \therefore P(\sigma^2)
+  &amp;= P(\psi) \cdot \frac{1}{\sigma^2}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>Non-ninformation Prior Determination of $\beta, \psi$</strong></p>
+
+\[\beta, \psi \sim \text{Uniform}(0,1)\]
+  </li>
+  <li>
+    <p><strong>Jeffreys Prior of $\sigma^2$</strong></p>
+
+\[\begin{aligned}
+  P(\sigma^2)
+  &amp;= P(\psi) \cdot \frac{1}{\sigma^2}\\
+  &amp;= \frac{1}{\sigma^2}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h3 id="posterior-estimation-of-beta-sigma2"><span class="me-2">Posterior Estimation of $\beta, \sigma^2$</span><a href="#posterior-estimation-of-beta-sigma2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+\[\begin{aligned}
+P(\beta, \sigma^2 \vert \mathcal{D})
+&amp;\propto P(\mathcal{D} \vert \beta, \sigma^2) \cdot P(\beta, \sigma^2)\\
+&amp;\propto (\sigma^2)^{-\nu/2} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot \nu s^2\right]}\\
+&amp;\quad \times (\sigma^2)^{-(n-\nu)/2} \cdot \exp{\left[-\frac{1}{2\sigma^2} \cdot (\overrightarrow{\beta} - \overrightarrow{\hat{\beta}})^{T}(\mathbf{X}^{T}\mathbf{X})(\overrightarrow{\beta} - \overrightarrow{\hat{\beta}})\right]}\\
+&amp;\quad \times \frac{1}{\sigma^2}\\
+\\
+&amp;= (\sigma^2)^{-\nu/2-1} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot \nu s^2\right]}\\
+&amp;\quad \times (\sigma^2)^{-(n-\nu)/2} \cdot \exp{\left[-\frac{1}{2\sigma^2} \cdot (\overrightarrow{\beta} - \overrightarrow{\hat{\beta}})^{T}(\mathbf{X}^{T}\mathbf{X})(\overrightarrow{\beta} - \overrightarrow{\hat{\beta}})\right]}
+\end{aligned}\]
+
+<ul>
+  <li>
+    <p><strong>Marginal Posterior of $\sigma^2$ is Inverse Chi-Squared Distribution</strong></p>
+
+\[\begin{aligned}
+  f(\sigma^2 \vert \nu,s^2)
+  &amp;=(\sigma^2)^{-\nu/2-1} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot \nu s^2\right]}\\
+  \therefore \sigma^2 \vert \mathcal{D}
+  &amp;\sim \text{Inv-}\chi^2(\nu,s^2)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>Conditional Posterior of $\beta$ given $\sigma^2$ is Normal Distribution</strong></p>
+
+\[\begin{aligned}
+  f(\beta \vert \hat{\beta}, \mathbf{V}_{\beta})
+  &amp;= (\sigma^2)^{-(n-\nu)/2} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot (\overrightarrow{\beta} - \overrightarrow{\hat{\beta}})^{T}(\mathbf{X}^{T}\mathbf{X})(\overrightarrow{\beta} - \overrightarrow{\hat{\beta}})\right]}\\
+  \therefore \beta ; \sigma^2 \vert \mathcal{D}
+  &amp;\sim N(\overrightarrow{\hat{\beta}}, \sigma^2\mathbf{V}_{\beta})
+  \end{aligned}\]
+
+    <ul>
+      <li>$\overrightarrow{\hat{\beta}}=(\mathbf{X}^{T}\mathbf{X})^{-1}\mathbf{X}^{T}\overrightarrow{y}$ : $\overrightarrow{\beta}$ 의 최우추정량</li>
+      <li>$\sigma^2\mathbf{V}_{\beta}=\sigma^2(\mathbf{X}^{T}\mathbf{X})^{-1}$ : $\overrightarrow{\beta}$ 의 공분산 행렬</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="setting-conjugate-prior"><span class="me-2">Setting Conjugate Prior</span><a href="#setting-conjugate-prior" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<h3 id="liklihood-function"><span class="me-2">Liklihood Function</span><a href="#liklihood-function" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+\[\begin{aligned}
+\mathcal{L}(\beta, \sigma^2)
+&amp;= (2\pi\sigma^2)^{-n/2} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})\right]} \quad (\because \overrightarrow{y} \sim N(\mathbf{X}\overrightarrow{\beta}, \sigma^2\mathbf{I}))\\
+&amp;\propto (\sigma^2)^{-n/2} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})\right]}
+\end{aligned}\]
+
+<h3 id="setting-conjugate-prior-of-beta-sigma2"><span class="me-2">Setting Conjugate Prior of $\beta, \sigma^2$</span><a href="#setting-conjugate-prior-of-beta-sigma2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+\[P(\beta, \sigma^2) = P(\beta ; \sigma^2) \cdot P(\sigma^2)\]
+
+<ul>
+  <li>
+    <p><strong>Conjugate Prior of $\sigma^2$ is Scaled Inverse Chi-Squared Distribution</strong></p>
+
+\[\begin{aligned}
+  P(\sigma^2)
+  &amp;\propto (\sigma^2)^{-\nu_{0}/2-1} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot \nu_{0} s_{0}^{2}\right]}\\
+  &amp;\propto \text{Scaled Inv-}\chi^2(\nu_{0}, s_{0}^{2})
+  \end{aligned}\]
+
+    <ul>
+      <li>$\nu_{0}$ : 사전 자유도</li>
+      <li>$s_{0}^{2}$ : 사전 잔차 분산</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Conjugate Prior of $\beta$ given $\sigma^2$ is Normal Distribution</strong></p>
+
+\[\begin{aligned}
+  P(\beta;\sigma^2)
+  &amp;\propto (\sigma^2)^{-(n-\nu_0)/2} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot(\overrightarrow{\beta}-\overrightarrow{\mu}_0)^{T}\Lambda_{0}(\overrightarrow{\beta}-\overrightarrow{\mu}_0)\right]}\\
+  &amp;\propto N(\overrightarrow{\mu}_0, \sigma^2\Lambda_{0}^{-1})
+  \end{aligned}\]
+
+    <ul>
+      <li>$\overrightarrow{\mu}_0$ : $\overrightarrow{\beta}$ 의 사전 평균</li>
+      <li>$\sigma^2\Lambda_{0}^{-1}$ : $\overrightarrow{\beta}$ 의 사전 공분산 행렬</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="posterior-estimation-of-beta-sigma2-1"><span class="me-2">Posterior Estimation of $\beta, \sigma^2$</span><a href="#posterior-estimation-of-beta-sigma2-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+\[\begin{aligned}
+P(\beta, \sigma^2 \vert \mathcal{D})
+&amp;\propto P(\mathcal{D} \vert \beta, \sigma^2) \times P(\beta, \sigma^2)\\
+\\
+&amp;\propto (\sigma^2)^{-n/2} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})\right]}\\
+&amp;\quad \times (\sigma^2)^{-\nu_{n}/2-1} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot \nu_{n} s_{n}^{2}\right]}\\
+&amp;\quad \times (\sigma^2)^{-\frac{n-\nu_n}{2}} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot(\overrightarrow{\beta}-\overrightarrow{\mu}_n)^{T}\Lambda_{n}(\overrightarrow{\beta}-\overrightarrow{\mu}_n)\right]}\\
+\\
+&amp;= (\sigma^2)^{-\frac{n+\nu_n}{2}-1} \cdot \exp{\left[-\frac{1}{2\sigma^2}\left(\nu_n s^{2}_{n} + (\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})\right)\right]}\\
+&amp;\quad \times (\sigma^2)^{-\frac{n-\nu_n}{2}} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot(\overrightarrow{\beta}-\overrightarrow{\mu}_n)^{T}\Lambda_{n}(\overrightarrow{\beta}-\overrightarrow{\mu}_n)\right]}
+\end{aligned}\]
+
+<ul>
+  <li>
+    <p><strong>Posterior of $\sigma^2$ is Inverse-Gamma Distribution</strong></p>
+
+\[\begin{aligned}
+  P(\sigma^2 \vert \mathcal{D})
+  &amp;\propto (\sigma^2)^{-\frac{n+\nu_n}{2}-1} \cdot \exp{\left[-\frac{1}{2\sigma^2}\left(\nu_n s^{2}_{n} + (\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})\right)\right]}\\
+  &amp;\propto \text{Inv-Gamma}\left(\frac{n + \nu_n}{2}, \frac{1}{2} \left[\nu_n s_n^2 + (\overrightarrow{y} - \mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y} - \mathbf{X}\overrightarrow{\beta})\right]\right)
+  \end{aligned}\]
+
+    <ul>
+      <li>$\nu_{n}$ : 사후 자유도</li>
+      <li>$s_{n}^{2}$ : 사후 잔차 분산</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Posterior of $\beta$ given $\sigma^2$ is Normal Distribution</strong></p>
+
+\[\begin{aligned}
+  P(\beta;\sigma^2)
+  &amp;\propto (\sigma^2)^{-(n-\nu_n)/2} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot(\overrightarrow{\beta}-\overrightarrow{\mu}_n)^{T}\Lambda_{n}(\overrightarrow{\beta}-\overrightarrow{\mu}_n)\right]}\\
+  &amp;\propto N(\overrightarrow{\mu}_n, \sigma^2\Lambda_{n}^{-1})
+  \end{aligned}\]
+
+    <ul>
+      <li>$\overrightarrow{\mu}_n$ : $\overrightarrow{\beta}$ 의 사후 평균</li>
+      <li>$\sigma^2\Lambda_{n}^{-1}$ : $\overrightarrow{\beta}$ 의 사후 공분산 행렬</li>
+    </ul>
+  </li>
+</ul>
 
   </div>
 
@@ -2823,6 +3295,11 @@
               
 
 
+
+  <section id="toc-wrapper" class="d-none ps-0 pe-4">
+    <h2 class="panel-heading ps-3 mb-2">Contents</h2>
+    <nav id="toc"></nav>
+  </section>
 
 
             
@@ -5380,9 +5857,16 @@
 
   
 
+  
+    
+
+    
+
+  
 
 
-  <script src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.11/dayjs.min.js,npm/dayjs@1.11.11/locale/en.min.js,npm/dayjs@1.11.11/plugin/relativeTime.min.js,npm/dayjs@1.11.11/plugin/localizedFormat.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.11/dayjs.min.js,npm/dayjs@1.11.11/locale/en.min.js,npm/dayjs@1.11.11/plugin/relativeTime.min.js,npm/dayjs@1.11.11/plugin/localizedFormat.min.js,npm/tocbot@4.27.20/dist/tocbot.min.js"></script>
 
 
 
