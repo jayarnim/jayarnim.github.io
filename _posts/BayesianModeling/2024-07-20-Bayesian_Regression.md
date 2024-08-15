@@ -11,6 +11,11 @@ image:
     path: /_post_refer_img/BayesianModeling/Thumbnail.jpeg
 ---
 
+<div style="text-align: center;">
+    <img src="/_post_refer_img/BayesianModeling/06-01.png" alt="01" width="100%">
+    <p><em>Bayesian Regression Model</em></p>
+</div>
+
 ## Frequentist Estimation
 -----
 
@@ -79,7 +84,7 @@ $$\begin{aligned}
 &= \text{arg}\min_{\beta}{RSS}
 \end{aligned}$$
 
-## Non-information Prior Determination
+## Non-informative Prior Determination
 -----
 
 ### Liklihood Function Transformation
@@ -155,7 +160,7 @@ P(\beta, \sigma^2)
     &= P(\psi) \cdot \frac{1}{\sigma^2}
     \end{aligned}$$
 
-- **Non-ninformation Prior Determination of $\beta, \psi$**
+- **Non-informative Prior Determination of $\beta, \psi$**
 
     $$
     \beta, \psi \sim \text{Uniform}(0,1)
@@ -203,7 +208,7 @@ P(\beta, \sigma^2 \vert \mathcal{D})
     - $\overrightarrow{\hat{\beta}}=(\mathbf{X}^{T}\mathbf{X})^{-1}\mathbf{X}^{T}\overrightarrow{y}$ : $\overrightarrow{\beta}$ 의 최우추정량
     - $\sigma^2\mathbf{V}_{\beta}=\sigma^2(\mathbf{X}^{T}\mathbf{X})^{-1}$ : $\overrightarrow{\beta}$ 의 공분산 행렬
 
-## Setting Conjugate Prior
+## Informative Prior Determination
 -----
 
 ### Liklihood Function
@@ -271,7 +276,7 @@ P(\beta, \sigma^2 \vert \mathcal{D})
 
     $$\begin{aligned}
     P(\beta;\sigma^2)
-    &\propto (\sigma^2)^{-(n-\nu_n)/2} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot(\overrightarrow{\beta}-\overrightarrow{\mu}_n)^{T}\Lambda_{n}(\overrightarrow{\beta}-\overrightarrow{\mu}_n)\right]}\\
+    &\propto (\sigma^2)^{-\frac{n-\nu_n}{2}} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot(\overrightarrow{\beta}-\overrightarrow{\mu}_n)^{T}\Lambda_{n}(\overrightarrow{\beta}-\overrightarrow{\mu}_n)\right]}\\
     &\propto N(\overrightarrow{\mu}_n, \sigma^2\Lambda_{n}^{-1})
     \end{aligned}$$
 
