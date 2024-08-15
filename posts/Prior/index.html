@@ -1096,7 +1096,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1516 words"
+  title="1527 words"
 >
   <em>8 min</em> read</span>
 
@@ -1307,13 +1307,16 @@
 \[p(\psi) \propto \sqrt{I(\psi)}\]
       </li>
       <li>
+        <p>미분 법칙에 의해 다음이 성립함</p>
+
+\[\frac{\partial \log{\mathcal{L}(\psi)}}{\partial \psi}
+  =\frac{\partial \log{\mathcal{L}(\theta)}}{\partial \theta} \cdot \frac{\partial \theta}{\partial \psi}\]
+      </li>
+      <li>
         <p>변환 변수 $\psi$ 의 피셔 정보 $I(\psi)$ 는 다음과 같음</p>
 
 \[\begin{aligned}
-  \frac{\partial \log{\mathcal{L}(\psi)}}{\partial \psi}
-  &amp;=\frac{\partial \log{\mathcal{L}(\theta)}}{\partial \theta} \cdot \frac{\partial \theta}{\partial \psi}\\
-  \\
-  \therefore I(\psi)
+  I(\psi)
   &amp;=\mathbb{E}\left[\left(\frac{\partial \log{\mathcal{L}(\theta)}}{\partial \theta} \cdot \frac{\partial \theta}{\partial \psi} \right)^{2}\right]\\
   &amp;=\mathbb{E}\left[\left(\frac{\partial \log{\mathcal{L}(\theta)}}{\theta}\right)^{2}\right] \cdot \left(\frac{d\theta}{d\psi}\right)^{2}\\
   &amp;=I(\theta) \cdot \left(\frac{d\theta}{d\psi}\right)^{2}
