@@ -179,6 +179,7 @@ P(\beta, \sigma^2)
 $$\begin{aligned}
 P(\beta, \sigma^2 \vert \mathcal{D})
 &\propto P(\mathcal{D} \vert \beta, \sigma^2) \cdot P(\beta, \sigma^2)\\
+\\
 &\propto (\sigma^2)^{-\nu/2} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot \nu s^2\right]}\\
 &\quad \times (\sigma^2)^{-(n-\nu)/2} \cdot \exp{\left[-\frac{1}{2\sigma^2} \cdot (\overrightarrow{\beta} - \overrightarrow{\hat{\beta}})^{T}(\mathbf{X}^{T}\mathbf{X})(\overrightarrow{\beta} - \overrightarrow{\hat{\beta}})\right]}\\
 &\quad \times \frac{1}{\sigma^2}\\
