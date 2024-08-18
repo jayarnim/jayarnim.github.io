@@ -22,7 +22,7 @@ image:
 
 - **A/B Test vs. MAB**
 
-    ![02](/_post_refer_img/BayesianModeling/06-02.png){: width="100%"}
+    ![02](/_post_refer_img/BayesianModeling/06-02.PNG){: width="100%"}
 
     - **A/B Test** : 탐색 후 그 결과를 100% 활용하는 불연속적인(Discrete) 방법
 
@@ -34,7 +34,7 @@ image:
 
 - **Selection Issue** : Exploration-Exploitation Trade-off
 
-    ![04](/_post_refer_img/BayesianModeling/06-04.png){: width="100%"}
+    ![04](/_post_refer_img/BayesianModeling/06-04.PNG){: width="100%"}
 
     > 만약 적당히 좋은 결과를 돌려주는 슬롯 머신을 찾아냈다면, 그 결과를 유지하기 위해 그 슬롯 머신을 활용할 것인가(Exploitation) 아니면 더 좋은 결과를 얻을 수 있다는 희망으로 다른 슬롯 머신을 탐색할 것인가(Exploration)?
 
