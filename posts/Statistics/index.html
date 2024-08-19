@@ -1836,28 +1836,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -1986,9 +1964,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1977 words"
+  title="1602 words"
 >
-  <em>10 min</em> read</span>
+  <em>8 min</em> read</span>
 
         </div>
       </div>
@@ -1998,8 +1976,6 @@
   <div class="content">
     <h2 id="what-statistics"><span class="me-2">What? Statistics</span><a href="#what-statistics" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
-
-<h3 id="통계학의-정의"><span class="me-2">통계학의 정의</span><a href="#통계학의-정의" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
@@ -2014,44 +1990,6 @@
     <ul>
       <li><strong>기술통계학(Descriptive Statistics)</strong> : 데이터를 수집, 정리, 제시, 요약하는 방법을 연구함</li>
       <li><strong>추론통계학(Inferential Statistics)</strong> : 표본으로부터 모집단의 성격을 추정하는 방법을 연구함</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="통계적-추론"><span class="me-2">통계적 추론</span><a href="#통계적-추론" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li><strong>통계적 추론(Statistical Inference)</strong>
-    <ul>
-      <li>표본을 사용하여 모집단의 성격을 추정하는 작업</li>
-      <li>표본의 측정치를 모집단의 측정치에 대한 추정치로 간주함</li>
-    </ul>
-  </li>
-  <li><strong>모집단과 그 측정치</strong>
-    <ul>
-      <li><strong>모집단(Population)</strong> : 정보를 얻고자 하는 관심 대상 전체 집합</li>
-      <li><strong>모수(Parameter)</strong> : 모집단을 묘사하는 측정치</li>
-    </ul>
-  </li>
-  <li><strong>표본과 그 측정치</strong>
-    <ul>
-      <li><strong>표본(Sample)</strong> : 모집단의 부분집합</li>
-      <li><strong>통계량(Statistics)</strong> : 표본을 묘사하는 측정치</li>
-    </ul>
-  </li>
-  <li><strong>표본오차(Sampling Error)</strong>
-    <ul>
-      <li>응답오차, 측정오차, 표본선택편향이 해결되었음에도 발생하는 실제값과 예측값의 차이
-        <ul>
-          <li><strong>응답오차(Response Error)</strong> : 응답자의 응답 거부 혹은 잘못된 응답으로 인해 발생하는 오차</li>
-          <li><strong>측정오차(Measurement Error)</strong> : 데이터의 틀린 측정이나 기입으로 인해 발생하는 오차</li>
-          <li><strong>표본선택편향(Sample Selection Bias)</strong> : 모집단의 각 관측치들이 표본에 포함될 확률이 서로 다른 경우</li>
-        </ul>
-      </li>
-      <li>
-        <p>표본은 모집단의 부분집합일 뿐이지, 모집단은 아니므로 모수와 통계량은 완전히 일치할 수 없음</p>
-      </li>
-      <li>통계적 추론의 목표는 표본오차의 크기를 줄이는 것임</li>
     </ul>
   </li>
 </ul>
@@ -2260,49 +2198,27 @@
 <h3 id="변수-간-관계"><span class="me-2">변수 간 관계</span><a href="#변수-간-관계" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
-  <li><strong>공분산(Covariance)</strong> : 두 변수의 편차(관측치와 평균 사이 거리)를 곱한 값의 평균
-    <ul>
-      <li>
-        <p><strong>모공분산(Population Covariance; $\sigma_{XY}$)</strong></p>
+  <li>
+    <p><strong>공분산(Covariance)</strong> : 두 변수의 편차(관측치와 평균 사이 거리)를 곱한 값의 평균</p>
 
 \[\sigma_{XY} = \frac{1}{N}\sum_{i=1}^{N}(X_{i}-\mu_X)(Y_{i}-\mu_Y)\]
-      </li>
-      <li>
-        <p><strong>표본공분산(Sample Covariance; $s_{xy}$)</strong></p>
 
-\[s_{xy} = \frac{1}{n-1}\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y})\]
-      </li>
-      <li><strong>해석</strong>
-        <ul>
-          <li>$\sigma_{XY} &gt; 0$ : 변수 $X, Y$ 가 양의 상관관계를 가짐</li>
-          <li>$\sigma_{XY} &lt; 0$ : 변수 $X, Y$ 가 음의 상관관계를 가짐</li>
-          <li>$\sigma_{XY} = 0$ : 변수 $X, Y$ 간에 상관관계가 유의미하다고 볼 수 없음</li>
-        </ul>
-      </li>
-      <li><strong>단점</strong> : 단위 의존적(Unit-Dependent)</li>
+    <ul>
+      <li>$\sigma_{XY} &gt; 0$ : 변수 $X, Y$ 가 양의 상관관계를 가짐</li>
+      <li>$\sigma_{XY} &lt; 0$ : 변수 $X, Y$ 가 음의 상관관계를 가짐</li>
+      <li>$\sigma_{XY} = 0$ : 변수 $X, Y$ 간에 상관관계가 유의미하다고 볼 수 없음</li>
     </ul>
   </li>
-  <li><strong>피어슨 상관계수(Pearson Correlation Coefficient; PCC)</strong> : 공분산을 두 변수의 편차의 곱으로 나눈 값
-    <ul>
-      <li>
-        <p><strong>모상관계수(Population Coefficient of Correlation; $\rho_{XY}$)</strong></p>
+  <li>
+    <p><strong>피어슨 상관계수(Pearson Correlation Coefficient; PCC)</strong> : 공분산의 단위 의존적(Unit-Dependent)인 문제를 완화한 지표로서, 공분산을 두 변수의 편차의 곱으로 나눈 값</p>
 
 \[\rho_{XY} = \frac{\sigma_{XY}}{\sigma_{X}\sigma_{Y}}\]
-      </li>
-      <li>
-        <p><strong>표본상관계수(Sample Coefficient of Correlation; $r_{xy}$)</strong></p>
 
-\[r_{xy} = \frac{s_{xy}}{s_{x}s_{y}}\]
-      </li>
-      <li>
-        <p><strong>해석</strong></p>
-        <ul>
-          <li>$-1\le\rho_{XY}\le1$</li>
-          <li>$\rho_{XY} &gt; 0$ : 변수 $X, Y$ 가 양의 상관관계를 가짐</li>
-          <li>$\rho_{XY} &lt; 0$ : 변수 $X, Y$ 가 음의 상관관계를 가짐</li>
-          <li>$\rho_{XY} = 0$ : 변수 $X, Y$ 간에 상관관계가 유의미하다고 볼 수 없음</li>
-        </ul>
-      </li>
+    <ul>
+      <li>$-1\le\rho_{XY}\le1$</li>
+      <li>$\rho_{XY} &gt; 0$ : 변수 $X, Y$ 가 양의 상관관계를 가짐</li>
+      <li>$\rho_{XY} &lt; 0$ : 변수 $X, Y$ 가 음의 상관관계를 가짐</li>
+      <li>$\rho_{XY} = 0$ : 변수 $X, Y$ 간에 상관관계가 유의미하다고 볼 수 없음</li>
     </ul>
   </li>
 </ul>
