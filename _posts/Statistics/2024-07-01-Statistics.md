@@ -16,8 +16,6 @@ image:
 ## What? Statistics
 -----
 
-### 통계학의 정의
-
 - **통계학(Statistics)**
 
     > 의사결정에 필요한 정보를 얻기 위하여 데이터를 수집(Collect), 정리(Summarize), 분석(Analyze), 해석(Interpret)하는 방법을 연구하는 학문
@@ -25,30 +23,6 @@ image:
 - **종류**
     - **기술통계학(Descriptive Statistics)** : 데이터를 수집, 정리, 제시, 요약하는 방법을 연구함
     - **추론통계학(Inferential Statistics)** : 표본으로부터 모집단의 성격을 추정하는 방법을 연구함
-
-### 통계적 추론
-
-- **통계적 추론(Statistical Inference)**
-    - 표본을 사용하여 모집단의 성격을 추정하는 작업
-    - 표본의 측정치를 모집단의 측정치에 대한 추정치로 간주함
-
-- **모집단과 그 측정치**
-    - **모집단(Population)** : 정보를 얻고자 하는 관심 대상 전체 집합
-    - **모수(Parameter)** : 모집단을 묘사하는 측정치
-
-- **표본과 그 측정치**
-    - **표본(Sample)** : 모집단의 부분집합
-    - **통계량(Statistics)** : 표본을 묘사하는 측정치
-
-- **표본오차(Sampling Error)**
-    - 응답오차, 측정오차, 표본선택편향이 해결되었음에도 발생하는 실제값과 예측값의 차이
-        - **응답오차(Response Error)** : 응답자의 응답 거부 혹은 잘못된 응답으로 인해 발생하는 오차
-        - **측정오차(Measurement Error)** : 데이터의 틀린 측정이나 기입으로 인해 발생하는 오차
-        - **표본선택편향(Sample Selection Bias)** : 모집단의 각 관측치들이 표본에 포함될 확률이 서로 다른 경우
-
-    - 표본은 모집단의 부분집합일 뿐이지, 모집단은 아니므로 모수와 통계량은 완전히 일치할 수 없음
-
-    - 통계적 추론의 목표는 표본오차의 크기를 줄이는 것임
 
 ## What? Descriptive Statistic
 -----
@@ -186,43 +160,25 @@ image:
 ### 변수 간 관계
 
 - **공분산(Covariance)** : 두 변수의 편차(관측치와 평균 사이 거리)를 곱한 값의 평균
-    - **모공분산(Population Covariance; $\sigma_{XY}$)**
 
-        $$
-        \sigma_{XY} = \frac{1}{N}\sum_{i=1}^{N}(X_{i}-\mu_X)(Y_{i}-\mu_Y)
-        $$
-    
-    - **표본공분산(Sample Covariance; $s_{xy}$)**
+    $$
+    \sigma_{XY} = \frac{1}{N}\sum_{i=1}^{N}(X_{i}-\mu_X)(Y_{i}-\mu_Y)
+    $$
 
-        $$
-        s_{xy} = \frac{1}{n-1}\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y})
-        $$
+    - $\sigma_{XY} > 0$ : 변수 $X, Y$ 가 양의 상관관계를 가짐
+    - $\sigma_{XY} < 0$ : 변수 $X, Y$ 가 음의 상관관계를 가짐
+    - $\sigma_{XY} = 0$ : 변수 $X, Y$ 간에 상관관계가 유의미하다고 볼 수 없음
 
-    - **해석**
-        - $\sigma_{XY} > 0$ : 변수 $X, Y$ 가 양의 상관관계를 가짐
-        - $\sigma_{XY} < 0$ : 변수 $X, Y$ 가 음의 상관관계를 가짐
-        - $\sigma_{XY} = 0$ : 변수 $X, Y$ 간에 상관관계가 유의미하다고 볼 수 없음
+- **피어슨 상관계수(Pearson Correlation Coefficient; PCC)** : 공분산의 단위 의존적(Unit-Dependent)인 문제를 완화한 지표로서, 공분산을 두 변수의 편차의 곱으로 나눈 값
 
-    - **단점** : 단위 의존적(Unit-Dependent)
+    $$
+    \rho_{XY} = \frac{\sigma_{XY}}{\sigma_{X}\sigma_{Y}}
+    $$
 
-- **피어슨 상관계수(Pearson Correlation Coefficient; PCC)** : 공분산을 두 변수의 편차의 곱으로 나눈 값
-    - **모상관계수(Population Coefficient of Correlation; $\rho_{XY}$)**
-
-        $$
-        \rho_{XY} = \frac{\sigma_{XY}}{\sigma_{X}\sigma_{Y}}
-        $$
-    
-    - **표본상관계수(Sample Coefficient of Correlation; $r_{xy}$)**
-
-        $$
-        r_{xy} = \frac{s_{xy}}{s_{x}s_{y}}
-        $$
-
-    - **해석**
-        - $-1\le\rho_{XY}\le1$
-        - $\rho_{XY} > 0$ : 변수 $X, Y$ 가 양의 상관관계를 가짐
-        - $\rho_{XY} < 0$ : 변수 $X, Y$ 가 음의 상관관계를 가짐
-        - $\rho_{XY} = 0$ : 변수 $X, Y$ 간에 상관관계가 유의미하다고 볼 수 없음
+    - $-1\le\rho_{XY}\le1$
+    - $\rho_{XY} > 0$ : 변수 $X, Y$ 가 양의 상관관계를 가짐
+    - $\rho_{XY} < 0$ : 변수 $X, Y$ 가 음의 상관관계를 가짐
+    - $\rho_{XY} = 0$ : 변수 $X, Y$ 간에 상관관계가 유의미하다고 볼 수 없음
 
 ## Summary with Graphs
 
