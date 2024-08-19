@@ -1,7 +1,7 @@
 ---
-order: 3
-title: Document Representation
-date: 2024-07-31
+order: 6
+title: Word Representation (2) Deep Learning Techs
+date: 2024-08-03
 categories: [AI & Data Mining, Text Analytics]
 tags: [Data Mining, Text Mining]
 math: true

@@ -1,7 +1,7 @@
 ---
-order: 5
+order: 4
 title: Language Model (1) Statistical Techs
-date: 2024-08-02
+date: 2024-08-01
 categories: [AI & Data Mining, Text Analytics]
 tags: [Data Mining, Text Mining]
 math: true

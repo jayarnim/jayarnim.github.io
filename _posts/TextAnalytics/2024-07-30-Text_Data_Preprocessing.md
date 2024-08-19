@@ -1,7 +1,7 @@
 ---
-order: 1
+order: 2
 title: Text Data Preprocessing
-date: 2024-07-29
+date: 2024-07-30
 categories: [AI & Data Mining, Text Analytics]
 tags: [Data Mining, Text Mining]
 math: true

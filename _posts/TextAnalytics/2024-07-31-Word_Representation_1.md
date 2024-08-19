@@ -1,7 +1,7 @@
 ---
-order: 2
-title: Word Representation
-date: 2024-07-30
+order: 3
+title: Word Representation (1) Statistical Techs
+date: 2024-07-31
 categories: [AI & Data Mining, Text Analytics]
 tags: [Data Mining, Text Mining]
 math: true

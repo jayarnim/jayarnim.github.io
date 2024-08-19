@@ -1,7 +1,7 @@
 ---
-order: 4
-title: Topic Modeling
-date: 2024-08-01
+order: 7
+title: Language Model (2) Deep Learning Techs
+date: 2024-08-04
 categories: [AI & Data Mining, Text Analytics]
 tags: [Data Mining, Text Mining]
 math: true
