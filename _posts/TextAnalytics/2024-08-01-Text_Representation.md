@@ -1,5 +1,5 @@
 ---
-order: 5
+order: 4
 title: Text Representation
 date: 2024-08-01
 categories: [AI & Data Mining, Text Analytics]

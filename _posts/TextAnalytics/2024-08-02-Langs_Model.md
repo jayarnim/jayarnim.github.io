@@ -1,5 +1,5 @@
 ---
-order: 6
+order: 5
 title: Language Model
 date: 2024-08-02
 categories: [AI & Data Mining, Text Analytics]
