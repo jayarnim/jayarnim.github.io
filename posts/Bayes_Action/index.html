@@ -782,26 +782,26 @@
 <hr />
 
 <blockquote>
-  <p>사후확률 $\theta \vert X$ 을 추정하기 위해, 확률분포 $P(\theta \vert X) \propto \mathcal{L}(\theta) \cdot \pi(\theta)$ 로부터 $n$ 번의 샘플링을 통해 $n$ 개의 샘플 $\theta^{(1)},\theta^{(2)},\cdots,\theta^{(n)}$ 을 도출했다고 하자. 그렇다면 이들 중 무엇을 모수 $\theta \vert X$ 의 추정치 $\hat{\theta}$ 로 사용하는 것이 적절할까?</p>
+  <p>사후확률 $\theta \mid X$ 을 추정하기 위해, 확률분포 $P(\theta \mid X) \propto \mathcal{L}(\theta) \cdot \pi(\theta)$ 로부터 $n$ 번의 샘플링을 통해 $n$ 개의 샘플 $\theta^{(1)},\theta^{(2)},\cdots,\theta^{(n)}$ 을 도출했다고 하자. 그렇다면 이들 중 무엇을 모수 $\theta \mid X$ 의 추정치 $\hat{\theta}$ 로 사용하는 것이 적절할까?</p>
 </blockquote>
 
 <ul>
   <li>
-    <p><strong>Bayes’ Risk</strong> : 사후확률분포 $P(\theta \vert X)$ 를 사용하여 계산된, 모수 $\theta$ 에 대하여 추정치 $\hat{\theta}$ 를 선택할 때의 기대 손실(Expected Loss)</p>
+    <p><strong>Bayes’ Risk</strong> : 사후확률분포 $P(\theta \mid X)$ 를 사용하여 계산된, 모수 $\theta$ 에 대하여 추정치 $\hat{\theta}$ 를 선택할 때의 기대 손실(Expected Loss)</p>
 
 \[\begin{aligned}
   \mathcal{R}(\hat{\theta})
-  &amp;= \mathbb{E}_{\theta \vert X}\left[\text{Loss}(\theta, \hat{\theta})\right]\\
-  &amp;= \int{\text{Loss}(\theta, \hat{\theta}) \cdot P(\theta \vert X)}\text{d}\theta
+  &amp;= \mathbb{E}_{\theta \mid X}\left[\text{Loss}(\theta, \hat{\theta})\right]\\
+  &amp;= \int{\text{Loss}(\theta, \hat{\theta}) \cdot P(\theta \mid X)}\text{d}\theta
   \end{aligned}\]
 
     <ul>
       <li>
-        <p>모수 $\theta \vert X$ 를 알 수 없으므로, $n$ 번의 샘플링을 통해 도출한 $n$ 개의 샘플 $\theta^{(1)},\theta^{(2)},\cdots,\theta^{(n)} \sim P(\theta \vert X)$ 를 사용하여 근사함</p>
+        <p>모수 $\theta \mid X$ 를 알 수 없으므로, $n$ 번의 샘플링을 통해 도출한 $n$ 개의 샘플 $\theta^{(1)},\theta^{(2)},\cdots,\theta^{(n)} \sim P(\theta \mid X)$ 를 사용하여 근사함</p>
 
 \[\begin{aligned}
   \mathcal{R}(\hat{\theta})
-  &amp;= \mathbb{E}_{\theta \vert X}\left[\text{Loss}(\theta, \hat{\theta})\right]\\
+  &amp;= \mathbb{E}_{\theta \mid X}\left[\text{Loss}(\theta, \hat{\theta})\right]\\
   &amp;\approx \frac{1}{N}\sum_{i=1}^{N}{\text{Loss}(\theta^{(i)}, \hat{\theta})}
   \end{aligned}\]
       </li>
@@ -821,8 +821,8 @@
 
 \[\begin{aligned}
   \hat{\theta}
-  &amp;= \text{arg} \min_{\hat{\theta}}{\mathbb{E}_{\theta \vert X}\left[(\theta-\hat{\theta})^2\right]}\\
-  &amp;= \mathbb{E}_{\theta \vert X}(\theta)
+  &amp;= \text{arg} \min_{\hat{\theta}}{\mathbb{E}_{\theta \mid X}\left[(\theta-\hat{\theta})^2\right]}\\
+  &amp;= \mathbb{E}_{\theta \mid X}(\theta)
   \end{aligned}\]
       </li>
       <li>
@@ -830,7 +830,7 @@
 
 \[\begin{aligned}
   \hat{\theta}
-  &amp;= \text{arg} \min_{\hat{\theta}}{\mathbb{E}_{\theta \vert X}\left[ \vert \theta-\hat{\theta} \vert \right]}\\
+  &amp;= \text{arg} \min_{\hat{\theta}}{\mathbb{E}_{\theta \mid X}\left[ \vert \theta-\hat{\theta} \vert \right]}\\
   &amp;= \tilde{\theta}
   \end{aligned}\]
       </li>
@@ -839,8 +839,8 @@
 
 \[\begin{aligned}
   \hat{\theta}
-  &amp;= \text{arg} \min_{\hat{\theta}}{\mathbb{E}_{\theta \vert X}\left[1_{\hat{\theta} \ne \theta}\right]}\\
-  &amp;= \text{arg} \max_{\theta}{P(\theta \vert X)}
+  &amp;= \text{arg} \min_{\hat{\theta}}{\mathbb{E}_{\theta \mid X}\left[1_{\hat{\theta} \ne \theta}\right]}\\
+  &amp;= \text{arg} \max_{\theta}{P(\theta \mid X)}
   \end{aligned}\]
       </li>
     </ul>
@@ -875,7 +875,7 @@
 
 \[\begin{aligned}
   \text{Loss}(\theta, \hat{\theta})
-  =  \vert  \theta - \hat{\theta}  \vert 
+  =  \vert \theta - \hat{\theta} \vert 
   \end{aligned}\]
   </li>
 </ul>
@@ -921,7 +921,7 @@
 
 \[\begin{aligned}
   \log{\mathcal{L}(\theta)}
-  &amp;= \log{P(\hat{\theta} \vert \theta)}\\
+  &amp;= \log{P(\hat{\theta} \mid \theta)}\\
   &amp;= \hat{\theta} \cdot \log{\theta} + (1-\hat{\theta}) \cdot \log{(1-\theta)}
   \end{aligned}\]
       </li>
@@ -931,7 +931,7 @@
 \[\begin{aligned}
   \text{Loss}(\theta,\hat{\theta})
   &amp;= -\log{\mathcal{L}(\theta)}\\
-  &amp;= -\log{P(\hat{\theta} \vert \theta)}\\
+  &amp;= -\log{P(\hat{\theta} \mid \theta)}\\
   &amp;= - \left[\hat{\theta} \cdot \log{\theta} + (1-\hat{\theta}) \cdot \log{(1-\theta)}\right]
   \end{aligned}\]
       </li>
@@ -963,7 +963,7 @@
 
 \[\begin{aligned}
   \log{\mathcal{L}(\theta)}
-  &amp;= \log{P(\hat{\theta} \vert \theta)}\\
+  &amp;= \log{P(\hat{\theta} \mid \theta)}\\
   &amp;= \sum_{i=1}^{K}{\hat{\theta}_{i} \cdot \log{\theta_{i}}}
   \end{aligned}\]
       </li>
@@ -973,7 +973,7 @@
 \[\begin{aligned}
   \text{Loss}(\theta,\hat{\theta})
   &amp;= -\log{\mathcal{L}(\theta)}\\
-  &amp;= -\log{P(\hat{\theta} \vert \theta)}\\
+  &amp;= -\log{P(\hat{\theta} \mid \theta)}\\
   &amp;= - \sum_{i=1}^{K}{\hat{\theta}_{i} \cdot \log{\theta_{i}}}
   \end{aligned}\]
       </li>
@@ -1129,28 +1129,28 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Langs_Model_2/">Language Model (2) Deep Learning Techs</a>
+          <a href="/posts/Langs_Model/">Language Model</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Word_Representation_2/">Word Representation (2) Deep Learning Techs</a>
+          <a href="/posts/Text_Representation/">Text Representation</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Topic_Modeling/">Topic Modeling</a>
+          <a href="/posts/NVMF/">NVMF</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Langs_Model_1/">Language Model (1) Statistical Techs</a>
+          <a href="/posts/Statistical_Modeling_Methods/">Statistical Modeling Methods</a>
         </li>
       
     </ul>

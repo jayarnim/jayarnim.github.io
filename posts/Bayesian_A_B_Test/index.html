@@ -921,9 +921,9 @@
 
     <ul>
       <li>
-        <p>전환율 $\pi$ 은 $n$ 번의 실험에 따른 성공 횟수 $X \vert \pi$ 에 대한 성공 확률임</p>
+        <p>전환율 $\pi$ 은 $n$ 번의 실험에 따른 성공 횟수 $X \mid \pi$ 에 대한 성공 확률임</p>
 
-\[X \vert \pi \sim \text{Bin}(n,\pi)\]
+\[X \mid \pi \sim \text{Bin}(n,\pi)\]
       </li>
       <li>
         <p><code class="language-plaintext highlighter-rouge">Binomial Dist.</code> 의 성공 확률 $\pi$ 에 대한 <code class="language-plaintext highlighter-rouge">Conjugate Prior Dist.</code> 로서 <code class="language-plaintext highlighter-rouge">Beta Dist.</code> 가 적합함</p>
@@ -933,9 +933,9 @@
     </ul>
   </li>
   <li>
-    <p><strong>Posterior of $\pi \vert X$ Estimation</strong></p>
+    <p><strong>Posterior of $\pi \mid X$ Estimation</strong></p>
 
-\[\pi \vert X \sim \text{Beta}(\alpha_0 + X, \beta_0 + n - X)\]
+\[\pi \mid X \sim \text{Beta}(\alpha_0 + X, \beta_0 + n - X)\]
   </li>
   <li>
     <p><strong>Beyes Action</strong></p>
@@ -948,7 +948,7 @@
 
 \[\begin{aligned}
   \mathcal{R}(p)
-  &amp;= \mathbb{E}_{\pi \vert X}\left[\text{Loss}(\pi, p)\right]\\
+  &amp;= \mathbb{E}_{\pi \mid X}\left[\text{Loss}(\pi, p)\right]\\
   &amp;\approx \frac{1}{k}\sum_{i=1}^{k}{\text{Loss}(p^{(i)}, p)}
   \end{aligned}\]
       </li>
@@ -1102,28 +1102,28 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Langs_Model_2/">Language Model (2) Deep Learning Techs</a>
+          <a href="/posts/Langs_Model/">Language Model</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Word_Representation_2/">Word Representation (2) Deep Learning Techs</a>
+          <a href="/posts/Text_Representation/">Text Representation</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Topic_Modeling/">Topic Modeling</a>
+          <a href="/posts/NVMF/">NVMF</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Langs_Model_1/">Language Model (1) Statistical Techs</a>
+          <a href="/posts/Statistical_Modeling_Methods/">Statistical Modeling Methods</a>
         </li>
       
     </ul>

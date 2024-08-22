@@ -4,7 +4,7 @@
   <id>https://jayarnim.github.io/</id>
   <title>Data Scientist</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-08-19T19:21:00+09:00</updated>
+  <updated>2024-08-23T00:54:05+09:00</updated>
   <author>
     <name>jayarnim</name>
     <uri>https://jayarnim.github.io/</uri>
@@ -46,66 +46,14 @@
 
   
   <entry>
-    <title>Language Model (2) Deep Learning Techs</title>
-    <link href="https://jayarnim.github.io/posts/Langs_Model_2/" rel="alternate" type="text/html" title="Language Model (2) Deep Learning Techs" />
-    <published>2024-08-04T00:00:00+09:00</published>
-  
-    <updated>2024-08-04T00:00:00+09:00</updated>
-  
-    <id>https://jayarnim.github.io/posts/Langs_Model_2/</id>
-    <content src="https://jayarnim.github.io/posts/Langs_Model_2/" />
-    <author>
-      <name>jayarnim</name>
-    </author>
-
-  
-    
-    <category term="AI &amp; Data Mining" />
-    
-    <category term="Text Analytics" />
-    
-  
-
-  <summary>Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Word Representation (2) Deep Learning Techs</title>
-    <link href="https://jayarnim.github.io/posts/Word_Representation_2/" rel="alternate" type="text/html" title="Word Representation (2) Deep Learning Techs" />
-    <published>2024-08-03T00:00:00+09:00</published>
-  
-    <updated>2024-08-03T00:00:00+09:00</updated>
-  
-    <id>https://jayarnim.github.io/posts/Word_Representation_2/</id>
-    <content src="https://jayarnim.github.io/posts/Word_Representation_2/" />
-    <author>
-      <name>jayarnim</name>
-    </author>
-
-  
-    
-    <category term="AI &amp; Data Mining" />
-    
-    <category term="Text Analytics" />
-    
-  
-
-  <summary>Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Topic Modeling</title>
-    <link href="https://jayarnim.github.io/posts/Topic_Modeling/" rel="alternate" type="text/html" title="Topic Modeling" />
+    <title>Language Model</title>
+    <link href="https://jayarnim.github.io/posts/Langs_Model/" rel="alternate" type="text/html" title="Language Model" />
     <published>2024-08-02T00:00:00+09:00</published>
   
     <updated>2024-08-02T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/Topic_Modeling/</id>
-    <content src="https://jayarnim.github.io/posts/Topic_Modeling/" />
+    <id>https://jayarnim.github.io/posts/Langs_Model/</id>
+    <content src="https://jayarnim.github.io/posts/Langs_Model/" />
     <author>
       <name>jayarnim</name>
     </author>
@@ -124,14 +72,14 @@
 
   
   <entry>
-    <title>Language Model (1) Statistical Techs</title>
-    <link href="https://jayarnim.github.io/posts/Langs_Model_1/" rel="alternate" type="text/html" title="Language Model (1) Statistical Techs" />
+    <title>Text Representation</title>
+    <link href="https://jayarnim.github.io/posts/Text_Representation/" rel="alternate" type="text/html" title="Text Representation" />
     <published>2024-08-01T00:00:00+09:00</published>
   
     <updated>2024-08-01T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/Langs_Model_1/</id>
-    <content src="https://jayarnim.github.io/posts/Langs_Model_1/" />
+    <id>https://jayarnim.github.io/posts/Text_Representation/</id>
+    <content src="https://jayarnim.github.io/posts/Text_Representation/" />
     <author>
       <name>jayarnim</name>
     </author>
@@ -145,6 +93,58 @@
   
 
   <summary>Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Statistical Modeling Methods</title>
+    <link href="https://jayarnim.github.io/posts/Statistical_Modeling_Methods/" rel="alternate" type="text/html" title="Statistical Modeling Methods" />
+    <published>2024-07-31T00:00:00+09:00</published>
+  
+    <updated>2024-07-31T00:00:00+09:00</updated>
+  
+    <id>https://jayarnim.github.io/posts/Statistical_Modeling_Methods/</id>
+    <content src="https://jayarnim.github.io/posts/Statistical_Modeling_Methods/" />
+    <author>
+      <name>jayarnim</name>
+    </author>
+
+  
+    
+    <category term="AI &amp; Data Mining" />
+    
+    <category term="Text Analytics" />
+    
+  
+
+  <summary>Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>NVMF</title>
+    <link href="https://jayarnim.github.io/posts/NVMF/" rel="alternate" type="text/html" title="NVMF" />
+    <published>2024-07-31T00:00:00+09:00</published>
+  
+    <updated>2024-07-31T00:00:00+09:00</updated>
+  
+    <id>https://jayarnim.github.io/posts/NVMF/</id>
+    <content src="https://jayarnim.github.io/posts/NVMF/" />
+    <author>
+      <name>jayarnim</name>
+    </author>
+
+  
+    
+    <category term="AI &amp; Data Mining" />
+    
+    <category term="Recommender System" />
+    
+  
+
+  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://link.springer.com/article/10.1007/s10489-019-01469-6&amp;quot;&amp;gt;&amp;lt;em&amp;gt;Neural variational matrix factorization for collaborative filtering in recommendation systems&amp;lt;/em&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Author&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;Xiao and Shen&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Publisher&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;PAKDD&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2019&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;</summary>
 
   </entry>
 

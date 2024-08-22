@@ -1096,7 +1096,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1527 words"
+  title="1523 words"
 >
   <em>8 min</em> read</span>
 
@@ -1134,7 +1134,7 @@
     <p><strong>Principle of Indifference</strong> : 가능한 모수 공간에서 특별히 어떤 값을 선호하지 않는 원칙에 따라, 관측치가 사후분포에 미치는 영향력을 최대화하는 방법</p>
 
 \[\begin{aligned}
-  X \vert \theta &amp;\sim \text{Binomial}(n,\theta)\\
+  X \mid \theta &amp;\sim \text{Binomial}(n,\theta)\\
   \theta &amp;\sim \text{Uniform}(0,1)
   \end{aligned}\]
   </li>
@@ -1161,10 +1161,10 @@
   &amp;= \frac{\text{exp}(\psi)}{1+\text{exp}(\psi)}\\ \\
 
   f_{\psi}(\psi)
-  &amp;= f_{\theta}(g^{-1}(\psi)) \times \Big \vert \frac{\text{d}}{\text{d} \psi}g^{-1}(\psi)\Big \vert \\
-  &amp;= 1 \times \Big \vert \frac{\text{d}}{\text{d} \psi}g^{-1}(\psi)\Big \vert  \quad (\because \theta \sim \text{Uniform}(0,1))\\
-  &amp;= \frac{\text{exp}(\psi)}{(1+\text{exp}(\psi))^{2}} \\ \\
-
+  &amp;= f_{\theta}(g^{-1}(\psi)) \times \left\vert \frac{\text{d}}{\text{d} \psi}g^{-1}(\psi)\right\vert \\
+  &amp;= 1 \times \left\vert \frac{\text{d}}{\text{d} \psi}g^{-1}(\psi) \right\vert \quad (\because \theta \sim \text{Uniform}(0,1))\\
+  &amp;= \frac{\text{exp}(\psi)}{(1+\text{exp}(\psi))^{2}}\\
+  \\
   \therefore \psi &amp;\sim \text{Logistic}(0,1)
   \end{aligned}\]
   </li>
@@ -1355,7 +1355,7 @@
     <p><strong><code class="language-plaintext highlighter-rouge">example</code> General Model</strong></p>
 
 \[\begin{aligned}
-  X_{i} \vert \theta &amp;\sim N(\theta, 5^2)\\
+  X_{i} \mid \theta &amp;\sim N(\theta, 5^2)\\
   \theta &amp;\sim N(\mu, \sigma^2)
   \end{aligned}\]
 
@@ -1392,13 +1392,13 @@
     <p><strong>켤레사전분포(Conjugate Priors)</strong> : 관측치 $X$ 와 그 확률분포 \(\mathcal{L}_{\alpha}\) 에 대하여, 다음의 조건을 만족하는 사전확률분포 \(\pi_{\beta}\) 가 존재하는 경우, \(\pi_{\beta}\) 를 \(\mathcal{L}_{\alpha}\) 의 켤레사전분포(Conjugate Prior Prob. Dist.)라고 함</p>
 
 \[\begin{aligned}
-  \pi_{\beta^{\prime}}(\theta \vert X) \propto \mathcal{L}_{\alpha}(\theta) \cdot \pi_{\beta}(\theta)
+  \pi_{\beta^{\prime}}(\theta \mid X) \propto \mathcal{L}_{\alpha}(\theta) \cdot \pi_{\beta}(\theta)
   \end{aligned}\]
 
     <ul>
       <li>$\mathcal{L}_{\alpha}(\theta)$ : 모수 $\theta$ 의 우도 함수</li>
       <li>$\pi_{\beta}(\theta)$ : 모수 $\theta$ 의 사전 확률</li>
-      <li>$\pi_{\beta^{\prime}}(\theta \vert X)$ : 모수 $\theta$ 의 사후 확률</li>
+      <li>$\pi_{\beta^{\prime}}(\theta \mid X)$ : 모수 $\theta$ 의 사후 확률</li>
       <li>$\alpha,\beta,\beta^{\prime}$ : 모수들의 집합</li>
     </ul>
   </li>
@@ -1587,28 +1587,28 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Langs_Model_2/">Language Model (2) Deep Learning Techs</a>
+          <a href="/posts/Langs_Model/">Language Model</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Word_Representation_2/">Word Representation (2) Deep Learning Techs</a>
+          <a href="/posts/Text_Representation/">Text Representation</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Topic_Modeling/">Topic Modeling</a>
+          <a href="/posts/NVMF/">NVMF</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Langs_Model_1/">Language Model (1) Statistical Techs</a>
+          <a href="/posts/Statistical_Modeling_Methods/">Statistical Modeling Methods</a>
         </li>
       
     </ul>

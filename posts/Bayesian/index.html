@@ -909,7 +909,7 @@
       <li>
         <p><strong>베이지안(Bayesian)</strong> : 어떤 사건이 발생할 것이라는 믿음 혹은 확신의 척도</p>
 
-\[P(X \vert \theta)\]
+\[P(X \mid \theta)\]
       </li>
     </ul>
   </li>
@@ -935,7 +935,7 @@
   <li>
     <p>빈도주의자의 결론과 베이지안의 결론은 일치함</p>
 
-\[\lim_{n \rightarrow \infty}{P(\theta \vert X_{1},X_{2},\cdots,X_{n})} \approx \mu, \sigma^2, p, \cdots\]
+\[\lim_{n \rightarrow \infty}{P(\theta \mid X_{1},X_{2},\cdots,X_{n})} \approx \mu, \sigma^2, p, \cdots\]
 
     <ul>
       <li>사건 발생에 대한 믿음은 <strong>신규 관측치에 의해 끊임없이 갱신되어</strong> 사건 발생에 대한 장기적인 빈도로 수렴함</li>
@@ -958,7 +958,7 @@
   <li>
     <p><strong>베이지안(Bayesian)</strong> : 모수(확률변수)에 대한 사전확률을 도입함으로써 <strong>모수 자체의 불확실성을 모형화함</strong></p>
 
-\[P(\theta \vert X)=\frac{P(X \vert \theta)\cdot P(\theta)}{P(X)}\]
+\[P(\theta \mid X)=\frac{P(X \mid \theta)\cdot P(\theta)}{P(X)}\]
   </li>
 </ul>
 
@@ -976,30 +976,30 @@
     </blockquote>
 
 \[\begin{aligned}
-  P(A_{k} \vert X)
+  P(A_{k} \mid X)
   &amp;=\frac{P(A_{k} \cap X)}{P(X)}\\
-  &amp;=\frac{P(A_{k})\cdot P(X \vert A_{k})}{P(X)}\\
-  &amp;=\frac{P(A_{k})\cdot P(X \vert A_{k})}{\sum_{i=1}^{n}{P(A_{i}) \cdot P(X \vert A_{i})}} \propto P(A_{k})\cdot P(X \vert A_{k})
+  &amp;=\frac{P(A_{k})\cdot P(X \mid A_{k})}{P(X)}\\
+  &amp;=\frac{P(A_{k})\cdot P(X \mid A_{k})}{\sum_{i=1}^{n}{P(A_{i}) \cdot P(X \mid A_{i})}} \propto P(A_{k})\cdot P(X \mid A_{k})
   \end{aligned}\]
 
     <ul>
-      <li>$P(A_{k} \vert X)$ : 사건 $X$ 발생 조건부 $A_k$ 가 발생할 확률</li>
+      <li>$P(A_{k} \mid X)$ : 사건 $X$ 발생 조건부 $A_k$ 가 발생할 확률</li>
       <li>$P(A_{k})$ : 사건 $A_{k}$ 가 발생할 확률</li>
-      <li>$P(X \vert A_{k})$ : 사건 $A_{k}$ 발생 조건부 $X$ 가 발생할 확률</li>
+      <li>$P(X \mid A_{k})$ : 사건 $A_{k}$ 발생 조건부 $X$ 가 발생할 확률</li>
       <li>$P(X)$ : 사건 $X$ 가 발생할 확률</li>
     </ul>
   </li>
   <li>
     <p><strong>확률분포함수로 표현한 베이즈 정리</strong></p>
 
-\[P(\theta \vert \mathcal{D})=\frac{P(\theta) \cdot P(\mathcal{D} \vert \theta)}{P(\mathcal{D})} \propto \pi(\theta) \cdot \mathcal{L}(\theta)\]
+\[P(\theta \mid \mathcal{D})=\frac{P(\theta) \cdot P(\mathcal{D} \mid \theta)}{P(\mathcal{D})} \propto \pi(\theta) \cdot \mathcal{L}(\theta)\]
 
     <ul>
       <li>$\theta$ : 모수</li>
       <li>$\mathcal{D}$ : 관측된 데이터</li>
-      <li>$P(\theta \vert \mathcal{D})$ : $\theta$ 의 사후확률분포</li>
+      <li>$P(\theta \mid \mathcal{D})$ : $\theta$ 의 사후확률분포</li>
       <li>$\pi(\theta)=P(\theta)$ : $\theta$ 의 사전확률분포</li>
-      <li>$\mathcal{L}(\theta)=P(\mathcal{D} \vert \theta)$ : $\theta$ 에 대한 $\mathcal{D}$ 의 우도함수</li>
+      <li>$\mathcal{L}(\theta)=P(\mathcal{D} \mid \theta)$ : $\theta$ 에 대한 $\mathcal{D}$ 의 우도함수</li>
       <li>$P(\mathcal{D})$ : $\mathcal{D}$ 의 주변확률</li>
     </ul>
   </li>
@@ -1016,15 +1016,15 @@
   <li>
     <p><strong>사후확률분포(Posterior Probability Distribution)</strong> : 사건 발생 후, 추가된 정보를 고려하여 갱신된 믿음</p>
 
-\[\theta \vert \mathcal{D} \sim P\]
+\[\theta \mid \mathcal{D} \sim P\]
   </li>
   <li>
     <p><strong>우도(Likelihood or Likelihood Function)</strong> : 모수의 특정 값이 $\theta$ 로 주어졌을 때, 관측치 $\mathcal{D}$ 가 실현될 가능성</p>
 
 \[\begin{aligned}
   \mathcal{L}(\theta)
-  &amp;=P(\mathcal{D} \vert \theta)\\
-  &amp;=\prod_{i=1}^{n}{f(X_{i} \vert \theta)}
+  &amp;=P(\mathcal{D} \mid \theta)\\
+  &amp;=\prod_{i=1}^{n}{f(X_{i} \mid \theta)}
   \end{aligned}\]
   </li>
 </ul>
@@ -1042,14 +1042,14 @@
     <p><strong>문제에서 주어진 정보</strong></p>
 
 \[\begin{aligned}
-  X \vert \theta &amp;\sim \text{Bin}(n,\theta)\\
+  X \mid \theta &amp;\sim \text{Bin}(n,\theta)\\
   \theta &amp;\sim \text{Uniform}(0,1)
   \end{aligned}\]
   </li>
   <li>
     <p><strong>목적 함수 정의</strong></p>
 
-\[P(\theta \vert X)=\frac{\pi(\theta)P(X \vert \theta)}{P(X)} \propto \pi(\theta)P(X \vert \theta)\]
+\[P(\theta \mid X)=\frac{\pi(\theta)P(X \mid \theta)}{P(X)} \propto \pi(\theta)P(X \mid \theta)\]
 
     <ul>
       <li>
@@ -1058,9 +1058,9 @@
 \[\pi(\theta)=1 \quad \because \theta \sim \text{Uniform}(0,1)\]
       </li>
       <li>
-        <p>$P(X \vert \theta)$ : $\theta$ 에 대한 $X$ 의 우도함수 혹은 확률질량함수</p>
+        <p>$P(X \mid \theta)$ : $\theta$ 에 대한 $X$ 의 우도함수 혹은 확률질량함수</p>
 
-\[P(X \vert \theta)=\frac{n!}{X!(n-X)!} \cdot \theta^{X} \cdot (1-\theta)^{n-X} \quad \because X \vert \theta \sim \text{Bin}(n,\theta)\]
+\[P(X \mid \theta)=\frac{n!}{X!(n-X)!} \cdot \theta^{X} \cdot (1-\theta)^{n-X} \quad \because X \mid \theta \sim \text{Bin}(n,\theta)\]
       </li>
       <li>
         <p>$P(X)$ : $X$ 의 주변확률로서 정규화 상수($\theta$ 에 대한 함수가 아니므로 이후 생략)</p>
@@ -1102,11 +1102,11 @@
     <p><strong>결론</strong> : $\theta$ 의 사후확률은 베타분포 $\text{Beta}(3,1)$ 을 따름</p>
 
 \[\begin{aligned}
-  P(\theta \vert X)
-  &amp;\propto \pi(\theta)P(X \vert \theta)\\
+  P(\theta \mid X)
+  &amp;\propto \pi(\theta)P(X \mid \theta)\\
   &amp;= \frac{n!}{X!(n-X)!} \cdot \theta^{X} \cdot (1-\theta)^{n-X}\\
   \\
-  \therefore P(\theta \vert X)
+  \therefore P(\theta \mid X)
   &amp;\sim \text{Beta}(X+1,n-X+1)
   \end{aligned}\]
 
@@ -1270,28 +1270,28 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Langs_Model_2/">Language Model (2) Deep Learning Techs</a>
+          <a href="/posts/Langs_Model/">Language Model</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Word_Representation_2/">Word Representation (2) Deep Learning Techs</a>
+          <a href="/posts/Text_Representation/">Text Representation</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Topic_Modeling/">Topic Modeling</a>
+          <a href="/posts/NVMF/">NVMF</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Langs_Model_1/">Language Model (1) Statistical Techs</a>
+          <a href="/posts/Statistical_Modeling_Methods/">Statistical Modeling Methods</a>
         </li>
       
     </ul>

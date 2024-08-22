@@ -978,7 +978,7 @@
 \[\begin{aligned}
   RSS
   &amp;= \sum_{i}{(y_{i}-\hat{y}_{i})^2}\\
-  &amp;= \vert \overrightarrow{y} - \overrightarrow{\hat{y}} \vert^{2}\\
+  &amp;= \mid \overrightarrow{y} - \overrightarrow{\hat{y}} \mid^{2}\\
   &amp;= (\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})
   \end{aligned}\]
       </li>
@@ -1006,7 +1006,7 @@
   &amp;\sim N(\mathbf{X}\overrightarrow{\beta}, \sigma^2\mathbf{I}) \quad (\because \overrightarrow{\varepsilon} \sim N(0, \sigma^2\mathbf{I}))\\
   \\
   \therefore \mathcal{L}(\overrightarrow{\beta}, \sigma^2)
-  &amp;= P(\overrightarrow{y} \,\vert\, \overrightarrow{\beta}, \sigma^2)\\
+  &amp;= P(\overrightarrow{y} \,\mid\, \overrightarrow{\beta}, \sigma^2)\\
   &amp;= \frac{1}{(2\pi\sigma^2)^{n/2}} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot(\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})\right]}
   \end{aligned}\]
       </li>
@@ -1135,8 +1135,8 @@ P(\beta, \sigma^2)
 <h3 id="posterior-estimation-of-beta-sigma2"><span class="me-2">Posterior Estimation of $\beta, \sigma^2$</span><a href="#posterior-estimation-of-beta-sigma2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 \[\begin{aligned}
-P(\beta, \sigma^2 \vert \mathcal{D})
-&amp;\propto P(\mathcal{D} \vert \beta, \sigma^2) \cdot P(\beta, \sigma^2)\\
+P(\beta, \sigma^2 \mid \mathcal{D})
+&amp;\propto P(\mathcal{D} \mid \beta, \sigma^2) \cdot P(\beta, \sigma^2)\\
 \\
 &amp;\propto (\sigma^2)^{-\nu/2} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot \nu s^2\right]}\\
 &amp;\quad \times (\sigma^2)^{-(n-\nu)/2} \cdot \exp{\left[-\frac{1}{2\sigma^2} \cdot (\overrightarrow{\beta} - \overrightarrow{\hat{\beta}})^{T}(\mathbf{X}^{T}\mathbf{X})(\overrightarrow{\beta} - \overrightarrow{\hat{\beta}})\right]}\\
@@ -1151,9 +1151,9 @@ P(\beta, \sigma^2 \vert \mathcal{D})
     <p><strong>Marginal Posterior of $\sigma^2$ is Inverse Chi-Squared Distribution</strong></p>
 
 \[\begin{aligned}
-  f(\sigma^2 \vert \nu,s^2)
+  f(\sigma^2 \mid \nu,s^2)
   &amp;=(\sigma^2)^{-\nu/2-1} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot \nu s^2\right]}\\
-  \therefore \sigma^2 \vert \mathcal{D}
+  \therefore \sigma^2 \mid \mathcal{D}
   &amp;\sim \text{Inv-}\chi^2(\nu,s^2)
   \end{aligned}\]
   </li>
@@ -1161,9 +1161,9 @@ P(\beta, \sigma^2 \vert \mathcal{D})
     <p><strong>Conditional Posterior of $\beta$ given $\sigma^2$ is Normal Distribution</strong></p>
 
 \[\begin{aligned}
-  f(\beta \vert \hat{\beta}, \mathbf{V}_{\beta})
+  f(\beta \mid \hat{\beta}, \mathbf{V}_{\beta})
   &amp;= (\sigma^2)^{-(n-\nu)/2} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot (\overrightarrow{\beta} - \overrightarrow{\hat{\beta}})^{T}(\mathbf{X}^{T}\mathbf{X})(\overrightarrow{\beta} - \overrightarrow{\hat{\beta}})\right]}\\
-  \therefore \beta ; \sigma^2 \vert \mathcal{D}
+  \therefore \beta ; \sigma^2 \mid \mathcal{D}
   &amp;\sim N(\overrightarrow{\hat{\beta}}, \sigma^2\mathbf{V}_{\beta})
   \end{aligned}\]
 
@@ -1223,8 +1223,8 @@ P(\beta, \sigma^2 \vert \mathcal{D})
 <h3 id="posterior-estimation-of-beta-sigma2-1"><span class="me-2">Posterior Estimation of $\beta, \sigma^2$</span><a href="#posterior-estimation-of-beta-sigma2-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 \[\begin{aligned}
-P(\beta, \sigma^2 \vert \mathcal{D})
-&amp;\propto P(\mathcal{D} \vert \beta, \sigma^2) \cdot P(\beta, \sigma^2)\\
+P(\beta, \sigma^2 \mid \mathcal{D})
+&amp;\propto P(\mathcal{D} \mid \beta, \sigma^2) \cdot P(\beta, \sigma^2)\\
 \\
 &amp;\propto (\sigma^2)^{-n/2} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})\right]}\\
 &amp;\quad \times (\sigma^2)^{-\nu_{n}/2-1} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot \nu_{n} s_{n}^{2}\right]}\\
@@ -1239,7 +1239,7 @@ P(\beta, \sigma^2 \vert \mathcal{D})
     <p><strong>Posterior of $\sigma^2$ is Inverse-Gamma Distribution</strong></p>
 
 \[\begin{aligned}
-  P(\sigma^2 \vert \mathcal{D})
+  P(\sigma^2 \mid \mathcal{D})
   &amp;\propto (\sigma^2)^{-\frac{n+\nu_n}{2}-1} \cdot \exp{\left[-\frac{1}{2\sigma^2}\left(\nu_n s^{2}_{n} + (\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})\right)\right]}\\
   &amp;\propto \text{Inv-Gamma}\left(\frac{n + \nu_n}{2}, \frac{1}{2} \left[\nu_n s_n^2 + (\overrightarrow{y} - \mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y} - \mathbf{X}\overrightarrow{\beta})\right]\right)
   \end{aligned}\]
@@ -1408,28 +1408,28 @@ P(\beta, \sigma^2 \vert \mathcal{D})
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Langs_Model_2/">Language Model (2) Deep Learning Techs</a>
+          <a href="/posts/Langs_Model/">Language Model</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Word_Representation_2/">Word Representation (2) Deep Learning Techs</a>
+          <a href="/posts/Text_Representation/">Text Representation</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Topic_Modeling/">Topic Modeling</a>
+          <a href="/posts/NVMF/">NVMF</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Langs_Model_1/">Language Model (1) Statistical Techs</a>
+          <a href="/posts/Statistical_Modeling_Methods/">Statistical Modeling Methods</a>
         </li>
       
     </ul>
