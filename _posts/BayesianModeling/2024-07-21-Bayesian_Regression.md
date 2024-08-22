@@ -44,7 +44,7 @@ image:
         $$\begin{aligned}
         RSS
         &= \sum_{i}{(y_{i}-\hat{y}_{i})^2}\\
-        &= \vert \overrightarrow{y} - \overrightarrow{\hat{y}} \vert^{2}\\
+        &= \mid \overrightarrow{y} - \overrightarrow{\hat{y}} \mid^{2}\\
         &= (\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})
         \end{aligned}$$
 
@@ -64,7 +64,7 @@ image:
         &\sim N(\mathbf{X}\overrightarrow{\beta}, \sigma^2\mathbf{I}) \quad (\because \overrightarrow{\varepsilon} \sim N(0, \sigma^2\mathbf{I}))\\
         \\
         \therefore \mathcal{L}(\overrightarrow{\beta}, \sigma^2)
-        &= P(\overrightarrow{y} \,\vert\, \overrightarrow{\beta}, \sigma^2)\\
+        &= P(\overrightarrow{y} \,\mid\, \overrightarrow{\beta}, \sigma^2)\\
         &= \frac{1}{(2\pi\sigma^2)^{n/2}} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot(\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})\right]}
         \end{aligned}$$
 
@@ -177,8 +177,8 @@ P(\beta, \sigma^2)
 ### Posterior Estimation of $\beta, \sigma^2$
 
 $$\begin{aligned}
-P(\beta, \sigma^2 \vert \mathcal{D})
-&\propto P(\mathcal{D} \vert \beta, \sigma^2) \cdot P(\beta, \sigma^2)\\
+P(\beta, \sigma^2 \mid \mathcal{D})
+&\propto P(\mathcal{D} \mid \beta, \sigma^2) \cdot P(\beta, \sigma^2)\\
 \\
 &\propto (\sigma^2)^{-\nu/2} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot \nu s^2\right]}\\
 &\quad \times (\sigma^2)^{-(n-\nu)/2} \cdot \exp{\left[-\frac{1}{2\sigma^2} \cdot (\overrightarrow{\beta} - \overrightarrow{\hat{\beta}})^{T}(\mathbf{X}^{T}\mathbf{X})(\overrightarrow{\beta} - \overrightarrow{\hat{\beta}})\right]}\\
@@ -191,18 +191,18 @@ P(\beta, \sigma^2 \vert \mathcal{D})
 - **Marginal Posterior of $\sigma^2$ is Inverse Chi-Squared Distribution**
 
     $$\begin{aligned}
-    f(\sigma^2 \vert \nu,s^2)
+    f(\sigma^2 \mid \nu,s^2)
     &=(\sigma^2)^{-\nu/2-1} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot \nu s^2\right]}\\
-    \therefore \sigma^2 \vert \mathcal{D}
+    \therefore \sigma^2 \mid \mathcal{D}
     &\sim \text{Inv-}\chi^2(\nu,s^2)
     \end{aligned}$$
 
 - **Conditional Posterior of $\beta$ given $\sigma^2$ is Normal Distribution**
 
     $$\begin{aligned}
-    f(\beta \vert \hat{\beta}, \mathbf{V}_{\beta})
+    f(\beta \mid \hat{\beta}, \mathbf{V}_{\beta})
     &= (\sigma^2)^{-(n-\nu)/2} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot (\overrightarrow{\beta} - \overrightarrow{\hat{\beta}})^{T}(\mathbf{X}^{T}\mathbf{X})(\overrightarrow{\beta} - \overrightarrow{\hat{\beta}})\right]}\\
-    \therefore \beta ; \sigma^2 \vert \mathcal{D}
+    \therefore \beta ; \sigma^2 \mid \mathcal{D}
     &\sim N(\overrightarrow{\hat{\beta}}, \sigma^2\mathbf{V}_{\beta})
     \end{aligned}$$
 
@@ -251,8 +251,8 @@ $$
 ### Posterior Estimation of $\beta, \sigma^2$
 
 $$\begin{aligned}
-P(\beta, \sigma^2 \vert \mathcal{D})
-&\propto P(\mathcal{D} \vert \beta, \sigma^2) \cdot P(\beta, \sigma^2)\\
+P(\beta, \sigma^2 \mid \mathcal{D})
+&\propto P(\mathcal{D} \mid \beta, \sigma^2) \cdot P(\beta, \sigma^2)\\
 \\
 &\propto (\sigma^2)^{-n/2} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})\right]}\\
 &\quad \times (\sigma^2)^{-\nu_{n}/2-1} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot \nu_{n} s_{n}^{2}\right]}\\
@@ -265,7 +265,7 @@ P(\beta, \sigma^2 \vert \mathcal{D})
 - **Posterior of $\sigma^2$ is Inverse-Gamma Distribution**
 
     $$\begin{aligned}
-    P(\sigma^2 \vert \mathcal{D})
+    P(\sigma^2 \mid \mathcal{D})
     &\propto (\sigma^2)^{-\frac{n+\nu_n}{2}-1} \cdot \exp{\left[-\frac{1}{2\sigma^2}\left(\nu_n s^{2}_{n} + (\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})\right)\right]}\\
     &\propto \text{Inv-Gamma}\left(\frac{n + \nu_n}{2}, \frac{1}{2} \left[\nu_n s_n^2 + (\overrightarrow{y} - \mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y} - \mathbf{X}\overrightarrow{\beta})\right]\right)
     \end{aligned}$$

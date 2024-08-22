@@ -60,10 +60,10 @@ image:
 
 - **Prior of $\pi$ Determination**
 
-    - 전환율 $\pi$ 은 $n$ 번의 실험에 따른 성공 횟수 $X \vert \pi$ 에 대한 성공 확률임
+    - 전환율 $\pi$ 은 $n$ 번의 실험에 따른 성공 횟수 $X \mid \pi$ 에 대한 성공 확률임
 
         $$
-        X \vert \pi \sim \text{Bin}(n,\pi)
+        X \mid \pi \sim \text{Bin}(n,\pi)
         $$
 
     - `Binomial Dist.` 의 성공 확률 $\pi$ 에 대한 `Conjugate Prior Dist.` 로서 `Beta Dist.` 가 적합함
@@ -72,10 +72,10 @@ image:
         \pi \sim \text{Beta}(\alpha_0,\beta_0)
         $$
 
-- **Posterior of $\pi \vert X$ Estimation**
+- **Posterior of $\pi \mid X$ Estimation**
 
     $$
-    \pi \vert X \sim \text{Beta}(\alpha_0 + X, \beta_0 + n - X)
+    \pi \mid X \sim \text{Beta}(\alpha_0 + X, \beta_0 + n - X)
     $$
 
 - **Beyes Action**
@@ -88,7 +88,7 @@ image:
 
         $$\begin{aligned}
         \mathcal{R}(p)
-        &= \mathbb{E}_{\pi \vert X}\left[\text{Loss}(\pi, p)\right]\\
+        &= \mathbb{E}_{\pi \mid X}\left[\text{Loss}(\pi, p)\right]\\
         &\approx \frac{1}{k}\sum_{i=1}^{k}{\text{Loss}(p^{(i)}, p)}
         \end{aligned}$$
 

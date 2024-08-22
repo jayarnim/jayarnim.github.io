@@ -28,11 +28,11 @@ image:
 > 한 변의 길이가 2인 정사각형 내부에 점을 무작위로 찍었을 때, 그 점이 정사각형에 내접하는 원의 내부에 위치할 확률 실험을 전개하여, 원주율 $\pi$ 를 추론하시오.
 
 - **좌표평면 상에서 주어진 조건을 만족하는 원**
-    - 정의 : $C = \{ (x, y) \vert x^2 + y^2 = r^2 \} $
+    - 정의 : $$C = \{ (x, y) \mid x^2 + y^2 = r^2 \} $$
     - 면적 : $\pi r^2 = \pi \quad (\because 2r=2)$
 
 - **좌표평면 상에서 주어진 조건을 만족하는 정사각형**
-    - 정의 : $R = \{ (x, y) \vert -1 \le x \le 1, -1 \le y \le 1\} $
+    - 정의 : $R = \{ (x, y) \mid -1 \le x \le 1, -1 \le y \le 1\} $
     - 면적 : $(2r)^2=4$
 
 - **정사각형 내부에 점을 무작위로 찍었을 때, 점이 원 내부에 위치할 가능성**
@@ -62,20 +62,20 @@ image:
 
 - **절차**
     - 제안 분포 $q(\psi)$ 로부터 파라미터 $\psi$ 샘플링
-    - 목표 분포 $p(\theta \vert \mathcal{D})$, 제안 분포 $q(\psi)$, 스케일링 팩터 $M$ 에 대하여, 다음 조건을 만족하지 않으면 $\psi$ 를 샘플로 채택하지 않음
+    - 목표 분포 $p(\theta \mid \mathcal{D})$, 제안 분포 $q(\psi)$, 스케일링 팩터 $M$ 에 대하여, 다음 조건을 만족하지 않으면 $\psi$ 를 샘플로 채택하지 않음
 
         $$
-        u \le \displaystyle\frac{p(\psi \vert \mathcal{D})}{M \cdot q(\psi)} \quad \text{s.t.} \quad u \sim \text{Uniform}(0,1)
+        u \le \displaystyle\frac{p(\psi \mid \mathcal{D})}{M \cdot q(\psi)} \quad \text{s.t.} \quad u \sim \text{Uniform}(0,1)
         $$
 
 - **목표 분포(Target Dist.)** : 파라미터 $\theta$ 의 사후 확률 분포
 
     $$
-    p(\theta \vert \mathcal{D}) \propto p(\mathcal{D} \vert \theta) \cdot p(\theta)
+    p(\theta \mid \mathcal{D}) \propto p(\mathcal{D} \mid \theta) \cdot p(\theta)
     $$
 
     - $\theta$ : 파라미터
-    - $p(\mathcal{D} \vert \theta)$ : 파라미터 $\theta$ 의 우도 함수
+    - $p(\mathcal{D} \mid \theta)$ : 파라미터 $\theta$ 의 우도 함수
     - $p(\theta)$ : 파라미터 $\theta$ 의 사전 확률 분포
 
 - **제안 분포(Proposal Dist.)**
@@ -85,13 +85,13 @@ image:
     $$
 
     - $\psi$ : 파라미터로서 고려되는 샘플
-    - $q(\psi)$ 는 $p(\psi \vert \mathcal{D})$ 와 위치 및 분포가 비슷해야 함
-    - 상수 $M$ 에 대하여, $p(\psi \vert \mathcal{D}) \le M \cdot q(\psi)$ 를 만족해야 함
+    - $q(\psi)$ 는 $p(\psi \mid \mathcal{D})$ 와 위치 및 분포가 비슷해야 함
+    - 상수 $M$ 에 대하여, $p(\psi \mid \mathcal{D}) \le M \cdot q(\psi)$ 를 만족해야 함
 
 - **거절 확률(Rejection Prob.)**
 
     $$
-    \frac{p(\psi \vert \mathcal{D})}{M \cdot q(\psi)} \propto \frac{p(\mathcal{D} \vert \psi) \cdot p(\psi)}{M \cdot q(\psi)}
+    \frac{p(\psi \mid \mathcal{D})}{M \cdot q(\psi)} \propto \frac{p(\mathcal{D} \mid \psi) \cdot p(\psi)}{M \cdot q(\psi)}
     $$
 
 ## Markov Chain Monte Carlo
@@ -114,7 +114,7 @@ image:
     - **마르코프 성질** : 미래의 상태가 현재 상태에만 의존하며 과거의 상태는 고려하지 않는 성질
 
         $$\begin{aligned}
-        P(X_{n+1}=j \vert X_{n}=i,X_{n-1}=i_{n-1},\cdots,X_{0}=i_{0}) = P(X_{n+1}=j \vert X_{n}=i)
+        P(X_{n+1}=j \mid X_{n}=i,X_{n-1}=i_{n-1},\cdots,X_{0}=i_{0}) = P(X_{n+1}=j \mid X_{n}=i)
         \end{aligned}$$
 
         - $X_{n}$ : 시점 $n$ 에서 시스템이 취하는 상태
@@ -123,7 +123,7 @@ image:
 - **전이확률행렬(Transition Probability Matrix)** : 각 상태에서 다른 상태로의 전이 확률을 나타내는 행렬
 
     $$
-    \mathbf{P}_{n \times n} = \{p_{i,j} \vert i,j \in n, p_{i,j} \in S\}
+    \mathbf{P}_{n \times n} = \{p_{i,j} \mid i,j \in n, p_{i,j} \in S\}
     $$
 
     - $p_{i,j} \in S$ : 상태 $i$ 에서 $j$ 로의 전이확률
@@ -175,27 +175,27 @@ image:
 - **목표 분포(Target Dist.)** : 파라미터 $\theta^{(t)}$ 의 사후 확률 분포
 
     $$
-    p(\theta^{(t)}\vert \mathcal{D}) \propto p(\theta^{(t)}) \cdot p(\mathcal{D} \vert \theta^{(t)})
+    p(\theta^{(t)}\mid \mathcal{D}) \propto p(\theta^{(t)}) \cdot p(\mathcal{D} \mid \theta^{(t)})
     $$
 
     - $\theta^{(t)}$ : $t$ 번째 파라미터
     - $p(\theta^{(t)})$ : 파라미터 $\theta^{(t)}$ 의 사전 확률 분포
-    - $p(\mathcal{D} \vert \theta^{(t)})$ : 파라미터 $\theta^{(t)}$ 의 우도 함수
+    - $p(\mathcal{D} \mid \theta^{(t)})$ : 파라미터 $\theta^{(t)}$ 의 우도 함수
 
 - **제안 분포(Proposal Dist.)** : 시점 $t$ 에서 수락된 파라미터 샘플 $\theta^{(t)}$ 에 기반하여 다음 시점 $t+1$ 에서 샘플링 위치 $\psi$ 를 제안하는 분포
 
     $$
-    q(\psi \vert \theta^{(t)}) = N(\psi;\theta^{(t)},\sigma^2)
+    q(\psi \mid \theta^{(t)}) = N(\psi;\theta^{(t)},\sigma^2)
     $$
 
     - 제안 분포가 $\theta^{(t)}$ 을 중심으로 하는 종형 분포인 경우, 다음을 만족함
 
         $$
-        q(\psi \vert \theta^{(t)}) = q(\theta^{(t)} \vert \psi)
+        q(\psi \mid \theta^{(t)}) = q(\theta^{(t)} \mid \psi)
         $$
 
-        - $q(\psi \vert \theta^{(t)})$ : 시점 $t$ 에서 조약돌을 수집한 위치가 $\theta^{(t)}$ 일 때, 다음 시점 $t+1$ 에서 조약돌을 수집할 위치가 $y$ 일 가능성
-        - $q(\theta^{(t)} \vert \psi)$ : 시점 $t-1$ 에서 조약돌을 수집한 위치가 $\psi$ 일 때, 다음 시점 $t$ 에서 조약돌을 수집할 위치가 $\theta^{(t)}$ 일 가능성
+        - $q(\psi \mid \theta^{(t)})$ : 시점 $t$ 에서 조약돌을 수집한 위치가 $\theta^{(t)}$ 일 때, 다음 시점 $t+1$ 에서 조약돌을 수집할 위치가 $y$ 일 가능성
+        - $q(\theta^{(t)} \mid \psi)$ : 시점 $t-1$ 에서 조약돌을 수집한 위치가 $\psi$ 일 때, 다음 시점 $t$ 에서 조약돌을 수집할 위치가 $\theta^{(t)}$ 일 가능성
 
     - $\sigma^2$ 의 크기와 샘플링 수렴 여부의 관계
 
@@ -205,17 +205,17 @@ image:
 
     $$\begin{aligned}
     \alpha(\theta^{(t)}, \psi)
-    &= \min{\left[1, \frac{p(\psi \vert \mathcal{D})}{p(\theta^{(t)} \vert \mathcal{D})} \cdot \frac{q(\theta^{(t)} \vert \psi)}{q(\psi \vert \theta^{(t)})}\right]}\\
-    &= \min{\left[1, \frac{p(\psi \vert \mathcal{D})}{p(\theta^{(t)} \vert \mathcal{D})}\right]} \quad \text{s.t.} \quad \psi \vert \theta^{(t)} \sim N(\theta^{(t)},\sigma^2)\\
-    &\propto \min{\left[1, \frac{p(\psi) \cdot p(\mathcal{D} \vert \psi)}{p(\theta^{(t)}) \cdot p(\mathcal{D} \vert \theta^{(t)})}\right]}
+    &= \min{\left[1, \frac{p(\psi \mid \mathcal{D})}{p(\theta^{(t)} \mid \mathcal{D})} \cdot \frac{q(\theta^{(t)} \mid \psi)}{q(\psi \mid \theta^{(t)})}\right]}\\
+    &= \min{\left[1, \frac{p(\psi \mid \mathcal{D})}{p(\theta^{(t)} \mid \mathcal{D})}\right]} \quad \text{s.t.} \quad \psi \mid \theta^{(t)} \sim N(\theta^{(t)},\sigma^2)\\
+    &\propto \min{\left[1, \frac{p(\psi) \cdot p(\mathcal{D} \mid \psi)}{p(\theta^{(t)}) \cdot p(\mathcal{D} \mid \theta^{(t)})}\right]}
     \end{aligned}$$
 
-    - $p(\psi \vert \mathcal{D}) \propto p(\psi) \cdot p(\mathcal{D} \vert \psi)$ : 목표 분포 $p$ 에 대하여 샘플 $\psi$ 의 사후 확률로서, 다음 시점에서 조약돌을 수집할 위치가 $\psi$ 일 가능성
-    - $p(\theta^{(t)} \vert \mathcal{D}) \propto p(\theta^{(t)}) \cdot p(\mathcal{D} \vert \theta^{(t)})$ : 목표 분포 $p$ 에 대하여 $t$ 번째 파라미터 $\theta^{(t)}$ 의 사후 확률로서, 다음 시점에서 조약돌을 수집할 위치가 $\theta^{(t)}$ 일 가능성
+    - $p(\psi \mid \mathcal{D}) \propto p(\psi) \cdot p(\mathcal{D} \mid \psi)$ : 목표 분포 $p$ 에 대하여 샘플 $\psi$ 의 사후 확률로서, 다음 시점에서 조약돌을 수집할 위치가 $\psi$ 일 가능성
+    - $p(\theta^{(t)} \mid \mathcal{D}) \propto p(\theta^{(t)}) \cdot p(\mathcal{D} \mid \theta^{(t)})$ : 목표 분포 $p$ 에 대하여 $t$ 번째 파라미터 $\theta^{(t)}$ 의 사후 확률로서, 다음 시점에서 조약돌을 수집할 위치가 $\theta^{(t)}$ 일 가능성
 
 ### Auto-Correlation
 
-- **자기상관(Auto-Correlation)** : 순차로 발생한 일련의 관측치 $\{x^{(t)} \vert t\text{ is time point}\}$ 간에 존재하는 상관관계
+- **자기상관(Auto-Correlation)** : 순차로 발생한 일련의 관측치 $\{x^{(t)} \mid t\text{ is time point}\}$ 간에 존재하는 상관관계
 
     ![05](/_post_refer_img/BayesianModeling/02-05.png){: width="100%"}
 

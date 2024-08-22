@@ -14,21 +14,21 @@ image:
 ## Bayes Action
 -----
 
-> 사후확률 $\theta \vert X$ 을 추정하기 위해, 확률분포 $P(\theta \vert X) \propto \mathcal{L}(\theta) \cdot \pi(\theta)$ 로부터 $n$ 번의 샘플링을 통해 $n$ 개의 샘플 $\theta^{(1)},\theta^{(2)},\cdots,\theta^{(n)}$ 을 도출했다고 하자. 그렇다면 이들 중 무엇을 모수 $\theta \vert X$ 의 추정치 $\hat{\theta}$ 로 사용하는 것이 적절할까?
+> 사후확률 $\theta \mid X$ 을 추정하기 위해, 확률분포 $P(\theta \mid X) \propto \mathcal{L}(\theta) \cdot \pi(\theta)$ 로부터 $n$ 번의 샘플링을 통해 $n$ 개의 샘플 $\theta^{(1)},\theta^{(2)},\cdots,\theta^{(n)}$ 을 도출했다고 하자. 그렇다면 이들 중 무엇을 모수 $\theta \mid X$ 의 추정치 $\hat{\theta}$ 로 사용하는 것이 적절할까?
 
-- **Bayes' Risk** : 사후확률분포 $P(\theta \vert X)$ 를 사용하여 계산된, 모수 $\theta$ 에 대하여 추정치 $\hat{\theta}$ 를 선택할 때의 기대 손실(Expected Loss)
+- **Bayes' Risk** : 사후확률분포 $P(\theta \mid X)$ 를 사용하여 계산된, 모수 $\theta$ 에 대하여 추정치 $\hat{\theta}$ 를 선택할 때의 기대 손실(Expected Loss)
 
     $$\begin{aligned}
     \mathcal{R}(\hat{\theta})
-    &= \mathbb{E}_{\theta \vert X}\left[\text{Loss}(\theta, \hat{\theta})\right]\\
-    &= \int{\text{Loss}(\theta, \hat{\theta}) \cdot P(\theta \vert X)}\text{d}\theta
+    &= \mathbb{E}_{\theta \mid X}\left[\text{Loss}(\theta, \hat{\theta})\right]\\
+    &= \int{\text{Loss}(\theta, \hat{\theta}) \cdot P(\theta \mid X)}\text{d}\theta
     \end{aligned}$$
 
-    - 모수 $\theta \vert X$ 를 알 수 없으므로, $n$ 번의 샘플링을 통해 도출한 $n$ 개의 샘플 $\theta^{(1)},\theta^{(2)},\cdots,\theta^{(n)} \sim P(\theta \vert X)$ 를 사용하여 근사함
+    - 모수 $\theta \mid X$ 를 알 수 없으므로, $n$ 번의 샘플링을 통해 도출한 $n$ 개의 샘플 $\theta^{(1)},\theta^{(2)},\cdots,\theta^{(n)} \sim P(\theta \mid X)$ 를 사용하여 근사함
 
         $$\begin{aligned}
         \mathcal{R}(\hat{\theta})
-        &= \mathbb{E}_{\theta \vert X}\left[\text{Loss}(\theta, \hat{\theta})\right]\\
+        &= \mathbb{E}_{\theta \mid X}\left[\text{Loss}(\theta, \hat{\theta})\right]\\
         &\approx \frac{1}{N}\sum_{i=1}^{N}{\text{Loss}(\theta^{(i)}, \hat{\theta})}
         \end{aligned}$$
 
@@ -43,15 +43,15 @@ image:
 
         $$\begin{aligned}
         \hat{\theta}
-        &= \text{arg} \min_{\hat{\theta}}{\mathbb{E}_{\theta \vert X}\left[(\theta-\hat{\theta})^2\right]}\\
-        &= \mathbb{E}_{\theta \vert X}(\theta)
+        &= \text{arg} \min_{\hat{\theta}}{\mathbb{E}_{\theta \mid X}\left[(\theta-\hat{\theta})^2\right]}\\
+        &= \mathbb{E}_{\theta \mid X}(\theta)
         \end{aligned}$$
 
     - **Posterior Median**
 
         $$\begin{aligned}
         \hat{\theta}
-        &= \text{arg} \min_{\hat{\theta}}{\mathbb{E}_{\theta \vert X}\left[ \vert \theta-\hat{\theta} \vert \right]}\\
+        &= \text{arg} \min_{\hat{\theta}}{\mathbb{E}_{\theta \mid X}\left[ \vert \theta-\hat{\theta} \vert \right]}\\
         &= \tilde{\theta}
         \end{aligned}$$
 
@@ -59,8 +59,8 @@ image:
 
         $$\begin{aligned}
         \hat{\theta}
-        &= \text{arg} \min_{\hat{\theta}}{\mathbb{E}_{\theta \vert X}\left[1_{\hat{\theta} \ne \theta}\right]}\\
-        &= \text{arg} \max_{\theta}{P(\theta \vert X)}
+        &= \text{arg} \min_{\hat{\theta}}{\mathbb{E}_{\theta \mid X}\left[1_{\hat{\theta} \ne \theta}\right]}\\
+        &= \text{arg} \max_{\theta}{P(\theta \mid X)}
         \end{aligned}$$
 
 ## Loss Function
@@ -89,7 +89,7 @@ image:
 
     $$\begin{aligned}
     \text{Loss}(\theta, \hat{\theta})
-    =  \vert  \theta - \hat{\theta}  \vert 
+    =  \vert \theta - \hat{\theta} \vert 
     \end{aligned}$$
 
 ### Discrete Prob. Variable
@@ -128,7 +128,7 @@ image:
 
         $$\begin{aligned}
         \log{\mathcal{L}(\theta)}
-        &= \log{P(\hat{\theta} \vert \theta)}\\
+        &= \log{P(\hat{\theta} \mid \theta)}\\
         &= \hat{\theta} \cdot \log{\theta} + (1-\hat{\theta}) \cdot \log{(1-\theta)}
         \end{aligned}$$
 
@@ -137,7 +137,7 @@ image:
         $$\begin{aligned}
         \text{Loss}(\theta,\hat{\theta})
         &= -\log{\mathcal{L}(\theta)}\\
-        &= -\log{P(\hat{\theta} \vert \theta)}\\
+        &= -\log{P(\hat{\theta} \mid \theta)}\\
         &= - \left[\hat{\theta} \cdot \log{\theta} + (1-\hat{\theta}) \cdot \log{(1-\theta)}\right]
         \end{aligned}$$
 
@@ -164,7 +164,7 @@ image:
 
         $$\begin{aligned}
         \log{\mathcal{L}(\theta)}
-        &= \log{P(\hat{\theta} \vert \theta)}\\
+        &= \log{P(\hat{\theta} \mid \theta)}\\
         &= \sum_{i=1}^{K}{\hat{\theta}_{i} \cdot \log{\theta_{i}}}
         \end{aligned}$$
 
@@ -173,6 +173,6 @@ image:
         $$\begin{aligned}
         \text{Loss}(\theta,\hat{\theta})
         &= -\log{\mathcal{L}(\theta)}\\
-        &= -\log{P(\hat{\theta} \vert \theta)}\\
+        &= -\log{P(\hat{\theta} \mid \theta)}\\
         &= - \sum_{i=1}^{K}{\hat{\theta}_{i} \cdot \log{\theta_{i}}}
         \end{aligned}$$

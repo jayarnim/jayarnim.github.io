@@ -1,7 +1,7 @@
 ---
 order: 6
-title: Word Representation (2) Deep Learning Techs
-date: 2024-08-03
+title: Language Model
+date: 2024-08-02
 categories: [AI & Data Mining, Text Analytics]
 tags: [Data Mining, Text Mining]
 math: true

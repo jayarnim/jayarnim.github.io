@@ -62,7 +62,7 @@ image:
 1. **모든 슬롯 머신의 보상 확률에 대하여 사전 확률 분포 설정**
 
     $$\begin{aligned}
-    X \vert \theta &\sim \text{Bin}(n,\theta)\\
+    X \mid \theta &\sim \text{Bin}(n,\theta)\\
     \therefore \theta &\sim \text{Beta}(\alpha_0,\beta_0)
     \end{aligned}$$
 
@@ -75,7 +75,7 @@ image:
 3. **보상 관찰 후 해당 슬롯 머신의 사후 확률 분포 갱신**
 
     $$\begin{aligned}
-    \theta_{B(t)} \vert X &\sim \text{Beta}(\alpha, \beta)\\
+    \theta_{B(t)} \mid X &\sim \text{Beta}(\alpha, \beta)\\
     \alpha &= \alpha_0 + X\\
     \beta &= \beta_0 - n + X
     \end{aligned}$$
