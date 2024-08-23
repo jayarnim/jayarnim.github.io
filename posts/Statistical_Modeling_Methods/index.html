@@ -1129,7 +1129,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1557 words"
+  title="1561 words"
 >
   <em>8 min</em> read</span>
 
@@ -1347,7 +1347,7 @@
     <ul>
       <li>$\mathbb{A}_{n \times d}$ : Document-Term Matrix</li>
       <li>\(\mathbb{U}_{n \times k} \cdot \Sigma_{k \times k}\) : Document-Topic Matrix</li>
-      <li>$\mathbb{V}_{d \times k}^{T}$ : Term-Topic Matrix</li>
+      <li>$\Sigma_{k \times k} \cdot \mathbb{V}_{d \times k}^{T}$ : Term-Topic Matrix</li>
     </ul>
   </li>
   <li>
@@ -1477,7 +1477,7 @@
 \[\begin{aligned}
  &amp;P(\theta_d, \psi_{z(d,n)}; z(d,n) \mid w(d,n))\\
  &amp;\propto \underbrace{P(\theta_d \mid z(d,n))}_{\begin{array}{c} \text{Posterior of} \\ \text{Document-Topic} \\ \text{Allocation} \end{array}} \times \underbrace{P(\psi_{z(d,n)} \mid w(d,n))}_{\begin{array}{c} \text{Posterior of} \\ \text{Topic-Word} \\ \text{Allocation} \end{array}}\\
- &amp;\propto \left[\underbrace{P(\theta_d)}_{\text{prior}} \cdot \underbrace{P(z(d,n) \mid \theta_d)}_{\text{likelihood}}\right] \times \left[\underbrace{P(\psi_{z(d,n)})}_{\text{prior}} \cdot \underbrace{P(w(d,n) \mid \psi_{z(d,n)})}_{\text{likelihood}}\right]
+ &amp;\propto \left[\underbrace{P(\theta_d)}_{\text{Prior}} \cdot \underbrace{P(z(d,n) \mid \theta_d)}_{\text{Likelihood}}\right] \times \left[\underbrace{P(\psi_{z(d,n)})}_{\text{Prior}} \cdot \underbrace{P(w(d,n) \mid \psi_{z(d,n)})}_{\text{Likelihood}}\right]
  \end{aligned}\]
 
         <ul>
