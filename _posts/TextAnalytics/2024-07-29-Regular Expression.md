@@ -66,21 +66,6 @@ image:
     | `{,n}` | $n$ 개 이하 |
     | `{m,n}` | $m$ 개 이상 $n$ 개 이하 |
 
-## Escape Sequence
------
-
-> 백슬래시를 활용하여 특정 문자들을 탈출(Escape) 시켜서 원래의 기능을 무효화하거나 특별한 기능을 수행하게 만드는 문자 조합
-
-| 예약 문자 | 설명 |
-|---|---|
-| `\` | Escape Sequence |
-| `\n` | 개행 |
-| `\t` | 현재 시간 |
-| `\u` | 사용자 이름 |
-| `\w` | 현재 작업 중인 로컬 디렉토리 절대 경로 |
-| `\[` | 비출력문자열 시작 |
-| `\]` | 비출력문자열 종료 |
-
 ## Python Package `re`
 -----
 
@@ -212,6 +197,66 @@ for result in results:
 
 ## Exploration
 -----
+
+- **긍정형 전방 탐색 `B(?=A)`** : Pattern `A` 의 시작점 이전 지점에서 Pattern `B` 를 탐색함
+
+    ```py
+    pattern = '[a-zA-Z0-9]+(?=efg)'
+    p = re.complile(pattern)
+
+    my_str = "AB12efC1efGH"
+    results = p.finditer(my_str)
+
+    for result in results:
+        print(result)
+    ```
+
+    ![09](/_post_refer_img/TextAnalytics/01-09.png){: width="100%"}
+
+- **긍정형 후방 탐색 `(?<=A)B`** : Pattern `A` 의 끝점 이후 지점에서 Pattern `B` 를 탐색함
+
+    ```py
+    pattern = '(?<=efg)[a-zA-Z0-9]+'
+    p = re.complile(pattern)
+
+    my_str = "AB12efC1efGH"
+    results = p.finditer(my_str)
+
+    for result in results:
+        print(result)
+    ```
+
+    ![08](/_post_refer_img/TextAnalytics/01-08.png){: width="100%"}
+
+- **부정형 전방 탐색 `B(?!A)`** : Pattern `A` 의 시작점을 제외한 지점에서 Pattern `B` 를 탐색함
+
+    ```py
+    pattern = '[a-zA-Z0-9]+(?!efg)'
+    p = re.complile(pattern)
+
+    my_str = "AB12efC1efGH"
+    results = p.finditer(my_str)
+
+    for result in results:
+        print(result)
+    ```
+
+    ![11](/_post_refer_img/TextAnalytics/01-11.png){: width="100%"}
+
+- **부정형 후방 탐색 `(?<!A)B`** : Pattern `A` 의 끝점을 제외한 지점에서 Pattern `B` 를 탐색함
+
+    ```py
+    pattern = '(?<!efg)[a-zA-Z0-9]+'
+    p = re.complile(pattern)
+
+    my_str = "AB12efC1efGH"
+    results = p.finditer(my_str)
+
+    for result in results:
+        print(result)
+    ```
+
+    ![10](/_post_refer_img/TextAnalytics/01-10.png){: width="100%"}
 
 -----
 
