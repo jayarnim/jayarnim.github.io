@@ -81,7 +81,7 @@ image:
     &= -RSS
     \end{aligned}$$
 
-- **따라서 최우추정량(우도를 최대화하는 모수) $$\hat{\beta}_{MLE}$$ 과 최소자승추정량(잔차를 최소화하는 모수) $$\hat{\beta}_{OLS}$$ 는 동일함**
+- **따라서 $$\hat{\beta}_{MLE}$$ 과 $$\hat{\beta}_{OLS}$$ 는 동일함**
 
     $$\begin{aligned}
     \therefore \text{arg}\max_{\beta}{\mathcal{L}(\overrightarrow{\beta}, \sigma^2)}
@@ -90,6 +90,9 @@ image:
     &= \text{arg}\min_{\beta}{(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})}\\
     &= \text{arg}\min_{\beta}{RSS}
     \end{aligned}$$
+
+    - $$\hat{\beta}_{MLE}$$ : 최우추정량으로서 우도를 최대화하는 모수
+    - $$\hat{\beta}_{OLS}$$ : 최소자승추정량으로서 잔차를 최소화하는 모수
 
 ## Non-informative Prior Determination
 -----

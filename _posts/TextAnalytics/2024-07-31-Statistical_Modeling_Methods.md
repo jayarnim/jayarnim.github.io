@@ -141,7 +141,7 @@ image:
 
     - $\mathbb{A}_{n \times d}$ : Document-Term Matrix
     - $$\mathbb{U}_{n \times k} \cdot \Sigma_{k \times k}$$ : Document-Topic Matrix
-    - $\mathbb{V}_{d \times k}^{T}$ : Term-Topic Matrix
+    - $\Sigma_{k \times k} \cdot \mathbb{V}_{d \times k}^{T}$ : Term-Topic Matrix
 
 - **특이값 분해(Singular Value Decomposition; SVD)** : 차원의 크기가 $n \times d$ 인 임의의 행렬 $\mathbb{A}$ 를 세 개의 행렬의 곱으로 분해하는 방법
 
@@ -250,7 +250,7 @@ image:
         $$\begin{aligned}
         &P(\theta_d, \psi_{z(d,n)}; z(d,n) \mid w(d,n))\\
         &\propto \underbrace{P(\theta_d \mid z(d,n))}_{\begin{array}{c} \text{Posterior of} \\ \text{Document-Topic} \\ \text{Allocation} \end{array}} \times \underbrace{P(\psi_{z(d,n)} \mid w(d,n))}_{\begin{array}{c} \text{Posterior of} \\ \text{Topic-Word} \\ \text{Allocation} \end{array}}\\
-        &\propto \left[\underbrace{P(\theta_d)}_{\text{prior}} \cdot \underbrace{P(z(d,n) \mid \theta_d)}_{\text{likelihood}}\right] \times \left[\underbrace{P(\psi_{z(d,n)})}_{\text{prior}} \cdot \underbrace{P(w(d,n) \mid \psi_{z(d,n)})}_{\text{likelihood}}\right]
+        &\propto \left[\underbrace{P(\theta_d)}_{\text{Prior}} \cdot \underbrace{P(z(d,n) \mid \theta_d)}_{\text{Likelihood}}\right] \times \left[\underbrace{P(\psi_{z(d,n)})}_{\text{Prior}} \cdot \underbrace{P(w(d,n) \mid \psi_{z(d,n)})}_{\text{Likelihood}}\right]
         \end{aligned}$$
 
         - $w(d,n)$ : 문서 $d$ 의 $n$ 번째 단어
