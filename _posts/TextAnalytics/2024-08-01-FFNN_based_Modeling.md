@@ -11,8 +11,13 @@ image:
     path: /_post_refer_img/TextAnalytics/Thumbnail.png
 ---
 
-## Word Representation
+## NNLM
 -----
+
+## Word2Vec
+-----
+
+### Word Representation
 
 - **희소 표현(Sparse Representation)** : 하나의 단어를 하나의 차원으로 하는 $n$ 차원 공간에 단어를 표현하는 방법
 
@@ -34,12 +39,6 @@ image:
         &\text{My dog is cute. Sometimes my dog braks at me.}\\
         &\text{My puppy is cute. Sometimes my puppy braks at me.}
         \end{aligned}$$
-
-## NNLM
------
-
-## Word2Vec
------
 
 ## Fast-Text
 -----
