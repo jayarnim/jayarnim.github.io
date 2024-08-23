@@ -124,9 +124,86 @@ image:
 ## Topic Model
 -----
 
+- **토픽 모형(Topic Model)** : 관측 가능한 단어(Word) 및 문서(Document)로부터 말뭉치(Corpus)에 내재되어 있는(Latent) 토픽(Topic)을 탐색하는 방법
+    - 문서(Document)는 토픽(Topic)으로 어떻게 표현할 수 있을까?
+    - 단어(Word)sms 토픽(Topic) 별로 어떻게 등장하는가?
+    - 탐색된 Something(Topic)의 정체를 무엇이라 정의하면 좋을까?
+
 ### LSA
 
-- **잠재 의미 분석(Latent Semantic Analysis; LSA)**
+- **잠재 의미 분석(Latent Semantic Analysis; LSA)** : 특이값 분해(Singular Value Decomposition; SVD)를 활용하여 Document-Term Matrix 를 분해하는 방법
+
+    | Dimension | Interpretation | |
+    |---|---|---|
+    | $n$ | Number of Document | |
+    | $d$ | Number of Term | |
+    | $k$ | Number of Topic | Hyper-Parameter |
+
+    - $\mathbb{A}_{n \times d}$ : Document-Term Matrix
+    - $$\mathbb{U}_{n \times k} \cdot \Sigma_{k \times k}$$ : Document-Topic Matrix
+    - $\mathbb{V}_{d \times k}^{T}$ : Term-Topic Matrix
+
+- **특이값 분해(Singular Value Decomposition; SVD)** : 차원의 크기가 $n \times d$ 인 임의의 행렬 $\mathbb{A}$ 를 세 개의 행렬의 곱으로 분해하는 방법
+
+    $$
+    \mathbb{A} = \mathbb{U} \cdot \Sigma \cdot \mathbb{V}^{T}
+    $$
+
+    - **$\mathbb{U}_{n \times k}$ : 직교 정규 행렬(Ortho-normal Matrix)**
+        - 열벡터 $\overrightarrow{u}_{i} \in \mathbb{U}$ 는 행렬 $\mathbb{A} \cdot \mathbb{A}^{T}$ 의 고유벡터(Eigen Vector)임
+
+            $$
+            \mathbb{A}\mathbb{A}^{T} \cdot \overrightarrow{u}_i = \lambda_i \overrightarrow{u}_i
+            $$
+
+        - 열벡터 $\overrightarrow{u}_{i}$ 의 길이는 $1$ 임
+
+            $$
+            \Vert \overrightarrow{u}_{i} \Vert = 1
+            $$
+
+        - 열벡터 $$\overrightarrow{u}_{i}, \overrightarrow{u}_{j}$$ 은 직교함
+
+            $$
+            \overrightarrow{u}_{i} \perp \overrightarrow{u}_{j} \Leftrightarrow \langle \overrightarrow{u}_{i}, \overrightarrow{u}_{j} \rangle = 0
+            $$
+
+    - **$\mathbb{V}_{d \times k}^{T}$ : 직교 정규 행렬(Ortho-normal Matrix)**
+        - 열벡터 $\overrightarrow{v}_{i} \in \mathbb{V}$ 는 행렬 $\mathbb{A}^{T} \cdot \mathbb{A}$ 의 고유벡터(Eigen Vector)임
+
+            $$
+            \mathbb{A}^{T}\mathbb{A} \cdot \overrightarrow{v}_i = \lambda_i \overrightarrow{v}_i
+            $$
+
+        - 열벡터 $\overrightarrow{v}_{i}$ 의 길이는 $1$ 임
+
+            $$
+            \Vert \overrightarrow{v}_{i} \Vert = 1
+            $$
+
+        - 열벡터 $$\overrightarrow{v}_{i}, \overrightarrow{v}_{j}$$ 은 직교함
+
+            $$
+            \overrightarrow{v}_{i} \perp \overrightarrow{v}_{j} \Leftrightarrow \langle \overrightarrow{v}_{i}, \overrightarrow{v}_{j} \rangle = 0
+            $$
+
+    - **$\Sigma_{k \times k}$ : 대각 행렬(Diagonal Matrix)**
+
+        $$
+        \Sigma_{k \times k}
+        = \begin{pmatrix}
+        \sigma_{1} & 0 & \cdots & 0 \\
+        0 & \sigma_{2} & \cdots & 0 \\
+        \vdots & \vdots & \ddots & \vdots \\
+        0 & 0 & \cdots & \sigma_{k}
+        \end{pmatrix}
+        $$
+
+        - 대각항의 원소 $\sigma_{i}$ 는 행렬 $\mathbb{A} \cdot \mathbb{A}^{T}$ 혹은 $\mathbb{A}^{T} \cdot \mathbb{A}$ 의 고유값(Eigen Value) $\lambda_{i}$ 의 자승근임 
+
+            $$
+            \sigma_{i} = \sqrt{\lambda_i}
+            $$
 
 ### LDA
 
