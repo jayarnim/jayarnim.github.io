@@ -4,7 +4,7 @@
   <id>https://jayarnim.github.io/</id>
   <title>Data Scientist</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-08-23T20:57:49+09:00</updated>
+  <updated>2024-08-24T03:26:13+09:00</updated>
   <author>
     <name>jayarnim</name>
     <uri>https://jayarnim.github.io/</uri>
@@ -46,14 +46,14 @@
 
   
   <entry>
-    <title>Language Model</title>
-    <link href="https://jayarnim.github.io/posts/Langs_Model/" rel="alternate" type="text/html" title="Language Model" />
+    <title>RNN based Modeling</title>
+    <link href="https://jayarnim.github.io/posts/RNN_based_Modeling/" rel="alternate" type="text/html" title="RNN based Modeling" />
     <published>2024-08-02T00:00:00+09:00</published>
   
     <updated>2024-08-02T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/Langs_Model/</id>
-    <content src="https://jayarnim.github.io/posts/Langs_Model/" />
+    <id>https://jayarnim.github.io/posts/RNN_based_Modeling/</id>
+    <content src="https://jayarnim.github.io/posts/RNN_based_Modeling/" />
     <author>
       <name>jayarnim</name>
     </author>
@@ -72,14 +72,14 @@
 
   
   <entry>
-    <title>Text Representation</title>
-    <link href="https://jayarnim.github.io/posts/Text_Representation/" rel="alternate" type="text/html" title="Text Representation" />
+    <title>FFNN based Modeling</title>
+    <link href="https://jayarnim.github.io/posts/FFNN_based_Modeling/" rel="alternate" type="text/html" title="FFNN based Modeling" />
     <published>2024-08-01T00:00:00+09:00</published>
   
     <updated>2024-08-01T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/Text_Representation/</id>
-    <content src="https://jayarnim.github.io/posts/Text_Representation/" />
+    <id>https://jayarnim.github.io/posts/FFNN_based_Modeling/</id>
+    <content src="https://jayarnim.github.io/posts/FFNN_based_Modeling/" />
     <author>
       <name>jayarnim</name>
     </author>
