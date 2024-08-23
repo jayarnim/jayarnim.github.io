@@ -4,7 +4,7 @@
   <id>https://jayarnim.github.io/</id>
   <title>Data Scientist</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-08-24T03:29:44+09:00</updated>
+  <updated>2024-08-24T03:36:44+09:00</updated>
   <author>
     <name>jayarnim</name>
     <uri>https://jayarnim.github.io/</uri>
@@ -46,14 +46,14 @@
 
   
   <entry>
-    <title>RNN based Modeling</title>
-    <link href="https://jayarnim.github.io/posts/RNN_based_Modeling/" rel="alternate" type="text/html" title="RNN based Modeling" />
+    <title>Language Model</title>
+    <link href="https://jayarnim.github.io/posts/Langs_Model/" rel="alternate" type="text/html" title="Language Model" />
     <published>2024-08-02T00:00:00+09:00</published>
   
     <updated>2024-08-02T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/RNN_based_Modeling/</id>
-    <content src="https://jayarnim.github.io/posts/RNN_based_Modeling/" />
+    <id>https://jayarnim.github.io/posts/Langs_Model/</id>
+    <content src="https://jayarnim.github.io/posts/Langs_Model/" />
     <author>
       <name>jayarnim</name>
     </author>
@@ -72,14 +72,14 @@
 
   
   <entry>
-    <title>FFNN based Modeling</title>
-    <link href="https://jayarnim.github.io/posts/FFNN_based_Modeling/" rel="alternate" type="text/html" title="FFNN based Modeling" />
+    <title>Word Representation</title>
+    <link href="https://jayarnim.github.io/posts/Word_Representation/" rel="alternate" type="text/html" title="Word Representation" />
     <published>2024-08-01T00:00:00+09:00</published>
   
     <updated>2024-08-01T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/FFNN_based_Modeling/</id>
-    <content src="https://jayarnim.github.io/posts/FFNN_based_Modeling/" />
+    <id>https://jayarnim.github.io/posts/Word_Representation/</id>
+    <content src="https://jayarnim.github.io/posts/Word_Representation/" />
     <author>
       <name>jayarnim</name>
     </author>
