@@ -145,6 +145,8 @@ image:
 
 - **특이값 분해(Singular Value Decomposition; SVD)** : 차원의 크기가 $n \times d$ 인 임의의 행렬 $\mathbb{A}$ 를 세 개의 행렬의 곱으로 분해하는 방법
 
+    ![04](/_post_refer_img/TextAnalytics/03-04.png){: width="100%"}
+
     $$
     \mathbb{A} = \mathbb{U} \cdot \Sigma \cdot \mathbb{V}^{T}
     $$
