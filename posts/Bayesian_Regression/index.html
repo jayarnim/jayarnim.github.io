@@ -927,7 +927,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="816 words"
+  title="878 words"
 >
   <em>4 min</em> read</span>
 
@@ -959,6 +959,31 @@
   </li>
 </ul>
 
+<h3 id="mle"><span class="me-2">MLE</span><a href="#mle" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p><strong>최우추정법(Maximum Liklihood Estimation; MLE)</strong> : 우도를 최대화하는 회귀계수를 탐색하는 방법</p>
+
+\[\begin{aligned}
+  \overrightarrow{\hat{\beta}}_{MLE}
+  &amp;= \text{arg}\max{\mathcal{L}(\overrightarrow{\beta}, \sigma^2)}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>우도(Liklihood)</strong> : 파라미터 $\theta$ 가 주어졌을 때, 관측치 $y$ 가 발생할 확률</p>
+
+\[\begin{aligned}
+  \overrightarrow{y}
+  &amp;\sim N(\mathbf{X}\overrightarrow{\beta}, \sigma^2\mathbf{I}) \quad (\because \overrightarrow{\varepsilon} \sim N(0, \sigma^2\mathbf{I}))\\
+  \\
+  \therefore \mathcal{L}(\overrightarrow{\beta}, \sigma^2)
+  &amp;= P(\overrightarrow{y} \,\mid\, \overrightarrow{\beta}, \sigma^2)\\
+  &amp;= \frac{1}{(2\pi\sigma^2)^{n/2}} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot(\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})\right]}
+  \end{aligned}\]
+  </li>
+</ul>
+
 <h3 id="ols"><span class="me-2">OLS</span><a href="#ols" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
@@ -970,10 +995,9 @@
   &amp;= \text{arg}\min_{\beta}{RSS}\\
   &amp;= (\mathbf{X}^{T}\mathbf{X})^{-1}\mathbf{X}^{T}\overrightarrow{y}
   \end{aligned}\]
-
-    <ul>
-      <li>
-        <p><strong>Residual Sum of Square(RSS)</strong> : 잔차 자승의 합</p>
+  </li>
+  <li>
+    <p><strong>Residual Sum of Square(RSS)</strong> : 잔차 자승의 합</p>
 
 \[\begin{aligned}
   RSS
@@ -981,54 +1005,36 @@
   &amp;= \mid \overrightarrow{y} - \overrightarrow{\hat{y}} \mid^{2}\\
   &amp;= (\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})
   \end{aligned}\]
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="mle"><span class="me-2">MLE</span><a href="#mle" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li>
-    <p><strong>최우추정법(Maximum Liklihood Estimation; MLE)</strong> : 우도를 최대화하는 회귀계수를 탐색하는 방법</p>
-
-\[\begin{aligned}
-  \overrightarrow{\hat{\beta}}_{MLE}
-  &amp;= \text{arg}\max{\mathcal{L}(\overrightarrow{\beta}, \sigma^2)}
-  \end{aligned}\]
-
-    <ul>
-      <li>
-        <p><strong>우도(Liklihood)</strong> : 파라미터 $\theta$ 가 주어졌을 때, 관측치 $y$ 가 발생할 확률</p>
-
-\[\begin{aligned}
-  \overrightarrow{y}
-  &amp;\sim N(\mathbf{X}\overrightarrow{\beta}, \sigma^2\mathbf{I}) \quad (\because \overrightarrow{\varepsilon} \sim N(0, \sigma^2\mathbf{I}))\\
-  \\
-  \therefore \mathcal{L}(\overrightarrow{\beta}, \sigma^2)
-  &amp;= P(\overrightarrow{y} \,\mid\, \overrightarrow{\beta}, \sigma^2)\\
-  &amp;= \frac{1}{(2\pi\sigma^2)^{n/2}} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot(\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})\right]}
-  \end{aligned}\]
-      </li>
-    </ul>
   </li>
 </ul>
 
 <h3 id="hatbeta_mlehatbeta_ols"><span class="me-2">\(\hat{\beta}_{MLE}=\hat{\beta}_{OLS}\)</span><a href="#hatbeta_mlehatbeta_ols" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
+<ul>
+  <li>
+    <p><strong>우도 $\mathcal{L}(\overrightarrow{\beta}, \sigma^2)$ 는 잔차 $RSS$ 에 반비례함</strong></p>
+
 \[\begin{aligned}
-\mathcal{L}(\overrightarrow{\beta}, \sigma^2)
-&amp;\propto \log{\mathcal{L}(\overrightarrow{\beta}, \sigma^2)}\\
-&amp;= -\frac{n}{2}\cdot\log{2\pi\sigma^2}-\frac{1}{2\sigma^2}\cdot(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})\\
-&amp;\propto -\frac{1}{2\sigma^2}\cdot(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})\\
-&amp;\propto -(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})\\
-\\
-\therefore \text{arg}\max_{\beta}{\mathcal{L}(\overrightarrow{\beta}, \sigma^2)}
-&amp;= \text{arg}\max_{\beta}{\log{\mathcal{L}(\overrightarrow{\beta}, \sigma^2)}}\\
-&amp;= \text{arg}\max_{\beta}{-(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})}\\
-&amp;= \text{arg}\min_{\beta}{(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})}\\
-&amp;= \text{arg}\min_{\beta}{RSS}
-\end{aligned}\]
+  \mathcal{L}(\overrightarrow{\beta}, \sigma^2)
+  &amp;\propto \log{\mathcal{L}(\overrightarrow{\beta}, \sigma^2)}\\
+  &amp;= -\frac{n}{2}\cdot\log{2\pi\sigma^2}-\frac{1}{2\sigma^2}\cdot(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})\\
+  &amp;\propto -\frac{1}{2\sigma^2}\cdot(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})\\
+  &amp;\propto -(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})\\
+  &amp;= -RSS
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>따라서 최우추정량(우도를 최대화하는 모수) $\hat{\beta}<em>{MLE}$ 과 최소자승추정량(잔차를 최소화하는 모수) $\hat{\beta}</em>{OLS}$ 는 동일함</strong></p>
+
+\[\begin{aligned}
+  \therefore \text{arg}\max_{\beta}{\mathcal{L}(\overrightarrow{\beta}, \sigma^2)}
+  &amp;= \text{arg}\max_{\beta}{\log{\mathcal{L}(\overrightarrow{\beta}, \sigma^2)}}\\
+  &amp;= \text{arg}\max_{\beta}{-(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})}\\
+  &amp;= \text{arg}\min_{\beta}{(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})}\\
+  &amp;= \text{arg}\min_{\beta}{RSS}
+  \end{aligned}\]
+  </li>
+</ul>
 
 <h2 id="non-informative-prior-determination"><span class="me-2">Non-informative Prior Determination</span><a href="#non-informative-prior-determination" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
@@ -1652,112 +1658,6 @@ P(\beta, \sigma^2 \mid \mathcal{D})
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -1881,8 +1781,6 @@ P(\beta, \sigma^2 \mid \mathcal{D})
     
     
     
-    
-      
     
   
     
@@ -2174,8 +2072,6 @@ P(\beta, \sigma^2 \mid \mathcal{D})
     
     
     
-    
-      
     
   
     
@@ -2510,8 +2406,6 @@ P(\beta, \sigma^2 \mid \mathcal{D})
     
     
     
-      
-    
   
     
     
@@ -2742,6 +2636,110 @@ P(\beta, \sigma^2 \mid \mathcal{D})
     
     
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -3335,9 +3333,6 @@ P(\beta, \sigma^2 \mid \mathcal{D})
         <a class="post-tag btn btn-outline-primary" href="/tags/data-mining/">Data Mining</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
       
         
@@ -3348,6 +3343,9 @@ P(\beta, \sigma^2 \mid \mathcal{D})
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
@@ -4090,112 +4088,6 @@ P(\beta, \sigma^2 \mid \mathcal{D})
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -4319,8 +4211,6 @@ P(\beta, \sigma^2 \mid \mathcal{D})
     
     
     
-    
-      
     
   
     
@@ -4612,8 +4502,6 @@ P(\beta, \sigma^2 \mid \mathcal{D})
     
     
     
-    
-      
     
   
     
@@ -4948,8 +4836,6 @@ P(\beta, \sigma^2 \mid \mathcal{D})
     
     
     
-      
-    
   
     
     
@@ -5180,6 +5066,110 @@ P(\beta, \sigma^2 \mid \mathcal{D})
     
     
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -5773,9 +5763,6 @@ P(\beta, \sigma^2 \mid \mathcal{D})
         <a class="post-tag btn btn-outline-primary" href="/tags/data-mining/">Data Mining</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
       
         
@@ -5786,6 +5773,9 @@ P(\beta, \sigma^2 \mid \mathcal{D})
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
