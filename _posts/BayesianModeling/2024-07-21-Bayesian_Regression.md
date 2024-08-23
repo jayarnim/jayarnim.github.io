@@ -29,6 +29,26 @@ image:
     &= \mathbf{X}\overrightarrow{\hat{\beta}}
     \end{aligned}$$
 
+### MLE
+
+- **최우추정법(Maximum Liklihood Estimation; MLE)** : 우도를 최대화하는 회귀계수를 탐색하는 방법
+
+    $$\begin{aligned}
+    \overrightarrow{\hat{\beta}}_{MLE}
+    &= \text{arg}\max{\mathcal{L}(\overrightarrow{\beta}, \sigma^2)}
+    \end{aligned}$$
+
+- **우도(Liklihood)** : 파라미터 $\theta$ 가 주어졌을 때, 관측치 $y$ 가 발생할 확률
+
+    $$\begin{aligned}
+    \overrightarrow{y}
+    &\sim N(\mathbf{X}\overrightarrow{\beta}, \sigma^2\mathbf{I}) \quad (\because \overrightarrow{\varepsilon} \sim N(0, \sigma^2\mathbf{I}))\\
+    \\
+    \therefore \mathcal{L}(\overrightarrow{\beta}, \sigma^2)
+    &= P(\overrightarrow{y} \,\mid\, \overrightarrow{\beta}, \sigma^2)\\
+    &= \frac{1}{(2\pi\sigma^2)^{n/2}} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot(\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})\right]}
+    \end{aligned}$$
+
 ### OLS
 
 - **최소자승법(Least Square Estimation; OLS)** : 잔차 자승의 합을 최소화하는 회귀계수를 탐색하는 방법
@@ -39,50 +59,37 @@ image:
     &= (\mathbf{X}^{T}\mathbf{X})^{-1}\mathbf{X}^{T}\overrightarrow{y}
     \end{aligned}$$
 
-    - **Residual Sum of Square(RSS)** : 잔차 자승의 합
-
-        $$\begin{aligned}
-        RSS
-        &= \sum_{i}{(y_{i}-\hat{y}_{i})^2}\\
-        &= \mid \overrightarrow{y} - \overrightarrow{\hat{y}} \mid^{2}\\
-        &= (\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})
-        \end{aligned}$$
-
-### MLE
-
-- **최우추정법(Maximum Liklihood Estimation; MLE)** : 우도를 최대화하는 회귀계수를 탐색하는 방법
+- **Residual Sum of Square(RSS)** : 잔차 자승의 합
 
     $$\begin{aligned}
-    \overrightarrow{\hat{\beta}}_{MLE}
-    &= \text{arg}\max{\mathcal{L}(\overrightarrow{\beta}, \sigma^2)}
+    RSS
+    &= \sum_{i}{(y_{i}-\hat{y}_{i})^2}\\
+    &= \mid \overrightarrow{y} - \overrightarrow{\hat{y}} \mid^{2}\\
+    &= (\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})
     \end{aligned}$$
-
-    - **우도(Liklihood)** : 파라미터 $\theta$ 가 주어졌을 때, 관측치 $y$ 가 발생할 확률
-
-        $$\begin{aligned}
-        \overrightarrow{y}
-        &\sim N(\mathbf{X}\overrightarrow{\beta}, \sigma^2\mathbf{I}) \quad (\because \overrightarrow{\varepsilon} \sim N(0, \sigma^2\mathbf{I}))\\
-        \\
-        \therefore \mathcal{L}(\overrightarrow{\beta}, \sigma^2)
-        &= P(\overrightarrow{y} \,\mid\, \overrightarrow{\beta}, \sigma^2)\\
-        &= \frac{1}{(2\pi\sigma^2)^{n/2}} \cdot \exp{\left[-\frac{1}{2\sigma^2}\cdot(\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\hat{\beta}})\right]}
-        \end{aligned}$$
 
 ### $$\hat{\beta}_{MLE}=\hat{\beta}_{OLS}$$
 
-$$\begin{aligned}
-\mathcal{L}(\overrightarrow{\beta}, \sigma^2)
-&\propto \log{\mathcal{L}(\overrightarrow{\beta}, \sigma^2)}\\
-&= -\frac{n}{2}\cdot\log{2\pi\sigma^2}-\frac{1}{2\sigma^2}\cdot(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})\\
-&\propto -\frac{1}{2\sigma^2}\cdot(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})\\
-&\propto -(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})\\
-\\
-\therefore \text{arg}\max_{\beta}{\mathcal{L}(\overrightarrow{\beta}, \sigma^2)}
-&= \text{arg}\max_{\beta}{\log{\mathcal{L}(\overrightarrow{\beta}, \sigma^2)}}\\
-&= \text{arg}\max_{\beta}{-(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})}\\
-&= \text{arg}\min_{\beta}{(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})}\\
-&= \text{arg}\min_{\beta}{RSS}
-\end{aligned}$$
+- **우도 $\mathcal{L}(\overrightarrow{\beta}, \sigma^2)$ 는 잔차 $RSS$ 에 반비례함**
+
+    $$\begin{aligned}
+    \mathcal{L}(\overrightarrow{\beta}, \sigma^2)
+    &\propto \log{\mathcal{L}(\overrightarrow{\beta}, \sigma^2)}\\
+    &= -\frac{n}{2}\cdot\log{2\pi\sigma^2}-\frac{1}{2\sigma^2}\cdot(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})\\
+    &\propto -\frac{1}{2\sigma^2}\cdot(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})\\
+    &\propto -(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})\\
+    &= -RSS
+    \end{aligned}$$
+
+- **따라서 최우추정량(우도를 최대화하는 모수) $\hat{\beta}_{MLE}$ 과 최소자승추정량(잔차를 최소화하는 모수) $\hat{\beta}_{OLS}$ 는 동일함**
+
+    $$\begin{aligned}
+    \therefore \text{arg}\max_{\beta}{\mathcal{L}(\overrightarrow{\beta}, \sigma^2)}
+    &= \text{arg}\max_{\beta}{\log{\mathcal{L}(\overrightarrow{\beta}, \sigma^2)}}\\
+    &= \text{arg}\max_{\beta}{-(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})}\\
+    &= \text{arg}\min_{\beta}{(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})^{T}(\overrightarrow{y}-\mathbf{X}\overrightarrow{\beta})}\\
+    &= \text{arg}\min_{\beta}{RSS}
+    \end{aligned}$$
 
 ## Non-informative Prior Determination
 -----
