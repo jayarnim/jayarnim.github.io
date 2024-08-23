@@ -43,9 +43,3 @@ image:
 
 ## Glove
 -----
-
-## ELMo
------
-
-## Doc2Vec
------
