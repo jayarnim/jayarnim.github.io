@@ -1,6 +1,6 @@
 ---
 order: 5
-title: RNN based Modeling
+title: Language Model
 date: 2024-08-02
 categories: [AI & Data Mining, Text Analytics]
 tags: [Data Mining, Text Mining]
@@ -11,10 +11,10 @@ image:
     path: /_post_refer_img/TextAnalytics/Thumbnail.png
 ---
 
-## RNNLM
+## NNLM
 -----
 
-## ELMo
+## RNNLM
 -----
 
 ## Seq2Seq
