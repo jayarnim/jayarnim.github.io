@@ -1030,6 +1030,38 @@
   
 
   
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
 
   
   
@@ -1129,7 +1161,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1561 words"
+  title="1566 words"
 >
   <em>8 min</em> read</span>
 
@@ -1305,7 +1337,7 @@
   <li><strong>토픽 모형(Topic Model)</strong> : 관측 가능한 단어(Word) 및 문서(Document)로부터 말뭉치(Corpus)에 내재되어 있는(Latent) 토픽(Topic)을 탐색하는 방법
     <ul>
       <li>문서(Document)는 토픽(Topic)으로 어떻게 표현할 수 있을까?</li>
-      <li>단어(Word)sms 토픽(Topic) 별로 어떻게 등장하는가?</li>
+      <li>단어(Word)는 토픽(Topic) 별로 어떻게 등장하는가?</li>
       <li>탐색된 Something(Topic)의 정체를 무엇이라 정의하면 좋을까?</li>
     </ul>
   </li>
@@ -1316,6 +1348,8 @@
 <ul>
   <li>
     <p><strong>잠재 의미 분석(Latent Semantic Analysis; LSA)</strong> : 특이값 분해(Singular Value Decomposition; SVD)를 활용하여 Document-Term Matrix 를 분해하는 방법</p>
+
+\[\mathbb{A}_{n \times d} \approx \mathbb{U}_{n \times k} \cdot \Sigma_{k \times k} \cdot \mathbb{V}^{T}_{d \times k}\]
 
     <div class="table-wrapper"><table>
       <thead>
@@ -1350,54 +1384,56 @@
       <li>$\Sigma_{k \times k} \cdot \mathbb{V}_{d \times k}^{T}$ : Term-Topic Matrix</li>
     </ul>
   </li>
+</ul>
+
+<h4 id="svd"><span class="me-2">SVD</span><a href="#svd" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
+<ul>
   <li>
     <p><strong>특이값 분해(Singular Value Decomposition; SVD)</strong> : 차원의 크기가 $n \times d$ 인 임의의 행렬 $\mathbb{A}$ 를 세 개의 행렬의 곱으로 분해하는 방법</p>
 
     <p><a href="/_post_refer_img/TextAnalytics/03-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/03-04.png" alt="04" width="100%" loading="lazy"></a></p>
-
-\[\mathbb{A} = \mathbb{U} \cdot \Sigma \cdot \mathbb{V}^{T}\]
-
+  </li>
+  <li><strong>$\mathbb{U}_{n \times k}$ : 직교 정규 행렬(Ortho-normal Matrix)</strong>
     <ul>
-      <li><strong>$\mathbb{U}_{n \times k}$ : 직교 정규 행렬(Ortho-normal Matrix)</strong>
-        <ul>
-          <li>
-            <p>열벡터 $\overrightarrow{u}_{i} \in \mathbb{U}$ 는 행렬 $\mathbb{A} \cdot \mathbb{A}^{T}$ 의 고유벡터(Eigen Vector)임</p>
+      <li>
+        <p>열벡터 $\overrightarrow{u}_{i} \in \mathbb{U}$ 는 행렬 $\mathbb{A} \cdot \mathbb{A}^{T}$ 의 고유벡터(Eigen Vector)임</p>
 
 \[\mathbb{A}\mathbb{A}^{T} \cdot \overrightarrow{u}_i = \lambda_i \overrightarrow{u}_i\]
-          </li>
-          <li>
-            <p>열벡터 $\overrightarrow{u}_{i}$ 의 길이는 $1$ 임</p>
-
-\[\Vert \overrightarrow{u}_{i} \Vert = 1\]
-          </li>
-          <li>
-            <p>열벡터 \(\overrightarrow{u}_{i}, \overrightarrow{u}_{j}\) 은 직교함</p>
-
-\[\overrightarrow{u}_{i} \perp \overrightarrow{u}_{j} \Leftrightarrow \langle \overrightarrow{u}_{i}, \overrightarrow{u}_{j} \rangle = 0\]
-          </li>
-        </ul>
-      </li>
-      <li><strong>$\mathbb{V}_{d \times k}^{T}$ : 직교 정규 행렬(Ortho-normal Matrix)</strong>
-        <ul>
-          <li>
-            <p>열벡터 $\overrightarrow{v}_{i} \in \mathbb{V}$ 는 행렬 $\mathbb{A}^{T} \cdot \mathbb{A}$ 의 고유벡터(Eigen Vector)임</p>
-
-\[\mathbb{A}^{T}\mathbb{A} \cdot \overrightarrow{v}_i = \lambda_i \overrightarrow{v}_i\]
-          </li>
-          <li>
-            <p>열벡터 $\overrightarrow{v}_{i}$ 의 길이는 $1$ 임</p>
-
-\[\Vert \overrightarrow{v}_{i} \Vert = 1\]
-          </li>
-          <li>
-            <p>열벡터 \(\overrightarrow{v}_{i}, \overrightarrow{v}_{j}\) 은 직교함</p>
-
-\[\overrightarrow{v}_{i} \perp \overrightarrow{v}_{j} \Leftrightarrow \langle \overrightarrow{v}_{i}, \overrightarrow{v}_{j} \rangle = 0\]
-          </li>
-        </ul>
       </li>
       <li>
-        <p><strong>$\Sigma_{k \times k}$ : 대각 행렬(Diagonal Matrix)</strong></p>
+        <p>열벡터 $\overrightarrow{u}_{i}$ 의 길이는 $1$ 임</p>
+
+\[\Vert \overrightarrow{u}_{i} \Vert = 1\]
+      </li>
+      <li>
+        <p>열벡터 \(\overrightarrow{u}_{i}, \overrightarrow{u}_{j}\) 은 직교함</p>
+
+\[\overrightarrow{u}_{i} \perp \overrightarrow{u}_{j} \Leftrightarrow \langle \overrightarrow{u}_{i}, \overrightarrow{u}_{j} \rangle = 0\]
+      </li>
+    </ul>
+  </li>
+  <li><strong>$\mathbb{V}_{d \times k}^{T}$ : 직교 정규 행렬(Ortho-normal Matrix)</strong>
+    <ul>
+      <li>
+        <p>열벡터 $\overrightarrow{v}_{i} \in \mathbb{V}$ 는 행렬 $\mathbb{A}^{T} \cdot \mathbb{A}$ 의 고유벡터(Eigen Vector)임</p>
+
+\[\mathbb{A}^{T}\mathbb{A} \cdot \overrightarrow{v}_i = \lambda_i \overrightarrow{v}_i\]
+      </li>
+      <li>
+        <p>열벡터 $\overrightarrow{v}_{i}$ 의 길이는 $1$ 임</p>
+
+\[\Vert \overrightarrow{v}_{i} \Vert = 1\]
+      </li>
+      <li>
+        <p>열벡터 \(\overrightarrow{v}_{i}, \overrightarrow{v}_{j}\) 은 직교함</p>
+
+\[\overrightarrow{v}_{i} \perp \overrightarrow{v}_{j} \Leftrightarrow \langle \overrightarrow{v}_{i}, \overrightarrow{v}_{j} \rangle = 0\]
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>$\Sigma_{k \times k}$ : 대각 행렬(Diagonal Matrix)</strong></p>
 
 \[\Sigma_{k \times k}
   = \begin{pmatrix}
@@ -1407,13 +1443,11 @@
   0 &amp; 0 &amp; \cdots &amp; \sigma_{k}
   \end{pmatrix}\]
 
-        <ul>
-          <li>
-            <p>대각항의 원소 $\sigma_{i}$ 는 행렬 $\mathbb{A} \cdot \mathbb{A}^{T}$ 혹은 $\mathbb{A}^{T} \cdot \mathbb{A}$ 의 고유값(Eigen Value) $\lambda_{i}$ 의 자승근임</p>
+    <ul>
+      <li>
+        <p>대각항의 원소 $\sigma_{i}$ 는 행렬 $\mathbb{A} \cdot \mathbb{A}^{T}$ 혹은 $\mathbb{A}^{T} \cdot \mathbb{A}$ 의 고유값(Eigen Value) $\lambda_{i}$ 의 자승근임</p>
 
 \[\sigma_{i} = \sqrt{\lambda_i}\]
-          </li>
-        </ul>
       </li>
     </ul>
   </li>
@@ -1437,42 +1471,43 @@
       <li>$P(\psi_{z(d,n)} \mid w(d,n)) \propto P(\psi_{z(d,n)}) \cdot P(w(d,n) \mid \psi_{z(d,n)})$ : Posterior Probability of Topic-Word Allocation</li>
     </ul>
   </li>
+</ul>
+
+<h4 id="posterior-probability"><span class="me-2">Posterior Probability</span><a href="#posterior-probability" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
+<blockquote>
+  <p>각 문서는 여러 토픽의 혼합으로 구성되어 있고, 각 토픽은 특정 단어들의 혼합으로 구성되어 있다고 가정하자. 특정 문서를 구성하고 있는 단어들로부터, 해당 단어들을 발생시킨 토픽들의 비중을 추론할 수 있음.</p>
+</blockquote>
+
+<ol>
   <li>
-    <p><strong>Posterior Probability $P(\theta, \psi ; z \mid w)$</strong></p>
-
-    <blockquote>
-      <p>각 문서는 여러 토픽의 혼합으로 구성되어 있고, 각 토픽은 특정 단어들의 혼합으로 구성되어 있다고 가정하자. 특정 문서를 구성하고 있는 단어들로부터, 해당 단어들을 발생시킨 토픽들의 비중을 추론할 수 있음.</p>
-    </blockquote>
-
-    <ol>
-      <li>
-        <p><strong>문서 $d$ 에는 여러 토픽들이 담겨 있으며, 각 토픽 발생 확률은 디리클레 분포를 따름</strong></p>
+    <p><strong>문서 $d$ 에는 여러 토픽들이 담겨 있으며, 각 토픽 발생 확률은 디리클레 분포를 따름</strong></p>
 
 \[\begin{aligned}
  k \mid \theta_d &amp;\sim \text{Multinomial}(\theta_{d})\\
  \theta_{d} &amp;\sim \text{Dirichlet}(\alpha)
  \end{aligned}\]
 
-        <ul>
-          <li>$k \mid \theta_d$ : 문서 $d$ 에서 토픽 $k$ 가 발생할 확률</li>
-          <li>$\theta_d$ : $d$ 번째 문서에서 각 토픽들이 발생할 확률</li>
-        </ul>
-      </li>
-      <li>
-        <p><strong>토픽 $k$ 에서는 여러 단어들이 발생할 수 있으며, 각 단어 발생 확률은 디리클레 분포를 따름</strong></p>
+    <ul>
+      <li>$k \mid \theta_d$ : 문서 $d$ 에서 토픽 $k$ 가 발생할 확률</li>
+      <li>$\theta_d$ : $d$ 번째 문서에서 각 토픽들이 발생할 확률</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>토픽 $k$ 에서는 여러 단어들이 발생할 수 있으며, 각 단어 발생 확률은 디리클레 분포를 따름</strong></p>
 
 \[\begin{aligned}
  w \mid \psi_{k} &amp;\sim \text{Multinomial}(\psi_{k})\\
  \psi_{k} &amp;\sim \text{Dirichlet}(\beta)
  \end{aligned}\]
 
-        <ul>
-          <li>$w \mid \psi_{k}$ : 토픽 $k$ 에서 단어 $w$ 가 발생할 확률</li>
-          <li>$\psi_{k}$ : 토픽 $k$ 에서 각 단어들이 발생할 확률</li>
-        </ul>
-      </li>
-      <li>
-        <p><strong>따라서 단어 $w(d,n)$ 이 발생했을 때, $\theta_d$ 및 $\psi_{z(d,n)}$ 의 사후 확률 분포는 다음과 같음</strong></p>
+    <ul>
+      <li>$w \mid \psi_{k}$ : 토픽 $k$ 에서 단어 $w$ 가 발생할 확률</li>
+      <li>$\psi_{k}$ : 토픽 $k$ 에서 각 단어들이 발생할 확률</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>따라서 단어 $w(d,n)$ 이 발생했을 때, $\theta_d$ 및 $\psi_{z(d,n)}$ 의 사후 확률 분포는 다음과 같음</strong></p>
 
 \[\begin{aligned}
  &amp;P(\theta_d, \psi_{z(d,n)}; z(d,n) \mid w(d,n))\\
@@ -1480,16 +1515,14 @@
  &amp;\propto \left[\underbrace{P(\theta_d)}_{\text{Prior}} \cdot \underbrace{P(z(d,n) \mid \theta_d)}_{\text{Likelihood}}\right] \times \left[\underbrace{P(\psi_{z(d,n)})}_{\text{Prior}} \cdot \underbrace{P(w(d,n) \mid \psi_{z(d,n)})}_{\text{Likelihood}}\right]
  \end{aligned}\]
 
-        <ul>
-          <li>$w(d,n)$ : 문서 $d$ 의 $n$ 번째 단어</li>
-          <li>$z(d,n)$ : 단어 $w(d,n)$ 에 대하여 해당 단어가 할당된 토픽</li>
-          <li>$\theta_d$ : 문서 $d$ 의 토픽 분포</li>
-          <li>$\psi_{z(d,n)}$ : 토픽 $z(d,n)$ 의 단어 분포</li>
-        </ul>
-      </li>
-    </ol>
+    <ul>
+      <li>$w(d,n)$ : 문서 $d$ 의 $n$ 번째 단어</li>
+      <li>$z(d,n)$ : 단어 $w(d,n)$ 에 대하여 해당 단어가 할당된 토픽</li>
+      <li>$\theta_d$ : 문서 $d$ 의 토픽 분포</li>
+      <li>$\psi_{z(d,n)}$ : 토픽 $z(d,n)$ 의 단어 분포</li>
+    </ul>
   </li>
-</ul>
+</ol>
 
 <hr />
 
@@ -1497,6 +1530,7 @@
 
 <ul>
   <li>https://velog.io/@growthmindset/%EC%9B%90-%ED%95%AB-%EC%9D%B8%EC%BD%94%EB%94%A9One-Hot-Encoding</li>
+  <li>https://intoli.com/blog/pca-and-svd/</li>
 </ul>
 
   </div>
