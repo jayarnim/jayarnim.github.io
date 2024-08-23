@@ -204,7 +204,7 @@ for result in results:
     pattern = '[a-zA-Z0-9]+(?=efg)'
     p = re.complile(pattern)
 
-    my_str = "AB12efC1efGH"
+    my_str = "ABCDefgHIJefgK"
     results = p.finditer(my_str)
 
     for result in results:
@@ -219,7 +219,7 @@ for result in results:
     pattern = '(?<=efg)[a-zA-Z0-9]+'
     p = re.complile(pattern)
 
-    my_str = "AB12efC1efGH"
+    my_str = "ABCDefgHIJefgK"
     results = p.finditer(my_str)
 
     for result in results:
@@ -234,7 +234,7 @@ for result in results:
     pattern = '[a-zA-Z0-9]+(?!efg)'
     p = re.complile(pattern)
 
-    my_str = "AB12efC1efGH"
+    my_str = "ABCDefgHIJefgK"
     results = p.finditer(my_str)
 
     for result in results:
@@ -249,7 +249,7 @@ for result in results:
     pattern = '(?<!efg)[a-zA-Z0-9]+'
     p = re.complile(pattern)
 
-    my_str = "AB12efC1efGH"
+    my_str = "ABCDefgHIJefgK"
     results = p.finditer(my_str)
 
     for result in results:
