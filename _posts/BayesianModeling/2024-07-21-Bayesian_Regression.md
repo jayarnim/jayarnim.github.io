@@ -81,7 +81,7 @@ image:
     &= -RSS
     \end{aligned}$$
 
-- **따라서 최우추정량(우도를 최대화하는 모수) $\hat{\beta}_{MLE}$ 과 최소자승추정량(잔차를 최소화하는 모수) $\hat{\beta}_{OLS}$ 는 동일함**
+- **따라서 최우추정량(우도를 최대화하는 모수) $$\hat{\beta}_{MLE}$$ 과 최소자승추정량(잔차를 최소화하는 모수) $$\hat{\beta}_{OLS}$$ 는 동일함**
 
     $$\begin{aligned}
     \therefore \text{arg}\max_{\beta}{\mathcal{L}(\overrightarrow{\beta}, \sigma^2)}
