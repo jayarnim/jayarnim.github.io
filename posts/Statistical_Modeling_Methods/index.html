@@ -1058,9 +1058,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1119 words"
+  title="1557 words"
 >
-  <em>6 min</em> read</span>
+  <em>8 min</em> read</span>
 
         </div>
       </div>
@@ -1230,10 +1230,120 @@
 <h2 id="topic-model"><span class="me-2">Topic Model</span><a href="#topic-model" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
+<ul>
+  <li><strong>토픽 모형(Topic Model)</strong> : 관측 가능한 단어(Word) 및 문서(Document)로부터 말뭉치(Corpus)에 내재되어 있는(Latent) 토픽(Topic)을 탐색하는 방법
+    <ul>
+      <li>문서(Document)는 토픽(Topic)으로 어떻게 표현할 수 있을까?</li>
+      <li>단어(Word)sms 토픽(Topic) 별로 어떻게 등장하는가?</li>
+      <li>탐색된 Something(Topic)의 정체를 무엇이라 정의하면 좋을까?</li>
+    </ul>
+  </li>
+</ul>
+
 <h3 id="lsa"><span class="me-2">LSA</span><a href="#lsa" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
-  <li><strong>잠재 의미 분석(Latent Semantic Analysis; LSA)</strong></li>
+  <li>
+    <p><strong>잠재 의미 분석(Latent Semantic Analysis; LSA)</strong> : 특이값 분해(Singular Value Decomposition; SVD)를 활용하여 Document-Term Matrix 를 분해하는 방법</p>
+
+    <div class="table-wrapper"><table>
+      <thead>
+        <tr>
+          <th>Dimension</th>
+          <th>Interpretation</th>
+          <th> </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$n$</td>
+          <td>Number of Document</td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td>$d$</td>
+          <td>Number of Term</td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td>$k$</td>
+          <td>Number of Topic</td>
+          <td>Hyper-Parameter</td>
+        </tr>
+      </tbody>
+    </table></div>
+
+    <ul>
+      <li>$\mathbb{A}_{n \times d}$ : Document-Term Matrix</li>
+      <li>\(\mathbb{U}_{n \times k} \cdot \Sigma_{k \times k}\) : Document-Topic Matrix</li>
+      <li>$\mathbb{V}_{d \times k}^{T}$ : Term-Topic Matrix</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>특이값 분해(Singular Value Decomposition; SVD)</strong> : 차원의 크기가 $n \times d$ 인 임의의 행렬 $\mathbb{A}$ 를 세 개의 행렬의 곱으로 분해하는 방법</p>
+
+\[\mathbb{A} = \mathbb{U} \cdot \Sigma \cdot \mathbb{V}^{T}\]
+
+    <ul>
+      <li><strong>$\mathbb{U}_{n \times k}$ : 직교 정규 행렬(Ortho-normal Matrix)</strong>
+        <ul>
+          <li>
+            <p>열벡터 $\overrightarrow{u}_{i} \in \mathbb{U}$ 는 행렬 $\mathbb{A} \cdot \mathbb{A}^{T}$ 의 고유벡터(Eigen Vector)임</p>
+
+\[\mathbb{A}\mathbb{A}^{T} \cdot \overrightarrow{u}_i = \lambda_i \overrightarrow{u}_i\]
+          </li>
+          <li>
+            <p>열벡터 $\overrightarrow{u}_{i}$ 의 길이는 $1$ 임</p>
+
+\[\Vert \overrightarrow{u}_{i} \Vert = 1\]
+          </li>
+          <li>
+            <p>열벡터 \(\overrightarrow{u}_{i}, \overrightarrow{u}_{j}\) 은 직교함</p>
+
+\[\overrightarrow{u}_{i} \perp \overrightarrow{u}_{j} \Leftrightarrow \langle \overrightarrow{u}_{i}, \overrightarrow{u}_{j} \rangle = 0\]
+          </li>
+        </ul>
+      </li>
+      <li><strong>$\mathbb{V}_{d \times k}^{T}$ : 직교 정규 행렬(Ortho-normal Matrix)</strong>
+        <ul>
+          <li>
+            <p>열벡터 $\overrightarrow{v}_{i} \in \mathbb{V}$ 는 행렬 $\mathbb{A}^{T} \cdot \mathbb{A}$ 의 고유벡터(Eigen Vector)임</p>
+
+\[\mathbb{A}^{T}\mathbb{A} \cdot \overrightarrow{v}_i = \lambda_i \overrightarrow{v}_i\]
+          </li>
+          <li>
+            <p>열벡터 $\overrightarrow{v}_{i}$ 의 길이는 $1$ 임</p>
+
+\[\Vert \overrightarrow{v}_{i} \Vert = 1\]
+          </li>
+          <li>
+            <p>열벡터 \(\overrightarrow{v}_{i}, \overrightarrow{v}_{j}\) 은 직교함</p>
+
+\[\overrightarrow{v}_{i} \perp \overrightarrow{v}_{j} \Leftrightarrow \langle \overrightarrow{v}_{i}, \overrightarrow{v}_{j} \rangle = 0\]
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>$\Sigma_{k \times k}$ : 대각 행렬(Diagonal Matrix)</strong></p>
+
+\[\Sigma_{k \times k}
+  = \begin{pmatrix}
+  \sigma_{1} &amp; 0 &amp; \cdots &amp; 0 \\
+  0 &amp; \sigma_{2} &amp; \cdots &amp; 0 \\
+  \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+  0 &amp; 0 &amp; \cdots &amp; \sigma_{k}
+  \end{pmatrix}\]
+
+        <ul>
+          <li>
+            <p>대각항의 원소 $\sigma_{i}$ 는 행렬 $\mathbb{A} \cdot \mathbb{A}^{T}$ 혹은 $\mathbb{A}^{T} \cdot \mathbb{A}$ 의 고유값(Eigen Value) $\lambda_{i}$ 의 자승근임</p>
+
+\[\sigma_{i} = \sqrt{\lambda_i}\]
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
 </ul>
 
 <h3 id="lda"><span class="me-2">LDA</span><a href="#lda" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
