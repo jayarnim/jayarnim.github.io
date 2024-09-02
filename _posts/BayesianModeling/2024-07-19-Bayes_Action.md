@@ -1,7 +1,7 @@
 ---
-order: 4
+order: 5
 title: Bayes Action
-date: 2024-07-18
+date: 2024-07-19
 categories: [Statistical Techs, Bayesian Modeling]
 tags: [Statistics, Bayesian, Optimization, Loss Function]
 math: true

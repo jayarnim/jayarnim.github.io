@@ -1,7 +1,7 @@
 ---
-order: 5
+order: 6
 title: Bayesian A/B Test
-date: 2024-07-19
+date: 2024-07-20
 categories: [Statistical Techs, Bayesian Modeling]
 tags: [Statistics, Bayesian, A/B Test]
 math: true

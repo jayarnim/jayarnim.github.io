@@ -1,7 +1,7 @@
 ---
-order: 6
+order: 7
 title: Multi Armed Bandits
-date: 2024-07-20
+date: 2024-07-21
 categories: [Statistical Techs, Bayesian Modeling]
 tags: [Statistics, Bayesian, MAB, Multi Armed Bandits]
 math: true

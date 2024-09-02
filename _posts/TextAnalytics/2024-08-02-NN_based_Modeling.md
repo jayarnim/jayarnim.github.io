@@ -1,6 +1,6 @@
 ---
 order: 5
-title: Language Model
+title: NN based Modeling
 date: 2024-08-02
 categories: [AI & Data Mining, Text Analytics]
 tags: [Data Mining, Text Mining]
