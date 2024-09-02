@@ -4,7 +4,7 @@
   <id>https://jayarnim.github.io/</id>
   <title>Data Scientist</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-08-24T03:42:58+09:00</updated>
+  <updated>2024-09-02T17:22:27+09:00</updated>
   <author>
     <name>jayarnim</name>
     <uri>https://jayarnim.github.io/</uri>
@@ -20,40 +20,14 @@
 
   
   <entry>
-    <title>BDNet</title>
-    <link href="https://jayarnim.github.io/posts/BDNet/" rel="alternate" type="text/html" title="BDNet" />
-    <published>2024-08-07T00:00:00+09:00</published>
-  
-    <updated>2024-08-07T00:00:00+09:00</updated>
-  
-    <id>https://jayarnim.github.io/posts/BDNet/</id>
-    <content src="https://jayarnim.github.io/posts/BDNet/" />
-    <author>
-      <name>jayarnim</name>
-    </author>
-
-  
-    
-    <category term="AI &amp; Data Mining" />
-    
-    <category term="Recommender System" />
-    
-  
-
-  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://link.springer.com/article/10.1007/s11704-018-8049-1&amp;quot;&amp;gt;&amp;lt;em&amp;gt;Bayesian dual neural networks for recommendation&amp;lt;/em&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Author&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;He et al.&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Publisher&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;FCS&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2019&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Language Model</title>
-    <link href="https://jayarnim.github.io/posts/Langs_Model/" rel="alternate" type="text/html" title="Language Model" />
+    <title>NN based Modeling</title>
+    <link href="https://jayarnim.github.io/posts/NN_based_Modeling/" rel="alternate" type="text/html" title="NN based Modeling" />
     <published>2024-08-02T00:00:00+09:00</published>
   
     <updated>2024-08-02T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/Langs_Model/</id>
-    <content src="https://jayarnim.github.io/posts/Langs_Model/" />
+    <id>https://jayarnim.github.io/posts/NN_based_Modeling/</id>
+    <content src="https://jayarnim.github.io/posts/NN_based_Modeling/" />
     <author>
       <name>jayarnim</name>
     </author>
@@ -72,14 +46,14 @@
 
   
   <entry>
-    <title>Word Representation</title>
-    <link href="https://jayarnim.github.io/posts/Word_Representation/" rel="alternate" type="text/html" title="Word Representation" />
+    <title>Word Embedding Methods</title>
+    <link href="https://jayarnim.github.io/posts/Word_Embedding_Methods/" rel="alternate" type="text/html" title="Word Embedding Methods" />
     <published>2024-08-01T00:00:00+09:00</published>
   
     <updated>2024-08-01T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/Word_Representation/</id>
-    <content src="https://jayarnim.github.io/posts/Word_Representation/" />
+    <id>https://jayarnim.github.io/posts/Word_Embedding_Methods/</id>
+    <content src="https://jayarnim.github.io/posts/Word_Embedding_Methods/" />
     <author>
       <name>jayarnim</name>
     </author>
@@ -124,14 +98,14 @@
 
   
   <entry>
-    <title>NVMF</title>
-    <link href="https://jayarnim.github.io/posts/NVMF/" rel="alternate" type="text/html" title="NVMF" />
+    <title>BDNet</title>
+    <link href="https://jayarnim.github.io/posts/BDNet/" rel="alternate" type="text/html" title="BDNet" />
     <published>2024-07-31T00:00:00+09:00</published>
   
     <updated>2024-07-31T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/NVMF/</id>
-    <content src="https://jayarnim.github.io/posts/NVMF/" />
+    <id>https://jayarnim.github.io/posts/BDNet/</id>
+    <content src="https://jayarnim.github.io/posts/BDNet/" />
     <author>
       <name>jayarnim</name>
     </author>
@@ -144,7 +118,33 @@
     
   
 
-  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://link.springer.com/article/10.1007/s10489-019-01469-6&amp;quot;&amp;gt;&amp;lt;em&amp;gt;Neural variational matrix factorization for collaborative filtering in recommendation systems&amp;lt;/em&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Author&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;Xiao and Shen&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Publisher&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;PAKDD&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2019&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;</summary>
+  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://link.springer.com/article/10.1007/s11704-018-8049-1&amp;quot;&amp;gt;&amp;lt;em&amp;gt;Bayesian dual neural networks for recommendation&amp;lt;/em&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Author&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;He et al.&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Publisher&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;FCS&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2019&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Text Data Preprocessing</title>
+    <link href="https://jayarnim.github.io/posts/Text_Data_Preprocessing/" rel="alternate" type="text/html" title="Text Data Preprocessing" />
+    <published>2024-07-30T00:00:00+09:00</published>
+  
+    <updated>2024-07-30T00:00:00+09:00</updated>
+  
+    <id>https://jayarnim.github.io/posts/Text_Data_Preprocessing/</id>
+    <content src="https://jayarnim.github.io/posts/Text_Data_Preprocessing/" />
+    <author>
+      <name>jayarnim</name>
+    </author>
+
+  
+    
+    <category term="AI &amp; Data Mining" />
+    
+    <category term="Text Analytics" />
+    
+  
+
+  <summary>Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</summary>
 
   </entry>
 
