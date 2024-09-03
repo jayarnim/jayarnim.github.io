@@ -73,3 +73,44 @@ image:
     &= \left[-\sum_{x}{\log{Q(x)} \cdot P(x)}\right] -\left[-\sum_{x}{\log{P(x)} \cdot P(x)}\right]\\
     &= H(P,Q) - H(P)
     \end{aligned}$$
+
+## Bayes by Backprop
+-----
+
+### Variational Inference
+
+$$\begin{aligned}
+P(W \mid \mathcal{D})
+&= \frac{P(\mathcal{D} \mid W) \cdot P(W)}{P(\mathcal{D})}
+\end{aligned}$$
+
+- **이상적인 접근** : 가중치 $W$ 에 대한 사후분포 $W \mid \mathcal{D} \sim P$ 를 잘 설명하는 제안분포 $W \mid \theta \sim Q$ 를 탐색함
+
+    $$\begin{aligned}
+    D_{KL}\big[P(W \mid \mathcal{D}) \parallel Q(W \mid \theta)\big]
+    &= \mathbb{E}_{W \mid \mathcal{D} \sim P}\left[\log{\frac{P(W \mid \mathcal{D})}{Q(W \mid \theta)}}\right]
+    \end{aligned}$$
+
+    - 추론 대상이 되는 분포 $P$ 에서 $W$ 를 샘플링하는 것은 현실적으로 불가능함
+
+- **대안** : 가중치 $W$ 에 대한 사후분포 $W \mid \mathcal{D} \sim P$ 로 잘 설명될 수 있는 제안분포 $W \mid \theta \sim Q$ 를 탐색함
+
+    $$\begin{aligned}
+    D_{KL}\big[Q(W \mid \theta) \parallel P(W \mid \mathcal{D})\big]
+    &= \mathbb{E}_{W \mid \theta \sim Q}\left[\log{\frac{Q(W \mid \theta)}{P(W \mid \mathcal{D})}}\right]
+    \end{aligned}$$
+
+    - 즉, 제안분포 $Q$ 에서 $W$ 를 샘플링한 후, $W$ 에 대하여 $Q$ 와 $P$ 가 제공하는 정보량의 차이를 계산함
+
+- **증거 하한(Evidence Lower Bound; ELBO)**
+
+    $$\begin{aligned}
+    &D_{KL}\big[Q(W \mid \theta) \parallel P(W \mid \mathcal{D})\big]\\
+    &= \mathbb{E}_{W \mid \theta \sim Q}\left[\log{\frac{Q(W \mid \theta)}{P(W \mid \mathcal{D})}}\right]\\
+    &= \mathbb{E}_{W \mid \theta \sim Q}\left[\log{Q(W \mid \theta)}\right] - \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(W \mid \mathcal{D})}\right]\\
+    &= \mathbb{E}_{W \mid \theta \sim Q}\left[\log{Q(W \mid \theta)}\right] - \mathbb{E}_{W \mid \theta \sim Q}\left[\log{\frac{P(\mathcal{D} \mid W) \cdot P(W)}{P(\mathcal{D})}}\right]\\
+    &= \mathbb{E}_{W \mid \theta \sim Q}\left[\log{Q(W \mid \theta)}\right] - \bigg\{\mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] + \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(W)}\right] - \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D})}\right]\bigg\}\\
+    &\approx \mathbb{E}_{W \mid \theta \sim Q}\left[\log{Q(W \mid \theta)}\right] - \bigg\{\mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] + \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(W)}\right]\bigg\}\\
+    &= \mathbb{E}_{W \mid \theta \sim Q}\left[\log{Q(W \mid \theta)} - \log{P(W)}\right] - \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right]\\
+    &= D_{KL}(Q(W \mid \theta) \parallel P(W)) - \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right]
+    \end{aligned}$$
