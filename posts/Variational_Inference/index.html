@@ -613,6 +613,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -628,6 +639,17 @@
       
         
         
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
       
 
       
@@ -757,9 +779,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="490 words"
+  title="839 words"
 >
-  <em>2 min</em> read</span>
+  <em>4 min</em> read</span>
 
         </div>
       </div>
@@ -846,6 +868,57 @@
   &amp;= -\sum_{x}{\left[\log{Q(x)}-\log{P(x)}\right] \cdot P(x)}\\
   &amp;= \left[-\sum_{x}{\log{Q(x)} \cdot P(x)}\right] -\left[-\sum_{x}{\log{P(x)} \cdot P(x)}\right]\\
   &amp;= H(P,Q) - H(P)
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h2 id="bayes-by-backprop"><span class="me-2">Bayes by Backprop</span><a href="#bayes-by-backprop" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<h3 id="variational-inference"><span class="me-2">Variational Inference</span><a href="#variational-inference" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+\[\begin{aligned}
+P(W \mid \mathcal{D})
+&amp;= \frac{P(\mathcal{D} \mid W) \cdot P(W)}{P(\mathcal{D})}
+\end{aligned}\]
+
+<ul>
+  <li>
+    <p><strong>이상적인 접근</strong> : 가중치 $W$ 에 대한 사후분포 $W \mid \mathcal{D} \sim P$ 를 잘 설명하는 제안분포 $W \mid \theta \sim Q$ 를 탐색함</p>
+
+\[\begin{aligned}
+  D_{KL}\big[P(W \mid \mathcal{D}) \parallel Q(W \mid \theta)\big]
+  &amp;= \mathbb{E}_{W \mid \mathcal{D} \sim P}\left[\log{\frac{P(W \mid \mathcal{D})}{Q(W \mid \theta)}}\right]
+  \end{aligned}\]
+
+    <ul>
+      <li>추론 대상이 되는 분포 $P$ 에서 $W$ 를 샘플링하는 것은 현실적으로 불가능함</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>대안</strong> : 가중치 $W$ 에 대한 사후분포 $W \mid \mathcal{D} \sim P$ 로 잘 설명될 수 있는 제안분포 $W \mid \theta \sim Q$ 를 탐색함</p>
+
+\[\begin{aligned}
+  D_{KL}\big[Q(W \mid \theta) \parallel P(W \mid \mathcal{D})\big]
+  &amp;= \mathbb{E}_{W \mid \theta \sim Q}\left[\log{\frac{Q(W \mid \theta)}{P(W \mid \mathcal{D})}}\right]
+  \end{aligned}\]
+
+    <ul>
+      <li>즉, 제안분포 $Q$ 에서 $W$ 를 샘플링한 후, $W$ 에 대하여 $Q$ 와 $P$ 가 제공하는 정보량의 차이를 계산함</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>증거 하한(Evidence Lower Bound; ELBO)</strong></p>
+
+\[\begin{aligned}
+  &amp;D_{KL}\big[Q(W \mid \theta) \parallel P(W \mid \mathcal{D})\big]\\
+  &amp;= \mathbb{E}_{W \mid \theta \sim Q}\left[\log{\frac{Q(W \mid \theta)}{P(W \mid \mathcal{D})}}\right]\\
+  &amp;= \mathbb{E}_{W \mid \theta \sim Q}\left[\log{Q(W \mid \theta)}\right] - \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(W \mid \mathcal{D})}\right]\\
+  &amp;= \mathbb{E}_{W \mid \theta \sim Q}\left[\log{Q(W \mid \theta)}\right] - \mathbb{E}_{W \mid \theta \sim Q}\left[\log{\frac{P(\mathcal{D} \mid W) \cdot P(W)}{P(\mathcal{D})}}\right]\\
+  &amp;= \mathbb{E}_{W \mid \theta \sim Q}\left[\log{Q(W \mid \theta)}\right] - \bigg\{\mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] + \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(W)}\right] - \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D})}\right]\bigg\}\\
+  &amp;\approx \mathbb{E}_{W \mid \theta \sim Q}\left[\log{Q(W \mid \theta)}\right] - \bigg\{\mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] + \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(W)}\right]\bigg\}\\
+  &amp;= \mathbb{E}_{W \mid \theta \sim Q}\left[\log{Q(W \mid \theta)} - \log{P(W)}\right] - \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right]\\
+  &amp;= D_{KL}(Q(W \mid \theta) \parallel P(W)) - \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right]
   \end{aligned}\]
   </li>
 </ul>
