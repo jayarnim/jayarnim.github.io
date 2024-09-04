@@ -79,12 +79,14 @@ image:
 
 ### Variational Inference
 
-$$\begin{aligned}
-P(W \mid \mathcal{D})
-&= \frac{P(\mathcal{D} \mid W) \cdot P(W)}{P(\mathcal{D})}
-\end{aligned}$$
+- **변분 추론(Variational Inference)** : 최적화 기법을 사용하여 가중치의 사후 분포 $W \mid \mathcal{D} \sim P$ 에 근사하는 제안 분포 $W \mid \theta \sim Q$ 를 탐색하는 방법
 
-- **이상적인 접근** : 가중치 $W$ 에 대한 사후분포 $W \mid \mathcal{D} \sim P$ 를 잘 설명하는 제안분포 $W \mid \theta \sim Q$ 를 탐색함
+    $$\begin{aligned}
+    \hat{\theta}
+    &= \text{arg}\min_{\theta}{D_{KL}\big[Q(W \mid \theta) \parallel P(W \mid \mathcal{D})\big]}
+    \end{aligned}$$
+
+- **이상적인 접근** : 가중치 $W$ 에 대한 사후 분포 $W \mid \mathcal{D} \sim P$ 를 잘 설명하는 제안 분포 $W \mid \theta \sim Q$ 를 탐색함
 
     $$\begin{aligned}
     D_{KL}\big[P(W \mid \mathcal{D}) \parallel Q(W \mid \theta)\big]
@@ -93,7 +95,7 @@ P(W \mid \mathcal{D})
 
     - 추론 대상이 되는 분포 $P$ 에서 $W$ 를 샘플링하는 것은 현실적으로 불가능함
 
-- **대안** : 가중치 $W$ 에 대한 사후분포 $W \mid \mathcal{D} \sim P$ 로 잘 설명될 수 있는 제안분포 $W \mid \theta \sim Q$ 를 탐색함
+- **대안** : 가중치 $W$ 에 대한 사후 분포 $W \mid \mathcal{D} \sim P$ 로 잘 설명될 수 있는 제안 분포 $W \mid \theta \sim Q$ 를 탐색함
 
     $$\begin{aligned}
     D_{KL}\big[Q(W \mid \theta) \parallel P(W \mid \mathcal{D})\big]
@@ -102,15 +104,56 @@ P(W \mid \mathcal{D})
 
     - 즉, 제안분포 $Q$ 에서 $W$ 를 샘플링한 후, $W$ 에 대하여 $Q$ 와 $P$ 가 제공하는 정보량의 차이를 계산함
 
-- **증거 하한(Evidence Lower Bound; ELBO)**
+### ELBO; Objective Function
+
+$$\begin{aligned}
+\hat{\theta}
+&= \text{arg}\max_{\theta}{\text{ELBO}}\\
+&= \text{arg}\min_{\theta}{-\text{ELBO}}
+\end{aligned}$$
+
+- **사후 분포 $W \mid \mathcal{D} \sim P$ 와 그 근사 분포 $W \mid \theta \sim Q$ 의 차이 세분화**
 
     $$\begin{aligned}
-    &D_{KL}\big[Q(W \mid \theta) \parallel P(W \mid \mathcal{D})\big]\\
+    D_{KL}\big[Q(W \mid \theta) \parallel P(W \mid \mathcal{D})\big]
     &= \mathbb{E}_{W \mid \theta \sim Q}\left[\log{\frac{Q(W \mid \theta)}{P(W \mid \mathcal{D})}}\right]\\
     &= \mathbb{E}_{W \mid \theta \sim Q}\left[\log{Q(W \mid \theta)}\right] - \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(W \mid \mathcal{D})}\right]\\
     &= \mathbb{E}_{W \mid \theta \sim Q}\left[\log{Q(W \mid \theta)}\right] - \mathbb{E}_{W \mid \theta \sim Q}\left[\log{\frac{P(\mathcal{D} \mid W) \cdot P(W)}{P(\mathcal{D})}}\right]\\
-    &= \mathbb{E}_{W \mid \theta \sim Q}\left[\log{Q(W \mid \theta)}\right] - \bigg\{\mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] + \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(W)}\right] - \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D})}\right]\bigg\}\\
-    &\approx \mathbb{E}_{W \mid \theta \sim Q}\left[\log{Q(W \mid \theta)}\right] - \bigg\{\mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] + \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(W)}\right]\bigg\}\\
-    &= \mathbb{E}_{W \mid \theta \sim Q}\left[\log{Q(W \mid \theta)} - \log{P(W)}\right] - \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right]\\
-    &= D_{KL}(Q(W \mid \theta) \parallel P(W)) - \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right]
+    &= \mathbb{E}_{W \mid \theta \sim Q}\left[\log{Q(W \mid \theta)}\right] - \bigg(\mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] + \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(W)}\right] - \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D})}\right]\bigg)\\
+    &= \mathbb{E}_{W \mid \theta \sim Q}\left[\log{Q(W \mid \theta)} - \log{P(W)}\right] - \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] + \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D})}\right]\\
+    &= D_{KL}\big[Q(W \mid \theta) \parallel P(W)\big] - \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] + \log{P(\mathcal{D})}
     \end{aligned}$$
+
+    - $D_{KL}\big[Q(W \mid \theta) \parallel P(W)\big]$ : 사후 분포의 근사 분포 $W \mid \theta \sim Q$ 와 사전 분포 $W \sim P$ 의 차이
+    - $\mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right]$ : 사후 분포의 근사 분포 $W \mid \theta \sim Q$ 에서 샘플링된 가중치 $W$ 에 대한 로그 우도의 기대값
+    - $\log{P(\mathcal{D})}$ : 데이터 $\mathcal{D}$ 에 대한 증거(Evidence) 혹은 로그 마진 우도(Marginal Liklihood)로서, $\mathcal{D}$ 가 발생할 확률
+
+- **데이터 $\mathcal{D}$ 에 대한 증거 $\log{P(\mathcal{D})}$ 의 이해**
+
+    $$\begin{aligned}
+    D_{KL}\big[Q(W \mid \theta) \parallel P(W \mid \mathcal{D})\big]
+    &= D_{KL}\big[Q(W \mid \theta) \parallel P(W)\big] - \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] + \log{P(\mathcal{D})}\\
+    \log{P(\mathcal{D})}
+    &= D_{KL}\big[Q(W \mid \theta) \parallel P(W \mid \mathcal{D})\big] + \bigg(\mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] - D_{KL}\big[Q(W \mid \theta) \parallel P(W)\big]\bigg)\\
+    \therefore \log{P(\mathcal{D})}
+    &\ge \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] - D_{KL}\big[Q(W \mid \theta) \parallel P(W)\big]
+    \end{aligned}$$
+
+- **증거 하한(`E`vidence `L`ower `B`ound; ELBO)** : 데이터 $\mathcal{D}$ 에 대한 증거 $\log{P(\mathcal{D})}$ 의 하한값
+
+    $$\begin{aligned}
+    \text{ELBO}
+    &= \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] - D_{KL}\big[Q(W \mid \theta) \parallel P(W)\big]
+    \end{aligned}$$
+
+### Reparameterization Trick
+
+- **리파라메터라이제이션 트릭(Reparameterization Trick)** : 역전파 알고리즘을 활용한 최적화 학습이 가능하도록 샘플링을 미분 가능한 함수로 변형하는 방법
+
+    $$
+    w \mid \theta \sim Q \quad \rightarrow \quad w = g(\epsilon, \theta)
+    $$
+
+    $$
+    \theta_{new}=\theta_{org} - \eta \cdot \nabla_{\theta}(-\text{ELBO})
+    $$
