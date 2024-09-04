@@ -77,6 +77,8 @@ image:
 ## Bayes by Backprop
 -----
 
+![01](/_post_refer_img/BayesianModeling/08-01.png){: width="100%"}
+
 - **BBB(Bayes by Backprop)** : 신경망과 같은 복잡한 모형에서, 역전파 알고리즘을 활용한 최적화 학습을 통해 파라미터의 사후 분포를 추정하기 위해 정보 이론적 접근을 사용하는 베이지안 추론 방법론
 
     - **제안 논문** : [Weight Uncertainty in Neural Networks, ICML, 2015](https://proceedings.mlr.press/v37/blundell15)
