@@ -77,6 +77,10 @@ image:
 ## Bayes by Backprop
 -----
 
+- **BBB(Bayes by Backprop)** : 신경망과 같은 복잡한 모형에서, 역전파 알고리즘을 활용한 최적화 학습을 통해 파라미터의 사후 분포를 추정하기 위해 정보 이론적 접근을 사용하는 베이지안 추론 방법론
+
+    - **제안 논문** : [Weight Uncertainty in Neural Networks, ICML, 2015](https://proceedings.mlr.press/v37/blundell15)
+
 ### Variational Inference
 
 - **변분 추론(Variational Inference)** : 최적화 기법을 사용하여 가중치의 사후 분포 $W \mid \mathcal{D} \sim P$ 에 근사하는 제안 분포 $W \mid \theta \sim Q$ 를 탐색하는 방법
