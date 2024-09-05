@@ -1,7 +1,7 @@
 ---
-order: 12
+order: 10
 title: What? Clustering
-date: 2024-01-12
+date: 2024-01-10
 categories: [Machine Learning Techs, Machine Learning]
 tags: [Machine Learning, Unsupervised Learning, Clustering, Metric]
 math: true

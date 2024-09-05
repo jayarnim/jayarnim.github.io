@@ -1,7 +1,7 @@
 ---
-order: 15
+order: 13
 title: Hierarchical Clustering
-date: 2024-01-15
+date: 2024-01-13
 categories: [Machine Learning Techs, Machine Learning]
 tags: [Machine Learning, Unsupervised Learning, Clustering]
 math: true

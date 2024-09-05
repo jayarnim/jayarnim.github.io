@@ -11,28 +11,51 @@ image:
   path: /_post_refer_img/DeepLearning/Thumbnail.jpg
 ---
 
-## What? Gadient Descent
+
+## Gradient Descent
 -----
 
-![01](/_post_refer_img/DeepLearning/03-01.png){: width="100%"}
+- **그라디언트(Gradient)** : 다변수 함수에 대하여 모든 방향으로의 순간변화율 벡터
 
-- **정의** : 손실 함수의 도함수(경사)를 최소화하는 가중치를 추정하는 방법
+    ![05](/_post_refer_img/MachineLearning/08-05.png){: width="100%"}
 
-    $$
-    \hat{\beta}=\{\beta\,|\, \min_{\beta} \displaystyle\frac{\partial}{\partial \beta} \text{Loss}(\beta, \cdots) \}
-    $$
+    $$\begin{aligned}
+    \nabla{f(x_{1},x_{2},\cdots,x_{n})}
+    &= \begin{pmatrix}
+    \displaystyle\frac{\partial f(x^{\forall})}{\partial x_{1}}\\
+    \displaystyle\frac{\partial f(x^{\forall})}{\partial x_{2}}\\
+    \vdots\\
+    \displaystyle\frac{\partial f(x^{\forall})}{\partial x_{n}}\\
+    \end{pmatrix}
+    \end{aligned}$$
 
-- **최적 가중치 추정 방법**
+- **경사하강법(Gradient Descent)** : 손실 함수의 도함수(그라디언트)를 최소화하는 가중치를 추정하는 방법
 
-    $$
-    \beta_t
-    = \beta_{t-1} - \alpha \times \displaystyle\frac{\partial}{\partial \beta_{n-1}}\text{Loss}(\beta_{t-1},\cdots)
-    $$
+    ![06](/_post_refer_img/MachineLearning/08-06.png){: width="100%"}
 
-    - $\text{Loss}(\beta,\cdots)$ : 손실 함수
-    - $t$ : 극소점 탐색 횟수
-    - $\alpha$ : 학습률
-    - $\beta$ : 가중치
+- **절차**
+
+    1. 파라미터 $\overrightarrow{w}$ 의 초기 아규먼트 설정
+    2. 현재 아규먼트 $$\overrightarrow{w}_{prev}$$ 에서 손실 함수의 그라디언트 $$\nabla{Loss(\overrightarrow{w}_{prev})}$$ 계산
+    3. 현재의 아규먼트에서 음의 방향으로 $$\alpha \times \nabla{Loss(\overrightarrow{w}_{prev})}$$ 만큼 이동하여 새로운 아규먼트 $$\overrightarrow{w}_{new}$$ 적용
+    4. ②, ③을 반복하여 손실 함수를 최소화하는 지점 탐색
+
+- **아규먼트 갱신 규칙**
+
+    $$\begin{aligned}
+    \overrightarrow{w}_{new}
+    &= \overrightarrow{w}_{prev} - \alpha \times \nabla{Loss(\overrightarrow{w}_{prev})}
+    \end{aligned}$$
+
+- **학습률(Learning Rate)** : 손실 함수에 대하여 그 극소점을 탐색하기 위한 아규먼트 갱신 보폭
+
+    - **학습률이 낮을수록 과대적합될 가능성이 높음**
+
+        ![07](/_post_refer_img/MachineLearning/08-07.png){: width="100%"}
+
+    - **학습률이 높을수록 과소적합될 가능성이 높음**
+
+        ![08](/_post_refer_img/MachineLearning/08-08.png){: width="100%"}
 
 ## Example: three-layer model
 -----
@@ -202,3 +225,9 @@ $$
 
     - $m_{t-1}$ : 직전 시점 갱신 방향
     - $\gamma$ : 관성 계수
+
+-----
+
+### 이미지 출처
+
+- https://towardsdatascience.com/an-intuitive-explanation-of-gradient-descent-83adf68c9c33

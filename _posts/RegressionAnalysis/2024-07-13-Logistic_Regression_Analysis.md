@@ -11,6 +11,92 @@ image:
   path: /_post_refer_img/RegressionAnalysis/Thumbnail.jpg
 ---
 
+## Logistic Regression
+-----
+
+- **정의** : 회귀 기법을 판별분석에 활용하는 비선형 함수 알고리즘
+
+    ![01](/_post_refer_img/MachineLearning/08-09.png){: width="100%"}
+
+    $$
+    P(c=1)
+    = \frac{1}{1+\exp[-(\beta_{0}+\beta_{1}x_{1}+\cdots+\beta_{d}x_{d})]}
+    $$
+
+### Logistic Function
+
+- **설명변수와 반응변수 가정**
+
+    - 어떠한 관측치 벡터 $\overrightarrow{x}$ 가 다음과 같이 주어졌다고 하자
+
+        $$\begin{aligned}
+        f(\overrightarrow{x})
+        &=\beta_{0}+\beta_{1}x_{1}+\cdots+\beta_{d}x_{d} \in (-\infty,\infty)
+        \end{aligned}$$
+
+    - $\overrightarrow{x}$ 의 반응변수 $y$ 는 다음과 같음
+
+        $$\begin{aligned}
+        y
+        &=c \in \{0,1\}
+        \end{aligned}$$
+
+    - $y$ 와 $\overrightarrow{x}$ 간에는 공역이 일치하지 않으므로 등식이 성립하지 않음
+
+        $$
+        y \ne \beta_{0}+\beta_{1}x_{1}+\cdots+\beta_{d}x_{d}
+        $$
+
+- **반응변수 재정의** : 범주 $1$ 에 속할 확률
+
+    $$\begin{aligned}
+    y
+    &= P(c=1) \in [0,1]
+    \end{aligned}$$
+
+- **공역 조정을 통한 연결함수 $f(x)$ 도출**
+
+    - **승산(Odds)** : 범주 $1$ 에 속하지 않을 확률 대비 속할 확률
+
+        $$\begin{aligned}
+        f(x)
+        &= \text{odds}\\
+        &= \frac{P(c=1)}{1-P(c=1)} \in [0, \infty)
+        \end{aligned}$$
+
+    - **로짓(Logit)** : 승산에 자연로그를 취한 값
+
+        $$\begin{aligned}
+        f(x)
+        &= \text{logit}\\
+        &= \ln{\frac{P(c=1)}{1-P(c=1)}} \in (-\infty, \infty)
+        \end{aligned}$$
+
+    - **로짓 함수와 $\overrightarrow{x}$ 연결**
+
+        $$\begin{aligned}
+        \text{logit}
+        &= f(x)\\
+        &= \beta_{0}+\beta_{1}x_{1}+\cdots+\beta_{d}x_{d}
+        \end{aligned}$$
+
+- **연결함수를 활용하여 재정의된 반응변수와 설명변수 연결**
+
+    $$\begin{aligned}
+    \ln{\frac{P(c=1)}{1-P(c=1)}}
+    &= f(x)\\
+    &= \beta_{0}+\beta_{1}x_{1}+\cdots+\beta_{d}x_{d}\\\\
+
+    \frac{P(c=1)}{1-P(c=1)}
+    &= e^{f(x)}\\
+    &= \exp[\beta_{0}+\beta_{1}x_{1}+\cdots+\beta_{d}x_{d}]\\\\
+
+    \therefore
+    y
+    &= P(c=1)\\
+    &= \frac{1}{1+\exp[-(\beta_{0}+\beta_{1}x_{1}+\cdots+\beta_{d}x_{d})]}
+    \end{aligned}$$
+
 ### Filter Approach
 
 - **승산(Odds)** : 변수 $Y$ 가 반응할 가능성이 반응하지 않을 가능성보다 몇 배 높은가
