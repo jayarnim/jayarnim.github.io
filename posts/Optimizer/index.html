@@ -1003,6 +1003,219 @@
     <!-- combine -->
     
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
 
   
 
@@ -1076,6 +1289,17 @@
       
         
         
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
       
 
       
@@ -1238,9 +1462,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="923 words"
+  title="1114 words"
 >
-  <em>5 min</em> read</span>
+  <em>6 min</em> read</span>
 
         </div>
       </div>
@@ -1248,28 +1472,62 @@
   </header>
 
   <div class="content">
-    <h2 id="what-gadient-descent"><span class="me-2">What? Gadient Descent</span><a href="#what-gadient-descent" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="gradient-descent"><span class="me-2">Gradient Descent</span><a href="#gradient-descent" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
-
-<p><a href="/_post_refer_img/DeepLearning/03-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/DeepLearning/03-01.png" alt="01" width="100%" loading="lazy"></a></p>
 
 <ul>
   <li>
-    <p><strong>정의</strong> : 손실 함수의 도함수(경사)를 최소화하는 가중치를 추정하는 방법</p>
+    <p><strong>그라디언트(Gradient)</strong> : 다변수 함수에 대하여 모든 방향으로의 순간변화율 벡터</p>
 
-\[\hat{\beta}=\{\beta\,|\, \min_{\beta} \displaystyle\frac{\partial}{\partial \beta} \text{Loss}(\beta, \cdots) \}\]
+    <p><a href="/_post_refer_img/MachineLearning/08-05.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/08-05.png" alt="05" width="100%" loading="lazy"></a></p>
+
+\[\begin{aligned}
+  \nabla{f(x_{1},x_{2},\cdots,x_{n})}
+  &amp;= \begin{pmatrix}
+  \displaystyle\frac{\partial f(x^{\forall})}{\partial x_{1}}\\
+  \displaystyle\frac{\partial f(x^{\forall})}{\partial x_{2}}\\
+  \vdots\\
+  \displaystyle\frac{\partial f(x^{\forall})}{\partial x_{n}}\\
+  \end{pmatrix}
+  \end{aligned}\]
   </li>
   <li>
-    <p><strong>최적 가중치 추정 방법</strong></p>
+    <p><strong>경사하강법(Gradient Descent)</strong> : 손실 함수의 도함수(그라디언트)를 최소화하는 가중치를 추정하는 방법</p>
 
-\[\beta_t
-  = \beta_{t-1} - \alpha \times \displaystyle\frac{\partial}{\partial \beta_{n-1}}\text{Loss}(\beta_{t-1},\cdots)\]
+    <p><a href="/_post_refer_img/MachineLearning/08-06.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/08-06.png" alt="06" width="100%" loading="lazy"></a></p>
+  </li>
+  <li>
+    <p><strong>절차</strong></p>
+
+    <ol>
+      <li>파라미터 $\overrightarrow{w}$ 의 초기 아규먼트 설정</li>
+      <li>현재 아규먼트 \(\overrightarrow{w}_{prev}\) 에서 손실 함수의 그라디언트 \(\nabla{Loss(\overrightarrow{w}_{prev})}\) 계산</li>
+      <li>현재의 아규먼트에서 음의 방향으로 \(\alpha \times \nabla{Loss(\overrightarrow{w}_{prev})}\) 만큼 이동하여 새로운 아규먼트 \(\overrightarrow{w}_{new}\) 적용</li>
+      <li>②, ③을 반복하여 손실 함수를 최소화하는 지점 탐색</li>
+    </ol>
+  </li>
+  <li>
+    <p><strong>아규먼트 갱신 규칙</strong></p>
+
+\[\begin{aligned}
+  \overrightarrow{w}_{new}
+  &amp;= \overrightarrow{w}_{prev} - \alpha \times \nabla{Loss(\overrightarrow{w}_{prev})}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>학습률(Learning Rate)</strong> : 손실 함수에 대하여 그 극소점을 탐색하기 위한 아규먼트 갱신 보폭</p>
 
     <ul>
-      <li>$\text{Loss}(\beta,\cdots)$ : 손실 함수</li>
-      <li>$t$ : 극소점 탐색 횟수</li>
-      <li>$\alpha$ : 학습률</li>
-      <li>$\beta$ : 가중치</li>
+      <li>
+        <p><strong>학습률이 낮을수록 과대적합될 가능성이 높음</strong></p>
+
+        <p><a href="/_post_refer_img/MachineLearning/08-07.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/08-07.png" alt="07" width="100%" loading="lazy"></a></p>
+      </li>
+      <li>
+        <p><strong>학습률이 높을수록 과소적합될 가능성이 높음</strong></p>
+
+        <p><a href="/_post_refer_img/MachineLearning/08-08.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/08-08.png" alt="08" width="100%" loading="lazy"></a></p>
+      </li>
     </ul>
   </li>
 </ul>
@@ -1487,6 +1745,14 @@
       <li>$\gamma$ : 관성 계수</li>
     </ul>
   </li>
+</ul>
+
+<hr />
+
+<h3 id="이미지-출처"><span class="me-2">이미지 출처</span><a href="#이미지-출처" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>https://towardsdatascience.com/an-intuitive-explanation-of-gradient-descent-83adf68c9c33</li>
 </ul>
 
   </div>
@@ -1962,11 +2228,6 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -2130,225 +2391,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2771,6 +2813,231 @@
     
     
     
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     
@@ -3095,9 +3362,6 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/optimization/">Optimization</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
       
         
@@ -3105,6 +3369,9 @@
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/microeconomics/">Microeconomics</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/optimization/">Optimization</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/dev-env/">Dev. Env.</a>
@@ -3165,30 +3432,6 @@
 
 
 
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
 
   
 
@@ -3983,11 +4226,6 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -4151,225 +4389,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -4792,6 +4811,231 @@
     
     
     
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     
@@ -5116,9 +5360,6 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/optimization/">Optimization</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
       
         
@@ -5126,6 +5367,9 @@
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/microeconomics/">Microeconomics</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/optimization/">Optimization</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/dev-env/">Dev. Env.</a>
