@@ -173,12 +173,6 @@ image:
         w \mid \mu,\sigma \sim N \quad \rightarrow \quad w = \mu + \sigma \cdot \epsilon
         $$
 
-- **경사하강법을 활용한 파라미터 갱신**
-
-    $$
-    \theta_{new}=\theta_{org} - \eta \cdot \nabla_{\theta}\text{VFE}
-    $$
-
 ### Posterior Tempering
 
 - **후방 템퍼링(Posterior Tempering)** : 데이터에 과적합되는 것을 방지하도록 우도 항목의 영향력을 할인하는 방법
