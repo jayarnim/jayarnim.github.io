@@ -883,7 +883,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1708 words"
+  title="1757 words"
 >
   <em>9 min</em> read</span>
 
@@ -1094,7 +1094,18 @@
 
 \[w \mid \theta \sim Q \quad \rightarrow \quad w = g(\epsilon, \theta)\]
 
-\[\theta_{new}=\theta_{org} - \eta \cdot \nabla_{\theta}(\text{VFE})\]
+    <ul>
+      <li>
+        <p>가중치 $w$ 가 정규 분포 $N(\mu,\sigma^2)$ 를 따르는 경우의 예시</p>
+
+\[w \mid \mu,\sigma \sim N \quad \rightarrow \quad w = \mu + \sigma \cdot \epsilon\]
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>경사하강법을 활용한 파라미터 갱신</strong></p>
+
+\[\theta_{new}=\theta_{org} - \eta \cdot \nabla_{\theta}\text{VFE}\]
   </li>
 </ul>
 
@@ -1111,7 +1122,7 @@
 
     <ul>
       <li>
-        <p><strong>변분 자유 에너지에 후방 템퍼링을 적용하는 경우의 예시</strong></p>
+        <p>변분 자유 에너지에 후방 템퍼링을 적용하는 경우의 예시</p>
 
 \[\begin{aligned}
   \text{VFE}
