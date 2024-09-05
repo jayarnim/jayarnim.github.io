@@ -167,8 +167,16 @@ image:
     w \mid \theta \sim Q \quad \rightarrow \quad w = g(\epsilon, \theta)
     $$
 
+    - 가중치 $w$ 가 정규 분포 $N(\mu,\sigma^2)$ 를 따르는 경우의 예시
+
+        $$
+        w \mid \mu,\sigma \sim N \quad \rightarrow \quad w = \mu + \sigma \cdot \epsilon
+        $$
+
+- **경사하강법을 활용한 파라미터 갱신**
+
     $$
-    \theta_{new}=\theta_{org} - \eta \cdot \nabla_{\theta}(\text{VFE})
+    \theta_{new}=\theta_{org} - \eta \cdot \nabla_{\theta}\text{VFE}
     $$
 
 ### Posterior Tempering
@@ -180,7 +188,7 @@ image:
     &\approx \left[P(\mathcal{D} \mid \theta)\right]^{1/T} \cdot P(\theta)
     \end{aligned}$$
 
-    - **변분 자유 에너지에 후방 템퍼링을 적용하는 경우의 예시**
+    - 변분 자유 에너지에 후방 템퍼링을 적용하는 경우의 예시
 
         $$\begin{aligned}
         \text{VFE}
