@@ -6,9 +6,12 @@ categories: [Statistical Techs, Regression Analysis]
 tags: [Statistics, Regression, t Test, Goodness of Fit Test, R2]
 math: true
 description: >-
-  Based on the lecture "Statistical Models and Application (2024-1)" by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ.
+    Based on the following lectures <br>
+    (1) “Statistics (2018-1)” by Prof. Sang Ah Lee, Dept. of Economics, College of Economics & Commerce, Kookmin Univ. <br>
+    (2) “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ. <br>
+    (3) "Statistical Models and Application (2024-1)" by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-  path: /_post_refer_img/RegressionAnalysis/Thumbnail.jpg
+    path: /_post_refer_img/RegressionAnalysis/Thumbnail.jpg
 ---
 
 ## What? Linear Regression Analysis
@@ -91,38 +94,36 @@ image:
     - $\hat{y}=\beta_{0}+\beta_{1}x$
     - $\overline{y}=\beta_{0}+\beta_{1}\overline{x} \quad \text{s.t.}\; \varepsilon \sim N(0, \sigma^2)$
 
-### Variation of the Response Variable
-
-$$\begin{aligned}
-\sum_{i=1}^{n}{\left(y_{i}-\overline{y}\right)^2}
-&= \sum_{i=1}^{n}{\left[\left(\hat{y}_{i} + \varepsilon_{i}\right) -\overline{y}\right]^{2}} \\
-&= \sum_{i=1}^{n}{\left[\left(\hat{y}_{i} -\overline{y}\right) + \varepsilon_i \right]^{2}} \\
-&= \sum_{i=1}^{n}{\left[\left(\hat{y}_{i} -\overline{y}\right)^2 + \varepsilon_{i}^{2} + 2 \times \varepsilon_{i} \times \left(\hat{y}_{i}-\overline{y}\right)\right]} \\
-&= \sum_{i=1}^{n}{\left(\hat{y}_{i} -\overline{y}\right)^{2}} + \sum_{i=1}^{n}{\varepsilon_{i}^2} + 2\times\sum_{i=1}^{n}{\varepsilon_{i}\left(\hat{y}_{i}-\overline{y}\right)} \\
-&= \sum_{i=1}^{n}{\left(\hat{y}_{i} -\overline{y}\right)^2} + \sum_{i=1}^{n}{\varepsilon_{i}^{2}}\quad(\because \sum_{i=1}^{n}{\hat{y}_{i}-\overline{y}} = 0)
-\end{aligned}$$
-
-- **총변동(Total Sum of Square; TSS)** : 반응변수의 총 변동성
-
-    $$
-    TSS=\sum_{i=1}^{n}{\left(y_{i}-\overline{y}\right)^2}
-    $$
-
-- **회귀변동(Explained Sum of Square; ESS)** : 모형에 의해 설명되는 반응변수의 변동성
-
-    $$
-    ESS=\sum_{i=1}^{n}{\left(\hat{y}_{i}-\overline{y}\right)^2}
-    $$
-
-- **잔차변동(Residual Sum of Square; RSS)** : 모형에 의해 설명되지 않는 반응변수의 변동성
+- **반응변수의 변동성 세분화**
 
     $$\begin{aligned}
-    RSS
-    &=\sum_{i=1}^{n}{\left(y_{i}-\hat{y}_{i}\right)^{2}}\\
-    &=\sum_{i=1}^{n}{\varepsilon_{i}^{2}}
+    \sum_{i=1}^{n}{\left(y_{i}-\overline{y}\right)^2}
+    &= \sum_{i=1}^{n}{\left[\left(\hat{y}_{i} + \varepsilon_{i}\right) -\overline{y}\right]^{2}} \\
+    &= \sum_{i=1}^{n}{\left[\left(\hat{y}_{i} -\overline{y}\right) + \varepsilon_i \right]^{2}} \\
+    &= \sum_{i=1}^{n}{\left[\left(\hat{y}_{i} -\overline{y}\right)^2 + \varepsilon_{i}^{2} + 2 \times \varepsilon_{i} \times \left(\hat{y}_{i}-\overline{y}\right)\right]} \\
+    &= \sum_{i=1}^{n}{\left(\hat{y}_{i} -\overline{y}\right)^{2}} + \sum_{i=1}^{n}{\varepsilon_{i}^2} + 2\times\sum_{i=1}^{n}{\varepsilon_{i}\left(\hat{y}_{i}-\overline{y}\right)} \\
+    &= \sum_{i=1}^{n}{\left(\hat{y}_{i} -\overline{y}\right)^2} + \sum_{i=1}^{n}{\varepsilon_{i}^{2}}\quad(\because \sum_{i=1}^{n}{\hat{y}_{i}-\overline{y}} = 0)
     \end{aligned}$$
 
-### Coefficient of Determination
+    - **총변동(Total Sum of Square; TSS)** : 반응변수의 총 변동성
+
+        $$
+        TSS=\sum_{i=1}^{n}{\left(y_{i}-\overline{y}\right)^2}
+        $$
+
+    - **회귀변동(Explained Sum of Square; ESS)** : 모형에 의해 설명되는 반응변수의 변동성
+
+        $$
+        ESS=\sum_{i=1}^{n}{\left(\hat{y}_{i}-\overline{y}\right)^2}
+        $$
+
+    - **잔차변동(Residual Sum of Square; RSS)** : 모형에 의해 설명되지 않는 반응변수의 변동성
+
+        $$\begin{aligned}
+        RSS
+        &=\sum_{i=1}^{n}{\left(y_{i}-\hat{y}_{i}\right)^{2}}\\
+        &=\sum_{i=1}^{n}{\varepsilon_{i}^{2}}
+        \end{aligned}$$
 
 - **결정계수(Coefficient of Determination; $R^2$)** : 총변동 대비 회귀변동의 비율로 측정된 적합도
 
@@ -132,9 +133,3 @@ $$\begin{aligned}
     &= \frac{ESS}{ESS + RSS} \\
     &= 1 - \frac{RSS}{TSS}
     \end{aligned}$$
-
-- **Adjusted Coefficient of Determination($\text{Adj.}R^2$)** : 설명변수의 갯수 $p$ 가 많을수록 적합도가 높게 측정되는 경향을 조정한 결정계수
-
-    $$
-    \text{Adj.}R^2 = \frac{(n-1)R^2-p}{n-p-1}
-    $$

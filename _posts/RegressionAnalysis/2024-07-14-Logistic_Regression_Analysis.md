@@ -1,14 +1,17 @@
 ---
-order: 6
+order: 7
 title: Logistic Regression Analysis
-date: 2024-07-13
+date: 2024-07-14
 categories: [Statistical Techs, Regression Analysis]
 tags: [Statistics, Regression]
 math: true
 description: >-
-  Based on the lecture "Statistical Models and Application (2024-1)" by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ.
+    Based on the following lectures <br>
+    (1) “Statistics (2018-1)” by Prof. Sang Ah Lee, Dept. of Economics, College of Economics & Commerce, Kookmin Univ. <br>
+    (2) “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ. <br>
+    (3) "Statistical Models and Application (2024-1)" by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-  path: /_post_refer_img/RegressionAnalysis/Thumbnail.jpg
+    path: /_post_refer_img/RegressionAnalysis/Thumbnail.jpg
 ---
 
 ## Logistic Regression
@@ -159,3 +162,80 @@ image:
         &= \frac{\frac{P(Y=1 \vert X=1)}{1-P(Y=1 \vert X=1)}}{\frac{P(Y=1 \vert X=0)}{1-P(Y=1 \vert X=0)}} \\
         &= \exp[\beta_1]
         \end{aligned}$$
+
+## LDA; PCA for Classification
+-----
+
+### Linear Discriminant Analysis
+
+- **정의** : 고차원 데이터에 대하여, **주어진 클래스를 가장 잘 구분할 수 있는** 새로운 저차원 직교 좌표(선형 판별 함수)를 찾는 기법
+
+    ![07](/_post_refer_img/MachineLearning/10-07.png){: width="100%"}
+
+- **방법** : **클래스 간 분산은 최대화**하는 동시에 **클래스 내 관측치 간 분산은 최소화**하는 성분들을 추출함
+
+    $$
+    \hat{\overrightarrow{w}}
+    =\text{arg} \max_{\overrightarrow{w}}{\frac{\Sigma^{2}}{\sigma_{1}^{2}+\sigma_{2}^{2}}}
+    \quad \text{s.t.} \quad
+    \overrightarrow{w}^{T}\overrightarrow{w}=1
+    $$
+
+    - $\Sigma^{2}$ : 정사영 후 클래스 간 분산
+    - $\sigma_{i}^{2}$ : 정사영 후 $i$ 번째 클래스 내 관측치 간 분산
+
+### How to Extract
+
+- **정사영 후 범주 간 분산 $\Sigma^{2}$**
+
+    $$\begin{aligned}
+    \Sigma^{2}
+    &= (\overrightarrow{\mu}_{1}-\overrightarrow{\mu}_{2})(\overrightarrow{\mu}_{1}-\overrightarrow{\mu}_{2})^{T}\\
+    &= (\overrightarrow{w}^{T}\overrightarrow{m}_{1}-\overrightarrow{w}^{T}\overrightarrow{m}_{2})(\overrightarrow{w}^{T}\overrightarrow{m}_{1}-\overrightarrow{w}^{T}\overrightarrow{m}_{2})^{T}\quad(\because \overrightarrow{\mu}_{i}=\overrightarrow{w}^{T}\overrightarrow{m}_{i})\\
+    &= \overrightarrow{w}^{T}(\overrightarrow{m}_{1}-\overrightarrow{m}_{2})(\overrightarrow{m}_{1}-\overrightarrow{m}_{2})^{T}\overrightarrow{w}\\
+    &= \overrightarrow{w}^{T}\mathbf{S}_{B}\overrightarrow{w}
+    \end{aligned}$$
+
+    - $$\overrightarrow{m}_{i}$$ : $$i$$ 번째 범주 $$C_{i}$$ 의 중심점 벡터
+    - $$\overrightarrow{\mu}_{i}=\text{proj}_{\overrightarrow{w}}(\overrightarrow{m}_{i})$$ : $$\overrightarrow{m}_{i}$$ 의 정사영 벡터
+    - $$\mathbf{S}_{B}$$ : 범주 $$C_{i},C_{j}$$ 간 편차
+    - $$\Sigma$$ : 정사영 후 범주 $$C_{i},C_{j}$$ 간 편차
+
+- **정사영 후 범주 내 분산 $\sigma_{i}^{2}$**
+
+    $$\begin{aligned}
+    \sigma_{i}^{2}
+    &= \sum_{j=1}^{|C_{i}|}{(\overrightarrow{y}_{j}-\overrightarrow{\mu}_{i})(\overrightarrow{y}_{j}-\overrightarrow{\mu}_{i})^{T}}\quad(\overrightarrow{x}_{j} \in C_{i})\\
+    &= \sum_{j=1}^{|C_{i}|}{(\overrightarrow{w}^{T}\overrightarrow{x}_{j}-\overrightarrow{w}^{T}\overrightarrow{m}_{i})(\overrightarrow{w}^{T}\overrightarrow{x}_{j}-\overrightarrow{w}^{T}\overrightarrow{m}_{i})^{T}}\quad(\because \overrightarrow{y}_{j}=\overrightarrow{w}^{T}\overrightarrow{x}_{j})\\
+    &= \overrightarrow{w}^{T}\left[\sum_{j=1}^{|C_{i}|}{(\overrightarrow{x}_{j}-\overrightarrow{m}_{i})(\overrightarrow{x}_{j}-\overrightarrow{m}_{i})^{T}}\right]\overrightarrow{w}\\
+    &= \overrightarrow{w}^{T}\mathbf{S}_{i}\overrightarrow{w}
+    \end{aligned}$$
+
+    - $$\overrightarrow{x}_{j} \in C_{i}$$ : $$i$$ 번째 범주 $$C_{i}$$ 의 $$j$$ 번째 관측치 벡터
+    - $$\overrightarrow{y}_{j}=\text{proj}_{\overrightarrow{w}}(\overrightarrow{x}_{j})$$ : $$\overrightarrow{x}_{j}$$ 의 정사영 벡터
+    - $$S_{i}$$ : $$i$$ 번째 범주 $$C_{i}$$ 의 범주 내 관측치 간 편차
+    - $$\sigma_{i}$$ : 정사영 후 $$i$$ 번째 범주 $$C_{i}$$ 의 범주 내 관측치 간 편차
+
+- **목적 함수 재정의**
+
+    $$
+    \hat{\overrightarrow{w}}
+    =\text{arg} \max_{\overrightarrow{w}}{\frac{\overrightarrow{w}^{T}\mathbf{S}_{B}\overrightarrow{w}}{\overrightarrow{w}^{T}(\mathbf{S}_{1}+\mathbf{S}_{2})\overrightarrow{w}}}\\
+    \begin{aligned}
+    \\\text{s.t.} \quad
+    & \overrightarrow{w}^{T}\overrightarrow{w}=1
+    \end{aligned}
+    $$
+
+- **라그랑주 승수법을 통한 최적화 문제 풀이**
+
+    $$\begin{aligned}
+    L(\overrightarrow{w},\lambda)
+    &= \frac{\overrightarrow{w}^{T}\mathbf{S}_{B}\overrightarrow{w}}{\overrightarrow{w}^{T}(\mathbf{S}_{1}+\mathbf{S}_{2})\overrightarrow{w}}-\lambda(\overrightarrow{w}^{T}\overrightarrow{w}-1)\\\\
+
+    \frac{\partial L(\overrightarrow{w},\lambda)}{\partial \overrightarrow{w}}
+    &= 0\\\\
+
+    \therefore \left[\mathbf{S}_{B}^{-1}(\mathbf{S}_{1}+\mathbf{S}_{2})-\lambda\mathbf{I}\right]\hat{\overrightarrow{w}}
+    &=0
+    \end{aligned}$$
