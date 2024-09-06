@@ -138,7 +138,7 @@ image:
 
     $$\begin{aligned}
     Y
-    &= \varepsilon + \beta_1 \cdot X_1 + \beta_2 \cdot X_2\\
-    &= \varepsilon + \beta_1 \cdot X_1 + \beta_2 \cdot \left(\delta + \alpha \cdot X_1\right)\\
-    &= \left(\varepsilon + \delta \cdot \beta_2 \right) + \left(\beta_1 + \alpha \cdot \beta_2\right) \cdot X_1
+    &= \beta_0 + \beta_1 \cdot X_1 + \beta_2 \cdot X_2 + \varepsilon\\
+    &= \beta_0 + \beta_1 \cdot X_1 + \beta_2 \cdot \left(\delta + \alpha \cdot X_1\right) + \varepsilon\\
+    &= \left(\beta_0 + \delta \cdot \beta_2 \right) + \left(\beta_1 + \alpha \cdot \beta_2\right) \cdot X_1 + \varepsilon
     \end{aligned}$$
