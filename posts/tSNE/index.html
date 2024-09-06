@@ -790,6 +790,148 @@
     <!-- combine -->
     
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
 
   
 
@@ -848,6 +990,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -951,6 +1104,28 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -958,6 +1133,27 @@
   
   
 
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
   
 
   
@@ -1058,9 +1254,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="780 words"
+  title="982 words"
 >
-  <em>4 min</em> read</span>
+  <em>5 min</em> read</span>
 
         </div>
       </div>
@@ -1068,7 +1264,76 @@
   </header>
 
   <div class="content">
-    <h2 id="what-t-sne"><span class="me-2">What? t-SNE</span><a href="#what-t-sne" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="curse-of-dimensionality"><span class="me-2">Curse of Dimensionality</span><a href="#curse-of-dimensionality" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<h3 id="curse-of-dimensionality-1"><span class="me-2">Curse of Dimensionality</span><a href="#curse-of-dimensionality-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p><strong>정의</strong> : 고차원일수록 알고리즘이 제대로 학습하지 못하는 현상</p>
+
+    <p><a href="/_post_refer_img/MachineLearning/09-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/09-01.png" alt="01" width="100%" loading="lazy"></a></p>
+
+    <ul>
+      <li>관측치 간 거리가 기하급수적으로 멀어짐에 따라 차원별 학습 가능한 관측치가 희소해짐</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>차원 축소의 당위성</strong></p>
+
+    <p><a href="/_post_refer_img/MachineLearning/09-02.jpeg" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/09-02.jpeg" alt="02" width="100%" loading="lazy"></a></p>
+
+    <blockquote>
+      <h4 id="manifold-hypothesis"><span class="me-2">Manifold hypothesis</span><a href="#manifold-hypothesis" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+      <p>Many high-dimensional data sets that occur in the real world actually lie along low-dimensional latent manifolds inside that high-dimensional space.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h3 id="dimensionality-reduction-methods"><span class="me-2">Dimensionality Reduction Methods</span><a href="#dimensionality-reduction-methods" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li><strong>차원 선택(Feature Selection)</strong> : 유효한 차원을 선별하는 방법
+    <ul>
+      <li>
+        <p><strong>Filter Approach</strong></p>
+      </li>
+      <li>
+        <p><strong>Wrapper Approach</strong></p>
+        <ul>
+          <li>Forward Selection</li>
+          <li>Backward Elimination</li>
+          <li>Stepwise Selection</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>차원 추출(Feature Extraction)</strong> : 원본의 특징을 보존하는 새로운 차원을 추출하는 방법
+    <ul>
+      <li>$\text{arg} \max_{\overrightarrow{w}}{\sigma^{2}}$
+        <ul>
+          <li>주성분 분석(<code class="language-plaintext highlighter-rouge">P</code>rinciple <code class="language-plaintext highlighter-rouge">C</code>omponent <code class="language-plaintext highlighter-rouge">A</code>nalysis; PCA)</li>
+          <li>선형 판별 분석(<code class="language-plaintext highlighter-rouge">L</code>inear <code class="language-plaintext highlighter-rouge">D</code>iscriminant <code class="language-plaintext highlighter-rouge">A</code>nalysis; LDA)</li>
+        </ul>
+      </li>
+      <li>$\text{arg} \max_{\overrightarrow{w}}{dist}$
+        <ul>
+          <li>다차원 척도법(<code class="language-plaintext highlighter-rouge">M</code>ulti-<code class="language-plaintext highlighter-rouge">D</code>imensional <code class="language-plaintext highlighter-rouge">S</code>caling; MDS)</li>
+        </ul>
+      </li>
+      <li><strong>Reveal Non-Linear Structure</strong>
+        <ul>
+          <li>t-SNE(<code class="language-plaintext highlighter-rouge">t</code>-distributed <code class="language-plaintext highlighter-rouge">S</code>tochastic <code class="language-plaintext highlighter-rouge">N</code>eighbor <code class="language-plaintext highlighter-rouge">E</code>mbedding)</li>
+          <li>LLE(<code class="language-plaintext highlighter-rouge">L</code>ocally <code class="language-plaintext highlighter-rouge">L</code>inear <code class="language-plaintext highlighter-rouge">E</code>mbedding)</li>
+          <li>ISOMAP(<code class="language-plaintext highlighter-rouge">ISO</code>metric feature <code class="language-plaintext highlighter-rouge">MAP</code>ping)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="what-t-sne"><span class="me-2">What? t-SNE</span><a href="#what-t-sne" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <h3 id="stochastic-neighbor-embedding"><span class="me-2"><code class="language-plaintext highlighter-rouge">S</code>tochastic <code class="language-plaintext highlighter-rouge">N</code>eighbor <code class="language-plaintext highlighter-rouge">E</code>mbedding</span><a href="#stochastic-neighbor-embedding" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
@@ -1113,7 +1378,7 @@
   </li>
 </ul>
 
-<h2 id="수학적-이해"><span class="me-2">수학적 이해</span><a href="#수학적-이해" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="how-to-extract"><span class="me-2">How to Extract</span><a href="#how-to-extract" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <h3 id="두-관측치의-고차원-공간-상-유사도-도출"><span class="me-2">두 관측치의 고차원 공간 상 유사도 도출</span><a href="#두-관측치의-고차원-공간-상-유사도-도출" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
@@ -1887,165 +2152,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2324,6 +2430,171 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
   
     
     
@@ -2512,6 +2783,8 @@
     
     
     
+      
+    
   
     
     
@@ -2538,6 +2811,260 @@
     
     
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -2713,129 +3240,6 @@
     
     
       
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2856,9 +3260,6 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
@@ -2868,19 +3269,22 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/microeconomics/">Microeconomics</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/optimization/">Optimization</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/regression/">Regression</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/dev-env/">Dev. Env.</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/dvcs/">DVCS</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/git/">GIT</a>
       
     </div>
   </section>
@@ -3020,55 +3424,7 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
@@ -3156,34 +3512,6 @@
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
-          <a href="/posts/PCA/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1704639600"
-  data-df="ll"
-  
->
-  Jan  8, 2024
-</time>
-
-              <h4 class="pt-0 my-2">PCA</h4>
-              <div class="text-muted">
-                <p>Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
           <a href="/posts/Clustering/" class="post-preview card h-100">
             <div class="card-body">
               <!--
@@ -3203,7 +3531,7 @@
   Jan 10, 2024
 </time>
 
-              <h4 class="pt-0 my-2">What? Clustering</h4>
+              <h4 class="pt-0 my-2">Clustering</h4>
               <div class="text-muted">
                 <p>Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</p>
               </div>
@@ -3212,7 +3540,7 @@
         </article>
       
         <article class="col">
-          <a href="/posts/Hierarchical_Clustering/" class="post-preview card h-100">
+          <a href="/posts/Data_Preprocessing/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -3224,14 +3552,42 @@
 
 <time
   
-  data-ts="1705071600"
+  data-ts="1704121200"
   data-df="ll"
   
 >
-  Jan 13, 2024
+  Jan  2, 2024
 </time>
 
-              <h4 class="pt-0 my-2">Hierarchical Clustering</h4>
+              <h4 class="pt-0 my-2">Data Preprocessing</h4>
+              <div class="text-muted">
+                <p>Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/SVM/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1704553200"
+  data-df="ll"
+  
+>
+  Jan  7, 2024
+</time>
+
+              <h4 class="pt-0 my-2">Support Vector Machine</h4>
               <div class="text-muted">
                 <p>Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</p>
               </div>
@@ -3254,11 +3610,11 @@
 
   
     <a
-      href="/posts/PCA/"
+      href="/posts/SVM/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>PCA</p>
+      <p>Support Vector Machine</p>
     </a>
   
 
@@ -3268,7 +3624,7 @@
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>What? Clustering</p>
+      <p>Clustering</p>
     </a>
   
 </nav>
@@ -3789,165 +4145,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -4226,6 +4423,171 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
   
     
     
@@ -4414,6 +4776,8 @@
     
     
     
+      
+    
   
     
     
@@ -4440,6 +4804,260 @@
     
     
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -4615,129 +5233,6 @@
     
     
       
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -4758,9 +5253,6 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
@@ -4770,19 +5262,22 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/microeconomics/">Microeconomics</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/optimization/">Optimization</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/regression/">Regression</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/dev-env/">Dev. Env.</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/dvcs/">DVCS</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/git/">GIT</a>
       
     </div>
   </section>
