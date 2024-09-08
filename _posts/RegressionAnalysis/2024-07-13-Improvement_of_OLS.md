@@ -135,7 +135,7 @@ image:
     $$\begin{aligned}
     proj_{\overrightarrow{w}}(\mathbf{X})
     &= \frac{<\mathbf{X},\overrightarrow{w}>}{||w||^2}\cdot\overrightarrow{w}\\
-    &= (\overrightarrow{w}^{T}\mathbf{X})\cdot\overrightarrow{w}(\because ||w||=1)
+    &= (\overrightarrow{w}^{T}\mathbf{X})\cdot\overrightarrow{w} \quad (\because ||w||=1)
     \end{aligned}$$
 
     - $\overrightarrow{w}$ : 정사영 벡터의 방향
@@ -193,8 +193,8 @@ image:
     &= \frac{1}{n}(\overrightarrow{w}^{T}\mathbf{X})(\overrightarrow{w}^{T}\mathbf{X})^{T}\\
     &= \frac{1}{n}\overrightarrow{w}^{T}\mathbf{X}\mathbf{X}^{T}\overrightarrow{w}\\
     &= \overrightarrow{w}^{T}\Sigma\overrightarrow{w}\\
-    &= \hat{\overrightarrow{w}}^{T}\lambda\hat{\overrightarrow{w}}(\because \Sigma\hat{\overrightarrow{w}}-\lambda\hat{\overrightarrow{w}}=0)\\
-    &= \lambda(\because \overrightarrow{w}^{T}\overrightarrow{w}=1)
+    &= \hat{\overrightarrow{w}}^{T}\lambda\hat{\overrightarrow{w}} \quad (\because \Sigma\hat{\overrightarrow{w}}-\lambda\hat{\overrightarrow{w}}=0)\\
+    &= \lambda \quad (\because \overrightarrow{w}^{T}\overrightarrow{w}=1)
     \end{aligned}$$
 
 - **주성분 벡터의 설명력** : 관측치 행렬 $\mathbf{X}_{N \times P}$ 에 대하여 생성 가능한 $P$ 개의 주성분 벡터 고유값 합계 대비 해당 주성분 벡터 고유값 비율
