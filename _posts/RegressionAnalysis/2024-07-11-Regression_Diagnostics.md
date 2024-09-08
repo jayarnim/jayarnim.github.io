@@ -166,7 +166,7 @@ image:
 
 ### Breusch-Pagan Test
 
-- **브레쉬-피건 검정(Breusch-Pagan Test)** : 잔차의 등분산성에 관한 검정
+- **브레쉬-파건 검정(Breusch-Pagan Test)** : 잔차의 등분산성에 관한 검정
 
 - **관심 모수 $\sigma^2$ 의 점 추정량 도출**
 
