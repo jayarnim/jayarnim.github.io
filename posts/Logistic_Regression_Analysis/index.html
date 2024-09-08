@@ -648,77 +648,6 @@
     <!-- combine -->
     
   
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
-    
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- create the image wrapper -->
-        
-
-        
-        
-      
-    
-
-    <!-- combine -->
-    
-  
 
   
 
@@ -755,17 +684,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -781,28 +699,6 @@
       
         
         
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
       
 
       
@@ -932,9 +828,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="968 words"
+  title="623 words"
 >
-  <em>5 min</em> read</span>
+  <em>3 min</em> read</span>
 
         </div>
       </div>
@@ -1121,97 +1017,6 @@
   \end{aligned}\]
       </li>
     </ul>
-  </li>
-</ul>
-
-<h2 id="lda-pca-for-classification"><span class="me-2">LDA; PCA for Classification</span><a href="#lda-pca-for-classification" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<h3 id="linear-discriminant-analysis"><span class="me-2">Linear Discriminant Analysis</span><a href="#linear-discriminant-analysis" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li>
-    <p><strong>정의</strong> : 고차원 데이터에 대하여, <strong>주어진 클래스를 가장 잘 구분할 수 있는</strong> 새로운 저차원 직교 좌표(선형 판별 함수)를 찾는 기법</p>
-
-    <p><a href="/_post_refer_img/MachineLearning/10-07.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/10-07.png" alt="07" width="100%" loading="lazy"></a></p>
-  </li>
-  <li>
-    <p><strong>방법</strong> : <strong>클래스 간 분산은 최대화</strong>하는 동시에 <strong>클래스 내 관측치 간 분산은 최소화</strong>하는 성분들을 추출함</p>
-
-\[\hat{\overrightarrow{w}}
-  =\text{arg} \max_{\overrightarrow{w}}{\frac{\Sigma^{2}}{\sigma_{1}^{2}+\sigma_{2}^{2}}}
-  \quad \text{s.t.} \quad
-  \overrightarrow{w}^{T}\overrightarrow{w}=1\]
-
-    <ul>
-      <li>$\Sigma^{2}$ : 정사영 후 클래스 간 분산</li>
-      <li>$\sigma_{i}^{2}$ : 정사영 후 $i$ 번째 클래스 내 관측치 간 분산</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="how-to-extract"><span class="me-2">How to Extract</span><a href="#how-to-extract" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li>
-    <p><strong>정사영 후 범주 간 분산 $\Sigma^{2}$</strong></p>
-
-\[\begin{aligned}
-  \Sigma^{2}
-  &amp;= (\overrightarrow{\mu}_{1}-\overrightarrow{\mu}_{2})(\overrightarrow{\mu}_{1}-\overrightarrow{\mu}_{2})^{T}\\
-  &amp;= (\overrightarrow{w}^{T}\overrightarrow{m}_{1}-\overrightarrow{w}^{T}\overrightarrow{m}_{2})(\overrightarrow{w}^{T}\overrightarrow{m}_{1}-\overrightarrow{w}^{T}\overrightarrow{m}_{2})^{T}\quad(\because \overrightarrow{\mu}_{i}=\overrightarrow{w}^{T}\overrightarrow{m}_{i})\\
-  &amp;= \overrightarrow{w}^{T}(\overrightarrow{m}_{1}-\overrightarrow{m}_{2})(\overrightarrow{m}_{1}-\overrightarrow{m}_{2})^{T}\overrightarrow{w}\\
-  &amp;= \overrightarrow{w}^{T}\mathbf{S}_{B}\overrightarrow{w}
-  \end{aligned}\]
-
-    <ul>
-      <li>\(\overrightarrow{m}_{i}\) : \(i\) 번째 범주 \(C_{i}\) 의 중심점 벡터</li>
-      <li>\(\overrightarrow{\mu}_{i}=\text{proj}_{\overrightarrow{w}}(\overrightarrow{m}_{i})\) : \(\overrightarrow{m}_{i}\) 의 정사영 벡터</li>
-      <li>\(\mathbf{S}_{B}\) : 범주 \(C_{i},C_{j}\) 간 편차</li>
-      <li>\(\Sigma\) : 정사영 후 범주 \(C_{i},C_{j}\) 간 편차</li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>정사영 후 범주 내 분산 $\sigma_{i}^{2}$</strong></p>
-
-\[\begin{aligned}
-  \sigma_{i}^{2}
-  &amp;= \sum_{j=1}^{|C_{i}|}{(\overrightarrow{y}_{j}-\overrightarrow{\mu}_{i})(\overrightarrow{y}_{j}-\overrightarrow{\mu}_{i})^{T}}\quad(\overrightarrow{x}_{j} \in C_{i})\\
-  &amp;= \sum_{j=1}^{|C_{i}|}{(\overrightarrow{w}^{T}\overrightarrow{x}_{j}-\overrightarrow{w}^{T}\overrightarrow{m}_{i})(\overrightarrow{w}^{T}\overrightarrow{x}_{j}-\overrightarrow{w}^{T}\overrightarrow{m}_{i})^{T}}\quad(\because \overrightarrow{y}_{j}=\overrightarrow{w}^{T}\overrightarrow{x}_{j})\\
-  &amp;= \overrightarrow{w}^{T}\left[\sum_{j=1}^{|C_{i}|}{(\overrightarrow{x}_{j}-\overrightarrow{m}_{i})(\overrightarrow{x}_{j}-\overrightarrow{m}_{i})^{T}}\right]\overrightarrow{w}\\
-  &amp;= \overrightarrow{w}^{T}\mathbf{S}_{i}\overrightarrow{w}
-  \end{aligned}\]
-
-    <ul>
-      <li>\(\overrightarrow{x}_{j} \in C_{i}\) : \(i\) 번째 범주 \(C_{i}\) 의 \(j\) 번째 관측치 벡터</li>
-      <li>\(\overrightarrow{y}_{j}=\text{proj}_{\overrightarrow{w}}(\overrightarrow{x}_{j})\) : \(\overrightarrow{x}_{j}\) 의 정사영 벡터</li>
-      <li>\(S_{i}\) : \(i\) 번째 범주 \(C_{i}\) 의 범주 내 관측치 간 편차</li>
-      <li>\(\sigma_{i}\) : 정사영 후 \(i\) 번째 범주 \(C_{i}\) 의 범주 내 관측치 간 편차</li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>목적 함수 재정의</strong></p>
-
-\[\hat{\overrightarrow{w}}
-  =\text{arg} \max_{\overrightarrow{w}}{\frac{\overrightarrow{w}^{T}\mathbf{S}_{B}\overrightarrow{w}}{\overrightarrow{w}^{T}(\mathbf{S}_{1}+\mathbf{S}_{2})\overrightarrow{w}}}\\
-  \begin{aligned}
-  \\\text{s.t.} \quad
-  &amp; \overrightarrow{w}^{T}\overrightarrow{w}=1
-  \end{aligned}\]
-  </li>
-  <li>
-    <p><strong>라그랑주 승수법을 통한 최적화 문제 풀이</strong></p>
-
-\[\begin{aligned}
-  L(\overrightarrow{w},\lambda)
-  &amp;= \frac{\overrightarrow{w}^{T}\mathbf{S}_{B}\overrightarrow{w}}{\overrightarrow{w}^{T}(\mathbf{S}_{1}+\mathbf{S}_{2})\overrightarrow{w}}-\lambda(\overrightarrow{w}^{T}\overrightarrow{w}-1)\\\\
-
-  \frac{\partial L(\overrightarrow{w},\lambda)}{\partial \overrightarrow{w}}
-  &amp;= 0\\\\
-
-  \therefore \left[\mathbf{S}_{B}^{-1}(\mathbf{S}_{1}+\mathbf{S}_{2})-\lambda\mathbf{I}\right]\hat{\overrightarrow{w}}
-  &amp;=0
-  \end{aligned}\]
   </li>
 </ul>
 
