@@ -1,7 +1,7 @@
 ---
-order: 10
+order: 9
 title: Clustering
-date: 2024-01-10
+date: 2024-01-09
 categories: [Machine Learning Techs, Machine Learning]
 tags: [Machine Learning, Unsupervised Learning, Clustering, Metric]
 math: true
@@ -11,10 +11,10 @@ image:
   path: /_post_refer_img/MachineLearning/Thumbnail.jpg
 ---
 
-## What? Cluster Analysis
+## Cluster Analysis
 -----
 
-### Cluster Analysis
+### What? Cluster Analysis
 
 - **정의** : 표본을 관측치 간 유사성과 상이성을 계산하여 k개의 군집으로 분할하는 작업
 
@@ -54,8 +54,6 @@ image:
 
 ## Metrics
 -----
-
-### 군집화 유효성 평가 기준
 
 - **External** : 정답 정보와의 비교
     - Rand Statistic
