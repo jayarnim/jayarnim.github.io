@@ -14,7 +14,7 @@ image:
 ## Data-Driven Decision Making
 -----
 
-### 데이터 기반 의사결정
+### Data-Driven Decision Making Process
 
 - **Descriptive** : Explains What Happend
     - Comprehensive, Accurate, Live Data
@@ -33,7 +33,7 @@ image:
     - Recommends Action Based On The Forecast
     - Applying Advanced Analytical Techs to Make Specific Recommendatons
 
-### 데이터 기반 문제 해결 과정
+### Data-Driven Problem-Solving Process
 
 - **문제 정의**
 
@@ -61,13 +61,11 @@ image:
 ## Data Science
 -----
 
-### 데이터 과학의 이해
-
-- **정의**
+- **데이터 과학(Data Science)**
 
     > 정형, 비정형의 다양한 데이터로부터 지식 및 시사점을 도출하는 데 과학적 방법론을 동원하는 융합 분야(출처 : 위키백과)
 
-- **주요 개념**
+- **개념**
 
     - **빅데이터(Bigdata)**
 
@@ -86,103 +84,46 @@ image:
 
         > 기계가 일일이 코드로 명시하지 않은 동작을 데이터로부터 학습하여 실행할 수 있도록 하는 알고리즘을 개발하는 연구 분야(출처 : 위키백과)
 
+        - **지도학습(Supervised Learning)** : 정답 세트가 존재하는 데이터를 활용하는 학습 방법
+            - **판별 분석(Classificaiton Analysis)** : 범주형 값을 가지는 종속변수를 예측하는 방법론
+            - **회귀 분석(Regression Analysis)** : 수치형 값을 가지는 종속변수를 예측하는 방법론
+
+        - **비지도학습(Unsupervised Learning)** : 정답 세트가 존재하지 않는 데이터를 활용하는 학습 방법
+            - **군집화(Clustering)** : 유사한 개체들의 집단을 만든 후 새 개체가 어떤 집단과 유사한지 예측하는 방법론
+            - **차원축소(Dimension Reduction)** : 고차원 데이터를 저차원 데이터로 변환하는 방법론
+
     - **인공지능(Artificial Intelligence; AI)**
 
         > 인간의 학습, 추론, 지각 능력을 인공적으로 구현하려는 컴퓨터 과학의 세부 분야(출처 : 위키백과)
 
-### 기계학습의 분류
-
-- **지도학습(Supervised Learning)**
-    - **정의** : 정답 세트가 존재하는 데이터를 활용하는 학습 방법
-
-    - **분류**
-        - **판별 분석(Classificaiton)** : 범주형 값을 가지는 종속변수를 예측하는 방법론
-        - **회귀 분석(Regression)** : 수치형 값을 가지는 종속변수를 예측하는 방법론
-
-- **비지도학습(Unsupervised Learning)**
-    - **정의** : 정답 세트가 존재하지 않는 데이터를 활용하는 학습 방법
-
-    - **분류**
-        - **군집화(Clustering)** : 유사한 개체들의 집단을 만든 후 새 개체가 어떤 집단과 유사한지 예측하는 방법론
-        - **차원축소(Dimension Reduction)** : 고차원 데이터를 저차원 데이터로 변환하는 방법론
-
-## [Scikit-Learn Library](https://scikit-learn.org/stable/#)
+## Data Preprocessing
 -----
 
-- **API 사용 방법**
+![01](/_post_refer_img/MachineLearning/01-01.jpg){: width="100%"}
 
-    1. 적절한 알고리즘 클래스 불러오기
-    2. 인터페이스의 하이퍼 파라미터를 적절한 값으로 설정하여 인스턴스 생성
-    3. 데이터 세트를 문제지(Feature)와 정답지(Traget)로 배치
-    4. `fit()` 을 통해 인스턴스를 학습용 데이터 세트로 훈련
-    5. `predict()` 을 통해 훈련된 인스턴스에 평가용 데이터 세트를 적용하여 성능 평가
+- **데이터 전처리(Data Preprocessing)** : 데이터를 분석에 사용할 수 있는 형식의 데이터로 만드는 일련의 과정
 
-### 모듈
+- **데이터 품질에 영향을 끼치는 인자**
+    - **Noise** : 데이터 측정 시 무작위로 발생하여 오류를 발생시키는 문제
+    - **Outlier** : 대부분의 데이터와 다른 특성을 보이거나 특정 속성의 값이 유별난 데이터
+    - **Artifact** : 어떤 요인으로 인해 반복적으로 발생하는 왜곡이나 오류
+    - **Precision** : 동일한 결과물을 반복적으로 측정하였을 때 각 측정값 사이의 일관성 문제
+    - **Bias** : 측정 장비에 포함된 시스템 상 문제
+    - **Accuacy** : 측정 장비의 한계로 정확하지 않은 수를 측정함에 따라 발생하는 문제
+    - **Inconsistent Value** : 데이터 불일치 문제
+    - **Duplicate** : 데이터 중복 문제
 
-- **알고리즘**    
-    
-    | 모듈 | 설명 | 예시 |
-    |------|------|------|
-    | sklearn.tree | 결정 트리 알고리즘 제공 | Decision Tree 등 |
-    | sklearn.neighbors | 최근접 이웃 알고리즘 제공 | K-NN 등 |
-    | sklearn.svm | 서포트 벡터 머신 알고리즘 제공 |
-    | sklearn.naive_bayes | 나이브 베이즈 알고리즘 제공 | 가우시안 NB, 다항 분포 NB 등 |
-    | sklearn.cluster | 클러스터링 알고리즘 제공 | K-Means, 계층형 클러스터링, DBSCAN 등 |
-    | sklearn.linear_model | 회귀분석 알고리즘 제공 | 선형 회귀, 확률적 경사하강 회귀(SGD), 릿지(Ridge), 라쏘(Lasso), 로지스틱 회귀 등 |
-    | sklearn.decomposition | 차원 축소 알고리즘 제공 | PCA, NMF, Truncated SVD 등 |
-    | sklearn.ensemble | 앙상블 알고리즘 제공 | Random Forest, AdaBoost, GradientBoost 등 |
+### Process
 
-- **전처리**
-    
-    | 모듈 | 설명 | 예시 |
-    |------|------|------|
-    | sklearn.preprocessing | 데이터 전처리 기능 제공 | 인코더, 스케일러 등 |
-    | sklearn.feature_selection | 특성(feature)을 선택할 수 있는 기능 제공 | 
-    | sklearn.feature_extraction | 특성(feature)을 추출할 수 있는 기능 제공 |
-    | sklearn.pipeline | 특성 처리, 학습, 예측을 묶어서 실행할 수 있는 기능 제공 |
+- **Data Integration** : 동일한 단위, 양식으로 데이터를 결합하는 절차
 
-- **검증 및 성능 평가 지표**
+- **Data Cleansing** : 낮은 품질의 데이터를 활용할 수 있도록 하는 절차
+    - 중복값 제거
+    - 결측치 처리
+    - 이상치 처리
 
-    | 모듈 | 설명 | 예시 |
-    |------|------|------|
-    | sklearn.model_selection | 교차 검증, 최적 하이퍼파라미터 추출 API 제공 | GridSearch 등 |
-    | sklearn.metrics | 성능 평가 지표 제공 | Accuracy, Precision, Recall, ROC-AUC, RMSE 등 |
+- **Data Transformation** : 데이터 형식 및 구조를 학습에 적합하도록 변환하는 절차
+    - 표준화(Standardization)
+    - 정규화(Normalization)
 
-### 내장 데이터 세트
-
-```py
-sklearn.datasets
-```
-
-- **내장 데이터 형식**
-
-    | 이름 | 설명 |
-    |------|------|
-    | DESCR | 자료에 대한 설명 |
-    | data | 설명 변수 |
-    | target | 반응 변수 |
-    | feature_names | 설명 변수 이름 리스트 |
-    | target_names | 반응 변수 이름 리스트 |    
-    
-- **내장 데이터 세트 목록**
-
-    | 데이터 로드 함수 | 데이터 | 참고 |
-    |------|------|------|
-    | load_boston | 보스턴 집값 | 내장 데이터  |
-    | load_diabetes | 당뇨병 |  |
-    | load_linnerud | linnerud |  |
-    | load_iris | 붓꽃 |  |
-    | load_digits | 필기 숫자(digit) 이미지 |  |
-    | load_wine | 포도주(wine) 등급 |  |
-    | load_breast_cancer | 유방암 진단 |  |
-    | fetch_california_housing | 캘리포니아 집값 | 인터넷 다운로드 |
-    | fetch_covtype | 토지조사 |  |
-    | fetch_20newsgroups | 뉴스 그룹 텍스트 |  |
-    | fetch_olivetti_faces | 얼굴 이미지 |  |
-    | fetch_lfw_people | 유명인 얼굴 |  |
-    | fetch_lfw_pairs | 유명인 얼굴 |  |
-    | fetch_rcv1 | 로이터 뉴스 말뭉치 |  |
-    | fetch_kddcup99 | Kddcup 99 Tcp dump |  |
-    | make_regression | 회귀분석용 | 가상 데이터 |
-    | make_classification | 분류용 |  |
-    | make_blobs | 클러스터링용 |  |
+- **Data Reduction** : 고차원 데이터를 저차원 데이터로 변환하는 절차

@@ -11,13 +11,12 @@ image:
   path: /_post_refer_img/DeepLearning/Thumbnail.jpg
 ---
 
-
 ## Gradient Descent
 -----
 
 - **그라디언트(Gradient)** : 다변수 함수에 대하여 모든 방향으로의 순간변화율 벡터
 
-    ![05](/_post_refer_img/MachineLearning/08-05.png){: width="100%"}
+    ![01](/_post_refer_img/DeepLearning/03-01.png){: width="100%"}
 
     $$\begin{aligned}
     \nabla{f(x_{1},x_{2},\cdots,x_{n})}
@@ -31,7 +30,7 @@ image:
 
 - **경사하강법(Gradient Descent)** : 손실 함수의 도함수(그라디언트)를 최소화하는 가중치를 추정하는 방법
 
-    ![06](/_post_refer_img/MachineLearning/08-06.png){: width="100%"}
+    ![02](/_post_refer_img/DeepLearning/03-02.png){: width="100%"}
 
 - **절차**
 
@@ -49,22 +48,24 @@ image:
 
 - **학습률(Learning Rate)** : 손실 함수에 대하여 그 극소점을 탐색하기 위한 아규먼트 갱신 보폭
 
-    - **학습률이 낮을수록 과대적합될 가능성이 높음**
+    ![03](/_post_refer_img/DeepLearning/03-03.png){: width="100%"}
 
-        ![07](/_post_refer_img/MachineLearning/08-07.png){: width="100%"}
+    - 학습률이 낮을수록 과대적합될 가능성이 높음
 
-    - **학습률이 높을수록 과소적합될 가능성이 높음**
+        ![04](/_post_refer_img/DeepLearning/03-04.png){: width="100%"}
 
-        ![08](/_post_refer_img/MachineLearning/08-08.png){: width="100%"}
+    - 학습률이 높을수록 과소적합될 가능성이 높음
+
+        ![05](/_post_refer_img/DeepLearning/03-05.png){: width="100%"}
 
 ## Example: three-layer model
 -----
 
-![02](/_post_refer_img/DeepLearning/03-02.png){: width="100%"}
+![06](/_post_refer_img/DeepLearning/03-06.png){: width="100%"}
 
-### 순전파 연산 과정
+### Forward Propagation Process
 
-- **손실 $e$ 를 다음과 같이 정의하자**
+- 손실 $e$ 를 다음과 같이 정의하자
 
     $$\begin{aligned}
     e
@@ -75,7 +76,7 @@ image:
     - $\hat{y}$ : 예측값
     - $y$ : 실제값
 
-- **$n$ 개의 계층으로 구성된 모델의 예측값 $\hat{y}$ 은 다음과 같음**
+- $n$ 개의 계층으로 구성된 모델의 예측값 $\hat{y}$ 은 다음과 같음
 
     $$
     \hat{y}
@@ -90,7 +91,7 @@ image:
         - $w_{i}$ : $i$ 번째 계층의 가중치
         - $b_{i}$ : $i$ 번째 계층의 편향으로서 편의상 $0$ 이라고 가정함
 
-- **$3$ 개의 계층으로 구성된 모델의 손실 $e$ 를 다음과 같이 서술할 수 있음**
+- $3$ 개의 계층으로 구성된 모델의 손실 $e$ 를 다음과 같이 서술할 수 있음
 
     $$\begin{aligned}
     e
@@ -110,9 +111,9 @@ image:
     - $h_{i}=f_{i}(z_{i})$ : $i$ 번째 계층의 활성화 함수 값
     - $h_{0} = x$ : 입력값
 
-### 역전파 학습 과정
+### Backward Propagation Process
 
-- **손실 $e$ 를 $1$ 번째 계층 가중치 $w_{1}$ 에 대하여 미분하면 다음과 같음**
+- 손실 $e$ 를 $1$ 번째 계층 가중치 $w_{1}$ 에 대하여 미분하면 다음과 같음
 
     $$\begin{aligned}
     \frac{\partial e}{\partial w_{1}}
@@ -125,7 +126,7 @@ image:
     \cdot \frac{\partial\not{z_{1}}}{\partial w_{1}}
     \end{aligned}$$
 
-- **위 수식의 각 항목을 다음과 같이 일반화할 수 있음**
+- 위 수식의 각 항목을 다음과 같이 일반화할 수 있음
 
     $$\begin{aligned}
     \frac{\partial e}{\partial h_{n}}
@@ -144,7 +145,7 @@ image:
     &= h_{i-1}
     \end{aligned}$$
 
-- **손실 $e$ 를 $k$ 번째 계층 가중치 $w_{k}$ 에 대하여 미분한 값을 다음과 같이 일반화할 수 있음**
+- 손실 $e$ 를 $k$ 번째 계층 가중치 $w_{k}$ 에 대하여 미분한 값을 다음과 같이 일반화할 수 있음
 
     $$\begin{aligned}
     \frac{\partial e}{\partial w_{k}}
@@ -156,7 +157,7 @@ image:
     - $\displaystyle\prod^{n}_{i=k+1}{w_i}$ : 출력층에서부터 $k+1$ 번째 계층까지 가중치 곱
     - $$\displaystyle\prod^{n}_{i=k}{f^{\prime}_{i}(z_{i})}$$ : 출력층에서부터 $k$ 번째 계층까지 활성화 함수 값 곱
 
-- **경사하강법에 의해 갱신된 $k$ 번째 계층의 가중치 $(w_{k})_{new}$ 는 다음과 같음**
+- 경사하강법에 의해 갱신된 $k$ 번째 계층의 가중치 $(w_{k})_{new}$ 는 다음과 같음
 
     $$\begin{aligned}
     (w_{k})_{new}
@@ -164,10 +165,10 @@ image:
     &= w_{k} - \eta \times h_{k-1} \displaystyle\prod^{n}_{i=k+1}{w_i} \cdot \displaystyle\prod^{n}_{i=k}{f^{\prime}_{i}(z_{i})}
     \end{aligned}$$
 
-## 종류
+## Type
 -----
 
-![03](/_post_refer_img/DeepLearning/03-03.png){: width="100%"}
+![07](/_post_refer_img/DeepLearning/03-07.png){: width="100%"}
 
 ### 경사하강법 각 항목의 의미
 
@@ -178,13 +179,13 @@ $$
 
 - $\eta$ : 학습률(Learning Rate)로서 **갱신 크기**
 
-    ![04](/_post_refer_img/DeepLearning/03-04.png){: width="100%"}
+    ![08](/_post_refer_img/DeepLearning/03-08.png){: width="100%"}
 
 - $\displaystyle\frac{\partial e_{t-1}}{\partial w_{t-1}}$ : 가중치에 대한 손실의 변화율 벡터로서 **갱신 방향**
 
 ### 갱신 크기 중심
 
-![05](/_post_refer_img/DeepLearning/03-05.png){: width="100%"}
+![09](/_post_refer_img/DeepLearning/03-09.png){: width="100%"}
 
 - `Adagrad` : **갱신 크기**를 결정함에 있어 이전까지 갱신 규모를 반영함
 
@@ -212,7 +213,7 @@ $$
 
 ### 갱신 방향 중심
 
-![06](/_post_refer_img/DeepLearning/03-06.png){: width="100%"}
+![10](/_post_refer_img/DeepLearning/03-10.png){: width="100%"}
 
 - **`Momentum`** : **갱신 방향**을 결정함에 있어 $m_{t-1}$ 을 $\gamma$ 만큼 반영함
 

@@ -1,7 +1,7 @@
 ---
-order: 3
+order: 2
 title: Supervised Model Selection
-date: 2024-01-03
+date: 2024-01-02
 categories: [Machine Learning Techs, Machine Learning]
 tags: [Machine Learning, Supervised Learning, Metric, Cross Validation]
 math: true
@@ -16,7 +16,7 @@ image:
 
 ### Confusion Matrix
 
-![01](/_post_refer_img/MachineLearning/03-01.png){: width="100%"}
+![01](/_post_refer_img/MachineLearning/02-01.png){: width="100%"}
 
 - **`TP`(True Positive)** : 긍정으로 예측한 것(Possitive) 중 옳게 예측한(True) 항목
 - **`TN`(True Negative)** : 부정인 것(Negative) 중 옳게 예측한(True) 항목
@@ -62,7 +62,7 @@ image:
 
 - **AUROC**
 
-    ![02](/_post_refer_img/MachineLearning/03-02.png){: width="100%"}
+    ![02](/_post_refer_img/MachineLearning/02-02.png){: width="100%"}
 
     - **ROC Curve(Receiver Operating Characteristic Curve)** : FPR 값에 따른 TPR의 변화 추이를 나타낸 곡선
 
@@ -102,10 +102,10 @@ image:
         &= 1-FPR
         \end{aligned}$$
 
-# Regression Metrics
+## Regression Metrics
 -----
 
-![03](/_post_refer_img/MachineLearning/03-03.jpg){: width="100%"}
+![03](/_post_refer_img/MachineLearning/02-03.jpg){: width="100%"}
 
 - **Average Error(AE)**
 
@@ -131,33 +131,32 @@ image:
 - **Mean Absolute Error(MAE)** : 오차 절대값의 평균
 
     $$
-    MAE = \frac{1}{n}\sum_{i=1}^{n}{|y_{i}-\hat{y}_{i}|}
+    MAE = \frac{1}{n}\sum_{i=1}^{n}{\vert y_{i}-\hat{y}_{i} \vert}
     $$
 
 - **Mean Absolute Percentage Error(MAPE)** : 실제값 대비 오차 비율 절대값의 평균
 
     $$
-    MAPE = \frac{1}{n}\sum_{i=1}^{n}|\frac{y_{i}-\hat{y}_{i}}{y_{i}}|
+    MAPE = \frac{1}{n}\sum_{i=1}^{n}{\vert \frac{y_{i}-\hat{y}_{i}}{y_{i}} \vert}
     $$
 
-# Split
+## Split
 -----
 
-### 일반화의 문제
+### Generalization Problem
 
-- **모델링 목적** : 일반화
-    - **일반화(Generalization)** : 모델이 훈련 관측치에서 학습한 패턴을 사용하여 이전에 보지 못한 관측치에 대하여 예측하는 것
+- **일반화(Generalization)** : 모델링 목적으로서, 모델이 훈련 관측치에서 학습한 패턴을 사용하여 이전에 보지 못한 관측치에 대하여 예측하는 것
 
-- **문제점** : 과대적합 현상
+- **문제점** : 과적합 현상
 
-    ![04](/_post_refer_img/MachineLearning/03-04.png){: width="100%"}
+    ![04](/_post_refer_img/MachineLearning/02-04.png){: width="100%"}
 
     - **과대적합(Overfitting)** : 모델이 일반적이지 않은, 즉 훈련 관측치에서만 포착되는 노이즈나 이상치까지 학습하여 신규 관측치에 대해서는 제대로 기능하지 못하는 상태
     - **과소적합(Underfitting)** : 모델이 훈련 관측치에서 나타나는 일반적인 패턴을 충분히 학습하지 못하여 관측치의 다양성과 복잡성을 잡아내지 못하는 상태
 
 - **해결 방법** : $E_{gen}$ 최소화
 
-    ![05](/_post_refer_img/MachineLearning/03-05.png){: width="100%"}
+    ![05](/_post_refer_img/MachineLearning/02-05.png){: width="100%"}
 
     - **Training Error** : Training Data Set 에 대한 오차
 
@@ -171,7 +170,7 @@ image:
         E_{gen}=\int{L(y_{i},\hat{y}_{i})}
         $$
 
-### 모수의 추정
+### Estimation
 
 - **$E_{gen}$ 측정 상의 문제점**
     - Unseen Data Set 자체에 대해서 알 수 없으므로 이상적인 개념임
@@ -179,7 +178,7 @@ image:
 
 - **Split Seen Data Set**
 
-    ![06](/_post_refer_img/MachineLearning/03-06.jpg){: width="100%"}
+    ![06](/_post_refer_img/MachineLearning/02-06.jpg){: width="100%"}
 
     - `Training` : 모델 훈련 시 사용하는 표본으로서, 해당 표본으로부터 $E_{val}$ 을 추정함
     - `Validation` : 모델 간 성능 비교 시 사용하는 표본으로서, 해당 표본으로부터 $E_{tst}$ 를 추정함
@@ -189,19 +188,19 @@ image:
 
 - **교차 검증(Cross Validation)**
 
-    ![07](/_post_refer_img/MachineLearning/03-07.jpg){: width="100%"}
+    ![07](/_post_refer_img/MachineLearning/02-07.jpg){: width="100%"}
 
     - **정의** : 표본을 여러 세트로 나누어 모델을 여러 번 학습하고 평가함으로써 모델의 일반화 성능을 측정하는 절차
     - **필요성** : `Training` 에서 `Test` 를 분리한 상태에서 `Validation` 을 재차 분리하기에는 학습에 사용할 표본 크기가 충분하지 않음
 
 - **LOOCV(Leave-One-Out Cross Validation)**
 
-    ![08](/_post_refer_img/MachineLearning/03-08.png){: width="100%"}
+    ![08](/_post_refer_img/MachineLearning/02-08.png){: width="100%"}
 
     - $n$ 개의 표본을 $n-1$ 개의 `training` 과 $1$ 개의 `validation` 으로 나누어 $n$ 번 학습하는 방식
 
 - **k-Fold Cross Validation**
     
-    ![09](/_post_refer_img/MachineLearning/03-09.png){: width="100%"}
+    ![09](/_post_refer_img/MachineLearning/02-09.png){: width="100%"}
 
     - $n$ 개의 표본을 $k$ 개의 데이터 세트로 나누고, $k-1$ 개는 `training` 으로, $1$ 개는 `validation` 으로 구분하여 $k$ 번 학습하는 방식

@@ -82,7 +82,7 @@ image:
 
 - **p-norm** : $n$ 차원 벡터 $\overrightarrow{x}=\begin{pmatrix}x_{1}&x_{2}&\cdots&x_{n}\end{pmatrix}$ 의 크기를 정의하는 방법
 
-    ![03](/_post_refer_img/MachineLearning/08-03.png){: width="100%"}
+    ![01](/_post_refer_img/RegressionAnalysis/06-01.png){: width="100%"}
 
     $$
     \Vert x \Vert _{p}=(\vert x_{1} \vert ^{p}+ \vert x_{2} \vert ^{p}+\cdots+ \vert x_{n} \vert ^{p})^{\frac{1}{p}}
@@ -90,7 +90,7 @@ image:
 
 - **가중치 규제(Weight Regulation)** : 회귀계수 최적값을 탐색함에 있어 회귀계수 벡터 $\overrightarrow{\beta}$ 의 크기에 제약을 두는 것
 
-    ![04](/_post_refer_img/MachineLearning/08-04.png){: width="100%"}
+    ![02](/_post_refer_img/RegressionAnalysis/06-02.png){: width="100%"}
 
     $$\begin{aligned}
     \overrightarrow{\hat{\beta}}

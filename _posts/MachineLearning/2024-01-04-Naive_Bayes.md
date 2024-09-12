@@ -1,7 +1,7 @@
 ---
-order: 5
+order: 4
 title: Naive Bayes
-date: 2024-01-05
+date: 2024-01-04
 categories: [Machine Learning Techs, Machine Learning]
 tags: [Machine Learning, Supervised Learning, Classification, Bayesian]
 math: true
@@ -34,7 +34,7 @@ image:
         &= P(X_{1}|Y) \times P(X_{2}|Y) \times \cdots \times P(X_{n}|Y)
         \end{aligned}$$
 
-## 결정 함수 도출
+## Decision Function
 -----
 
 - **문제 정의**
@@ -75,7 +75,7 @@ image:
     &= \frac{\prod_{k=1}^{n}{P(X_{k}=x_{k}|Y=i)} \cdot P(Y=i)}{\sum_{j}{\prod_{k=1}^{n}{P(X_{k}=x_{k}|Y=j)}}}
     \end{aligned}$$
 
-## 라플라스 평활화
+## Laplace Smoothing
 -----
 
 - **라플라스 평활화(Laplace Smoothing)** : 훈련 데이터 세트에 존재하지 않는 사례 $$\overrightarrow{x}_{k}$$ 에 대한 확률을 $$0$$ 으로 부여하는 것을 방지하기 위한 기법
@@ -91,23 +91,3 @@ image:
     - $$\text{count}(\overrightarrow{x}_{k},Y)$$ : 관측치 벡터 $$\overrightarrow{x}_{k}$$ 와 범주 $$Y$$ 의 동시 출현 빈도
     - $$\text{count}(Y)$$ : 범주 $$Y$$ 의 출현 빈도
     - $$\alpha$$ : 라플라스 평활화 강도
-
-## [sklearn.naive_bayes.MultinomialNB](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html)
------
-
-```py
-from sklearn.naive_bayes import MultinomialNB
-```
-
-### Laplace Smoothing
-
-- `alpha(default : 1.0)` : 라플라스 평활화 강도
-- `force_alpha(default : False)` : `alpha` 하한선을 $$1e-10$$ 으로 강제할지 여부
-
-### Learn Class Prior Probabilities
-
-- `fit_prior(default : True)` : 클래스 사전 확률 학습 여부
-    - `True` : 훈련 데이터 세트의 클래스 사전 확률을 학습함
-    - `False` : 클래스 사전 확률을 균등하게 부여함
-
-- `class_prior(default : None)` : 클래스 사전 확률 강제 지정
