@@ -14,36 +14,65 @@ image:
     path: /_post_refer_img/RegressionAnalysis/Thumbnail.jpg
 ---
 
-## Bias-Variance Trade-off
+## Improvement of OLS
 -----
+
+### Components of Error
+
+$$\begin{aligned}
+\text{Error}
+&= \mathbb{E}\left[\left(Y-\hat{f}(X)\right)^{2}\right]\\
+&= \mathbb{E}\left[\left(f(X) + \varepsilon - \hat{f}(X)\right)^{2}\right]\\
+&= \mathbb{E}\left[\left(f(X)-\hat{f}(X)\right)^{2} + \varepsilon^{2} - 2 \cdot \varepsilon \cdot \left(f(X)-\hat{f}(X)\right) \right]\\
+&= \mathbb{E}\left[\left(f(X)-\hat{f}(X)\right)^{2}\right] + \mathbb{E}\left[\varepsilon^{2}\right] - 2 \cdot \mathbb{E}\left[\varepsilon\right] \cdot \mathbb{E}\left[f(X)-\hat{f}(X) \right]\\
+&= \mathbb{E}\left[\left(f(X)-\hat{f}(X)\right)^{2}\right] + \sigma^{2}\\
+\\
+\mathbb{E}\left[\left(f(X)-\hat{f}(X)\right)^{2}\right]
+&= \mathbb{E}\left[\left(f(X)-\overline{f}(X)+\overline{f}(X)-\hat{f}(X)\right)^{2}\right]\\
+&= \mathbb{E}\left[\left(f(X)-\overline{f}(X)\right)^{2}\right] + \mathbb{E}\left[\left(\overline{f}(X)-\hat{f}(X)\right)^{2}\right] + 2 \cdot \mathbb{E}\left[f(X)-\overline{f}(X)\right] \cdot \mathbb{E}\left[\overline{f}(X)-\hat{f}(X)\right]\\
+&= \mathbb{E}\left[\left(f(X)-\overline{f}(X)\right)^{2}\right] + \mathbb{E}\left[\left(\overline{f}(X)-\hat{f}(X)\right)^{2}\right]\\
+\\
+\mathbb{Bias}\left[\hat{f}(X)\right]
+&= \mathbb{E}\left[\hat{f}(X)\right] - f(X)\\
+\mathbb{Var}\left[\hat{f}(X)\right]
+&= \mathbb{E}\left[\left(\overline{f}(X)-\hat{f}(X)\right)^{2}\right]\\
+\\
+\therefore \text{Error}
+&= \mathbb{Bias}^{2}\left[\hat{f}(X)\right] + \mathbb{Var}\left[\hat{f}(X)\right] + \sigma^{2}
+\end{aligned}$$
+
+- $Y$ : 실제 관측치
+- $\varepsilon \sim N(0, \sigma^2)$ : 노이즈
+- $f(X)$ : 실제 함수
+- $\hat{f}(X)$ : $f(X)$ 에 대한 예측값
+- $\overline{f}(X)$ : $\hat{f}(X)$ 의 평균
+
+### Bias-Variance Trade-off
 
 ![03](/_post_refer_img/RegressionAnalysis/06-03.png){: width="100%"}
 
 - **편향-분산 트레이드오프(Bias-Variance Trade-off)** : 모형 복잡도에 따른 편향과 분산의 상충 관계
 
-    $$
-    ERROR=BIAS+VARIANCE+ETC.
-    $$
+- **편향(Bias)** : 모형이 학습 데이터의 패턴을 충분히 학습하지 못해 발생하는 **과소적합(Underfitting)** 문제로서, 학습 데이터에 내재된 패턴의 복잡도에 비해 모형이 간소화되어 설계된 경우 발생함
 
-    - **편향(Bias)** : 모형이 학습 데이터의 패턴을 충분히 학습하지 못해 발생하는 **과소적합(Underfitting)** 문제로서, 학습 데이터에 내재된 패턴의 복잡도에 비해 모형이 간소화되어 설계된 경우 발생함
-    - **분산(Variance)** : 모형이 학습 데이터에 너무 과도하게 적응하여 발생하는 **과대적합(Overfitting)** 문제로서, 모형 복잡도에 비해 학습 데이터가 희소한 경우 발생함
+- **분산(Variance)** : 모형이 학습 데이터에 너무 과도하게 적응하여 발생하는 **과대적합(Overfitting)** 문제로서, 모형 복잡도에 비해 학습 데이터가 희소한 경우 발생함
 
-- **최소자승추정량의 개선**
+### Improvement of OLS
 
-    > 최소자승추정량은 BLUE(`B`est `L`inear `U`nbias `E`stimator)로서, 편향이 $0$ 인 추정량 중 분산이 가장 작은 추정량임. 만약 편향이 $0$ 이어야 한다는 제약 조건을 완화한다면 분산을 더 줄일 수 있지 않을까?
+> 최소자승추정량은 BLUE(`B`est `L`inear `U`nbias `E`stimator)로서, 편향이 $0$ 인 추정량 중 분산이 가장 작은 추정량임. 만약 편향이 $0$ 이어야 한다는 제약 조건을 완화한다면 분산을 더 줄일 수 있지 않을까?
 
-    - **변수 선택(Feature Selection)** : $p$ 개의 설명변수 중 반응변수와 관련이 있다고 생각되는 설명변수들을 식별하여 추정하는 방법
-        - 전진 선택(Forward Selection)
-        - 후진 선택(Backward Elimination)
-        - 혼합 선택(Stepwise Selection)
+- **변수 선택(Feature Selection)** : $p$ 개의 설명변수 중 반응변수와 관련이 있다고 생각되는 설명변수들을 식별하여 추정하는 방법
+    - 전진 선택(Forward Selection)
+    - 후진 선택(Backward Elimination)
+    - 혼합 선택(Stepwise Selection)
 
-    - **수축(Shrinkage)** : $p$ 개의 설명변수를 모두 포함하는 모형을 추정하되, 회귀계수를 최소자승추정량보다 작은 값으로 수축함으로써 분산을 줄이는 방법
-        - Ridge Regression
-        - LASSO Regression
+- **수축(Shrinkage)** : $p$ 개의 설명변수를 모두 포함하는 모형을 추정하되, 회귀계수를 최소자승추정량보다 작은 값으로 수축함으로써 분산을 줄이는 방법
+    - Ridge Regression
+    - LASSO Regression
 
-    - **차원축소(Dimension Reduction)** : $p$ 개의 설명변수를 저차원 공간으로 사영(Projection)하는 방법
-        - 주성분 분석(`P`rincipal `C`omponent `A`nalysis; PCA)
-        - 선형 판별 분석(`L`inear `D`iscriminant `A`nalysis; LDA)
+- **차원축소(Dimension Reduction)** : $p$ 개의 설명변수를 저차원 공간으로 사영(Projection)하는 방법
+    - 주성분 분석(`P`rincipal `C`omponent `A`nalysis; PCA)
+    - 선형 판별 분석(`L`inear `D`iscriminant `A`nalysis; LDA)
 
 ## Feature Selection
 -----
