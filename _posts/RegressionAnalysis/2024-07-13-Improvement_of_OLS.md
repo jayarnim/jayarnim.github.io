@@ -14,13 +14,42 @@ image:
     path: /_post_refer_img/RegressionAnalysis/Thumbnail.jpg
 ---
 
+## Bias-Variance Trade-off
+-----
+
+![03](/_post_refer_img/RegressionAnalysis/06-03.png){: width="100%"}
+
+- **편향-분산 트레이드오프(Bias-Variance Trade-off)** : 모형 복잡도에 따른 편향과 분산의 상충 관계
+
+    $$
+    ERROR=BIAS+VARIANCE+ETC.
+    $$
+
+    - **편향(Bias)** : 모형이 학습 데이터의 패턴을 충분히 학습하지 못해 발생하는 **과소적합(Underfitting)** 문제로서, 학습 데이터에 내재된 패턴의 복잡도에 비해 모형이 간소화되어 설계된 경우 발생함
+    - **분산(Variance)** : 모형이 학습 데이터에 너무 과도하게 적응하여 발생하는 **과대적합(Overfitting)** 문제로서, 모형 복잡도에 비해 학습 데이터가 희소한 경우 발생함
+
+- **최소자승추정량의 개선**
+
+    > 최소자승추정량은 BLUE(`B`est `L`inear `U`nbias `E`stimator)로서, 편향이 $0$ 인 추정량 중 분산이 가장 작은 추정량임. 만약 편향이 $0$ 이어야 한다는 제약 조건을 완화한다면 분산을 더 줄일 수 있지 않을까?
+
+    - **변수 선택(Feature Selection)** : $p$ 개의 설명변수 중 반응변수와 관련이 있다고 생각되는 설명변수들을 식별하여 추정하는 방법
+        - 전진 선택(Forward Selection)
+        - 후진 선택(Backward Elimination)
+        - 혼합 선택(Stepwise Selection)
+
+    - **수축(Shrinkage)** : $p$ 개의 설명변수를 모두 포함하는 모형을 추정하되, 회귀계수를 최소자승추정량보다 작은 값으로 수축함으로써 분산을 줄이는 방법
+        - Ridge Regression
+        - LASSO Regression
+
+    - **차원축소(Dimension Reduction)** : $p$ 개의 설명변수를 저차원 공간으로 사영(Projection)하는 방법
+        - 주성분 분석(`P`rincipal `C`omponent `A`nalysis; PCA)
+        - 선형 판별 분석(`L`inear `D`iscriminant `A`nalysis; LDA)
+
 ## Feature Selection
 -----
 
 > #### Occam's Razor
 > Entities should not be multiplied beyond necessity.
-
-### Wrapper Approach
 
 - **전진 선택(Forward Selection)** : 어떤 변수도 선택되지 않은 상태에서 가장 설명력이 좋은 변수를 하나씩 추가하는 방법
 
@@ -108,6 +137,7 @@ image:
 
 ### 이미지 출처
 
+- http://scott.fortmann-roe.com/docs/BiasVariance.html
 - https://github.com/lovit/python_ml_intro
 - https://ekamperi.github.io/machine%20learning/2019/10/19/norms-in-machine-learning.html
 - https://observablehq.com/@petulla/l1-l2l_1-l_2l1-l2-norm-geometric-interpretation
