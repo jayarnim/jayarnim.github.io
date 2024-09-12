@@ -719,6 +719,77 @@
     <!-- combine -->
     
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
 
   
 
@@ -766,6 +837,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -781,17 +863,6 @@
       
         
         
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
       
 
       
@@ -942,9 +1013,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="368 words"
+  title="790 words"
 >
-  <em>2 min</em> read</span>
+  <em>4 min</em> read</span>
 
         </div>
       </div>
@@ -952,15 +1023,60 @@
   </header>
 
   <div class="content">
-    <h2 id="feature-selection"><span class="me-2">Feature Selection</span><a href="#feature-selection" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="bias-variance-trade-off"><span class="me-2">Bias-Variance Trade-off</span><a href="#bias-variance-trade-off" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<p><a href="/_post_refer_img/RegressionAnalysis/06-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RegressionAnalysis/06-03.png" alt="03" width="100%" loading="lazy"></a></p>
+
+<ul>
+  <li>
+    <p><strong>편향-분산 트레이드오프(Bias-Variance Trade-off)</strong> : 모형 복잡도에 따른 편향과 분산의 상충 관계</p>
+
+\[ERROR=BIAS+VARIANCE+ETC.\]
+
+    <ul>
+      <li><strong>편향(Bias)</strong> : 모형이 학습 데이터의 패턴을 충분히 학습하지 못해 발생하는 <strong>과소적합(Underfitting)</strong> 문제로서, 학습 데이터에 내재된 패턴의 복잡도에 비해 모형이 간소화되어 설계된 경우 발생함</li>
+      <li><strong>분산(Variance)</strong> : 모형이 학습 데이터에 너무 과도하게 적응하여 발생하는 <strong>과대적합(Overfitting)</strong> 문제로서, 모형 복잡도에 비해 학습 데이터가 희소한 경우 발생함</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>최소자승추정량의 개선</strong></p>
+
+    <blockquote>
+      <p>최소자승추정량은 BLUE(<code class="language-plaintext highlighter-rouge">B</code>est <code class="language-plaintext highlighter-rouge">L</code>inear <code class="language-plaintext highlighter-rouge">U</code>nbias <code class="language-plaintext highlighter-rouge">E</code>stimator)로서, 편향이 $0$ 인 추정량 중 분산이 가장 작은 추정량임. 만약 편향이 $0$ 이어야 한다는 제약 조건을 완화한다면 분산을 더 줄일 수 있지 않을까?</p>
+    </blockquote>
+
+    <ul>
+      <li><strong>변수 선택(Feature Selection)</strong> : $p$ 개의 설명변수 중 반응변수와 관련이 있다고 생각되는 설명변수들을 식별하여 추정하는 방법
+        <ul>
+          <li>전진 선택(Forward Selection)</li>
+          <li>후진 선택(Backward Elimination)</li>
+          <li>혼합 선택(Stepwise Selection)</li>
+        </ul>
+      </li>
+      <li><strong>수축(Shrinkage)</strong> : $p$ 개의 설명변수를 모두 포함하는 모형을 추정하되, 회귀계수를 최소자승추정량보다 작은 값으로 수축함으로써 분산을 줄이는 방법
+        <ul>
+          <li>Ridge Regression</li>
+          <li>LASSO Regression</li>
+        </ul>
+      </li>
+      <li><strong>차원축소(Dimension Reduction)</strong> : $p$ 개의 설명변수를 저차원 공간으로 사영(Projection)하는 방법
+        <ul>
+          <li>주성분 분석(<code class="language-plaintext highlighter-rouge">P</code>rincipal <code class="language-plaintext highlighter-rouge">C</code>omponent <code class="language-plaintext highlighter-rouge">A</code>nalysis; PCA)</li>
+          <li>선형 판별 분석(<code class="language-plaintext highlighter-rouge">L</code>inear <code class="language-plaintext highlighter-rouge">D</code>iscriminant <code class="language-plaintext highlighter-rouge">A</code>nalysis; LDA)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="feature-selection"><span class="me-2">Feature Selection</span><a href="#feature-selection" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <blockquote>
   <h4 id="occams-razor"><span class="me-2">Occam’s Razor</span><a href="#occams-razor" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
   <p>Entities should not be multiplied beyond necessity.</p>
 </blockquote>
-
-<h3 id="wrapper-approach"><span class="me-2">Wrapper Approach</span><a href="#wrapper-approach" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
@@ -1070,6 +1186,7 @@
 <h3 id="이미지-출처"><span class="me-2">이미지 출처</span><a href="#이미지-출처" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
+  <li>http://scott.fortmann-roe.com/docs/BiasVariance.html</li>
   <li>https://github.com/lovit/python_ml_intro</li>
   <li>https://ekamperi.github.io/machine%20learning/2019/10/19/norms-in-machine-learning.html</li>
   <li>https://observablehq.com/@petulla/l1-l2l_1-l_2l1-l2-norm-geometric-interpretation</li>
