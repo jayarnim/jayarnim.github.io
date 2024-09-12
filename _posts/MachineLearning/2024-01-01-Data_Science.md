@@ -65,41 +65,50 @@ image:
 
     > 정형, 비정형의 다양한 데이터로부터 지식 및 시사점을 도출하는 데 과학적 방법론을 동원하는 융합 분야(출처 : 위키백과)
 
-- **개념**
+- **빅데이터(Bigdata)**
 
-    - **빅데이터(Bigdata)**
+    > 통상적으로 사용되는 데이터 수집, 관리, 처리 소프트웨어의 수용 한계를 넘어서는 크기의 데이터(출처 : 위키백과)
 
-        > 통상적으로 사용되는 데이터 수집, 관리, 처리 소프트웨어의 수용 한계를 넘어서는 크기의 데이터(출처 : 위키백과)
+    - Volume(Data Quantity)
+    - Variety(Data Types)
+    - Velocity(Data Speed)
+    - Value(Data Impact)
 
-        - Volume(Data Quantity)
-        - Variety(Data Types)
-        - Velocity(Data Speed)
-        - Value(Data Impact)
+- **데이터 마이닝(Data Mining)**
 
-    - **데이터 마이닝(Data Mining)**
+    > 대규모로 저장된 데이터 안에서 체계적이고 자동적으로 통계적 규칙이나 짜임을 분석하여 가치 있는 정보를 빼내는 과정(출처 : 위키백과)
 
-        > 대규모로 저장된 데이터 안에서 체계적이고 자동적으로 통계적 규칙이나 짜임을 분석하여 가치 있는 정보를 빼내는 과정(출처 : 위키백과)
+- **기계학습(Machine Learning)**
 
-    - **기계학습(Machine Learning)**
+    > 기계가 일일이 코드로 명시하지 않은 동작을 데이터로부터 학습하여 실행할 수 있도록 하는 알고리즘을 개발하는 연구 분야(출처 : 위키백과)
 
-        > 기계가 일일이 코드로 명시하지 않은 동작을 데이터로부터 학습하여 실행할 수 있도록 하는 알고리즘을 개발하는 연구 분야(출처 : 위키백과)
+- **인공지능(Artificial Intelligence; AI)**
 
-        - **지도학습(Supervised Learning)** : 정답 세트가 존재하는 데이터를 활용하는 학습 방법
-            - **판별 분석(Classificaiton Analysis)** : 범주형 값을 가지는 종속변수를 예측하는 방법론
-            - **회귀 분석(Regression Analysis)** : 수치형 값을 가지는 종속변수를 예측하는 방법론
+    > 인간의 학습, 추론, 지각 능력을 인공적으로 구현하려는 컴퓨터 과학의 세부 분야(출처 : 위키백과)
 
-        - **비지도학습(Unsupervised Learning)** : 정답 세트가 존재하지 않는 데이터를 활용하는 학습 방법
-            - **군집화(Clustering)** : 유사한 개체들의 집단을 만든 후 새 개체가 어떤 집단과 유사한지 예측하는 방법론
-            - **차원축소(Dimension Reduction)** : 고차원 데이터를 저차원 데이터로 변환하는 방법론
+## Type of Machine Learning
+-----
 
-    - **인공지능(Artificial Intelligence; AI)**
+- **지도학습(Supervised Learning)** : 정답 세트가 존재하는 데이터를 활용하는 학습 방법
+    - **판별 분석(Classificaiton Analysis)** : 범주형 값을 가지는 종속변수를 예측하는 방법론
 
-        > 인간의 학습, 추론, 지각 능력을 인공적으로 구현하려는 컴퓨터 과학의 세부 분야(출처 : 위키백과)
+        ![02](/_post_refer_img/MachineLearning/01-02.png){: width="100%"}
+
+    - **회귀 분석(Regression Analysis)** : 수치형 값을 가지는 종속변수를 예측하는 방법론
+
+        ![03](/_post_refer_img/MachineLearning/01-03.png){: width="100%"}
+
+- **비지도학습(Unsupervised Learning)** : 정답 세트가 존재하지 않는 데이터를 활용하는 학습 방법
+    - **군집화(Clustering)** : 유사한 개체들의 집단을 만든 후 새 개체가 어떤 집단과 유사한지 예측하는 방법론
+
+        ![04](/_post_refer_img/MachineLearning/01-04.png){: width="100%"}
+
+    - **차원축소(Dimensionality Reduction)** : 고차원 데이터를 저차원 데이터로 변환하는 방법론
+
+        ![05](/_post_refer_img/MachineLearning/01-05.png){: width="100%"}
 
 ## Data Preprocessing
 -----
-
-![01](/_post_refer_img/MachineLearning/01-01.jpg){: width="100%"}
 
 - **데이터 전처리(Data Preprocessing)** : 데이터를 분석에 사용할 수 있는 형식의 데이터로 만드는 일련의 과정
 
@@ -115,6 +124,8 @@ image:
 
 ### Process
 
+![01](/_post_refer_img/MachineLearning/01-01.jpg){: width="100%"}
+
 - **Data Integration** : 동일한 단위, 양식으로 데이터를 결합하는 절차
 
 - **Data Cleansing** : 낮은 품질의 데이터를 활용할 수 있도록 하는 절차
@@ -127,3 +138,12 @@ image:
     - 정규화(Normalization)
 
 - **Data Reduction** : 고차원 데이터를 저차원 데이터로 변환하는 절차
+
+-----
+
+### 이미지 출처
+
+- https://www.spotfire.com/glossary/what-is-regression-analysis
+- https://www.engati.com/glossary/classification-algorithm
+- https://medium.com/@baharzerenturk/hierarchical-clustering-analysis-dendogram-6b76f5f33fa8
+- https://www.mlguru.ai/Learn/ai-use-cases-dimensionality-reduction
