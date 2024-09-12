@@ -30,25 +30,25 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.3" />
-<meta property="og:title" content="Data Preprocessing" />
+<meta property="og:title" content="Principal Component Analysis" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ." />
 <meta property="og:description" content="Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ." />
-<link rel="canonical" href="https://jayarnim.github.io/posts/Data_Preprocessing/" />
-<meta property="og:url" content="https://jayarnim.github.io/posts/Data_Preprocessing/" />
+<link rel="canonical" href="https://jayarnim.github.io/posts/PCA/" />
+<meta property="og:url" content="https://jayarnim.github.io/posts/PCA/" />
 <meta property="og:site_name" content="Data Scientist" />
 <meta property="og:image" content="https://jayarnim.github.io/_post_refer_img/MachineLearning/Thumbnail.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-01-02T00:00:00+09:00" />
+<meta property="article:published_time" content="2024-01-12T00:00:00+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/MachineLearning/Thumbnail.jpg" />
-<meta property="twitter:title" content="Data Preprocessing" />
+<meta property="twitter:title" content="Principal Component Analysis" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-01-02T00:00:00+09:00","datePublished":"2024-01-02T00:00:00+09:00","description":"Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.","headline":"Data Preprocessing","image":"https://jayarnim.github.io/_post_refer_img/MachineLearning/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/Data_Preprocessing/"},"url":"https://jayarnim.github.io/posts/Data_Preprocessing/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-01-12T00:00:00+09:00","datePublished":"2024-01-12T00:00:00+09:00","description":"Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.","headline":"Principal Component Analysis","image":"https://jayarnim.github.io/_post_refer_img/MachineLearning/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/PCA/"},"url":"https://jayarnim.github.io/posts/PCA/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Data Preprocessing | Data Scientist
+  <title>Principal Component Analysis | Data Scientist
   </title>
 
   <!--
@@ -415,7 +415,7 @@
         
           
             
-              <span>Data Preprocessing</span>
+              <span>Principal Component Analysis</span>
             
 
           
@@ -790,6 +790,219 @@
     <!-- combine -->
     
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
 
   
 
@@ -815,6 +1028,17 @@
       
         
         
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
       
 
       
@@ -942,7 +1166,7 @@
 
 <article class="px-1">
   <header>
-    <h1 data-toc-skip>Data Preprocessing</h1>
+    <h1 data-toc-skip>Principal Component Analysis</h1>
     
       <p class="post-desc fw-light mb-4">Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</p>
     
@@ -961,13 +1185,13 @@
 
 <time
   
-  data-ts="1704121200"
+  data-ts="1704985200"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Jan  2, 2024
+  Jan 12, 2024
 </time>
 
       </span>
@@ -1025,9 +1249,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="802 words"
+  title="956 words"
 >
-  <em>4 min</em> read</span>
+  <em>5 min</em> read</span>
 
         </div>
       </div>
@@ -1035,173 +1259,248 @@
   </header>
 
   <div class="content">
-    <h2 id="data-preprocessing"><span class="me-2">Data Preprocessing</span><a href="#data-preprocessing" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="prerequisite"><span class="me-2">Prerequisite</span><a href="#prerequisite" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<p><a href="/_post_refer_img/MachineLearning/02-01.jpg" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/02-01.jpg" alt="01" width="100%" loading="lazy"></a></p>
+<h3 id="projection"><span class="me-2">Projection</span><a href="#projection" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p><a href="/_post_refer_img/MachineLearning/12-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/12-04.png" alt="04" width="100%" loading="lazy"></a></p>
 
 <ul>
   <li>
-    <p><strong>정의</strong> : 데이터를 분석에 사용할 수 있는 형식의 데이터로 만드는 일련의 과정</p>
-  </li>
-  <li><strong>필요성</strong> : 분석에 완벽하게 적합한 데이터를 얻는 것은 불가능함
-    <ul>
-      <li><strong>호환성 문제</strong>
-        <ul>
-          <li>데이터 불일치</li>
-          <li>데이터 중복</li>
-        </ul>
-      </li>
-      <li><strong>데이터 수집 문제</strong>
-        <ul>
-          <li>센서와 데이터베이스 간 통신 문제</li>
-          <li>센서 자체 문제</li>
-          <li>샘플링 기반 데이터 수집 정책</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li><strong>데이터 품질에 영향을 끼치는 인자</strong>
-    <ul>
-      <li><strong>Nosie</strong> : 데이터 측정 시 무작위로 발생하여 오류를 발생시키는 문제</li>
-      <li><strong>Outlier</strong> : 대부분의 데이터와 다른 특성을 보이거나 특정 속성의 값이 유별난 데이터</li>
-      <li><strong>Artifact</strong> : 어떤 요인으로 인해 반복적으로 발생하는 왜곡이나 오류</li>
-      <li><strong>Precision</strong> : 동일한 결과물을 반복적으로 측정하였을 때 각 측정값 사이의 일관성 문제</li>
-      <li><strong>Bias</strong> : 측정 장비에 포함된 시스템 상 문제</li>
-      <li><strong>Accuacy</strong> : 측정 장비의 한계로 정확하지 않은 수를 측정함에 따라 발생하는 문제</li>
-      <li><strong>Inconsistent Value</strong> : 데이터 불일치 문제</li>
-      <li><strong>Duplicate</strong> : 데이터 중복 문제</li>
-    </ul>
-  </li>
-  <li><strong>절차</strong>
-    <ul>
-      <li>
-        <p><strong>Data Integration</strong> : 동일한 단위, 양식으로 데이터를 결합하는 절차</p>
-      </li>
-      <li><strong>Data Cleansing</strong> : 낮은 품질의 데이터를 활용할 수 있도록 하는 절차
-        <ul>
-          <li>중복값 제거</li>
-          <li>결측치 처리</li>
-          <li>이상치 처리</li>
-        </ul>
-      </li>
-      <li><strong>Data Transformation</strong> : 데이터 형식 및 구조를 학습에 적합하도록 변환하는 절차
-        <ul>
-          <li>표준화(Standardization)</li>
-          <li>정규화(Normalization)</li>
-        </ul>
-      </li>
-      <li><strong>Data Reduction</strong> : 고차원 데이터를 저차원 데이터로 변환하는 절차</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="data-cleansing"><span class="me-2">Data Cleansing</span><a href="#data-cleansing" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<h3 id="결측치-처리"><span class="me-2">결측치 처리</span><a href="#결측치-처리" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li><strong>결측치 종류</strong>
-    <ul>
-      <li><strong>완전 무작위 결측(Missing Completely At Random; MCAR)</strong> : 데이터가 어떤 패턴이나 규칙 없이 누락되는 경우</li>
-      <li><strong>무작위 결측(Missing At Random; MAR)</strong> : 데이터의 누락이 다른 변수에 종속된 경우</li>
-      <li><strong>비무작위 결측(Missing Not At Random; MNAR)</strong> : 결측치가 어떤 규칙 또는 패턴을 따라 발생하는 경우</li>
-    </ul>
-  </li>
-  <li><strong>결측치 처리 권장 사항</strong>
-    <ul>
-      <li><strong>10% 미만</strong> : 제거 또는 대체</li>
-      <li><strong>10~20%</strong> : 최빈값, 평균, 중앙값 등으로 대체</li>
-      <li><strong>20% 이상</strong> : model-based method</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="이상치-처리"><span class="me-2">이상치 처리</span><a href="#이상치-처리" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li>
-    <p><strong>이상치의 정의</strong> : 관측된 데이터의 범위에서 지나치게 벗어나 값이 매우 크거나 작은 값</p>
-  </li>
-  <li>
-    <p><strong>이상치의 탐지</strong> : Turkey Fence 기법</p>
-
-    <p><a href="/_post_refer_img/MachineLearning/02-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/02-02.png" alt="02" width="100%" loading="lazy"></a></p>
+    <p>벡터 $\overrightarrow{a}$ 를 벡터 $\overrightarrow{b}$ 에 정사영했을 때, 정사영 벡터 $\text{proj}_{\overrightarrow{b}}(\overrightarrow{a})$ 는 다음과 같음</p>
 
 \[\begin{aligned}
-  Outliers
-  &amp;=\{X|X &lt; X_{lower} \; or \; X &gt; X_{upper}\}
+  \cos{90^{\circ}}
+  &amp;= \frac{(\overrightarrow{a}-p\overrightarrow{b})^{T}\overrightarrow{b}}{\Vert \overrightarrow{a}\Vert \cdot \Vert\overrightarrow{b}\Vert}\\
+  &amp;= 0\\
+  \therefore \text{proj}_{\overrightarrow{b}}(\overrightarrow{a})
+  &amp;= p\overrightarrow{b}\\
+  &amp;= \left(\frac{\overrightarrow{a}^{T}\overrightarrow{b}}{\Vert\overrightarrow{b}\Vert^{2}}\right)\overrightarrow{b}
   \end{aligned}\]
 
     <ul>
-      <li><strong>하한값($X_{lower}$)</strong> : $Q_1-IQR \times 1.5$</li>
-      <li><strong>상한값($X_{upper}$)</strong> : $Q_3+IQR \times 1.5$</li>
-      <li><strong>사분위 범위(InterQuartile Range; IQR)</strong> : $Q_3 - Q_1$</li>
+      <li>$p=\displaystyle\frac{\overrightarrow{a}^{T}\overrightarrow{b}}{\Vert\overrightarrow{b}\Vert^{2}}$ : 정사영 벡터의 크기</li>
+      <li>$\overrightarrow{b}$ : 정사영 벡터의 방향</li>
     </ul>
   </li>
 </ul>
 
-<h2 id="data-transformation"><span class="me-2">Data Transformation</span><a href="#data-transformation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="covariance-matrix"><span class="me-2">Covariance Matrix</span><a href="#covariance-matrix" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p><strong>공분산(Covariance)</strong> : 두 확률변수의 선형관계를 나타내는 지표로서, 두 확률변수의 편차(관측치와 평균 사이 거리)를 곱한 값의 평균</p>
+
+\[\sigma_{XY} = \frac{1}{N}\sum_{i=1}^{N}(X_{i}-\mu_X)(Y_{i}-\mu_Y)\]
+  </li>
+  <li>
+    <p><strong>공분산행렬(Covariance Matrix)</strong> : $n$ 개 변수들 간 공분산을 나열한 $n \times n$ 정방행렬</p>
+
+\[\Sigma=
+  \begin{matrix}
+  &amp; \overrightarrow{A} &amp; \overrightarrow{B} &amp; \overrightarrow{C} \\
+  \overrightarrow{A} &amp; \sigma_{A}^2 &amp; \sigma_{AB} &amp; \sigma_{AC} \\
+  \overrightarrow{B} &amp; \sigma_{BA} &amp; \sigma_{B}^2 &amp; \sigma_{BC} \\
+  \overrightarrow{C} &amp; \sigma_{CA} &amp; \sigma_{CB} &amp; \sigma_{C}^2
+  \end{matrix}\]
+  </li>
+</ul>
+
+<h3 id="linear-transformation"><span class="me-2">Linear Transformation</span><a href="#linear-transformation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p><a href="/_post_refer_img/MachineLearning/12-05.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/12-05.png" alt="05" width="100%" loading="lazy"></a></p>
+
+<ul>
+  <li>
+    <p>행렬 $\mathbf{X}$ 을 통한 선형변환은 어떤 좌표를 \(\begin{pmatrix}1\\0\end{pmatrix},\begin{pmatrix}0\\1\end{pmatrix}\) 를 기저로 사용하는 2차원 좌표계에서 \(\overrightarrow{x}_{1},\overrightarrow{x}_{2}\) 를 기저로 사용하는 2차원 좌표계로 변환하는 것을 의미함</p>
+
+\[\begin{aligned}
+  \mathbf{X}
+  &amp;= \begin{pmatrix} 1&amp;3\\-2&amp;0 \end{pmatrix}\\
+  &amp;= \begin{pmatrix} \overrightarrow{x}_{1}&amp;\overrightarrow{x}_{2} \end{pmatrix}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>벡터 $\overrightarrow{v}$ 는 \(\begin{pmatrix}1\\0\end{pmatrix},\begin{pmatrix}0\\1\end{pmatrix}\) 를 기저로 사용하는 2차원 좌표계의 좌표 $(-1,2)$ 를 나타냄</p>
+
+\[\begin{aligned}
+  \overrightarrow{v}
+  &amp;= \begin{pmatrix} 1\\-2 \end{pmatrix}\\
+  &amp;= -1\begin{pmatrix}1\\0\end{pmatrix} + 2\begin{pmatrix}0\\1\end{pmatrix}\\
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>$\mathbf{X}$ 를 통한 선형 변환 결과 \(\overrightarrow{v}\) 는 \(\overrightarrow{x}_{1},\overrightarrow{x}_{2}\) 를 기저로 사용하는 2차원 좌표계의 좌표 $(-1,2)$ 로 변환되었음</p>
+
+\[\begin{aligned}
+  \mathbf{X}\cdot\overrightarrow{v}
+  &amp;= \begin{pmatrix} 1&amp;3\\-2&amp;0 \end{pmatrix} \cdot \begin{pmatrix} 1\\-2 \end{pmatrix}\\
+  &amp;= \begin{pmatrix}-5\\2\end{pmatrix}\\
+  &amp;= -1\overrightarrow{x}_{1} + 2\overrightarrow{x}_{2}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h3 id="eigen-vector"><span class="me-2">Eigen-Vector</span><a href="#eigen-vector" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p><a href="/_post_refer_img/MachineLearning/12-06.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/12-06.png" alt="06" width="100%" loading="lazy"></a></p>
+
+<ul>
+  <li>
+    <p><strong>고유벡터(Eigen-Vector; $\overrightarrow{v}$)</strong> : 정방행렬 $A_n$ 으로 선형변환했을 때, 그 방향은 변하지 않고 단지 크기만 변하는 $\overrightarrow{0}$ 이 아닌 벡터</p>
+
+\[\begin{aligned}
+  \begin{pmatrix}
+  a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
+  a_{21}&amp;a_{22}&amp;\cdots&amp;a_{1n}\\
+  \vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+  a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}
+  \end{pmatrix}
+  \begin{pmatrix}
+  v_{1} \\ v_{2} \\ \vdots \\ v_{n}
+  \end{pmatrix}
+  =
+  \lambda
+  \begin{pmatrix}
+  v_{1} \\ v_{2} \\ \vdots \\ v_{n}
+  \end{pmatrix}
+  \Leftrightarrow
+  A_{n \times n} \overrightarrow{v} 
+  = \lambda \overrightarrow{v}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>고유값(Eigen-Value; $\lambda$)</strong> : 고유벡터의 선형변환 전 크기 대비 선형변환 후 크기의 비율</p>
+  </li>
+</ul>
+
+<h2 id="principal-component-analysis"><span class="me-2">Principal Component Analysis</span><a href="#principal-component-analysis" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<p><a href="/_post_refer_img/MachineLearning/02-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/02-03.png" alt="03" width="100%" loading="lazy"></a></p>
-
-<h3 id="z-score-정규화"><span class="me-2">z-Score 정규화</span><a href="#z-score-정규화" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<div class="language-python highlighter-rouge"><div class="code-header">
-        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="n">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
-</pre></td></tr></tbody></table></code></div></div>
-
 <ul>
   <li>
-    <p><strong>정의</strong> : 값의 분포를 평균이 0, 분산이 1인 형태로 변환함</p>
+    <p><strong>주성분 분석(<code class="language-plaintext highlighter-rouge">P</code>rincipal <code class="language-plaintext highlighter-rouge">C</code>omponent <code class="language-plaintext highlighter-rouge">A</code>nalysis; PCA)</strong> : 고차원 데이터에 대하여, X의 방향적 분포를 가장 잘 설명하는 <strong>새로운 저차원 직교 좌표</strong>를 학습하는 기법</p>
 
-\[X_{scaled}=\frac{X_{origin}-E(X)}{\sigma}\]
+    <p><a href="/_post_refer_img/MachineLearning/12-01.jpeg" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/12-01.jpeg" alt="01" width="100%" loading="lazy"></a></p>
+
+    <ul>
+      <li><strong>주성분(Principal Component; PC)</strong> : 새로운 저차원 직교 좌표</li>
+    </ul>
   </li>
   <li>
-    <p><strong>기능</strong> : 정규 분포화</p>
+    <p><strong>방법</strong> : <strong>관측치 간 상대적 특성</strong>을 잘 보존하는 성분들을 추출함</p>
+
+    <p><a href="/_post_refer_img/MachineLearning/12-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/12-02.png" alt="02" width="100%" loading="lazy"></a></p>
+
+    <ul>
+      <li>$\text{component}$ : 주성분 벡터 $\overrightarrow{w}$</li>
+      <li>$\text{datapoint}$ : 관측치 벡터 $\overrightarrow{x}\in \mathbf{X}$</li>
+      <li>$\text{projected data}$ : 주성분 벡터에 대한 관측치 벡터의 정사영 벡터 $\text{proj}_{\overrightarrow{w}}(\overrightarrow{x})$</li>
+      <li>$D_{1}$ : 관측치 벡터에 대하여 보존하는 정보로서 <strong>분산</strong></li>
+      <li>$D_{2}$ : 관측치 벡터에 대하여 유실하는 정보</li>
+      <li>$D_{3}$ : 관측치 벡터의 본래 정보</li>
+    </ul>
   </li>
 </ul>
 
-<h3 id="이상치-강건-정규화"><span class="me-2">(이상치) 강건 정규화</span><a href="#이상치-강건-정규화" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h2 id="how-to-extract"><span class="me-2">How to Extract</span><a href="#how-to-extract" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
 
-<div class="language-python highlighter-rouge"><div class="code-header">
-        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="n">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">RobustScaler</span>
-</pre></td></tr></tbody></table></code></div></div>
+<p><a href="/_post_refer_img/MachineLearning/12-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/12-03.png" alt="03" width="100%" loading="lazy"></a></p>
 
 <ul>
   <li>
-    <p><strong>정의</strong> : 평균과 분산 대신 중앙값과 사분위 범위를 활용함</p>
+    <p>관측치 행렬 $X_{N \times P}$ 를 단위벡터 $\overrightarrow{w}$ 에 정사영한다고 하자</p>
 
-\[X_{scaled}=\frac{X_{origin}-median}{IQR}\]
+\[\begin{aligned}
+  proj_{\overrightarrow{w}}(\mathbf{X})
+  &amp;= \frac{&lt;\mathbf{X},\overrightarrow{w}&gt;}{\Vert w \Vert ^2}\cdot\overrightarrow{w}\\
+  &amp;= (\overrightarrow{w}^{T}\mathbf{X})\cdot\overrightarrow{w} \quad (\because \Vert w \Vert=1)
+  \end{aligned}\]
+
+    <ul>
+      <li>$\overrightarrow{w}$ : 정사영 벡터의 방향</li>
+      <li>$\overrightarrow{w}^{T}\mathbf{X}$ : 정사영 벡터의 크기</li>
+    </ul>
   </li>
   <li>
-    <p><strong>기능</strong> : 이상치 영향력 최소화</p>
+    <p>$\overrightarrow{w}$ 에 정사영된 관측치들의 분산 $\mathbf{V}$ 은 다음과 같음</p>
+
+\[\begin{aligned}
+  \mathbf{V}
+  &amp;= \frac{1}{n}(\overrightarrow{w}^{T}\mathbf{X})(\overrightarrow{w}^{T}\mathbf{X})^{T}\\
+  &amp;= \frac{1}{n}(\overrightarrow{w}^{T}\mathbf{X}\mathbf{X}^{T}\overrightarrow{w})\\
+  &amp;= \overrightarrow{w}^{T}\Sigma\overrightarrow{w}
+  \end{aligned}\]
+
+    <ul>
+      <li>$\Sigma=\displaystyle\frac{1}{n}\mathbf{X}\mathbf{X}^{T}$ : 관측치 행렬 $X$ 의 공분산 행렬</li>
+    </ul>
+  </li>
+  <li>
+    <p>$\mathbf{V}$ 을 최대화하는 $\overrightarrow{w}$ 를 채택한다고 하자</p>
+
+\[\hat{\overrightarrow{w}}
+  = \text{arg} \max_{\overrightarrow{w}}{\overrightarrow{w}^{T}\Sigma\overrightarrow{w}}
+  \quad \text{s.t.} \quad
+  \overrightarrow{w}^{T}\overrightarrow{w}=1\]
+  </li>
+  <li>
+    <p>라그랑주 승수법에 기초하여 $\hat{\overrightarrow{w}}$ 도출</p>
+
+\[\begin{aligned}
+  L(\overrightarrow{w},\lambda)
+  &amp;= \overrightarrow{w}^{T}\Sigma\overrightarrow{w}-\lambda(\overrightarrow{w}^{T}\overrightarrow{w}-1)\\
+  \frac{\partial L(\overrightarrow{w},\lambda)}{\overrightarrow{w}}
+  &amp;= 0\\
+  \therefore (\Sigma-\lambda\mathbf{I})\hat{\overrightarrow{w}}
+  &amp;=0
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>$\mathbf{V}$ 를 최대화하는 주성분 $\overrightarrow{w}$ 은 $\mathbf{X}$ 의 공분산 행렬 $\Sigma$ 의 고유벡터임</p>
+
+\[\begin{aligned}
+  \Sigma
+  &amp;= \mathbb{V}\mathbb{\Lambda}\mathbb{V}^{-1},\\
+  \mathbb{V}
+  &amp;= \begin{pmatrix}\overrightarrow{w}_{1}&amp;\overrightarrow{w}_{2}&amp;\cdots&amp;\overrightarrow{w}_{p}\end{pmatrix}\\
+  \mathbb{\Lambda}
+  &amp;= \text{diag}(\lambda_{1},\lambda_{2},\cdots,\lambda_{p})
+  \end{aligned}\]
   </li>
 </ul>
 
-<h3 id="최대-최소-정규화"><span class="me-2">최대-최소 정규화</span><a href="#최대-최소-정규화" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<div class="language-python highlighter-rouge"><div class="code-header">
-        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="n">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>
-</pre></td></tr></tbody></table></code></div></div>
+<h2 id="explanatory-power"><span class="me-2">Explanatory Power</span><a href="#explanatory-power" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
 
 <ul>
   <li>
-    <p><strong>정의</strong> : 값의 분포를 특정 범위로 확대 혹은 축소함</p>
+    <p><strong>주성분 벡터의 고유값</strong> : 관측치 행렬 $\mathbf{X}$ 에 대하여 <strong>주성분 벡터에 대한 정사영 벡터 간 분산</strong></p>
 
-\[X_{scaled}=\frac{X_{origin}-X_{min}}{X_{max}-X_{min}}\]
+\[\begin{aligned}
+  \mathbf{V}
+  &amp;= \frac{1}{n}(\overrightarrow{w}^{T}\mathbf{X})(\overrightarrow{w}^{T}\mathbf{X})^{T}\\
+  &amp;= \frac{1}{n}\overrightarrow{w}^{T}\mathbf{X}\mathbf{X}^{T}\overrightarrow{w}\\
+  &amp;= \overrightarrow{w}^{T}\Sigma\overrightarrow{w}\\
+  &amp;= \hat{\overrightarrow{w}}^{T}\lambda\hat{\overrightarrow{w}} \quad (\because \Sigma\hat{\overrightarrow{w}}-\lambda\hat{\overrightarrow{w}}=0)\\
+  &amp;= \lambda \quad (\because \overrightarrow{w}^{T}\overrightarrow{w}=1)
+  \end{aligned}\]
   </li>
   <li>
-    <p><strong>기능</strong> : 척도 통일</p>
+    <p><strong>주성분 벡터의 설명력</strong> : 관측치 행렬 $\mathbf{X}_{N \times P}$ 에 대하여 생성 가능한 $P$ 개의 주성분 벡터 고유값 합계 대비 해당 주성분 벡터 고유값 비율</p>
+
+\[\frac{\lambda_{k}}{\sum_{i=1}^{p}{\lambda_{i}}}\]
   </li>
+</ul>
+
+<hr />
+
+<h3 id="이미지-출처"><span class="me-2">이미지 출처</span><a href="#이미지-출처" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>http://alexhwilliams.info/itsneuronalblog/2016/03/27/pca/</li>
 </ul>
 
   </div>
@@ -1226,6 +1525,11 @@
             href="/tags/machine-learning/"
             class="post-tag no-text-decoration"
           >Machine Learning</a>
+        
+          <a
+            href="/tags/unsupervised-learning/"
+            class="post-tag no-text-decoration"
+          >Unsupervised Learning</a>
         
           <a
             href="/tags/feature-engineering/"
@@ -1266,21 +1570,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Data%20Preprocessing%20-%20Data%20Scientist&url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FData_Preprocessing%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=Principal%20Component%20Analysis%20-%20Data%20Scientist&url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FPCA%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Data%20Preprocessing%20-%20Data%20Scientist&u=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FData_Preprocessing%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=Principal%20Component%20Analysis%20-%20Data%20Scientist&u=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FPCA%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FData_Preprocessing%2F&text=Data%20Preprocessing%20-%20Data%20Scientist" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FPCA%2F&text=Principal%20Component%20Analysis%20-%20Data%20Scientist" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -1836,6 +2140,165 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2114,171 +2577,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2466,8 +2764,6 @@
     
     
     
-    
-      
     
   
     
@@ -2854,6 +3150,263 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2917,13 +3470,6 @@
     
     
     
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2944,6 +3490,9 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
@@ -2951,9 +3500,6 @@
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/microeconomics/">Microeconomics</a>
@@ -2965,10 +3511,10 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/regression/">Regression</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/dev-env/">Dev. Env.</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/unsupervised-learning/">Unsupervised Learning</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/dvcs/">DVCS</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/dev-env/">Dev. Env.</a>
       
     </div>
   </section>
@@ -3036,67 +3582,127 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
@@ -3196,6 +3802,62 @@
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
+          <a href="/posts/t_SNE/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1705158000"
+  data-df="ll"
+  
+>
+  Jan 14, 2024
+</time>
+
+              <h4 class="pt-0 my-2">t-SNE</h4>
+              <div class="text-muted">
+                <p>Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/LDA/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1705071600"
+  data-df="ll"
+  
+>
+  Jan 13, 2024
+</time>
+
+              <h4 class="pt-0 my-2">Linear Discriminant Analysis</h4>
+              <div class="text-muted">
+                <p>Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
           <a href="/posts/Dimensionality_Reduction/" class="post-preview card h-100">
             <div class="card-body">
               <!--
@@ -3208,70 +3870,14 @@
 
 <time
   
-  data-ts="1704812400"
+  data-ts="1704898800"
   data-df="ll"
   
 >
-  Jan 10, 2024
+  Jan 11, 2024
 </time>
 
               <h4 class="pt-0 my-2">Dimensionality Reduction</h4>
-              <div class="text-muted">
-                <p>Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/Clustering/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1704726000"
-  data-df="ll"
-  
->
-  Jan  9, 2024
-</time>
-
-              <h4 class="pt-0 my-2">Clustering</h4>
-              <div class="text-muted">
-                <p>Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/SVM/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1704553200"
-  data-df="ll"
-  
->
-  Jan  7, 2024
-</time>
-
-              <h4 class="pt-0 my-2">Support Vector Machine</h4>
               <div class="text-muted">
                 <p>Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</p>
               </div>
@@ -3294,21 +3900,21 @@
 
   
     <a
-      href="/posts/Data_Science/"
+      href="/posts/Dimensionality_Reduction/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>What? Data Science</p>
+      <p>Dimensionality Reduction</p>
     </a>
   
 
   
     <a
-      href="/posts/Supervised_Model_Selection/"
+      href="/posts/LDA/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>Supervised Model Selection</p>
+      <p>Linear Discriminant Analysis</p>
     </a>
   
 </nav>
@@ -3829,6 +4435,165 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -4107,171 +4872,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -4459,8 +5059,6 @@
     
     
     
-    
-      
     
   
     
@@ -4847,6 +5445,263 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -4910,13 +5765,6 @@
     
     
     
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -4937,6 +5785,9 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
@@ -4944,9 +5795,6 @@
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/microeconomics/">Microeconomics</a>
@@ -4958,10 +5806,10 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/regression/">Regression</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/dev-env/">Dev. Env.</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/unsupervised-learning/">Unsupervised Learning</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/dvcs/">DVCS</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/dev-env/">Dev. Env.</a>
       
     </div>
   </section>

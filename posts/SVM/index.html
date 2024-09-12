@@ -39,12 +39,12 @@
 <meta property="og:site_name" content="Data Scientist" />
 <meta property="og:image" content="https://jayarnim.github.io/_post_refer_img/MachineLearning/Thumbnail.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-01-07T00:00:00+09:00" />
+<meta property="article:published_time" content="2024-01-06T00:00:00+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/MachineLearning/Thumbnail.jpg" />
 <meta property="twitter:title" content="Support Vector Machine" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-01-07T00:00:00+09:00","datePublished":"2024-01-07T00:00:00+09:00","description":"Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.","headline":"Support Vector Machine","image":"https://jayarnim.github.io/_post_refer_img/MachineLearning/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/SVM/"},"url":"https://jayarnim.github.io/posts/SVM/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-01-06T00:00:00+09:00","datePublished":"2024-01-06T00:00:00+09:00","description":"Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.","headline":"Support Vector Machine","image":"https://jayarnim.github.io/_post_refer_img/MachineLearning/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/SVM/"},"url":"https://jayarnim.github.io/posts/SVM/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1378,17 +1378,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -1404,72 +1393,6 @@
       
         
         
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
       
 
       
@@ -1612,13 +1535,13 @@
 
 <time
   
-  data-ts="1704553200"
+  data-ts="1704466800"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Jan  7, 2024
+  Jan  6, 2024
 </time>
 
       </span>
@@ -1676,9 +1599,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1982 words"
+  title="1798 words"
 >
-  <em>11 min</em> read</span>
+  <em>9 min</em> read</span>
 
         </div>
       </div>
@@ -1693,12 +1616,12 @@
   <li>
     <p><strong>정의</strong> : <strong>마진(Margin)</strong>을 최대로 가져가는 <strong>초평면(Hyper Plane)</strong>을 규칙으로 하여 관측치를 분류하는 알고리즘</p>
 
-    <p><a href="/_post_refer_img/MachineLearning/07-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/07-01.png" alt="01" width="100%" loading="lazy"></a></p>
+    <p><a href="/_post_refer_img/MachineLearning/06-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/06-01.png" alt="01" width="100%" loading="lazy"></a></p>
   </li>
   <li>
     <p><strong>용어의 이해</strong></p>
 
-    <p><a href="/_post_refer_img/MachineLearning/07-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/07-02.png" alt="02" width="100%" loading="lazy"></a></p>
+    <p><a href="/_post_refer_img/MachineLearning/06-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/06-02.png" alt="02" width="100%" loading="lazy"></a></p>
 
     <ul>
       <li><strong>초평면(Hyper Plane)</strong> : 범주를 구분하는 경계</li>
@@ -1708,12 +1631,12 @@
   </li>
 </ul>
 
-<h2 id="결정-함수-도출"><span class="me-2">결정 함수 도출</span><a href="#결정-함수-도출" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="decision-function"><span class="me-2">Decision Function</span><a href="#decision-function" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<h3 id="정의"><span class="me-2">정의</span><a href="#정의" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="concept"><span class="me-2">Concept</span><a href="#concept" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p><a href="/_post_refer_img/MachineLearning/07-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/07-03.png" alt="03" width="100%" loading="lazy"></a></p>
+<p><a href="/_post_refer_img/MachineLearning/06-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/06-03.png" alt="03" width="100%" loading="lazy"></a></p>
 
 <ul>
   <li>
@@ -1755,9 +1678,9 @@
   </li>
 </ul>
 
-<h3 id="마진-도출"><span class="me-2">마진 도출</span><a href="#마진-도출" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="margin"><span class="me-2">Margin</span><a href="#margin" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p><a href="/_post_refer_img/MachineLearning/07-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/07-04.png" alt="04" width="100%" loading="lazy"></a></p>
+<p><a href="/_post_refer_img/MachineLearning/06-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/06-04.png" alt="04" width="100%" loading="lazy"></a></p>
 
 <ul>
   <li>
@@ -1773,17 +1696,17 @@
   \overrightarrow{w}^{T}(\overrightarrow{x}^{-} + margin \cdot \overrightarrow{w})+b=1\\
   \overrightarrow{w}^{T}\overrightarrow{x}^{-} + margin \cdot \overrightarrow{w}^{T}\overrightarrow{w} + b = 1\\
   (\overrightarrow{w}^{T}\overrightarrow{x}^{-} + b) + margin \cdot \overrightarrow{w}^{T}\overrightarrow{w} = 1\\
-  -1 + margin \cdot ||w||^2 = 1
+  -1 + margin \cdot  \Vert w \Vert ^2 = 1
   \end{aligned}\]
   </li>
   <li>
     <p>따라서 마진을 다음과 같이 도출할 수 있음</p>
 
-\[margin = \frac{2}{||w||^2}\]
+\[margin = \frac{2}{ \Vert w \Vert ^2}\]
   </li>
 </ul>
 
-<h3 id="마진-최대화"><span class="me-2">마진 최대화</span><a href="#마진-최대화" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="maximum-margin"><span class="me-2">Maximum Margin</span><a href="#maximum-margin" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li><strong>최적화 문제 정의</strong>
@@ -1791,8 +1714,8 @@
       <li>
         <p>목적 함수</p>
 
-\[\max{\frac{2}{||w||^2}}
-  \Rightarrow \min{\frac{1}{2}||w||^2}\]
+\[\max{\frac{2}{ \Vert w \Vert ^2}}
+  \Rightarrow \min{\frac{1}{2} \Vert w \Vert ^2}\]
       </li>
       <li>
         <p>제약 조건</p>
@@ -1805,7 +1728,7 @@
     <p><strong>라그랑주 함수 도출</strong></p>
 
 \[\begin{aligned}
-  L(w,b,\lambda)&amp;=\frac{1}{2}||w||^2 - \sum_{i=1}^{n}{\lambda_{i}\cdot\{y_{i}(\overrightarrow{w}^{T}\overrightarrow{x}_{i}+b)-1\}}
+  L(w,b,\lambda)&amp;=\frac{1}{2} \Vert w \Vert ^2 - \sum_{i=1}^{n}{\lambda_{i}\cdot\{y_{i}(\overrightarrow{w}^{T}\overrightarrow{x}_{i}+b)-1\}}
   \end{aligned}\]
 
     <ul>
@@ -1859,7 +1782,7 @@
         <p>편미분한 결과를 라그랑주 듀얼 함수에 대입</p>
 
 \[\begin{aligned}
-  \frac{1}{2}||w^{*}||^2
+  \frac{1}{2} \Vert w^{*} \Vert ^2
   &amp;= \frac{1}{2}\overrightarrow{w}^{*}\cdot\overrightarrow{w}^{*}\\
   &amp;= \frac{1}{2}\sum_{i=1}^{n}{\lambda_{i}y_{i}\overrightarrow{x}_{i}} \cdot \sum_{j=1}^{n}{\lambda_{j}y_{j}\overrightarrow{x}_{j}}\\
   &amp;= \frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}{\lambda_{i}\lambda_{j}y_{i}y_{j}\overrightarrow{x}_{i}^{T}\overrightarrow{x}_{j}}\\\\
@@ -1873,7 +1796,7 @@
   &amp;= \inf_{w,b}{L(w,b,\lambda)}\\
   &amp;= \max_{\lambda}\min_{w,b}{L(w,b,\lambda)}\\
   &amp;= \max_{\lambda}{L(\lambda)}\\
-  &amp;= \max_{\lambda}{\left[\frac{1}{2}||w^{*}||^2 - \sum_{i=1}^{n}{\lambda_{i}\cdot\{y_{i}(\overrightarrow{w}^{T}\overrightarrow{x}_{i}+b)-1\}}\right]}\\
+  &amp;= \max_{\lambda}{\left[\frac{1}{2} \Vert w^{*} \Vert ^2 - \sum_{i=1}^{n}{\lambda_{i}\cdot\{y_{i}(\overrightarrow{w}^{T}\overrightarrow{x}_{i}+b)-1\}}\right]}\\
   &amp;= \max_{\lambda}{\left[\sum_{i=1}^{n}{\lambda_{i}} - \frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{n}{\lambda_{i}\lambda_{j}y_{i}y_{j}\overrightarrow{x}_{i}^{T}\overrightarrow{x}_{j}}\right]}
   \end{aligned}\]
       </li>
@@ -1881,7 +1804,7 @@
   </li>
 </ul>
 
-<h3 id="서포트-벡터-도출"><span class="me-2">서포트 벡터 도출</span><a href="#서포트-벡터-도출" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="support-vector"><span class="me-2">Support Vector</span><a href="#support-vector" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
@@ -1909,9 +1832,9 @@
 \[\begin{aligned}
   b^{*}
   &amp;= y_{i \in SV} - \overrightarrow{w}^{T}\overrightarrow{x}_{i \in SV}\\
-  &amp;= \frac{1}{|SV|}\sum_{i \in SV}{\left[y_{i} - \overrightarrow{w}^{T}\overrightarrow{x}_{i}\right]}\\
-  &amp;= \frac{1}{|SV|}\sum_{i \in SV}{\left[y_{i} - \left(\sum_{j \in SV}{\lambda_{j}y_{j}\overrightarrow{x}_{j}}\right)\overrightarrow{x}_{i}\right]}\;(\because \overrightarrow{w}^{*}=\sum_{i}{\lambda_{i}y_{i}\overrightarrow{x}_{i}})\\
-  &amp;= \frac{1}{|SV|}\sum_{i \in SV}\sum_{j \in SV}{\left[y_{i} - \lambda_{j}y_{j}\overrightarrow{x}_{j}\overrightarrow{x}_{i}\right]}
+  &amp;= \frac{1}{ \vert SV \vert }\sum_{i \in SV}{\left[y_{i} - \overrightarrow{w}^{T}\overrightarrow{x}_{i}\right]}\\
+  &amp;= \frac{1}{ \vert SV \vert }\sum_{i \in SV}{\left[y_{i} - \left(\sum_{j \in SV}{\lambda_{j}y_{j}\overrightarrow{x}_{j}}\right)\overrightarrow{x}_{i}\right]}\;(\because \overrightarrow{w}^{*}=\sum_{i}{\lambda_{i}y_{i}\overrightarrow{x}_{i}})\\
+  &amp;= \frac{1}{ \vert SV \vert }\sum_{i \in SV}\sum_{j \in SV}{\left[y_{i} - \lambda_{j}y_{j}\overrightarrow{x}_{j}\overrightarrow{x}_{i}\right]}
   \end{aligned}\]
       </li>
     </ul>
@@ -1921,13 +1844,13 @@
 
 \[\begin{aligned}
   SV 
-  &amp;= \{\overrightarrow{x}_{SV}|\overrightarrow{w}^{*} \cdot \overrightarrow{x}_{SV} + b^{*}=|1|\}\\
-  &amp;= \left\{ \overrightarrow{x}_{SV}|\left(\sum_{i=1}^{n}{\lambda_{i}^{*}y_{i}\overrightarrow{x}_{i}}\right) \cdot \overrightarrow{x}_{SV} + \frac{1}{|SV|}\sum_{i \in SV}\sum_{j \in SV}{\left[y_{i} - \lambda_{j}y_{j}\overrightarrow{x}_{j}\overrightarrow{x}_{i}\right]}=|1| \right\}
+  &amp;= \{\overrightarrow{x}_{SV} \vert \overrightarrow{w}^{*} \cdot \overrightarrow{x}_{SV} + b^{*}= \vert 1 \vert \}\\
+  &amp;= \left\{ \overrightarrow{x}_{SV} \vert \left(\sum_{i=1}^{n}{\lambda_{i}^{*}y_{i}\overrightarrow{x}_{i}}\right) \cdot \overrightarrow{x}_{SV} + \frac{1}{ \vert SV \vert }\sum_{i \in SV}\sum_{j \in SV}{\left[y_{i} - \lambda_{j}y_{j}\overrightarrow{x}_{j}\overrightarrow{x}_{i}\right]}= \vert 1 \vert  \right\}
   \end{aligned}\]
   </li>
 </ul>
 
-<h3 id="요약"><span class="me-2">요약</span><a href="#요약" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="summary"><span class="me-2">Summary</span><a href="#summary" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 \[\begin{aligned}
 y_{q}
@@ -1938,7 +1861,7 @@ y_{q}
 
 f(\overrightarrow{q})
 &amp;= \overrightarrow{w}^{*} \cdot \overrightarrow{q} + b^{*}\\
-&amp;= \left(\sum_{i \in SV}{\lambda_{i}y_{i}\overrightarrow{x}_{i}}\right) \cdot \overrightarrow{q} + \frac{1}{|SV|}\sum_{i \in SV}\sum_{j \in SV}{\left[y_{i} - \lambda_{j}y_{j}\overrightarrow{x}_{j}\overrightarrow{x}_{i}\right]}
+&amp;= \left(\sum_{i \in SV}{\lambda_{i}y_{i}\overrightarrow{x}_{i}}\right) \cdot \overrightarrow{q} + \frac{1}{ \vert SV \vert }\sum_{i \in SV}\sum_{j \in SV}{\left[y_{i} - \lambda_{j}y_{j}\overrightarrow{x}_{j}\overrightarrow{x}_{i}\right]}
 \end{aligned}\]
 
 <ul>
@@ -1947,19 +1870,19 @@ f(\overrightarrow{q})
   <li>$f(\overrightarrow{q})$ : 결정 함수로서 초평면 $\overrightarrow{w}^{T}\overrightarrow{x}+b=0$ 과 벡터의 사영 거리</li>
 </ul>
 
-<h2 id="소프트-마진"><span class="me-2">소프트 마진</span><a href="#소프트-마진" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="soft-margin"><span class="me-2">Soft Margin</span><a href="#soft-margin" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
   <li>
     <p><strong>하드 마진(Hard Margin)의 문제점</strong> : 이상 관측치가 존재하는 경우 마진을 최대화하는 초평면을 탐색하기 어려움</p>
 
-    <p><a href="/_post_refer_img/MachineLearning/07-05.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/07-05.png" alt="05" width="100%" loading="lazy"></a></p>
+    <p><a href="/_post_refer_img/MachineLearning/06-05.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/06-05.png" alt="05" width="100%" loading="lazy"></a></p>
   </li>
   <li>
     <p><strong>소프트 마진(Soft Margin)의 해결책</strong> : 마진 위반 $\xi$ 를 허용하여 일부 이상 관측치를 배제했을 때 마진을 최대화하는 초평면을 탐색함</p>
 
-    <p><a href="/_post_refer_img/MachineLearning/07-06.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/07-06.png" alt="06" width="100%" loading="lazy"></a></p>
+    <p><a href="/_post_refer_img/MachineLearning/06-06.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/06-06.png" alt="06" width="100%" loading="lazy"></a></p>
 
     <ul>
       <li><strong>마진 위반(Margin Violation; $\xi$)</strong> : 초평면 근방에서 발생 가능한 소수의 이상 관측치에 대한 오류로서, 해당 관측치로부터 서포트 벡터를 지나고 초평면과 평행한 직선까지의 유클리드 거리</li>
@@ -1974,7 +1897,7 @@ f(\overrightarrow{q})
     <p><strong>하드 마진의 최적화 문제</strong></p>
 
 \[\begin{aligned}
-  &amp;\min{\frac{1}{2}||w||^2}\\\\
+  &amp;\min{\frac{1}{2} \Vert w \Vert ^2}\\\\
   \quad \text{s.t.} \quad &amp;y_{i}(\overrightarrow{w}^{T}\overrightarrow{x}_{i}+b) \ge 1
   \end{aligned}\]
   </li>
@@ -1982,7 +1905,7 @@ f(\overrightarrow{q})
     <p><strong>소프트 마진의 최적화 문제</strong></p>
 
 \[\begin{aligned}
-  &amp;\min{\left[\frac{1}{2}{||w||^2}+C\sum_{i=1}^{n}{\xi_i}\right]}\\\\
+  &amp;\min{\left[\frac{1}{2}{ \Vert w \Vert ^2}+C\sum_{i=1}^{n}{\xi_i}\right]}\\\\
   \quad \text{s.t.} \quad &amp;y_{i}(\overrightarrow{w}^{T}\overrightarrow{x}_{i}+b) \ge 1-\xi_i,\\
   &amp;\xi_i \ge 0
   \end{aligned}\]
@@ -1994,13 +1917,13 @@ f(\overrightarrow{q})
       <li>
         <p>$C$ : 마진 위반에 대한 규제 강도</p>
 
-        <p><a href="/_post_refer_img/MachineLearning/07-07.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/07-07.png" alt="07" width="100%" loading="lazy"></a></p>
+        <p><a href="/_post_refer_img/MachineLearning/06-07.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/06-07.png" alt="07" width="100%" loading="lazy"></a></p>
       </li>
     </ul>
   </li>
 </ul>
 
-<h3 id="라그랑주-승수법에-기초한-풀이"><span class="me-2">라그랑주 승수법에 기초한 풀이</span><a href="#라그랑주-승수법에-기초한-풀이" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="how-to-solve"><span class="me-2">How to Solve</span><a href="#how-to-solve" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
@@ -2008,7 +1931,7 @@ f(\overrightarrow{q})
 
 \[\begin{aligned}
   L(w,b,\lambda,\xi,\mu)
-  = &amp;\left[\frac{1}{2}||w||^2 - \sum_{i=1}^{n}{\lambda_{i}\{y_{i}(\overrightarrow{w}^{T}+b)-(1-\xi_{i})\}}\right]\\
+  = &amp;\left[\frac{1}{2} \Vert w \Vert ^2 - \sum_{i=1}^{n}{\lambda_{i}\{y_{i}(\overrightarrow{w}^{T}+b)-(1-\xi_{i})\}}\right]\\
   &amp;+ \left[C\sum_{i=1}^{n}{\xi_{i}}-\sum_{i=1}^{b}{\mu_{i}\xi_{i}}\right]
   \end{aligned}\]
 
@@ -2072,11 +1995,11 @@ f(\overrightarrow{q})
   <li>
     <p><strong>정의</strong> : 선형으로는 구분하기 어려운 저차원 공간상의 데이터 세트를, 적절한 결정 경계를 찾을 수 있는 고차원 공간으로 매핑하는 기법</p>
 
-    <p><a href="/_post_refer_img/MachineLearning/07-08.jpeg" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/07-08.jpeg" alt="08" width="100%" loading="lazy"></a></p>
+    <p><a href="/_post_refer_img/MachineLearning/06-08.jpeg" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/06-08.jpeg" alt="08" width="100%" loading="lazy"></a></p>
   </li>
 </ul>
 
-<h3 id="머서의-정리mercers-theorem"><span class="me-2">머서의 정리(Mercer’s Theorem)</span><a href="#머서의-정리mercers-theorem" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="mercers-theorem"><span class="me-2">Mercer’s Theorem</span><a href="#mercers-theorem" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <blockquote>
   <p>저차원 공간 $L$ 에서 고차원 공간 $H$ 로 관측치들을 매핑하는 커널함수 $K$ 는 $L$ 에서 표현된 관측치들 간 유클리드 거리와 $H$ 에서 표현된 관측치들 간 유클리드 거리를 보존함</p>
@@ -2106,7 +2029,7 @@ f(\overrightarrow{q})
   </li>
 </ul>
 
-<h3 id="커널함수의-종류"><span class="me-2">커널함수의 종류</span><a href="#커널함수의-종류" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="type"><span class="me-2">Type</span><a href="#type" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
@@ -2122,7 +2045,7 @@ f(\overrightarrow{q})
   <li>
     <p><strong>Radial Basis Function(RBF)</strong></p>
 
-\[K(\overrightarrow{a}, \overrightarrow{b}) = \exp(-\gamma ||\overrightarrow{a}- \overrightarrow{b}||^2)\]
+\[K(\overrightarrow{a}, \overrightarrow{b}) = \exp(-\gamma  \Vert \overrightarrow{a}- \overrightarrow{b} \Vert ^2)\]
   </li>
   <li>
     <p><strong>Hyperbolic Tangent</strong></p>
@@ -2134,7 +2057,7 @@ f(\overrightarrow{q})
 <h2 id="svr"><span class="me-2">SVR</span><a href="#svr" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<p><a href="/_post_refer_img/MachineLearning/07-09.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/07-09.png" alt="09" width="100%" loading="lazy"></a></p>
+<p><a href="/_post_refer_img/MachineLearning/06-09.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/06-09.png" alt="09" width="100%" loading="lazy"></a></p>
 
 <ul>
   <li>
@@ -2148,7 +2071,7 @@ f(\overrightarrow{q})
   <li>
     <p><strong>차이점</strong> : 제약 조건</p>
 
-    <p><a href="/_post_refer_img/MachineLearning/07-10.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/07-10.png" alt="10" width="100%" loading="lazy"></a></p>
+    <p><a href="/_post_refer_img/MachineLearning/06-10.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/06-10.png" alt="10" width="100%" loading="lazy"></a></p>
 
     <ul>
       <li>
@@ -2175,7 +2098,7 @@ f(\overrightarrow{q})
     <p><strong>SVR 최적화 문제</strong></p>
 
 \[\overrightarrow{\hat{w}},\hat{b},\hat{\xi}_{i},\hat{\eta}_{i}
-  =\text{arg} \min_{\overrightarrow{w},b,\xi,\eta}{\left[\frac{1}{2}||w||^{2}+C\sum_{i=1}^{n}{(\xi_{i}+\eta_{i})}\right]}\]
+  =\text{arg} \min_{\overrightarrow{w},b,\xi,\eta}{\left[\frac{1}{2} \Vert w \Vert ^{2}+C\sum_{i=1}^{n}{(\xi_{i}+\eta_{i})}\right]}\]
 
 \[\begin{aligned}
   \\ \text{s.t.} \quad
@@ -2183,81 +2106,6 @@ f(\overrightarrow{q})
   &amp; \varepsilon + \eta_{i} - f(\overrightarrow{x}) + y_{i} \ge 0,\\
   &amp; \xi_{i}, \eta_{i} \ge 0
   \end{aligned}\]
-  </li>
-</ul>
-
-<h2 id="sklearnsvmsvc"><span class="me-2"><a href="https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn-svm-svc">sklearn.svm.SVC</a></span><a href="#sklearnsvmsvc" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<div class="language-python highlighter-rouge"><div class="code-header">
-        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="n">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVC</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<h3 id="general-hyperparameter"><span class="me-2">General HyperParameter</span><a href="#general-hyperparameter" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">random_state(default : None)</code></li>
-</ul>
-
-<h3 id="model-hyperparameter"><span class="me-2">Model HyperParameter</span><a href="#model-hyperparameter" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">decision_function_shape(default : 'ovr')</code> : 다항 분류 시 결정 경계 탐색 방법
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">'ovo'</code> : One VS One(일대일 구분 결정 경계 탐색)</li>
-      <li><code class="language-plaintext highlighter-rouge">'ovr'</code> : One VS Rest(일대다 구분 결정 경계 탐색)</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="soft-margin"><span class="me-2">Soft Margin</span><a href="#soft-margin" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">C(default : 1.0)</code> : 마진 위반에 대한 규제 강도</p>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">gamma(default : 'scale')</code> : 결정 경계를 얼마나 유연하게 그을 것인가
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">'auto'</code> : $\displaystyle\frac{1}{n(features)}$</li>
-      <li><code class="language-plaintext highlighter-rouge">'scale'</code> : $\displaystyle\frac{1}{n(features) \times X.var()}$</li>
-      <li><code class="language-plaintext highlighter-rouge">float type</code></li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">tol(default : 0.001)</code> : 허용 오차</li>
-</ul>
-
-<h3 id="kernel-trick-1"><span class="me-2">Kernel Trick</span><a href="#kernel-trick-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">kernel(default : 'rbf')</code> : 커널함수 설정
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">'linear'</code> : $\overrightarrow{a}^T \overrightarrow{b}$</li>
-      <li><code class="language-plaintext highlighter-rouge">'poly'</code> : $(\gamma \overrightarrow{a}^T \overrightarrow{b} + r)^d$</li>
-      <li><code class="language-plaintext highlighter-rouge">'rbf'</code> : $\tanh(\gamma \overrightarrow{a}^T \overrightarrow{b} + r)$</li>
-    </ul>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">degree(default : 3)</code> : 다항식 커널함수의 차수 $d$ 설정</p>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">coef0(default : 0.0)</code> : 다항식 커널함수의 상수항 $r$ 설정</li>
-</ul>
-
-<h3 id="to-prevent-overfitting"><span class="me-2">To Prevent Overfitting</span><a href="#to-prevent-overfitting" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">max_iter(default : -1)</code> : 결정 경계 탐색 최대 횟수</li>
-</ul>
-
-<h3 id="to-prevent-underfitting"><span class="me-2">To Prevent Underfitting</span><a href="#to-prevent-underfitting" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">class_weight(default : None)</code> : 가중할 범주와 그 값
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">'balanced'</code></li>
-      <li><code class="language-plaintext highlighter-rouge">dictionary type</code></li>
-    </ul>
   </li>
 </ul>
 
@@ -2907,6 +2755,165 @@ f(\overrightarrow{q})
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -3185,171 +3192,6 @@ f(\overrightarrow{q})
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -3537,8 +3379,6 @@ f(\overrightarrow{q})
     
     
     
-    
-      
     
   
     
@@ -3925,6 +3765,263 @@ f(\overrightarrow{q})
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -3988,13 +4085,6 @@ f(\overrightarrow{q})
     
     
     
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -4015,6 +4105,9 @@ f(\overrightarrow{q})
         <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
@@ -4022,9 +4115,6 @@ f(\overrightarrow{q})
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/microeconomics/">Microeconomics</a>
@@ -4036,10 +4126,10 @@ f(\overrightarrow{q})
         <a class="post-tag btn btn-outline-primary" href="/tags/regression/">Regression</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/dev-env/">Dev. Env.</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/unsupervised-learning/">Unsupervised Learning</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/dvcs/">DVCS</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/dev-env/">Dev. Env.</a>
       
     </div>
   </section>
@@ -4155,19 +4245,79 @@ f(\overrightarrow{q})
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -4279,11 +4429,11 @@ f(\overrightarrow{q})
 
 <time
   
-  data-ts="1704466800"
+  data-ts="1704380400"
   data-df="ll"
   
 >
-  Jan  6, 2024
+  Jan  5, 2024
 </time>
 
               <h4 class="pt-0 my-2">kNN</h4>
@@ -4307,11 +4457,11 @@ f(\overrightarrow{q})
 
 <time
   
-  data-ts="1704380400"
+  data-ts="1704294000"
   data-df="ll"
   
 >
-  Jan  5, 2024
+  Jan  4, 2024
 </time>
 
               <h4 class="pt-0 my-2">Naive Bayes</h4>
@@ -4335,11 +4485,11 @@ f(\overrightarrow{q})
 
 <time
   
-  data-ts="1704294000"
+  data-ts="1704207600"
   data-df="ll"
   
 >
-  Jan  4, 2024
+  Jan  3, 2024
 </time>
 
               <h4 class="pt-0 my-2">Decision Tree</h4>
@@ -4900,6 +5050,165 @@ f(\overrightarrow{q})
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -5178,171 +5487,6 @@ f(\overrightarrow{q})
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -5530,8 +5674,6 @@ f(\overrightarrow{q})
     
     
     
-    
-      
     
   
     
@@ -5918,6 +6060,263 @@ f(\overrightarrow{q})
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -5981,13 +6380,6 @@ f(\overrightarrow{q})
     
     
     
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -6008,6 +6400,9 @@ f(\overrightarrow{q})
         <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
@@ -6015,9 +6410,6 @@ f(\overrightarrow{q})
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/microeconomics/">Microeconomics</a>
@@ -6029,10 +6421,10 @@ f(\overrightarrow{q})
         <a class="post-tag btn btn-outline-primary" href="/tags/regression/">Regression</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/dev-env/">Dev. Env.</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/unsupervised-learning/">Unsupervised Learning</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/dvcs/">DVCS</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/dev-env/">Dev. Env.</a>
       
     </div>
   </section>

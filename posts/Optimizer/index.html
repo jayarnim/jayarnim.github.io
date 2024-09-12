@@ -1216,6 +1216,77 @@
     <!-- combine -->
     
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
 
   
 
@@ -1462,7 +1533,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1114 words"
+  title="1105 words"
 >
   <em>6 min</em> read</span>
 
@@ -1479,7 +1550,7 @@
   <li>
     <p><strong>그라디언트(Gradient)</strong> : 다변수 함수에 대하여 모든 방향으로의 순간변화율 벡터</p>
 
-    <p><a href="/_post_refer_img/MachineLearning/08-05.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/08-05.png" alt="05" width="100%" loading="lazy"></a></p>
+    <p><a href="/_post_refer_img/DeepLearning/03-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/DeepLearning/03-01.png" alt="01" width="100%" loading="lazy"></a></p>
 
 \[\begin{aligned}
   \nabla{f(x_{1},x_{2},\cdots,x_{n})}
@@ -1494,7 +1565,7 @@
   <li>
     <p><strong>경사하강법(Gradient Descent)</strong> : 손실 함수의 도함수(그라디언트)를 최소화하는 가중치를 추정하는 방법</p>
 
-    <p><a href="/_post_refer_img/MachineLearning/08-06.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/08-06.png" alt="06" width="100%" loading="lazy"></a></p>
+    <p><a href="/_post_refer_img/DeepLearning/03-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/DeepLearning/03-02.png" alt="02" width="100%" loading="lazy"></a></p>
   </li>
   <li>
     <p><strong>절차</strong></p>
@@ -1517,16 +1588,18 @@
   <li>
     <p><strong>학습률(Learning Rate)</strong> : 손실 함수에 대하여 그 극소점을 탐색하기 위한 아규먼트 갱신 보폭</p>
 
+    <p><a href="/_post_refer_img/DeepLearning/03-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/DeepLearning/03-03.png" alt="03" width="100%" loading="lazy"></a></p>
+
     <ul>
       <li>
-        <p><strong>학습률이 낮을수록 과대적합될 가능성이 높음</strong></p>
+        <p>학습률이 낮을수록 과대적합될 가능성이 높음</p>
 
-        <p><a href="/_post_refer_img/MachineLearning/08-07.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/08-07.png" alt="07" width="100%" loading="lazy"></a></p>
+        <p><a href="/_post_refer_img/DeepLearning/03-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/DeepLearning/03-04.png" alt="04" width="100%" loading="lazy"></a></p>
       </li>
       <li>
-        <p><strong>학습률이 높을수록 과소적합될 가능성이 높음</strong></p>
+        <p>학습률이 높을수록 과소적합될 가능성이 높음</p>
 
-        <p><a href="/_post_refer_img/MachineLearning/08-08.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/08-08.png" alt="08" width="100%" loading="lazy"></a></p>
+        <p><a href="/_post_refer_img/DeepLearning/03-05.png" class="popup img-link  shimmer"><img src="/_post_refer_img/DeepLearning/03-05.png" alt="05" width="100%" loading="lazy"></a></p>
       </li>
     </ul>
   </li>
@@ -1535,13 +1608,13 @@
 <h2 id="example-three-layer-model"><span class="me-2">Example: three-layer model</span><a href="#example-three-layer-model" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<p><a href="/_post_refer_img/DeepLearning/03-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/DeepLearning/03-02.png" alt="02" width="100%" loading="lazy"></a></p>
+<p><a href="/_post_refer_img/DeepLearning/03-06.png" class="popup img-link  shimmer"><img src="/_post_refer_img/DeepLearning/03-06.png" alt="06" width="100%" loading="lazy"></a></p>
 
-<h3 id="순전파-연산-과정"><span class="me-2">순전파 연산 과정</span><a href="#순전파-연산-과정" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="forward-propagation-process"><span class="me-2">Forward Propagation Process</span><a href="#forward-propagation-process" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
-    <p><strong>손실 $e$ 를 다음과 같이 정의하자</strong></p>
+    <p>손실 $e$ 를 다음과 같이 정의하자</p>
 
 \[\begin{aligned}
   e
@@ -1555,7 +1628,7 @@
     </ul>
   </li>
   <li>
-    <p><strong>$n$ 개의 계층으로 구성된 모델의 예측값 $\hat{y}$ 은 다음과 같음</strong></p>
+    <p>$n$ 개의 계층으로 구성된 모델의 예측값 $\hat{y}$ 은 다음과 같음</p>
 
 \[\hat{y}
   = f_{n} \circ g_{n} \circ f_{n-1} \circ g_{n-1} \circ \cdots \circ f_{1} \circ g_{1}(x)\]
@@ -1577,7 +1650,7 @@
     </ul>
   </li>
   <li>
-    <p><strong>$3$ 개의 계층으로 구성된 모델의 손실 $e$ 를 다음과 같이 서술할 수 있음</strong></p>
+    <p>$3$ 개의 계층으로 구성된 모델의 손실 $e$ 를 다음과 같이 서술할 수 있음</p>
 
 \[\begin{aligned}
   e
@@ -1601,11 +1674,11 @@
   </li>
 </ul>
 
-<h3 id="역전파-학습-과정"><span class="me-2">역전파 학습 과정</span><a href="#역전파-학습-과정" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="backward-propagation-process"><span class="me-2">Backward Propagation Process</span><a href="#backward-propagation-process" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
-    <p><strong>손실 $e$ 를 $1$ 번째 계층 가중치 $w_{1}$ 에 대하여 미분하면 다음과 같음</strong></p>
+    <p>손실 $e$ 를 $1$ 번째 계층 가중치 $w_{1}$ 에 대하여 미분하면 다음과 같음</p>
 
 \[\begin{aligned}
   \frac{\partial e}{\partial w_{1}}
@@ -1619,7 +1692,7 @@
   \end{aligned}\]
   </li>
   <li>
-    <p><strong>위 수식의 각 항목을 다음과 같이 일반화할 수 있음</strong></p>
+    <p>위 수식의 각 항목을 다음과 같이 일반화할 수 있음</p>
 
 \[\begin{aligned}
   \frac{\partial e}{\partial h_{n}}
@@ -1639,7 +1712,7 @@
   \end{aligned}\]
   </li>
   <li>
-    <p><strong>손실 $e$ 를 $k$ 번째 계층 가중치 $w_{k}$ 에 대하여 미분한 값을 다음과 같이 일반화할 수 있음</strong></p>
+    <p>손실 $e$ 를 $k$ 번째 계층 가중치 $w_{k}$ 에 대하여 미분한 값을 다음과 같이 일반화할 수 있음</p>
 
 \[\begin{aligned}
   \frac{\partial e}{\partial w_{k}}
@@ -1654,7 +1727,7 @@
     </ul>
   </li>
   <li>
-    <p><strong>경사하강법에 의해 갱신된 $k$ 번째 계층의 가중치 $(w_{k})_{new}$ 는 다음과 같음</strong></p>
+    <p>경사하강법에 의해 갱신된 $k$ 번째 계층의 가중치 $(w_{k})_{new}$ 는 다음과 같음</p>
 
 \[\begin{aligned}
   (w_{k})_{new}
@@ -1664,10 +1737,10 @@
   </li>
 </ul>
 
-<h2 id="종류"><span class="me-2">종류</span><a href="#종류" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="type"><span class="me-2">Type</span><a href="#type" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<p><a href="/_post_refer_img/DeepLearning/03-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/DeepLearning/03-03.png" alt="03" width="100%" loading="lazy"></a></p>
+<p><a href="/_post_refer_img/DeepLearning/03-07.png" class="popup img-link  shimmer"><img src="/_post_refer_img/DeepLearning/03-07.png" alt="07" width="100%" loading="lazy"></a></p>
 
 <h3 id="경사하강법-각-항목의-의미"><span class="me-2">경사하강법 각 항목의 의미</span><a href="#경사하강법-각-항목의-의미" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -1678,7 +1751,7 @@
   <li>
     <p>$\eta$ : 학습률(Learning Rate)로서 <strong>갱신 크기</strong></p>
 
-    <p><a href="/_post_refer_img/DeepLearning/03-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/DeepLearning/03-04.png" alt="04" width="100%" loading="lazy"></a></p>
+    <p><a href="/_post_refer_img/DeepLearning/03-08.png" class="popup img-link  shimmer"><img src="/_post_refer_img/DeepLearning/03-08.png" alt="08" width="100%" loading="lazy"></a></p>
   </li>
   <li>
     <p>$\displaystyle\frac{\partial e_{t-1}}{\partial w_{t-1}}$ : 가중치에 대한 손실의 변화율 벡터로서 <strong>갱신 방향</strong></p>
@@ -1687,7 +1760,7 @@
 
 <h3 id="갱신-크기-중심"><span class="me-2">갱신 크기 중심</span><a href="#갱신-크기-중심" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p><a href="/_post_refer_img/DeepLearning/03-05.png" class="popup img-link  shimmer"><img src="/_post_refer_img/DeepLearning/03-05.png" alt="05" width="100%" loading="lazy"></a></p>
+<p><a href="/_post_refer_img/DeepLearning/03-09.png" class="popup img-link  shimmer"><img src="/_post_refer_img/DeepLearning/03-09.png" alt="09" width="100%" loading="lazy"></a></p>
 
 <ul>
   <li>
@@ -1727,7 +1800,7 @@
 
 <h3 id="갱신-방향-중심"><span class="me-2">갱신 방향 중심</span><a href="#갱신-방향-중심" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p><a href="/_post_refer_img/DeepLearning/03-06.png" class="popup img-link  shimmer"><img src="/_post_refer_img/DeepLearning/03-06.png" alt="06" width="100%" loading="lazy"></a></p>
+<p><a href="/_post_refer_img/DeepLearning/03-10.png" class="popup img-link  shimmer"><img src="/_post_refer_img/DeepLearning/03-10.png" alt="10" width="100%" loading="lazy"></a></p>
 
 <ul>
   <li>
@@ -2387,6 +2460,165 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2665,171 +2897,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -3017,8 +3084,6 @@
     
     
     
-    
-      
     
   
     
@@ -3405,6 +3470,263 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -3468,13 +3790,6 @@
     
     
     
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -3495,6 +3810,9 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
@@ -3502,9 +3820,6 @@
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/microeconomics/">Microeconomics</a>
@@ -3516,10 +3831,10 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/regression/">Regression</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/dev-env/">Dev. Env.</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/unsupervised-learning/">Unsupervised Learning</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/dvcs/">DVCS</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/dev-env/">Dev. Env.</a>
       
     </div>
   </section>
@@ -3571,6 +3886,66 @@
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -4476,6 +4851,165 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -4754,171 +5288,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -5106,8 +5475,6 @@
     
     
     
-    
-      
     
   
     
@@ -5494,6 +5861,263 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -5557,13 +6181,6 @@
     
     
     
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -5584,6 +6201,9 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
@@ -5591,9 +6211,6 @@
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/microeconomics/">Microeconomics</a>
@@ -5605,10 +6222,10 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/regression/">Regression</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/dev-env/">Dev. Env.</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/unsupervised-learning/">Unsupervised Learning</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/dvcs/">DVCS</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/dev-env/">Dev. Env.</a>
       
     </div>
   </section>
