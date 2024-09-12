@@ -19,6 +19,8 @@ image:
 
 ### Components of Error
 
+![03](/_post_refer_img/RegressionAnalysis/06-03.png){: width="100%"}
+
 $$\begin{aligned}
 \text{Error}
 &= \mathbb{E}\left[\left(Y-\hat{f}(X)\right)^{2}\right]\\
@@ -49,13 +51,13 @@ $$\begin{aligned}
 
 ### Bias-Variance Trade-off
 
-![03](/_post_refer_img/RegressionAnalysis/06-03.png){: width="100%"}
-
-- **편향-분산 트레이드오프(Bias-Variance Trade-off)** : 모형 복잡도에 따른 편향과 분산의 상충 관계
+![04](/_post_refer_img/RegressionAnalysis/06-04.png){: width="100%"}
 
 - **편향(Bias)** : 모형이 학습 데이터의 패턴을 충분히 학습하지 못해 발생하는 **과소적합(Underfitting)** 문제로서, 학습 데이터에 내재된 패턴의 복잡도에 비해 모형이 간소화되어 설계된 경우 발생함
 
 - **분산(Variance)** : 모형이 학습 데이터에 너무 과도하게 적응하여 발생하는 **과대적합(Overfitting)** 문제로서, 모형 복잡도에 비해 학습 데이터가 희소한 경우 발생함
+
+- **편향-분산 트레이드오프(Bias-Variance Trade-off)** : 모형 복잡도에 따른 편향과 분산의 상충 관계
 
 ### Improvement of OLS
 
