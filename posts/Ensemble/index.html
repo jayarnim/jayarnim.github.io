@@ -1063,7 +1063,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="450 words"
+  title="537 words"
 >
   <em>2 min</em> read</span>
 
@@ -1166,8 +1166,8 @@
     <p>$m$ 번째 모형의 예측값을 다음과 같이 정의하자</p>
 
 \[\begin{aligned}
-  \underbrace{y_{m}}_{\text{predict of m-th model}}
-  &amp;= \underbrace{f(x)}_{\text{real value}} + \underbrace{\epsilon_{m}(x)}_{\text{error}}
+  \underbrace{y_{m}(x)}_{\begin{array}{c} \text{predict value} \\ \text{of m-th model} \end{array}}
+  &amp;= \underbrace{f(x)}_{\text{real value}} + \underbrace{\epsilon_{m}(x)}_{\begin{array}{c} \text{error} \\ \text{of m-th model} \end{array}}
   \end{aligned}\]
   </li>
   <li>
@@ -1176,6 +1176,45 @@
 \[\begin{aligned}
   \therefore \mathbb{E}\left[\epsilon_{m}^{2}(x)\right]
   &amp;= \mathbb{E}\left[\left(y_{m} - f(x)\right)^{2}\right]
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>개별 모형의 예측 오차 자승 평균 $\xi_{\text{avg}}$</p>
+
+\[\begin{aligned}
+  \xi_{\text{avg}}
+  &amp;= \frac{1}{M}\sum_{m=1}^{M}{\mathbb{E}\left[\epsilon_{m}^{2}(x)\right]}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>앙상블 모형의 예측 오차 자승 $\xi_{\text{ensemble}}$</p>
+
+\[\begin{aligned}
+  \xi_{\text{ensemble}}
+  &amp;= \mathbb{E}\left[\left(\frac{1}{M}\sum_{m=1}^{M}{y_{m}(x)}-f(x)\right)^{2}\right]\\
+  &amp;= \mathbb{E}\left[\left(\frac{1}{M}\sum_{m=1}^{M}{y_{m}(x)}-\frac{1}{M}\sum_{m=1}^{M}{f(x)}\right)^{2}\right]\\
+  &amp;= \mathbb{E}\left[\left(\frac{1}{M}\sum_{m=1}^{M}{\epsilon_{m}(x)}\right)^{2}\right]
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Cauchy-Schwartz Inequation</p>
+
+\[\begin{aligned}
+  \left(\alpha_{1} \cdot \beta_{1} + \cdots + \alpha_{n} \cdot \beta_{n}\right)^{2} \le \left(\alpha_{1}^{2}+\cdots+\alpha_{n}^{2}\right)\left(\beta_{1}^{2}+\cdots+\beta_{n}^{2}\right)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>$\text{if} \quad \alpha_{m}=1, \beta_{m}=\epsilon_{m}(x)$</p>
+
+\[\begin{aligned}
+  \left(\sum_{m=1}^{M}{1 \cdot \epsilon_{m}(x)}\right)^{2} \le M \cdot \sum_{m=1}^{M}{\epsilon_{m}^{2}(x)}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>$\times \displaystyle\frac{1}{M^{2}}$</p>
+
+\[\begin{aligned}
+  \underbrace{\left(\frac{1}{M}\sum_{m=1}^{M}{\epsilon_{m}(x)}\right)^{2}}_{\xi_{\text{ensemble}}} \le \underbrace{\frac{1}{M} \sum_{m=1}^{M}{\epsilon_{m}^{2}(x)}}_{\xi_{\text{avg}}}
   \end{aligned}\]
   </li>
 </ul>
