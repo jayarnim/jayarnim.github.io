@@ -908,6 +908,28 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -923,17 +945,6 @@
       
         
         
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
       
 
       
@@ -1063,7 +1074,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="541 words"
+  title="563 words"
 >
   <em>3 min</em> read</span>
 
@@ -1073,8 +1084,32 @@
   </header>
 
   <div class="content">
-    <h2 id="generalization-problem"><span class="me-2">Generalization Problem</span><a href="#generalization-problem" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="ensemble"><span class="me-2">Ensemble</span><a href="#ensemble" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
+
+<ul>
+  <li>
+    <p><strong>앙상블 기법(Ensemble)</strong> : 예측 오차를 줄이기 위하여 다양한 모형들을 결합하는 기법</p>
+  </li>
+  <li><strong>예측 오차를 어떻게 줄일 것인가?</strong>
+    <ul>
+      <li>By Reducing Variance, Prevent Overfitting</li>
+      <li>By Reducing Bias, Prevent Underfitting</li>
+    </ul>
+  </li>
+  <li><strong>모형 간 다양성을 어떻게 확보할 것인가?</strong>
+    <ul>
+      <li>Provide different random subset of the training data to each other</li>
+      <li>Using some measurement ensuring it is substantially different from the other members</li>
+    </ul>
+  </li>
+  <li><strong>모형별 결과물을 어떻게 결합할 것인가?</strong>
+    <ul>
+      <li>Simple Voting</li>
+      <li>Weighted Voting</li>
+    </ul>
+  </li>
+</ul>
 
 <h3 id="components-of-error"><span class="me-2">Components of Error</span><a href="#components-of-error" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -1126,45 +1161,26 @@
   </li>
 </ul>
 
-<h2 id="ensemble"><span class="me-2">Ensemble</span><a href="#ensemble" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="bagging"><span class="me-2">Bagging</span><a href="#bagging" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
+<p><a href="/_post_refer_img/MachineLearning/15-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/15-03.png" alt="03" width="100%" loading="lazy"></a></p>
+
 <ul>
-  <li><strong>앙상블 기법(Ensemble)</strong> : 예측 오차를 줄이기 위하여 다양한 모형들을 결합하는 기법
-    <ul>
-      <li>모형 간 다양성을 어떻게 확보할 것인가?
-        <ul>
-          <li>provide different random subset of the training data to each other</li>
-          <li>using some measurement ensuring it is substantially different from the other memebers</li>
-        </ul>
-      </li>
-      <li>모형별 결과물을 어떻게 결합할 것인가?
-        <ul>
-          <li>Simple Voting</li>
-          <li>Weighted Voting</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>구분</strong></p>
-
-    <ul>
-      <li>
-        <p><strong>Bagging(Bootstrap Aggregating)</strong> : By Reducing Variance, Prevent Overfitting</p>
-
-        <p><a href="/_post_refer_img/MachineLearning/15-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/15-03.png" alt="03" width="100%" loading="lazy"></a></p>
-      </li>
-      <li>
-        <p><strong>Boosting</strong> : By Reducing Bias, Prevent Underfitting</p>
-
-        <p><a href="/_post_refer_img/MachineLearning/15-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/15-04.png" alt="04" width="100%" loading="lazy"></a></p>
-      </li>
-    </ul>
-  </li>
+  <li><strong>Bagging(Bootstrap Aggregating)</strong> : By Reducing Variance, Prevent Overfitting</li>
 </ul>
 
-<h3 id="necessity"><span class="me-2">Necessity</span><a href="#necessity" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h2 id="boosting"><span class="me-2">Boosting</span><a href="#boosting" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<p><a href="/_post_refer_img/MachineLearning/15-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/15-04.png" alt="04" width="100%" loading="lazy"></a></p>
+
+<ul>
+  <li><strong>Boosting</strong> : By Reducing Bias, Prevent Underfitting</li>
+</ul>
+
+<h2 id="necessity"><span class="me-2">Necessity</span><a href="#necessity" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
 
 <ul>
   <li>
