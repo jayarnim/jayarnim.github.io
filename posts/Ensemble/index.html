@@ -967,6 +967,39 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -1074,9 +1107,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="563 words"
+  title="1277 words"
 >
-  <em>3 min</em> read</span>
+  <em>7 min</em> read</span>
 
         </div>
       </div>
@@ -1084,32 +1117,9 @@
   </header>
 
   <div class="content">
-    <h2 id="ensemble"><span class="me-2">Ensemble</span><a href="#ensemble" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
+    <h2 id="generalization-problem"><span class="me-2">Generalization Problem</span><a href="#generalization-problem" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<ul>
-  <li>
-    <p><strong>앙상블 기법(Ensemble)</strong> : 예측 오차를 줄이기 위하여 다양한 모형들을 결합하는 기법</p>
-  </li>
-  <li><strong>예측 오차를 어떻게 줄일 것인가?</strong>
-    <ul>
-      <li>By Reducing Variance, Prevent Overfitting</li>
-      <li>By Reducing Bias, Prevent Underfitting</li>
-    </ul>
-  </li>
-  <li><strong>모형 간 다양성을 어떻게 확보할 것인가?</strong>
-    <ul>
-      <li>Provide different random subset of the training data to each other</li>
-      <li>Using some measurement ensuring it is substantially different from the other members</li>
-    </ul>
-  </li>
-  <li><strong>모형별 결과물을 어떻게 결합할 것인가?</strong>
-    <ul>
-      <li>Simple Voting</li>
-      <li>Weighted Voting</li>
-    </ul>
-  </li>
-</ul>
+<hr />
 
 <h3 id="components-of-error"><span class="me-2">Components of Error</span><a href="#components-of-error" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -1161,26 +1171,38 @@
   </li>
 </ul>
 
-<h2 id="bagging"><span class="me-2">Bagging</span><a href="#bagging" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="ensemble"><span class="me-2">Ensemble</span><a href="#ensemble" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
-
-<p><a href="/_post_refer_img/MachineLearning/15-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/15-03.png" alt="03" width="100%" loading="lazy"></a></p>
 
 <ul>
-  <li><strong>Bagging(Bootstrap Aggregating)</strong> : By Reducing Variance, Prevent Overfitting</li>
+  <li>
+    <p><strong>앙상블 기법(Ensemble)</strong> : 예측 오차를 줄이기 위하여 다양한 모형들을 결합하는 기법</p>
+  </li>
+  <li><strong>예측 오차를 어떻게 줄일 것인가?</strong>
+    <ul>
+      <li>By Reducing Variance, Prevent Overfitting</li>
+      <li>By Reducing Bias, Prevent Underfitting</li>
+    </ul>
+  </li>
+  <li><strong>모형 간 다양성을 어떻게 확보할 것인가?</strong>
+    <ul>
+      <li>Provide different random subset of the training data to each other</li>
+      <li>Using some measurement ensuring it is substantially different from the other members</li>
+    </ul>
+  </li>
+  <li><strong>모형별 결과물을 어떻게 결합할 것인가?</strong>
+    <ul>
+      <li>Simple Voting</li>
+      <li>Weighted Voting</li>
+    </ul>
+  </li>
 </ul>
 
-<h2 id="boosting"><span class="me-2">Boosting</span><a href="#boosting" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
+<h3 id="necessity"><span class="me-2">Necessity</span><a href="#necessity" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p><a href="/_post_refer_img/MachineLearning/15-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/15-04.png" alt="04" width="100%" loading="lazy"></a></p>
-
-<ul>
-  <li><strong>Boosting</strong> : By Reducing Bias, Prevent Underfitting</li>
-</ul>
-
-<h2 id="necessity"><span class="me-2">Necessity</span><a href="#necessity" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
+\[\begin{aligned}
+\xi_{\text{ensemble}} \le \xi_{\text{avg}}
+\end{aligned}\]
 
 <ul>
   <li>
@@ -1237,6 +1259,186 @@
 \[\begin{aligned}
   \underbrace{\left(\frac{1}{M}\sum_{m=1}^{M}{\epsilon_{m}(x)}\right)^{2}}_{\xi_{\text{ensemble}}} \le \underbrace{\frac{1}{M} \sum_{m=1}^{M}{\epsilon_{m}^{2}(x)}}_{\xi_{\text{avg}}}
   \end{aligned}\]
+  </li>
+</ul>
+
+<h2 id="bagging"><span class="me-2">Bagging</span><a href="#bagging" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><strong>Bagging(<code class="language-plaintext highlighter-rouge">B</code>ootstrap <code class="language-plaintext highlighter-rouge">Agg</code>regat<code class="language-plaintext highlighter-rouge">ing</code>)</strong> : 데이터 세트로부터 생성된 $M$ 개의 부트스트랩(Bootstrap)을 통해 $M$ 개의 개별 모형들을 병렬 학습하는 방법</p>
+
+    <p><a href="/_post_refer_img/MachineLearning/15-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/15-03.png" alt="03" width="100%" loading="lazy"></a></p>
+
+    <ul>
+      <li>Provide different random subset of the training data to each other</li>
+      <li>By Reducing Variance, Prevent Overfitting</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="how-to"><span class="me-2">How to</span><a href="#how-to" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+\[\begin{aligned}
+y(x)
+&amp;= \delta\Big[y_{1}(x), y_{2}(x), \cdots, y_{M}(x)\Big]
+\end{aligned}\]
+
+<ul>
+  <li>
+    <p><strong>부트스트랩(Bootstrap)</strong> : 전체 데이터 세트를 $K$ 개의 데이터 블록으로 분할한 후 $K$ 번 복원추출하여 재구성한 훈련용 데이터 세트</p>
+
+    <ul>
+      <li>
+        <p>데이터 세트 \(x \in \mathcal{D}\) 를 \(k\) 개의 데이터 블록 \(\Lambda_{1}, \cdots, \Lambda_{K}\) 으로 나누자</p>
+
+\[\begin{aligned}
+  \mathcal{D}
+  = \left\{ x_{1}, x_{2}, \cdots, x_{N} \right\}
+  = \Lambda_{1} \cup \Lambda_{2} \cup \cdots \cup \Lambda_{K}
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>$m$ 번째 모형의 훈련용 데이터 세트를 다음과 같이 구성함</p>
+
+\[\begin{aligned}
+  \Omega^{(m)}_{\text{trn}}
+  &amp;= \bigcup_{k=1}^{K}{\Lambda_{k}}
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>OOB(<code class="language-plaintext highlighter-rouge">O</code>ut <code class="language-plaintext highlighter-rouge">o</code>f <code class="language-plaintext highlighter-rouge">B</code>ag)</strong> : 부트스트랩에 포함되지 않는 데이터 블록 집합으로서 검증용 데이터 세트로 활용됨</p>
+
+    <ul>
+      <li>
+        <p>$m$ 번째 모형의 검증용 데이터 세트는 해당 모형의 부트스트랩에 포함되지 않은 데이터 블록으로 구성함</p>
+
+\[\begin{aligned}
+  \Omega^{(m)}_{\text{val}}
+  &amp;= \bigcup_{k=1}^{K}{\Lambda_{k}} \setminus \Omega^{(m)}_{\text{trn}}
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>하나의 데이터 블록이 부트스트랩에 포함되지 않을 확률은 다음과 같음</p>
+
+\[\begin{aligned}
+  \lim_{K \rightarrow \infty}{\left(1-\frac{1}{K}\right)^{K}}
+  = e^{-1} \approx 0.368
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Result Aggregating Function($\delta(\cdot)$)</strong></p>
+    <ul>
+      <li>Simple Voting</li>
+      <li>Weighted Voting(training accuarcy of individual models)</li>
+      <li>Weighted Voting(probability result)</li>
+      <li>Staking</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="boosting"><span class="me-2">Boosting</span><a href="#boosting" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><strong>Boosting</strong> : 직렬로 나열된 개별 모형들에 대하여 모든 훈련 데이터 세트를 순차 학습하되, 현재 순번 모형이 오류를 줄이는 데 실패한 데이터 포인트에 대하여, 해당 포인트의 중요도를 가중함으로써 다음 모형이 더 집중하여 학습시키는 방법</p>
+
+    <p><a href="/_post_refer_img/MachineLearning/15-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/15-04.png" alt="04" width="100%" loading="lazy"></a></p>
+
+    <ul>
+      <li>Using some measurement ensuring it is substantially different from the other members</li>
+      <li>By Reducing Bias, Prevent Underfitting</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="how-to-1"><span class="me-2">How to</span><a href="#how-to-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+\[\begin{aligned}
+y_{M}(x)
+&amp;= \sum_{t=1}^{M}{\alpha_{t} \cdot h_{t}(x)}
+\end{aligned}\]
+
+<ul>
+  <li>
+    <p><strong>예측값 $y_{t}(x)$ 및 모형 $h_{t}(x)$</strong></p>
+
+    <ul>
+      <li>
+        <p>$t$ 번째 순번에서 $i$ 번째 관측치의 예측값 $y_{t}(x_{i})$ 을 다음과 같이 정의하자</p>
+
+\[\begin{aligned}
+  \underbrace{y_{t}(x_{i})}_{\begin{array}{c} \text{predict value} \\ \text{of t-th model} \end{array}}
+  &amp;= \underbrace{f(x_{i})}_{\text{real value}} + \underbrace{\epsilon_{t}(x_{i})}_{\begin{array}{c} \text{error} \\ \text{of t-th model} \end{array}}
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>$t+1$ 번째 순번에서 $i$ 번째 관측치의 예측값 $y_{t+1}(x_{i})$ 을 다음의 규칙에 따라 갱신함</p>
+
+\[\begin{aligned}
+  y_{t+1}(x_{i})
+  &amp;= y_{t}(x_{i}) + \alpha_{t+1} \cdot h_{t+1}(x_{i})
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>이때 $t+1$ 번째 순번 모형 $h_{t+1}$ 을 다음과 같이 도출함</p>
+
+\[\begin{aligned}
+  h_{t+1}
+  &amp;= \text{arg} \min_{h}{\sum_{i=1}^{n}{L\left[\epsilon_{t}(x_{i}), h(x_{i})\right]}}
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>모형별 중요도(가중 평균)</strong></p>
+
+    <ul>
+      <li>
+        <p>$t$ 번째 순번 모형의 중요도 $\alpha_{t}$ 를 다음과 같이 정의함</p>
+
+\[\begin{aligned}
+  \alpha_{t}
+  &amp;= \frac{1}{2}\ln{\frac{1-\xi_{t}}{\xi_{t}}}
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>이때 $t$ 번째 순번 모형의 예측 오류율 $\xi_{t}$ 은 다음과 같음</p>
+
+\[\begin{aligned}
+  \xi_{t}
+  &amp;= \frac{\sum_{i=1}^{n}{w_{i} \cdot \mathbb{I}\left[h_{t}(x_{i}) \ne f(x_{i})\right]}}{\sum_{j=1}^{n}{w_{j}}}
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>관측치별 중요도</strong></p>
+
+    <ul>
+      <li>
+        <p>$t$ 번째 순번에서 $i$ 번째 관측치 $x_{i} \in \mathcal{D}$ 의 중요도 $P(x_{i})$ 를 다음과 같이 정의하자</p>
+
+\[\begin{aligned}
+  P(x_{i})
+  &amp;= \frac{w_{i}}{\sum_{j=1}^{n}{w_{j}}}
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>$i$ 번째 관측치 $x_{i} \in \mathcal{D}$ 의 가중치 $w_i$ 를 다음의 규칙에 따라 갱신함</p>
+
+\[\begin{aligned}
+  w_i
+  &amp; \leftarrow w_{i} \cdot \exp{\bigg[\alpha_{t} \cdot \mathbb{I}\left[h_{t}(x_{i}) \ne f(x_{i})\right]\bigg]}
+  \end{aligned}\]
+      </li>
+    </ul>
   </li>
 </ul>
 
