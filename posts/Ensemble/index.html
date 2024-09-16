@@ -1107,7 +1107,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1277 words"
+  title="1296 words"
 >
   <em>7 min</em> read</span>
 
@@ -1295,8 +1295,8 @@ y(x)
 
 \[\begin{aligned}
   \mathcal{D}
-  = \left\{ x_{1}, x_{2}, \cdots, x_{N} \right\}
-  = \Lambda_{1} \cup \Lambda_{2} \cup \cdots \cup \Lambda_{K}
+  &amp;= \left\{ x_{1}, x_{2}, \cdots, x_{N} \right\}\\
+  &amp;= \Lambda^{(1)} \cup \Lambda^{(2)} \cup \cdots \cup \Lambda^{(K)} \quad \text{s.t.}\quad \Lambda^{(i)} \cap \Lambda^{(j \ne i)} = \emptyset
   \end{aligned}\]
       </li>
       <li>
@@ -1304,7 +1304,7 @@ y(x)
 
 \[\begin{aligned}
   \Omega^{(m)}_{\text{trn}}
-  &amp;= \bigcup_{k=1}^{K}{\Lambda_{k}}
+  &amp;= \left\{\Lambda^{(k)}_{j} \mid \Lambda^{(k)} \subseteq \mathcal{D}, j \in \{1, 2, \cdots, K\}\right\}
   \end{aligned}\]
       </li>
     </ul>
