@@ -375,6 +375,23 @@
   },
   
   {
+    "title": "BPMF",
+    "url": "/posts/BPMF/",
+    "categories": "AI & Data Mining, Recommender System",
+    "tags": "Paper Review, Data Mining, RecSys, Collaborative Filtering, Latent Factor Model, Bayesian",
+    "date": "2024-07-03 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "Pilot StudyMF      행렬분해(Matrix Factorization; MF) : 잠재요인 모형의 원형으로서, 사용자-아이템 상호작용 행렬 $\\mathbf{R} \\in \\mathbb{R}^{M \\times N}$ 을 행렬분해하여 $K$ 차원 잠재요인(Latent Factor) 공간에 사용자-잠재요인 $\\mathbf{U} \\in \\mathbb...",
+    "content": "Pilot StudyMF      행렬분해(Matrix Factorization; MF) : 잠재요인 모형의 원형으로서, 사용자-아이템 상호작용 행렬 $\\mathbf{R} \\in \\mathbb{R}^{M \\times N}$ 을 행렬분해하여 $K$ 차원 잠재요인(Latent Factor) 공간에 사용자-잠재요인 $\\mathbf{U} \\in \\mathbb{R}^{M \\times K}$ 와 아이템-잠재요인 $\\mathbf{V} \\in \\mathbb{R}^{N \\times K}$ 을 공동으로 사상하는 방법        Model\\[\\begin{aligned}  \\mathbf{R} &amp;\\approx \\mathbf{U}\\mathbf{V}^{T}  \\end{aligned}\\]    Params          $\\mathbf{U}$ : User-Latent Factor Matrix      $\\mathbf{V}$ : Item-Latent Factor Matrix        Hyper-Params          $K$ : Dimension of Latent Factor            Objective Function\\[\\begin{aligned}  \\hat{\\mathbf{U}}, \\hat{\\mathbf{V}}  &amp;= \\text{arg} \\min_{\\mathbf{U},\\mathbf{V}}{\\text{Loss}\\left(\\mathbf{U}\\mathbf{V}^{T}, \\mathbf{R}\\right)}  \\end{aligned}\\]  PMF      확률적 행렬분해(Probabilistic Matrix Factorization; PMF) : 행렬분해의 학습파라미터 $\\mathbf{U},\\mathbf{V}$ 추정 시 정보 불확실성을 반영하기 위해 이를 상수에서 확률변수화하고, 최대사후확률(Maximum a Posteriori; MAP)로서 베이즈 액션(Bayes’ Action)을 취하는 방법    Model          Prior of User-Latent Factor : $\\mathbf{U} \\sim \\mathcal{N}\\left(\\mu_{U}, \\lambda_{U}^{-1}\\cdot\\mathbf{I}\\right)$      Prior of Item-Latent Factor : $\\mathbf{V} \\sim \\mathcal{N}\\left(\\mu_{V}, \\lambda_{V}^{-1}\\cdot\\mathbf{I}\\right)$      Likelihood : $\\mathbf{R} \\mid \\mathbf{U},\\mathbf{V} \\sim \\mathcal{N}\\left(\\mathbf{U}\\mathbf{V}^{T}, \\sigma^{2}\\right)$      Log Posterior of Params : $\\log{P\\left(\\mathbf{U},\\mathbf{V}\\mid\\mathbf{R}\\right)} \\propto \\log{P\\left(\\mathbf{R}\\mid\\mathbf{U},\\mathbf{V}\\right)} + \\log{P\\left(\\mathbf{U}\\right)} + \\log{P\\left(\\mathbf{V}\\right)}$        Params          $\\mathbf{U}$ : User-Latent Factor Matrix      $\\mathbf{V}$ : Item-Latent Factor Matrix        Hyper-Params          $K$ : Dimension of Latent Factor      $\\mu_{U}$ : Mean of User-Latent Factor      $\\mu_{V}$ : Mean of Item-Latent Factor      $\\lambda_{U}^{-1}$ : Variance of User-Latent Factor      $\\lambda_{V}^{-1}$ : Variance of Item-Latent Factor      $\\sigma^{2}$ : Noise of User-Item Interaction            Objective Function\\[\\begin{aligned}  \\hat{\\mathbf{U}}, \\hat{\\mathbf{V}}  &amp;= \\text{arg} \\max_{\\mathbf{U},\\mathbf{V}}{\\log{P\\left(\\mathbf{U},\\mathbf{V}\\mid\\mathbf{R}\\right)}}  \\end{aligned}\\]  "
+  },
+  
+  {
     "title": "Probability",
     "url": "/posts/Probability/",
     "categories": "Statistical Techs, Statistics",
