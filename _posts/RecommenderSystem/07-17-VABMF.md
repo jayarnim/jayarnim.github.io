@@ -2,7 +2,7 @@
 order: 18
 title: VABMF
 date: 2024-07-17
-categories: [AI & Data Mining, Recommender System]
+categories: [Research Interest, Recommender System]
 tags: [Paper Review, Data Mining, RecSys, Collaborative Filtering, Latent Factor Model, Deep Learning, Autoencoder, Bayesian]
 math: true
 description: >-

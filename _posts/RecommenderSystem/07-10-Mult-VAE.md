@@ -2,7 +2,7 @@
 order: 17
 title: Mult-VAE
 date: 2024-07-10
-categories: [AI & Data Mining, Recommender System]
+categories: [Research Interest, Recommender System]
 tags: [Paper Review, Data Mining, RecSys, Collaborative Filtering, Deep Learning, Autoencoder, Bayesian]
 math: true
 description: >-

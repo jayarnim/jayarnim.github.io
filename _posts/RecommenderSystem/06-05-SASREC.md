@@ -2,7 +2,7 @@
 order: 14
 title: SASREC
 date: 2024-06-05
-categories: [AI & Data Mining, Recommender System]
+categories: [Research Interest, Recommender System]
 tags: [Paper Review, Data Mining, RecSys, Sequential RecSys, Deep Learning, Attention Mechanism]
 math: true
 description: >-

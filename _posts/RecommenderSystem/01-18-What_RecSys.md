@@ -2,7 +2,7 @@
 order: 1
 title: What? RecSys
 date: 2024-01-18
-categories: [AI & Data Mining, Recommender System]
+categories: [Research Interest, Recommender System]
 tags: [Data Mining, Recommender System]
 math: true
 image:

@@ -2,7 +2,7 @@
 order: 12
 title: DeepFM
 date: 2024-05-01
-categories: [AI & Data Mining, Recommender System]
+categories: [Research Interest, Recommender System]
 tags: [Paper Review, Data Mining, RecSys, Collaborative Filtering, Latent Factor Model, Deep Learning]
 math: true
 description: >-

@@ -2,7 +2,7 @@
 order: 19
 title: BDNet
 date: 2024-07-24
-categories: [AI & Data Mining, Recommender System]
+categories: [Research Interest, Recommender System]
 tags: [Paper Review, Data Mining, RecSys, Collaborative Filtering, Latent Factor Model, Deep Learning, BNN, Bayesian]
 math: true
 description: >-

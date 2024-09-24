@@ -2,7 +2,7 @@
 order: 11
 title: Wide & Deep Learning
 date: 2024-04-17
-categories: [AI & Data Mining, Recommender System]
+categories: [Research Interest, Recommender System]
 tags: [Paper Review, Data Mining, RecSys, Collaborative Filtering, Latent Factor Model, Deep Learning]
 math: true
 description: >-
