@@ -577,6 +577,77 @@
     <!-- combine -->
     
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
 
   
 
@@ -594,6 +665,38 @@
   
   
 
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
   
 
   
@@ -704,7 +807,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="0 words"
+  title="351 words"
 >
   <em>1 min</em> read</span>
 
@@ -714,7 +817,59 @@
   </header>
 
   <div class="content">
-    
+    <h2 id="pilot-study"><span class="me-2">Pilot Study</span><a href="#pilot-study" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><strong>선형 행렬분해 기반 잠재요인 모형(Latent Factor Model based on Linear Matrix Factorization)</strong> : 상호작용의 비선형 특징을 포착하지 못함</p>
+
+\[\hat{r}_{u,i}=\overrightarrow{\mathbf{p}}_{u} \cdot \overrightarrow{\mathbf{q}}_{i}^{T}\]
+  </li>
+  <li>
+    <p><strong>비선형 행렬분해 기반 잠재요인 모형(Latent Factor Model based on Non-Linear Matrix Factorization)</strong> : 상호작용 데이터의 희박함에 따른 정보 불확실성을 반영하지 아니함</p>
+
+\[\hat{r}_{u,i}=\text{MLP}\left[\overrightarrow{\mathbf{p}}_{u} \oplus \overrightarrow{\mathbf{q}}_{i}\right]\]
+  </li>
+  <li>
+    <p><strong>베이지안 행렬분해 기반 잠재요인 모형(Latent Factor Model based on Bayesian Matrix Factorization)</strong></p>
+    <ul>
+      <li>
+        <p><strong>확률적 행렬분해(<code class="language-plaintext highlighter-rouge">P</code>robabilistic <code class="language-plaintext highlighter-rouge">M</code>atrix <code class="language-plaintext highlighter-rouge">F</code>actorization; PMF)</strong> : 학습파라미터를 추정함에 있어서 그 사후 확률 분포를 추정하지 아니하고 최대사후확률(<code class="language-plaintext highlighter-rouge">M</code>aximum <code class="language-plaintext highlighter-rouge">a</code> <code class="language-plaintext highlighter-rouge">P</code>osteriori; MAP) 추정치로 점 추정하므로 실질적으로는 정보 불확실성을 반영한다고 볼 수 없음</p>
+
+\[\begin{aligned}
+  \mathbf{R} \mid \mathbf{U},\mathbf{V} &amp;\sim \mathcal{N}\left(\mathbf{U}\mathbf{V}^{T}, \sigma^{2}\right)\\
+  \mathbf{U} &amp;\sim \mathcal{N}\left(\overrightarrow{\mu}_{U}, \lambda_{U}^{-1}\cdot\mathbf{I}\right)\\
+  \mathbf{V} &amp;\sim \mathcal{N}\left(\overrightarrow{\mu}_{V}, \lambda_{V}^{-1}\cdot\mathbf{I}\right)
+  \end{aligned}\]
+      </li>
+      <li>
+        <p><strong>베이지안 확률적 행렬분해(<code class="language-plaintext highlighter-rouge">B</code>ayesian <code class="language-plaintext highlighter-rouge">P</code>robabilistic <code class="language-plaintext highlighter-rouge">M</code>atrix <code class="language-plaintext highlighter-rouge">F</code>actorization; BPMF)</strong> : 학습파라미터의 사후 확률 분포를 추정하나 MCMC를 활용하기에 학습 속도가 현저히 느림</p>
+
+\[\begin{aligned}
+  \mathbf{R} \mid \mathbf{U},\mathbf{V} &amp;\sim \mathcal{N}\left(\mathbf{U}\mathbf{V}^{T}, \sigma^{2}\right)\\
+  \mathbf{U} \mid \overrightarrow{\mu}_{U},\Lambda_{U} &amp;\sim \mathcal{N}\left(\overrightarrow{\mu}_{U},\Lambda_{U}\right)\\
+  \overrightarrow{\mu}_{U} ; \Lambda_{U} &amp;\sim \mathcal{N}\left(\mu_{0}, (\beta_{0} \cdot \Lambda_{U})^{-1}\right)\\
+  \Lambda_{U} &amp;\sim \mathcal{W}\left(\mathbf{W}_{0}, \nu_{0}\right)\\
+  \mathbf{V} \mid \overrightarrow{\mu}_{V},\Lambda_{V} &amp;\sim \mathcal{N}\left(\overrightarrow{\mu}_{V},\Lambda_{V}\right)\\
+  \overrightarrow{\mu}_{V} ; \Lambda_{V} &amp;\sim \mathcal{N}\left(\mu_{0}, (\beta_{0} \cdot \Lambda_{V})^{-1}\right)\\
+  \Lambda_{V} &amp;\sim \mathcal{W}\left(\mathbf{W}_{0}, \nu_{0}\right)
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="vabmf"><span class="me-2">VABMF</span><a href="#vabmf" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><strong>VABMF(<code class="language-plaintext highlighter-rouge">V</code>ariational <code class="language-plaintext highlighter-rouge">A</code>utoEncoder <code class="language-plaintext highlighter-rouge">B</code>ayesian <code class="language-plaintext highlighter-rouge">M</code>atrix <code class="language-plaintext highlighter-rouge">F</code>actorization)</strong> : 베이지안 행렬분해와 변분 오토인코더를 결합한 잠재요인 모형</p>
+
+    <p><a href="/_post_refer_img/RecommenderSystem/18-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/18-01.png" alt="01" width="100%" loading="lazy"></a></p>
+  </li>
+</ul>
 
   </div>
 
@@ -2904,6 +3059,11 @@
               
 
 
+
+  <section id="toc-wrapper" class="d-none ps-0 pe-4">
+    <h2 class="panel-heading ps-3 mb-2">Contents</h2>
+    <nav id="toc"></nav>
+  </section>
 
 
             
@@ -5481,9 +5641,16 @@
 
   
 
+  
+    
+
+    
+
+  
 
 
-  <script src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.11/dayjs.min.js,npm/dayjs@1.11.11/locale/en.min.js,npm/dayjs@1.11.11/plugin/relativeTime.min.js,npm/dayjs@1.11.11/plugin/localizedFormat.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.11/dayjs.min.js,npm/dayjs@1.11.11/locale/en.min.js,npm/dayjs@1.11.11/plugin/relativeTime.min.js,npm/dayjs@1.11.11/plugin/localizedFormat.min.js,npm/tocbot@4.27.20/dist/tocbot.min.js"></script>
 
 
 
