@@ -4,7 +4,7 @@
   <id>https://jayarnim.github.io/</id>
   <title>Data Scientist</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-09-25T05:02:27+09:00</updated>
+  <updated>2024-09-26T11:33:51+09:00</updated>
   <author>
     <name>jayarnim</name>
     <uri>https://jayarnim.github.io/</uri>
@@ -72,6 +72,32 @@
 
   
   <entry>
+    <title>Mult-VAE</title>
+    <link href="https://jayarnim.github.io/posts/Mult-VAE/" rel="alternate" type="text/html" title="Mult-VAE" />
+    <published>2024-07-24T00:00:00+09:00</published>
+  
+    <updated>2024-07-24T00:00:00+09:00</updated>
+  
+    <id>https://jayarnim.github.io/posts/Mult-VAE/</id>
+    <content src="https://jayarnim.github.io/posts/Mult-VAE/" />
+    <author>
+      <name>jayarnim</name>
+    </author>
+
+  
+    
+    <category term="Research Interest" />
+    
+    <category term="Recommender System" />
+    
+  
+
+  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://dl.acm.org/doi/abs/10.1145/3178876.3186150&amp;quot;&amp;gt;&amp;lt;em&amp;gt;Variational Autoencoders for Collaborative Filtering&amp;lt;/em&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Author&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;Liang et al.&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Publisher&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;WWW&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2018&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;</summary>
+
+  </entry>
+
+  
+  <entry>
     <title>Bayesian Regression</title>
     <link href="https://jayarnim.github.io/posts/Bayesian_Regression/" rel="alternate" type="text/html" title="Bayesian Regression" />
     <published>2024-07-22T00:00:00+09:00</published>
@@ -106,32 +132,6 @@
   
     <id>https://jayarnim.github.io/posts/Multi_Armed_Bandits/</id>
     <content src="https://jayarnim.github.io/posts/Multi_Armed_Bandits/" />
-    <author>
-      <name>jayarnim</name>
-    </author>
-
-  
-    
-    <category term="Statistical Techs" />
-    
-    <category term="Bayesian Modeling" />
-    
-  
-
-  <summary>Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp;amp; Management, College of Business Administration, Kookmin Univ.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Bayesian A/B Test</title>
-    <link href="https://jayarnim.github.io/posts/Bayesian_A_B_Test/" rel="alternate" type="text/html" title="Bayesian A/B Test" />
-    <published>2024-07-20T00:00:00+09:00</published>
-  
-    <updated>2024-07-20T00:00:00+09:00</updated>
-  
-    <id>https://jayarnim.github.io/posts/Bayesian_A_B_Test/</id>
-    <content src="https://jayarnim.github.io/posts/Bayesian_A_B_Test/" />
     <author>
       <name>jayarnim</name>
     </author>
