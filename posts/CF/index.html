@@ -30,25 +30,25 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Posterior Estimation (2) Information Theory" />
+<meta property="og:title" content="Memory based Collaborative Filtering" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp; Management, College of Business Administration, Kookmin Univ." />
-<meta property="og:description" content="Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp; Management, College of Business Administration, Kookmin Univ." />
-<link rel="canonical" href="https://jayarnim.github.io/posts/Variational_Inference/" />
-<meta property="og:url" content="https://jayarnim.github.io/posts/Variational_Inference/" />
+<meta name="description" content="Based on the following lectures (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. (2) “Recommender System (2024-1)” by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ." />
+<meta property="og:description" content="Based on the following lectures (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. (2) “Recommender System (2024-1)” by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ." />
+<link rel="canonical" href="https://jayarnim.github.io/posts/CF/" />
+<meta property="og:url" content="https://jayarnim.github.io/posts/CF/" />
 <meta property="og:site_name" content="Data Scientist" />
-<meta property="og:image" content="https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg" />
+<meta property="og:image" content="https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-07-18T00:00:00+09:00" />
+<meta property="article:published_time" content="2024-01-18T00:00:00+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg" />
-<meta property="twitter:title" content="Posterior Estimation (2) Information Theory" />
+<meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg" />
+<meta property="twitter:title" content="Memory based Collaborative Filtering" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-18T00:00:00+09:00","datePublished":"2024-07-18T00:00:00+09:00","description":"Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp; Management, College of Business Administration, Kookmin Univ.","headline":"Posterior Estimation (2) Information Theory","image":"https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/Variational_Inference/"},"url":"https://jayarnim.github.io/posts/Variational_Inference/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-01-18T00:00:00+09:00","datePublished":"2024-01-18T00:00:00+09:00","description":"Based on the following lectures (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. (2) “Recommender System (2024-1)” by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ.","headline":"Memory based Collaborative Filtering","image":"https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/CF/"},"url":"https://jayarnim.github.io/posts/CF/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Posterior Estimation (2) Information Theory | Data Scientist
+  <title>Memory based Collaborative Filtering | Data Scientist
   </title>
 
   <!--
@@ -415,7 +415,7 @@
         
           
             
-              <span>Posterior Estimation (2) Information Theory</span>
+              <span>Memory based Collaborative Filtering</span>
             
 
           
@@ -648,6 +648,77 @@
     <!-- combine -->
     
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
 
   
 
@@ -695,6 +766,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -710,28 +792,6 @@
       
         
         
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
       
 
       
@@ -800,9 +860,9 @@
 
 <article class="px-1">
   <header>
-    <h1 data-toc-skip>Posterior Estimation (2) Information Theory</h1>
+    <h1 data-toc-skip>Memory based Collaborative Filtering</h1>
     
-      <p class="post-desc fw-light mb-4">Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data & Management, College of Business Administration, Kookmin Univ.</p>
+      <p class="post-desc fw-light mb-4">Based on the following lectures <br> (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. <br> (2) "Recommender System (2024-1)" by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ.</p>
     
 
     <div class="post-meta text-muted">
@@ -819,13 +879,13 @@
 
 <time
   
-  data-ts="1721228400"
+  data-ts="1705503600"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Jul 18, 2024
+  Jan 18, 2024
 </time>
 
       </span>
@@ -841,7 +901,7 @@
         
 
         <div class="mt-3 mb-3">
-          <a href="/_post_refer_img/BayesianModeling/Thumbnail.jpeg" class="popup img-link preview-img shimmer"><img src="/_post_refer_img/BayesianModeling/Thumbnail.jpeg"  alt="Preview Image" width="1200" height="630"  loading="lazy"></a></div>
+          <a href="/_post_refer_img/RecommenderSystem/Thumbnail.jpg" class="popup img-link preview-img shimmer"><img src="/_post_refer_img/RecommenderSystem/Thumbnail.jpg"  alt="Preview Image" width="1200" height="630"  loading="lazy"></a></div>
       
 
       <div class="d-flex justify-content-between">
@@ -883,9 +943,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1870 words"
+  title="860 words"
 >
-  <em>10 min</em> read</span>
+  <em>4 min</em> read</span>
 
         </div>
       </div>
@@ -893,246 +953,146 @@
   </header>
 
   <div class="content">
-    <h2 id="information-theory"><span class="me-2">Information Theory</span><a href="#information-theory" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="collaborative-filtering"><span class="me-2">Collaborative Filtering</span><a href="#collaborative-filtering" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
-  <li><strong>정보이론(Information Theory)</strong> : 신호에 존재하는 정보의 양을 측정하는 이론으로서, 특정 확률분포의 특성을 알아내거나, 두 확률분포 간 유사성을 정량화하는 데 사용함</li>
-</ul>
-
-<h3 id="information-gain"><span class="me-2">Information Gain</span><a href="#information-gain" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
   <li>
-    <p><strong>자기정보(Self-Information)</strong> : 확률변수 $X \sim P$ 에 대하여, 사건 $X=x$ 가 발생했을 때의 정보량</p>
+    <p><strong>협업 필터링(Collaborative Filtering)</strong> : 과거 여러 사용자들이 다양한 아이템에 대하여 평가 점수를 매긴 기록을 활용하여 아직 상호작용하지 않은 아이템에 대한 사용자의 평점을 추론하는 방법론</p>
 
-\[\begin{aligned}
-  I(X=x)
-  &amp;= \log{\frac{1}{P(X=x)}}\\
-  &amp;=-\log{P(X=x)}
-  \end{aligned}\]
+    <p><a href="/_post_refer_img/RecommenderSystem/01-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/01-02.png" alt="00" width="100%" loading="lazy"></a></p>
 
     <ul>
-      <li>자주 발생하지 않는 사건(Unlikely Event)일수록 높은 정보량을 가짐(Informative)</li>
-      <li>독립사건은 추가적인 정보량을 가짐(Addictive Information)
-        <ul>
-          <li>동전을 두 번 던져서 앞면이 두 번 나오는 사건은 동전을 한 번 던져서 앞면이 나오는 사건보다 정보량이 두 배임</li>
-        </ul>
-      </li>
+      <li><strong>사용자 기반 협업 필터링(User-Based Collaborative Filtering)</strong> : Identify like-minded users</li>
+      <li><strong>아이템 기반 협업 필터링(Item-Based Collaborative Filtering)</strong> : Identify buying patterns</li>
     </ul>
   </li>
   <li>
-    <p><strong>엔트로피(Entropy)</strong> : 자기정보의 기대값으로서, 주어진 확률분포에서 발생 가능한 사건들의 평균적인 정보량</p>
+    <p><strong>사용자-아이템 상호작용 행렬(User-Item Interaction Matrix)</strong> : $M$ 명의 사용자와 $N$ 가지 아이템 간의 상호작용을 수치적으로 표현한 행렬로서, 통상 행 벡터는 사용자를, 열 벡터는 아이템을 의미함</p>
 
-\[\begin{aligned}
-  H(P)
-  &amp;= \mathbb{E}_{X \sim P}\left[I(X)\right]\\
-  &amp;= \mathbb{E}_{X \sim P}\left[-\log{P(X)}\right]\\
-  &amp;= -\mathbb{E}_{X \sim P}\left[\log{P(X)}\right]\\
-  &amp;= -\sum_{x}{\log{P(x)} \cdot P(x)}
-  \end{aligned}\]
+    <p><a href="/_post_refer_img/RecommenderSystem/02-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/02-01.png" alt="01" width="100%" loading="lazy"></a></p>
+
+\[r_{u,i} \in \mathbf{R} \in \mathbb{R}^{M \times N}\]
 
     <ul>
-      <li>사건의 분포가 결정적일수록(Deterministic) 엔트로피가 감소함</li>
-      <li>사건의 분포가 균등할수록(Uniform) 엔트로피가 증가함</li>
+      <li>협업 필터링은 실질적으로 사용자-아이템 상호작용 행렬의 결측치(위 예시의 $-1$)를 채우는 방법이므로 행렬 완성 문제라고도 부름</li>
     </ul>
   </li>
 </ul>
 
-<h3 id="information-discrepancy"><span class="me-2">Information Discrepancy</span><a href="#information-discrepancy" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li>
-    <p><strong>교차 엔트로피(Cross Entropy)</strong> : 확률변수 $X$ 의 분포 $P$ 와 그 근사 분포 $Q$ 에 대하여, $Q$ 가 $P$ 에 대하여 제공하는 <strong>정보의 불확실성을</strong> 측정하는 지표</p>
-
-\[\begin{aligned}
-  H(P,Q)
-  &amp;= \mathbb{E}_{X \sim P}\left[-\log{Q(X)}\right]\\
-  &amp;= - \sum_{x}{\log{Q(x)} \cdot P(x)}
-  \end{aligned}\]
-  </li>
-  <li>
-    <p><strong>쿨백 라이블러 발산(Kullback-Leibler Divergence)</strong> : 확률변수 $X$ 의 분포 $P$ 와 그 근사 분포 $Q$ 에 대하여, $Q$ 를 $P$ 의 <strong>근사 분포로 사용할 때의 비효율성을</strong> 측정하는 지표로서, $P$ 에서 샘플링된 $X$ 에 대하여, $P$ 가 제공하는 평균적인 정보량과 $Q$ 가 제공하는 평균적인 정보량의 차이</p>
-
-\[\begin{aligned}
-  D_{KL}(P \parallel Q)
-  &amp;= \mathbb{E}_{X \sim P}\left[-\log{P(X)}\right] - \mathbb{E}_{X \sim P}\left[-\log{Q(X)}\right]\\
-  &amp;= \mathbb{E}_{X \sim P}\left[-\log{\frac{Q(X)}{P(X)}}\right]\\
-  &amp;= \mathbb{E}_{X \sim P}\left[\log{\frac{P(X)}{Q(X)}}\right]\\
-  &amp;= \sum_{x}{\log{\frac{P(x)}{Q(x)}} \cdot P(x)}
-  \end{aligned}\]
-  </li>
-  <li>
-    <p><strong>교차 엔트로피와 쿨백 라이블러 발산의 관계</strong></p>
-
-\[\begin{aligned}
-  D_{KL}(P \parallel Q)
-  &amp;= \sum_{x}{\log{\frac{P(x)}{Q(x)}} \cdot P(x)}\\
-  &amp;= -\sum_{x}{\log{\frac{Q(x)}{P(x)}} \cdot P(x)}\\
-  &amp;= -\sum_{x}{\left[\log{Q(x)}-\log{P(x)}\right] \cdot P(x)}\\
-  &amp;= \left[-\sum_{x}{\log{Q(x)} \cdot P(x)}\right] -\left[-\sum_{x}{\log{P(x)} \cdot P(x)}\right]\\
-  &amp;= H(P,Q) - H(P)
-  \end{aligned}\]
-  </li>
-</ul>
-
-<h2 id="bayes-by-backprop"><span class="me-2">Bayes by Backprop</span><a href="#bayes-by-backprop" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="function"><span class="me-2">Function</span><a href="#function" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<p><a href="/_post_refer_img/BayesianModeling/08-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/08-01.png" alt="01" width="100%" loading="lazy"></a></p>
-
-<ul>
-  <li><strong>BBB(<code class="language-plaintext highlighter-rouge">B</code>ayes <code class="language-plaintext highlighter-rouge">b</code>y <code class="language-plaintext highlighter-rouge">B</code>ackprop)</strong> : 신경망과 같은 복잡한 모형에서, 역전파 알고리즘을 활용한 최적화 학습을 통해 파라미터의 사후 분포를 추정하기 위해 정보 이론적 접근을 사용하는 베이지안 추론 방법론
-    <ul>
-      <li><strong>파라미터의 사후 확률 분포 추정 방법</strong> : 변분 추론(Variational Inference)</li>
-      <li><strong>손실 함수</strong> : 변분 자유 에너지(Variational Free Energy; VFE)</li>
-      <li><strong>역전파 트릭</strong> : 재매개변수화 트릭(Reparameterization Trick)</li>
-      <li><strong>과적합 방지 트릭</strong> : 후방 템퍼링(Posterior Tempering)</li>
-    </ul>
-  </li>
-  <li><strong>제안 논문</strong> : <a href="https://proceedings.mlr.press/v37/blundell15">Weight Uncertainty in Neural Networks, ICML, 2015</a></li>
-</ul>
-
-<h3 id="variational-inference"><span class="me-2">Variational Inference</span><a href="#variational-inference" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
 <ul>
   <li>
-    <p><strong>변분 추론(Variational Inference)</strong> : 최적화 기법을 사용하여 가중치의 사후 분포 $W \mid \mathcal{D} \sim P$ 에 근사하는 제안 분포 $W \mid \theta \sim Q$ 를 탐색하는 방법</p>
+    <p><strong>Bias-aware Collaborative Filtering Function</strong></p>
 
 \[\begin{aligned}
-  \hat{\theta}
-  &amp;= \text{arg}\min_{\theta}{D_{KL}\big[Q(W \mid \theta) \parallel P(W \mid \mathcal{D})\big]}
-  \end{aligned}\]
-  </li>
-  <li>
-    <p><strong>이상적인 접근</strong> : 가중치 $W$ 에 대한 사후 분포 $W \mid \mathcal{D} \sim P$ 를 잘 설명하는 제안 분포 $W \mid \theta \sim Q$ 를 탐색함</p>
-
-\[\begin{aligned}
-  D_{KL}\big[P(W \mid \mathcal{D}) \parallel Q(W \mid \theta)\big]
-  &amp;= \mathbb{E}_{W \mid \mathcal{D} \sim P}\left[\log{\frac{P(W \mid \mathcal{D})}{Q(W \mid \theta)}}\right]
+  \hat{r}_{u,i}
+  &amp;= \mu + \beta_{u} + \beta_{i} + \text{what}
   \end{aligned}\]
 
     <ul>
-      <li>추론 대상이 되는 분포 $P$ 에서 $W$ 를 샘플링하는 것은 현실적으로 불가능함</li>
+      <li>$\hat{r}_{u,i}$ : 사용자 $u$ 의 아이템 $i$ 에 대한 평점 예측값</li>
+      <li>$\mu$ : 커뮤니티 평점 평균</li>
+      <li>$\beta_{u}$ : 사용자 $u$ 의 평균 평점 편차로서 사용자의 평점 척도</li>
+      <li>$\beta_{i}$ : 아이템 $i$ 의 평균 평점 편차로서 아이템의 인기도</li>
     </ul>
   </li>
   <li>
-    <p><strong>대안</strong> : 가중치 $W$ 에 대한 사후 분포 $W \mid \mathcal{D} \sim P$ 로 잘 설명될 수 있는 제안 분포 $W \mid \theta \sim Q$ 를 탐색함</p>
-
-\[\begin{aligned}
-  D_{KL}\big[Q(W \mid \theta) \parallel P(W \mid \mathcal{D})\big]
-  &amp;= \mathbb{E}_{W \mid \theta \sim Q}\left[\log{\frac{Q(W \mid \theta)}{P(W \mid \mathcal{D})}}\right]
-  \end{aligned}\]
-
+    <p><strong>What?</strong></p>
     <ul>
-      <li>즉, 제안분포 $Q$ 에서 $W$ 를 샘플링한 후, $W$ 에 대하여 $Q$ 와 $P$ 가 제공하는 정보량의 차이를 계산함</li>
+      <li><strong>k-NN Algorithm(Memory based Collaborative Filtering)</strong></li>
+      <li>Decision Tree Algorithm</li>
+      <li>Association Rules Algorithm</li>
+      <li>Naive Bayes Algorithm</li>
+      <li>Matrix Factorization Algorithm(Latent Factor Model)</li>
     </ul>
   </li>
 </ul>
 
-<h3 id="vfe"><span class="me-2">VFE</span><a href="#vfe" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h2 id="memory-based-collaborative-filtering"><span class="me-2">Memory based Collaborative Filtering</span><a href="#memory-based-collaborative-filtering" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
 
 <ul>
   <li>
-    <p><strong>사후 분포 $W \mid \mathcal{D} \sim P$ 와 그 근사 분포 $W \mid \theta \sim Q$ 의 차이 세분화</strong></p>
+    <p><strong>메모리 기반 협업 필터링(Memory based Collaborative Filtering)</strong> : (사용자 기반 협업 필터링 기준으로) 사용자가 상호작용하지 않은 아이템에 대한 선호를 예측함에 있어, 해당 아이템에 대한 피어 그룹의 선호를 유사도만큼 가중 평균하는 방법</p>
 
 \[\begin{aligned}
-  D_{KL}\big[Q(W \mid \theta) \parallel P(W \mid \mathcal{D})\big]
-  &amp;= \mathbb{E}_{W \mid \theta \sim Q}\left[\log{\frac{Q(W \mid \theta)}{P(W \mid \mathcal{D})}}\right]\\
-  &amp;= \mathbb{E}_{W \mid \theta \sim Q}\left[\log{Q(W \mid \theta)}\right] - \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(W \mid \mathcal{D})}\right]\\
-  &amp;= \mathbb{E}_{W \mid \theta \sim Q}\left[\log{Q(W \mid \theta)}\right] - \mathbb{E}_{W \mid \theta \sim Q}\left[\log{\frac{P(\mathcal{D} \mid W) \cdot P(W)}{P(\mathcal{D})}}\right]\\
-  &amp;= \mathbb{E}_{W \mid \theta \sim Q}\left[\log{Q(W \mid \theta)}\right] - \bigg(\mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] + \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(W)}\right] - \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D})}\right]\bigg)\\
-  &amp;= \mathbb{E}_{W \mid \theta \sim Q}\left[\log{Q(W \mid \theta)} - \log{P(W)}\right] - \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] + \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D})}\right]\\
-  &amp;= D_{KL}\big[Q(W \mid \theta) \parallel P(W)\big] - \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] + \log{P(\mathcal{D})}
+  \text{what}
+  &amp;= \frac{\sum_{v \in p(i \mid u)}{\text{sim}(u,v) \cdot \left(r_{v,i}-\overline{r}_{v}\right)}}{\sum_{v \in p(i \mid u)}{\vert \text{sim}(u,v) \vert}}
   \end{aligned}\]
 
     <ul>
-      <li>$D_{KL}\big[Q(W \mid \theta) \parallel P(W)\big]$ : 사후 분포의 근사 분포 $W \mid \theta \sim Q$ 와 사전 분포 $W \sim P$ 의 차이</li>
-      <li>$\mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right]$ : 사후 분포의 근사 분포 $W \mid \theta \sim Q$ 에서 샘플링된 가중치 $W$ 에 대한 로그 우도의 기대값</li>
-      <li>$\log{P(\mathcal{D})}$ : 데이터 $\mathcal{D}$ 에 대한 로그 마진 우도(Marginal Liklihood)로서, $\mathcal{D}$ 가 발생할 확률</li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>$\log{P(\mathcal{D})}$ 의 이해</strong></p>
-
-\[\begin{aligned}
-  D_{KL}\big[Q(W \mid \theta) \parallel P(W \mid \mathcal{D})\big]
-  &amp;= D_{KL}\big[Q(W \mid \theta) \parallel P(W)\big] - \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] + \log{P(\mathcal{D})}\\
-  \log{P(\mathcal{D})}
-  &amp;= D_{KL}\big[Q(W \mid \theta) \parallel P(W \mid \mathcal{D})\big] + \bigg(\mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] - D_{KL}\big[Q(W \mid \theta) \parallel P(W)\big]\bigg)\\
-  \therefore \log{P(\mathcal{D})}
-  &amp;\ge \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] - D_{KL}\big[Q(W \mid \theta) \parallel P(W)\big]
-  \end{aligned}\]
-  </li>
-  <li>
-    <p><strong>증거 하한(<code class="language-plaintext highlighter-rouge">E</code>vidence <code class="language-plaintext highlighter-rouge">L</code>ower <code class="language-plaintext highlighter-rouge">B</code> <code class="language-plaintext highlighter-rouge">o</code>und; ELBO)</strong> : 파라미터 갱신 증거 $\log{P(\mathcal{D})}$ 의 하한값</p>
-
-\[\begin{aligned}
-  \text{ELBO}
-  &amp;= \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] - D_{KL}\big[Q(W \mid \theta) \parallel P(W)\big]
-  \end{aligned}\]
-
-    <ul>
-      <li>
-        <p>왜 $\log{P(\mathcal{D})}$ 가 파라미터 갱신 증거(Evidence)인가?</p>
-
-        <blockquote>
-          <p>데이터 발생 원리는 모수에 있음. <br /><br /> 즉, 데이터가 발생한 다음 그 특징으로서 모수가 도출되는 것이 아니라, 모수가 데이터 발생 원리로서 선험적으로 존재하고, 이 원리에 근거하여 데이터가 발생함. 따라서 모수가 어떠하다고 주장했을 때, 데이터는 이 주장의 타당성을 보장하는 근거가 됨. <br /><br /> 다만, 빈도주의 철학에서 이는 하나의 값으로서 확정돼 있는 절대적인 진리인데 반해, 베이지안 철학에서는 불확실한 값임. 따라서 베이지안 방법론에서는 모수를 확률변수로 설정하여 모델링함. 구체적으로는 모수에 대한 연구자의 사전 신념(Prior)을 바탕으로 증거를 관측하며 이 신념을 갱신해 감(Posterior). <br /><br /> 실현된 데이터는 모수, 즉 데이터 발생 원리에 대하여 가지고 있었던 초기 신념(Prior)을 뒷받침하거나 갱신하는(Posterior) 근거로서 활용됨. 따라서 데이터 $\mathcal{D}$ 가 발생할 확률 $P(\mathcal{D})$ 은 갱신된 파라미터에 대한 증거(Evidence)임.</p>
-        </blockquote>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>변분 자유 에너지(<code class="language-plaintext highlighter-rouge">V</code>ariational <code class="language-plaintext highlighter-rouge">F</code>ree <code class="language-plaintext highlighter-rouge">E</code>nergy; VFE)</strong> : 증거 하한의 손실 함수화</p>
-
-\[\begin{aligned}
-  \text{VFE} &amp;= -\text{ELBO}\\
-  \therefore \hat{\theta} &amp;= \text{arg}\min_{\theta}{\text{VFE}}
-  \end{aligned}\]
-  </li>
-</ul>
-
-<h3 id="reparameterization-trick"><span class="me-2">Reparameterization Trick</span><a href="#reparameterization-trick" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li>
-    <p><strong>재매개변수화 트릭(Reparameterization Trick)</strong> : 역전파 알고리즘을 활용한 최적화 학습이 가능하도록 샘플링을 미분 가능한 함수로 변형하는 방법</p>
-
-\[w \mid \theta \sim Q \quad \rightarrow \quad w = g(\epsilon, \theta)\]
-
-    <ul>
-      <li>
-        <p>가중치 $w$ 가 정규 분포 $N(\mu,\sigma^2)$ 를 따르는 경우의 예시</p>
-
-\[w \mid \mu,\sigma \sim N \quad \rightarrow \quad w = \mu + \sigma \cdot \epsilon\]
-      </li>
+      <li>$v \in p(i \mid u)$ : 타깃 사용자 $u$ 의 $k$-Nearest Neighbor 중 타깃 아이템 $i$ 에 대하여 펑점을 매긴 사용자 집합으로서 피어 그룹(Peer Group)</li>
     </ul>
   </li>
 </ul>
 
-<h3 id="posterior-tempering"><span class="me-2">Posterior Tempering</span><a href="#posterior-tempering" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="how-to-calculate-textsimuv"><span class="me-2">How to Calculate $\text{sim}(u,v)$</span><a href="#how-to-calculate-textsimuv" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
-    <p><strong>후방 템퍼링(Posterior Tempering)</strong> : 데이터에 과적합되는 것을 방지하도록 우도 항목의 영향력을 할인하는 방법</p>
+    <p><strong>피어슨 상관계수(Pearson Correlation Coefficient)</strong> : 사용자 벡터 간 평점 척도에 차이가 클 경우 유용함</p>
 
 \[\begin{aligned}
-  P(\theta \mid \mathcal{D})
-  &amp;\approx \left[P(\mathcal{D} \mid \theta)\right]^{1/T} \cdot P(\theta)
+  \text{sim}(u,v)
+  &amp;= \frac{\sum_{j \in I_{u} \cap I_{v}}{\left(r_{u,j}-\overline{r}_{u}\right)\cdot\left(r_{v,j}-\overline{r}_{v}\right)}}{\sqrt{\sum_{j \in I_{u} \cap I_{v}}{\left(r_{u,j}-\overline{r}_{u}\right)^{2}}}\cdot\sqrt{\sum_{j \in I_{u} \cap I_{v}}{\left(r_{v,j}-\overline{r}_{v}\right)^{2}}}}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>코사인 유사도(Cosine Measure)</strong> : 상호작용 데이터가 희박할 경우 유용함</p>
+
+\[\begin{aligned}
+  \text{sim}(u,v)
+  &amp;= \frac{\overrightarrow{\mathbf{r}}_{u} \cdot \overrightarrow{\mathbf{r}}_{v}}{\Vert \overrightarrow{\mathbf{r}}_{u} \Vert_{L2} \cdot \Vert \overrightarrow{\mathbf{r}}_{v} \Vert_{L2}}
   \end{aligned}\]
 
     <ul>
-      <li>
-        <p>변분 자유 에너지에 후방 템퍼링을 적용하는 경우의 예시</p>
-
-\[\begin{aligned}
-  \text{VFE}
-  &amp;= D_{KL}\big[Q(W \mid \theta) \parallel P(W)\big]
-  - \frac{1}{T} \cdot \mathbb{E}_{W \mid \theta \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right]
-  \end{aligned}\]
-      </li>
+      <li>\(\overrightarrow{\mathbf{r}}_{u} \in \mathbf{R}_{M \times N}\) : 사용자-아이템 상호작용 행렬의 행 벡터로서 사용자 벡터</li>
     </ul>
   </li>
+</ul>
+
+<h3 id="discounted-similarity"><span class="me-2">Discounted Similarity</span><a href="#discounted-similarity" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p><strong>유사도 할인(Discounted Similarity)</strong> : 두 사용자 간 공동으로 상호작용한 아이템 갯수($\vert I_{u} \cap I_{v}\vert$)가 적을 경우, 유사도 값을 신뢰하기 어려우므로 이에 비례하여 유사도를 할인함</p>
+
+\[\begin{aligned}
+  \text{sim}(u,v)
+  &amp;\leftarrow \underbrace{\frac{\min{\Big(\vert I_{u} \cap I_{v}\vert, \beta\Big)}}{\beta}}_{\text{Discount Factor}} \cdot \text{sim}(u,v)
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h3 id="discounted-importance"><span class="me-2">Discounted Importance</span><a href="#discounted-importance" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p><strong>중요도 할인(Discounted Importance)</strong> : 대중성 있는 아이템의 경우 사용자가 이미 경험했거나 인지하고 있지만 소비하지 아니하기로 결정한 아이템일 가능성이 높으므로, 대중성에 비례하여 아이템의 중요도(평점)을 할인함</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{r}}_{i}
+  &amp;\leftarrow \underbrace{\log{\frac{M}{m_{i}}}}_{\text{Discount Factor}} \cdot \overrightarrow{\mathbf{r}}_{i}
+  \end{aligned}\]
+
+    <ul>
+      <li>\(\overrightarrow{\mathbf{r}}_{i} \in \mathbf{R}_{M \times N}\) : 사용자-아이템 상호작용 행렬의 열 벡터로서 아이템 벡터</li>
+      <li>$M$ : 총 사용자 수</li>
+      <li>$m_{i}$ : 아이템 $i$ 에 대하여 상호작용한 사용자 수</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="이미지-출처"><span class="me-2">이미지 출처</span><a href="#이미지-출처" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>https://towardsdatascience.com/essentials-of-recommendation-engines-content-based-and-collaborative-filtering-31521c964922</li>
+  <li>https://buomsoo-kim.github.io/recommender%20systems/2020/09/25/Recommender-systems-collab-filtering-12.md/</li>
 </ul>
 
   </div>
@@ -1143,8 +1103,8 @@
       <div class="post-meta mb-3">
         <i class="far fa-folder-open fa-fw me-1"></i>
         
-          <a href="/categories/statistical-techs/">Statistical Techs</a>,
-          <a href="/categories/bayesian-modeling/">Bayesian Modeling</a>
+          <a href="/categories/research-interest/">Research Interest</a>,
+          <a href="/categories/recommender-system/">Recommender System</a>
       </div>
     
 
@@ -1154,24 +1114,19 @@
         <i class="fa fa-tags fa-fw me-1"></i>
         
           <a
-            href="/tags/statistics/"
+            href="/tags/data-mining/"
             class="post-tag no-text-decoration"
-          >Statistics</a>
+          >Data Mining</a>
         
           <a
-            href="/tags/bayesian/"
+            href="/tags/recommender-system/"
             class="post-tag no-text-decoration"
-          >Bayesian</a>
+          >Recommender System</a>
         
           <a
-            href="/tags/information-theory/"
+            href="/tags/collaborative-filtering/"
             class="post-tag no-text-decoration"
-          >Information Theory</a>
-        
-          <a
-            href="/tags/variational-inference/"
-            class="post-tag no-text-decoration"
-          >Variational Inference</a>
+          >Collaborative Filtering</a>
         
       </div>
     
@@ -1207,21 +1162,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Posterior%20Estimation%20(2)%20Information%20Theory%20-%20Data%20Scientist&url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FVariational_Inference%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=Memory%20based%20Collaborative%20Filtering%20-%20Data%20Scientist&url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FCF%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Posterior%20Estimation%20(2)%20Information%20Theory%20-%20Data%20Scientist&u=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FVariational_Inference%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=Memory%20based%20Collaborative%20Filtering%20-%20Data%20Scientist&u=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FCF%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FVariational_Inference%2F&text=Posterior%20Estimation%20(2)%20Information%20Theory%20-%20Data%20Scientist" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FCF%2F&text=Memory%20based%20Collaborative%20Filtering%20-%20Data%20Scientist" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -1283,6 +1238,13 @@
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/Mult-VAE/">Mult-VAE</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/Statistical_Modeling_Methods/">Statistical Modeling Methods</a>
         </li>
       
@@ -1297,14 +1259,7 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Mult-VAE/">Mult-VAE</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/Bayesian_Regression/">Bayesian Regression</a>
+          <a href="/posts/BPMF/">BPMF</a>
         </li>
       
     </ul>
@@ -1638,165 +1593,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1816,45 +1612,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2049,6 +1806,10 @@
     
     
     
+      
+        
+        
+
   
     
     
@@ -2183,26 +1944,6 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
     
   
@@ -2230,6 +1971,105 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -2517,6 +2357,212 @@
     
     
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
     
   
     
@@ -2642,10 +2688,7 @@
     
     
     
-  
-    
-    
-    
+      
     
   
     
@@ -2757,10 +2800,7 @@
     
     
     
-  
-    
-    
-    
+      
     
   
     
@@ -2781,6 +2821,28 @@
     
     
     
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     
@@ -2836,382 +2898,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3272,6 +2958,9 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/data-mining/">Data Mining</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
@@ -3284,13 +2973,10 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/optimization/">Optimization</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/regression/">Regression</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/unsupervised-learning/">Unsupervised Learning</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/data-mining/">Data Mining</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
       
     </div>
   </section>
@@ -3382,223 +3068,55 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -3662,7 +3180,7 @@
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
-          <a href="/posts/Bayesian_Regression/" class="post-preview card h-100">
+          <a href="/posts/BPMF/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -3674,23 +3192,23 @@
 
 <time
   
-  data-ts="1721574000"
+  data-ts="1721746800"
   data-df="ll"
   
 >
-  Jul 22, 2024
+  Jul 24, 2024
 </time>
 
-              <h4 class="pt-0 my-2">Bayesian Regression</h4>
+              <h4 class="pt-0 my-2">BPMF</h4>
               <div class="text-muted">
-                <p>Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp; Management, College of Business Administration, Kookmin Univ.</p>
+                <p>&lt;ul type=&quot;square&quot;&gt; &lt;li&gt;&lt;strong&gt;Title&lt;/strong&gt;: &lt;a href=&quot;https://dl.acm.org/doi/abs/10.1145/1390156.1390267?casa_token=qcXfuanisHUAAAAA:1kvcFcEIDLbBTKptsE1CPjTQToi0mpGtJpYS7hHSTW2yKdoT2pUpNdfY7TARrn...</p>
               </div>
             </div>
           </a>
         </article>
       
         <article class="col">
-          <a href="/posts/Multi_Armed_Bandits/" class="post-preview card h-100">
+          <a href="/posts/FPMC/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -3702,23 +3220,23 @@
 
 <time
   
-  data-ts="1721487600"
+  data-ts="1707922800"
   data-df="ll"
   
 >
-  Jul 21, 2024
+  Feb 15, 2024
 </time>
 
-              <h4 class="pt-0 my-2">Multi Armed Bandits</h4>
+              <h4 class="pt-0 my-2">FPMC</h4>
               <div class="text-muted">
-                <p>Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp; Management, College of Business Administration, Kookmin Univ.</p>
+                <p>&lt;ul type=&quot;square&quot;&gt; &lt;li&gt;&lt;strong&gt;Title&lt;/strong&gt;: &lt;a href=&quot;&quot;&gt;&lt;em&gt;Factorizing Personalized Markov Chains for next-basket recommendation&lt;/em&gt;&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Author&lt;/strong&gt;: &lt;em&gt;Rendle et al.&lt;/em&gt;...</p>
               </div>
             </div>
           </a>
         </article>
       
         <article class="col">
-          <a href="/posts/Bayesian_A_B_Test/" class="post-preview card h-100">
+          <a href="/posts/TimeSVD++/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -3730,16 +3248,16 @@
 
 <time
   
-  data-ts="1721401200"
+  data-ts="1707318000"
   data-df="ll"
   
 >
-  Jul 20, 2024
+  Feb  8, 2024
 </time>
 
-              <h4 class="pt-0 my-2">Bayesian A/B Test</h4>
+              <h4 class="pt-0 my-2">TimeSVD++</h4>
               <div class="text-muted">
-                <p>Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp; Management, College of Business Administration, Kookmin Univ.</p>
+                <p>&lt;ul type=&quot;square&quot;&gt; &lt;li&gt;&lt;strong&gt;Title&lt;/strong&gt;: &lt;a href=&quot;&quot;&gt;&lt;em&gt;Collaborative Filtering with Temporal Dynamic&lt;/em&gt;&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Author&lt;/strong&gt;: &lt;em&gt;Koren&lt;/em&gt;&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Publisher&lt;/str...</p>
               </div>
             </div>
           </a>
@@ -3760,21 +3278,21 @@
 
   
     <a
-      href="/posts/BPMF/"
+      href="/posts/Ensemble/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>BPMF</p>
+      <p>Ensemble</p>
     </a>
   
 
   
     <a
-      href="/posts/Bayes_Action/"
+      href="/posts/DNN/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>Bayes Action</p>
+      <p>Deep Learning WorkFlow</p>
     </a>
   
 </nav>
@@ -4156,165 +3674,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -4334,45 +3693,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -4567,6 +3887,10 @@
     
     
     
+      
+        
+        
+
   
     
     
@@ -4701,26 +4025,6 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
     
   
@@ -4748,6 +4052,105 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -5035,6 +4438,212 @@
     
     
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
     
   
     
@@ -5160,10 +4769,7 @@
     
     
     
-  
-    
-    
-    
+      
     
   
     
@@ -5275,10 +4881,7 @@
     
     
     
-  
-    
-    
-    
+      
     
   
     
@@ -5299,6 +4902,28 @@
     
     
     
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     
@@ -5354,382 +4979,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -5790,6 +5039,9 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/data-mining/">Data Mining</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
@@ -5802,13 +5054,10 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/optimization/">Optimization</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/regression/">Regression</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/unsupervised-learning/">Unsupervised Learning</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/data-mining/">Data Mining</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
       
     </div>
   </section>

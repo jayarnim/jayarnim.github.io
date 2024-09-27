@@ -30,22 +30,25 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Sequential RecSys" />
+<meta property="og:title" content="Latent Factor Model" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="A minimal, responsive and feature-rich Jekyll theme for technical writing." />
-<meta property="og:description" content="A minimal, responsive and feature-rich Jekyll theme for technical writing." />
-<link rel="canonical" href="https://jayarnim.github.io/tags/sequential-recsys/" />
-<meta property="og:url" content="https://jayarnim.github.io/tags/sequential-recsys/" />
+<meta name="description" content="Based on the following lectures (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. (2) “Recommender System (2024-1)” by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ." />
+<meta property="og:description" content="Based on the following lectures (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. (2) “Recommender System (2024-1)” by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ." />
+<link rel="canonical" href="https://jayarnim.github.io/posts/LFM/" />
+<meta property="og:url" content="https://jayarnim.github.io/posts/LFM/" />
 <meta property="og:site_name" content="Data Scientist" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Sequential RecSys" />
+<meta property="og:image" content="https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-01-25T00:00:00+09:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg" />
+<meta property="twitter:title" content="Latent Factor Model" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"A minimal, responsive and feature-rich Jekyll theme for technical writing.","headline":"Sequential RecSys","url":"https://jayarnim.github.io/tags/sequential-recsys/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-01-25T00:00:00+09:00","datePublished":"2024-01-25T00:00:00+09:00","description":"Based on the following lectures (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. (2) “Recommender System (2024-1)” by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ.","headline":"Latent Factor Model","image":"https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/LFM/"},"url":"https://jayarnim.github.io/posts/LFM/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Sequential RecSys | Data Scientist
+  <title>Latent Factor Model | Data Scientist
   </title>
 
   <!--
@@ -109,9 +112,16 @@
   <!-- 3rd-party Dependencies -->
 
   
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.27.20/dist/tocbot.min.css">
   
 
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.min.css">
+  
+
+  
+    <!-- Image Popup -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css">
   
 
   <!-- JavaScript -->
@@ -402,14 +412,10 @@
           
         
           
-            <span>
-              <a href="/tags/">Tags</a>
-            </span>
-          
         
           
             
-              <span>Sequential RecSys</span>
+              <span>Latent Factor Model</span>
             
 
           
@@ -423,7 +429,7 @@
     </button>
 
     <div id="topbar-title">
-      Tag
+      Post
     </div>
 
     <button type="button" id="search-trigger" class="btn btn-link">
@@ -449,27 +455,480 @@
         <div class="row flex-grow-1">
           <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
             
-              
+              <!-- Refactor the HTML structure -->
+
+
+
+<!--
+  In order to allow a wide table to scroll horizontally,
+  we suround the markdown table with `<div class="table-wrapper">` and `</div>`
+-->
+
+
+
+<!--
+  Fixed kramdown code highlight rendering:
+  https://github.com/penibelst/jekyll-compress-html/issues/101
+  https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901
+-->
+
+
+
+<!-- Change the icon of checkbox -->
+
+
+
+<!-- Handle images -->
+
+
+
+
+  
+  
+
+  
+    
+      
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+
+  
+
+
+<!-- Add header for code snippets -->
+
+
+
+<!-- Create heading anchors -->
+
+
+
+
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+
+
+
+<!-- return -->
+
 
 
 
 <article class="px-1">
-  
+  <header>
+    <h1 data-toc-skip>Latent Factor Model</h1>
+    
+      <p class="post-desc fw-light mb-4">Based on the following lectures <br> (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. <br> (2) "Recommender System (2024-1)" by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ.</p>
     
 
-
-
-<div id="page-tag">
-  <h1 class="ps-lg-2">
-    <i class="fa fa-tag fa-fw text-muted"></i>
-    Sequential RecSys
-    <span class="lead text-muted ps-2">1</span>
-  </h1>
-  <ul class="content ps-0">
-    
-      <li class="d-flex justify-content-between px-md-3">
-        <a href="/posts/FPMC/">FPMC</a>
-        <span class="dash flex-grow-1"></span>
+    <div class="post-meta text-muted">
+      <!-- published date -->
+      <span>
+        Posted
         <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
@@ -480,22 +939,350 @@
 
 <time
   
-    class="text-muted small text-nowrap"
-  
-  data-ts="1707922800"
+  data-ts="1706108400"
   data-df="ll"
   
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
 >
-  Feb 15, 2024
+  Jan 25, 2024
 </time>
 
-      </li>
+      </span>
+
+      <!-- lastmod date -->
+      
+
+      
+        
+        
+        
+
+        
+
+        <div class="mt-3 mb-3">
+          <a href="/_post_refer_img/RecommenderSystem/Thumbnail.jpg" class="popup img-link preview-img shimmer"><img src="/_post_refer_img/RecommenderSystem/Thumbnail.jpg"  alt="Preview Image" width="1200" height="630"  loading="lazy"></a></div>
+      
+
+      <div class="d-flex justify-content-between">
+        <!-- author(s) -->
+        <span>
+          
+
+          By
+
+          <em>
+            
+              <a href="https://github.com/jayarnim">jayarnim</a>
+            
+          </em>
+        </span>
+
+        <div>
+          <!-- pageviews -->
+          
+
+          <!-- read time -->
+          <!-- Calculate the post's reading time, and display the word count in tooltip -->
+
+
+
+<!-- words per minute -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span
+  class="readtime"
+  data-bs-toggle="tooltip"
+  data-bs-placement="bottom"
+  title="964 words"
+>
+  <em>5 min</em> read</span>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="content">
+    <h2 id="collaborative-filtering"><span class="me-2">Collaborative Filtering</span><a href="#collaborative-filtering" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><strong>협업 필터링(Collaborative Filtering)</strong> : 과거 여러 사용자들이 다양한 아이템에 대하여 평가 점수를 매긴 기록을 활용하여 아직 상호작용하지 않은 아이템에 대한 사용자의 평점을 추론하는 방법론</p>
+
+    <p><a href="/_post_refer_img/RecommenderSystem/01-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/01-02.png" alt="00" width="100%" loading="lazy"></a></p>
+
+    <ul>
+      <li><strong>사용자 기반 협업 필터링(User-Based Collaborative Filtering)</strong> : Identify like-minded users</li>
+      <li><strong>아이템 기반 협업 필터링(Item-Based Collaborative Filtering)</strong> : Identify buying patterns</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>사용자-아이템 상호작용 행렬(User-Item Interaction Matrix)</strong> : $M$ 명의 사용자와 $N$ 가지 아이템 간의 상호작용을 수치적으로 표현한 행렬로서, 통상 행 벡터는 사용자를, 열 벡터는 아이템을 의미함</p>
+
+    <p><a href="/_post_refer_img/RecommenderSystem/02-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/02-01.png" alt="01" width="100%" loading="lazy"></a></p>
+
+\[r_{u,i} \in \mathbf{R} \in \mathbb{R}^{M \times N}\]
+
+    <ul>
+      <li>협업 필터링은 실질적으로 사용자-아이템 상호작용 행렬의 결측치(위 예시의 $-1$)를 채우는 방법이므로 행렬 완성 문제라고도 부름</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="function"><span class="me-2">Function</span><a href="#function" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><strong>Bias-aware Collaborative Filtering Function</strong></p>
+
+\[\begin{aligned}
+  \hat{r}_{u,i}
+  &amp;= \mu + \beta_{u} + \beta_{i} + \text{what}
+  \end{aligned}\]
+
+    <ul>
+      <li>$\hat{r}_{u,i}$ : 사용자 $u$ 의 아이템 $i$ 에 대한 평점 예측값</li>
+      <li>$\mu$ : 커뮤니티 평점 평균</li>
+      <li>$\beta_{u}$ : 사용자 $u$ 의 평균 평점 편차로서 사용자의 평점 척도</li>
+      <li>$\beta_{i}$ : 아이템 $i$ 의 평균 평점 편차로서 아이템의 인기도</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>What?</strong></p>
+    <ul>
+      <li>k-NN Algorithm(Memory based Collaborative Filtering)</li>
+      <li>Decision Tree Algorithm</li>
+      <li>Association Rules Algorithm</li>
+      <li>Naive Bayes Algorithm</li>
+      <li><strong>Matrix Factorization Algorithm(Latent Factor Model)</strong></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="latent-factor-model"><span class="me-2">Latent Factor Model</span><a href="#latent-factor-model" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><strong>잠재요인 모형(Latent Factor Model)</strong> : 사용자 벡터와 아이템 벡터를 정체를 알 수 없는 $k$ 개의 특징 공간으로 사상하는 방법</p>
+
+    <p><a href="/_post_refer_img/RecommenderSystem/03-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/03-01.png" alt="01" width="100%" loading="lazy"></a></p>
+
+    <blockquote>
+      <p>협업 필터링에서 사용자는 아이템들에 대한 평점 집합으로, 아이템은 사용자들로부터 받은 평점 집합으로 표현됨. 이처럼 사용자와 아이템은 각각 서로를 표현하는 벡터 공간 축이 되므로 직접 비교할 수 없음. 잠재요인 모형은 공통된 표현 수단인 잠재요인을 가정함으로써 이 문제를 해결함.</p>
+    </blockquote>
+  </li>
+  <li>
+    <p><strong>Matrix Factorization</strong>; Original Latent Factor Model</p>
+
+\[\begin{aligned}
+  \text{what}
+  &amp;= \overrightarrow{\mathbf{p}}_{u} \cdot \overrightarrow{\mathbf{q}}_{i}^{T}
+  \end{aligned}\]
+
+    <ul>
+      <li>\(\overrightarrow{\mathbf{p}}_{u} \in \mathbf{P}_{M \times K}\) : 사용자-잠재요인 벡터로서, 사용자 $u$ 의 요인별 선호도</li>
+      <li>\(\overrightarrow{\mathbf{q}}_{i} \in \mathbf{Q}_{N \times K}\) : 아이템-잠재요인 벡터로서, 아이템 $i$ 의 요인별 특성</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>SVD++</strong> : 특정 사용자가 특정 아이템에 대하여 매길 평점을 추론함에 있어, 목표 아이템 외에 사용자가 상호작용했던 다른 아이템들의 잠재요인 정보들을 함께 고려하는 방법</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{p}}_{u} \leftarrow \overrightarrow{\mathbf{p}}_{u} + \frac{\sum_{j \in R(u)}{\overrightarrow{\mathbf{q}}_{j}}}{\sqrt{\vert R(u)\vert}}
+  \end{aligned}\]
+
+    <ul>
+      <li>\(\displaystyle\frac{\sum_{j \in R(u)}{\overrightarrow{\mathbf{q}}_{j}}}{\sqrt{\vert R(u)\vert}}\) : 사용자 $u$ 가 상호작용한 아이템 벡터의 평균으로서, $u$ 가 상호작용한 아이템들의 평균적인 특성</li>
+      <li>$R(u)$ : 사용자 $u$ 가 상호작용한 아이템 집합</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="optimization"><span class="me-2">Optimization</span><a href="#optimization" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><strong>Objective Function for Bias-unaware Matrix Factorization</strong></p>
+
+\[\begin{aligned}
+  \hat{\overrightarrow{\mathbf{p}}}_{u}, \hat{\overrightarrow{\mathbf{q}}}_{i}
+  &amp;= \text{arg} \min_{\Theta}{\text{Loss}\left(r_{u,i},\hat{r}_{u,i}\right) + \lambda_{\Theta}\Vert \Theta \Vert^{2}}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h3 id="als"><span class="me-2">ALS</span><a href="#als" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p><strong>교대최소제곱법(<code class="language-plaintext highlighter-rouge">A</code>lternating <code class="language-plaintext highlighter-rouge">L</code>east <code class="language-plaintext highlighter-rouge">S</code>quare; ALS)</strong> : $\mathbf{P},\mathbf{Q}$ 에 대하여 한 번에 하나의 행렬을 고정한 상태에서 다른 행렬을 최적화하는 과정을 번갈아 반복하여 수렴시키는 최적화 알고리즘으로서, 최소자승법을 활용하므로 각 사용자의 상호작용 데이터를 독립적으로 연산할 수 있어 병렬 처리에 적합함</p>
+  </li>
+  <li>
+    <p><strong>Objective Function</strong></p>
+
+\[\begin{aligned}
+  \hat{\overrightarrow{\mathbf{p}}}_{u}
+  &amp;= \text{arg} \min_{\mathbf{p}}{\Vert \overrightarrow{\mathbf{r}}_{u} - \mathbf{Q} \cdot \overrightarrow{\mathbf{p}}_{u}\Vert^{2} + \lambda \Vert \overrightarrow{\mathbf{p}}_{u} \Vert^{2}}, \quad \text{where Q is fixed}\\
+  \hat{\overrightarrow{\mathbf{q}}}_{i}
+  &amp;= \text{arg} \min_{\mathbf{q}}{\Vert \overrightarrow{\mathbf{r}}_{i} - \mathbf{P} \cdot \overrightarrow{\mathbf{q}}_{i}\Vert^{2} + \lambda \Vert \overrightarrow{\mathbf{q}}_{i} \Vert^{2}}, \quad \text{where P is fixed}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>Optimality Condition</strong></p>
+
+\[\begin{aligned}
+  \frac{\partial L}{\partial \overrightarrow{\mathbf{p}}_{u}}
+  &amp;= -2\mathbf{Q}^{T} \cdot \left(\overrightarrow{\mathbf{r}}_{u} - \mathbf{Q} \cdot \overrightarrow{\mathbf{p}}_{u}\right) + 2\lambda \cdot \overrightarrow{\mathbf{p}}_{u} = 0\\
+  \frac{\partial L}{\partial \overrightarrow{\mathbf{q}}_{i}}
+  &amp;= -2\mathbf{P}^{T} \cdot \left(\overrightarrow{\mathbf{r}}_{i} - \mathbf{P} \cdot \overrightarrow{\mathbf{q}}_{i}\right) + 2\lambda \cdot \overrightarrow{\mathbf{q}}_{i} = 0
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>Optimality Params</strong></p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{p}}_{u}
+  &amp;\leftarrow \left(\mathbf{Q}^{T}\mathbf{Q} + \lambda \mathbf{I}\right)^{-1}\mathbf{Q}^{T}\overrightarrow{\mathbf{r}}_{u}\\
+  \overrightarrow{\mathbf{q}}_{i}
+  &amp;\leftarrow \left(\mathbf{P}^{T}\mathbf{P} + \lambda \mathbf{I}\right)^{-1}\mathbf{P}^{T}\overrightarrow{\mathbf{r}}_{i}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="이미지-출처"><span class="me-2">이미지 출처</span><a href="#이미지-출처" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>https://towardsdatascience.com/essentials-of-recommendation-engines-content-based-and-collaborative-filtering-31521c964922</li>
+  <li>https://buomsoo-kim.github.io/recommender%20systems/2020/09/25/Recommender-systems-collab-filtering-12.md/</li>
+</ul>
+
+  </div>
+
+  <div class="post-tail-wrapper text-muted">
+    <!-- categories -->
     
-  </ul>
+      <div class="post-meta mb-3">
+        <i class="far fa-folder-open fa-fw me-1"></i>
+        
+          <a href="/categories/research-interest/">Research Interest</a>,
+          <a href="/categories/recommender-system/">Recommender System</a>
+      </div>
+    
+
+    <!-- tags -->
+    
+      <div class="post-tags">
+        <i class="fa fa-tags fa-fw me-1"></i>
+        
+          <a
+            href="/tags/data-mining/"
+            class="post-tag no-text-decoration"
+          >Data Mining</a>
+        
+          <a
+            href="/tags/recommender-system/"
+            class="post-tag no-text-decoration"
+          >Recommender System</a>
+        
+          <a
+            href="/tags/collaborative-filtering/"
+            class="post-tag no-text-decoration"
+          >Collaborative Filtering</a>
+        
+          <a
+            href="/tags/latent-factor-model/"
+            class="post-tag no-text-decoration"
+          >Latent Factor Model</a>
+        
+      </div>
+    
+
+    <div
+      class="
+        post-tail-bottom
+        d-flex justify-content-between align-items-center mt-5 pb-2
+      "
+    >
+      <div class="license-wrapper">
+        
+          
+
+          This post is licensed under 
+        <a href="https://creativecommons.org/licenses/by/4.0/">
+          CC BY 4.0
+        </a>
+         by the author.
+        
+      </div>
+
+      <!-- Post sharing snippet -->
+
+<div class="share-wrapper d-flex align-items-center">
+  <span class="share-label text-muted">Share</span>
+  <span class="share-icons">
+    
+    
+    
+
+    
+
+      
+
+      <a href="https://twitter.com/intent/tweet?text=Latent%20Factor%20Model%20-%20Data%20Scientist&url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FLFM%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+        <i class="fa-fw fa-brands fa-square-x-twitter"></i>
+      </a>
+    
+
+      
+
+      <a href="https://www.facebook.com/sharer/sharer.php?title=Latent%20Factor%20Model%20-%20Data%20Scientist&u=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FLFM%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+        <i class="fa-fw fab fa-facebook-square"></i>
+      </a>
+    
+
+      
+
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FLFM%2F&text=Latent%20Factor%20Model%20-%20Data%20Scientist" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+        <i class="fa-fw fab fa-telegram"></i>
+      </a>
+    
+
+    <button
+      id="copy-link"
+      aria-label="Copy link"
+      class="btn small"
+      data-bs-toggle="tooltip"
+      data-bs-placement="top"
+      title="Copy link"
+      data-title-succeed="Link copied successfully!"
+    >
+      <i class="fa-fw fas fa-link pe-none fs-6"></i>
+    </button>
+  </span>
 </div>
 
-  
+    </div>
+    <!-- .post-tail-bottom -->
+  </div>
+  <!-- div.post-tail-wrapper -->
 </article>
+
 
             
           </main>
@@ -533,6 +1320,13 @@
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/Mult-VAE/">Mult-VAE</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/Statistical_Modeling_Methods/">Statistical Modeling Methods</a>
         </li>
       
@@ -547,14 +1341,7 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Mult-VAE/">Mult-VAE</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/Bayesian_Regression/">Bayesian Regression</a>
+          <a href="/posts/BPMF/">BPMF</a>
         </li>
       
     </ul>
@@ -888,165 +1675,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1066,45 +1694,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1299,6 +1888,10 @@
     
     
     
+      
+        
+        
+
   
     
     
@@ -1433,26 +2026,6 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
     
   
@@ -1480,6 +2053,105 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -1767,6 +2439,212 @@
     
     
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
     
   
     
@@ -1892,10 +2770,7 @@
     
     
     
-  
-    
-    
-    
+      
     
   
     
@@ -2007,10 +2882,7 @@
     
     
     
-  
-    
-    
-    
+      
     
   
     
@@ -2031,6 +2903,28 @@
     
     
     
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     
@@ -2086,382 +2980,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2522,6 +3040,9 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/data-mining/">Data Mining</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
@@ -2534,13 +3055,10 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/optimization/">Optimization</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/regression/">Regression</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/unsupervised-learning/">Unsupervised Learning</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/data-mining/">Data Mining</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
       
     </div>
   </section>
@@ -2549,12 +3067,323 @@
             </div>
 
             
+              
+              
+
+
+
+  <section id="toc-wrapper" class="d-none ps-0 pe-4">
+    <h2 class="panel-heading ps-3 mb-2">Contents</h2>
+    <nav id="toc"></nav>
+  </section>
+
+
+            
           </aside>
         </div>
 
         <div class="row">
           <!-- tail -->
           <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
+            
+              
+              <!-- Recommend the other 3 posts according to the tags and categories of the current post. -->
+
+<!-- The total size of related posts -->
+
+
+<!-- An random integer that bigger than 0 -->
+
+
+<!-- Equals to TAG_SCORE / {max_categories_hierarchy} -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  <aside id="related-posts" aria-labelledby="related-label">
+    <h3 class="mb-4" id="related-label">Further Reading</h3>
+    <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
+      
+        <article class="col">
+          <a href="/posts/BPMF/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1721746800"
+  data-df="ll"
+  
+>
+  Jul 24, 2024
+</time>
+
+              <h4 class="pt-0 my-2">BPMF</h4>
+              <div class="text-muted">
+                <p>&lt;ul type=&quot;square&quot;&gt; &lt;li&gt;&lt;strong&gt;Title&lt;/strong&gt;: &lt;a href=&quot;https://dl.acm.org/doi/abs/10.1145/1390156.1390267?casa_token=qcXfuanisHUAAAAA:1kvcFcEIDLbBTKptsE1CPjTQToi0mpGtJpYS7hHSTW2yKdoT2pUpNdfY7TARrn...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/FPMC/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1707922800"
+  data-df="ll"
+  
+>
+  Feb 15, 2024
+</time>
+
+              <h4 class="pt-0 my-2">FPMC</h4>
+              <div class="text-muted">
+                <p>&lt;ul type=&quot;square&quot;&gt; &lt;li&gt;&lt;strong&gt;Title&lt;/strong&gt;: &lt;a href=&quot;&quot;&gt;&lt;em&gt;Factorizing Personalized Markov Chains for next-basket recommendation&lt;/em&gt;&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Author&lt;/strong&gt;: &lt;em&gt;Rendle et al.&lt;/em&gt;...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/TimeSVD++/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1707318000"
+  data-df="ll"
+  
+>
+  Feb  8, 2024
+</time>
+
+              <h4 class="pt-0 my-2">TimeSVD++</h4>
+              <div class="text-muted">
+                <p>&lt;ul type=&quot;square&quot;&gt; &lt;li&gt;&lt;strong&gt;Title&lt;/strong&gt;: &lt;a href=&quot;&quot;&gt;&lt;em&gt;Collaborative Filtering with Temporal Dynamic&lt;/em&gt;&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Author&lt;/strong&gt;: &lt;em&gt;Koren&lt;/em&gt;&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Publisher&lt;/str...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+    </nav>
+  </aside>
+  <!-- #related-posts -->
+
+
+            
+              
+              <!-- Navigation buttons at the bottom of the post. -->
+
+<nav class="post-navigation d-flex justify-content-between" aria-label="Post Navigation">
+  
+  
+
+  
+    <a
+      href="/posts/CNN/"
+      class="btn btn-outline-primary"
+      aria-label="Older"
+    >
+      <p>CNN</p>
+    </a>
+  
+
+  
+    <a
+      href="/posts/RNN/"
+      class="btn btn-outline-primary"
+      aria-label="Newer"
+    >
+      <p>RNN</p>
+    </a>
+  
+</nav>
+
+            
+              
+              <!-- The comments switcher -->
+
+
             
 
             <!-- The Footer -->
@@ -2927,165 +3756,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3105,45 +3775,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3338,6 +3969,10 @@
     
     
     
+      
+        
+        
+
   
     
     
@@ -3472,26 +4107,6 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
     
   
@@ -3519,6 +4134,105 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -3806,6 +4520,212 @@
     
     
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
     
   
     
@@ -3931,10 +4851,7 @@
     
     
     
-  
-    
-    
-    
+      
     
   
     
@@ -4046,10 +4963,7 @@
     
     
     
-  
-    
-    
-    
+      
     
   
     
@@ -4070,6 +4984,28 @@
     
     
     
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     
@@ -4125,382 +5061,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -4561,6 +5121,9 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/data-mining/">Data Mining</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
@@ -4573,13 +5136,10 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/optimization/">Optimization</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/regression/">Regression</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/unsupervised-learning/">Unsupervised Learning</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/data-mining/">Data Mining</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
       
     </div>
   </section>
@@ -4639,6 +5199,13 @@
 <!-- layout specified -->
 
 
+  
+
+  
+    <!-- image lazy-loading & popup & clipboard -->
+    
+  
+
 
 
 
@@ -4688,9 +5255,37 @@
 
   
 
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
 
 
-  <script src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/dayjs@1.11.11/dayjs.min.js,npm/dayjs@1.11.11/locale/en.min.js,npm/dayjs@1.11.11/plugin/relativeTime.min.js,npm/dayjs@1.11.11/plugin/localizedFormat.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.11/dayjs.min.js,npm/dayjs@1.11.11/locale/en.min.js,npm/dayjs@1.11.11/plugin/relativeTime.min.js,npm/dayjs@1.11.11/plugin/localizedFormat.min.js,npm/tocbot@4.27.20/dist/tocbot.min.js"></script>
 
 
 
@@ -4698,11 +5293,20 @@
 
 
 
-<script src="/assets/js/dist/misc.min.js"></script>
+<script src="/assets/js/dist/post.min.js"></script>
 
+
+  <!-- MathJax -->
+  <script src="/assets/js/data/mathjax.js"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
 
 
 <!-- Pageviews -->
+
+  
+
+  
 
 
 

@@ -4,7 +4,7 @@
   <id>https://jayarnim.github.io/</id>
   <title>Data Scientist</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-09-27T04:00:13+09:00</updated>
+  <updated>2024-09-28T03:42:15+09:00</updated>
   <author>
     <name>jayarnim</name>
     <uri>https://jayarnim.github.io/</uri>
@@ -17,6 +17,32 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>VABMF</title>
+    <link href="https://jayarnim.github.io/posts/VABMF/" rel="alternate" type="text/html" title="VABMF" />
+    <published>2024-08-07T00:00:00+09:00</published>
+  
+    <updated>2024-08-07T00:00:00+09:00</updated>
+  
+    <id>https://jayarnim.github.io/posts/VABMF/</id>
+    <content src="https://jayarnim.github.io/posts/VABMF/" />
+    <author>
+      <name>jayarnim</name>
+    </author>
+
+  
+    
+    <category term="Research Interest" />
+    
+    <category term="Recommender System" />
+    
+  
+
+  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://link.springer.com/article/10.1007/s10489-020-02049-9&amp;quot;&amp;gt;&amp;lt;em&amp;gt;Variational autoencoder Bayesian matrix factorization for collaborative filtering&amp;lt;/em&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Author&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;Aldhubri et. al.&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Publisher&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;Springer&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2021&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;</summary>
+
+  </entry>
 
   
   <entry>
@@ -46,14 +72,14 @@
 
   
   <entry>
-    <title>VABMF</title>
-    <link href="https://jayarnim.github.io/posts/VABMF/" rel="alternate" type="text/html" title="VABMF" />
+    <title>Mult-VAE</title>
+    <link href="https://jayarnim.github.io/posts/Mult-VAE/" rel="alternate" type="text/html" title="Mult-VAE" />
     <published>2024-07-31T00:00:00+09:00</published>
   
     <updated>2024-07-31T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/VABMF/</id>
-    <content src="https://jayarnim.github.io/posts/VABMF/" />
+    <id>https://jayarnim.github.io/posts/Mult-VAE/</id>
+    <content src="https://jayarnim.github.io/posts/Mult-VAE/" />
     <author>
       <name>jayarnim</name>
     </author>
@@ -66,7 +92,7 @@
     
   
 
-  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://link.springer.com/article/10.1007/s10489-020-02049-9&amp;quot;&amp;gt;&amp;lt;em&amp;gt;Variational autoencoder Bayesian matrix factorization for collaborative filtering&amp;lt;/em&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Author&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;Aldhubri et. al.&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Publisher&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;Springer&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2021&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;</summary>
+  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://dl.acm.org/doi/abs/10.1145/3178876.3186150&amp;quot;&amp;gt;&amp;lt;em&amp;gt;Variational Autoencoders for Collaborative Filtering&amp;lt;/em&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Author&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;Liang et al.&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Publisher&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;WWW&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2018&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;</summary>
 
   </entry>
 
@@ -98,14 +124,14 @@
 
   
   <entry>
-    <title>Mult-VAE</title>
-    <link href="https://jayarnim.github.io/posts/Mult-VAE/" rel="alternate" type="text/html" title="Mult-VAE" />
+    <title>BPMF</title>
+    <link href="https://jayarnim.github.io/posts/BPMF/" rel="alternate" type="text/html" title="BPMF" />
     <published>2024-07-24T00:00:00+09:00</published>
   
     <updated>2024-07-24T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/Mult-VAE/</id>
-    <content src="https://jayarnim.github.io/posts/Mult-VAE/" />
+    <id>https://jayarnim.github.io/posts/BPMF/</id>
+    <content src="https://jayarnim.github.io/posts/BPMF/" />
     <author>
       <name>jayarnim</name>
     </author>
@@ -118,33 +144,7 @@
     
   
 
-  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://dl.acm.org/doi/abs/10.1145/3178876.3186150&amp;quot;&amp;gt;&amp;lt;em&amp;gt;Variational Autoencoders for Collaborative Filtering&amp;lt;/em&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Author&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;Liang et al.&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Publisher&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;WWW&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2018&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Bayesian Regression</title>
-    <link href="https://jayarnim.github.io/posts/Bayesian_Regression/" rel="alternate" type="text/html" title="Bayesian Regression" />
-    <published>2024-07-22T00:00:00+09:00</published>
-  
-    <updated>2024-07-22T00:00:00+09:00</updated>
-  
-    <id>https://jayarnim.github.io/posts/Bayesian_Regression/</id>
-    <content src="https://jayarnim.github.io/posts/Bayesian_Regression/" />
-    <author>
-      <name>jayarnim</name>
-    </author>
-
-  
-    
-    <category term="Statistical Techs" />
-    
-    <category term="Bayesian Modeling" />
-    
-  
-
-  <summary>Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp;amp; Management, College of Business Administration, Kookmin Univ.</summary>
+  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://dl.acm.org/doi/abs/10.1145/1390156.1390267?casa_token=qcXfuanisHUAAAAA:1kvcFcEIDLbBTKptsE1CPjTQToi0mpGtJpYS7hHSTW2yKdoT2pUpNdfY7TARrnNdKC2FaIqIaULwOow&amp;quot;&amp;gt;&amp;lt;em&amp;gt;Bayesian Probabilistic Matrix Factorization using Markov Chain Monte Carlo&amp;lt;/em&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Author&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;R. Salakhutdinov and A. Mnih&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Publ...</summary>
 
   </entry>
 
