@@ -1,7 +1,7 @@
 ---
-order: 8
+order: 7
 title: Bayesian Regression
-date: 2024-07-22
+date: 2024-07-21
 categories: [Statistical Techs, Bayesian Modeling]
 tags: [Statistics, Bayesian, Regression]
 math: true
