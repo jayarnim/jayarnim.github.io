@@ -577,6 +577,77 @@
     <!-- combine -->
     
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
 
   
 
@@ -595,10 +666,85 @@
   
 
   
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
 
   
   
 
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
   
 
   
@@ -704,9 +850,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="0 words"
+  title="481 words"
 >
-  <em>1 min</em> read</span>
+  <em>2 min</em> read</span>
 
         </div>
       </div>
@@ -714,7 +860,155 @@
   </header>
 
   <div class="content">
-    
+    <h2 id="bpr"><span class="me-2">BPR</span><a href="#bpr" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><strong>BPR(<code class="language-plaintext highlighter-rouge">B</code>ayesian <code class="language-plaintext highlighter-rouge">P</code>ersonalized <code class="language-plaintext highlighter-rouge">R</code>anking)</strong> : 베이지안 접근법을 활용한 개인화 순위 목적 함수</p>
+
+    <blockquote>
+      <p>선행 연구들은 대체로 평점 예측에 집중하는 경향을 보였으며, 이는 명시적 피드백 환경에 적합함. 하지만 실제에서는 주로 암묵적 피드백이 사용되며, 때문에 개별 아이템의 평점을 정확히 맞추는 것보다는 아이템 간 선호 순위를 맞추는 목적 함수가 요구됨.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h2 id="data-set"><span class="me-2">Data Set</span><a href="#data-set" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<p><a href="/_post_refer_img/RecommenderSystem/04-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/04-01.png" alt="01" width="100%" loading="lazy"></a></p>
+
+<ul>
+  <li><strong>학습 데이터</strong> : 개별 사용자 $u$ 의 선호체계 $&gt;_{u}$
+    <ul>
+      <li>
+        <p>비교 가능성(Totality)</p>
+
+\[\forall i,j \in I:\quad i \ne j \quad \Rightarrow \quad \left(i &gt;_{u} j\right) \vee \left(j &gt;_{u} i\right)\]
+      </li>
+      <li>
+        <p>반대칭성(Anti-Symmetry)</p>
+
+\[\forall i,j \in I:\quad \left(i &gt;_{u} j\right) \wedge \left(j &gt;_{u} i\right) \quad \Rightarrow \quad i = j\]
+      </li>
+      <li>
+        <p>이행성(Transitivity)</p>
+
+\[\forall i,j,k \in I:\quad \left(i &gt;_{u} j\right) \wedge \left(j &gt;_{u} k\right) \quad \Rightarrow \quad \left(i &gt;_{u} k\right)\]
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Pair-wise Preference Data Set</strong></p>
+
+\[\Omega
+  = \Big\{(u,i,j) \mid i \in I_{u} \wedge j \in I \setminus I_{u}\Big\}\]
+
+    <ul>
+      <li>$I$ : 아이템 집합</li>
+      <li>$I_{u} \subset I$ : 사용자 $u$ 가 상호작용한 아이템 집합</li>
+      <li>$i \in I_{u}$ : 사용자 $u$ 가 상호작용한 아이템</li>
+      <li>$j \in I \setminus I_{u}$ : 사용자 $u$ 가 상호작용하지 아니한 아이템</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Single Data Point Definition</strong></p>
+
+\[x_{u,i,j}:=r_{u,i} - r_{u,j}\]
+  </li>
+</ul>
+
+<h2 id="how-to-modeling"><span class="me-2">How to Modeling</span><a href="#how-to-modeling" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<h3 id="posterior-estimation"><span class="me-2">Posterior Estimation</span><a href="#posterior-estimation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+\[\underbrace{\ln{P(\Theta \mid \mathcal{D})}}_{\begin{array}{c} \text{Objective Function} \\ \text{(Log Posterior)} \end{array}} \propto \underbrace{\ln{P(\mathcal{D} \mid \Theta)}}_{\text{Log Likelihood}} + \underbrace{\ln{P(\Theta)}}_{\text{Log Prior}}\]
+
+<ul>
+  <li>
+    <p><strong>Log Likelihood</strong></p>
+
+    <ul>
+      <li>
+        <p>Likelihood of Single Data Point</p>
+
+\[\begin{aligned}
+  P(i &gt;_{u} j \mid \Theta)
+  &amp;= \sigma\left(\hat{x}_{u,i,j}\right)
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>Likelihood of Data Set</p>
+
+\[\begin{aligned}
+  P(\mathcal{D} \mid \Theta)
+  &amp;= \prod_{(u,i,j)\in\Omega}{P(i &gt;_{u} j \mid \Theta)}\\
+  &amp;= \prod_{(u,i,j)\in\Omega}{\sigma\left(\hat{x}_{u,i,j}\right)}
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>Log Likelihood</p>
+
+\[\begin{aligned}
+  \ln{P(\mathcal{D} \mid \Theta)}
+  &amp;= \ln{\prod_{(u,i,j)\in\Omega}{P(i &gt;_{u} j \mid \Theta)}}\\
+  &amp;= \sum_{(u,i,j)\in\Omega}{\ln{P(i &gt;_{u} j \mid \Theta)}}\\
+  &amp;= \sum_{(u,i,j)\in\Omega}{\ln{\sigma\left(\hat{x}_{u,i,j}\right)}}
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Prior Determination</strong>; $\Theta \sim \mathcal{N}\left(0, \lambda_{\Theta}\mathbf{I}\right)$</p>
+
+\[\begin{aligned}
+  P\left(\Theta\right)
+  &amp;= \frac{1}{(2\pi)^{d/2} \cdot \lambda_{\Theta}^{d/2}} \cdot \exp \left[\frac{1}{2\lambda_{\Theta}}\Vert \Theta \Vert^{2}\right]\\
+  \\
+  \ln{P\left(\Theta\right)}
+  &amp;= \ln{\frac{1}{(2\pi)^{d/2} \cdot \lambda_{\Theta}^{d/2}} \cdot \exp \left[\frac{1}{2\lambda_{\Theta}}\Vert \Theta \Vert^{2}\right]}\\
+  &amp;= \ln{\frac{1}{(2\pi)^{d/2} \cdot \lambda_{\Theta}^{d/2}}} + \frac{1}{2\lambda_{\Theta}}\Vert \Theta \Vert^{2}\\
+  &amp;\propto -\lambda_{\Theta}\Vert\Theta\Vert^{2}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>Posterior Estimation</strong></p>
+
+\[\begin{aligned}
+  P(\Theta \mid \mathcal{D})
+  &amp;\propto P(\mathcal{D} \mid \Theta) \cdot P(\Theta)\\
+  \\
+  \ln{P(\Theta \mid \mathcal{D})}
+  &amp;\propto \ln{P(\mathcal{D} \mid \Theta)} + \ln{P(\Theta)}\\
+  &amp;\propto \sum_{(u,i,j)\in\Omega}{\ln{\sigma\left(\hat{x}_{u,i,j}\right)}} -\lambda_{\Theta}\Vert\Theta\Vert^{2}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h3 id="optimization"><span class="me-2">Optimization</span><a href="#optimization" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p><strong>Objective Function</strong></p>
+
+\[\text{BPR-OPT} = \ln{P(\Theta \mid \mathcal{D})}\]
+  </li>
+  <li>
+    <p><strong>Optimization</strong></p>
+
+\[\begin{aligned}
+  \hat{\Theta}
+  &amp;= \text{arg} \max_{\Theta}{\ln{P(\Theta \mid \mathcal{D})}}\\
+  &amp;= \text{arg} \max_{\Theta}{\sum_{(u,i,j)\in\Omega}{\ln{\sigma\left(\hat{x}_{u,i,j}\right)}} - \lambda_{\Theta}\Vert\Theta\Vert^{2}}\\
+  &amp;= \text{arg} \min_{\Theta}{\sum_{(u,i,j)\in\Omega}{-\ln{\sigma\left(\hat{x}_{u,i,j}\right)}} + \lambda_{\Theta}\Vert\Theta\Vert^{2}}
+  \end{aligned}\]
+
+    <ul>
+      <li>$\hat{\Theta}$ is MAP(Maximum a Posteriori) Estimator</li>
+    </ul>
+  </li>
+</ul>
 
   </div>
 
@@ -2630,6 +2924,11 @@
               
 
 
+
+  <section id="toc-wrapper" class="d-none ps-0 pe-4">
+    <h2 class="panel-heading ps-3 mb-2">Contents</h2>
+    <nav id="toc"></nav>
+  </section>
 
 
             
@@ -4830,9 +5129,16 @@
 
   
 
+  
+    
+
+    
+
+  
 
 
-  <script src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.11/dayjs.min.js,npm/dayjs@1.11.11/locale/en.min.js,npm/dayjs@1.11.11/plugin/relativeTime.min.js,npm/dayjs@1.11.11/plugin/localizedFormat.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.11/dayjs.min.js,npm/dayjs@1.11.11/locale/en.min.js,npm/dayjs@1.11.11/plugin/relativeTime.min.js,npm/dayjs@1.11.11/plugin/localizedFormat.min.js,npm/tocbot@4.27.20/dist/tocbot.min.js"></script>
 
 
 
