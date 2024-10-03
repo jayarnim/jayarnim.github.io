@@ -4,7 +4,7 @@
   <id>https://jayarnim.github.io/</id>
   <title>Data Scientist</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-10-01T05:41:31+09:00</updated>
+  <updated>2024-10-04T00:51:37+09:00</updated>
   <author>
     <name>jayarnim</name>
     <uri>https://jayarnim.github.io/</uri>
@@ -17,6 +17,91 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>FAWMF</title>
+    <link href="https://jayarnim.github.io/posts/FAWMF/" rel="alternate" type="text/html" title="FAWMF" />
+    <published>2024-08-28T00:00:00+09:00</published>
+  
+    <updated>2024-08-28T00:00:00+09:00</updated>
+  
+    <id>https://jayarnim.github.io/posts/FAWMF/</id>
+    <content src="https://jayarnim.github.io/posts/FAWMF/" />
+    <author>
+      <name>jayarnim</name>
+    </author>
+
+  
+    
+    <category term="Research Interest" />
+    
+    <category term="Recommender System" />
+    
+  
+
+  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://arxiv.org/abs/2003.01892&amp;quot;&amp;gt;&amp;lt;code&amp;gt;Fast Adaptively Weighted Matrix Factorization for Recommendation with Implicit Feedback&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Publisher&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;AAAI&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2020&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Data Set&amp;lt;/strong&amp;gt;:
+    &amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;code&amp;gt;&amp;lt;a href=&amp;quot;https://grouplens.org/datasets/m...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>EXMF</title>
+    <link href="https://jayarnim.github.io/posts/EXMF/" rel="alternate" type="text/html" title="EXMF" />
+    <published>2024-08-21T00:00:00+09:00</published>
+  
+    <updated>2024-08-21T00:00:00+09:00</updated>
+  
+    <id>https://jayarnim.github.io/posts/EXMF/</id>
+    <content src="https://jayarnim.github.io/posts/EXMF/" />
+    <author>
+      <name>jayarnim</name>
+    </author>
+
+  
+    
+    <category term="Research Interest" />
+    
+    <category term="Recommender System" />
+    
+  
+
+  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://dl.acm.org/doi/abs/10.1145/2872427.2883090&amp;quot;&amp;gt;&amp;lt;code&amp;gt;Modeling User Exposure in Recommendation&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Publisher&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;WWW&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2016&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Data Set&amp;lt;/strong&amp;gt;:
+    &amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;code&amp;gt;&amp;lt;a href=&amp;quot;https://snap.stanford.edu/data/loc-Gowalla.html&amp;quot;&amp;gt;Gowalla&amp;lt;/...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>BPR</title>
+    <link href="https://jayarnim.github.io/posts/BPR/" rel="alternate" type="text/html" title="BPR" />
+    <published>2024-08-14T00:00:00+09:00</published>
+  
+    <updated>2024-08-14T00:00:00+09:00</updated>
+  
+    <id>https://jayarnim.github.io/posts/BPR/</id>
+    <content src="https://jayarnim.github.io/posts/BPR/" />
+    <author>
+      <name>jayarnim</name>
+    </author>
+
+  
+    
+    <category term="Research Interest" />
+    
+    <category term="Recommender System" />
+    
+  
+
+  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://arxiv.org/abs/1205.2618&amp;quot;&amp;gt;&amp;lt;code&amp;gt;BPR: Bayesian Personalized Ranking from Implicit Feedback&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Publisher&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;UAI&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2009&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Data Set&amp;lt;/strong&amp;gt;:
+    &amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;code&amp;gt;&amp;lt;a href=&amp;quot;https://www.kaggle.com/datasets/netflix-inc/netflix-prize-data&amp;quot;&amp;gt;...</summary>
+
+  </entry>
 
   
   <entry>
@@ -40,7 +125,9 @@
     
   
 
-  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://link.springer.com/article/10.1007/s10489-020-02049-9&amp;quot;&amp;gt;&amp;lt;em&amp;gt;Variational autoencoder Bayesian matrix factorization for collaborative filtering&amp;lt;/em&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Author&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;Aldhubri et. al.&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Publisher&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;Springer&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2021&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;</summary>
+  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://link.springer.com/article/10.1007/s10489-020-02049-9&amp;quot;&amp;gt;&amp;lt;code&amp;gt;Variational autoencoder Bayesian matrix factorization for collaborative filtering&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Publisher&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;Springer&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2021&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Data Set&amp;lt;/strong&amp;gt;:
+    &amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;code&amp;gt;&amp;lt;a href=&amp;quot;https:...</summary>
 
   </entry>
 
@@ -67,84 +154,6 @@
   
 
   <summary>Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Mult-VAE</title>
-    <link href="https://jayarnim.github.io/posts/Mult-VAE/" rel="alternate" type="text/html" title="Mult-VAE" />
-    <published>2024-07-31T00:00:00+09:00</published>
-  
-    <updated>2024-07-31T00:00:00+09:00</updated>
-  
-    <id>https://jayarnim.github.io/posts/Mult-VAE/</id>
-    <content src="https://jayarnim.github.io/posts/Mult-VAE/" />
-    <author>
-      <name>jayarnim</name>
-    </author>
-
-  
-    
-    <category term="Research Interest" />
-    
-    <category term="Recommender System" />
-    
-  
-
-  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://dl.acm.org/doi/abs/10.1145/3178876.3186150&amp;quot;&amp;gt;&amp;lt;em&amp;gt;Variational Autoencoders for Collaborative Filtering&amp;lt;/em&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Author&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;Liang et al.&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Publisher&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;WWW&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2018&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Regular Expression</title>
-    <link href="https://jayarnim.github.io/posts/Regular-Expression/" rel="alternate" type="text/html" title="Regular Expression" />
-    <published>2024-07-29T00:00:00+09:00</published>
-  
-    <updated>2024-07-29T00:00:00+09:00</updated>
-  
-    <id>https://jayarnim.github.io/posts/Regular-Expression/</id>
-    <content src="https://jayarnim.github.io/posts/Regular-Expression/" />
-    <author>
-      <name>jayarnim</name>
-    </author>
-
-  
-    
-    <category term="AI &amp; Data Mining" />
-    
-    <category term="Text Analytics" />
-    
-  
-
-  <summary>Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>BPMF</title>
-    <link href="https://jayarnim.github.io/posts/BPMF/" rel="alternate" type="text/html" title="BPMF" />
-    <published>2024-07-24T00:00:00+09:00</published>
-  
-    <updated>2024-07-24T00:00:00+09:00</updated>
-  
-    <id>https://jayarnim.github.io/posts/BPMF/</id>
-    <content src="https://jayarnim.github.io/posts/BPMF/" />
-    <author>
-      <name>jayarnim</name>
-    </author>
-
-  
-    
-    <category term="Research Interest" />
-    
-    <category term="Recommender System" />
-    
-  
-
-  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://dl.acm.org/doi/abs/10.1145/1390156.1390267?casa_token=qcXfuanisHUAAAAA:1kvcFcEIDLbBTKptsE1CPjTQToi0mpGtJpYS7hHSTW2yKdoT2pUpNdfY7TARrnNdKC2FaIqIaULwOow&amp;quot;&amp;gt;&amp;lt;em&amp;gt;Bayesian Probabilistic Matrix Factorization using Markov Chain Monte Carlo&amp;lt;/em&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Author&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;R. Salakhutdinov and A. Mnih&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Publ...</summary>
 
   </entry>
 

@@ -32,8 +32,8 @@
 <meta name="generator" content="Jekyll v4.3.4" />
 <meta property="og:title" content="VABMF" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Title: Variational autoencoder Bayesian matrix factorization for collaborative filtering Author: Aldhubri et. al. Publisher: Springer Published: 2021" />
-<meta property="og:description" content="Title: Variational autoencoder Bayesian matrix factorization for collaborative filtering Author: Aldhubri et. al. Publisher: Springer Published: 2021" />
+<meta name="description" content="Title: Variational autoencoder Bayesian matrix factorization for collaborative filtering Publisher: Springer Published: 2021 Data Set: MovieLens Netflix Prize Million Song" />
+<meta property="og:description" content="Title: Variational autoencoder Bayesian matrix factorization for collaborative filtering Publisher: Springer Published: 2021 Data Set: MovieLens Netflix Prize Million Song" />
 <link rel="canonical" href="https://jayarnim.github.io/posts/VABMF/" />
 <meta property="og:url" content="https://jayarnim.github.io/posts/VABMF/" />
 <meta property="og:site_name" content="Data Scientist" />
@@ -44,7 +44,7 @@
 <meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg" />
 <meta property="twitter:title" content="VABMF" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-08-07T00:00:00+09:00","datePublished":"2024-08-07T00:00:00+09:00","description":"Title: Variational autoencoder Bayesian matrix factorization for collaborative filtering Author: Aldhubri et. al. Publisher: Springer Published: 2021","headline":"VABMF","image":"https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/VABMF/"},"url":"https://jayarnim.github.io/posts/VABMF/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-08-07T00:00:00+09:00","datePublished":"2024-08-07T00:00:00+09:00","description":"Title: Variational autoencoder Bayesian matrix factorization for collaborative filtering Publisher: Springer Published: 2021 Data Set: MovieLens Netflix Prize Million Song","headline":"VABMF","image":"https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/VABMF/"},"url":"https://jayarnim.github.io/posts/VABMF/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -769,7 +769,13 @@
   <header>
     <h1 data-toc-skip>VABMF</h1>
     
-      <p class="post-desc fw-light mb-4"><ul type="square"> <li><strong>Title</strong>: <a href="https://link.springer.com/article/10.1007/s10489-020-02049-9"><em>Variational autoencoder Bayesian matrix factorization for collaborative filtering</em></a></li> <li><strong>Author</strong>: <em>Aldhubri et. al.</em></li> <li><strong>Publisher</strong>: <em>Springer</em></li> <li><strong>Published</strong>: <em>2021</em></li> </ul></p>
+      <p class="post-desc fw-light mb-4"><ul type="square"> <li><strong>Title</strong>: <a href="https://link.springer.com/article/10.1007/s10489-020-02049-9"><code>Variational autoencoder Bayesian matrix factorization for collaborative filtering</code></a></li> <li><strong>Publisher</strong>: <em>Springer</em></li> <li><strong>Published</strong>: <em>2021</em></li> <li><strong>Data Set</strong>:
+    <ul>
+    <li><code><a href="https://grouplens.org/datasets/movielens/">MovieLens</a></code></li>
+    <li><code><a href="https://www.kaggle.com/datasets/netflix-inc/netflix-prize-data">Netflix Prize</a></code></li>
+    <li><code><a href="https://www.kaggle.com/datasets/ryanholbrook/the-million-songs-dataset">Million Song</a></code></li>
+    </ul>
+</li> </ul></p>
     
 
     <div class="post-meta text-muted">
@@ -850,7 +856,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="821 words"
+  title="848 words"
 >
   <em>4 min</em> read</span>
 
@@ -908,7 +914,7 @@
 
 <ul>
   <li>
-    <p><strong>VABMF(<code class="language-plaintext highlighter-rouge">V</code>ariational <code class="language-plaintext highlighter-rouge">A</code>utoEncoder <code class="language-plaintext highlighter-rouge">B</code>ayesian <code class="language-plaintext highlighter-rouge">M</code>atrix <code class="language-plaintext highlighter-rouge">F</code>actorization)</strong> : 베이지안 행렬분해와 변분 오토인코더를 결합한 잠재요인 모형</p>
+    <p><strong>VABMF(<code class="language-plaintext highlighter-rouge">V</code>ariational <code class="language-plaintext highlighter-rouge">A</code>utoEncoder <code class="language-plaintext highlighter-rouge">B</code>ayesian <code class="language-plaintext highlighter-rouge">M</code>atrix <code class="language-plaintext highlighter-rouge">F</code>actorization)</strong> : 베이지안 행렬분해와 변분 오토인코더를 결합하여 선형적 잠재요인 및 비선형적 잠재요인의 불확실성을 모델링하는 잠재요인 모형</p>
 
     <p><a href="/_post_refer_img/RecommenderSystem/19-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/19-01.png" alt="01" width="100%" loading="lazy"></a></p>
 
@@ -998,15 +1004,15 @@
   <li>
     <p>Posterior Estimation of \(\overrightarrow{\mathbf{z}}_{j}\):</p>
 
-\[p\left(\overrightarrow{\mathbf{z}}_{j} \mid \overrightarrow{\mathbf{x}}_{j} ; \Theta\right) \propto \mathcal{L}\left(\overrightarrow{\mathbf{x}}_{j} \mid \overrightarrow{\mathbf{z}}_{j} ; \Theta \right) \cdot \pi(\overrightarrow{\mathbf{z}}_{j})\]
+\[p\left(\overrightarrow{\mathbf{z}}_{j} \mid \overrightarrow{\mathbf{x}}_{j} ; \Theta\right) \propto \mathcal{L}\left(\overrightarrow{\mathbf{x}}_{j} \mid \overrightarrow{\mathbf{z}}_{j} ; \Theta \right) \cdot \pi\left(\overrightarrow{\mathbf{z}}_{j}\right)\]
   </li>
   <li>
-    <p>\(\overrightarrow{\mathbf{z}} \mid \Phi \sim Q\), Approximate Dist. of \(\overrightarrow{\mathbf{z}} \mid \overrightarrow{\mathbf{x}};\Theta \sim P\) Definition:</p>
+    <p>\(\overrightarrow{\mathbf{z}} \sim Q(\Phi)\), Approximate Dist. of \(\overrightarrow{\mathbf{z}} \mid \overrightarrow{\mathbf{x}} \sim P(\Theta)\) Definition:</p>
 
 \[\begin{aligned}
-  q\left(\overrightarrow{\mathbf{z}}_{j} \mid \Phi\right)
-  &amp;= \mathcal{N}\left(\mu(\overrightarrow{\mathbf{x}}_{j} \mid \Phi), \text{diag}[\sigma^2(\overrightarrow{\mathbf{x}}_{j} \mid \Phi)]\right)\\
-  &amp;\approx \mu(\overrightarrow{\mathbf{x}}_{j} \mid \Phi) + \sigma(\overrightarrow{\mathbf{x}}_{j} \mid \Phi) \odot \epsilon \quad \text{for} \quad \epsilon \sim \mathcal{N}\left(0, \mathbf{I}_{K}\right)
+  q\left(\overrightarrow{\mathbf{z}}_{j} ; \Phi\right)
+  &amp;= \mathcal{N}\left(\mu(\overrightarrow{\mathbf{x}}_{j} ; \Phi), \text{diag}[\sigma^2(\overrightarrow{\mathbf{x}}_{j} ; \Phi)]\right)\\
+  &amp;\approx \mu(\overrightarrow{\mathbf{x}}_{j} ; \Phi) + \sigma(\overrightarrow{\mathbf{x}}_{j} ; \Phi) \odot \epsilon \quad \text{for} \quad \epsilon \sim \mathcal{N}\left(0, \mathbf{I}_{K}\right)
   \end{aligned}\]
   </li>
 </ul>
@@ -1035,14 +1041,14 @@
         <p>ELBO 항</p>
 
 \[\text{ELBO}
-  = \underbrace{\mathbb{E}_{\mathbf{z} \mid \Phi \sim Q}\left[\log{\mathcal{L}\left(\overrightarrow{\mathbf{x}}_{j} \mid \overrightarrow{\mathbf{z}}_{j};\Theta\right)}\right]}_{-\text{Reconstruction Loss}} - \underbrace{D_{KL}\left[q\left(\overrightarrow{\mathbf{z}}_{j} \mid \Phi\right)\parallel \pi\left(\overrightarrow{\mathbf{z}}_{j}\right)\right]}_{\text{KL Divergence}}\]
+  = \underbrace{\mathbb{E}_{\mathbf{z} \sim Q(\Phi)}\left[\log{\mathcal{L}\left(\overrightarrow{\mathbf{x}}_{j} \mid \overrightarrow{\mathbf{z}}_{j};\Theta\right)}\right]}_{-\text{Reconstruction Loss}} - \underbrace{D_{KL}\left[q\left(\overrightarrow{\mathbf{z}}_{j} ; \Phi\right)\parallel \pi\left(\overrightarrow{\mathbf{z}}_{j}\right)\right]}_{\text{KL Divergence}}\]
       </li>
     </ul>
   </li>
   <li>
     <p>Optimization</p>
 
-\[\overrightarrow{\mathbf{u}}_{i}^{*}, \overrightarrow{\mathbf{v}}_{j}^{*}, \Phi^{*}, \Theta^{*}
+\[\overrightarrow{\mathbf{u}}_{i}^{*}, \overrightarrow{\mathbf{v}}_{j}^{*}, \Phi^{*}, \Theta^{*} \mid K, \tau
   = \text{arg}\min{\mathcal{J}}\]
 
     <ul>
@@ -1104,6 +1110,11 @@
             href="/tags/autoencoder/"
             class="post-tag no-text-decoration"
           >Autoencoder</a>
+        
+          <a
+            href="/tags/implicit-feedback/"
+            class="post-tag no-text-decoration"
+          >Implicit Feedback</a>
         
           <a
             href="/tags/bayesian/"
@@ -1213,28 +1224,28 @@
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/FAWMF/">FAWMF</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/EXMF/">EXMF</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/BPR/">BPR</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/VABMF/">VABMF</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/Mult-VAE/">Mult-VAE</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/Statistical_Modeling_Methods/">Statistical Modeling Methods</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/Regular-Expression/">Regular Expression</a>
         </li>
       
         
@@ -1590,170 +1601,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1788,10 +1635,101 @@
     
     
     
-      
-        
-        
-
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1881,103 +1819,10 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+        
+        
+
   
     
     
@@ -2136,97 +1981,6 @@
     
     
     
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2427,8 +2181,6 @@
     
     
     
-      
-    
   
     
     
@@ -2540,6 +2292,189 @@
     
     
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -2660,206 +2595,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2880,6 +2616,175 @@
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2946,19 +2851,19 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/microeconomics/">Microeconomics</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/optimization/">Optimization</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/microeconomics/">Microeconomics</a>
       
     </div>
   </section>
@@ -3290,19 +3195,43 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -3330,16 +3259,44 @@
 
 <time
   
-  data-ts="1722351600"
+  data-ts="1721746800"
   data-df="ll"
   
 >
-  Jul 31, 2024
+  Jul 24, 2024
 </time>
 
               <h4 class="pt-0 my-2">Mult-VAE</h4>
               <div class="text-muted">
-                <p>&lt;ul type=&quot;square&quot;&gt; &lt;li&gt;&lt;strong&gt;Title&lt;/strong&gt;: &lt;a href=&quot;https://dl.acm.org/doi/abs/10.1145/3178876.3186150&quot;&gt;&lt;em&gt;Variational Autoencoders for Collaborative Filtering&lt;/em&gt;&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Author...</p>
+                <p>&lt;ul type=&quot;square&quot;&gt; &lt;li&gt;&lt;strong&gt;Title&lt;/strong&gt;: &lt;a href=&quot;https://dl.acm.org/doi/abs/10.1145/3178876.3186150&quot;&gt;&lt;code&gt;Variational Autoencoders for Collaborative Filtering&lt;/code&gt;&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Pu...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/EXMF/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1724166000"
+  data-df="ll"
+  
+>
+  Aug 21, 2024
+</time>
+
+              <h4 class="pt-0 my-2">EXMF</h4>
+              <div class="text-muted">
+                <p>&lt;ul type=&quot;square&quot;&gt; &lt;li&gt;&lt;strong&gt;Title&lt;/strong&gt;: &lt;a href=&quot;https://dl.acm.org/doi/abs/10.1145/2872427.2883090&quot;&gt;&lt;code&gt;Modeling User Exposure in Recommendation&lt;/code&gt;&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Publisher&lt;/str...</p>
               </div>
             </div>
           </a>
@@ -3358,44 +3315,16 @@
 
 <time
   
-  data-ts="1721746800"
+  data-ts="1722351600"
   data-df="ll"
   
 >
-  Jul 24, 2024
+  Jul 31, 2024
 </time>
 
               <h4 class="pt-0 my-2">BPMF</h4>
               <div class="text-muted">
                 <p>&lt;ul type=&quot;square&quot;&gt; &lt;li&gt;&lt;strong&gt;Title&lt;/strong&gt;: &lt;a href=&quot;https://dl.acm.org/doi/abs/10.1145/1390156.1390267?casa_token=qcXfuanisHUAAAAA:1kvcFcEIDLbBTKptsE1CPjTQToi0mpGtJpYS7hHSTW2yKdoT2pUpNdfY7TARrn...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/FPMC/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1707922800"
-  data-df="ll"
-  
->
-  Feb 15, 2024
-</time>
-
-              <h4 class="pt-0 my-2">FPMC</h4>
-              <div class="text-muted">
-                <p>&lt;ul type=&quot;square&quot;&gt; &lt;li&gt;&lt;strong&gt;Title&lt;/strong&gt;: &lt;a href=&quot;&quot;&gt;&lt;em&gt;Factorizing Personalized Markov Chains for next-basket recommendation&lt;/em&gt;&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Author&lt;/strong&gt;: &lt;em&gt;Rendle et al.&lt;/em&gt;...</p>
               </div>
             </div>
           </a>
@@ -3425,9 +3354,13 @@
   
 
   
-    <div class="btn btn-outline-primary disabled" aria-label="Newer">
-      <p>-</p>
-    </div>
+    <a
+      href="/posts/BPR/"
+      class="btn btn-outline-primary"
+      aria-label="Newer"
+    >
+      <p>BPR</p>
+    </a>
   
 </nav>
 
@@ -3823,170 +3756,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -4021,10 +3790,101 @@
     
     
     
-      
-        
-        
-
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -4114,103 +3974,10 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+        
+        
+
   
     
     
@@ -4369,97 +4136,6 @@
     
     
     
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -4660,8 +4336,6 @@
     
     
     
-      
-    
   
     
     
@@ -4773,6 +4447,189 @@
     
     
       
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -4893,206 +4750,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -5113,6 +4771,175 @@
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -5179,19 +5006,19 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/microeconomics/">Microeconomics</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/optimization/">Optimization</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/microeconomics/">Microeconomics</a>
       
     </div>
   </section>
