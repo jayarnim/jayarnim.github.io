@@ -16,6 +16,8 @@ image:
 ## What? RecSys
 -----
 
+![03](/_post_refer_img/RecommenderSystem/01-03.jpeg){: width="100%"}
+
 - **추천시스템(Recommender System)** : 정보과부하 문제(Information Overload Problem)를 해결하기 위한 **개인화 정보 필터링 서비스(Personalized Information Filtering Service)** 로서, 사용자에게 적합한 아이템을 제안함으로써 개인화된 경험을 제공하는 기술
 
     - **정보과부하 문제(Information Overload Problem)** : 인간이 처리할 수 있는 정보량 이상의 정보가 제공되어 오히려 개인의 정보 학습 및 의사결정이 방해 받는 현상
@@ -118,4 +120,5 @@ image:
 
 ### 이미지 출처
 
+- https://www.idownloadblog.com/2016/04/26/youtube-new-homepage-design/
 - https://towardsdatascience.com/essentials-of-recommendation-engines-content-based-and-collaborative-filtering-31521c964922
