@@ -176,7 +176,7 @@ image:
 
     $$\begin{aligned}
     &D_{KL}\Big[\text{Log-Normal}\left(\mu_{\text{Approx}},\sigma^{2}_{\text{Approx}}\right) \parallel \text{Log-Normal}\left(\mu_{\text{Prior}},\sigma^{2}_{\text{Prior}}\right)\Big]\\
-    &= \frac{\sigma^{2}_{\text{Approx}}}{2 \cdot \sigma^{2}_{\text{Prior}}} + \frac{\left(\mu_{\text{Approx}} - \mu_{\text{Prior}}\right)^{2}}{2 \cdot \sigma^{2}_{\text{Prior}}} - \frac{1}{2} + \log{\frac{\sigma_{\text{Prior}}}{\sigma_{\text{Approx}}}}
+    &= \frac{\sigma_{\text{Approx}}}{\sigma_{\text{Prior}}} + \frac{\left(\mu_{\text{Approx}} - \mu_{\text{Prior}}\right)^{2}}{2 \cdot \sigma^{2}_{\text{Prior}}} - \frac{1}{2} + \log{\frac{\sigma_{\text{Prior}}}{\sigma_{\text{Approx}}}}
     \end{aligned}$$
 
 ## Variational Inference
