@@ -600,6 +600,38 @@
   
 
   
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
 
   
   
@@ -710,7 +742,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="0 words"
+  title="125 words"
 >
   <em>1 min</em> read</span>
 
@@ -720,7 +752,58 @@
   </header>
 
   <div class="content">
-    
+    <h3 id="variational-autoencoder"><span class="me-2">Variational AutoEncoder</span><a href="#variational-autoencoder" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p>노출 여부의 사전 분포</p>
+
+\[\begin{aligned}
+  y_{i,j} \sim \text{Bernoulli}\left(\mu_{i,j}\right)
+  \end{aligned}\]
+
+    <ul>
+      <li>\(\mu_{i,j}\) : Hyper-Parameter</li>
+    </ul>
+  </li>
+  <li>
+    <p>노출 여부의 우도 함수</p>
+
+\[\begin{aligned}
+  r_{i,j} \mid y_{i,j} \sim \mathcal{N}\left(\overrightarrow{\mathbf{u}}_{i} \cdot \overrightarrow{\mathbf{v}}_{j}, \lambda^{-1}\right)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>노출 여부의 사후 분포</p>
+
+\[\begin{aligned}
+  p\left(y_{i,j} \mid r_{i,j}\right)
+  \propto \mathcal{L}\left(r_{i,j} \mid y_{i,j}\right) \cdot \pi\left(y_{i,j}\right)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>노출 여부의 사후 분포의 근사 분포</p>
+
+\[\begin{aligned}
+  y_{i,j} \sim \text{Bernoulli}\left(\gamma_{i,j}\right)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>ELBO</p>
+
+\[\begin{aligned}
+  \text{ELBO}
+  &amp;= \underbrace{\sum_{(i,j)}{\gamma_{i,j} \cdot \left(\overrightarrow{\mathbf{u}}_{i} \cdot \overrightarrow{\mathbf{v}}_{j} - r_{i,j}\right)^{2}}}_{\text{Clik under Exposure}} + \underbrace{\sum_{(i,j)}{\left(1-\gamma_{i,j}\right) \cdot \left(\epsilon - r_{i,j}\right)^{2}}}_{\text{non-Clik under non-Exposure}} - D_{KL}\Big[q\left(y_{i,j} \mid \gamma_{i,j}\right) \parallel \pi\left(y_{i,j}; \mu_{i,j}\right)\Big]
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h3 id="parameter-gamma"><span class="me-2">Parameter $\gamma$</span><a href="#parameter-gamma" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+\[\begin{aligned}
+\gamma_{i,j}
+&amp;= \overrightarrow{\Theta}_{i}^{T} \cdot \sigma \left(\overrightarrow{\mathbf{w}}_{j} \sum_{k \in U}{\overrightarrow{\Theta}_{k}} \cdot \alpha_{k} \cdot r_{i,j} + \overrightarrow{\mathbf{b}}_{j}\right)
+\end{aligned}\]
 
   </div>
 
@@ -2595,6 +2678,11 @@
               
 
 
+
+  <section id="toc-wrapper" class="d-none ps-0 pe-4">
+    <h2 class="panel-heading ps-3 mb-2">Contents</h2>
+    <nav id="toc"></nav>
+  </section>
 
 
             
@@ -4931,9 +5019,16 @@
 
   
 
+  
+    
+
+    
+
+  
 
 
-  <script src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.11/dayjs.min.js,npm/dayjs@1.11.11/locale/en.min.js,npm/dayjs@1.11.11/plugin/relativeTime.min.js,npm/dayjs@1.11.11/plugin/localizedFormat.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.11/dayjs.min.js,npm/dayjs@1.11.11/locale/en.min.js,npm/dayjs@1.11.11/plugin/relativeTime.min.js,npm/dayjs@1.11.11/plugin/localizedFormat.min.js,npm/tocbot@4.27.20/dist/tocbot.min.js"></script>
 
 
 

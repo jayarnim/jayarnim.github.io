@@ -774,7 +774,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="796 words"
+  title="812 words"
 >
   <em>4 min</em> read</span>
 
@@ -838,7 +838,7 @@
 
 \[\begin{aligned}
   p\left(r_{i,j},y_{i,j} \mid \mu_{i,j}, \overrightarrow{\mathbf{u}}_{i}, \overrightarrow{\mathbf{v}}_{j} ; \lambda\right)
-  &amp;= \underbrace{p\left(y_{i,j} \mid \mu_{i,j}\right)}_{\text{Exposure Prob.}} \cdot \overbrace{p\left(r_{i,j} \mid \overrightarrow{\mathbf{u}}_{i}, \overrightarrow{\mathbf{v}}_{j} ; \lambda\right)^{y_{i,j}}}^{\text{Click Prob. under Exposure}} \cdot \underbrace{\mathbf{I}\left[r_{i,j}=0\right]^{1-y_{i,j}}}_{\text{non-Click Prob.}}
+  &amp;= \underbrace{p\left(y_{i,j} \mid \mu_{i,j}\right)}_{\text{Exposure Prob.}} \cdot \overbrace{p\left(r_{i,j} \mid \overrightarrow{\mathbf{u}}_{i}, \overrightarrow{\mathbf{v}}_{j} ; \lambda\right)^{y_{i,j}}}^{\text{Click Prob. under Exposure}} \cdot \underbrace{\mathbf{I}\left[r_{i,j}=0\right]^{1-y_{i,j}}}_{\text{non-Click Prob. under non-Exposure}}
   \end{aligned}\]
 
     <ul>
@@ -854,14 +854,14 @@
   \end{aligned}\]
   </li>
   <li>
-    <p>\(p\left(r_{i,j} \mid \overrightarrow{\mathbf{u}}_{i}, \overrightarrow{\mathbf{v}}_{j} ; \lambda\right)^{y_{i,j}}\) : 사용자 $i$ 가 아이템 $j$ 를 클릭할 가능성</p>
+    <p>\(p\left(r_{i,j} \mid \overrightarrow{\mathbf{u}}_{i}, \overrightarrow{\mathbf{v}}_{j} ; \lambda\right)^{y_{i,j}}\) : 사용자 $i$ 가 아이템 $j$ 에 노출되었을 때, 아이템을 클릭할 가능성</p>
 
 \[\begin{aligned}
   r_{i,j} \mid y_{i,j}=1 &amp;\sim \mathcal{N}\left(\overrightarrow{\mathbf{u}}_{i} \cdot \overrightarrow{\mathbf{v}}_{j}, \lambda^{-1}\right)
   \end{aligned}\]
   </li>
   <li>
-    <p>\(\mathbf{I}\left[r_{i,j}=0\right]^{1-y_{i,j}}\) : 사용자 $i$ 가 아이템 $j$ 에 노출되지 않았을 때, 를 클릭하지 않을 가능성</p>
+    <p>\(\mathbf{I}\left[r_{i,j}=0\right]^{1-y_{i,j}}\) : 사용자 $i$ 가 아이템 $j$ 에 노출되지 않았을 때, 아이템을 클릭하지 않을 가능성</p>
 
 \[\begin{aligned}
   r_{i,j} \mid y_{i,j}=0 &amp;\sim \delta_{0}
