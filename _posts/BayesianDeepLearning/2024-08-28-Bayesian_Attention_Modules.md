@@ -1,7 +1,7 @@
 ---
 order: 2
 title: Bayesian Attention Modules
-date: 2024-09-05
+date: 2024-09-19
 categories: [Research Interest, Bayesian Deep Learning]
 tags: [Deep Learning, Bayesian, Attention Mechanism]
 math: true
@@ -147,7 +147,7 @@ image:
     &= \lambda\left(\log{\frac{1}{1-\epsilon}}\right)^{1/k}, \quad \epsilon \sim \text{Uniform}\left(0,1\right)
     \end{aligned}$$
 
-- Prior Dist. $\mathcal{A} \sim \pi\left(\Theta,\eta\right)$ is set to $\text{Gamma}\left(\alpha, \beta\right)$ because of Semi-interpretive Expression
+- Prior Dist. $\mathcal{A} \sim \pi\left(\Theta,\eta\right)$ is set to $\text{Gamma}\left(\alpha, \beta\right)$ because of Analytical Expression
 
     $$\begin{aligned}
     &D_{KL}\Big[\text{Weibull}\left(k,\lambda\right) \parallel \text{Gamma}\left(\alpha,\beta\right)\Big]\\
@@ -172,7 +172,7 @@ image:
     &= \exp{\Big[\mu + \sigma \cdot \mathcal{Z} \Big]}, \quad \mathcal{Z} \sim \mathcal{N}\left(0,1\right)
     \end{aligned}$$
 
-- Prior Dist. $\mathcal{A} \sim \pi\left(\Theta,\eta\right)$ is set to $\text{Log-Normal}\left(\mu,\sigma^{2}\right)$ because of Semi-interpretive Expression
+- Prior Dist. $\mathcal{A} \sim \pi\left(\Theta,\eta\right)$ is set to $\text{Log-Normal}\left(\mu,\sigma^{2}\right)$ because of Analytical Expression
 
     $$\begin{aligned}
     &D_{KL}\Big[\text{Log-Normal}\left(\mu_{\text{Approx}},\sigma^{2}_{\text{Approx}}\right) \parallel \text{Log-Normal}\left(\mu_{\text{Prior}},\sigma^{2}_{\text{Prior}}\right)\Big]\\
