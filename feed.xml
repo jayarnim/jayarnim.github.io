@@ -4,7 +4,7 @@
   <id>https://jayarnim.github.io/</id>
   <title>Data Scientist</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-10-10T13:11:09+09:00</updated>
+  <updated>2024-10-14T14:32:14+09:00</updated>
   <author>
     <name>jayarnim</name>
     <uri>https://jayarnim.github.io/</uri>
@@ -22,9 +22,9 @@
   <entry>
     <title>Bayesian Attention Modules</title>
     <link href="https://jayarnim.github.io/posts/Bayesian_Attention_Modules/" rel="alternate" type="text/html" title="Bayesian Attention Modules" />
-    <published>2024-09-05T00:00:00+09:00</published>
+    <published>2024-09-19T00:00:00+09:00</published>
   
-    <updated>2024-09-05T00:00:00+09:00</updated>
+    <updated>2024-09-19T00:00:00+09:00</updated>
   
     <id>https://jayarnim.github.io/posts/Bayesian_Attention_Modules/</id>
     <content src="https://jayarnim.github.io/posts/Bayesian_Attention_Modules/" />
@@ -46,11 +46,39 @@
 
   
   <entry>
+    <title>BPR</title>
+    <link href="https://jayarnim.github.io/posts/BPR/" rel="alternate" type="text/html" title="BPR" />
+    <published>2024-08-21T00:00:00+09:00</published>
+  
+    <updated>2024-08-21T00:00:00+09:00</updated>
+  
+    <id>https://jayarnim.github.io/posts/BPR/</id>
+    <content src="https://jayarnim.github.io/posts/BPR/" />
+    <author>
+      <name>jayarnim</name>
+    </author>
+
+  
+    
+    <category term="Research Interest" />
+    
+    <category term="Recommender System" />
+    
+  
+
+  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://arxiv.org/abs/1205.2618&amp;quot;&amp;gt;&amp;lt;code&amp;gt;BPR: Bayesian Personalized Ranking from Implicit Feedback&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Publisher&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;UAI&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2009&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Data Set&amp;lt;/strong&amp;gt;:
+    &amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;code&amp;gt;&amp;lt;a href=&amp;quot;https://www.kaggle.com/datasets/netflix-inc/netflix-prize-data&amp;quot;&amp;gt;...</summary>
+
+  </entry>
+
+  
+  <entry>
     <title>FAWMF</title>
     <link href="https://jayarnim.github.io/posts/FAWMF/" rel="alternate" type="text/html" title="FAWMF" />
-    <published>2024-08-28T00:00:00+09:00</published>
+    <published>2024-08-14T00:00:00+09:00</published>
   
-    <updated>2024-08-28T00:00:00+09:00</updated>
+    <updated>2024-08-14T00:00:00+09:00</updated>
   
     <id>https://jayarnim.github.io/posts/FAWMF/</id>
     <content src="https://jayarnim.github.io/posts/FAWMF/" />
@@ -76,9 +104,9 @@
   <entry>
     <title>EXMF</title>
     <link href="https://jayarnim.github.io/posts/EXMF/" rel="alternate" type="text/html" title="EXMF" />
-    <published>2024-08-21T00:00:00+09:00</published>
+    <published>2024-08-07T00:00:00+09:00</published>
   
-    <updated>2024-08-21T00:00:00+09:00</updated>
+    <updated>2024-08-07T00:00:00+09:00</updated>
   
     <id>https://jayarnim.github.io/posts/EXMF/</id>
     <content src="https://jayarnim.github.io/posts/EXMF/" />
@@ -103,57 +131,27 @@
 
   
   <entry>
-    <title>BPR</title>
-    <link href="https://jayarnim.github.io/posts/BPR/" rel="alternate" type="text/html" title="BPR" />
-    <published>2024-08-14T00:00:00+09:00</published>
+    <title>Statistical Modeling Methods</title>
+    <link href="https://jayarnim.github.io/posts/Statistical_Modeling_Methods/" rel="alternate" type="text/html" title="Statistical Modeling Methods" />
+    <published>2024-07-31T00:00:00+09:00</published>
   
-    <updated>2024-08-14T00:00:00+09:00</updated>
+    <updated>2024-07-31T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/BPR/</id>
-    <content src="https://jayarnim.github.io/posts/BPR/" />
+    <id>https://jayarnim.github.io/posts/Statistical_Modeling_Methods/</id>
+    <content src="https://jayarnim.github.io/posts/Statistical_Modeling_Methods/" />
     <author>
       <name>jayarnim</name>
     </author>
 
   
     
-    <category term="Research Interest" />
+    <category term="AI &amp; Data Mining" />
     
-    <category term="Recommender System" />
-    
-  
-
-  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://arxiv.org/abs/1205.2618&amp;quot;&amp;gt;&amp;lt;code&amp;gt;BPR: Bayesian Personalized Ranking from Implicit Feedback&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Publisher&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;UAI&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2009&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Data Set&amp;lt;/strong&amp;gt;:
-    &amp;lt;ul&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;code&amp;gt;&amp;lt;a href=&amp;quot;https://www.kaggle.com/datasets/netflix-inc/netflix-prize-data&amp;quot;&amp;gt;...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>VABMF</title>
-    <link href="https://jayarnim.github.io/posts/VABMF/" rel="alternate" type="text/html" title="VABMF" />
-    <published>2024-08-07T00:00:00+09:00</published>
-  
-    <updated>2024-08-07T00:00:00+09:00</updated>
-  
-    <id>https://jayarnim.github.io/posts/VABMF/</id>
-    <content src="https://jayarnim.github.io/posts/VABMF/" />
-    <author>
-      <name>jayarnim</name>
-    </author>
-
-  
-    
-    <category term="Research Interest" />
-    
-    <category term="Recommender System" />
+    <category term="Text Analytics" />
     
   
 
-  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://link.springer.com/article/10.1007/s10489-020-02049-9&amp;quot;&amp;gt;&amp;lt;code&amp;gt;Variational autoencoder Bayesian matrix factorization for collaborative filtering&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Publisher&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;Springer&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2021&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Data Set&amp;lt;/strong&amp;gt;:
-    &amp;lt;ul&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;code&amp;gt;&amp;lt;a href=&amp;quot;https:...</summary>
+  <summary>Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</summary>
 
   </entry>
 

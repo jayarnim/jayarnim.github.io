@@ -39,12 +39,12 @@
 <meta property="og:site_name" content="Data Scientist" />
 <meta property="og:image" content="https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-08-28T00:00:00+09:00" />
+<meta property="article:published_time" content="2024-08-14T00:00:00+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg" />
 <meta property="twitter:title" content="FAWMF" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-08-28T00:00:00+09:00","datePublished":"2024-08-28T00:00:00+09:00","description":"Title: Fast Adaptively Weighted Matrix Factorization for Recommendation with Implicit Feedback Publisher: AAAI Published: 2020 Data Set: MovieLens Amazon(Food) Douban","headline":"FAWMF","image":"https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/FAWMF/"},"url":"https://jayarnim.github.io/posts/FAWMF/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-08-14T00:00:00+09:00","datePublished":"2024-08-14T00:00:00+09:00","description":"Title: Fast Adaptively Weighted Matrix Factorization for Recommendation with Implicit Feedback Publisher: AAAI Published: 2020 Data Set: MovieLens Amazon(Food) Douban","headline":"FAWMF","image":"https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/FAWMF/"},"url":"https://jayarnim.github.io/posts/FAWMF/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -595,6 +595,38 @@
   
 
   
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
 
   
   
@@ -607,6 +639,28 @@
       
         
         
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
       
 
       
@@ -678,13 +732,13 @@
 
 <time
   
-  data-ts="1724770800"
+  data-ts="1723561200"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Aug 28, 2024
+  Aug 14, 2024
 </time>
 
       </span>
@@ -742,9 +796,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="125 words"
+  title="534 words"
 >
-  <em>1 min</em> read</span>
+  <em>2 min</em> read</span>
 
         </div>
       </div>
@@ -752,7 +806,17 @@
   </header>
 
   <div class="content">
-    <h3 id="variational-autoencoder"><span class="me-2">Variational AutoEncoder</span><a href="#variational-autoencoder" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+    <h2 id="fawmf"><span class="me-2">FAWMF</span><a href="#fawmf" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li><strong>FAWMF(<code class="language-plaintext highlighter-rouge">F</code>ast <code class="language-plaintext highlighter-rouge">A</code>daptively <code class="language-plaintext highlighter-rouge">W</code>eighted <code class="language-plaintext highlighter-rouge">M</code>atrix <code class="language-plaintext highlighter-rouge">F</code>actorization)</strong></li>
+</ul>
+
+<h2 id="how-to-modeling"><span class="me-2">How to Modeling</span><a href="#how-to-modeling" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<h3 id="analyses-of-exmf-from-bayesian-framework"><span class="me-2">Analyses of EXMF from Bayesian Framework</span><a href="#analyses-of-exmf-from-bayesian-framework" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
@@ -763,6 +827,7 @@
   \end{aligned}\]
 
     <ul>
+      <li>\(y_{i,j} = \big\{1,0\big\} \in \mathbf{Y}_{M \times N}\) : Exposure Variable</li>
       <li>\(\mu_{i,j}\) : Hyper-Parameter</li>
     </ul>
   </li>
@@ -772,6 +837,10 @@
 \[\begin{aligned}
   r_{i,j} \mid y_{i,j} \sim \mathcal{N}\left(\overrightarrow{\mathbf{u}}_{i} \cdot \overrightarrow{\mathbf{v}}_{j}, \lambda^{-1}\right)
   \end{aligned}\]
+
+    <ul>
+      <li>\(r_{i,j} = \big\{1,0\big\} \in \mathbf{R}_{M \times N}\) : Click Variable</li>
+    </ul>
   </li>
   <li>
     <p>노출 여부의 사후 분포</p>
@@ -781,29 +850,131 @@
   \propto \mathcal{L}\left(r_{i,j} \mid y_{i,j}\right) \cdot \pi\left(y_{i,j}\right)
   \end{aligned}\]
   </li>
+</ul>
+
+<h3 id="approx-dist"><span class="me-2">Approx. Dist.</span><a href="#approx-dist" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
   <li>
     <p>노출 여부의 사후 분포의 근사 분포</p>
 
 \[\begin{aligned}
-  y_{i,j} \sim \text{Bernoulli}\left(\gamma_{i,j}\right)
+  y_{i,j} \mid \gamma_{i,j} \sim \text{Bernoulli}\left(\gamma_{i,j}\right)
   \end{aligned}\]
   </li>
+  <li>
+    <p>Parameter $\gamma$</p>
+
+\[\begin{aligned}
+  \gamma_{i,j}
+  &amp;= \mathcal{G}\left(i,j,\mathbf{R} \mid \Theta, \mathbf{w}, \mathbf{a}, \mathbf{b}\right)\\
+  &amp;= \overrightarrow{\Theta}_{i} \cdot \overrightarrow{\Phi}_{j}
+  \end{aligned}\]
+
+    <ul>
+      <li>\(\overrightarrow{\Theta}_{i} \in \Theta_{M \times D}\) : Community Membership Vector
+        <ul>
+          <li>Community Memebership is Probability : \(\Vert \overrightarrow{\Theta}_{i} \Vert_{L1} = 1, \theta_{i,d} \ge 0\)</li>
+        </ul>
+      </li>
+      <li>
+        <p>\(\overrightarrow{\Phi}_{j} \in \Phi_{N \times D}\) : Exposure Prob. of Item $j$ for each Communities</p>
+
+\[\begin{aligned}
+  \overrightarrow{\Phi}_{j} = \sigma \left(\overrightarrow{\mathbf{w}}_{j} \sum_{l \in U}{\overrightarrow{\Theta}_{l} \cdot \alpha_{l} \cdot r_{l,j}} + b_{j}\right)
+  \end{aligned}\]
+
+        <ul>
+          <li>\(\sum_{l \in U}{\overrightarrow{\Theta}_{l}} \cdot \alpha_{l} \cdot r_{l,j}\) : Exposure Contribution of Item $j$ for each Communities
+            <ul>
+              <li>\(\alpha_{i} \in \overrightarrow{\mathbf{a}}_{M}\) : User Influence</li>
+            </ul>
+          </li>
+          <li>\(w_{j} \in \overrightarrow{\mathbf{w}}_{N}\) : Weight</li>
+          <li>\(b_{j} \in \overrightarrow{\mathbf{b}}_{N}\) : Bias</li>
+          <li>\(\sigma\) : Activation Function, Sigmoid</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="optimization"><span class="me-2">Optimization</span><a href="#optimization" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
   <li>
     <p>ELBO</p>
 
 \[\begin{aligned}
   \text{ELBO}
-  &amp;= \underbrace{\sum_{(i,j)}{\gamma_{i,j} \cdot \left(\overrightarrow{\mathbf{u}}_{i} \cdot \overrightarrow{\mathbf{v}}_{j} - r_{i,j}\right)^{2}}}_{\text{Clik under Exposure}} + \underbrace{\sum_{(i,j)}{\left(1-\gamma_{i,j}\right) \cdot \left(\epsilon - r_{i,j}\right)^{2}}}_{\text{non-Clik under non-Exposure}} - D_{KL}\Big[q\left(y_{i,j} \mid \gamma_{i,j}\right) \parallel \pi\left(y_{i,j}; \mu_{i,j}\right)\Big]
+  &amp;= \underbrace{\sum_{(i,j)}{\gamma_{i,j} \cdot \left(\overrightarrow{\mathbf{u}}_{i} \cdot \overrightarrow{\mathbf{v}}_{j} - r_{i,j}\right)^{2}}}_{\text{Clik under Exposure}} + \underbrace{\sum_{(i,j)}{\left(1-\gamma_{i,j}\right) \cdot \left(\epsilon - r_{i,j}\right)^{2}}}_{\text{non-Clik under non-Exposure}} - \sum_{(i,j)}{D_{KL}\Big[q\left(y_{i,j} \mid \gamma_{i,j}\right) \parallel \pi\left(y_{i,j}; \mu_{i,j}\right)\Big]}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>KL Divergence by analytical representation of Bernoulli distribution</p>
+
+\[\begin{aligned}
+  D_{KL}\Big[q\left(y_{i,j} \mid \gamma_{i,j}\right) \parallel \pi\left(y_{i,j}; \mu_{i,j}\right)\Big]
+  &amp;= \sum_{y_{i,j}}{q\left(y_{i,j} \mid \gamma_{i,j}\right) \cdot \log{\frac{q\left(y_{i,j} \mid \gamma_{i,j}\right)}{\pi\left(y_{i,j}; \mu_{i,j}\right)}}}\\
+  &amp;= \gamma_{i,j} \cdot \log{\frac{\gamma_{i,j}}{\mu_{i,j}}} + \left(1-\gamma_{i,j}\right) \cdot \log{\frac{1-\gamma_{i,j}}{1-\mu_{i,j}}}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Optimization</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{u}}, \overrightarrow{\mathbf{v}}, \overrightarrow{\mathbf{\Theta}}, \alpha \mid \mu, \epsilon, D, K
+  &amp;= \text{arg} \min{-\text{ELBO}}
   \end{aligned}\]
   </li>
 </ul>
 
-<h3 id="parameter-gamma"><span class="me-2">Parameter $\gamma$</span><a href="#parameter-gamma" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="fbgd"><span class="me-2">fBGD</span><a href="#fbgd" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p><strong>fBGD(<code class="language-plaintext highlighter-rouge">f</code>ast-<code class="language-plaintext highlighter-rouge">B</code>atch <code class="language-plaintext highlighter-rouge">G</code>radient <code class="language-plaintext highlighter-rouge">D</code>escent)</strong> : 역전파 시 반복해서 계산해야 하는 일부 항목을 캐싱함으로써 학습 속도를 향상시키는 배치 경사하강법</p>
+  </li>
+  <li>
+    <p>목적 함수 $\mathcal{J}=-\text{ELBO}$ 를 아이템 $j$ 에 대한 커뮤니티 노출 확률 $\overrightarrow{\Phi}_{j}$ 에 대하여 미분한 결과:</p>
 
 \[\begin{aligned}
-\gamma_{i,j}
-&amp;= \overrightarrow{\Theta}_{i}^{T} \cdot \sigma \left(\overrightarrow{\mathbf{w}}_{j} \sum_{k \in U}{\overrightarrow{\Theta}_{k}} \cdot \alpha_{k} \cdot r_{i,j} + \overrightarrow{\mathbf{b}}_{j}\right)
-\end{aligned}\]
+  \frac{\partial \mathcal{J}}{\partial \overrightarrow{\Phi}_{j}}
+  &amp;= \sum_{i \in U}{\Big[\left(\overrightarrow{\mathcal{u}}_{i}^{T}\overrightarrow{\mathcal{v}}_{j}\right)^{2} - 2r_{i,j}\left(\overrightarrow{\mathcal{u}}_{i}^{T}\overrightarrow{\mathcal{v}}_{j}- \epsilon\right) - \epsilon^{2}\Big] \cdot \overrightarrow{\Theta}_{i}}\\
+  &amp;= \sum_{i \in U}{\left(\overrightarrow{\mathcal{u}}_{i}^{T}\overrightarrow{\mathcal{v}}_{j}\right)^{2} \cdot \overrightarrow{\Theta}_{i}} - 2\sum_{i \in U}{r_{i,j} \cdot \overrightarrow{\mathcal{u}}_{i}^{T}\overrightarrow{\mathcal{v}}_{j} \cdot \overrightarrow{\Theta}_{i}} + 2\sum_{i \in U}{r_{i,j} \cdot \epsilon \cdot \overrightarrow{\Theta}_{i}} - \epsilon^{2} \sum_{i \in U}{\overrightarrow{\Theta}_{i}}\\
+  &amp;= \sum_{i \in U}{\left(\overrightarrow{\mathcal{u}}_{i}^{T}\overrightarrow{\mathcal{v}}_{j}\right)^{2} \cdot \overrightarrow{\Theta}_{i}} - \epsilon^{2} \sum_{i \in U}{\overrightarrow{\Theta}_{i}} - 2\sum_{i \in U}{r_{i,j} \cdot \left(\overrightarrow{\mathcal{u}}_{i}^{T}\overrightarrow{\mathcal{v}}_{j} - \epsilon\right)\cdot \overrightarrow{\Theta}_{i}}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>사용자-잠재요인 벡터와 아이템-잠재요인 벡터의 내적값 풀이:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathcal{u}}_{i}^{T}\overrightarrow{\mathcal{v}}_{j}
+  &amp;= \sum_{g=1}^{K}{u_{i,g} \cdot v_{j,g}}\\
+  \left(\overrightarrow{\mathcal{u}}_{i}^{T}\overrightarrow{\mathcal{v}}_{j}\right)^{2}
+  &amp;= \left(\sum_{g=1}^{K}{u_{i,g}v_{j,g}}\right) \cdot \left(\sum_{h=1}^{K}{u_{i,h}v_{j,h}}\right)\\
+  &amp;=\sum_{g=1}^{K}{\sum_{h=1}^{K}{u_{i,g}u_{i,h} \cdot v_{j,g}v_{j,h}}}\\
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>캐싱:</p>
+
+\[\begin{aligned}
+  M_{g,h}
+  &amp;= \sum_{i \in U}{u_{i,g}u_{i,h} \cdot \overrightarrow{\Theta}_{i}}\\
+  S
+  &amp;= \sum_{i \in U}{\overrightarrow{\Theta}_{i}}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>캐싱을 적용한 목적 함수 미분값:</p>
+
+\[\begin{aligned}
+  \frac{\partial \mathcal{J}}{\partial \overrightarrow{\Phi}_{j}}
+  &amp;= \sum_{g=1}^{K}{\sum_{h=1}^{K}{M_{g,h} \cdot v_{j,g}v_{j,h}}} - \epsilon^{2} \cdot S - 2\sum_{i \in U}{r_{i,j} \cdot \left(\overrightarrow{\mathcal{u}}_{i}^{T}\overrightarrow{\mathcal{v}}_{j} - \epsilon\right)\cdot \overrightarrow{\Theta}_{i}}
+  \end{aligned}\]
+  </li>
+</ul>
 
   </div>
 
@@ -983,6 +1154,13 @@
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/BPR/">BPR</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/FAWMF/">FAWMF</a>
         </li>
       
@@ -991,13 +1169,6 @@
         
         <li class="text-truncate lh-lg">
           <a href="/posts/EXMF/">EXMF</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/BPR/">BPR</a>
         </li>
       
         
@@ -1425,8 +1596,6 @@
     
     
     
-    
-      
     
   
     
@@ -3021,19 +3190,19 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -3073,11 +3242,11 @@
 
 <time
   
-  data-ts="1724166000"
+  data-ts="1722956400"
   data-df="ll"
   
 >
-  Aug 21, 2024
+  Aug  7, 2024
 </time>
 
               <h4 class="pt-0 my-2">EXMF</h4>
@@ -3101,11 +3270,11 @@
 
 <time
   
-  data-ts="1721746800"
+  data-ts="1721142000"
   data-df="ll"
   
 >
-  Jul 24, 2024
+  Jul 17, 2024
 </time>
 
               <h4 class="pt-0 my-2">Mult-VAE</h4>
@@ -3117,7 +3286,7 @@
         </article>
       
         <article class="col">
-          <a href="/posts/BPMF/" class="post-preview card h-100">
+          <a href="/posts/BPR/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -3129,16 +3298,16 @@
 
 <time
   
-  data-ts="1722351600"
+  data-ts="1724166000"
   data-df="ll"
   
 >
-  Jul 31, 2024
+  Aug 21, 2024
 </time>
 
-              <h4 class="pt-0 my-2">BPMF</h4>
+              <h4 class="pt-0 my-2">BPR</h4>
               <div class="text-muted">
-                <p>&lt;ul type=&quot;square&quot;&gt; &lt;li&gt;&lt;strong&gt;Title&lt;/strong&gt;: &lt;a href=&quot;https://dl.acm.org/doi/abs/10.1145/1390156.1390267?casa_token=qcXfuanisHUAAAAA:1kvcFcEIDLbBTKptsE1CPjTQToi0mpGtJpYS7hHSTW2yKdoT2pUpNdfY7TARrn...</p>
+                <p>&lt;ul type=&quot;square&quot;&gt; &lt;li&gt;&lt;strong&gt;Title&lt;/strong&gt;: &lt;a href=&quot;https://arxiv.org/abs/1205.2618&quot;&gt;&lt;code&gt;BPR: Bayesian Personalized Ranking from Implicit Feedback&lt;/code&gt;&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Publisher&lt;/stron...</p>
               </div>
             </div>
           </a>
@@ -3169,11 +3338,11 @@
 
   
     <a
-      href="/posts/Bayesian_Attention_Modules/"
+      href="/posts/BPR/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>Bayesian Attention Modules</p>
+      <p>BPR</p>
     </a>
   
 </nav>
@@ -3642,8 +3811,6 @@
     
     
     
-    
-      
     
   
     
