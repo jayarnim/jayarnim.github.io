@@ -4,7 +4,7 @@
   <id>https://jayarnim.github.io/</id>
   <title>Data Scientist</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-10-14T14:32:14+09:00</updated>
+  <updated>2024-10-17T01:56:50+09:00</updated>
   <author>
     <name>jayarnim</name>
     <uri>https://jayarnim.github.io/</uri>
@@ -22,9 +22,9 @@
   <entry>
     <title>Bayesian Attention Modules</title>
     <link href="https://jayarnim.github.io/posts/Bayesian_Attention_Modules/" rel="alternate" type="text/html" title="Bayesian Attention Modules" />
-    <published>2024-09-19T00:00:00+09:00</published>
+    <published>2024-09-05T00:00:00+09:00</published>
   
-    <updated>2024-09-19T00:00:00+09:00</updated>
+    <updated>2024-09-05T00:00:00+09:00</updated>
   
     <id>https://jayarnim.github.io/posts/Bayesian_Attention_Modules/</id>
     <content src="https://jayarnim.github.io/posts/Bayesian_Attention_Modules/" />
@@ -46,14 +46,14 @@
 
   
   <entry>
-    <title>BPR</title>
-    <link href="https://jayarnim.github.io/posts/BPR/" rel="alternate" type="text/html" title="BPR" />
-    <published>2024-08-21T00:00:00+09:00</published>
+    <title>AIMF</title>
+    <link href="https://jayarnim.github.io/posts/AIMF/" rel="alternate" type="text/html" title="AIMF" />
+    <published>2024-08-28T00:00:00+09:00</published>
   
-    <updated>2024-08-21T00:00:00+09:00</updated>
+    <updated>2024-08-28T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/BPR/</id>
-    <content src="https://jayarnim.github.io/posts/BPR/" />
+    <id>https://jayarnim.github.io/posts/AIMF/</id>
+    <content src="https://jayarnim.github.io/posts/AIMF/" />
     <author>
       <name>jayarnim</name>
     </author>
@@ -66,9 +66,7 @@
     
   
 
-  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://arxiv.org/abs/1205.2618&amp;quot;&amp;gt;&amp;lt;code&amp;gt;BPR: Bayesian Personalized Ranking from Implicit Feedback&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Publisher&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;UAI&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2009&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Data Set&amp;lt;/strong&amp;gt;:
-    &amp;lt;ul&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;code&amp;gt;&amp;lt;a href=&amp;quot;https://www.kaggle.com/datasets/netflix-inc/netflix-prize-data&amp;quot;&amp;gt;...</summary>
+  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://www.mdpi.com/2073-8994/16/3/267&amp;quot;&amp;gt;&amp;lt;code&amp;gt;Matrix Factorization Recommendation Algorithm Based on Attention Interaction&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Publisher&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;MDPI&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2024&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Data Set&amp;lt;/strong&amp;gt;: &amp;lt;code&amp;gt;&amp;lt;a href=&amp;quot;https://grouplens.org/datasets/movielens/&amp;quot;&amp;gt;MovieLens&amp;lt;...</summary>
 
   </entry>
 
@@ -76,9 +74,9 @@
   <entry>
     <title>FAWMF</title>
     <link href="https://jayarnim.github.io/posts/FAWMF/" rel="alternate" type="text/html" title="FAWMF" />
-    <published>2024-08-14T00:00:00+09:00</published>
+    <published>2024-08-21T00:00:00+09:00</published>
   
-    <updated>2024-08-14T00:00:00+09:00</updated>
+    <updated>2024-08-21T00:00:00+09:00</updated>
   
     <id>https://jayarnim.github.io/posts/FAWMF/</id>
     <content src="https://jayarnim.github.io/posts/FAWMF/" />
@@ -104,9 +102,9 @@
   <entry>
     <title>EXMF</title>
     <link href="https://jayarnim.github.io/posts/EXMF/" rel="alternate" type="text/html" title="EXMF" />
-    <published>2024-08-07T00:00:00+09:00</published>
+    <published>2024-08-14T00:00:00+09:00</published>
   
-    <updated>2024-08-07T00:00:00+09:00</updated>
+    <updated>2024-08-14T00:00:00+09:00</updated>
   
     <id>https://jayarnim.github.io/posts/EXMF/</id>
     <content src="https://jayarnim.github.io/posts/EXMF/" />
@@ -131,27 +129,29 @@
 
   
   <entry>
-    <title>Statistical Modeling Methods</title>
-    <link href="https://jayarnim.github.io/posts/Statistical_Modeling_Methods/" rel="alternate" type="text/html" title="Statistical Modeling Methods" />
-    <published>2024-07-31T00:00:00+09:00</published>
+    <title>BPR</title>
+    <link href="https://jayarnim.github.io/posts/BPR/" rel="alternate" type="text/html" title="BPR" />
+    <published>2024-08-07T00:00:00+09:00</published>
   
-    <updated>2024-07-31T00:00:00+09:00</updated>
+    <updated>2024-08-07T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/Statistical_Modeling_Methods/</id>
-    <content src="https://jayarnim.github.io/posts/Statistical_Modeling_Methods/" />
+    <id>https://jayarnim.github.io/posts/BPR/</id>
+    <content src="https://jayarnim.github.io/posts/BPR/" />
     <author>
       <name>jayarnim</name>
     </author>
 
   
     
-    <category term="AI &amp; Data Mining" />
+    <category term="Research Interest" />
     
-    <category term="Text Analytics" />
+    <category term="Recommender System" />
     
   
 
-  <summary>Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</summary>
+  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://arxiv.org/abs/1205.2618&amp;quot;&amp;gt;&amp;lt;code&amp;gt;BPR: Bayesian Personalized Ranking from Implicit Feedback&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Publisher&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;UAI&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2009&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Data Set&amp;lt;/strong&amp;gt;:
+    &amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;code&amp;gt;&amp;lt;a href=&amp;quot;https://www.kaggle.com/datasets/netflix-inc/netflix-prize-data&amp;quot;&amp;gt;...</summary>
 
   </entry>
 
