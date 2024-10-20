@@ -7,8 +7,7 @@ tags: [Paper Review, Data Mining, Recommender System, Collaborative Filtering, L
 math: true
 description: >-
     <ul type="square">
-    <li><strong>Title</strong>: <a href="https://dl.acm.org/doi/abs/10.1145/2988450.2988454"><code>Wide & Deep Learning for Recommender Systems</code></a></li>
-    <li><strong>Publisher</strong>: <em>DLRS</em></li>
+    <li><strong>Title</strong>: <a href="https://doi.org/10.1145/2988450.2988454"><code>Wide & Deep Learning for Recommender Systems</code></a></li>
     <li><strong>Published</strong>: <em>2016</em></li>
     </ul>
 image:

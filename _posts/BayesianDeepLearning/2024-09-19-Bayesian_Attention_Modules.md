@@ -1,14 +1,13 @@
 ---
 order: 2
 title: Bayesian Attention Modules
-date: 2024-09-05
+date: 2024-09-19
 categories: [Research Interest, Bayesian Deep Learning]
 tags: [Deep Learning, Bayesian, Attention Mechanism]
 math: true
 description: >-
     <ul type="square">
-    <li><strong>Title</strong>: <a href="https://arxiv.org/abs/2010.10604"><code>Bayesian Attention Modules</code></a></li>
-    <li><strong>Publisher</strong>: <em>NeurlPS</em></li>
+    <li><strong>Title</strong>: <a href=" https://doi.org/10.48550/arXiv.2010.10604"><code>Bayesian Attention Modules</code></a></li>
     <li><strong>Published</strong>: <em>2020</em></li>
     </ul>
 image:

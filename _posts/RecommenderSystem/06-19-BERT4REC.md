@@ -7,8 +7,7 @@ tags: [Paper Review, Data Mining, Recommender System, Sequential Recommender Sys
 math: true
 description: >-
     <ul type="square">
-    <li><strong>Title</strong>: <a href="https://dl.acm.org/doi/abs/10.1145/3357384.3357895?casa_token=FdOnUIipxhwAAAAA:jXWonRcvhqi5WJFCb_hKPdJMAWgvZI9YJzI4qn20pSMM7N6FrxdvcL9g9h1pAibEFy5eiD_z4N9XmbE"><code>BERT4Rec: Sequential Recommendation with Bidirectional Encoder Representations from Transformer</code></a></li>
-    <li><strong>Publisher</strong>: <em>CIKM</em></li>
+    <li><strong>Title</strong>: <a href="https://doi.org/10.1145/3357384.3357895"><code>BERT4Rec: Sequential Recommendation with Bidirectional Encoder Representations from Transformer</code></a></li>
     <li><strong>Published</strong>: <em>2019</em></li>
     <li><strong>Data Set</strong>:
         <ul>

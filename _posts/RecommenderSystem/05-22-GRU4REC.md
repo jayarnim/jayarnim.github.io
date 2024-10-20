@@ -7,8 +7,7 @@ tags: [Paper Review, Data Mining, Recommender System, Sequential Recommender Sys
 math: true
 description: >-
     <ul type="square">
-    <li><strong>Title</strong>: <a href="https://arxiv.org/abs/1511.06939"><code>Session-based Recommendations with Recurrent Neural Networks</code></a></li>
-    <li><strong>Publisher</strong>: <em>ICLR</em></li>
+    <li><strong>Title</strong>: <a href=" https://doi.org/10.48550/arXiv.1511.06939"><code>Session-based Recommendations with Recurrent Neural Networks</code></a></li>
     <li><strong>Published</strong>: <em>2016</em></li>
     <li><strong>Data Set</strong>: <a href="https://www.kaggle.com/code/danofer/2015-recsys-challenge-starter"><code>RecSys Challenge 2015</code></a></li>
     </ul>

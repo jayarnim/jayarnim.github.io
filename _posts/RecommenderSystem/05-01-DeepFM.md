@@ -7,8 +7,7 @@ tags: [Paper Review, Data Mining, Recommender System, Collaborative Filtering, L
 math: true
 description: >-
     <ul type="square">
-    <li><strong>Title</strong>: <a href="https://dl.acm.org/doi/10.1145/2988450.2988454"><code>DeepFM: A Factorization-Machine based Neural Network for CTR Prediction</code></a></li>
-    <li><strong>Publisher</strong>: <em>IJCAI</em></li>
+    <li><strong>Title</strong>: <a href=" https://doi.org/10.48550/arXiv.1703.04247"><code>DeepFM: A Factorization-Machine based Neural Network for CTR Prediction</code></a></li>
     <li><strong>Published</strong>: <em>2017</em></li>
     <li><strong>Data Set</strong>: <a href="https://www.kaggle.com/c/criteo-display-ad-challenge/data"><code>Display Advertising Challenge</code></a></li>
     </ul>

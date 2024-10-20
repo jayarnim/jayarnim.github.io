@@ -7,8 +7,7 @@ tags: [Paper Review, Data Mining, Recommender System, Sequential Recommender Sys
 math: true
 description: >-
     <ul type="square">
-    <li><strong>Title</strong>: <a href="https://ieeexplore.ieee.org/abstract/document/8594844?casa_token=JT5smtt5Z5sAAAAA:lFfXP_q_01zzLRSEc7p1zEyR_jZ7l1VjeTTCOUO6QMkDmw6HUM0BDtBSnPGpvH6XZmxvQwnGi-r7"><code>Self-Attentive Sequential Recommendation</code></a></li>
-    <li><strong>Publisher</strong>: <em>ICDM</em></li>
+    <li><strong>Title</strong>: <a href="https://doi.org/10.1109/ICDM.2018.00035"><code>Self-Attentive Sequential Recommendation</code></a></li>
     <li><strong>Published</strong>: <em>2018</em></li>
     <li><strong>Data Set</strong>:
         <ul>
