@@ -5,7 +5,7 @@
     "url": "/posts/Bayesian_Attention_Modules/",
     "categories": "Research Interest, Bayesian Deep Learning",
     "tags": "Deep Learning, Bayesian, Attention Mechanism",
-    "date": "2024-09-05 00:00:00 +0900",
+    "date": "2024-09-19 00:00:00 +0900",
     
 
 
@@ -22,7 +22,7 @@
     "url": "/posts/AIMF/",
     "categories": "Research Interest, Recommender System",
     "tags": "Paper Review, Data Mining, Recommender System, Collaborative Filtering, Latent Factor Model, Deep Learning, Attention Mechanism",
-    "date": "2024-08-28 00:00:00 +0900",
+    "date": "2024-09-05 00:00:00 +0900",
     
 
 
@@ -30,8 +30,8 @@
 
 
     
-    "snippet": "",
-    "content": ""
+    "snippet": "AIMF  AIMF(Attention Interaction Matrix Factorization)How to ModelingUser-Item Attention      Attention Matrix:\\[\\begin{aligned}  \\mathcal{Q}  &amp;= \\mathbf{W}^{(\\mathcal{Q})}_{M \\times M} \\cdot \\...",
+    "content": "AIMF  AIMF(Attention Interaction Matrix Factorization)How to ModelingUser-Item Attention      Attention Matrix:\\[\\begin{aligned}  \\mathcal{Q}  &amp;= \\mathbf{W}^{(\\mathcal{Q})}_{M \\times M} \\cdot \\mathbf{P}_{M \\times D}\\\\  \\mathcal{K}  &amp;= \\mathbf{W}^{(\\mathcal{K})}_{N \\times N} \\cdot \\mathbf{Q}_{N \\times D}\\\\  \\mathcal{V}  &amp;= \\mathbf{W}^{(\\mathcal{V})}_{N \\times N} \\cdot \\mathbf{Q}_{N \\times D}  \\end{aligned}\\]          $\\mathbf{P}_{M \\times D}$ : User-Latent Factor Matrix      $\\mathbf{Q}_{N \\times D}$ : Item-Latent Factor Matrix            Redefinition $\\mathcal{K}$ for Silde Attention:\\[\\begin{aligned}  \\mathcal{K}^{+}  &amp;= \\text{Concat}\\Big[\\mathcal{K}, \\mathcal{K}[:, :-1]\\Big]  \\end{aligned}\\]        Attention Score from User $u$ to Item $i$ at Window $\\tau$:\\[\\begin{aligned}  \\alpha^{(\\tau)}_{u,i}  &amp;= \\mathcal{Q}_{u} \\cdot \\mathcal{K}^{+}_{i}[\\tau : \\tau + D]  \\end{aligned}\\]        Attention Weight from User $u$ to Item $i$ at Window $\\tau$:\\[\\begin{aligned}  \\omega^{(\\tau)}_{u,i}  &amp;= \\frac{\\exp{\\alpha^{(\\tau)}_{u,i}}}{\\sum_{\\tau'}{\\exp{\\alpha^{(\\tau')}_{u,i}}}}  \\end{aligned}\\]        User-Item Attention Vector \\(\\overrightarrow{\\mathbf{z}}_{u,i} \\in \\mathbf{Z}_{(M \\times N) \\times D}\\):\\[\\begin{aligned}  \\overrightarrow{\\mathbf{z}}_{u,i}  &amp;= \\sum_{\\tau}{\\alpha^{(\\tau)}_{u,i} \\cdot \\mathcal{V}_{i}}  \\end{aligned}\\]  User Self-Attention"
   },
   
   {
@@ -39,7 +39,7 @@
     "url": "/posts/FAWMF/",
     "categories": "Research Interest, Recommender System",
     "tags": "Paper Review, Data Mining, Recommender System, Collaborative Filtering, Latent Factor Model, Deep Learning, Autoencoder, Implicit Feedback, Weight Approach, Bayesian",
-    "date": "2024-08-21 00:00:00 +0900",
+    "date": "2024-08-28 00:00:00 +0900",
     
 
 
@@ -56,7 +56,7 @@
     "url": "/posts/EXMF/",
     "categories": "Research Interest, Recommender System",
     "tags": "Paper Review, Data Mining, Recommender System, Collaborative Filtering, Latent Factor Model, Implicit Feedback, Weight Approach, Bayesian",
-    "date": "2024-08-14 00:00:00 +0900",
+    "date": "2024-08-21 00:00:00 +0900",
     
 
 
@@ -66,6 +66,23 @@
     
     "snippet": "Pilot Study; Implicit Feedback      Problems with implicit feedback          암시적 피드백 하에서는 관측된 아이템을 선호 아이템, 미관측된 아이템을 비선호 아이템으로서 추정함. 하지만 관측 행위는 선호 외에 불호와 우연성을, 미관측 행위는 비선호 외에 미노출이라는 경우의 수를 포괄하고 있음....",
     "content": "Pilot Study; Implicit Feedback      Problems with implicit feedback          암시적 피드백 하에서는 관측된 아이템을 선호 아이템, 미관측된 아이템을 비선호 아이템으로서 추정함. 하지만 관측 행위는 선호 외에 불호와 우연성을, 미관측 행위는 비선호 외에 미노출이라는 경우의 수를 포괄하고 있음. 따라서 미관측된 아이템을 단순히 비선호 아이템으로 치부하는 것은 무리가 있음.            WMF(Weighted Matrix Factorization) : Confidence Weighted Approach\\[\\begin{aligned}  \\overrightarrow{\\mathbf{p}}, \\overrightarrow{\\mathbf{q}}  &amp;= \\text{arg}\\min_{\\Theta}{\\sum_{(u,i)}{c_{u,i} \\cdot \\left(r_{u,i} - \\overrightarrow{\\mathbf{p}}_{u} \\cdot \\overrightarrow{\\mathbf{q}}_{i}\\right)^{2} + \\lambda_{\\Theta}\\Vert \\Theta \\Vert^{2}}}  \\end{aligned}\\]          \\(c_{u,i}:=1+\\alpha \\cdot r_{u,i}\\) : Confience Weight            BPR(Bayesian Personalized Ranking) : Pairwise Learning Approach\\[\\begin{aligned}  \\Theta  &amp;= \\text{arg}\\min_{\\Theta}{\\sum_{(u,i,j)}{-\\ln{\\sigma\\left(\\hat{r}_{u,i} - \\hat{r}_{u,j}\\right)} + \\lambda_{\\Theta}\\Vert\\Theta\\Vert^{2}}}  \\end{aligned}\\]  EXMF  EXMF(Exposure Matrix Factorization) : 미관측 아이템에 대한 사용자의 노출 여부를 명시적으로 모델링하는 방법론          WMF : 미관측 항목에 낮은 신뢰도를 부여하고 있으나, 이는 모든 미관측 항목을 단순히 하향 가중하는 직관적인 접근법임      BPR : 관측 항목과 미관측 항목 간 순위에 격차를 벌리고 있으나, 이는 미관측 원인 중 하나인 노출 여부를 명시적으로 다루는 접근법이 아님      EXMF : 사용자 노출 여부를 명시적으로 모델링함으로써 사용자가 관측하지 않은 이유를 설명하고자 함      How to Modeling      사용자 $i$ 가 아이템 $j$ 를 클릭할 가능성\\[\\begin{aligned}  p\\left(r_{i,j},y_{i,j} \\mid \\mu_{i,j}, \\overrightarrow{\\mathbf{u}}_{i}, \\overrightarrow{\\mathbf{v}}_{j} ; \\lambda\\right)  &amp;= \\underbrace{p\\left(y_{i,j} \\mid \\mu_{i,j}\\right)}_{\\text{Exposure Prob.}} \\cdot \\overbrace{p\\left(r_{i,j} \\mid \\overrightarrow{\\mathbf{u}}_{i}, \\overrightarrow{\\mathbf{v}}_{j} ; \\lambda\\right)^{y_{i,j}}}^{\\text{Click Prob. under Exposure}} \\cdot \\underbrace{\\mathbf{I}\\left[r_{i,j}=0\\right]^{1-y_{i,j}}}_{\\text{non-Click Prob. under non-Exposure}}  \\end{aligned}\\]          \\(r_{i,j} = \\big\\{1,0\\big\\} \\in \\mathbf{R}_{M \\times N}\\) : 클릭 변수      \\(y_{i,j} = \\big\\{1,0\\big\\} \\in \\mathbf{Y}_{M \\times N}\\) : 노출 변수            \\(p\\left(y_{i,j} \\mid \\mu_{i,j}\\right)\\) : 사용자 $i$ 가 아이템 $j$ 에 노출될 가능성\\[\\begin{aligned}  y_{i,j} &amp;\\sim \\text{Bernoulli}\\left(\\mu_{u,i}\\right)  \\end{aligned}\\]        \\(p\\left(r_{i,j} \\mid \\overrightarrow{\\mathbf{u}}_{i}, \\overrightarrow{\\mathbf{v}}_{j} ; \\lambda\\right)^{y_{i,j}}\\) : 사용자 $i$ 가 아이템 $j$ 에 노출되었을 때, 아이템을 클릭할 가능성\\[\\begin{aligned}  r_{i,j} \\mid y_{i,j}=1 &amp;\\sim \\mathcal{N}\\left(\\overrightarrow{\\mathbf{u}}_{i} \\cdot \\overrightarrow{\\mathbf{v}}_{j}, \\lambda^{-1}\\right)  \\end{aligned}\\]        \\(\\mathbf{I}\\left[r_{i,j}=0\\right]^{1-y_{i,j}}\\) : 사용자 $i$ 가 아이템 $j$ 에 노출되지 않았을 때, 아이템을 클릭하지 않을 가능성\\[\\begin{aligned}  r_{i,j} \\mid y_{i,j}=0  &amp;\\sim \\delta_{0}\\\\  &amp;\\approx \\mathcal{N}\\left(\\epsilon, \\lambda^{-1}\\right)   \\end{aligned}\\]          $\\delta_{x=k}: p\\left(x=k\\right)=1$            Objective Function\\[\\begin{aligned}  \\mathcal{J}  &amp;= \\sum_{(i,j)}{\\log{p\\left(r_{i,j},y_{i,j} \\mid \\mu_{i,j}, \\overrightarrow{\\mathbf{u}}_{i}, \\overrightarrow{\\mathbf{v}}_{j} ; \\lambda\\right)}}\\\\  &amp;= \\sum_{(i,j)}{\\log{\\text{Bernoulli}\\left(y_{i,j}\\mid \\mu_{i,j}\\right)} + y_{i,j} \\cdot \\log{\\mathcal{N}\\left(r_{i,j} \\mid \\overrightarrow{\\mathbf{u}}_{i} \\cdot \\overrightarrow{\\mathbf{v}}_{j}, \\lambda^{-1}\\right)} + (1-y_{u,i}) \\cdot \\cancel{\\log{\\mathbf{I}\\left[r_{i,j}=0\\right]}}}\\\\  &amp;= \\sum_{(i,j)}{\\log{\\text{Bernoulli}\\left(y_{i,j}\\mid \\mu_{i,j}\\right)} + y_{i,j} \\cdot \\log{\\mathcal{N}\\left(r_{i,j} \\mid \\overrightarrow{\\mathbf{u}}_{i} \\cdot \\overrightarrow{\\mathbf{v}}_{j}, \\lambda^{-1}\\right)}}  \\end{aligned}\\]        Maximum Likelihood Estimation\\[\\begin{aligned}  \\mu, \\overrightarrow{\\mathbf{u}}, \\overrightarrow{\\mathbf{v}}  &amp;= \\text{arg}\\max_{\\Theta}{\\mathcal{J}}  \\end{aligned}\\]  Optimizer  E-M Algorithm : 잠재 변수의 기대값을 추정하고, 이를 바탕으로 학습 파라미터를 최적화하는 방법론          E-Step(Expectation Step) : 잠재 변수의 기대값 추정      M-Step(Maximization Step) : 잠재 변수의 기대값 추정치를 바탕으로 학습 파라미터 갱신            E-Step(Expectation Step) : 사용자 $i$ 가 아이템 $j$ 에 노출되었는지 여부의 기대값 $\\mathbb{E}\\left[y_{i,j}=1\\right]$ 으로서 사용자가 특정 아이템에 노출될 가능성의 추정치\\[\\begin{aligned}  \\mathbb{E}\\left[y_{i,j}=1\\right]  &amp;= p\\left(y_{i,j}=1 \\mid r_{i,j}\\right)\\\\  &amp;= \\frac{\\overbrace{p\\left(r_{i,j} \\mid y_{i,j}=1\\right)}^{\\text{Likelihood}} \\cdot \\overbrace{p\\left(y_{i,j}=1 \\mid \\mu_{i,j}\\right)}^{\\text{Prior}}}{\\underbrace{p\\left(r_{i,j} \\mid \\mu_{i,j}\\right)}_{\\text{Posterior}}}\\\\  &amp;= \\frac{\\mu_{i,j} \\cdot \\mathcal{N}\\left(r_{u,i} \\mid \\overrightarrow{\\mathbf{p}}_{i} \\cdot \\overrightarrow{\\mathbf{q}}_{j}, \\lambda^{-1}\\right)}{\\mu_{i,j} \\cdot \\mathcal{N}\\left(r_{u,i} \\mid \\overrightarrow{\\mathbf{p}}_{i} \\cdot \\overrightarrow{\\mathbf{q}}_{j}, \\lambda^{-1}\\right) + \\left(1 - \\mu_{i,j}\\right)}  \\end{aligned}\\]        M-Step(Maximization Step) : User and Item-Latent Factors updated using ALS                  User-Latent Factor\\[\\begin{aligned}  \\overrightarrow{\\mathbf{u}}_{i}  \\leftarrow \\left(\\lambda \\sum_{j}{\\mathbb{E}\\left[y_{i,j}=1\\right] \\cdot \\overrightarrow{\\mathbf{v}}_{j} \\otimes \\overrightarrow{\\mathbf{v}}_{j}} + \\gamma_{\\Theta}\\mathbf{I}\\right)^{-1} \\left(\\lambda \\sum_{j}{\\mathbb{E}\\left[y_{i,j}=1\\right] \\cdot r_{i,j} \\cdot \\overrightarrow{\\mathbf{v}}_{j}}\\right)  \\end{aligned}\\]                    Item-Latent Factor\\[\\begin{aligned}  \\overrightarrow{\\mathbf{v}}_{j}  \\leftarrow \\left(\\lambda \\sum_{i}{\\mathbb{E}\\left[y_{i,j}=1\\right] \\cdot \\overrightarrow{\\mathbf{u}}_{i} \\otimes \\overrightarrow{\\mathbf{u}}_{i}} + \\gamma_{\\Theta}\\mathbf{I}\\right)^{-1} \\left(\\lambda \\sum_{i}{\\mathbb{E}\\left[y_{i,j}=1\\right] \\cdot r_{i,j} \\cdot \\overrightarrow{\\mathbf{u}}_{i}}\\right)  \\end{aligned}\\]            "
+  },
+  
+  {
+    "title": "FSBPR",
+    "url": "/posts/FSBPR/",
+    "categories": "Research Interest, Recommender System",
+    "tags": "Paper Review, Data Mining, Recommender System, Collaborative Filtering, Objective Function, Implicit Feedback, Pairewise Appoach, Ranking Prediction, Bayesian",
+    "date": "2024-08-14 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "BPR      BPR(Bayesian Personalized Ranking) : 베이지안 접근법을 활용한 개인화 순위 목적 함수          선행 연구들은 대체로 평점 예측에 집중하는 경향을 보였으며, 이는 명시적 피드백 환경에 적합함. 하지만 실제에서는 주로 암묵적 피드백이 사용되며, 때문에 개별 아이템의 평점을 정확히 맞추는 것보다는 중요한 ...",
+    "content": "BPR      BPR(Bayesian Personalized Ranking) : 베이지안 접근법을 활용한 개인화 순위 목적 함수          선행 연구들은 대체로 평점 예측에 집중하는 경향을 보였으며, 이는 명시적 피드백 환경에 적합함. 하지만 실제에서는 주로 암묵적 피드백이 사용되며, 때문에 개별 아이템의 평점을 정확히 맞추는 것보다는 중요한 상호작용 정보과 중요하지 않은 상호작용 정보 간 차등을 두는 (아이템 간 선호 순위를 맞추는) 목적 함수가 요구됨.      Data Set  학습 데이터 : 개별 사용자 $u$ 의 선호체계 $&gt;_{u}$                  비교 가능성(Totality)\\[\\forall i,j \\in I:\\quad i \\ne j \\quad \\Rightarrow \\quad \\left(i &gt;_{u} j\\right) \\vee \\left(j &gt;_{u} i\\right)\\]                    반대칭성(Anti-Symmetry)\\[\\forall i,j \\in I:\\quad \\left(i &gt;_{u} j\\right) \\wedge \\left(j &gt;_{u} i\\right) \\quad \\Rightarrow \\quad i = j\\]                    이행성(Transitivity)\\[\\forall i,j,k \\in I:\\quad \\left(i &gt;_{u} j\\right) \\wedge \\left(j &gt;_{u} k\\right) \\quad \\Rightarrow \\quad \\left(i &gt;_{u} k\\right)\\]                  Pair-wise Preference Data Set\\[\\Omega  = \\Big\\{(u,i,j) \\mid i \\in I_{u} \\wedge j \\in I \\setminus I_{u}\\Big\\}\\]          $I$ : 아이템 집합      $I_{u} \\subset I$ : 사용자 $u$ 가 상호작용한 아이템 집합      $i \\in I_{u}$ : 사용자 $u$ 가 상호작용한 아이템      $j \\in I \\setminus I_{u}$ : 사용자 $u$ 가 상호작용하지 아니한 아이템            Single Data Point Definition\\[x_{u,i,j}:=r_{u,i} - r_{u,j}\\]  How to ModelingPosterior Estimation\\[\\underbrace{\\ln{P(\\Theta \\mid \\mathcal{D})}}_{\\begin{array}{c} \\text{Objective Function} \\\\ \\text{(Log Posterior)} \\end{array}} \\propto \\underbrace{\\ln{P(\\mathcal{D} \\mid \\Theta)}}_{\\text{Log Likelihood}} + \\underbrace{\\ln{P(\\Theta)}}_{\\text{Log Prior}}\\]      Log Likelihood                  Likelihood of Single Data Point\\[\\begin{aligned}  P(i &gt;_{u} j \\mid \\Theta)  &amp;= \\sigma\\left(\\hat{x}_{u,i,j}\\right)  \\end{aligned}\\]                    Likelihood of Data Set\\[\\begin{aligned}  P(\\mathcal{D} \\mid \\Theta)  &amp;= \\prod_{(u,i,j)\\in\\Omega}{P(i &gt;_{u} j \\mid \\Theta)}\\\\  &amp;= \\prod_{(u,i,j)\\in\\Omega}{\\sigma\\left(\\hat{x}_{u,i,j}\\right)}  \\end{aligned}\\]                    Log Likelihood\\[\\begin{aligned}  \\ln{P(\\mathcal{D} \\mid \\Theta)}  &amp;= \\ln{\\prod_{(u,i,j)\\in\\Omega}{P(i &gt;_{u} j \\mid \\Theta)}}\\\\  &amp;= \\sum_{(u,i,j)\\in\\Omega}{\\ln{P(i &gt;_{u} j \\mid \\Theta)}}\\\\  &amp;= \\sum_{(u,i,j)\\in\\Omega}{\\ln{\\sigma\\left(\\hat{x}_{u,i,j}\\right)}}  \\end{aligned}\\]                  Prior Determination; $\\Theta \\sim \\mathcal{N}\\left(0, \\lambda_{\\Theta}\\mathbf{I}\\right)$\\[\\begin{aligned}  P\\left(\\Theta\\right)  &amp;= \\frac{1}{(2\\pi)^{d/2} \\cdot \\lambda_{\\Theta}^{d/2}} \\cdot \\exp \\left[\\frac{1}{2\\lambda_{\\Theta}}\\Vert \\Theta \\Vert^{2}\\right]\\\\  \\\\  \\ln{P\\left(\\Theta\\right)}  &amp;= \\ln{\\frac{1}{(2\\pi)^{d/2} \\cdot \\lambda_{\\Theta}^{d/2}} \\cdot \\exp \\left[\\frac{1}{2\\lambda_{\\Theta}}\\Vert \\Theta \\Vert^{2}\\right]}\\\\  &amp;= \\ln{\\frac{1}{(2\\pi)^{d/2} \\cdot \\lambda_{\\Theta}^{d/2}}} + \\frac{1}{2\\lambda_{\\Theta}}\\Vert \\Theta \\Vert^{2}\\\\  &amp;\\propto -\\lambda_{\\Theta}\\Vert\\Theta\\Vert^{2}  \\end{aligned}\\]        Posterior Estimation\\[\\begin{aligned}  P(\\Theta \\mid \\mathcal{D})  &amp;\\propto P(\\mathcal{D} \\mid \\Theta) \\cdot P(\\Theta)\\\\  \\\\  \\ln{P(\\Theta \\mid \\mathcal{D})}  &amp;\\propto \\ln{P(\\mathcal{D} \\mid \\Theta)} + \\ln{P(\\Theta)}\\\\  &amp;\\propto \\sum_{(u,i,j)\\in\\Omega}{\\ln{\\sigma\\left(\\hat{x}_{u,i,j}\\right)}} -\\lambda_{\\Theta}\\Vert\\Theta\\Vert^{2}  \\end{aligned}\\]  Optimization      Objective Function\\[\\text{BPR-OPT} = \\ln{P(\\Theta \\mid \\mathcal{D})}\\]        Optimization\\[\\begin{aligned}  \\hat{\\Theta}  &amp;= \\text{arg} \\max_{\\Theta}{\\ln{P(\\Theta \\mid \\mathcal{D})}}\\\\  &amp;= \\text{arg} \\max_{\\Theta}{\\sum_{(u,i,j)\\in\\Omega}{\\ln{\\sigma\\left(\\hat{x}_{u,i,j}\\right)}} - \\lambda_{\\Theta}\\Vert\\Theta\\Vert^{2}}\\\\  &amp;= \\text{arg} \\min_{\\Theta}{\\sum_{(u,i,j)\\in\\Omega}{-\\ln{\\sigma\\left(\\hat{x}_{u,i,j}\\right)}} + \\lambda_{\\Theta}\\Vert\\Theta\\Vert^{2}}  \\end{aligned}\\]          $\\hat{\\Theta}$ is MAP(Maximum a Posteriori) Estimator      "
   },
   
   {

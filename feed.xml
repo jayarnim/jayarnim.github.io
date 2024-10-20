@@ -4,7 +4,7 @@
   <id>https://jayarnim.github.io/</id>
   <title>Data Scientist</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-10-17T01:56:50+09:00</updated>
+  <updated>2024-10-21T02:49:05+09:00</updated>
   <author>
     <name>jayarnim</name>
     <uri>https://jayarnim.github.io/</uri>
@@ -22,9 +22,9 @@
   <entry>
     <title>Bayesian Attention Modules</title>
     <link href="https://jayarnim.github.io/posts/Bayesian_Attention_Modules/" rel="alternate" type="text/html" title="Bayesian Attention Modules" />
-    <published>2024-09-05T00:00:00+09:00</published>
+    <published>2024-09-19T00:00:00+09:00</published>
   
-    <updated>2024-09-05T00:00:00+09:00</updated>
+    <updated>2024-09-19T00:00:00+09:00</updated>
   
     <id>https://jayarnim.github.io/posts/Bayesian_Attention_Modules/</id>
     <content src="https://jayarnim.github.io/posts/Bayesian_Attention_Modules/" />
@@ -40,7 +40,7 @@
     
   
 
-  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://arxiv.org/abs/2010.10604&amp;quot;&amp;gt;&amp;lt;code&amp;gt;Bayesian Attention Modules&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Publisher&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;NeurlPS&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2020&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;</summary>
+  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot; https://doi.org/10.48550/arXiv.2010.10604&amp;quot;&amp;gt;&amp;lt;code&amp;gt;Bayesian Attention Modules&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2020&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;</summary>
 
   </entry>
 
@@ -48,9 +48,9 @@
   <entry>
     <title>AIMF</title>
     <link href="https://jayarnim.github.io/posts/AIMF/" rel="alternate" type="text/html" title="AIMF" />
-    <published>2024-08-28T00:00:00+09:00</published>
+    <published>2024-09-05T00:00:00+09:00</published>
   
-    <updated>2024-08-28T00:00:00+09:00</updated>
+    <updated>2024-09-05T00:00:00+09:00</updated>
   
     <id>https://jayarnim.github.io/posts/AIMF/</id>
     <content src="https://jayarnim.github.io/posts/AIMF/" />
@@ -66,7 +66,7 @@
     
   
 
-  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://www.mdpi.com/2073-8994/16/3/267&amp;quot;&amp;gt;&amp;lt;code&amp;gt;Matrix Factorization Recommendation Algorithm Based on Attention Interaction&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Publisher&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;MDPI&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2024&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Data Set&amp;lt;/strong&amp;gt;: &amp;lt;code&amp;gt;&amp;lt;a href=&amp;quot;https://grouplens.org/datasets/movielens/&amp;quot;&amp;gt;MovieLens&amp;lt;...</summary>
+  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://doi.org/10.3390/sym16030267&amp;quot;&amp;gt;&amp;lt;code&amp;gt;Matrix Factorization Recommendation Algorithm Based on Attention Interaction&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2024&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Data Set&amp;lt;/strong&amp;gt;: &amp;lt;code&amp;gt;&amp;lt;a href=&amp;quot;https://grouplens.org/datasets/movielens/&amp;quot;&amp;gt;MovieLens&amp;lt;/a&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;</summary>
 
   </entry>
 
@@ -74,9 +74,9 @@
   <entry>
     <title>FAWMF</title>
     <link href="https://jayarnim.github.io/posts/FAWMF/" rel="alternate" type="text/html" title="FAWMF" />
-    <published>2024-08-21T00:00:00+09:00</published>
+    <published>2024-08-28T00:00:00+09:00</published>
   
-    <updated>2024-08-21T00:00:00+09:00</updated>
+    <updated>2024-08-28T00:00:00+09:00</updated>
   
     <id>https://jayarnim.github.io/posts/FAWMF/</id>
     <content src="https://jayarnim.github.io/posts/FAWMF/" />
@@ -92,9 +92,10 @@
     
   
 
-  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://arxiv.org/abs/2003.01892&amp;quot;&amp;gt;&amp;lt;code&amp;gt;Fast Adaptively Weighted Matrix Factorization for Recommendation with Implicit Feedback&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Publisher&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;AAAI&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2020&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Data Set&amp;lt;/strong&amp;gt;:
+  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://doi.org/10.1609/aaai.v34i04.5751&amp;quot;&amp;gt;&amp;lt;code&amp;gt;Fast Adaptively Weighted Matrix Factorization for Recommendation with Implicit Feedback&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2020&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Data Set&amp;lt;/strong&amp;gt;:
     &amp;lt;ul&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;code&amp;gt;&amp;lt;a href=&amp;quot;https://grouplens.org/datasets/m...</summary>
+    &amp;lt;li&amp;gt;&amp;lt;code&amp;gt;&amp;lt;a href=&amp;quot;https://grouplens.org/datasets/movielens/&amp;quot;&amp;gt;MovieLens&amp;lt;/a&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;l...</summary>
 
   </entry>
 
@@ -102,9 +103,9 @@
   <entry>
     <title>EXMF</title>
     <link href="https://jayarnim.github.io/posts/EXMF/" rel="alternate" type="text/html" title="EXMF" />
-    <published>2024-08-14T00:00:00+09:00</published>
+    <published>2024-08-21T00:00:00+09:00</published>
   
-    <updated>2024-08-14T00:00:00+09:00</updated>
+    <updated>2024-08-21T00:00:00+09:00</updated>
   
     <id>https://jayarnim.github.io/posts/EXMF/</id>
     <content src="https://jayarnim.github.io/posts/EXMF/" />
@@ -120,23 +121,24 @@
     
   
 
-  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://dl.acm.org/doi/abs/10.1145/2872427.2883090&amp;quot;&amp;gt;&amp;lt;code&amp;gt;Modeling User Exposure in Recommendation&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Publisher&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;WWW&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2016&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt;
+  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://doi.org/10.1145/2872427.2883090&amp;quot;&amp;gt;&amp;lt;code&amp;gt;Modeling User Exposure in Recommendation&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2016&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt;
     &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Data Set&amp;lt;/strong&amp;gt;:
     &amp;lt;ul&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;code&amp;gt;&amp;lt;a href=&amp;quot;https://snap.stanford.edu/data/loc-Gowalla.html&amp;quot;&amp;gt;Gowalla&amp;lt;/...</summary>
+    &amp;lt;li&amp;gt;&amp;lt;code&amp;gt;&amp;lt;a href=&amp;quot;https://snap.stanford.edu/data/loc-Gowalla.html&amp;quot;&amp;gt;Gowalla&amp;lt;/a&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://www.kaggle.com/datase...</summary>
 
   </entry>
 
   
   <entry>
-    <title>BPR</title>
-    <link href="https://jayarnim.github.io/posts/BPR/" rel="alternate" type="text/html" title="BPR" />
-    <published>2024-08-07T00:00:00+09:00</published>
+    <title>FSBPR</title>
+    <link href="https://jayarnim.github.io/posts/FSBPR/" rel="alternate" type="text/html" title="FSBPR" />
+    <published>2024-08-14T00:00:00+09:00</published>
   
-    <updated>2024-08-07T00:00:00+09:00</updated>
+    <updated>2024-08-14T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/BPR/</id>
-    <content src="https://jayarnim.github.io/posts/BPR/" />
+    <id>https://jayarnim.github.io/posts/FSBPR/</id>
+    <content src="https://jayarnim.github.io/posts/FSBPR/" />
     <author>
       <name>jayarnim</name>
     </author>
@@ -149,9 +151,10 @@
     
   
 
-  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://arxiv.org/abs/1205.2618&amp;quot;&amp;gt;&amp;lt;code&amp;gt;BPR: Bayesian Personalized Ranking from Implicit Feedback&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Publisher&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;UAI&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2009&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Data Set&amp;lt;/strong&amp;gt;:
+  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://doi.org/10.1007/s11227-024-05911-6&amp;quot;&amp;gt;&amp;lt;code&amp;gt;FSBPR: a novel approach to improving BPR for recommendation with the fusion of similarity&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2024&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Data Set&amp;lt;/strong&amp;gt;:
     &amp;lt;ul&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;code&amp;gt;&amp;lt;a href=&amp;quot;https://www.kaggle.com/datasets/netflix-inc/netflix-prize-data&amp;quot;&amp;gt;...</summary>
+    &amp;lt;li&amp;gt;&amp;lt;code&amp;gt;&amp;lt;a href=&amp;quot;https://grouplens.org/datasets/movielens/&amp;quot;&amp;gt;MovieLens&amp;lt;/a&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/li&amp;gt;
+  ...</summary>
 
   </entry>
 
