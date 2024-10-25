@@ -4,7 +4,7 @@
   <id>https://jayarnim.github.io/</id>
   <title>Data Scientist</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-10-21T02:55:36+09:00</updated>
+  <updated>2024-10-25T22:18:58+09:00</updated>
   <author>
     <name>jayarnim</name>
     <uri>https://jayarnim.github.io/</uri>
@@ -41,32 +41,6 @@
   
 
   <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot; https://doi.org/10.48550/arXiv.2010.10604&amp;quot;&amp;gt;&amp;lt;code&amp;gt;Bayesian Attention Modules&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2020&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>AIMF</title>
-    <link href="https://jayarnim.github.io/posts/AIMF/" rel="alternate" type="text/html" title="AIMF" />
-    <published>2024-09-05T00:00:00+09:00</published>
-  
-    <updated>2024-09-05T00:00:00+09:00</updated>
-  
-    <id>https://jayarnim.github.io/posts/AIMF/</id>
-    <content src="https://jayarnim.github.io/posts/AIMF/" />
-    <author>
-      <name>jayarnim</name>
-    </author>
-
-  
-    
-    <category term="Research Interest" />
-    
-    <category term="Recommender System" />
-    
-  
-
-  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://doi.org/10.3390/sym16030267&amp;quot;&amp;gt;&amp;lt;code&amp;gt;Matrix Factorization Recommendation Algorithm Based on Attention Interaction&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2024&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Data Set&amp;lt;/strong&amp;gt;: &amp;lt;code&amp;gt;&amp;lt;a href=&amp;quot;https://grouplens.org/datasets/movielens/&amp;quot;&amp;gt;MovieLens&amp;lt;/a&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;</summary>
 
   </entry>
 
@@ -155,6 +129,35 @@
     &amp;lt;ul&amp;gt;
     &amp;lt;li&amp;gt;&amp;lt;code&amp;gt;&amp;lt;a href=&amp;quot;https://grouplens.org/datasets/movielens/&amp;quot;&amp;gt;MovieLens&amp;lt;/a&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/li&amp;gt;
   ...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>BPR</title>
+    <link href="https://jayarnim.github.io/posts/BPR/" rel="alternate" type="text/html" title="BPR" />
+    <published>2024-08-07T00:00:00+09:00</published>
+  
+    <updated>2024-08-07T00:00:00+09:00</updated>
+  
+    <id>https://jayarnim.github.io/posts/BPR/</id>
+    <content src="https://jayarnim.github.io/posts/BPR/" />
+    <author>
+      <name>jayarnim</name>
+    </author>
+
+  
+    
+    <category term="Research Interest" />
+    
+    <category term="Recommender System" />
+    
+  
+
+  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://dl.acm.org/doi/10.5555/1795114.1795167&amp;quot;&amp;gt;&amp;lt;code&amp;gt;BPR: Bayesian Personalized Ranking from Implicit Feedback&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2009&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Data Set&amp;lt;/strong&amp;gt;:
+    &amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;code&amp;gt;&amp;lt;a href=&amp;quot;https://www.kaggle.com/datasets/netflix-inc/netflix-prize-data&amp;quot;&amp;gt;Netflix Prize&amp;lt;/a&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;...</summary>
 
   </entry>
 

@@ -18,23 +18,6 @@
   },
   
   {
-    "title": "AIMF",
-    "url": "/posts/AIMF/",
-    "categories": "Research Interest, Recommender System",
-    "tags": "Paper Review, Data Mining, Recommender System, Collaborative Filtering, Latent Factor Model, Deep Learning, Attention Mechanism",
-    "date": "2024-09-05 00:00:00 +0900",
-    
-
-
-
-
-
-    
-    "snippet": "AIMF  AIMF(Attention Interaction Matrix Factorization)How to ModelingUser-Item Attention      Attention Matrix:\\[\\begin{aligned}  \\mathcal{Q}  &amp;= \\mathbf{W}^{(\\mathcal{Q})}_{M \\times M} \\cdot \\...",
-    "content": "AIMF  AIMF(Attention Interaction Matrix Factorization)How to ModelingUser-Item Attention      Attention Matrix:\\[\\begin{aligned}  \\mathcal{Q}  &amp;= \\mathbf{W}^{(\\mathcal{Q})}_{M \\times M} \\cdot \\mathbf{P}_{M \\times D}\\\\  \\mathcal{K}  &amp;= \\mathbf{W}^{(\\mathcal{K})}_{N \\times N} \\cdot \\mathbf{Q}_{N \\times D}\\\\  \\mathcal{V}  &amp;= \\mathbf{W}^{(\\mathcal{V})}_{N \\times N} \\cdot \\mathbf{Q}_{N \\times D}  \\end{aligned}\\]          $\\mathbf{P}_{M \\times D}$ : User-Latent Factor Matrix      $\\mathbf{Q}_{N \\times D}$ : Item-Latent Factor Matrix            Redefinition $\\mathcal{K}$ for Silde Attention:\\[\\begin{aligned}  \\mathcal{K}^{+}  &amp;= \\text{Concat}\\Big[\\mathcal{K}, \\mathcal{K}[:, :-1]\\Big]  \\end{aligned}\\]        Attention Score from User $u$ to Item $i$ at Window $\\tau$:\\[\\begin{aligned}  \\alpha^{(\\tau)}_{u,i}  &amp;= \\mathcal{Q}_{u} \\cdot \\mathcal{K}^{+}_{i}[\\tau : \\tau + D]  \\end{aligned}\\]        Attention Weight from User $u$ to Item $i$ at Window $\\tau$:\\[\\begin{aligned}  \\omega^{(\\tau)}_{u,i}  &amp;= \\frac{\\exp{\\alpha^{(\\tau)}_{u,i}}}{\\sum_{\\tau'}{\\exp{\\alpha^{(\\tau')}_{u,i}}}}  \\end{aligned}\\]        User-Item Attention Vector \\(\\overrightarrow{\\mathbf{z}}_{u,i} \\in \\mathbf{Z}_{(M \\times N) \\times D}\\):\\[\\begin{aligned}  \\overrightarrow{\\mathbf{z}}_{u,i}  &amp;= \\sum_{\\tau}{\\alpha^{(\\tau)}_{u,i} \\cdot \\mathcal{V}_{i}}  \\end{aligned}\\]  User Self-Attention"
-  },
-  
-  {
     "title": "FAWMF",
     "url": "/posts/FAWMF/",
     "categories": "Research Interest, Recommender System",
