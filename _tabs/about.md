@@ -10,7 +10,7 @@ Hi there! I'm dreaming of becoming a Data Scientist, **specializing in Recommend
 ------
 - Recommender System
 - Bayesian Modeling
-- Deep Learning Techs, such as GNNs
+- Graph Neural Networks
 
 ## Degree
 ------

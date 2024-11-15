@@ -1,30 +1,44 @@
 ---
-order: 16
-title: Mult-VAE
-date: 2024-07-17
+order: 10
+title: AutoEncoder based Collaborative Filtering
+date: 2024-04-03
 categories: [Research Interest, Recommender System]
-tags: [Paper Review, Data Mining, Recommender System, Collaborative Filtering, Deep Learning, Autoencoder, Implicit Feedback, Bayesian]
+tags: [Paper Review, Data Mining, Recommender System, Collaborative Filtering, Deep Learning, Autoencoder, Bayesian]
 math: true
 description: >-
-    <ul type="square">
-    <li><strong>Title</strong>: <a href="https://doi.org/10.1145/3178876.3186150"><code>Variational Autoencoders for Collaborative Filtering</code></a></li>
-    <li><strong>Published</strong>: <em>2018</em></li>
-    <li><strong>Data Set</strong>:
-        <ul>
-        <li><code><a href="https://grouplens.org/datasets/movielens/">MovieLens</a></code></li>
-        <li><code><a href="https://www.kaggle.com/datasets/netflix-inc/netflix-prize-data">Netflix Prize</a></code></li>
-        <li><code><a href="https://www.kaggle.com/datasets/ryanholbrook/the-million-songs-dataset">Million Song</a></code></li>
-        </ul>
-    </li>
-    </ul>
+    Based on the following lectures <br>
+    (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. <br>
+    (2) "Recommender System (2024-1)" by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
     path: /_post_refer_img/RecommenderSystem/Thumbnail.jpg
 ---
 
-## Prerequisite; VAE
+## AutoRec
 -----
 
-### Concept
+- [AutoRec: Autoencoders Meet Collaborative Filtering(2015)](https://doi.org/10.1145/2740908.2742726)
+
+### AutoEncoder
+
+### AutoRec
+
+## CDAE
+-----
+
+- [Collaborative Denoising Auto-Encoders for Top-N Recommender Systems(2016)](https://doi.org/10.1145/2835776.2835837)
+
+### Denoising AutoEncoder
+
+### CDAE
+
+## Mult-VAE
+-----
+
+- [Variational Autoencoders for Collaborative Filtering(2018)](https://doi.org/10.1145/3178876.3186150)
+
+### Variational AutoEncoder
+
+#### Concept
 
 - 관측치 $\overrightarrow{\mathbf{x}}$ 가 파라미터 $\overrightarrow{\mathbf{z}}$ 에서 생성되었다고 가정하자. $\overrightarrow{\mathbf{x}}$ 의 우도 함수:
 
@@ -69,9 +83,9 @@ image:
     - $K$ : Dimension of Latent Space
     - $0 \le \beta \le 1$ : KL Annealing Param
 
-### Architecture
+#### Architecture
 
-![01](/_post_refer_img/RecommenderSystem/16-01.png){: width="100%"}
+![01](/_post_refer_img/RecommenderSystem/10-01.png){: width="100%"}
 
 - **Encoder** : Posterior Probability Distribution Estimatior
 
@@ -91,8 +105,7 @@ image:
     \mathcal{L}\left(\overrightarrow{\mathbf{x}} \mid \overrightarrow{\mathbf{z}} ; \Theta \right)
     $$
 
-## Mult-VAE
------
+### Mult-VAE
 
 - **Mult-VAE(`Mult`inomial `V`ariational `A`uto`E`ncoder)** : 아이템 간 암묵적 경쟁 관계 및 파라미터 추정 시 정보 불확실성을 반영한 사용자 기반 협업 필터링 추천 알고리즘
 
@@ -108,7 +121,7 @@ image:
     - Multinomial Likelihood Function
     - Probabilistic Parameter Estimation Using the Bayesian Method
 
-### Bayesian Framework
+#### Bayesian Framework
 
 - 사용자 벡터 $$\overrightarrow{\mathbf{x}}_{u}$$ 가 파라미터 $$\overrightarrow{\mathbf{z}}_{u}$$ 에서 생성되었다고 가정하자. $$\overrightarrow{\mathbf{x}}_{u}$$ 의 우도 함수:
 
@@ -137,7 +150,7 @@ image:
     p\left(\overrightarrow{\mathbf{z}}_{u} \mid \overrightarrow{\mathbf{x}}_{u} ; \Theta\right) \propto \mathcal{L}\left(\overrightarrow{\mathbf{x}}_{u} \mid \overrightarrow{\mathbf{z}}_{u} ; \Theta \right) \cdot \pi\left(\overrightarrow{\mathbf{z}}_{u}\right)
     $$
 
-### Variational Inference
+#### Variational Inference
 
 - $$\overrightarrow{\mathbf{z}}_{u} \mid \overrightarrow{\mathbf{x}}_{u} \sim P(\Theta)$$ 의 근사 분포 $$\overrightarrow{\mathbf{z}}_{u} \sim Q(\Phi)$$ 정의:
 

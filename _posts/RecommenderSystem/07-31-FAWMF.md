@@ -1,7 +1,7 @@
 ---
-order: 22
+order: 19
 title: FAWMF
-date: 2024-08-28
+date: 2024-07-31
 categories: [Research Interest, Recommender System]
 tags: [Paper Review, Data Mining, Recommender System, Collaborative Filtering, Latent Factor Model, Deep Learning, Autoencoder, Implicit Feedback, Weight Approach, Bayesian]
 math: true
@@ -29,7 +29,7 @@ image:
 ## How to Modeling
 -----
 
-![01](/_post_refer_img/RecommenderSystem/22-01.png){: width="100%"}
+![01](/_post_refer_img/RecommenderSystem/19-01.png){: width="100%"}
 
 ### Analyses of EXMF from Bayesian Framework
 
