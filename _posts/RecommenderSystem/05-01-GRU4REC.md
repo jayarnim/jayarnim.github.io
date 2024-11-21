@@ -1,7 +1,7 @@
 ---
-order: 13
+order: 12
 title: GRU4REC
-date: 2024-05-22
+date: 2024-05-01
 categories: [Research Interest, Recommender System]
 tags: [Paper Review, Data Mining, Recommender System, Sequential Recommender System, Deep Learning, RNN]
 math: true
