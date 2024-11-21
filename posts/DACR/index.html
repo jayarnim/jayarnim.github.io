@@ -766,6 +766,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -927,9 +938,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="431 words"
+  title="663 words"
 >
-  <em>2 min</em> read</span>
+  <em>3 min</em> read</span>
 
         </div>
       </div>
@@ -937,7 +948,7 @@
   </header>
 
   <div class="content">
-    <h2 id="dacr"><span class="me-2">DACR</span><a href="#dacr" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="previous-research"><span class="me-2">Previous Research</span><a href="#previous-research" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
@@ -948,17 +959,36 @@
       <p>암시적 피드백은 선호/비선호 모호성 문제를 지님. 즉, 양성 데이터가 반드시 선호를 나타내지 않고, 반대로 음성 데이터가 반드시 비선호를 나타내지 않음. 때문에 암시적 피드백을 활용할 때는 암시적 피드백에 내재된 잡음을 적절히 거르고 함축되어 있는 잠재 정보를 적절히 부각하는 절차가 수반되어야 함.</p>
     </blockquote>
   </li>
-  <li><strong>Previous Research</strong>
+  <li>
+    <p><strong>Previous Research</strong></p>
     <ul>
       <li><strong><code class="language-plaintext highlighter-rouge">MF</code> based Latent Factor Models</strong> : 사용자와 아이템 간 비선형 상호작용 포착 어려움</li>
       <li><strong><code class="language-plaintext highlighter-rouge">MLP</code> based Latent Factor Models</strong> : 사용자, 아이템 저랭크 표현 학습의 간결성 및 효율성 보장 어려움</li>
       <li><strong><code class="language-plaintext highlighter-rouge">ATTN</code> Based Latent Factor Models</strong> : 암시적 피드백에 함축되어 있는 잠재 정보 포착 가능하나, 다양한 차원을 종합적으로 통합하는데 미흡함</li>
     </ul>
   </li>
+</ul>
+
+<h2 id="dacr"><span class="me-2">DACR</span><a href="#dacr" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
   <li>
-    <p><strong>DACR(<code class="language-plaintext highlighter-rouge">D</code>eep <code class="language-plaintext highlighter-rouge">C</code>ollaborative <code class="language-plaintext highlighter-rouge">R</code>ecommendation Algorithm Based on <code class="language-plaintext highlighter-rouge">A</code>ttention Mechanism)</strong></p>
+    <p><strong>DACR(<code class="language-plaintext highlighter-rouge">D</code>eep <code class="language-plaintext highlighter-rouge">C</code>ollaborative <code class="language-plaintext highlighter-rouge">R</code>ecommendation Algorithm Based on <code class="language-plaintext highlighter-rouge">A</code>ttention Mechanism)</strong> : 다차원적 상호작용을 고려한, 표현 학습과 매칭 학습을 결합한 앙상블 모형</p>
 
     <p><a href="/_post_refer_img/RecommenderSystem/19-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/19-02.png" alt="02" width="100%" loading="lazy"></a></p>
+
+    <ul>
+      <li><strong><code class="language-plaintext highlighter-rouge">R</code>epresentation <code class="language-plaintext highlighter-rouge">L</code>earning Module</strong> : 사용자와 아이템의 표현에 초점을 맞추어 학습함</li>
+      <li><strong><code class="language-plaintext highlighter-rouge">M</code>atching Function <code class="language-plaintext highlighter-rouge">L</code>earning Module</strong> : 사용자와 아이템 간 다차원적 상호작용에 초점을 맞추어 학습함</li>
+      <li><strong>Fusion Module</strong> : 표현 학습과 매칭 학습의 결과들을 종합하여 최종 예측값을 출력함</li>
+      <li><strong>ATTN</strong> : 암시적 피드백에 내재된 잡음을 적절히 거르고 함축되어 있는 잠재 정보를 적절히 부각함
+        <ul>
+          <li><strong>Representation</strong> : 사용자와 아이템 표현에서, 중요한 차원을 부각하고, 덜 중요한 차원을 억제함</li>
+          <li><strong>Matching Function</strong> : 다차원적 상호작용 중에서, 중요한 상호작용을 부각하고, 덜 중요한 상호작용을 억제함</li>
+        </ul>
+      </li>
+    </ul>
   </li>
 </ul>
 
