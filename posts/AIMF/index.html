@@ -648,6 +648,148 @@
     <!-- combine -->
     
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
 
   
 
@@ -839,7 +981,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="124 words"
+  title="204 words"
 >
   <em>1 min</em> read</span>
 
@@ -859,59 +1001,105 @@
 <h2 id="how-to-modeling"><span class="me-2">How to Modeling</span><a href="#how-to-modeling" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<p><a href="/_post_refer_img/RecommenderSystem/20-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/20-01.png" alt="01" width="100%" loading="lazy"></a></p>
+<p><a href="/_post_refer_img/RecommenderSystem/19-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/19-02.png" alt="02" width="100%" loading="lazy"></a></p>
 
 <h3 id="user-item-attention"><span class="me-2">User-Item Attention</span><a href="#user-item-attention" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
-    <p>Attention Matrix:</p>
+    <p>Non-negative Matrix Factorization:</p>
 
 \[\begin{aligned}
-  \mathcal{Q}
-  &amp;= \mathbf{W}^{(\mathcal{Q})}_{M \times M} \cdot \mathbf{P}_{M \times D}\\
-  \mathcal{K}
-  &amp;= \mathbf{W}^{(\mathcal{K})}_{N \times N} \cdot \mathbf{Q}_{N \times D}\\
-  \mathcal{V}
-  &amp;= \mathbf{W}^{(\mathcal{V})}_{N \times N} \cdot \mathbf{Q}_{N \times D}
+  \hat{\mathbf{P}},\hat{\mathbf{Q}} = \text{arg} \min{\Vert \mathbf{R}^{*} - \mathbf{P} \cdot \mathbf{Q} \Vert^{2}}
   \end{aligned}\]
 
     <ul>
-      <li>$\mathbf{P}_{M \times D}$ : User-Latent Factor Matrix</li>
-      <li>$\mathbf{Q}_{N \times D}$ : Item-Latent Factor Matrix</li>
+      <li>$\mathbf{R}^{*}=\text{MinMax}\left[\mathbf{R}\right]$</li>
+      <li>$\mathbf{P}_{M \times D} &gt; 0$ : User-Linear Latent Factor Matrix</li>
+      <li>$\mathbf{Q}_{N \times D} &gt; 0$ : Item-Linear Latent Factor Matrix</li>
     </ul>
   </li>
   <li>
-    <p>Redefinition $\mathcal{K}$ for Silde Attention:</p>
+    <p>MLP:</p>
+
+    <p><a href="/_post_refer_img/RecommenderSystem/19-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/19-03.png" alt="03" width="100%" loading="lazy"></a></p>
+
+    <ul>
+      <li>\(\mathbf{P}_{M \times D}^{*} = \text{MLP}_{\text{ReLU}}\left[\hat{\mathbf{P}}_{M \times D}\right]\) : User-NonLinear Latent Factor Matrix</li>
+      <li>\(\mathbf{Q}_{N \times D}^{*} = \text{MLP}_{\text{ReLU}}\left[\hat{\mathbf{Q}}_{N \times D}\right]\) : Item-NonLinear Latent Factor Matrix</li>
+    </ul>
+  </li>
+  <li>
+    <p>Attention</p>
+
+    <ul>
+      <li>
+        <p>Attention Matrix:</p>
+
+\[\begin{aligned}
+  \mathcal{Q}_{M \times D}
+  &amp;= \mathbf{P}_{M \times D}^{*} \cdot \mathbf{W}^{(\mathcal{Q})}_{D \times D}\\
+  \mathcal{K}_{N \times D}
+  &amp;= \mathbf{Q}_{N \times D}^{*} \cdot \mathbf{W}^{(\mathcal{K})}_{D \times D}\\
+  \mathcal{V}_{N \times D}
+  &amp;= \mathbf{Q}_{N \times D}^{*} \cdot \mathbf{W}^{(\mathcal{V})}_{D \times D}
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>User-Item Attention Vector from User $u$ to Item $i$:</p>
+
+\[\begin{aligned}
+  \text{UI-ATTN}\left[\mathcal{Q}_{u}, \mathcal{K}, \mathcal{V}\right]
+  &amp;= \sum_{i=1}^{N}{\omega_{u,i} \cdot \mathcal{V}_{i}}\\
+  &amp;= \sum_{i=1}^{N}{\text{Softmax}\left[\alpha_{u,i}\right] \cdot \mathcal{V}_{i}}\\
+  &amp;= \sum_{i=1}^{N}{\frac{\exp\left[\mathcal{Q}_{u} \cdot \mathcal{K}_{i}\right]}{\sum_{j=1}^{N}{\exp\left[\mathcal{Q}_{u} \cdot \mathcal{K}_{j}\right]}} \cdot \mathcal{V}_{i}}
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Silde Attention</p>
+
+    <p><a href="/_post_refer_img/RecommenderSystem/19-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/19-01.png" alt="01" width="100%" loading="lazy"></a></p>
+
+    <ul>
+      <li>
+        <p>Redefinition $\mathcal{K}$ for Silde Attention:</p>
 
 \[\begin{aligned}
   \mathcal{K}^{+}
   &amp;= \text{Concat}\Big[\mathcal{K}, \mathcal{K}[:, :-1]\Big]
   \end{aligned}\]
-  </li>
-  <li>
-    <p>Attention Score from User $u$ to Item $i$ at Window $\tau$:</p>
+      </li>
+      <li>
+        <p>Window $\tau$ is:</p>
+
+\[\begin{aligned}
+  \mathcal{K}^{+\tau}
+  &amp;= \mathcal{K}^{+}[:, \tau : \tau + D]
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>Attention Score from User $u$ to Item $i$ at Window $\tau$:</p>
 
 \[\begin{aligned}
   \alpha^{(\tau)}_{u,i}
-  &amp;= \mathcal{Q}_{u} \cdot \mathcal{K}^{+}_{i}[\tau : \tau + D]
+  &amp;= \mathcal{Q}_{u} \cdot \mathcal{K}^{+\tau}_{i}
   \end{aligned}\]
-  </li>
-  <li>
-    <p>Attention Weight from User $u$ to Item $i$ at Window $\tau$:</p>
+      </li>
+      <li>
+        <p>Average Attention Score from User $u$ to Item:</p>
 
 \[\begin{aligned}
-  \omega^{(\tau)}_{u,i}
-  &amp;= \frac{\exp{\alpha^{(\tau)}_{u,i}}}{\sum_{\tau'}{\exp{\alpha^{(\tau')}_{u,i}}}}
+  \alpha_{u,i}
+  &amp;= \frac{1}{\vert T \vert}\sum_{\tau}{\alpha^{(\tau)}_{u,i}}
   \end{aligned}\]
-  </li>
-  <li>
-    <p>User-Item Attention Vector \(\overrightarrow{\mathbf{z}}_{u,i} \in \mathbf{Z}_{(M \times N) \times D}\):</p>
 
-\[\begin{aligned}
-  \overrightarrow{\mathbf{z}}_{u,i}
-  &amp;= \sum_{\tau}{\alpha^{(\tau)}_{u,i} \cdot \mathcal{V}_{i}}
-  \end{aligned}\]
+        <ul>
+          <li>$\tau \in T$</li>
+        </ul>
+      </li>
+    </ul>
   </li>
 </ul>
 
@@ -1081,13 +1269,6 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/BBB/">Bayes by Backprop</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
           <a href="/posts/AIMF/">AIMF</a>
         </li>
       
@@ -1103,6 +1284,13 @@
         
         <li class="text-truncate lh-lg">
           <a href="/posts/Statistical_Modeling_Methods/">Statistical Modeling Methods</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/Regular-Expression/">Regular Expression</a>
         </li>
       
     </ul>
@@ -2952,31 +3140,31 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
 
 
 
@@ -3090,22 +3278,18 @@
 
   
     <a
-      href="/posts/Statistical_Modeling_Methods/"
+      href="/posts/Bayesian_Attention_Modules/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>Statistical Modeling Methods</p>
+      <p>Bayesian Attention Modules</p>
     </a>
   
 
   
-    <a
-      href="/posts/BBB/"
-      class="btn btn-outline-primary"
-      aria-label="Newer"
-    >
-      <p>Bayes by Backprop</p>
-    </a>
+    <div class="btn btn-outline-primary disabled" aria-label="Newer">
+      <p>-</p>
+    </div>
   
 </nav>
 
