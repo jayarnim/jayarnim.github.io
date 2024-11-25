@@ -1,7 +1,7 @@
 ---
-order: 14
+order: 12
 title: BERT4REC
-date: 2024-06-05
+date: 2024-05-01
 categories: [Research Interest, Recommender System]
 tags: [Paper Review, Data Mining, Recommender System, Sequential Recommender System, Deep Learning, BERT]
 math: true

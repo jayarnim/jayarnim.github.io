@@ -1,7 +1,7 @@
 ---
-order: 10
+order: 9
 title: AutoEncoder based Collaborative Filtering
-date: 2024-04-03
+date: 2024-03-20
 categories: [Research Interest, Recommender System]
 tags: [Paper Review, Data Mining, Recommender System, Collaborative Filtering, Deep Learning, Autoencoder, Bayesian]
 math: true
@@ -85,7 +85,7 @@ image:
 
 #### Architecture
 
-![01](/_post_refer_img/RecommenderSystem/10-01.png){: width="100%"}
+![01](/_post_refer_img/RecommenderSystem/09-01.png){: width="100%"}
 
 - **Encoder** : Posterior Probability Distribution Estimatior
 
