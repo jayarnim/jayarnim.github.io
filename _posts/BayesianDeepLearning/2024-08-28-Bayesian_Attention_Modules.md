@@ -1,7 +1,7 @@
 ---
 order: 2
 title: Bayesian Attention Modules
-date: 2024-08-07
+date: 2024-08-28
 categories: [Research Interest, Bayesian Deep Learning]
 tags: [Deep Learning, Bayesian, Attention Mechanism]
 math: true
