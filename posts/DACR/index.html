@@ -938,7 +938,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="663 words"
+  title="626 words"
 >
   <em>3 min</em> read</span>
 
@@ -1009,42 +1009,78 @@
 <h3 id="representation-learning"><span class="me-2">Representation Learning</span><a href="#representation-learning" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
-  <li>User Representation
+  <li><strong>User Representation</strong>
     <ul>
-      <li>\(\overrightarrow{\alpha}_{u} \in \mathbb{R}^{D}\) : User Initial Representation Vector</li>
-      <li>\(\overrightarrow{\mathbf{a}}_{u} = \text{Self-ATTN}\left[\overrightarrow{\alpha}_{u}\right] \in \mathbb{R}^{D}\) : User Attentional Representation Vector</li>
-      <li>\(\overrightarrow{\mathbf{p}}_{u}^{(RL)} = \text{MLP}_{\text{ReLU}}\left[\overrightarrow{\mathbf{a}}_{u}\right] \in \mathbb{R}^{K}\) : User-Latent Factor Vector for Representation Module</li>
+      <li>
+        <p>User Attentional Representation:</p>
+
+\[\mathbf{U} = \text{Self-ATTN}\left[\mathbf{R}\right]\]
+      </li>
+      <li>
+        <p>User-Latent Factor Vector for Representation Module:</p>
+
+\[\overrightarrow{\mathbf{P}}^{(RL)} = \text{MLP}_{\text{ReLU}}\left[\mathbf{U}\right]\]
+      </li>
     </ul>
   </li>
-  <li>Item Representation
+  <li><strong>Item Representation</strong>
     <ul>
-      <li>\(\overrightarrow{\beta}_{i} \in \mathbb{R}^{D}\) : Item Initial Representation Vector</li>
-      <li>\(\overrightarrow{\mathbf{b}}_{i} = \text{Self-ATTN}\left[\overrightarrow{\beta}_{i}\right] \in \mathbb{R}^{D}\) : Item Attentional Representation Vector</li>
-      <li>\(\overrightarrow{\mathbf{q}}_{i}^{(RL)} = \text{MLP}_{\text{ReLU}}\left[\overrightarrow{\mathbf{b}}_{i}\right] \in \mathbb{R}^{K}\) : Item-Latent Factor Vector for Representation Module</li>
+      <li>
+        <p>Item Attentional Representation:</p>
+
+\[\mathbf{V} = \text{Self-ATTN}\left[\mathbf{R}^{T}\right]\]
+      </li>
+      <li>
+        <p>Item-Latent Factor Matrix for Representation Module:</p>
+
+\[\overrightarrow{\mathbf{Q}}^{(RL)} = \text{MLP}_{\text{ReLU}}\left[\mathbf{V}\right]\]
+      </li>
     </ul>
   </li>
-  <li>\(\overrightarrow{\mathbf{y}}_{u,i}^{(RL)} = \overrightarrow{\mathbf{p}}_{u}^{(RL)} \odot \overrightarrow{\mathbf{q}}_{i}^{(RL)} \in \mathbb{R}^{K}\) : User-Item Predictive Vector for Representation Module</li>
+  <li>
+    <p><strong>User-Item Predictive Matrix</strong> for Representation Module:</p>
+
+\[\mathbf{R}^{(RL)} = \mathbf{P}^{(RL)} \odot \mathbf{Q}^{(RL)}\]
+  </li>
 </ul>
 
 <h3 id="matching-function-learning"><span class="me-2">Matching Function Learning</span><a href="#matching-function-learning" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
-  <li>\(\overrightarrow{\mathbf{v}}_{u,i}=\overrightarrow{\mathbf{p}}_{u}^{(ML)} \oplus \overrightarrow{\mathbf{q}}_{i}^{(ML)} \in \mathbb{R}^{2K}\) : User-Item Concatenation
+  <li>
+    <p><strong>User-Item Concatenation:</strong></p>
+
+\[\mathbf{X}
+  =\mathbf{P}^{(ML)} \oplus \mathbf{Q}^{(ML)}\]
+
     <ul>
-      <li>\(\overrightarrow{\mathbf{p}}_{u}^{(ML)} \in \mathbb{R}^{K}\) : User-Latent Factor Vector for Matching Module</li>
-      <li>\(\overrightarrow{\mathbf{q}}_{i}^{(ML)} \in \mathbb{R}^{K}\) : Item-Latent Factor Vector for Matching Module</li>
+      <li>\(\mathbf{P}^{(ML)} \in \mathbb{R}^{M \times K}\) : User-Latent Factor Matrix for Matching Module</li>
+      <li>\(\mathbf{Q}^{(ML)} \in \mathbb{R}^{N \times K}\) : Item-Latent Factor Matrix for Matching Module</li>
     </ul>
   </li>
   <li>
-    <p>\(\overrightarrow{\mathbf{x}}_{u,i} = \text{Self-ATTN}\left[\overrightarrow{\mathbf{v}}_{u,i}\right] \in \mathbb{R}^{2K}\) : User-Item Pair Attentional Interaction Vector Across Different Dimensions</p>
+    <p><strong>User-Item Pair Attentional Interaction Matrix</strong> Across Different Dimensions:</p>
+
+\[\mathbf{Y}
+  = \text{Self-ATTN}\left[\mathbf{Z}\right]\]
   </li>
-  <li>\(\overrightarrow{\mathbf{y}}_{u,i}^{(ML)} = \text{MLP}_{\text{ReLU}}\left[\overrightarrow{\mathbf{x}}_{u,i} \oplus \overrightarrow{\mathbf{v}}_{u,i}\right] \in \mathbb{R}^{K}\) : User-Item Predictive Vector for Matching Module</li>
+  <li>
+    <p><strong>User-Item Predictive Matrix</strong> for Matching Module:</p>
+
+\[\mathbf{R}^{(ML)}
+  = \text{MLP}_{\text{ReLU}}\left[\mathbf{X} \oplus \mathbf{Y}\right]\]
+  </li>
 </ul>
 
 <h3 id="fusion"><span class="me-2">Fusion</span><a href="#fusion" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
-  <li>\(\hat{r}_{u,i}=\sigma\left[\overrightarrow{\mathbf{y}}_{u,i}^{(RL)} \oplus \overrightarrow{\mathbf{y}}_{u,i}^{(ML)}\right]\) : User-Item Predict Score</li>
+  <li>
+    <p><strong>User-Item Predict Score:</strong></p>
+
+\[\hat{\mathbf{R}}
+  =\sigma\left[\mathbf{R}^{(RL)} \oplus \mathbf{R}^{(ML)}\right]\]
+  </li>
 </ul>
 
   </div>

@@ -719,6 +719,219 @@
     <!-- combine -->
     
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
 
   
 
@@ -911,9 +1124,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="622 words"
+  title="729 words"
 >
-  <em>3 min</em> read</span>
+  <em>4 min</em> read</span>
 
         </div>
       </div>
@@ -941,24 +1154,24 @@
         <p><strong>GMF(<code class="language-plaintext highlighter-rouge">G</code>eneralized <code class="language-plaintext highlighter-rouge">M</code>atrix <code class="language-plaintext highlighter-rouge">F</code>actorization)</strong> : 아다마르 곱(Element-wise Product)을 활용하여 사용자와 아이템 간 선형 상호작용 및 각각의 일반화된 잠재 표현 학습</p>
 
 \[\begin{aligned}
-  Y_{\text{GMF}}
-  &amp;= P_{\text{GMF}} \odot Q_{\text{GMF}}
+  \mathbf{Y}_{\text{GMF}}
+  &amp;= \mathbf{P}_{\text{GMF}} \odot \mathbf{Q}_{\text{GMF}}
   \end{aligned}\]
       </li>
       <li>
         <p><strong>MLP(<code class="language-plaintext highlighter-rouge">M</code>ulti-<code class="language-plaintext highlighter-rouge">L</code>ayer <code class="language-plaintext highlighter-rouge">P</code>erceptron)</strong> : 벡터 결합(Vector Concatenation)과 신경망 알고리즘(Neural Network Algorithm)을 활용하여 사용자와 아이템 간 비선형 상호작용 및 각각의 복잡한 잠재 표현 학습</p>
 
 \[\begin{aligned}
-  Y_{\text{MLP}}
-  &amp;= \text{MLP}\left[P_{\text{MLP}} \oplus Q_{\text{MLP}}\right]
+  \mathbf{Y}_{\text{MLP}}
+  &amp;= \text{MLP}\left[\mathbf{P}_{\text{MLP}} \oplus \mathbf{Q}_{\text{MLP}}\right]
   \end{aligned}\]
       </li>
       <li>
         <p><strong>NeuMF</strong> : 선형성과 비선형성을 결합하여 최종 예측값을 도출함</p>
 
 \[\begin{aligned}
-  Y
-  &amp;= \sigma\left[Y_{\text{MLP}} \oplus Y_{\text{MLP}}\right]
+  \mathbf{Y}
+  &amp;= \sigma\left[\mathbf{Y}_{\text{MLP}} \oplus \mathbf{Y}_{\text{MLP}}\right]
   \end{aligned}\]
       </li>
     </ul>
@@ -993,13 +1206,41 @@ Function Learning in Recommender System(2019)</a></p>
 
     <ul>
       <li>
-        <p>Representation Learning</p>
+        <p><strong>Representation Learning</strong></p>
+
+\[\begin{aligned}
+  \mathbf{Y}_{\text{RL}}
+  &amp;= \text{MLP}_{\text{ReLU}}\left[\mathbf{R}\right] \odot \text{MLP}_{\text{ReLU}}\left[\mathbf{R}^{T}\right]
+  \end{aligned}\]
+
+        <ul>
+          <li>\(\mathbf{R} \in \mathbb{R}^{M \times N}\) : User-Item Interaction Matrix</li>
+          <li>\(\mathbf{P}_{\text{RL}}=\text{MLP}_{\text{ReLU}}\left(\mathbf{R}\right) \in \mathbb{R}^{M \times K}\) : User-Latent Factor Matrix of Representation Learning</li>
+          <li>\(\mathbf{Q}_{\text{RL}}=\text{MLP}_{\text{ReLU}}\left(\mathbf{R}^{T}\right) \in \mathbb{R}^{N \times K}\) : Item-Latent Factor Matrix of Representation Learning</li>
+          <li>\(\mathbf{Y}_{\text{RL}} \in \mathbb{R}^{(M \times N) \times K}\) : Predictive Vector of Representation Learning</li>
+        </ul>
       </li>
       <li>
-        <p>Matching Function Learning</p>
+        <p><strong>Matching Function Learning</strong></p>
+
+\[\begin{aligned}
+  \mathbf{Y}_{\text{ML}}
+  &amp;= \text{MLP}_{\text{ReLU}}\left[\mathbf{P}_{\text{ML}} \oplus \mathbf{Q}_{\text{ML}}\right]
+  \end{aligned}\]
+
+        <ul>
+          <li>\(\mathbf{P}_{\text{ML}} \in \mathbb{R}^{M \times K}\) : User-Latent Factor Matrix of Matching Function Learning</li>
+          <li>\(\mathbf{Q}_{\text{ML}} \in \mathbb{R}^{N \times K}\) : Item-Latent Factor Matrix of Matching Function Learning</li>
+          <li>\(\mathbf{Y}_{\text{RL}} \in \mathbb{R}^{(M \times N) \times K}\) : Predictive Vector of Matching Function Learning</li>
+        </ul>
       </li>
       <li>
-        <p>Fusion</p>
+        <p><strong>Fusion</strong></p>
+
+\[\begin{aligned}
+  \mathbf{Y}
+  &amp;= \sigma\left[\mathbf{Y}_{\text{RL}} \oplus \mathbf{Y}_{\text{ML}}\right]
+  \end{aligned}\]
       </li>
     </ul>
   </li>
@@ -1008,10 +1249,16 @@ Function Learning in Recommender System(2019)</a></p>
 <h2 id="dual-embedding-method-dncf"><span class="me-2">Dual Embedding Method: DNCF</span><a href="#dual-embedding-method-dncf" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
+<p><a href="/_post_refer_img/RecommenderSystem/07-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/07-03.png" alt="03" width="100%" loading="lazy"></a></p>
+
 <h2 id="semi-dual-embedding-method-drnet"><span class="me-2">Semi-Dual Embedding Method: DRNet</span><a href="#semi-dual-embedding-method-drnet" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
+<p><a href="/_post_refer_img/RecommenderSystem/07-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/07-04.png" alt="04" width="100%" loading="lazy"></a></p>
+
 <h2 id="distance-embedding-method-ddfl"><span class="me-2">Distance Embedding Method: DDFL</span><a href="#distance-embedding-method-ddfl" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<p><a href="/_post_refer_img/RecommenderSystem/07-05.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/07-05.png" alt="05" width="100%" loading="lazy"></a></p>
 
   </div>
 
