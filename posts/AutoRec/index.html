@@ -577,77 +577,6 @@
     <!-- combine -->
     
   
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
-    
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- create the image wrapper -->
-        
-
-        
-        
-      
-    
-
-    <!-- combine -->
-    
-  
 
   
 
@@ -743,50 +672,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -794,60 +679,6 @@
   
   
 
-  
-    
-    
-
-    
-      
-        
-        
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-
-    
   
 
   
@@ -948,9 +779,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="627 words"
+  title="423 words"
 >
-  <em>3 min</em> read</span>
+  <em>2 min</em> read</span>
 
         </div>
       </div>
@@ -962,106 +793,32 @@
 <hr />
 
 <ul>
-  <li><a href="https://doi.org/10.1145/2740908.2742726">AutoRec: Autoencoders Meet Collaborative Filtering(2015)</a></li>
+  <li><strong>AutoRec</strong> :
+    <ul>
+      <li><a href="https://doi.org/10.1145/2740908.2742726">AutoRec: Autoencoders Meet Collaborative Filtering(2015)</a></li>
+    </ul>
+  </li>
 </ul>
-
-<h3 id="autoencoder"><span class="me-2">AutoEncoder</span><a href="#autoencoder" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<h3 id="autorec-1"><span class="me-2">AutoRec</span><a href="#autorec-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <h2 id="cdae"><span class="me-2">CDAE</span><a href="#cdae" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
-  <li><a href="https://doi.org/10.1145/2835776.2835837">Collaborative Denoising Auto-Encoders for Top-N Recommender Systems(2016)</a></li>
+  <li><strong>CDAE(<code class="language-plaintext highlighter-rouge">C</code>ollaborative <code class="language-plaintext highlighter-rouge">D</code>enoising <code class="language-plaintext highlighter-rouge">A</code>uto<code class="language-plaintext highlighter-rouge">E</code>ncoder)</strong> :
+    <ul>
+      <li><a href="https://doi.org/10.1145/2835776.2835837">Collaborative Denoising Auto-Encoders for Top-N Recommender Systems(2016)</a></li>
+    </ul>
+  </li>
 </ul>
-
-<h3 id="denoising-autoencoder"><span class="me-2">Denoising AutoEncoder</span><a href="#denoising-autoencoder" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<h3 id="cdae-1"><span class="me-2">CDAE</span><a href="#cdae-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <h2 id="mult-vae"><span class="me-2">Mult-VAE</span><a href="#mult-vae" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
-  <li><a href="https://doi.org/10.1145/3178876.3186150">Variational Autoencoders for Collaborative Filtering(2018)</a></li>
-</ul>
-
-<h3 id="variational-autoencoder"><span class="me-2">Variational AutoEncoder</span><a href="#variational-autoencoder" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<h4 id="concept"><span class="me-2">Concept</span><a href="#concept" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
-
-<ul>
-  <li>
-    <p>관측치 $\overrightarrow{\mathbf{x}}$ 가 파라미터 $\overrightarrow{\mathbf{z}}$ 에서 생성되었다고 가정하자. $\overrightarrow{\mathbf{x}}$ 의 우도 함수:</p>
-
-\[\overrightarrow{\mathbf{x}} \mid \overrightarrow{\mathbf{z}} \sim \mathcal{L}\left(\Theta \right)\]
-  </li>
-  <li>
-    <p>파라미터 $\overrightarrow{\mathbf{z}}$ 의 사전 확률 분포 결정:</p>
-
-\[\overrightarrow{\mathbf{z}} \sim \mathcal{N}\left(0, \mathbf{I}_{K}\right)\]
-  </li>
-  <li>
-    <p>파라미터 $\overrightarrow{\mathbf{z}}$ 의 사후 확률 분포 추정:</p>
-
-\[p\left(\overrightarrow{\mathbf{z}} \mid \overrightarrow{\mathbf{x}} ; \Theta\right) \propto \mathcal{L}\left(\overrightarrow{\mathbf{x}} \mid \overrightarrow{\mathbf{z}} ; \Theta \right) \cdot \pi\left(\overrightarrow{\mathbf{z}}\right)\]
-  </li>
-  <li>
-    <p>$\overrightarrow{\mathbf{z}} \mid \overrightarrow{\mathbf{x}} \sim P(\Theta)$ 의 근사 분포 $\overrightarrow{\mathbf{z}} \sim Q(\Phi)$ 정의:</p>
-
-\[\begin{aligned}
-  q\left(\overrightarrow{\mathbf{z}} ; \Phi\right)
-  &amp;= \mathcal{N}\left(\mu(\overrightarrow{\mathbf{x}} ; \Phi), \text{diag}[\sigma^2(\overrightarrow{\mathbf{x}} ; \Phi)]\right)\\
-  &amp;\approx \mu(\overrightarrow{\mathbf{x}} ; \Phi) + \sigma(\overrightarrow{\mathbf{x}} ; \Phi) \odot \epsilon \quad \text{for} \quad \epsilon \sim \mathcal{N}\left(0, \mathbf{I}_{K}\right)
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>ELBO:</p>
-
-\[\text{ELBO}
-  = \underbrace{\mathbb{E}_{\mathbf{z} \sim Q(\Phi)}\Big[\log{\mathcal{L}\left(\overrightarrow{\mathbf{x}} \mid \overrightarrow{\mathbf{z}} ; \Theta \right)}\Big]}_{-\text{Reconstruction Loss}} - \beta \cdot \underbrace{D_{KL}\Big[q\left(\overrightarrow{\mathbf{z}} ; \Phi\right) \parallel \pi\left(\overrightarrow{\mathbf{z}}\right)\Big]}_{\text{KL Divergence}}\]
-  </li>
-  <li>
-    <p>Optimization:</p>
-
-\[\hat{\Theta},\hat{\Phi} \mid K, \beta
-  = \text{arg}\max_{\Theta,\Phi}{\text{ELBO}}\]
-
+  <li><strong>Mult-VAE(<code class="language-plaintext highlighter-rouge">Mult</code>inomial <code class="language-plaintext highlighter-rouge">V</code>ariational <code class="language-plaintext highlighter-rouge">A</code>uto<code class="language-plaintext highlighter-rouge">E</code>ncoder)</strong> : 아이템 간 암묵적 경쟁 관계 및 파라미터 추정 시 정보 불확실성을 반영한 사용자 기반 협업 필터링 추천 알고리즘
     <ul>
-      <li>$K$ : Dimension of Latent Space</li>
-      <li>$0 \le \beta \le 1$ : KL Annealing Param</li>
+      <li><a href="https://doi.org/10.1145/3178876.3186150">Variational Autoencoders for Collaborative Filtering(2018)</a></li>
     </ul>
-  </li>
-</ul>
-
-<h4 id="architecture"><span class="me-2">Architecture</span><a href="#architecture" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
-
-<p><a href="/_post_refer_img/RecommenderSystem/08-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/08-01.png" alt="01" width="100%" loading="lazy"></a></p>
-
-<ul>
-  <li>
-    <p><strong>Encoder</strong> : Posterior Probability Distribution Estimatior</p>
-
-\[q\left(\overrightarrow{\mathbf{z}} ; \Phi\right)\]
-  </li>
-  <li>
-    <p><strong>Latent Space</strong> : Posterior Probability Distribution</p>
-
-\[\overrightarrow{\mathbf{z}} \mid \overrightarrow{\mathbf{x}}\]
-  </li>
-  <li>
-    <p><strong>Decoder</strong> : Data Generator</p>
-
-\[\mathcal{L}\left(\overrightarrow{\mathbf{x}} \mid \overrightarrow{\mathbf{z}} ; \Theta \right)\]
-  </li>
-</ul>
-
-<h3 id="mult-vae-1"><span class="me-2">Mult-VAE</span><a href="#mult-vae-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li>
-    <p><strong>Mult-VAE(<code class="language-plaintext highlighter-rouge">Mult</code>inomial <code class="language-plaintext highlighter-rouge">V</code>ariational <code class="language-plaintext highlighter-rouge">A</code>uto<code class="language-plaintext highlighter-rouge">E</code>ncoder)</strong> : 아이템 간 암묵적 경쟁 관계 및 파라미터 추정 시 정보 불확실성을 반영한 사용자 기반 협업 필터링 추천 알고리즘</p>
   </li>
   <li><strong>선행 연구의 한계점</strong>
     <ul>
@@ -1086,7 +843,7 @@
   </li>
 </ul>
 
-<h4 id="bayesian-framework"><span class="me-2">Bayesian Framework</span><a href="#bayesian-framework" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+<h3 id="bayesian-framework"><span class="me-2">Bayesian Framework</span><a href="#bayesian-framework" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
@@ -1119,7 +876,7 @@
   </li>
 </ul>
 
-<h4 id="variational-inference"><span class="me-2">Variational Inference</span><a href="#variational-inference" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+<h3 id="variational-inference"><span class="me-2">Variational Inference</span><a href="#variational-inference" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
@@ -2061,6 +1818,87 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
   
     
     
@@ -2299,87 +2137,6 @@
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2991,13 +2748,13 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
@@ -3058,6 +2815,18 @@
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -4313,6 +4082,87 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
   
     
     
@@ -4551,87 +4401,6 @@
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -5243,13 +5012,13 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>

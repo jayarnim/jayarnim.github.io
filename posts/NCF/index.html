@@ -1020,6 +1020,71 @@
   
 
   
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
 
   
   
@@ -1124,9 +1189,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="771 words"
+  title="1845 words"
 >
-  <em>4 min</em> read</span>
+  <em>10 min</em> read</span>
 
         </div>
       </div>
@@ -1139,42 +1204,44 @@
 
 <ul>
   <li>
-    <p><a href="https://doi.org/10.1145/3038912.3052569">Neural Collaborative Filtering(2017)</a></p>
-  </li>
-  <li>
     <p><strong>Matrix Factorization based Latent Factor Model</strong> : <strong>내적(Dot Product)</strong> 을 활용하는 단순 선형 접근법은 사용자와 아이템 간 상호작용 및 각각의 잠재 표현을 충분히 학습할 수 없음</p>
   </li>
   <li>
     <p><strong>NeuMF</strong> : 선형성을 학습하는 행렬 분해 기반 모형과 비선형성을 학습하는 신경망 알고리즘 기반 모형을 결합함으로써 선형성과 비선형성을 모두 포착함</p>
-
-    <p><a href="/_post_refer_img/RecommenderSystem/07-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/07-01.png" alt="01" width="100%" loading="lazy"></a></p>
-
     <ul>
-      <li>
-        <p><strong>GMF(<code class="language-plaintext highlighter-rouge">G</code>eneralized <code class="language-plaintext highlighter-rouge">M</code>atrix <code class="language-plaintext highlighter-rouge">F</code>actorization)</strong> : 아다마르 곱(Element-wise Product)을 활용하여 사용자와 아이템 간 선형 상호작용 및 각각의 일반화된 잠재 표현 학습</p>
+      <li><a href="https://doi.org/10.1145/3038912.3052569">Neural Collaborative Filtering(2017)</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="how-to-modeling"><span class="me-2">How to Modeling</span><a href="#how-to-modeling" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p><a href="/_post_refer_img/RecommenderSystem/07-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/07-01.png" alt="01" width="100%" loading="lazy"></a></p>
+
+<ul>
+  <li>
+    <p><strong>GMF(<code class="language-plaintext highlighter-rouge">G</code>eneralized <code class="language-plaintext highlighter-rouge">M</code>atrix <code class="language-plaintext highlighter-rouge">F</code>actorization)</strong> : 아다마르 곱(Element-wise Product)을 활용하여 사용자와 아이템 간 선형 상호작용 및 각각의 일반화된 잠재 표현 학습</p>
 
 \[\begin{aligned}
   \mathbf{Y}_{\text{GMF}}
   &amp;= \mathbf{P}_{\text{GMF}} \odot \mathbf{Q}_{\text{GMF}}
   \end{aligned}\]
-      </li>
-      <li>
-        <p><strong>MLP(<code class="language-plaintext highlighter-rouge">M</code>ulti-<code class="language-plaintext highlighter-rouge">L</code>ayer <code class="language-plaintext highlighter-rouge">P</code>erceptron)</strong> : 벡터 결합(Vector Concatenation)과 신경망 알고리즘(Neural Network Algorithm)을 활용하여 사용자와 아이템 간 비선형 상호작용 및 각각의 복잡한 잠재 표현 학습</p>
+  </li>
+  <li>
+    <p><strong>MLP(<code class="language-plaintext highlighter-rouge">M</code>ulti-<code class="language-plaintext highlighter-rouge">L</code>ayer <code class="language-plaintext highlighter-rouge">P</code>erceptron)</strong> : 벡터 결합(Vector Concatenation)과 신경망 알고리즘(Neural Network Algorithm)을 활용하여 사용자와 아이템 간 비선형 상호작용 및 각각의 복잡한 잠재 표현 학습</p>
 
 \[\begin{aligned}
   \mathbf{Y}_{\text{MLP}}
   &amp;= \text{MLP}\left[\mathbf{P}_{\text{MLP}} \oplus \mathbf{Q}_{\text{MLP}}\right]
   \end{aligned}\]
-      </li>
-      <li>
-        <p><strong>NeuMF</strong> : 선형성과 비선형성을 결합하여 최종 예측값을 도출함</p>
+  </li>
+  <li>
+    <p><strong>NeuMF</strong> : 선형성과 비선형성을 결합하여 최종 예측값을 도출함</p>
 
 \[\begin{aligned}
   \mathbf{Y}
   &amp;= \sigma\left[\mathbf{Y}_{\text{MLP}} \oplus \mathbf{Y}_{\text{MLP}}\right]
   \end{aligned}\]
-      </li>
-    </ul>
   </li>
 </ul>
 
@@ -1182,10 +1249,6 @@
 <hr />
 
 <ul>
-  <li>
-    <p><a href="https://doi.org/10.48550/arXiv.1901.04704">DeepCF: A Unified Framework of Representation Learning and Matching
-Function Learning in Recommender System(2019)</a></p>
-  </li>
   <li><strong>Representation Learning based Collaborative Filtering</strong> : 사용자와 아이템을 공통의 잠재 공간에 사상하여 <strong>내적(Dot Product)</strong> 을 통해 유사도를 측정함
     <ul>
       <li>내적은 선형성을 가정하므로 상호작용의 비선형성을 학습할 수 없음</li>
@@ -1199,50 +1262,54 @@ Function Learning in Recommender System(2019)</a></p>
       <li>파라미터 수가 기하급수적으로 증가하므로 데이터 희박성에 따른 차원의 저주 발생</li>
     </ul>
   </li>
-  <li>
-    <p><strong>DeepCF(<code class="language-plaintext highlighter-rouge">Deep</code> <code class="language-plaintext highlighter-rouge">C</code>ollaborative <code class="language-plaintext highlighter-rouge">F</code>iltering)</strong> : 표현 학습과 매칭 함수 학습을 결합함으로써 저랭크 표현 학습 효율성을 달성하는 동시에 사용자와 아이템 간 상호작용에 대한 풍부한 표현력을 확보함</p>
-
-    <p><a href="/_post_refer_img/RecommenderSystem/07-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/07-02.png" alt="02" width="100%" loading="lazy"></a></p>
-
+  <li><strong>DeepCF(<code class="language-plaintext highlighter-rouge">Deep</code> <code class="language-plaintext highlighter-rouge">C</code>ollaborative <code class="language-plaintext highlighter-rouge">F</code>iltering)</strong> : 표현 학습과 매칭 함수 학습을 결합함으로써 저랭크 표현 학습 효율성을 달성하는 동시에 사용자와 아이템 간 상호작용에 대한 풍부한 표현력을 확보함
     <ul>
-      <li>
-        <p><strong>Representation Learning</strong></p>
+      <li><a href="https://doi.org/10.48550/arXiv.1901.04704">DeepCF: A Unified Framework of Representation Learning and Matching Function Learning in Recommender System(2019)</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="how-to-modeling-1"><span class="me-2">How to Modeling</span><a href="#how-to-modeling-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p><a href="/_post_refer_img/RecommenderSystem/07-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/07-02.png" alt="02" width="100%" loading="lazy"></a></p>
+
+<ul>
+  <li>
+    <p><strong>Representation Learning</strong></p>
 
 \[\begin{aligned}
   \mathbf{Y}_{\text{RL}}
   &amp;= \text{MLP}_{\text{ReLU}}\left[\mathbf{R}\right] \odot \text{MLP}_{\text{ReLU}}\left[\mathbf{R}^{T}\right]
   \end{aligned}\]
 
-        <ul>
-          <li>\(\mathbf{R} \in \mathbb{R}^{M \times N}\) : User-Item Interaction Matrix</li>
-          <li>\(\mathbf{P}_{\text{RL}}=\text{MLP}_{\text{ReLU}}\left(\mathbf{R}\right) \in \mathbb{R}^{M \times K}\) : User-Latent Factor Matrix of Representation Learning</li>
-          <li>\(\mathbf{Q}_{\text{RL}}=\text{MLP}_{\text{ReLU}}\left(\mathbf{R}^{T}\right) \in \mathbb{R}^{N \times K}\) : Item-Latent Factor Matrix of Representation Learning</li>
-          <li>\(\mathbf{Y}_{\text{RL}} \in \mathbb{R}^{(M \times N) \times K}\) : Predictive Vector of Representation Learning</li>
-        </ul>
-      </li>
-      <li>
-        <p><strong>Matching Function Learning</strong></p>
+    <ul>
+      <li>\(\mathbf{R} \in \mathbb{R}^{M \times N}\) : User-Item Interaction Matrix</li>
+      <li>\(\mathbf{P}_{\text{RL}}=\text{MLP}_{\text{ReLU}}\left(\mathbf{R}\right) \in \mathbb{R}^{M \times K}\) : User-Latent Factor Matrix of Representation Learning</li>
+      <li>\(\mathbf{Q}_{\text{RL}}=\text{MLP}_{\text{ReLU}}\left(\mathbf{R}^{T}\right) \in \mathbb{R}^{N \times K}\) : Item-Latent Factor Matrix of Representation Learning</li>
+      <li>\(\mathbf{Y}_{\text{RL}} \in \mathbb{R}^{(M \times N) \times K}\) : Predictive Vector of Representation Learning</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Matching Function Learning</strong></p>
 
 \[\begin{aligned}
   \mathbf{Y}_{\text{ML}}
   &amp;= \text{MLP}_{\text{ReLU}}\left[\mathbf{P}_{\text{ML}} \oplus \mathbf{Q}_{\text{ML}}\right]
   \end{aligned}\]
 
-        <ul>
-          <li>\(\mathbf{P}_{\text{ML}} \in \mathbb{R}^{M \times K}\) : User-Latent Factor Matrix of Matching Function Learning</li>
-          <li>\(\mathbf{Q}_{\text{ML}} \in \mathbb{R}^{N \times K}\) : Item-Latent Factor Matrix of Matching Function Learning</li>
-          <li>\(\mathbf{Y}_{\text{RL}} \in \mathbb{R}^{(M \times N) \times K}\) : Predictive Vector of Matching Function Learning</li>
-        </ul>
-      </li>
-      <li>
-        <p><strong>Fusion</strong></p>
+    <ul>
+      <li>\(\mathbf{P}_{\text{ML}} \in \mathbb{R}^{M \times K}\) : User-Latent Factor Matrix of Matching Function Learning</li>
+      <li>\(\mathbf{Q}_{\text{ML}} \in \mathbb{R}^{N \times K}\) : Item-Latent Factor Matrix of Matching Function Learning</li>
+      <li>\(\mathbf{Y}_{\text{RL}} \in \mathbb{R}^{(M \times N) \times K}\) : Predictive Vector of Matching Function Learning</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Fusion</strong></p>
 
 \[\begin{aligned}
   \mathbf{Y}
   &amp;= \sigma\left[\mathbf{Y}_{\text{RL}} \oplus \mathbf{Y}_{\text{ML}}\right]
   \end{aligned}\]
-      </li>
-    </ul>
   </li>
 </ul>
 
@@ -1250,13 +1317,79 @@ Function Learning in Recommender System(2019)</a></p>
 <hr />
 
 <ul>
+  <li><strong>DELF(<code class="language-plaintext highlighter-rouge">D</code>ual-<code class="language-plaintext highlighter-rouge">E</code>mbedding based <code class="language-plaintext highlighter-rouge">L</code>atent <code class="language-plaintext highlighter-rouge">F</code>actor Model)</strong>
+    <ul>
+      <li><strong>Interaction based Embedding</strong> : 사용자와 아이템의 고유한 정체성, 예컨대 사용자의 독립적인 선호나 아이템의 독립적 특성보다는 과거 어떤 아이템, 사용자와 상호작용했는지에 지나치게 의존함</li>
+      <li><strong>ID based Embedding</strong> : 사용자, 아이템의 ID만을 활용하므로 사용자 행동 패턴이나 아이템 특성을 유추할 만한 맥락 정보가 부족함</li>
+      <li>이중 임베딩(Dual-Embedding)을 결합하지 않고 독립적으로 학습하여 최종 표현을 생성하므로 각각의 한계점을 서로 보완하는 표현력을 기대하기 어려움</li>
+    </ul>
+  </li>
+  <li><strong>DNCF(<code class="language-plaintext highlighter-rouge">D</code>ual-embedding based <code class="language-plaintext highlighter-rouge">N</code>eural <code class="language-plaintext highlighter-rouge">C</code>ollaborative <code class="language-plaintext highlighter-rouge">F</code>iltering)</strong> : 이중 임베딩을 사용하되, 두 임베딩을 결합하여 학습함으로써 사용자, 아이템 표현을 개선함
+    <ul>
+      <li><a href="https://doi.org/10.48550/arXiv.2102.02549">Dual-embedding based Neural Collaborative Filtering for Recommender Systems(2021)</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="how-to-modeling-2"><span class="me-2">How to Modeling</span><a href="#how-to-modeling-2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p><a href="/_post_refer_img/RecommenderSystem/07-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/07-03.png" alt="03" width="100%" loading="lazy"></a></p>
+
+<ul>
   <li>
-    <p><a href="https://doi.org/10.48550/arXiv.2102.02549">Dual-embedding based Neural Collaborative Filtering for Recommender Systems(2021)</a></p>
+    <p><strong>Interaction based Embedding</strong></p>
+
+\[\begin{aligned}
+  \mathbf{P}_{i}&amp;=\text{Embedding}\left[\mathbf{R}_{i,:}\right] \in \mathbb{R}^{K}\\
+  \mathbf{Q}_{j}&amp;=\text{Embedding}\left[\mathbf{R}_{:,j}\right] \in \mathbb{R}^{K}
+  \end{aligned}\]
+
+    <ul>
+      <li>$\mathbf{R}_{i,:}$ : Multi-Hot Vector of User $i$ @ User-Item Interaction Matrix</li>
+      <li>$\mathbf{R}_{:,j}$ : Multi-Hot Vector of Item $j$ @ User-Item Interaction Matrix</li>
+      <li>$\mathbf{P}_{i}$ : ID Embedding Vector of User $i$</li>
+      <li>$\mathbf{Q}_{j}$ : ID Embedding Vector of Item $j$</li>
+    </ul>
   </li>
   <li>
-    <p><strong>DNCF(<code class="language-plaintext highlighter-rouge">D</code>ual-embedding based <code class="language-plaintext highlighter-rouge">N</code>eural <code class="language-plaintext highlighter-rouge">C</code>ollaborative <code class="language-plaintext highlighter-rouge">F</code>iltering)</strong> :</p>
+    <p><strong>ID based Embedding</strong></p>
 
-    <p><a href="/_post_refer_img/RecommenderSystem/07-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/07-03.png" alt="03" width="100%" loading="lazy"></a></p>
+\[\begin{aligned}
+  \mathbf{U}_{i}&amp;=\text{Embedding}\left[\mathbf{Z}_{i}\right] \in \mathbb{R}^{K}\\
+  \mathbf{V}_{j}&amp;=\text{Embedding}\left[\mathbf{Z}_{j}\right] \in \mathbb{R}^{K}
+  \end{aligned}\]
+
+    <ul>
+      <li>$\mathbf{Z}_{i}$ : ID One-Hot Vector of User $i$</li>
+      <li>$\mathbf{Z}_{j}$ : ID One-Hot Vector of Item $j$</li>
+      <li>$\mathbf{U}_{i}$ : ID Embedding Vector of User $i$</li>
+      <li>$\mathbf{V}_{j}$ : ID Embedding Vector of Item $j$</li>
+    </ul>
+  </li>
+  <li><strong>Embedding Combination</strong>
+    <ul>
+      <li>
+        <p>User Embedding Combination:</p>
+
+\[\begin{aligned}
+  \mathbf{X}_{i}&amp;=\mathbf{P}_{i} \oplus \mathbf{U}_{i} \in \mathbb{R}^{2K}
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>Item Embedding Combination:</p>
+
+\[\begin{aligned}
+  \mathbf{Y}_{j}&amp;=\mathbf{Q}_{j} \oplus \mathbf{V}_{j} \in \mathbb{R}^{2K}
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Neural Collaborative Filtering and Predict</strong></p>
+
+\[\begin{aligned}
+  \hat{r}_{u,i} &amp;= \sigma\Big[\text{MLP}_{\text{ReLU}}\left[\mathbf{X}_{i} \oplus \mathbf{Y}_{j}\right]\Big]
+  \end{aligned}\]
   </li>
 </ul>
 
@@ -1264,26 +1397,180 @@ Function Learning in Recommender System(2019)</a></p>
 <hr />
 
 <ul>
+  <li><strong>Previous Research</strong>
+    <ul>
+      <li><strong>User based Collaborative Filtering</strong> : 선호 패턴이 유사한 사용자 간 연관성을 학습할 수 있지만, 아이템 특성을 명시적으로 표현할 수 없음</li>
+      <li><strong>Item based Collaborative Filtering</strong> : 구매 패턴이 유사한 아이템 간 연관성을 학습할 수 있지만, 사용자 선호를 명시적으로 표현할 수 없음</li>
+      <li><strong>Latent Factor Model</strong> : 사용자와 아이템의 고유성을 명시적으로 표현할 수 있지만, 희박성(Sparsity)이 높을 경우 표현력을 신뢰할 수 없고, 특정 아이템과 사용자의 과거 행동 간 연관성을 반영하지 못함</li>
+    </ul>
+  </li>
+  <li><strong>DRNet(<code class="language-plaintext highlighter-rouge">D</code>ual <code class="language-plaintext highlighter-rouge">R</code>elation <code class="language-plaintext highlighter-rouge">Net</code>-work)</strong> : Latent Factor Model 과 Item based Collaborative Filtering 을 결합하여 사용자-아이템 관계와 아이템-아이템 관계를 동시에 모델링함으로써 개인화 추천 정확도를 높이면서도 데이터 희박성 문제에 대한 강건성을 도모함
+    <ul>
+      <li><a href="https://doi.org/10.1109/ACCESS.2020.3002102">Dual Relations Network for Collaborative Filtering(2020)</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="how-to-modeling-3"><span class="me-2">How to Modeling</span><a href="#how-to-modeling-3" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p><a href="/_post_refer_img/RecommenderSystem/07-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/07-04.png" alt="04" width="100%" loading="lazy"></a></p>
+
+<ul>
   <li>
-    <p><a href="https://doi.org/10.1109/ACCESS.2020.3002102">Dual Relations Network for Collaborative Filtering(2020)</a></p>
+    <p><strong>Affection Network</strong> : Modeling User-Item Relation</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{z}}_{u,i}^{\text{Affection}}
+  &amp;= \text{MLP}_{\text{ReLU}}\left[\overrightarrow{\mathbf{p}}_{u} \odot \overrightarrow{\mathbf{q}}_{i}\right]
+  \end{aligned}\]
   </li>
   <li>
-    <p><strong>DRNet(<code class="language-plaintext highlighter-rouge">D</code>ual <code class="language-plaintext highlighter-rouge">R</code>elation <code class="language-plaintext highlighter-rouge">Net</code>-work)</strong> :</p>
+    <p><strong>Association Network</strong> : Modeling Item-Item Relation</p>
 
-    <p><a href="/_post_refer_img/RecommenderSystem/07-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/07-04.png" alt="04" width="100%" loading="lazy"></a></p>
+    <ul>
+      <li>
+        <p>Global Item Vector of User $u$:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{g}}_{u}
+  &amp;= \text{ATTN}\left[\overrightarrow{\mathbf{v}}_{i}, \overrightarrow{\mathbf{s}}^{(u)}_{j}, \overrightarrow{\mathbf{s}}^{(u)}_{j}\right] \in \mathbb{R}^{K}
+  \end{aligned}\]
+
+        <ul>
+          <li>$i$ : Target Item</li>
+          <li>$j^{\forall} \in \mathbf{R}_{u}^{+} \setminus i$ : Interaction Item of User $u$</li>
+          <li>$\overrightarrow{\mathbf{v}}_{i} \in \mathbb{R}^{K}$ : Target Item Vector @ Association Network</li>
+          <li>$\overrightarrow{\mathbf{s}}^{(u)}_{j} \in \mathbb{R}^{K}$ : Historical Item Vector of User $u$</li>
+        </ul>
+      </li>
+      <li>
+        <p>Deep Interaction:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{z}}_{u,i}^{\text{Association}}
+  &amp;= \text{MLP}_{\text{ReLU}}\left[\overrightarrow{\mathbf{g}}_{u} \odot \overrightarrow{\mathbf{v}}_{i}\right]
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Fusion</strong></p>
+
+\[\begin{aligned}
+  r_{u,i}
+  &amp;= \sigma\left[\overrightarrow{\mathbf{z}}_{u,i}^{\text{Affection}} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{\text{Association}} \right]
+  \end{aligned}\]
   </li>
 </ul>
 
 <h2 id="distance-embedding-method-ddfl"><span class="me-2">Distance Embedding Method: DDFL</span><a href="#distance-embedding-method-ddfl" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li><strong>Representation Learning based Collaborative Filtering</strong> : 내적(Dot Product)을 활용한 유사도 계산은 삼각 부등식(Triangular Inequality)을 만족하지 못함
+    <ul>
+      <li>
+        <p><strong>삼각 부등식(Triangular Inequality)</strong> : 세 점 사이의 거리에 대한 제한 조건으로서, $A$ 와 $C$ 사이 거리는 $A$ 에서 $B$, 그리고 $B$ 에서 $C$ 로 우회하는 거리보다 크거나 같아야 함</p>
+
+\[\begin{aligned}
+  \text{d}\left[A,C\right] \le \text{d}\left[A,B\right] + \text{d}\left[B,C\right]
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>즉, 사용자 $u$ 가 아이템 $i$ 를 직접적으로 선호하는 정도는, 사용자 $u$ 가 아이템 $j$ 를 선호하는 정도 및 아이템 $i$ 와 $j$ 간 유사한 정도의 합보다 작거나 같아야 함</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{p}}_{u} \cdot \overrightarrow{\mathbf{q}}_{i}
+  \le \overrightarrow{\mathbf{p}}_{u} \cdot \overrightarrow{\mathbf{q}}_{j}
+  + \overrightarrow{\mathbf{q}}_{i} \cdot \overrightarrow{\mathbf{q}}_{j}
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+  <li><strong>DDFL(<code class="language-plaintext highlighter-rouge">D</code>eep <code class="language-plaintext highlighter-rouge">D</code>ual <code class="language-plaintext highlighter-rouge">F</code>unction <code class="language-plaintext highlighter-rouge">L</code>earning-based Model)</strong> : 히스토리 임베딩(History Embedding)에서 표현 학습과 매칭 함수 학습을 결합하는 대신, 거리 함수 학습(MeFL)과 매칭 함수 학습(MaFL)을 결합함으로써 삼각 부등식이 위배됨에 따른 비합리적 추천 결과를 보완함
+    <ul>
+      <li><a href="https://doi.org/10.1007/978-3-030-59419-0_36">DDFL: A Deep Dual Function Learning-Based Model for Recommender Systems(2020)</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="how-to-modeling-4"><span class="me-2">How to Modeling</span><a href="#how-to-modeling-4" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p><a href="/_post_refer_img/RecommenderSystem/07-05.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/07-05.png" alt="05" width="100%" loading="lazy"></a></p>
 
 <ul>
   <li>
-    <p><a href="https://doi.org/10.1007/978-3-030-59419-0_36">DDFL: A Deep Dual Function Learning-Based Model for Recommender Systems(2020)</a></p>
+    <p><strong>MeFL(<code class="language-plaintext highlighter-rouge">Me</code>tric <code class="language-plaintext highlighter-rouge">F</code>unction <code class="language-plaintext highlighter-rouge">L</code>earning)</strong> : 사용자, 아이템 표현 학습 시 삼각 부등식을 고려함으로써 합리적 추천 결과를 도모함</p>
+
+    <ul>
+      <li>
+        <p>Conversion Transformation:</p>
+
+\[\begin{aligned}
+  y_{u,i}&amp;=\alpha\left(1-r_{u,i}\right)
+  \end{aligned}\]
+
+        <ul>
+          <li>$r_{u,i} \in \mathbf{R}$ is Implicit Feedback</li>
+        </ul>
+      </li>
+      <li>
+        <p>Embedding:</p>
+
+\[\begin{aligned}
+  \mathbf{P}^{\text{MeFL}}&amp;= \text{Embedding}\left[\mathbf{Y}\right] \in \mathbb{R}^{M \times K}\\
+  \mathbf{Q}^{\text{MeFL}}&amp;= \text{Embedding}\left[\mathbf{Y}^{T}\right] \in \mathbb{R}^{N \times K}
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>Calculate Euclidean Distance:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{d}}_{u,i}
+  = \begin{bmatrix}
+  \left(p^{\text{MeFL}}_{u,1}-q^{\text{MeFL}}_{i,1}\right)^{2}
+  &amp; \left(p^{\text{MeFL}}_{u,2}-q^{\text{MeFL}}_{i,2}\right)^{2} 
+  &amp; \cdots 
+  &amp; \left(p^{\text{MeFL}}_{u,K}-q^{\text{MeFL}}_{i,K}\right)^{2}
+  \end{bmatrix}
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>Metric Function Predictive Vector:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{z}}^{\text{MeFL}}_{u,i} &amp;= \text{MLP}_{\text{ReLU}}\left[\overrightarrow{\mathbf{d}}_{u,i}\right]
+  \end{aligned}\]
+      </li>
+    </ul>
   </li>
   <li>
-    <p><strong>DDFL(<code class="language-plaintext highlighter-rouge">D</code>eep <code class="language-plaintext highlighter-rouge">D</code>ual <code class="language-plaintext highlighter-rouge">F</code>unction <code class="language-plaintext highlighter-rouge">L</code>earning-based Model)</strong> :</p>
+    <p><strong>MaFL(<code class="language-plaintext highlighter-rouge">Ma</code>tching <code class="language-plaintext highlighter-rouge">F</code>unction <code class="language-plaintext highlighter-rouge">L</code>earning)</strong></p>
 
-    <p><a href="/_post_refer_img/RecommenderSystem/07-05.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/07-05.png" alt="05" width="100%" loading="lazy"></a></p>
+    <ul>
+      <li>
+        <p>Embedding:</p>
+
+\[\begin{aligned}
+  \mathbf{P}^{\text{MaFL}}&amp;= \text{Embedding}\left[\mathbf{R}\right] \in \mathbb{R}^{M \times K}\\
+  \mathbf{Q}^{\text{MaFL}}&amp;= \text{Embedding}\left[\mathbf{R}^{T}\right] \in \mathbb{R}^{N \times K}
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>Matching Function Predictive Vector:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{z}}^{\text{MaFL}}_{u,i} &amp;= \text{MLP}_{\text{ReLU}}\left[\overrightarrow{\mathbf{p}}_{u} \oplus \overrightarrow{\mathbf{q}}_{i}\right]
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Fusion</strong></p>
+
+\[\begin{aligned}
+  \hat{r}_{u,i} &amp;= \sigma\Bigg(\text{MLP}_{\text{ReLU}}\left[\overrightarrow{\mathbf{z}}^{\text{MeFL}}_{u,i} \oplus \overrightarrow{\mathbf{z}}^{\text{MaFL}}_{u,i}\right]\Bigg)
+  \end{aligned}\]
   </li>
 </ul>
 
@@ -2193,6 +2480,87 @@ Function Learning in Recommender System(2019)</a></p>
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
   
     
     
@@ -2431,87 +2799,6 @@ Function Learning in Recommender System(2019)</a></p>
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -3123,13 +3410,13 @@ Function Learning in Recommender System(2019)</a></p>
         <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
@@ -3190,6 +3477,18 @@ Function Learning in Recommender System(2019)</a></p>
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -4349,6 +4648,87 @@ Function Learning in Recommender System(2019)</a></p>
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
   
     
     
@@ -4587,87 +4967,6 @@ Function Learning in Recommender System(2019)</a></p>
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -5279,13 +5578,13 @@ Function Learning in Recommender System(2019)</a></p>
         <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
