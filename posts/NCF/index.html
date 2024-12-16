@@ -1012,6 +1012,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -1189,9 +1200,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1845 words"
+  title="2057 words"
 >
-  <em>10 min</em> read</span>
+  <em>11 min</em> read</span>
 
         </div>
       </div>
@@ -1199,7 +1210,52 @@
   </header>
 
   <div class="content">
-    <h2 id="basic-embedding-method-ncf"><span class="me-2">Basic Embedding Method: NCF</span><a href="#basic-embedding-method-ncf" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="summarize-embedding-method"><span class="me-2">Summarize Embedding Method</span><a href="#summarize-embedding-method" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>How to</th>
+      <th>Pos</th>
+      <th>Neg</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ID Embedding</td>
+      <td>사용자, 아이템 ID 임베딩</td>
+      <td>사용자, 아이템의 고유한 특징 포착 가능</td>
+      <td>맥락 정보 부재로 인해 최적화 어려움</td>
+    </tr>
+    <tr>
+      <td>History Embedding</td>
+      <td>사용자-아이템 상호작용 행렬 선형 변환</td>
+      <td>사용자 행동 패턴, 아이템 구매 패턴 포착 가능</td>
+      <td>상호작용에 지나치게 의존하여 고유한 특징 포착 어려움</td>
+    </tr>
+    <tr>
+      <td>Dual Embedding</td>
+      <td>ID Embedding 과 History Embedding 결합</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Semi-Dual Embedding</td>
+      <td>사용자, 아이템 중 한 측면에만 History Embedding 추가</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Distance Embedding</td>
+      <td>ID Embedding 시 삼각 부등식을 만족하도록 거리 학습</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<h2 id="id-embedding-method-ncf"><span class="me-2">ID Embedding Method: NCF</span><a href="#id-embedding-method-ncf" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
@@ -1275,7 +1331,7 @@
 
 <ul>
   <li>
-    <p><strong>Representation Learning</strong></p>
+    <p><strong>Representation Learning</strong> : Dimension Reduction</p>
 
 \[\begin{aligned}
   \mathbf{Y}_{\text{RL}}
@@ -1290,7 +1346,7 @@
     </ul>
   </li>
   <li>
-    <p><strong>Matching Function Learning</strong></p>
+    <p><strong>Matching Function Learning</strong> : Linear Transformation</p>
 
 \[\begin{aligned}
   \mathbf{Y}_{\text{ML}}
@@ -1298,8 +1354,8 @@
   \end{aligned}\]
 
     <ul>
-      <li>\(\mathbf{P}_{\text{ML}} \in \mathbb{R}^{M \times K}\) : User-Latent Factor Matrix of Matching Function Learning</li>
-      <li>\(\mathbf{Q}_{\text{ML}} \in \mathbb{R}^{N \times K}\) : Item-Latent Factor Matrix of Matching Function Learning</li>
+      <li>\(\mathbf{P}_{\text{ML}} = \mathbf{W}^{(P)} \cdot \mathbf{R} \in \mathbb{R}^{M \times K}\) : User-Latent Factor Matrix of Matching Function Learning</li>
+      <li>\(\mathbf{Q}_{\text{ML}} = \mathbf{W}^{(Q)} \cdot \mathbf{R}^{T} \in \mathbb{R}^{N \times K}\) : Item-Latent Factor Matrix of Matching Function Learning</li>
       <li>\(\mathbf{Y}_{\text{RL}} \in \mathbb{R}^{(M \times N) \times K}\) : Predictive Vector of Matching Function Learning</li>
     </ul>
   </li>
@@ -1319,8 +1375,8 @@
 <ul>
   <li><strong>DELF(<code class="language-plaintext highlighter-rouge">D</code>ual-<code class="language-plaintext highlighter-rouge">E</code>mbedding based <code class="language-plaintext highlighter-rouge">L</code>atent <code class="language-plaintext highlighter-rouge">F</code>actor Model)</strong>
     <ul>
-      <li><strong>Interaction based Embedding</strong> : 사용자와 아이템의 고유한 정체성, 예컨대 사용자의 독립적인 선호나 아이템의 독립적 특성보다는 과거 어떤 아이템, 사용자와 상호작용했는지에 지나치게 의존함</li>
-      <li><strong>ID based Embedding</strong> : 사용자, 아이템의 ID만을 활용하므로 사용자 행동 패턴이나 아이템 특성을 유추할 만한 맥락 정보가 부족함</li>
+      <li><strong>ID Embedding</strong> : 사용자, 아이템의 ID만을 활용하므로 사용자 행동 패턴이나 아이템 구매 패턴을 유추할 만한 맥락 정보가 부족함</li>
+      <li><strong>History Embedding</strong> : 사용자와 아이템의 고유한 정체성, 예컨대 사용자의 독립적인 선호나 아이템의 독립적 특성보다는 과거 어떤 아이템, 사용자와 상호작용했는지에 지나치게 의존함</li>
       <li>이중 임베딩(Dual-Embedding)을 결합하지 않고 독립적으로 학습하여 최종 표현을 생성하므로 각각의 한계점을 서로 보완하는 표현력을 기대하기 어려움</li>
     </ul>
   </li>
@@ -1337,33 +1393,37 @@
 
 <ul>
   <li>
-    <p><strong>Interaction based Embedding</strong></p>
-
-\[\begin{aligned}
-  \mathbf{P}_{i}&amp;=\text{Embedding}\left[\mathbf{R}_{i,:}\right] \in \mathbb{R}^{K}\\
-  \mathbf{Q}_{j}&amp;=\text{Embedding}\left[\mathbf{R}_{:,j}\right] \in \mathbb{R}^{K}
-  \end{aligned}\]
-
-    <ul>
-      <li>$\mathbf{R}_{i,:}$ : Multi-Hot Vector of User $i$ @ User-Item Interaction Matrix</li>
-      <li>$\mathbf{R}_{:,j}$ : Multi-Hot Vector of Item $j$ @ User-Item Interaction Matrix</li>
-      <li>$\mathbf{P}_{i}$ : ID Embedding Vector of User $i$</li>
-      <li>$\mathbf{Q}_{j}$ : ID Embedding Vector of Item $j$</li>
-    </ul>
-  </li>
-  <li>
     <p><strong>ID based Embedding</strong></p>
 
 \[\begin{aligned}
-  \mathbf{U}_{i}&amp;=\text{Embedding}\left[\mathbf{Z}_{i}\right] \in \mathbb{R}^{K}\\
-  \mathbf{V}_{j}&amp;=\text{Embedding}\left[\mathbf{Z}_{j}\right] \in \mathbb{R}^{K}
+  \overrightarrow{\mathbf{p}}_{u}&amp;=\text{Embedding}\left[\overrightarrow{\mathbf{z}}_{u}\right] \in \mathbb{R}^{K}\\
+  \overrightarrow{\mathbf{q}}_{i}&amp;=\text{Embedding}\left[\overrightarrow{\mathbf{z}}_{i}\right] \in \mathbb{R}^{K}
   \end{aligned}\]
 
     <ul>
-      <li>$\mathbf{Z}_{i}$ : ID One-Hot Vector of User $i$</li>
-      <li>$\mathbf{Z}_{j}$ : ID One-Hot Vector of Item $j$</li>
-      <li>$\mathbf{U}_{i}$ : ID Embedding Vector of User $i$</li>
-      <li>$\mathbf{V}_{j}$ : ID Embedding Vector of Item $j$</li>
+      <li>$\overrightarrow{\mathbf{z}}_{u}$ : ID One-Hot Vector of User $i$</li>
+      <li>$\overrightarrow{\mathbf{z}}_{i}$ : ID One-Hot Vector of Item $j$</li>
+      <li>$\overrightarrow{\mathbf{p}}_{u}$ : ID Embedding Vector of User $i$</li>
+      <li>$\overrightarrow{\mathbf{q}}_{i}$ : ID Embedding Vector of Item $j$</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Interaction based Embedding</strong></p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{m}}_{u}
+  &amp;=\text{AGG}\left[\left\{\overrightarrow{\mathbf{h}}_{j} \mid j \in \mathcal{R}_{u}^{+}\right\}\right] \in \mathbb{R}^{K}\\
+  &amp;=\frac{1}{\sqrt{\vert \mathcal{R}_{u}^{+}\vert}}\mathbf{W}^{(P)} \cdot \mathbf{R}_{u,:}\\
+  \overrightarrow{\mathbf{n}}_{i}
+  &amp;=\text{AGG}\left[\left\{\overrightarrow{\mathbf{h}}_{v} \mid v \in \mathcal{R}_{i}^{+}\right\}\right] \in \mathbb{R}^{K}\\
+  &amp;=\frac{1}{\sqrt{\vert \mathcal{R}_{i}^{+}\vert}}\mathbf{W}^{(Q)} \cdot \mathbf{R}_{:,i}
+  \end{aligned}\]
+
+    <ul>
+      <li>$\mathbf{R}_{u,:}$ : Multi-Hot Vector of User $u$ @ User-Item Interaction Matrix</li>
+      <li>$\mathbf{R}_{:,i}$ : Multi-Hot Vector of Item $i$ @ User-Item Interaction Matrix</li>
+      <li>$\overrightarrow{\mathbf{m}}_{u}$ : ID Embedding Vector of User $u$</li>
+      <li>$\overrightarrow{\mathbf{n}}_{i}$ : ID Embedding Vector of Item $i$</li>
     </ul>
   </li>
   <li><strong>Embedding Combination</strong>
@@ -1372,14 +1432,16 @@
         <p>User Embedding Combination:</p>
 
 \[\begin{aligned}
-  \mathbf{X}_{i}&amp;=\mathbf{P}_{i} \oplus \mathbf{U}_{i} \in \mathbb{R}^{2K}
+  \overrightarrow{\mathbf{x}}_{u}
+  &amp;=\overrightarrow{\mathbf{p}}_{u} \oplus \overrightarrow{\mathbf{m}}_{u} \in \mathbb{R}^{2K}
   \end{aligned}\]
       </li>
       <li>
         <p>Item Embedding Combination:</p>
 
 \[\begin{aligned}
-  \mathbf{Y}_{j}&amp;=\mathbf{Q}_{j} \oplus \mathbf{V}_{j} \in \mathbb{R}^{2K}
+  \overrightarrow{\mathbf{y}}_{i}
+  &amp;=\overrightarrow{\mathbf{q}}_{i} \oplus \overrightarrow{\mathbf{n}}_{i} \in \mathbb{R}^{2K}
   \end{aligned}\]
       </li>
     </ul>
@@ -1388,7 +1450,7 @@
     <p><strong>Neural Collaborative Filtering and Predict</strong></p>
 
 \[\begin{aligned}
-  \hat{r}_{u,i} &amp;= \sigma\Big[\text{MLP}_{\text{ReLU}}\left[\mathbf{X}_{i} \oplus \mathbf{Y}_{j}\right]\Big]
+  \hat{r}_{u,i} &amp;= \sigma\Big[\text{MLP}_{\text{ReLU}}\left[\overrightarrow{\mathbf{x}}_{u} \oplus \overrightarrow{\mathbf{y}}_{i}\right]\Big]
   \end{aligned}\]
   </li>
 </ul>
@@ -1515,11 +1577,11 @@
         </ul>
       </li>
       <li>
-        <p>Embedding:</p>
+        <p>Linear Transformation:</p>
 
 \[\begin{aligned}
-  \mathbf{P}^{\text{MeFL}}&amp;= \text{Embedding}\left[\mathbf{Y}\right] \in \mathbb{R}^{M \times K}\\
-  \mathbf{Q}^{\text{MeFL}}&amp;= \text{Embedding}\left[\mathbf{Y}^{T}\right] \in \mathbb{R}^{N \times K}
+  \mathbf{P}^{\text{MeFL}}&amp;= \mathbf{W}_{\text{MeFL}}^{(P)} \cdot \mathbf{Y} \in \mathbb{R}^{M \times K}\\
+  \mathbf{Q}^{\text{MeFL}}&amp;= \mathbf{W}_{\text{MeFL}}^{(P)} \cdot \mathbf{Y}^{T} \in \mathbb{R}^{N \times K}
   \end{aligned}\]
       </li>
       <li>
@@ -1549,11 +1611,11 @@
 
     <ul>
       <li>
-        <p>Embedding:</p>
+        <p>Linear Transformation:</p>
 
 \[\begin{aligned}
-  \mathbf{P}^{\text{MaFL}}&amp;= \text{Embedding}\left[\mathbf{R}\right] \in \mathbb{R}^{M \times K}\\
-  \mathbf{Q}^{\text{MaFL}}&amp;= \text{Embedding}\left[\mathbf{R}^{T}\right] \in \mathbb{R}^{N \times K}
+  \mathbf{P}^{\text{MaFL}}&amp;= \mathbf{W}_{\text{MaFL}}^{(P)} \cdot \mathbf{R} \in \mathbb{R}^{M \times K}\\
+  \mathbf{Q}^{\text{MaFL}}&amp;= \mathbf{W}_{\text{MaFL}}^{(Q)} \cdot \mathbf{R}^{T} \in \mathbb{R}^{N \times K}
   \end{aligned}\]
       </li>
       <li>
