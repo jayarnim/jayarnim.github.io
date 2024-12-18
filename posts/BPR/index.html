@@ -965,15 +965,15 @@
     </ul>
   </li>
   <li>
-    <p><strong>Prior Determination</strong>; $\Theta \sim \mathcal{N}\left(0, \lambda_{\Theta}\mathbf{I}\right)$</p>
+    <p><strong>Prior Determination</strong>; $\Theta \sim \mathcal{N}\left(0, \lambda_{\Theta}^{-1}\mathbf{I}\right)$</p>
 
 \[\begin{aligned}
   P\left(\Theta\right)
-  &amp;= \frac{1}{(2\pi)^{d/2} \cdot \lambda_{\Theta}^{d/2}} \cdot \exp \left[-\frac{1}{2\lambda_{\Theta}}\Vert \Theta \Vert^{2}\right]\\
+  &amp;= \frac{1}{(2\pi)^{d/2} \cdot \lambda_{\Theta}^{d/2}} \cdot \exp \left[-\frac{\lambda_{\Theta}}{2}\Vert \Theta \Vert^{2}\right]\\
   \\
   \ln{P\left(\Theta\right)}
-  &amp;= \ln{\frac{1}{(2\pi)^{d/2} \cdot \lambda_{\Theta}^{d/2}} \cdot \exp \left[-\frac{1}{2\lambda_{\Theta}}\Vert \Theta \Vert^{2}\right]}\\
-  &amp;= \ln{\frac{1}{(2\pi)^{d/2} \cdot \lambda_{\Theta}^{d/2}}} - \frac{1}{2\lambda_{\Theta}}\Vert \Theta \Vert^{2}\\
+  &amp;= \ln{\frac{1}{(2\pi)^{d/2} \cdot \lambda_{\Theta}^{d/2}} \cdot \exp \left[-\frac{\lambda_{\Theta}}{2}\Vert \Theta \Vert^{2}\right]}\\
+  &amp;= \ln{\frac{1}{(2\pi)^{d/2} \cdot \lambda_{\Theta}^{d/2}}} - \frac{\lambda_{\Theta}}{2}\Vert \Theta \Vert^{2}\\
   &amp;\propto -\lambda_{\Theta}\Vert\Theta\Vert^{2}
   \end{aligned}\]
   </li>
