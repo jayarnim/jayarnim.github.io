@@ -22,7 +22,7 @@ College of Economics & Commerce, Kookmin Univ., South Korea
 
 ## Experience
 -----
-- **Data Mining Lab**, *2024.01 - Present*\\
+- [**Artificial Intelligence for Business Analytics Lab**](https://sites.google.com/view/ablab2022/home), *2024.01 - Present*\\
 Director Je-Hyuk Lee\\
 Dept. of Data Science, The Graduate School, Kookmin Univ., South Korea
 - **Kookmin Univ. Economic Association(KMEA)**, *2016.03 - 2019.08*\\
