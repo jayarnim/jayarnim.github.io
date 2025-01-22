@@ -4,7 +4,7 @@
   <id>https://jayarnim.github.io/</id>
   <title>Data Scientist</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-01-05T15:58:22+09:00</updated>
+  <updated>2025-01-23T04:04:04+09:00</updated>
   <author>
     <name>jayarnim</name>
     <uri>https://jayarnim.github.io/</uri>
@@ -34,7 +34,7 @@
 
   
     
-    <category term="Research Interest" />
+    <category term="Data Mining" />
     
     <category term="Recommender System" />
     
@@ -63,7 +63,7 @@
 
   
     
-    <category term="Research Interest" />
+    <category term="Machine Learning Techs" />
     
     <category term="Bayesian Deep Learning" />
     
@@ -89,7 +89,7 @@
 
   
     
-    <category term="Research Interest" />
+    <category term="Data Mining" />
     
     <category term="Recommender System" />
     
@@ -104,21 +104,21 @@
 
   
   <entry>
-    <title>Statistical Modeling Methods</title>
-    <link href="https://jayarnim.github.io/posts/Statistical_Modeling_Methods/" rel="alternate" type="text/html" title="Statistical Modeling Methods" />
-    <published>2024-07-31T00:00:00+09:00</published>
+    <title>GPT</title>
+    <link href="https://jayarnim.github.io/posts/GPT/" rel="alternate" type="text/html" title="GPT" />
+    <published>2024-08-08T00:00:00+09:00</published>
   
-    <updated>2024-07-31T00:00:00+09:00</updated>
+    <updated>2024-08-08T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/Statistical_Modeling_Methods/</id>
-    <content src="https://jayarnim.github.io/posts/Statistical_Modeling_Methods/" />
+    <id>https://jayarnim.github.io/posts/GPT/</id>
+    <content src="https://jayarnim.github.io/posts/GPT/" />
     <author>
       <name>jayarnim</name>
     </author>
 
   
     
-    <category term="AI &amp; Data Mining" />
+    <category term="Data Mining" />
     
     <category term="Text Analytics" />
     
@@ -130,31 +130,27 @@
 
   
   <entry>
-    <title>ExpoMF</title>
-    <link href="https://jayarnim.github.io/posts/EXMF/" rel="alternate" type="text/html" title="ExpoMF" />
-    <published>2024-07-31T00:00:00+09:00</published>
+    <title>BERT</title>
+    <link href="https://jayarnim.github.io/posts/BERT/" rel="alternate" type="text/html" title="BERT" />
+    <published>2024-08-07T00:00:00+09:00</published>
   
-    <updated>2024-07-31T00:00:00+09:00</updated>
+    <updated>2024-08-07T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/EXMF/</id>
-    <content src="https://jayarnim.github.io/posts/EXMF/" />
+    <id>https://jayarnim.github.io/posts/BERT/</id>
+    <content src="https://jayarnim.github.io/posts/BERT/" />
     <author>
       <name>jayarnim</name>
     </author>
 
   
     
-    <category term="Research Interest" />
+    <category term="Data Mining" />
     
-    <category term="Recommender System" />
+    <category term="Text Analytics" />
     
   
 
-  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://doi.org/10.1145/2872427.2883090&amp;quot;&amp;gt;&amp;lt;code&amp;gt;Modeling User Exposure in Recommendation&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2016&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Data Set&amp;lt;/strong&amp;gt;:
-    &amp;lt;ul&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;code&amp;gt;&amp;lt;a href=&amp;quot;https://snap.stanford.edu/data/loc-Gowalla.html&amp;quot;&amp;gt;Gowalla&amp;lt;/a&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/li&amp;gt;
-    &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://www.kaggle.com/datase...</summary>
+  <summary>Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</summary>
 
   </entry>
 

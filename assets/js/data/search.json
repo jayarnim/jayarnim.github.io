@@ -3,7 +3,7 @@
   {
     "title": "DACR",
     "url": "/posts/DACR/",
-    "categories": "Research Interest, Recommender System",
+    "categories": "Data Mining, Recommender System",
     "tags": "Paper Review, Data Mining, Recommender System, Collaborative Filtering, Latent Factor Model, Deep Learning, Attention Mechanism",
     "date": "2024-08-28 00:00:00 +0900",
     
@@ -20,7 +20,7 @@
   {
     "title": "Bayesian Attention Modules",
     "url": "/posts/Bayesian_Attention_Modules/",
-    "categories": "Research Interest, Bayesian Deep Learning",
+    "categories": "Machine Learning Techs, Bayesian Deep Learning",
     "tags": "Deep Learning, Bayesian, Attention Mechanism",
     "date": "2024-08-28 00:00:00 +0900",
     
@@ -37,7 +37,7 @@
   {
     "title": "FAWMF",
     "url": "/posts/FAWMF/",
-    "categories": "Research Interest, Recommender System",
+    "categories": "Data Mining, Recommender System",
     "tags": "Paper Review, Data Mining, Recommender System, Collaborative Filtering, Latent Factor Model, Deep Learning, Autoencoder, Implicit Feedback, Weight Approach, Bayesian",
     "date": "2024-08-14 00:00:00 +0900",
     
@@ -52,10 +52,146 @@
   },
   
   {
-    "title": "Statistical Modeling Methods",
-    "url": "/posts/Statistical_Modeling_Methods/",
-    "categories": "AI & Data Mining, Text Analytics",
-    "tags": "Data Mining, Text Mining",
+    "title": "GPT",
+    "url": "/posts/GPT/",
+    "categories": "Data Mining, Text Analytics",
+    "tags": "Data Mining, NLP, Text Mining, Generative Model",
+    "date": "2024-08-08 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "BERT",
+    "url": "/posts/BERT/",
+    "categories": "Data Mining, Text Analytics",
+    "tags": "Data Mining, NLP, Text Mining, Language Model",
+    "date": "2024-08-07 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "Transformer",
+    "url": "/posts/Transformer/",
+    "categories": "Data Mining, Text Analytics",
+    "tags": "Data Mining, NLP, Text Mining, Machine Translation",
+    "date": "2024-08-06 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  },
+  
+  {
+    "title": "SEQ2SEQ",
+    "url": "/posts/SEQ2SEQ/",
+    "categories": "Data Mining, Text Analytics",
+    "tags": "Data Mining, NLP, Text Mining, Machine Translation",
+    "date": "2024-08-05 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "Machine Translation      기계 번역(Machine Translation) : 특정 언어로 표현된 텍스트를 다른 언어로 된 텍스트로 변환하는 과정              NLU(Natural Language Understanding) : 특정 언어로 된 텍스트를 이해하는 과정으로서, 해당 텍스트를 벡터 공간에 사상(Projection...",
+    "content": "Machine Translation      기계 번역(Machine Translation) : 특정 언어로 표현된 텍스트를 다른 언어로 된 텍스트로 변환하는 과정              NLU(Natural Language Understanding) : 특정 언어로 된 텍스트를 이해하는 과정으로서, 해당 텍스트를 벡터 공간에 사상(Projection)하는 절차(Many to One)      NLG(Natural Language Generation) : 다른 언어로 된 텍스트를 생성하는 과정으로서, 사상된 벡터를 목표 언어로 변환하는 절차(Many to Many)            Brief History          RBMT(Rule-based Machine Translation) : 규칙 기반 기계 번역      SMT(Statistical Machine Translation) : 통계적 기계 번역      NMT(Neural Networks based Machine Translation) : 신경망 기반 기계 번역                  Word Embedding          End-to-End Model                    SEQ2SEQ      시퀀스 투 시퀀스(SEQ2SEQ) : RNN 계열 레이어 기반 기계 번역 알고리즘\\[\\begin{aligned}  P(y_{1}, y_{2}, \\cdots, y_{T^{\\prime}} \\mid x_{1}, x_{2}, \\cdots, x_{T})  = \\prod_{t=1}^{T^{\\prime}}{P(y_{t} \\mid z, y_{1}, y_{2}, \\cdots, y_{t-1})}  \\end{aligned}\\]        Architecture                      인코더(Encoder) : 입력 문장의 모든 단어들을 순차로 입력 받아 하나의 문맥 벡터(Context Vector)로 변환하는 모듈(NLU Process)\\[\\begin{aligned}  h_{t}, c_{t}  &amp;= \\text{LSTM}\\left[\\overrightarrow{\\mathbf{w}}_{t} \\mid h_{t-1}, c_{t-1}\\right]  \\end{aligned}\\]                  \\(h_{t}\\) : $t$ 시점 은닉 상태          \\(c_{t}\\) : $t$ 시점 셀 상태          \\(\\overrightarrow{\\mathbf{w}}_{t}\\) : $t$ 번째 단어 임베딩 벡터          \\(\\overrightarrow{\\mathbf{z}}=h_{T}\\) : 마지막 시점 은닉 상태로서 문맥 벡터(Context Vector)                            디코더(Decoder) : 문맥 벡터를 참조하여 목표 언어의 단어들을 순차로 출력하는 모듈(NLG Process)\\[\\begin{aligned}  \\eta_{t}, \\sigma_{t}  &amp;= \\text{LSTM}\\left[\\hat{\\mathbf{y}}_{t-1} \\mid \\eta_{t-1}, \\sigma_{t-1}\\right]\\\\  \\hat{\\mathbf{y}}_{t}  &amp;= \\text{MLP}_{\\text{Softmax}}\\left[\\eta_{t}\\right]  \\end{aligned}\\]                  \\(\\eta_{t}\\) : $t$ 시점 은닉 상태                          \\(\\eta_{0}=\\overrightarrow{\\mathbf{z}}\\) : 초기 은닉 상태는 문맥 벡터를 할당함                                \\(\\sigma_{t}\\) : $t$ 시점 셀 상태          \\(\\hat{\\mathbf{y}}_{t}\\) : 목표 언어의 $t$ 번째 단어 확률 분포 벡터                          \\(\\hat{\\mathbf{y}}_{0}\\) : 초기 입력값은 &lt;SOS&gt; 토큰을 활용함              \\(\\hat{\\mathbf{y}}_{T}\\) : 마지막 출력값은 &lt;EOS&gt; 토큰을 활용함                                                교사 강요(Teacher Forcing) : 디코더 학습 과정에서, 다음 시점의 입력으로서 이전 시점에서 생성한 출력값 대신 정답 시퀀스를 사용하는 기법                      Training Phase : 정답 시퀀스 \\(\\overrightarrow{\\mathbf{y}}_{t-1}\\) 를 입력값으로 사용함\\[\\begin{aligned}  \\eta_{t}, \\sigma_{t}  &amp;= \\text{LSTM}\\left[\\overrightarrow{\\mathbf{y}}_{t-1} \\mid \\eta_{t-1}, \\sigma_{t-1}\\right]  \\end{aligned}\\]                    Inference Phase : 이전 시점에서 생성한 출력값 \\(\\hat{\\mathbf{y}}_{t-1}\\) 를 입력값으로 사용함\\[\\begin{aligned}  \\eta_{t}, \\sigma_{t}  &amp;= \\text{LSTM}\\left[\\hat{\\mathbf{y}}_{t-1} \\mid \\eta_{t-1}, \\sigma_{t-1}\\right]  \\end{aligned}\\]            Attention Application  어텐션 메커니즘(Attention Application) : RNN 계열 레이어의 기울기 소실 문제를 보완하는 기법으로서, 문맥 벡터를 최종 은닉 상태로 활용하지 않고, 인코더 각 순번 은닉 상태와 디코더 현재 시점 간 관련성을 고려하여, 디코더의 각 시점에 특화된 문맥 벡터를 생성함          루옹 어텐션(Luong Attention) : 디코더의 현재 시점 은닉 상태를 활용하여 문맥 벡터를 생성하는 어텐션 기법      바다나우 어텐션(Bahdanau Attention) : 디코더의 이전 시점 은닉 상태를 활용하여 문맥 벡터를 생성하는 어텐션 기법      How to Attention      Attention Mechanism\\[\\begin{aligned}  \\text{ATTN}\\left(Q,K,V\\right)  = \\underbrace{\\text{Softmax}\\left[f(Q,K)\\right]}_{\\text{Attention Weight}} \\cdot V  \\end{aligned}\\]          $Q$ : 특화할 대상으로서 질의(Query)      $K$ : 질의와의 관련성을 도출하기 위한 참조 정보로서 키(Key)      $V$ : 최종적으로 사용할 정보로서 정답(Value)            주의 가중치(Attention Wieght) 도출 함수 정의\\[\\begin{aligned}  \\mathbf{A}^{(t)} = \\text{Softmax}\\left[f(\\overrightarrow{\\mathbf{q}}_{t}, \\mathbf{K})\\right]  \\end{aligned}\\]                            Name          Function          Defined by                                      Dot Product          \\(f(\\overrightarrow{\\mathbf{q}}, \\mathbf{K}) = \\overrightarrow{\\mathbf{q}} \\cdot \\mathbf{K}\\)          Luong et al. (2015)                          General          \\(f(\\overrightarrow{\\mathbf{q}}, \\mathbf{K}) = \\overrightarrow{\\mathbf{q}}^{T} \\cdot \\mathbf{W} \\cdot \\mathbf{K}\\)          Luong et al. (2015)                          Additive Attention          \\(f(\\overrightarrow{\\mathbf{q}}, \\mathbf{K}) = \\mathbf{W}^{T}_{A} \\cdot \\text{tanh}\\left[\\mathbf{W}_{B} \\cdot (\\overrightarrow{\\mathbf{q}} \\oplus \\mathbf{K})\\right]\\)          Bahdanau et al. (2015)                          Concatenation          \\(f(\\overrightarrow{\\mathbf{q}}, \\mathbf{K}) = \\mathbf{W}^{T}_{A} \\cdot \\text{tanh}\\left[\\mathbf{W}_{B} \\cdot \\overrightarrow{\\mathbf{q}} + \\mathbf{W}_{C} \\cdot \\mathbf{K}\\right]\\)          Bahdanau et al. (2015)                          Scaled Dot Product          \\(f(\\overrightarrow{\\mathbf{q}}, \\mathbf{K}) = \\displaystyle\\frac{\\overrightarrow{\\mathbf{q}}^{T} \\cdot \\mathbf{K}}{\\sqrt{n}}\\)          Vaswani et al. (2017)                    Luong Attention      Attention Mechanism\\[\\mathbf{A}^{(t)} = \\text{Softmax}\\left[\\overrightarrow{\\mathbf{q}}_{t} \\cdot \\mathbf{K}\\right] \\cdot \\mathbf{V}\\]          \\(\\overrightarrow{\\mathbf{q}}_{t} = \\eta_{t}\\) : 디코더의 $t$ 시점 은닉 상태      \\(\\overrightarrow{\\mathbf{k}}_{i} = h_{i}\\) : 인코더의 $i$ 번째 순번 은닉 상태      \\(\\overrightarrow{\\mathbf{v}}_{i} = h_{i}\\) : 인코더의 $i$ 번째 순번 은닉 상태            디코더의 $t$ 시점 특화 문맥 벡터(Context Vector) 도출\\[\\begin{aligned}  \\overrightarrow{\\mathbf{z}}_{t}  = \\sum_{i}{\\mathbf{A}^{(t)}_{i}}  \\end{aligned}\\]        $t$ 시점 문맥 벡터와 $t$ 시점 은닉 상태 정보 종합\\[\\overrightarrow{\\mathbf{s}}_{t}  = \\text{MLP}_{\\text{tanh}}\\left[\\overrightarrow{\\mathbf{z}}_{t} \\oplus \\eta_{t}\\right]\\]        목표 언어의 $t$ 번째 단어 확률 분포 벡터 도출\\[\\hat{\\mathbf{y}}_{t}  = \\text{MLP}_{\\text{Softmax}}\\left[\\overrightarrow{\\mathbf{s}}_{t}\\right]\\]  Bahdanau AttentionMetric  BLEU Score(Bi-Lingual Evaluation Understudy Score)이미지 출처  https://yjjo.tistory.com/35"
+  },
+  
+  {
+    "title": "Topic Model",
+    "url": "/posts/Topic_Model/",
+    "categories": "Data Mining, Text Analytics",
+    "tags": "Data Mining, NLP, Text Mining, Topic Model",
+    "date": "2024-08-04 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "Topic Model  토픽 모형(Topic Model) : 관측 가능한 단어(Word) 및 문서(Document)로부터 말뭉치(Corpus)에 내재되어 있는(Latent) 토픽(Topic)을 탐색하는 방법          문서(Document)는 토픽(Topic)으로 어떻게 표현할 수 있을까?      단어(Word)는 토픽(Topic) 별로 어떻게...",
+    "content": "Topic Model  토픽 모형(Topic Model) : 관측 가능한 단어(Word) 및 문서(Document)로부터 말뭉치(Corpus)에 내재되어 있는(Latent) 토픽(Topic)을 탐색하는 방법          문서(Document)는 토픽(Topic)으로 어떻게 표현할 수 있을까?      단어(Word)는 토픽(Topic) 별로 어떻게 등장하는가?      탐색된 Something(Topic)의 정체를 무엇이라 정의하면 좋을까?      LSA      잠재 의미 분석(Latent Semantic Analysis; LSA) : 특이값 분해(Singular Value Decomposition; SVD)를 활용하여 Document-Term Matrix 를 분해하는 방법\\[\\mathbb{A}_{n \\times d} \\approx \\mathbb{U}_{n \\times k} \\cdot \\Sigma_{k \\times k} \\cdot \\mathbb{V}^{T}_{d \\times k}\\]                            Dimension          Interpretation                                                 $n$          Number of Document                                     $d$          Number of Term                                     $k$          Number of Topic          Hyper-Parameter                            $\\mathbb{A}_{n \\times d}$ : Document-Term Matrix      \\(\\mathbb{U}_{n \\times k} \\cdot \\Sigma_{k \\times k}\\) : Document-Topic Matrix      $\\Sigma_{k \\times k} \\cdot \\mathbb{V}_{d \\times k}^{T}$ : Term-Topic Matrix      SVD      특이값 분해(Singular Value Decomposition; SVD) : 차원의 크기가 $n \\times d$ 인 임의의 행렬 $\\mathbb{A}$ 를 세 개의 행렬의 곱으로 분해하는 방법        $\\mathbb{U}_{n \\times k}$ : 직교 정규 행렬(Ortho-normal Matrix)                  열벡터 $\\overrightarrow{u}_{i} \\in \\mathbb{U}$ 는 행렬 $\\mathbb{A} \\cdot \\mathbb{A}^{T}$ 의 고유벡터(Eigen Vector)임\\[\\mathbb{A}\\mathbb{A}^{T} \\cdot \\overrightarrow{u}_i = \\lambda_i \\overrightarrow{u}_i\\]                    열벡터 $\\overrightarrow{u}_{i}$ 의 길이는 $1$ 임\\[\\Vert \\overrightarrow{u}_{i} \\Vert = 1\\]                    열벡터 \\(\\overrightarrow{u}_{i}, \\overrightarrow{u}_{j}\\) 은 직교함\\[\\overrightarrow{u}_{i} \\perp \\overrightarrow{u}_{j} \\Leftrightarrow \\langle \\overrightarrow{u}_{i}, \\overrightarrow{u}_{j} \\rangle = 0\\]              $\\mathbb{V}_{d \\times k}^{T}$ : 직교 정규 행렬(Ortho-normal Matrix)                  열벡터 $\\overrightarrow{v}_{i} \\in \\mathbb{V}$ 는 행렬 $\\mathbb{A}^{T} \\cdot \\mathbb{A}$ 의 고유벡터(Eigen Vector)임\\[\\mathbb{A}^{T}\\mathbb{A} \\cdot \\overrightarrow{v}_i = \\lambda_i \\overrightarrow{v}_i\\]                    열벡터 $\\overrightarrow{v}_{i}$ 의 길이는 $1$ 임\\[\\Vert \\overrightarrow{v}_{i} \\Vert = 1\\]                    열벡터 \\(\\overrightarrow{v}_{i}, \\overrightarrow{v}_{j}\\) 은 직교함\\[\\overrightarrow{v}_{i} \\perp \\overrightarrow{v}_{j} \\Leftrightarrow \\langle \\overrightarrow{v}_{i}, \\overrightarrow{v}_{j} \\rangle = 0\\]                  $\\Sigma_{k \\times k}$ : 대각 행렬(Diagonal Matrix)\\[\\Sigma_{k \\times k}  = \\begin{pmatrix}  \\sigma_{1} &amp; 0 &amp; \\cdots &amp; 0 \\\\  0 &amp; \\sigma_{2} &amp; \\cdots &amp; 0 \\\\  \\vdots &amp; \\vdots &amp; \\ddots &amp; \\vdots \\\\  0 &amp; 0 &amp; \\cdots &amp; \\sigma_{k}  \\end{pmatrix}\\]                  대각항의 원소 $\\sigma_{i}$ 는 행렬 $\\mathbb{A} \\cdot \\mathbb{A}^{T}$ 혹은 $\\mathbb{A}^{T} \\cdot \\mathbb{A}$ 의 고유값(Eigen Value) $\\lambda_{i}$ 의 자승근임\\[\\sigma_{i} = \\sqrt{\\lambda_i}\\]            LDA      잠재 디리클레 할당(Latent Dirichlet Allocation; LDA) : 베이지안 프레임워크를 활용하여 문서에 내재된 잠재적인 토픽 구조를 탐색하는 방법\\[\\begin{aligned}  &amp;\\hat{\\theta}, \\hat{\\psi}\\\\  &amp;=\\text{arg} \\max_{\\theta, \\psi}{\\prod_{d=1}^{D}{\\prod_{n=1}^{N_d}{P(\\theta_d, \\psi_{z(d,n)}; z(d,n) \\mid w(d,n))}}}\\\\  &amp;\\propto \\text{arg} \\max_{\\theta, \\psi}{\\prod_{d=1}^{D}{\\prod_{n=1}^{N_d}{P(\\theta_d \\mid z(d,n)) \\times P(\\psi_{z(d,n)} \\mid w(d,n))}}}\\\\  &amp;\\propto \\text{arg} \\max_{\\theta, \\psi}{\\prod_{d=1}^{D}{\\prod_{n=1}^{N_d}{\\underbrace{P(\\theta_d) \\cdot P(z(d,n) \\mid \\theta_d)}_{\\begin{array}{c} \\text{Document-Topic} \\\\ \\text{Allocation} \\end{array}} \\times \\underbrace{P(\\psi_{z(d,n)}) \\cdot P(w(d,n) \\mid \\psi_{z(d,n)})}_{\\begin{array}{c} \\text{Topic-Word} \\\\ \\text{Allocation} \\end{array}}}}}  \\end{aligned}\\]          $P(\\theta_d \\mid z(d,n)) \\propto P(\\theta_d) \\cdot P(z(d,n) \\mid \\theta_d)$ : Posterior Probability of Document-Topic Allocation      $P(\\psi_{z(d,n)} \\mid w(d,n)) \\propto P(\\psi_{z(d,n)}) \\cdot P(w(d,n) \\mid \\psi_{z(d,n)})$ : Posterior Probability of Topic-Word Allocation      Posterior Probability  각 문서는 여러 토픽의 혼합으로 구성되어 있고, 각 토픽은 특정 단어들의 혼합으로 구성되어 있다고 가정하자. 특정 문서를 구성하고 있는 단어들로부터, 해당 단어들을 발생시킨 토픽들의 비중을 추론할 수 있음.      문서 $d$ 에는 여러 토픽들이 담겨 있으며, 각 토픽 발생 확률은 디리클레 분포를 따름\\[\\begin{aligned} k \\mid \\theta_d &amp;\\sim \\text{Multinomial}(\\theta_{d})\\\\ \\theta_{d} &amp;\\sim \\text{Dirichlet}(\\alpha) \\end{aligned}\\]          $k \\mid \\theta_d$ : 문서 $d$ 에서 토픽 $k$ 가 발생할 확률      $\\theta_d$ : $d$ 번째 문서에서 각 토픽들이 발생할 확률            토픽 $k$ 에서는 여러 단어들이 발생할 수 있으며, 각 단어 발생 확률은 디리클레 분포를 따름\\[\\begin{aligned} w \\mid \\psi_{k} &amp;\\sim \\text{Multinomial}(\\psi_{k})\\\\ \\psi_{k} &amp;\\sim \\text{Dirichlet}(\\beta) \\end{aligned}\\]          $w \\mid \\psi_{k}$ : 토픽 $k$ 에서 단어 $w$ 가 발생할 확률      $\\psi_{k}$ : 토픽 $k$ 에서 각 단어들이 발생할 확률            따라서 단어 $w(d,n)$ 이 발생했을 때, $\\theta_d$ 및 $\\psi_{z(d,n)}$ 의 사후 확률 분포는 다음과 같음\\[\\begin{aligned} &amp;P(\\theta_d, \\psi_{z(d,n)}; z(d,n) \\mid w(d,n))\\\\ &amp;\\propto \\underbrace{P(\\theta_d \\mid z(d,n))}_{\\begin{array}{c} \\text{Posterior of} \\\\ \\text{Document-Topic} \\\\ \\text{Allocation} \\end{array}} \\times \\underbrace{P(\\psi_{z(d,n)} \\mid w(d,n))}_{\\begin{array}{c} \\text{Posterior of} \\\\ \\text{Topic-Word} \\\\ \\text{Allocation} \\end{array}}\\\\ &amp;\\propto \\left[\\underbrace{P(\\theta_d)}_{\\text{Prior}} \\cdot \\underbrace{P(z(d,n) \\mid \\theta_d)}_{\\text{Likelihood}}\\right] \\times \\left[\\underbrace{P(\\psi_{z(d,n)})}_{\\text{Prior}} \\cdot \\underbrace{P(w(d,n) \\mid \\psi_{z(d,n)})}_{\\text{Likelihood}}\\right] \\end{aligned}\\]          $w(d,n)$ : 문서 $d$ 의 $n$ 번째 단어      $z(d,n)$ : 단어 $w(d,n)$ 에 대하여 해당 단어가 할당된 토픽      $\\theta_d$ : 문서 $d$ 의 토픽 분포      $\\psi_{z(d,n)}$ : 토픽 $z(d,n)$ 의 단어 분포      이미지 출처  https://intoli.com/blog/pca-and-svd/"
+  },
+  
+  {
+    "title": "Language Model",
+    "url": "/posts/Langauge_Model/",
+    "categories": "Data Mining, Text Analytics",
+    "tags": "Data Mining, NLP, Text Mining, Language Model",
+    "date": "2024-08-03 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "Language Model  언어 모형(Language Model) : Word Sequence(문장)에 확률을 할당하여 가장 자연스러운 문장을 탐색하는 모형Statistical Language ModelSLM      SLM(Statistical Language Model) : 조건부 확률을 활용하여 Word Sequence 발생 확률을 부여하는 모...",
+    "content": "Language Model  언어 모형(Language Model) : Word Sequence(문장)에 확률을 할당하여 가장 자연스러운 문장을 탐색하는 모형Statistical Language ModelSLM      SLM(Statistical Language Model) : 조건부 확률을 활용하여 Word Sequence 발생 확률을 부여하는 모형\\[\\begin{aligned}  P(W)  &amp;= P(w_1, w_2, \\cdots, w_n)\\\\  &amp;= \\cancel{P(w_1)} \\cdot \\frac{\\cancel{P(w_1,w_2)}}{\\cancel{P(w_1)}} \\cdot \\frac{\\cancel{P(w_1, w_2, w_3)}}{\\cancel{P(w_1, w_2)}} \\cdots \\frac{P(w_1, w_2, \\cdots, w_n)}{\\cancel{P(w_1, w_2, \\cdots, w_{n-1})}}\\\\  &amp;= P(w_1) \\cdot P(w_2 \\mid w_1) \\cdot P(w_3 \\mid w_1, w_2) \\cdots P(w_n \\mid w_1, w_2, \\cdots, w_{n-1})\\\\  &amp;= \\prod_{i=1}^{n}{P(w_i \\mid w_1, w_2, \\cdots, w_{i-1})}  \\end{aligned}\\]        확률 부여 방법\\[\\begin{aligned}  P(w_i \\mid w_1, w_2, \\cdots, w_{i-1})  &amp;= \\frac{\\text{Count}(w_1, w_2, \\cdots, w_i)}{\\text{Count}(w_1, w_2, \\cdots, w_{i-1})}  \\end{aligned}\\]          $\\text{Count}(w_1, w_2, \\cdots, w_i)$ : 말뭉치에서 Word Sequence $(w_1, w_2, \\cdots, w_i)$ 가 등장한 횟수      n-Gram      n-Gram : $i$ 번째 단어를 예측함에 있어 $N-1$ 개의 단어만을 활용하는 방법\\[\\begin{aligned}  P(W)  &amp;= \\prod_{i=1}^{n}{P(w_{i} \\mid w_{i-(n-1)}, w_{i-(n-2)}, \\cdots, w_{i-1})}  \\end{aligned}\\]        How to Select $n$ : 통상 $n \\le 5$ 권장                            Problem          Small $n$          Large $n$                                      Sparsity Problem          $\\downarrow$          $\\uparrow$                          Long-term Dependency          $\\uparrow$          $\\downarrow$                            희소성 문제(Sparsity Problem) : 충분한 데이터를 관측하지 못하여 언어를 정확히 모델링하지 못하는 문제      장기 의존성 문제(Long-term Dependency) : 문맥 내에서 멀리 떨어져 있는 단어들 간의 관계를 처리하는 문제      Neural Networks based Langauge Model  통계적 방법론의 한계점과 그 대안          NNLM(Neural Networks Langauge Model) : 임베딩을 활용한 희소성 문제 보완      RNNLM(Recurrent Neural Networks Langauge Model) : RNN 계열 레이어를 활용한 장기 의존성 문제 보완            How to Generate a Context Vector for $w_{t+1}$              NNLM : $t$ 번째까지 등장한 단어 벡터들의 결합(Concatenation)으로 생성      RNNLM : $t$ 번째까지 등장한 단어 벡터들을 RNN 계열 레이어에 순차 입력하여 생성      NNLM  INPUT → PROJECTION          Projection : \\(\\overrightarrow{\\mathbf{w}}_{i} = \\overrightarrow{\\mathbf{x}}_{i} \\cdot \\mathbf{W}\\)      Concatenation : \\(\\overrightarrow{\\mathbf{z}}_{t} = \\overrightarrow{\\mathbf{w}}_{t-n+1} \\oplus \\overrightarrow{\\mathbf{w}}_{t-n+2} \\oplus \\cdots \\oplus \\overrightarrow{\\mathbf{w}}_{t}\\)            PRJECTION → HIDDEN\\[\\begin{aligned}  \\overrightarrow{\\mathbf{h}}_{t}  &amp;= \\text{MLP}_{\\text{ReLU}}\\left[\\overrightarrow{\\mathbf{z}}_{t}\\right]  \\end{aligned}\\]        HIDDEN → OUTPUT\\[\\begin{aligned}  \\hat{\\mathbf{y}}_{t+1}  &amp;= \\text{MLP}_{\\text{Softmax}}\\left[\\overrightarrow{\\mathbf{h}}_{t}\\right]  \\end{aligned}\\]  RNNLM      INPUT → PROJECTION\\[\\overrightarrow{\\mathbf{w}}_{i}  = \\overrightarrow{\\mathbf{x}}_{i} \\cdot \\mathbf{W}\\]        PRJECTION → HIDDEN\\[\\begin{aligned}  h_{t}, c_{t}  &amp;= \\text{LSTM}\\left(\\overrightarrow{\\mathbf{w}}_{t} \\mid h_{t-1}, c_{t-1}\\right)  \\end{aligned}\\]        HIDDEN → OUTPUT\\[\\begin{aligned}  \\hat{\\mathbf{y}}_{t+1}  &amp;= \\text{MLP}_{\\text{Softmax}}\\left[h_{t}\\right]  \\end{aligned}\\]  Metric      PPL(PerPLexity) : 언어 모형의 성능 평가 지표\\[\\begin{aligned}  PPL(W)  &amp;= P(W)^{-\\frac{1}{N}}\\\\  &amp;= P(w_1, w_2, \\cdots, w_N)^{-\\frac{1}{N}}\\\\  &amp;= \\sqrt[N]{\\frac{1}{P(w_1, w_2, \\cdots, w_N)}}\\\\  &amp;= \\sqrt[N]{\\frac{1}{\\prod_{i=1}^{n}{P(w_N \\mid w_1, w_2, \\cdots, w_{N-1})}}}  \\end{aligned}\\]        해석 : 선택 가능한 경우의 수를 의미하는 분기 계수(Branching Factor)로서, 특정 시점마다 평균적으로 고민하는 선택지 수\\[\\begin{aligned}  PPL(W)  &amp;=10\\\\  \\sqrt[N]{\\frac{1}{\\prod_{i=1}^{n}{P(w_N \\mid w_1, w_2, \\cdots, w_{N-1})}}}  &amp;= 10\\\\  \\prod_{i=1}^{n}{P(w_N \\mid w_1, w_2, \\cdots, w_{N-1})}  &amp;= \\left(\\frac{1}{10}\\right)^{N}\\\\  \\underset{\\frac{1}{10}}{P(w_1)} \\cdot \\underset{\\frac{1}{10}}{P(w_2 \\mid w_1)} \\cdot \\underset{\\frac{1}{10}}{P(w_3 \\mid w_1, w_2)} \\cdots \\underset{\\frac{1}{10}}{P(w_N \\mid w_1, w_2, \\cdots, w_{N-1})}  &amp;= \\left(\\frac{1}{10}\\right)^{N}  \\end{aligned}\\]  "
+  },
+  
+  {
+    "title": "Docs Representation",
+    "url": "/posts/Docs_Representation/",
+    "categories": "Data Mining, Text Analytics",
+    "tags": "Data Mining, NLP, Text Mining, Document Representation, Embedding",
+    "date": "2024-08-02 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "Traditional Method      BoW(Bag of Words) : 문서를 단어 빈도 수로 표현하는 방법            DTM(Document Term Matrix) : 여러 개의 문서를 BoW 로 표현하는 방법            TF-IDF(Term Frequency-Inverse Document Frequency) : DTM 내 ...",
+    "content": "Traditional Method      BoW(Bag of Words) : 문서를 단어 빈도 수로 표현하는 방법            DTM(Document Term Matrix) : 여러 개의 문서를 BoW 로 표현하는 방법            TF-IDF(Term Frequency-Inverse Document Frequency) : DTM 내 단어들에 대하여 각 단어의 중요도에 따라 가중치를 부여하여 표현하는 방법\\[\\text{TF-IDF}(d,t)=\\text{TF}(d,t) \\cdot \\text{IDF}(t)\\]                  TF(Term Frequency) : 문서 $d$ 에서 단어 $t$ 가 등장하는 횟수\\[\\text{TF}(d,t)\\]                    IDF(Inverse Document Frequency) : 단어 $t$ 가 등장하는 문서의 수에 반비례하는 수\\[\\text{IDF}(t)=\\ln{\\frac{n}{1+\\text{DF}(t)}}\\]                  $n$ : 문서의 수          $\\text{DF}(t)$ : 단어 $t$ 가 등장하는 문서의 수                    DOC2VEC      도큐먼트 투 벡터(DOC2VEC) : WORD2VEC 을 활용하여 문서의 밀집 표현을 학습하는 방법론            PV-DM(Paragraph Vector-Distributed Memory) : WORD2VEC 의 CBOW 와 유사한 학습 방법으로서, 도큐먼트 벡터와 주변 단어 벡터들이 주어졌을 때 발생 가능한 중심 단어 벡터를 추론하는 과정에서 도큐먼트 벡터 표현을 학습함\\[\\begin{aligned}  P\\left(w_{t} \\mid d, w_{t-\\omega}, \\cdots, w_{t-1}, w_{t+1}, \\cdots, w_{t+\\omega}\\right)  &amp;= \\text{Softmax}\\left(\\overrightarrow{\\mathbf{d}} + \\sum_{i \\in \\text{Context}}{\\overrightarrow{\\mathbf{w}}_{i}}\\right)  \\end{aligned}\\]        PV-DBOW(Paragraph Vector-Distributed Bag Of Words) : WORD2VEC 의 Skip-Gram 과 유사한 학습 방법으로서, 도큐먼트 벡터가 주어졌을 때 단어들의 발생 확률 분포 벡터를 추론하는 과정에서 도큐먼트 벡터 표현을 학습함\\[\\begin{aligned}  P\\left(\\cdots \\mid d\\right)  &amp;= \\text{Softmax}\\left(\\overrightarrow{\\mathbf{d}} \\cdot \\mathbf{W}\\right)  \\end{aligned}\\]  "
+  },
+  
+  {
+    "title": "WORD2VEC Improvements",
+    "url": "/posts/WORD2VEC_Improvements/",
+    "categories": "Data Mining, Text Analytics",
+    "tags": "Data Mining, NLP, Text Mining, Word Representation, Embedding",
+    "date": "2024-08-01 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "Fast-Text      Fast-Text : 내부 단어(Sub-word)를 고려한 임베딩 학습 방법론          EAT vs. EATING              WORD2VEC 의 한계점 : 단어의 형태학적 특성을 고려하지 않으므로, 비슷한 문맥에서 사용되지 않았다면 동일한 어근에서 파생된 단어들의 의미상 유사도를 반영할 수 없음      ...",
+    "content": "Fast-Text      Fast-Text : 내부 단어(Sub-word)를 고려한 임베딩 학습 방법론          EAT vs. EATING              WORD2VEC 의 한계점 : 단어의 형태학적 특성을 고려하지 않으므로, 비슷한 문맥에서 사용되지 않았다면 동일한 어근에서 파생된 단어들의 의미상 유사도를 반영할 수 없음      Fast-Text 의 해법 : 단어를 철자(Character) 단위의 n-gram 으로 간주하고, 단어 자체가 아니라 내부 단어들의 임베딩을 학습함                  통상 $3 \\le n \\le 6$ 으로 설정함                          EXAMPLE “eating”                  Character $n$-grams of eating                                            word              $n$              n-grams(sub-word)                                                          eating              3-gram              &lt;ea, eat, ati, tin, ing, ng&gt;                                      eating              4-gram              &lt;eat, eati, atin, ting, ing&gt;                                      eating              5-gram              &lt;eati, eatin, ating, ting&gt;                                      eating              6-gram              &lt;eatin, eating, ating&gt;                                      eating              Full              eating                                                  Embedding Vector of eating\\[\\begin{aligned}  \\overrightarrow{\\mathbf{z}}  &amp;= \\text{Embedding}\\left(\\text{eating}\\right) + \\sum_{n}{\\text{Embedding}\\left(n\\text{-grams}\\right)}  \\end{aligned}\\]            GloVe  WORD2VEC, Fast-Text 의 한계점 : 말뭉치 내 Global Context 를 활용하지 못함Co-occurrence Matrix based Method      Co-occurrence Matrix : 말뭉치에서 각 단어가 윈도우 내에 다른 단어와 함께 등장하는 횟수를 측정한 행렬                            Counts          I          like          enjoy          deep          learning          NLP          flying          .                                      I          0                                                                                                       like                     0                                                                                            enjoy                                0                                                                                 deep                                           0                                                                      learning                                                      0                                                           NLP                                                                 0                                                flying                                                                            0                                     .                                                                                       0                            $X_{i,j} \\in \\mathbf{X}_{N \\times N}$ : $i$ 번째 단어를 중심으로 했을 때 윈도우 내에 $j$ 번째 단어가 등장한 횟수            PMI(Point Mutual Information) : 단순 횟수 측정 시 발생하는 고빈도 단어에 대한 잘못된 표현을 정정하기 위하여 고안된 측정 지표로서, 단어 $x$ 와 $y$ 가 동시에 발생할 확률을, 각각이 발생할 확률로 나눈 값\\[\\begin{aligned}  PMI(A,B)  &amp;= \\log{\\frac{P(A,B)}{P(A)P(B)}}\\\\  &amp;= \\log{N} + \\log{\\text{Count}(A,B)} - \\log{\\text{Count}(A)} - \\log{\\text{Count}(B)}  \\end{aligned}\\]        PPMI(Positive Point Mutual Information) : 두 단어의 동시 발생 횟수가 $0$ 일 때 발생하는 음의 무한대로의 발산 문제를 해결한 측정 지표\\[\\begin{aligned}  PPMI(A,B)  &amp;=\\max\\left(0, PMI(A,B)\\right)  \\end{aligned}\\]        SVD 를 활용하여 고차원 문제 보완    \\[\\begin{aligned}  \\mathbf{X}_{N \\times N}  \\approx \\underbrace{\\mathbf{U}_{N \\times N} \\cdot \\Sigma_{N \\times D}}_{\\text{Vector Representation}} \\cdot \\mathbf{V}^{T}_{N \\times D}  \\end{aligned}\\]  GloVe  Co-occurrence Matrix based Method 의 한계점          단어 간 유사도가 반영된 벡터 표현을 도출하지 못함      고차원 행렬이기 때문에 SVD 등 차원 축소 기법을 추가로 활용해야 함        GloVe(Global Vectors for Word Representation) : 단어 간 전역적 통계 정보를 활용하여 단어를 임베딩하는 방법론                  중심 단어 $i$ 와 주변 단어 $j$ 간 임베딩 벡터의 내적값이 동시 발생 확률이 되도록 학습함\\[\\begin{aligned}  \\overrightarrow{\\mathbf{w}}_{i} \\cdot \\overrightarrow{\\mathbf{v}}_{j}   \\approx \\log{P(w_{j} \\mid w_{i})}  = \\log{\\frac{X_{i,j}}{\\sum_{k}{X_{i,k}}}}  \\end{aligned}\\]                  $\\overrightarrow{\\mathbf{w}}_{i} \\in \\mathbf{W}$ : 단어 $i$ 가 중심 단어일 때의 임베딩 벡터          $\\overrightarrow{\\mathbf{v}}_{j} \\in \\mathbf{V}$ : 단어 $j$ 가 주변 단어일 때의 임베딩 벡터          $P(w_{j} \\mid w_{i})$ : 중심 단어 $i$ 발생 조건부 $j$ 발생 확률          $\\log{P(w_{j} \\mid w_{i})}$ : 스케일 조정을 위하여 공동 발생 확률 자체가 아니라 공동 발생 확률의 로그값에 수렴하도록 학습함                            동시 발생 확률 $P(w_{j} \\mid w_{i})$ 대신 동시 발생 횟수 $X_{i,j}$ 를 활용함\\[\\begin{aligned}  \\overrightarrow{\\mathbf{w}}_{i} \\cdot \\overrightarrow{\\mathbf{v}}_{j}   \\approx \\log{X_{i,j}}  \\end{aligned}\\]                  내적 값과 확률 값의 직접 대응이 어렵기 때문임($\\because \\sum_{j}{P(w_{j} \\mid w_{i})}=1$)                          Loss Function\\[\\begin{aligned}  \\mathcal{L}  &amp;= \\sum_{i,j}{f(X_{i,j})\\left(\\overrightarrow{\\mathbf{w}}_{i} \\cdot \\overrightarrow{\\mathbf{v}}_{j} + (b_{i} + \\beta_{j}) - \\log{X_{i,j}}\\right)^{2}}  \\end{aligned}\\]          \\(f(X_{i,j})=\\min{\\left(1, \\left(\\frac{X_{i,j}}{X_{\\text{max}}}\\right)^{3/4}\\right)}\\) : 학습 중 고빈도 단어 영향력 조정 함수      ELMo      FFNN 에 기반한 기존 방법론의 한계점 : 문장 전체의 문맥을 반영하지 못하여 동의어, 다형어에 대한 표현이 제대로 이루어지지 못함        ELMo(Embeddings from Language Model) : 방대한 텍스트 데이터로 사전 훈련된 LSTM 기반 언어 모형 BiLM 을 활용하는 단어 임베딩 방법론            BiLM(Bidirectional Language Model) : 문장 시퀀스를 순방향, 역방향으로 각각 학습하는 LSTM 기반 언어 모형            Forward Path                      Multi-Layer LSTM\\[\\begin{aligned} h^{(k)}_{t}, c^{(k)}_{t} &amp;= \\text{LSTM}^{(k)}\\left[h^{(k-1)}_{t} \\mid h^{(k)}_{t-1}, c^{(k)}_{t-1}\\right] \\end{aligned}\\]                  $h^{(k)}_{t}$ : $k$ 번째 LSTM Layer 의 $t$ 시점 은닉 값                          첫 번째 LSTM Layer 의 $t$ 시점 입력값 \\(h^{(0)}_{t}\\) 은 $t$ 시점 단어 $w_{t}$ 의 임베딩 벡터임                                $c^{(k)}_{t}$ : $k$ 번째 LSTM Layer 의 $t$ 시점 셀 상태 값                            Fully Connected Layers\\[\\begin{aligned} \\hat{\\mathbf{y}} &amp;= \\text{MLP}_{\\text{softmax}}\\left[h^{(K)}_{T}\\right] \\end{aligned}\\]                  ELMo Representation    \\[\\begin{aligned}  \\overrightarrow{\\mathbf{w}}_{t}  &amp;= \\sum_{k}{\\gamma^{(k)}\\left(h^{(k)}_{t} \\oplus \\eta^{(k)}_{t}\\right)}  \\end{aligned}\\]  이미지 출처  https://intoli.com/blog/pca-and-svd/  https://wikidocs.net/33930"
+  },
+  
+  {
+    "title": "Word Representation",
+    "url": "/posts/Word_Representation/",
+    "categories": "Data Mining, Text Analytics",
+    "tags": "Data Mining, NLP, Text Mining, Word Representation, Embedding",
     "date": "2024-07-31 00:00:00 +0900",
     
 
@@ -64,14 +200,14 @@
 
 
     
-    "snippet": "Text RepresentationWord Representation      원 핫 인코딩(One Hot Encoding) : 단어를 전체 Voca Set 크기를 차원으로 하는 벡터로 표현하는 방법      Document Representation      BoW(Bag of Words) : 문서를 단어 빈도 수로 표현하는 방법           ...",
-    "content": "Text RepresentationWord Representation      원 핫 인코딩(One Hot Encoding) : 단어를 전체 Voca Set 크기를 차원으로 하는 벡터로 표현하는 방법      Document Representation      BoW(Bag of Words) : 문서를 단어 빈도 수로 표현하는 방법            DTM(Document Term Matrix) : 여러 개의 문서를 BoW 로 표현하는 방법            TF-IDF(Term Frequency-Inverse Document Frequency) : DTM 내 단어들에 대하여 각 단어의 중요도에 따라 가중치를 부여하여 표현하는 방법\\[\\text{TF-IDF}(d,t)=\\text{TF}(d,t) \\cdot \\text{IDF}(t)\\]                  TF(Term Frequency) : 문서 $d$ 에서 단어 $t$ 가 등장하는 횟수\\[\\text{TF}(d,t)\\]                    IDF(Inverse Document Frequency) : 단어 $t$ 가 등장하는 문서의 수에 반비례하는 수\\[\\text{IDF}(t)=\\ln{\\frac{n}{1+\\text{DF}(t)}}\\]                  $n$ : 문서의 수          $\\text{DF}(t)$ : 단어 $t$ 가 등장하는 문서의 수                    Language Model  언어 모형(Language Model) : Word Sequence(문장)에 확률을 할당하여 가장 자연스러운 문장을 탐색하는 모형SLM      Statistical Language Model(SLM) : 조건부 확률을 활용하여 Word Sequence 발생 확률을 부여하는 모형\\[\\begin{aligned}  P(W)  &amp;= P(w_1, w_2, \\cdots, w_n)\\\\  &amp;= \\cancel{P(w_1)} \\cdot \\frac{\\cancel{P(w_1,w_2)}}{\\cancel{P(w_1)}} \\cdot \\frac{\\cancel{P(w_1, w_2, w_3)}}{\\cancel{P(w_1, w_2)}} \\cdots \\frac{P(w_1, w_2, \\cdots, w_n)}{\\cancel{P(w_1, w_2, \\cdots, w_{n-1})}}\\\\  &amp;= P(w_1) \\cdot P(w_2 \\mid w_1) \\cdot P(w_3 \\mid w_1, w_2) \\cdots P(w_n \\mid w_1, w_2, \\cdots, w_{n-1})\\\\  &amp;= \\prod_{i=1}^{n}{P(w_i \\mid w_1, w_2, \\cdots, w_{i-1})}  \\end{aligned}\\]        확률 부여 방법\\[\\begin{aligned}  P(w_i \\mid w_1, w_2, \\cdots, w_{i-1})  &amp;= \\frac{\\text{Count}(w_1, w_2, \\cdots, w_i)}{\\text{Count}(w_1, w_2, \\cdots, w_{i-1})}  \\end{aligned}\\]          $\\text{Count}(w_1, w_2, \\cdots, w_i)$ : 말뭉치에서 Word Sequence $(w_1, w_2, \\cdots, w_i)$ 가 등장한 횟수      n-Gram      n-Gram : $i$ 번째 단어를 예측함에 있어 $N-1$ 개의 단어만을 활용하는 모형\\[\\begin{aligned}  P(W)  &amp;= \\prod_{i=1}^{n}{P(w_{i} \\mid w_{i-(n-1)}, w_{i-(n-2)}, \\cdots, w_{i-1})}  \\end{aligned}\\]        How to Select $n$ : 통상 $n \\le 5$ 권장                            Problem          Small $n$          Large $n$                                      Sparsity Problem          $\\downarrow$          $\\uparrow$                          Long-term Dependency          $\\uparrow$          $\\downarrow$                            희소성 문제(Sparsity Problem) : 충분한 데이터를 관측하지 못하여 언어를 정확히 모델링하지 못하는 문제      장기 의존성 문제(Long-term Dependency) : 문맥 내에서 멀리 떨어져 있는 단어들 간의 관계를 처리하는 문제      PPL      Perplexity(PPL) : 언어 모형의 성능 평가 지표\\[\\begin{aligned}  PPL(W)  &amp;= P(W)^{-\\frac{1}{N}}\\\\  &amp;= P(w_1, w_2, \\cdots, w_N)^{-\\frac{1}{N}}\\\\  &amp;= \\sqrt[N]{\\frac{1}{P(w_1, w_2, \\cdots, w_N)}}\\\\  &amp;= \\sqrt[N]{\\frac{1}{\\prod_{i=1}^{n}{P(w_N \\mid w_1, w_2, \\cdots, w_{N-1})}}}  \\end{aligned}\\]        해석 : 선택 가능한 경우의 수를 의미하는 분기 계수(Branching Factor)로서, 특정 시점마다 평균적으로 고민하는 선택지 수\\[\\begin{aligned}  PPL(W)  &amp;=10\\\\  \\sqrt[N]{\\frac{1}{\\prod_{i=1}^{n}{P(w_N \\mid w_1, w_2, \\cdots, w_{N-1})}}}  &amp;= 10\\\\  \\prod_{i=1}^{n}{P(w_N \\mid w_1, w_2, \\cdots, w_{N-1})}  &amp;= \\left(\\frac{1}{10}\\right)^{N}\\\\  \\underset{\\frac{1}{10}}{P(w_1)} \\cdot \\underset{\\frac{1}{10}}{P(w_2 \\mid w_1)} \\cdot \\underset{\\frac{1}{10}}{P(w_3 \\mid w_1, w_2)} \\cdots \\underset{\\frac{1}{10}}{P(w_N \\mid w_1, w_2, \\cdots, w_{N-1})}  &amp;= \\left(\\frac{1}{10}\\right)^{N}  \\end{aligned}\\]  Topic Model  토픽 모형(Topic Model) : 관측 가능한 단어(Word) 및 문서(Document)로부터 말뭉치(Corpus)에 내재되어 있는(Latent) 토픽(Topic)을 탐색하는 방법          문서(Document)는 토픽(Topic)으로 어떻게 표현할 수 있을까?      단어(Word)는 토픽(Topic) 별로 어떻게 등장하는가?      탐색된 Something(Topic)의 정체를 무엇이라 정의하면 좋을까?      LSA      잠재 의미 분석(Latent Semantic Analysis; LSA) : 특이값 분해(Singular Value Decomposition; SVD)를 활용하여 Document-Term Matrix 를 분해하는 방법\\[\\mathbb{A}_{n \\times d} \\approx \\mathbb{U}_{n \\times k} \\cdot \\Sigma_{k \\times k} \\cdot \\mathbb{V}^{T}_{d \\times k}\\]                            Dimension          Interpretation                                                 $n$          Number of Document                                     $d$          Number of Term                                     $k$          Number of Topic          Hyper-Parameter                            $\\mathbb{A}_{n \\times d}$ : Document-Term Matrix      \\(\\mathbb{U}_{n \\times k} \\cdot \\Sigma_{k \\times k}\\) : Document-Topic Matrix      $\\Sigma_{k \\times k} \\cdot \\mathbb{V}_{d \\times k}^{T}$ : Term-Topic Matrix      SVD      특이값 분해(Singular Value Decomposition; SVD) : 차원의 크기가 $n \\times d$ 인 임의의 행렬 $\\mathbb{A}$ 를 세 개의 행렬의 곱으로 분해하는 방법        $\\mathbb{U}_{n \\times k}$ : 직교 정규 행렬(Ortho-normal Matrix)                  열벡터 $\\overrightarrow{u}_{i} \\in \\mathbb{U}$ 는 행렬 $\\mathbb{A} \\cdot \\mathbb{A}^{T}$ 의 고유벡터(Eigen Vector)임\\[\\mathbb{A}\\mathbb{A}^{T} \\cdot \\overrightarrow{u}_i = \\lambda_i \\overrightarrow{u}_i\\]                    열벡터 $\\overrightarrow{u}_{i}$ 의 길이는 $1$ 임\\[\\Vert \\overrightarrow{u}_{i} \\Vert = 1\\]                    열벡터 \\(\\overrightarrow{u}_{i}, \\overrightarrow{u}_{j}\\) 은 직교함\\[\\overrightarrow{u}_{i} \\perp \\overrightarrow{u}_{j} \\Leftrightarrow \\langle \\overrightarrow{u}_{i}, \\overrightarrow{u}_{j} \\rangle = 0\\]              $\\mathbb{V}_{d \\times k}^{T}$ : 직교 정규 행렬(Ortho-normal Matrix)                  열벡터 $\\overrightarrow{v}_{i} \\in \\mathbb{V}$ 는 행렬 $\\mathbb{A}^{T} \\cdot \\mathbb{A}$ 의 고유벡터(Eigen Vector)임\\[\\mathbb{A}^{T}\\mathbb{A} \\cdot \\overrightarrow{v}_i = \\lambda_i \\overrightarrow{v}_i\\]                    열벡터 $\\overrightarrow{v}_{i}$ 의 길이는 $1$ 임\\[\\Vert \\overrightarrow{v}_{i} \\Vert = 1\\]                    열벡터 \\(\\overrightarrow{v}_{i}, \\overrightarrow{v}_{j}\\) 은 직교함\\[\\overrightarrow{v}_{i} \\perp \\overrightarrow{v}_{j} \\Leftrightarrow \\langle \\overrightarrow{v}_{i}, \\overrightarrow{v}_{j} \\rangle = 0\\]                  $\\Sigma_{k \\times k}$ : 대각 행렬(Diagonal Matrix)\\[\\Sigma_{k \\times k}  = \\begin{pmatrix}  \\sigma_{1} &amp; 0 &amp; \\cdots &amp; 0 \\\\  0 &amp; \\sigma_{2} &amp; \\cdots &amp; 0 \\\\  \\vdots &amp; \\vdots &amp; \\ddots &amp; \\vdots \\\\  0 &amp; 0 &amp; \\cdots &amp; \\sigma_{k}  \\end{pmatrix}\\]                  대각항의 원소 $\\sigma_{i}$ 는 행렬 $\\mathbb{A} \\cdot \\mathbb{A}^{T}$ 혹은 $\\mathbb{A}^{T} \\cdot \\mathbb{A}$ 의 고유값(Eigen Value) $\\lambda_{i}$ 의 자승근임\\[\\sigma_{i} = \\sqrt{\\lambda_i}\\]            LDA      잠재 디리클레 할당(Latent Dirichlet Allocation; LDA) : 베이지안 프레임워크를 활용하여 문서에 내재된 잠재적인 토픽 구조를 탐색하는 방법\\[\\begin{aligned}  &amp;\\hat{\\theta}, \\hat{\\psi}\\\\  &amp;=\\text{arg} \\max_{\\theta, \\psi}{\\prod_{d=1}^{D}{\\prod_{n=1}^{N_d}{P(\\theta_d, \\psi_{z(d,n)}; z(d,n) \\mid w(d,n))}}}\\\\  &amp;\\propto \\text{arg} \\max_{\\theta, \\psi}{\\prod_{d=1}^{D}{\\prod_{n=1}^{N_d}{P(\\theta_d \\mid z(d,n)) \\times P(\\psi_{z(d,n)} \\mid w(d,n))}}}\\\\  &amp;\\propto \\text{arg} \\max_{\\theta, \\psi}{\\prod_{d=1}^{D}{\\prod_{n=1}^{N_d}{\\underbrace{P(\\theta_d) \\cdot P(z(d,n) \\mid \\theta_d)}_{\\begin{array}{c} \\text{Document-Topic} \\\\ \\text{Allocation} \\end{array}} \\times \\underbrace{P(\\psi_{z(d,n)}) \\cdot P(w(d,n) \\mid \\psi_{z(d,n)})}_{\\begin{array}{c} \\text{Topic-Word} \\\\ \\text{Allocation} \\end{array}}}}}  \\end{aligned}\\]          $P(\\theta_d \\mid z(d,n)) \\propto P(\\theta_d) \\cdot P(z(d,n) \\mid \\theta_d)$ : Posterior Probability of Document-Topic Allocation      $P(\\psi_{z(d,n)} \\mid w(d,n)) \\propto P(\\psi_{z(d,n)}) \\cdot P(w(d,n) \\mid \\psi_{z(d,n)})$ : Posterior Probability of Topic-Word Allocation      Posterior Probability  각 문서는 여러 토픽의 혼합으로 구성되어 있고, 각 토픽은 특정 단어들의 혼합으로 구성되어 있다고 가정하자. 특정 문서를 구성하고 있는 단어들로부터, 해당 단어들을 발생시킨 토픽들의 비중을 추론할 수 있음.      문서 $d$ 에는 여러 토픽들이 담겨 있으며, 각 토픽 발생 확률은 디리클레 분포를 따름\\[\\begin{aligned} k \\mid \\theta_d &amp;\\sim \\text{Multinomial}(\\theta_{d})\\\\ \\theta_{d} &amp;\\sim \\text{Dirichlet}(\\alpha) \\end{aligned}\\]          $k \\mid \\theta_d$ : 문서 $d$ 에서 토픽 $k$ 가 발생할 확률      $\\theta_d$ : $d$ 번째 문서에서 각 토픽들이 발생할 확률            토픽 $k$ 에서는 여러 단어들이 발생할 수 있으며, 각 단어 발생 확률은 디리클레 분포를 따름\\[\\begin{aligned} w \\mid \\psi_{k} &amp;\\sim \\text{Multinomial}(\\psi_{k})\\\\ \\psi_{k} &amp;\\sim \\text{Dirichlet}(\\beta) \\end{aligned}\\]          $w \\mid \\psi_{k}$ : 토픽 $k$ 에서 단어 $w$ 가 발생할 확률      $\\psi_{k}$ : 토픽 $k$ 에서 각 단어들이 발생할 확률            따라서 단어 $w(d,n)$ 이 발생했을 때, $\\theta_d$ 및 $\\psi_{z(d,n)}$ 의 사후 확률 분포는 다음과 같음\\[\\begin{aligned} &amp;P(\\theta_d, \\psi_{z(d,n)}; z(d,n) \\mid w(d,n))\\\\ &amp;\\propto \\underbrace{P(\\theta_d \\mid z(d,n))}_{\\begin{array}{c} \\text{Posterior of} \\\\ \\text{Document-Topic} \\\\ \\text{Allocation} \\end{array}} \\times \\underbrace{P(\\psi_{z(d,n)} \\mid w(d,n))}_{\\begin{array}{c} \\text{Posterior of} \\\\ \\text{Topic-Word} \\\\ \\text{Allocation} \\end{array}}\\\\ &amp;\\propto \\left[\\underbrace{P(\\theta_d)}_{\\text{Prior}} \\cdot \\underbrace{P(z(d,n) \\mid \\theta_d)}_{\\text{Likelihood}}\\right] \\times \\left[\\underbrace{P(\\psi_{z(d,n)})}_{\\text{Prior}} \\cdot \\underbrace{P(w(d,n) \\mid \\psi_{z(d,n)})}_{\\text{Likelihood}}\\right] \\end{aligned}\\]          $w(d,n)$ : 문서 $d$ 의 $n$ 번째 단어      $z(d,n)$ : 단어 $w(d,n)$ 에 대하여 해당 단어가 할당된 토픽      $\\theta_d$ : 문서 $d$ 의 토픽 분포      $\\psi_{z(d,n)}$ : 토픽 $z(d,n)$ 의 단어 분포      이미지 출처  https://velog.io/@growthmindset/%EC%9B%90-%ED%95%AB-%EC%9D%B8%EC%BD%94%EB%94%A9One-Hot-Encoding  https://intoli.com/blog/pca-and-svd/"
+    "snippet": "Representation MethodsSparse Representation      희소 표현(Sparse Representation) : 하나의 단어를 하나의 차원으로 하는 $n$ 차원 공간에 단어를 표현하는 방법    \\[\\begin{aligned}  \\text{Dog}&amp;=\\begin{pmatrix} 1 &amp; 0 &amp; 0 &a...",
+    "content": "Representation MethodsSparse Representation      희소 표현(Sparse Representation) : 하나의 단어를 하나의 차원으로 하는 $n$ 차원 공간에 단어를 표현하는 방법    \\[\\begin{aligned}  \\text{Dog}&amp;=\\begin{pmatrix} 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \\cdots \\end{pmatrix}\\\\  \\text{Puppy}&amp;=\\begin{pmatrix} 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; \\cdots \\end{pmatrix}  \\end{aligned}\\]          Dimensionality Curse Problem in Sparse Vector      Semantic/Structural Disjointness Problem      Dense Representation      단어 임베딩(Word Embedding) : 희소 표현의 한계점을 보완한 방법으로서, 분포 가설에 근거하여 단어를 밀집된 형태로 표현하는 방법          Embedding  An embedding is a mapping of a discrete - categorical - variable to a vector of continuous numbers.  In the context of machine learning, an embedding is a low-dimensional, learned continuous vector representation of discrete variables into which you can translate high-dimensional vectors.            밀집 표현(Dense Representation) : 연구자가 설정한 $k \\le n$ 차원 공간에 단어를 표현하는 방법\\[\\begin{aligned}  \\text{Dog}&amp;=\\begin{pmatrix} 0.1 &amp; 0.3 &amp; -0.2 \\end{pmatrix}\\\\  \\text{Puppy}&amp;=\\begin{pmatrix} 0.1 &amp; 0.3 &amp; -0.3 \\end{pmatrix}  \\end{aligned}\\]        분산 표현(Distributed Representation) : 분포 가설에 근거하여 단어의 의미 를 다차원 공간에 표현하는 방법                  분포 가설(Distributional Hypothesis) : 비슷한 문맥에서 등장하는, 다시 말해 비슷하게 분포되어 있는 단어들은 비슷한 의미를 가짐\\[\\begin{aligned}  &amp;\\text{My dog is cute. Sometimes my dog braks at me.}\\\\  &amp;\\text{My puppy is cute. Sometimes my puppy braks at me.}  \\end{aligned}\\]            WORD2VEC  워드 투 벡터(WORD2VEC) : 단어 임베딩 학습 방법론          CBOW(Continuous Bag of Words) : 주변 단어들로부터 중심 단어를 예측하는 과정에서 단어의 벡터 표현을 학습하는 방법론      Skip-Gram : 중심 단어로부터 주변 단어들을 예측하는 과정에서 단어의 벡터 표현을 학습하는 방법론      SGNS(Skip-Gram with Negative Sampling) : Skip-Gram 에 Negative Sampling 을 적용함으로써 단어 예측 문제의 유형을 전환하는 방법론                  Skip-Gram : 중심 단어가 등장했을 때 전체 단어가 발생할 확률 분포 학습 문제          SGNS : 중심 단어가 등장했을 때 특정 주변 단어 발생 여부 판별 문제                          EXAMPLE “The fat cat sat on the mat” (Where Window Size is 2)        Annotation          $\\omega$ : Context Window Size      $i$ : Target Word      $j = 1,2,\\cdots,\\omega,\\cdots,2\\omega$ : Context Words      $N$ : Number of Words      $D$ : Embedding Size      $\\mathbf{X} \\in \\mathbb{R}^{N \\times N}$ : One-Hot Encoded Matrix      $\\mathbf{W} \\in \\mathbb{R}^{N \\times D}$ : Embedding Matrix      CBOW      INPUT → PROJECTION\\[\\begin{aligned}  \\overrightarrow{\\mathbf{z}}_{i}  &amp;= \\frac{1}{2 \\omega} \\sum_{j}{\\overrightarrow{\\mathbf{x}}_{j} \\cdot \\mathbf{W}}  \\end{aligned}\\]          \\(\\overrightarrow{\\mathbf{w}}_{j} = \\overrightarrow{\\mathbf{x}}_{j} \\cdot \\mathbf{W} \\in \\mathbb{R}^{D}\\) : Embedding Vector of Context Word $j$            PROJECTION → OUTPUT\\[\\begin{aligned}  \\hat{\\mathbf{x}}_{i}  &amp;= \\text{Softmax}\\left[\\overrightarrow{\\mathbf{z}}_{i} \\cdot \\mathbf{W}^{T}\\right]  \\end{aligned}\\]        Optimization\\[\\begin{aligned}  \\hat{\\mathbf{W}}  &amp;= \\text{arg} \\min{\\sum_{i}{\\text{Cross-Entropy}\\left[\\overrightarrow{\\mathbf{x}}_{i}, \\hat{\\mathbf{x}}_{i}\\right]}}  \\end{aligned}\\]  Skip-Gram      INPUT → PROJECTION\\[\\begin{aligned}  \\overrightarrow{\\mathbf{w}}_{i}  &amp;=\\overrightarrow{\\mathbf{x}}_{i} \\cdot \\mathbf{W}  \\end{aligned}\\]        PROJECTION → OUTPUT\\[\\begin{aligned}  \\overrightarrow{\\mathbf{y}}_{i}  &amp;= \\text{Softmax}\\left[\\overrightarrow{\\mathbf{w}}_{i} \\cdot \\mathbf{W}^{T}\\right]  \\end{aligned}\\]          \\(\\overrightarrow{\\mathbf{y}}_{i} \\in \\mathbb{R}^{N}\\) : Context Probability Distribution Vector for Target Word $i$            Optimization\\[\\begin{aligned}  \\hat{\\mathbf{W}}  &amp;= \\text{arg} \\min{\\sum_{i,j}{\\text{Cross-Entropy}\\left[\\overrightarrow{\\mathbf{x}}_{j}, \\overrightarrow{\\mathbf{y}}_{i}\\right]}}  \\end{aligned}\\]  SGNS      이진 분류 문제로 전환하기 위한 입력과 레이블 변화            Negative Sampling                      $k$ 번째 단어가 샘플링될 확률\\[\\begin{aligned}  P\\left(w_{k} \\mid \\alpha \\right)  &amp;= \\frac{f\\left(w_{k}\\right)^{\\alpha}}{\\sum_{l=1}^{N}{f\\left(w_{l}\\right)^{\\alpha}}}  \\end{aligned}\\]                  $\\alpha=0.75$ : 샘플링 확률 조정 파라미터로서 고빈도 단어가 샘플링될 확률을 할인함          $f\\left(w_{k}\\right)$ : 통상 단어 빈도수로 설정함                          Optimization    \\[\\begin{aligned}  \\hat{\\mathbf{W}}, \\hat{\\mathbf{V}}  &amp;= \\text{arg} \\min{-\\sum_{i,j}{y_{i,j} \\log{\\sigma\\left[\\mathbf{W}_{i} \\cdot \\mathbf{V}_{j}\\right]} + \\left(1-y_{i,j}\\right) \\log{\\sigma\\left[-\\mathbf{W}_{i} \\cdot \\mathbf{V}_{j}\\right]}}}  \\end{aligned}\\]          $\\mathbf{W} \\in \\mathbb{R}^{N \\times D}$ : Target Embedding Matrix      $\\mathbf{V} \\in \\mathbb{R}^{N \\times D}$ : Target Embedding Matrix      $\\sigma\\left[\\cdot\\right]$ : Sigmoid Function            What? Final Embedding Matrix          Target Embedding Matrix $\\mathbf{W}$      Concatenation $\\mathbf{W} \\oplus \\mathbf{V}$      Mean, Plus, etc.      이미지 출처  https://velog.io/@growthmindset/%EC%9B%90-%ED%95%AB-%EC%9D%B8%EC%BD%94%EB%94%A9One-Hot-Encoding  https://wikidocs.net/22660  https://wikidocs.net/69141"
   },
   
   {
     "title": "ExpoMF",
     "url": "/posts/EXMF/",
-    "categories": "Research Interest, Recommender System",
+    "categories": "Data Mining, Recommender System",
     "tags": "Paper Review, Data Mining, Recommender System, Collaborative Filtering, Latent Factor Model, Implicit Feedback, Weight Approach, Bayesian",
     "date": "2024-07-31 00:00:00 +0900",
     
@@ -86,10 +222,27 @@
   },
   
   {
+    "title": "Text Data Preprocessing",
+    "url": "/posts/Text_Data_Preprocessing/",
+    "categories": "Data Mining, Text Analytics",
+    "tags": "Data Mining, NLP, Text Mining",
+    "date": "2024-07-30 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "Text Analytics      텍스트 애널리틱스(Text Analytics) : 텍스트로부터 정보를 추출하는 과정          Text mining, text data mining(TDM) or text analytics is the process of deriving high-quality information from text. It in...",
+    "content": "Text Analytics      텍스트 애널리틱스(Text Analytics) : 텍스트로부터 정보를 추출하는 과정          Text mining, text data mining(TDM) or text analytics is the process of deriving high-quality information from text. It involves “the discovery by computer of new, previously unknown information, by automatically extracting inofrmation from different written resources. (Wikipedia)            사례                                       규칙 기반 방법론          통계적 방법론          신경망 기반 방법론          RNN          Attention                                      단어 표현          One-Hot Encoding          -          Word2Vec          ELMo          -                          문서 표현          DTM          -          Doc2Vec          -          -                          언어 모형          -          SLM          `NNLM          RNNLM          BERT                          토픽 모형          -          LSA, LDA          -          -          BERTopic                          기계 번역          RBMT          SMT          NMT          SEQ2SEQ          Transformer                          생성 모형          -          -          -          -          GPT                    Process      문제 정의(Problem Definition)          어떤 문제를 해결할 것인가? 이를 위해 필요한 데이터는 무엇인가?        텍스트 데이터 획득(Text Data Collection)          크롤링(Crawling)      스크래이핑(Scraping) 등        텍스트 데이터 전처리(Text Data Preprocessing) : 자연어를 특정 단위로 분할하고, 유용하지 않은 데이터를 제거하고, 동일한 의미를 가진 데이터를 획일화하는 작업          토큰화(Tokenization)      정제(Cleansing)      정규화(Normalization) 등        벡터 표현(Vector Representation) : 자연어를 컴퓨터가 이해할 수 있는 형식으로 표현하는 작업          원-핫 인코딩(One-Hot Encoding)      워드 투 벡터(Word2Vec) 등        모델링(Modeling)          Summarization      Visualization      Topic Model      Docs Classification      Docs Clustering      NLU(Natural Language Understanding)      NLG(Natural Language Generation)      Text Data Preprocessing  순서          토큰화(Tokenization)      정제(Cleansing)      정규화(Normalization)      Tokenization  자연어(Natural Language) : 사람들이 일상적으로 쓰는 언어를 인공적인 언어인 인공어와 구분하여 부르는 개념(Wikipedia)          형태상으로는 문자(Character)로, 의미상으로는 단어(Word)로 구성된 시계열 데이터(Sequence Data)      자연어를 컴퓨터가 이해할 수 있는 형식으로 변환함에 있어, 그 의미가 반영될 수 있어야 함        토큰화(Tokenization) : 주어진 말뭉치를 토큰 단위로 나누는 작업          말뭉치(Corpus) : 자연어 처리 목적으로 수집된 텍스트 데이터      토큰(Token) : 문장이나 단어 등 의미의 최소 단위        POS(Part of Speech) Tagging : (특히 동음이의어를 구분하기 위하여) 토큰에 그 앞, 뒤 문맥상 적합한 품사를 태깅하는 작업Cleansing  정제(Cleansing) : 말뭉치에서 노이즈를 제거하는 작업          등장 빈도가 적은 토큰 제거      (특히 영어에서) 길이가 짧은 토큰 제거      불용어(Stopwords) 제거      오탈자, 띄어쓰기 교정 등      Normalization      정규화(Normalization) : 다른 형태를 취하나 의미가 같은 단어들을 하나로 통합하여 동일한 표현으로 만드는 작업    표제어 추출(Lemmatization) : 대상 토큰의 품사에 알맞은 표제어를 추출하는 행위          표제어(Lemma) : 기본 사전형 단어        어간 추출(Stemming) : 단어의 변형된 형태를 제거하거나 치환하여 어간을 추출하는 행위로서, 형태학적 파싱보다는 정해진 규칙에 따라 접사를 잘라내는 작업에 가까움          형태학(Morphology) : 형태소로부터 단어가 형성되는 과정을 분석하는 학문      형태소(Morpheme) : 의미가 있는, 가장 작은 말의 단위                  어간(Stem) : 단어의 의미를 담고 있는 부분          접사(Affix) : 단어에 추가적인 의미를 부여하는 부분                    Agglutinative Language      교착어(Agglutinative Language) : 한국어 등 어간에 문법적으로 기능하는 형태소가 결합하여 문법적 기능이 부여되는 언어    자립형태소 : 자립하여 사용할 수 있는 형태소          체언(명사, 대명사, 수사)      수식언(관형사, 부사)      감탄사 등        의존형태소 : 다른 형태소와 결합하여 사용되는 형태소          어미 : 동사, 형용사의 어간에 결합하여 문법적 기능을 부여하는 형태소      조사 : 체언에 결합하여 문법적 기능을 부여하는 형태소      "
+  },
+  
+  {
     "title": "Regular Expression",
     "url": "/posts/Regular-Expression/",
-    "categories": "AI & Data Mining, Text Analytics",
-    "tags": "Data Mining, Text Mining",
+    "categories": "Data Mining, Text Analytics",
+    "tags": "Data Mining, NLP, Text Mining",
     "date": "2024-07-29 00:00:00 +0900",
     
 
@@ -173,7 +326,7 @@
   {
     "title": "VABMF",
     "url": "/posts/VABMF/",
-    "categories": "Research Interest, Recommender System",
+    "categories": "Data Mining, Recommender System",
     "tags": "Paper Review, Data Mining, Recommender System, Collaborative Filtering, Latent Factor Model, Deep Learning, Autoencoder, Implicit Feedback, Bayesian",
     "date": "2024-07-17 00:00:00 +0900",
     
@@ -445,7 +598,7 @@
   {
     "title": "BPMF",
     "url": "/posts/BPMF/",
-    "categories": "Research Interest, Recommender System",
+    "categories": "Data Mining, Recommender System",
     "tags": "Paper Review, Data Mining, Recommender System, Collaborative Filtering, Latent Factor Model, Bayesian",
     "date": "2024-07-03 00:00:00 +0900",
     
@@ -496,7 +649,7 @@
   {
     "title": "Bayes by Backprop",
     "url": "/posts/BBB/",
-    "categories": "Research Interest, Bayesian Deep Learning",
+    "categories": "Machine Learning Techs, Bayesian Deep Learning",
     "tags": "Deep Learning, Bayesian, Information Theory, Variational Inference",
     "date": "2024-06-19 00:00:00 +0900",
     
@@ -513,7 +666,7 @@
   {
     "title": "AutoEncoder based Collaborative Filtering",
     "url": "/posts/AutoRec/",
-    "categories": "Research Interest, Recommender System",
+    "categories": "Data Mining, Recommender System",
     "tags": "Paper Review, Data Mining, Recommender System, Collaborative Filtering, Deep Learning, Autoencoder, Bayesian",
     "date": "2024-05-01 00:00:00 +0900",
     
@@ -530,7 +683,7 @@
   {
     "title": "MLP based Latent Factor Models",
     "url": "/posts/NCF/",
-    "categories": "Research Interest, Recommender System",
+    "categories": "Data Mining, Recommender System",
     "tags": "Paper Review, Data Mining, Recommender System, Collaborative Filtering, Latent Factor Model, Deep Learning",
     "date": "2024-04-17 00:00:00 +0900",
     
@@ -547,7 +700,7 @@
   {
     "title": "FPMC",
     "url": "/posts/FPMC/",
-    "categories": "Research Interest, Recommender System",
+    "categories": "Data Mining, Recommender System",
     "tags": "Paper Review, Data Mining, Recommender System, Collaborative Filtering, Sequential Recommender System, Latent Factor Model",
     "date": "2024-03-20 00:00:00 +0900",
     
@@ -564,7 +717,7 @@
   {
     "title": "TimeSVD++",
     "url": "/posts/TimeSVD++/",
-    "categories": "Research Interest, Recommender System",
+    "categories": "Data Mining, Recommender System",
     "tags": "Paper Review, Data Mining, Recommender System, Collaborative Filtering, Temporal Recommender System, Latent Factor Model",
     "date": "2024-03-06 00:00:00 +0900",
     
@@ -581,7 +734,7 @@
   {
     "title": "BPR",
     "url": "/posts/BPR/",
-    "categories": "Research Interest, Recommender System",
+    "categories": "Data Mining, Recommender System",
     "tags": "Paper Review, Data Mining, Recommender System, Collaborative Filtering, Objective Function, Implicit Feedback, Pairewise Appoach, Ranking Prediction, Bayesian",
     "date": "2024-02-29 00:00:00 +0900",
     
@@ -598,7 +751,7 @@
   {
     "title": "Latent Factor Model",
     "url": "/posts/LFM/",
-    "categories": "Research Interest, Recommender System",
+    "categories": "Data Mining, Recommender System",
     "tags": "Data Mining, Recommender System, Collaborative Filtering, Latent Factor Model",
     "date": "2024-02-15 00:00:00 +0900",
     
@@ -615,7 +768,7 @@
   {
     "title": "Memory based Collaborative Filtering",
     "url": "/posts/CF/",
-    "categories": "Research Interest, Recommender System",
+    "categories": "Data Mining, Recommender System",
     "tags": "Data Mining, Recommender System, Collaborative Filtering",
     "date": "2024-02-01 00:00:00 +0900",
     
@@ -630,11 +783,11 @@
   },
   
   {
-    "title": "AutoEncoder",
-    "url": "/posts/AE/",
+    "title": "Attention Mechanism",
+    "url": "/posts/ATTN/",
     "categories": "Machine Learning Techs, Deep Learning",
-    "tags": "Deep Learning, Autoencoder",
-    "date": "2024-01-27 00:00:00 +0900",
+    "tags": "Deep Learning, Attention Mechanism, NLP",
+    "date": "2024-01-28 00:00:00 +0900",
     
 
 
@@ -642,8 +795,8 @@
 
 
     
-    "snippet": "AutoEncoder  오토인코더(AutoEncoder; AE) : 입력 데이터를 압축시켜 저차원 특징 공간으로 축소한 후, 이를 다시 확장하여 원본으로 복원하는 인공신경망 아키텍처How to Modeling      Encoder:\\[\\begin{aligned}  \\mathbf{z} = F\\left(\\mathbf{x} \\mid \\Theta \\righ...",
-    "content": "AutoEncoder  오토인코더(AutoEncoder; AE) : 입력 데이터를 압축시켜 저차원 특징 공간으로 축소한 후, 이를 다시 확장하여 원본으로 복원하는 인공신경망 아키텍처How to Modeling      Encoder:\\[\\begin{aligned}  \\mathbf{z} = F\\left(\\mathbf{x} \\mid \\Theta \\right)  \\end{aligned}\\]          \\(F_{\\Theta}\\) : Encoder Layer      \\(\\mathbf{x}\\) : Input Data      \\(\\mathbf{z}\\) : Latent Space            Decoder:\\[\\begin{aligned}  \\hat{\\mathbf{x}} = G\\left(\\mathbf{z} \\mid \\Phi \\right)  \\end{aligned}\\]          \\(G_{\\Phi}\\) : Encoder Layer      \\(\\mathbf{z}\\) : Latent Space      \\(\\hat{\\mathbf{x}}\\) : Output Data            Optimization:\\[\\begin{aligned}  \\hat{\\mathbf{z}}, \\hat{\\Theta}, \\hat{\\Phi} &amp;= \\text{arg}\\min{\\mathcal{L}\\left(\\mathbf{x}, \\hat{\\mathbf{x}}\\right)}  \\end{aligned}\\]  Types      Basic AutoEncoder : 입력층, 잠재공간, 출력층으로 구성            적층 오토인코더(Stacked AutoEncoder or Deep AutoEncoder) : 입력층과 잠재공간, 잠재공간과 출력층 사이에 여러 장의 은닉층을 추가함으로써 기본 오토인코더보다 복잡하고 비선형적인 데이터 패턴을 잘 포착하도록 함            희소 오토인코더(Sparse AutoEncoder; SAE) : 입력 데이터를 고차원으로 확장했다가 본래 차원으로 축소하는 과정을 통해 저차원에서는 발견하기 어려운 잠재 정보나 패턴을 포착하도록 함                      희소성 제약(Sparse Constraint) : 특히 Sparse AutoEncoder 에서, 데이터 과적합을 방지하고 핵심 정보만 선택적으로 학습하기 위하여 은닉층 뉴런 중 일부만 활성화되도록 강제하는 기법\\[\\begin{aligned}  \\mathcal{L}=\\frac{1}{N}\\sum_{i=1}^{N}{\\Vert \\mathbf{x}_{i} - \\hat{\\mathbf{x}}_{i} \\Vert^{2}} + \\beta \\cdot \\underbrace{\\Omega(\\overrightarrow{\\mathbf{h}} \\mid m, \\rho)}_{\\begin{array}{c} \\text{Sparse} \\\\ \\text{Penalty} \\end{array}}  \\end{aligned}\\]                    Sparse Penalty Function : 은닉층 뉴런들이 평균적으로 목표 희소성 비율에 가깝게 활성화되도록 하기 위함으로, 대개 쿨백 라이블러 발산(Kullback–Leibler Divergence)을 활용함\\[\\begin{aligned}  \\Omega(\\overrightarrow{\\mathbf{h}} \\mid m, \\rho)  &amp;= \\sum_{j=1}^{m}{D_{KL}\\left[\\rho \\parallel \\hat{\\rho}_{j}\\right]}\\\\  &amp;= \\sum_{j=1}^{m}{\\rho \\cdot \\log{\\frac{\\rho}{\\hat{\\rho}_{j}}} + (1-\\rho) \\cdot \\log{\\frac{1-\\rho}{1-\\hat{\\rho}_{j}}}}  \\end{aligned}\\]                  $m$ : 은닉층 뉴런 수          $\\rho$ : 목표 희소성 비율          \\(\\hat{\\rho}_{j}=\\displaystyle\\frac{1}{N}\\sum_{i=1}^{N}{h_{j}^{(i)}}\\) : 은닉층 뉴런 $j$ 의 평균 출력값                          잡음 제거 오토인코더(Denoising AutoEncoder; DAE) : 원본 데이터에 잡음을 추가하여 입력한 후, 원본을 복원함으로써 잡음에 대한 강건성을 확보하고 데이터의 본질적인 특징에 집중할 수 있도록 함                      How to Generate Noise\\[\\begin{aligned}  \\tilde{\\mathbf{x}} &amp;= g(\\mathbf{x} \\mid \\theta)  \\end{aligned}\\]                              Gaussian Noise:\\[\\begin{aligned}  g(\\mathbf{x} \\mid \\sigma)= \\mathbf{x} + \\epsilon, \\quad \\epsilon \\sim \\mathcal{N}(0,\\sigma^2)  \\end{aligned}\\]                                Salt and Pepper Noise:\\[g(\\mathbf{x} \\mid p)=\\begin{cases}\\begin{aligned}  \\mathbf{x} \\quad &amp; 1-p\\\\  \\mathbf{v}_{\\text{min}} \\quad &amp; \\frac{p}{2}\\\\  \\mathbf{v}_{\\text{max}} \\quad &amp; \\frac{p}{2}  \\end{aligned}\\end{cases}\\]                                Masking Noise:\\[\\begin{aligned}  g(\\mathbf{x} \\mid p)= \\mathbf{x} \\cdot m, \\quad m \\sim \\text{Bernouli}(1-p)  \\end{aligned}\\]                              Variational AutoEncoder  변분 오토인코더(Variational AutoEncoder; VAE) : 입력 데이터의 확률 분포를 탐색하고(Encoder), 그 파라미터(Latent Space)에 기초하여 데이터를 확률적으로 생성하는(Decoder), 오토인코더 기반 생성 모형(Generative Model)How to Modeling      관측치 $\\overrightarrow{\\mathbf{x}}$ 가 파라미터 $\\overrightarrow{\\mathbf{z}}$ 에서 생성되었다고 가정하자. $\\overrightarrow{\\mathbf{x}}$ 의 우도 함수:\\[\\overrightarrow{\\mathbf{x}} \\mid \\overrightarrow{\\mathbf{z}} \\sim \\mathcal{L}\\left(\\Theta \\right)\\]        파라미터 $\\overrightarrow{\\mathbf{z}}$ 의 사전 확률 분포 결정:\\[\\overrightarrow{\\mathbf{z}} \\sim \\mathcal{N}\\left(0, \\mathbf{I}_{K}\\right)\\]        파라미터 $\\overrightarrow{\\mathbf{z}}$ 의 사후 확률 분포 추정:\\[p\\left(\\overrightarrow{\\mathbf{z}} \\mid \\overrightarrow{\\mathbf{x}} ; \\Theta\\right) \\propto \\mathcal{L}\\left(\\overrightarrow{\\mathbf{x}} \\mid \\overrightarrow{\\mathbf{z}} ; \\Theta \\right) \\cdot \\pi\\left(\\overrightarrow{\\mathbf{z}}\\right)\\]        $\\overrightarrow{\\mathbf{z}} \\mid \\overrightarrow{\\mathbf{x}} \\sim P(\\Theta)$ 의 근사 분포 $\\overrightarrow{\\mathbf{z}} \\sim Q(\\Phi)$ 정의:\\[\\begin{aligned}  q\\left(\\overrightarrow{\\mathbf{z}} ; \\Phi\\right)  &amp;= \\mathcal{N}\\left(\\mu(\\overrightarrow{\\mathbf{x}} ; \\Phi), \\text{diag}[\\sigma^2(\\overrightarrow{\\mathbf{x}} ; \\Phi)]\\right)\\\\  &amp;\\approx \\mu(\\overrightarrow{\\mathbf{x}} ; \\Phi) + \\sigma(\\overrightarrow{\\mathbf{x}} ; \\Phi) \\odot \\epsilon \\quad \\text{for} \\quad \\epsilon \\sim \\mathcal{N}\\left(0, \\mathbf{I}_{K}\\right)  \\end{aligned}\\]        ELBO:\\[\\text{ELBO}  = \\underbrace{\\mathbb{E}_{\\mathbf{z} \\sim Q(\\Phi)}\\Big[\\log{\\mathcal{L}\\left(\\overrightarrow{\\mathbf{x}} \\mid \\overrightarrow{\\mathbf{z}} ; \\Theta \\right)}\\Big]}_{-\\text{Reconstruction Loss}} - \\beta \\cdot \\underbrace{D_{KL}\\Big[q\\left(\\overrightarrow{\\mathbf{z}} ; \\Phi\\right) \\parallel \\pi\\left(\\overrightarrow{\\mathbf{z}}\\right)\\Big]}_{\\text{KL Divergence}}\\]        Optimization:\\[\\hat{\\Theta},\\hat{\\Phi} \\mid K, \\beta  = \\text{arg}\\max_{\\Theta,\\Phi}{\\text{ELBO}}\\]          $K$ : Dimension of Latent Space      $0 \\le \\beta \\le 1$ : KL Annealing Param      Architecture      Encoder : Posterior Probability Distribution Estimatior\\[q\\left(\\overrightarrow{\\mathbf{z}} ; \\Phi\\right)\\]        Latent Space : Posterior Probability Distribution\\[\\overrightarrow{\\mathbf{z}} \\mid \\overrightarrow{\\mathbf{x}}\\]        Decoder : Data Generator\\[\\mathcal{L}\\left(\\overrightarrow{\\mathbf{x}} \\mid \\overrightarrow{\\mathbf{z}} ; \\Theta \\right)\\]  이미지 출처  https://velog.io/@jochedda/%EB%94%A5%EB%9F%AC%EB%8B%9D-Autoencoder-%EA%B0%9C%EB%85%90-%EB%B0%8F-%EC%A2%85%EB%A5%98"
+    "snippet": "",
+    "content": ""
   },
   
   {
@@ -651,7 +804,7 @@
     "url": "/posts/RNN/",
     "categories": "Machine Learning Techs, Deep Learning",
     "tags": "Deep Learning, RNN, NLP",
-    "date": "2024-01-26 00:00:00 +0900",
+    "date": "2024-01-27 00:00:00 +0900",
     
 
 
@@ -668,7 +821,7 @@
     "url": "/posts/CNN/",
     "categories": "Machine Learning Techs, Deep Learning",
     "tags": "Deep Learning, CNN, CV",
-    "date": "2024-01-25 00:00:00 +0900",
+    "date": "2024-01-26 00:00:00 +0900",
     
 
 
@@ -678,6 +831,23 @@
     
     "snippet": "What? Cov-Net      완전 연결 계층의 문제점 : 입력값을 1차원으로 평탄화(Flatten)하는 과정에서 공간적 구조(Spatial Structure)를 무너뜨림    \\[\\mathbf{Y}_{N \\times P \\cdot Q \\cdot R}  = \\text{flatten}(\\mathbf{X}_{N \\times P \\times Q \\tim...",
     "content": "What? Cov-Net      완전 연결 계층의 문제점 : 입력값을 1차원으로 평탄화(Flatten)하는 과정에서 공간적 구조(Spatial Structure)를 무너뜨림    \\[\\mathbf{Y}_{N \\times P \\cdot Q \\cdot R}  = \\text{flatten}(\\mathbf{X}_{N \\times P \\times Q \\times R})\\]        합성곱 신경망(Convolution Neural Network; CNN) : 형상의 특징을 추출하고 기록하는 전처리 과정이 존재하는 신경망 알고리즘              입력 계층(Input Layer) : 관측치의 속성값을 입력 받는 계층      컨볼루션 계층(Convolution Layer) : 자료의 공간 구조 상 특징을 포착하는 계층      풀링 계층(Pooling Layer) : 컨볼루션 계층에서 포착한 특징의 대표값을 선별함으로써 자료 규모를 축소하는 계층      완전 연결 계층(Fully-Connected Layer)      Convolution Layerfrom tensorflow.keras.layers import Conv2Dconv_layer = Conv2D(    filters = k,    kernel_size = (M,N),    strides = s,    padding = \"valid\",    activation = \"relu\"    )Convolution Operation      합성곱 연산(Convolution Operation) : 입력값의 부분공간을 커널과 아다마르 곱셈($\\odot$)하는 과정을 반복하여 새로운 행렬을 구성함    \\[\\begin{aligned}  \\mathbf{Y}  &amp;= \\text{ReLU}(\\mathbf{C}+\\mathbf{\\beta})\\\\  \\mathbf{C}  &amp; \\in \\mathbb{R}^{\\lfloor \\displaystyle\\frac{P-M}{s}+1 \\rfloor \\times \\lfloor \\displaystyle\\frac{Q-N}{s}+1 \\rfloor \\times k}\\\\  &amp;= \\mathbf{W}_{M \\times N} \\odot \\mathbf{X}_{P \\times Q}\\\\  c_{i,j}  &amp;= \\sum_{n=1}^{N}\\sum_{m=1}^{M}{w_{m,n} \\cdot x_{i+m-1,j+n-1}}\\\\  \\end{aligned}\\]                  특성 맵(Feature Map; $\\mathbf{Y}$) : 합성곱 연산 결과 입력값 형상의 특징으로서 반환된 새로운 배열                            커널(Kernel; $\\mathbf{W}_{M \\times N}$) : 입력값의 부분공간에 아다마르 곱셈하는 여과기(Filter)                  filters : 커널 갯수          kernel_size : 커널 크기          strides : 커널 이동 보폭                            $\\mathbf{X}_{P \\times Q}$ : 관측치            Strides &amp; Padding      스트라이드(Stride; $s$) : 커널 이동 보폭            패딩(Padding) : 입력값의 주변을 특정 값으로 채우는 기법              valid : 패딩을 적용하지 않음      same : 입력 크기와 동일하도록 출력 크기를 조절하여 모서리 정보를 보존함      Downsampling using Poolingfrom tensorflow.keras.layers import MaxPooling2Dpooling_layer = MaxPooling2D(    pool_size = (M,N),    strides = s,    padding = \"valid\"    )      합동 연산(Pooling Operation) : 주어진 행렬에 대하여 그 부분공간마다 대표값을 추출하여 새로운 행렬을 구성함            종류                  Max Pooling : 대표값을 부분공간의 가장 큰 값으로 설정함\\[\\begin{aligned}  \\mathbf{Y}  &amp;= \\left\\{y_{i,j}\\bigg|y_{i,j}=\\max_{n=1}^{N}{\\max_{m=1}^{M}{\\mathbf{X}[i:i \\cdot s + m-1, j:j \\cdot s + n-1]}}\\right\\}  \\end{aligned}\\]                    Average Pooling : 대표값을 부분공간의 평균으로 설정함\\[\\begin{aligned}  \\mathbf{Y}  &amp;= \\left\\{y_{i,j}\\bigg|y_{i,j}=\\frac{1}{M \\cdot N}\\sum_{n=1}^{N}{\\sum_{m=1}^{M}{\\mathbf{X}[i:i \\cdot s + m-1, j:j \\cdot s + n-1]}}\\right\\}  \\end{aligned}\\]            "
+  },
+  
+  {
+    "title": "AutoEncoder",
+    "url": "/posts/AE/",
+    "categories": "Machine Learning Techs, Deep Learning",
+    "tags": "Deep Learning, Autoencoder",
+    "date": "2024-01-25 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "AutoEncoder  오토인코더(AutoEncoder; AE) : 입력 데이터를 압축시켜 저차원 특징 공간으로 축소한 후, 이를 다시 확장하여 원본으로 복원하는 인공신경망 아키텍처How to Modeling      Encoder:\\[\\begin{aligned}  \\mathbf{z} = F\\left(\\mathbf{x} \\mid \\Theta \\righ...",
+    "content": "AutoEncoder  오토인코더(AutoEncoder; AE) : 입력 데이터를 압축시켜 저차원 특징 공간으로 축소한 후, 이를 다시 확장하여 원본으로 복원하는 인공신경망 아키텍처How to Modeling      Encoder:\\[\\begin{aligned}  \\mathbf{z} = F\\left(\\mathbf{x} \\mid \\Theta \\right)  \\end{aligned}\\]          \\(F_{\\Theta}\\) : Encoder Layer      \\(\\mathbf{x}\\) : Input Data      \\(\\mathbf{z}\\) : Latent Space            Decoder:\\[\\begin{aligned}  \\hat{\\mathbf{x}} = G\\left(\\mathbf{z} \\mid \\Phi \\right)  \\end{aligned}\\]          \\(G_{\\Phi}\\) : Encoder Layer      \\(\\mathbf{z}\\) : Latent Space      \\(\\hat{\\mathbf{x}}\\) : Output Data            Optimization:\\[\\begin{aligned}  \\hat{\\mathbf{z}}, \\hat{\\Theta}, \\hat{\\Phi} &amp;= \\text{arg}\\min{\\mathcal{L}\\left(\\mathbf{x}, \\hat{\\mathbf{x}}\\right)}  \\end{aligned}\\]  Types      Basic AutoEncoder : 입력층, 잠재공간, 출력층으로 구성            적층 오토인코더(Stacked AutoEncoder or Deep AutoEncoder) : 입력층과 잠재공간, 잠재공간과 출력층 사이에 여러 장의 은닉층을 추가함으로써 기본 오토인코더보다 복잡하고 비선형적인 데이터 패턴을 잘 포착하도록 함            희소 오토인코더(Sparse AutoEncoder; SAE) : 입력 데이터를 고차원으로 확장했다가 본래 차원으로 축소하는 과정을 통해 저차원에서는 발견하기 어려운 잠재 정보나 패턴을 포착하도록 함                      희소성 제약(Sparse Constraint) : 특히 Sparse AutoEncoder 에서, 데이터 과적합을 방지하고 핵심 정보만 선택적으로 학습하기 위하여 은닉층 뉴런 중 일부만 활성화되도록 강제하는 기법\\[\\begin{aligned}  \\mathcal{L}=\\frac{1}{N}\\sum_{i=1}^{N}{\\Vert \\mathbf{x}_{i} - \\hat{\\mathbf{x}}_{i} \\Vert^{2}} + \\beta \\cdot \\underbrace{\\Omega(\\overrightarrow{\\mathbf{h}} \\mid m, \\rho)}_{\\begin{array}{c} \\text{Sparse} \\\\ \\text{Penalty} \\end{array}}  \\end{aligned}\\]                    Sparse Penalty Function : 은닉층 뉴런들이 평균적으로 목표 희소성 비율에 가깝게 활성화되도록 하기 위함으로, 대개 쿨백 라이블러 발산(Kullback–Leibler Divergence)을 활용함\\[\\begin{aligned}  \\Omega(\\overrightarrow{\\mathbf{h}} \\mid m, \\rho)  &amp;= \\sum_{j=1}^{m}{D_{KL}\\left[\\rho \\parallel \\hat{\\rho}_{j}\\right]}\\\\  &amp;= \\sum_{j=1}^{m}{\\rho \\cdot \\log{\\frac{\\rho}{\\hat{\\rho}_{j}}} + (1-\\rho) \\cdot \\log{\\frac{1-\\rho}{1-\\hat{\\rho}_{j}}}}  \\end{aligned}\\]                  $m$ : 은닉층 뉴런 수          $\\rho$ : 목표 희소성 비율          \\(\\hat{\\rho}_{j}=\\displaystyle\\frac{1}{N}\\sum_{i=1}^{N}{h_{j}^{(i)}}\\) : 은닉층 뉴런 $j$ 의 평균 출력값                          잡음 제거 오토인코더(Denoising AutoEncoder; DAE) : 원본 데이터에 잡음을 추가하여 입력한 후, 원본을 복원함으로써 잡음에 대한 강건성을 확보하고 데이터의 본질적인 특징에 집중할 수 있도록 함                      How to Generate Noise\\[\\begin{aligned}  \\tilde{\\mathbf{x}} &amp;= g(\\mathbf{x} \\mid \\theta)  \\end{aligned}\\]                              Gaussian Noise:\\[\\begin{aligned}  g(\\mathbf{x} \\mid \\sigma)= \\mathbf{x} + \\epsilon, \\quad \\epsilon \\sim \\mathcal{N}(0,\\sigma^2)  \\end{aligned}\\]                                Salt and Pepper Noise:\\[g(\\mathbf{x} \\mid p)=\\begin{cases}\\begin{aligned}  \\mathbf{x} \\quad &amp; 1-p\\\\  \\mathbf{v}_{\\text{min}} \\quad &amp; \\frac{p}{2}\\\\  \\mathbf{v}_{\\text{max}} \\quad &amp; \\frac{p}{2}  \\end{aligned}\\end{cases}\\]                                Masking Noise:\\[\\begin{aligned}  g(\\mathbf{x} \\mid p)= \\mathbf{x} \\cdot m, \\quad m \\sim \\text{Bernouli}(1-p)  \\end{aligned}\\]                              Variational AutoEncoder  변분 오토인코더(Variational AutoEncoder; VAE) : 입력 데이터의 확률 분포를 탐색하고(Encoder), 그 파라미터(Latent Space)에 기초하여 데이터를 확률적으로 생성하는(Decoder), 오토인코더 기반 생성 모형(Generative Model)How to Modeling      관측치 $\\overrightarrow{\\mathbf{x}}$ 가 파라미터 $\\overrightarrow{\\mathbf{z}}$ 에서 생성되었다고 가정하자. $\\overrightarrow{\\mathbf{x}}$ 의 우도 함수:\\[\\overrightarrow{\\mathbf{x}} \\mid \\overrightarrow{\\mathbf{z}} \\sim \\mathcal{L}\\left(\\Theta \\right)\\]        파라미터 $\\overrightarrow{\\mathbf{z}}$ 의 사전 확률 분포 결정:\\[\\overrightarrow{\\mathbf{z}} \\sim \\mathcal{N}\\left(0, \\mathbf{I}_{K}\\right)\\]        파라미터 $\\overrightarrow{\\mathbf{z}}$ 의 사후 확률 분포 추정:\\[p\\left(\\overrightarrow{\\mathbf{z}} \\mid \\overrightarrow{\\mathbf{x}} ; \\Theta\\right) \\propto \\mathcal{L}\\left(\\overrightarrow{\\mathbf{x}} \\mid \\overrightarrow{\\mathbf{z}} ; \\Theta \\right) \\cdot \\pi\\left(\\overrightarrow{\\mathbf{z}}\\right)\\]        $\\overrightarrow{\\mathbf{z}} \\mid \\overrightarrow{\\mathbf{x}} \\sim P(\\Theta)$ 의 근사 분포 $\\overrightarrow{\\mathbf{z}} \\sim Q(\\Phi)$ 정의:\\[\\begin{aligned}  q\\left(\\overrightarrow{\\mathbf{z}} ; \\Phi\\right)  &amp;= \\mathcal{N}\\left(\\mu(\\overrightarrow{\\mathbf{x}} ; \\Phi), \\text{diag}[\\sigma^2(\\overrightarrow{\\mathbf{x}} ; \\Phi)]\\right)\\\\  &amp;\\approx \\mu(\\overrightarrow{\\mathbf{x}} ; \\Phi) + \\sigma(\\overrightarrow{\\mathbf{x}} ; \\Phi) \\odot \\epsilon \\quad \\text{for} \\quad \\epsilon \\sim \\mathcal{N}\\left(0, \\mathbf{I}_{K}\\right)  \\end{aligned}\\]        ELBO:\\[\\text{ELBO}  = \\underbrace{\\mathbb{E}_{\\mathbf{z} \\sim Q(\\Phi)}\\Big[\\log{\\mathcal{L}\\left(\\overrightarrow{\\mathbf{x}} \\mid \\overrightarrow{\\mathbf{z}} ; \\Theta \\right)}\\Big]}_{-\\text{Reconstruction Loss}} - \\beta \\cdot \\underbrace{D_{KL}\\Big[q\\left(\\overrightarrow{\\mathbf{z}} ; \\Phi\\right) \\parallel \\pi\\left(\\overrightarrow{\\mathbf{z}}\\right)\\Big]}_{\\text{KL Divergence}}\\]        Optimization:\\[\\hat{\\Theta},\\hat{\\Phi} \\mid K, \\beta  = \\text{arg}\\max_{\\Theta,\\Phi}{\\text{ELBO}}\\]          $K$ : Dimension of Latent Space      $0 \\le \\beta \\le 1$ : KL Annealing Param      Architecture      Encoder : Posterior Probability Distribution Estimatior\\[q\\left(\\overrightarrow{\\mathbf{z}} ; \\Phi\\right)\\]        Latent Space : Posterior Probability Distribution\\[\\overrightarrow{\\mathbf{z}} \\mid \\overrightarrow{\\mathbf{x}}\\]        Decoder : Data Generator\\[\\mathcal{L}\\left(\\overrightarrow{\\mathbf{x}} \\mid \\overrightarrow{\\mathbf{z}} ; \\Theta \\right)\\]  이미지 출처  https://velog.io/@jochedda/%EB%94%A5%EB%9F%AC%EB%8B%9D-Autoencoder-%EA%B0%9C%EB%85%90-%EB%B0%8F-%EC%A2%85%EB%A5%98"
   },
   
   {
@@ -734,7 +904,7 @@
   {
     "title": "What? RecSys",
     "url": "/posts/What_RecSys/",
-    "categories": "Research Interest, Recommender System",
+    "categories": "Data Mining, Recommender System",
     "tags": "Data Mining, Recommender System, Metric",
     "date": "2024-01-18 00:00:00 +0900",
     
