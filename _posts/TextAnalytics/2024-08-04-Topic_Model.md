@@ -1,125 +1,15 @@
 ---
-order: 3
-title: Statistical Modeling Methods
-date: 2024-07-31
-categories: [AI & Data Mining, Text Analytics]
-tags: [Data Mining, Text Mining]
+order: 7
+title: Topic Model
+date: 2024-08-04
+categories: [Data Mining, Text Analytics]
+tags: [Data Mining, NLP, Text Mining, Topic Model]
 math: true
 description: >-
     Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
     path: /_post_refer_img/TextAnalytics/Thumbnail.png
 ---
-
-## Text Representation
------
-
-### Word Representation
-
-- **원 핫 인코딩(One Hot Encoding)** : 단어를 전체 Voca Set 크기를 차원으로 하는 벡터로 표현하는 방법
-
-    ![01](/_post_refer_img/TextAnalytics/03-01.png){: width="100%"}
-
-### Document Representation
-
-- **BoW(Bag of Words)** : 문서를 단어 빈도 수로 표현하는 방법
-
-    ![03](/_post_refer_img/TextAnalytics/03-03.png){: width="100%"}
-
-- **DTM(Document Term Matrix)** : 여러 개의 문서를 BoW 로 표현하는 방법
-
-    ![02](/_post_refer_img/TextAnalytics/03-02.png){: width="100%"}
-
-- **TF-IDF(Term Frequency-Inverse Document Frequency)** : DTM 내 단어들에 대하여 각 단어의 중요도에 따라 가중치를 부여하여 표현하는 방법
-
-    $$
-    \text{TF-IDF}(d,t)=\text{TF}(d,t) \cdot \text{IDF}(t)
-    $$
-
-    - **TF(Term Frequency)** : 문서 $d$ 에서 단어 $t$ 가 등장하는 횟수
-
-        $$
-        \text{TF}(d,t)
-        $$
-
-    - **IDF(Inverse Document Frequency)** : 단어 $t$ 가 등장하는 문서의 수에 반비례하는 수
-
-        $$
-        \text{IDF}(t)=\ln{\frac{n}{1+\text{DF}(t)}}
-        $$
-
-        - $n$ : 문서의 수
-        - $\text{DF}(t)$ : 단어 $t$ 가 등장하는 문서의 수
-
-## Language Model
------
-
-- **언어 모형(Language Model)** : Word Sequence(문장)에 확률을 할당하여 가장 자연스러운 문장을 탐색하는 모형
-
-### SLM
-
-- **Statistical Language Model(SLM)** : 조건부 확률을 활용하여 Word Sequence 발생 확률을 부여하는 모형
-
-    $$\begin{aligned}
-    P(W)
-    &= P(w_1, w_2, \cdots, w_n)\\
-    &= \cancel{P(w_1)} \cdot \frac{\cancel{P(w_1,w_2)}}{\cancel{P(w_1)}} \cdot \frac{\cancel{P(w_1, w_2, w_3)}}{\cancel{P(w_1, w_2)}} \cdots \frac{P(w_1, w_2, \cdots, w_n)}{\cancel{P(w_1, w_2, \cdots, w_{n-1})}}\\
-    &= P(w_1) \cdot P(w_2 \mid w_1) \cdot P(w_3 \mid w_1, w_2) \cdots P(w_n \mid w_1, w_2, \cdots, w_{n-1})\\
-    &= \prod_{i=1}^{n}{P(w_i \mid w_1, w_2, \cdots, w_{i-1})}
-    \end{aligned}$$
-
-- **확률 부여 방법**
-
-    $$\begin{aligned}
-    P(w_i \mid w_1, w_2, \cdots, w_{i-1})
-    &= \frac{\text{Count}(w_1, w_2, \cdots, w_i)}{\text{Count}(w_1, w_2, \cdots, w_{i-1})}
-    \end{aligned}$$
-
-    - $\text{Count}(w_1, w_2, \cdots, w_i)$ : 말뭉치에서 Word Sequence $(w_1, w_2, \cdots, w_i)$ 가 등장한 횟수
-
-### n-Gram
-
-- **n-Gram** : $i$ 번째 단어를 예측함에 있어 $N-1$ 개의 단어만을 활용하는 모형
-
-    $$\begin{aligned}
-    P(W)
-    &= \prod_{i=1}^{n}{P(w_{i} \mid w_{i-(n-1)}, w_{i-(n-2)}, \cdots, w_{i-1})}
-    \end{aligned}$$
-
-- **How to Select $n$** : 통상 $n \le 5$ 권장
-
-    | Problem | Small $n$ | Large $n$ | 
-    |---|---|---|
-    | Sparsity Problem | $\downarrow$ | $\uparrow$ |
-    | Long-term Dependency | $\uparrow$ | $\downarrow$ |
-
-    - **희소성 문제(Sparsity Problem)** : 충분한 데이터를 관측하지 못하여 언어를 정확히 모델링하지 못하는 문제
-    - **장기 의존성 문제(Long-term Dependency)** : 문맥 내에서 멀리 떨어져 있는 단어들 간의 관계를 처리하는 문제
-
-### PPL
-
-- **Perplexity(PPL)** : 언어 모형의 성능 평가 지표
-
-    $$\begin{aligned}
-    PPL(W)
-    &= P(W)^{-\frac{1}{N}}\\
-    &= P(w_1, w_2, \cdots, w_N)^{-\frac{1}{N}}\\
-    &= \sqrt[N]{\frac{1}{P(w_1, w_2, \cdots, w_N)}}\\
-    &= \sqrt[N]{\frac{1}{\prod_{i=1}^{n}{P(w_N \mid w_1, w_2, \cdots, w_{N-1})}}}
-    \end{aligned}$$
-
-- **해석** : 선택 가능한 경우의 수를 의미하는 분기 계수(Branching Factor)로서, 특정 시점마다 평균적으로 고민하는 선택지 수
-
-    $$\begin{aligned}
-    PPL(W)
-    &=10\\
-    \sqrt[N]{\frac{1}{\prod_{i=1}^{n}{P(w_N \mid w_1, w_2, \cdots, w_{N-1})}}}
-    &= 10\\
-    \prod_{i=1}^{n}{P(w_N \mid w_1, w_2, \cdots, w_{N-1})}
-    &= \left(\frac{1}{10}\right)^{N}\\
-    \underset{\frac{1}{10}}{P(w_1)} \cdot \underset{\frac{1}{10}}{P(w_2 \mid w_1)} \cdot \underset{\frac{1}{10}}{P(w_3 \mid w_1, w_2)} \cdots \underset{\frac{1}{10}}{P(w_N \mid w_1, w_2, \cdots, w_{N-1})}
-    &= \left(\frac{1}{10}\right)^{N}
-    \end{aligned}$$
 
 ## Topic Model
 -----
@@ -129,7 +19,8 @@ image:
     - 단어(Word)는 토픽(Topic) 별로 어떻게 등장하는가?
     - 탐색된 Something(Topic)의 정체를 무엇이라 정의하면 좋을까?
 
-### LSA
+## LSA
+-----
 
 - **잠재 의미 분석(Latent Semantic Analysis; LSA)** : 특이값 분해(Singular Value Decomposition; SVD)를 활용하여 Document-Term Matrix 를 분해하는 방법
 
@@ -147,11 +38,11 @@ image:
     - $$\mathbb{U}_{n \times k} \cdot \Sigma_{k \times k}$$ : Document-Topic Matrix
     - $\Sigma_{k \times k} \cdot \mathbb{V}_{d \times k}^{T}$ : Term-Topic Matrix
 
-#### SVD
+### SVD
 
 - **특이값 분해(Singular Value Decomposition; SVD)** : 차원의 크기가 $n \times d$ 인 임의의 행렬 $\mathbb{A}$ 를 세 개의 행렬의 곱으로 분해하는 방법
 
-    ![04](/_post_refer_img/TextAnalytics/03-04.png){: width="100%"}
+    ![04](/_post_refer_img/TextAnalytics/07-01.png){: width="100%"}
 
 - **$\mathbb{U}_{n \times k}$ : 직교 정규 행렬(Ortho-normal Matrix)**
     - 열벡터 $\overrightarrow{u}_{i} \in \mathbb{U}$ 는 행렬 $\mathbb{A} \cdot \mathbb{A}^{T}$ 의 고유벡터(Eigen Vector)임
@@ -209,7 +100,8 @@ image:
         \sigma_{i} = \sqrt{\lambda_i}
         $$
 
-### LDA
+## LDA
+-----
 
 - **잠재 디리클레 할당(Latent Dirichlet Allocation; LDA)** : 베이지안 프레임워크를 활용하여 문서에 내재된 잠재적인 토픽 구조를 탐색하는 방법
 
@@ -223,7 +115,7 @@ image:
     - $P(\theta_d \mid z(d,n)) \propto P(\theta_d) \cdot P(z(d,n) \mid \theta_d)$ : Posterior Probability of Document-Topic Allocation
     - $P(\psi_{z(d,n)} \mid w(d,n)) \propto P(\psi_{z(d,n)}) \cdot P(w(d,n) \mid \psi_{z(d,n)})$ : Posterior Probability of Topic-Word Allocation
 
-#### Posterior Probability
+### Posterior Probability
 
 > 각 문서는 여러 토픽의 혼합으로 구성되어 있고, 각 토픽은 특정 단어들의 혼합으로 구성되어 있다고 가정하자. 특정 문서를 구성하고 있는 단어들로부터, 해당 단어들을 발생시킨 토픽들의 비중을 추론할 수 있음.
 
@@ -264,5 +156,4 @@ image:
 
 ### 이미지 출처
 
-- https://velog.io/@growthmindset/%EC%9B%90-%ED%95%AB-%EC%9D%B8%EC%BD%94%EB%94%A9One-Hot-Encoding
 - https://intoli.com/blog/pca-and-svd/

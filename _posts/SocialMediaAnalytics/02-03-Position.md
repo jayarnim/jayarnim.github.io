@@ -2,7 +2,7 @@
 order: 6
 title: Position
 date: 2024-02-03
-categories: [AI & Data Mining, Social Media Analytics]
+categories: [Data Mining, Social Media Analytics]
 tags: [Data Mining, Social Media, Social Network, Graph]
 math: true
 description: >-

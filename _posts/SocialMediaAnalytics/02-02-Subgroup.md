@@ -2,7 +2,7 @@
 order: 5
 title: SubGroup
 date: 2024-02-02
-categories: [AI & Data Mining, Social Media Analytics]
+categories: [Data Mining, Social Media Analytics]
 tags: [Data Mining, Social Media, Social Network, Graph]
 math: true
 description: >-

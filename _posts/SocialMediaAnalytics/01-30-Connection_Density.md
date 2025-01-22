@@ -2,7 +2,7 @@
 order: 2
 title: Connection and Density
 date: 2024-01-30
-categories: [AI & Data Mining, Social Media Analytics]
+categories: [Data Mining, Social Media Analytics]
 tags: [Data Mining, Social Media, Social Network, Graph]
 math: true
 description: >-

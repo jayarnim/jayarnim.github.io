@@ -2,7 +2,7 @@
 order: 4
 title: Structural Hole and Broker
 date: 2024-02-01
-categories: [AI & Data Mining, Social Media Analytics]
+categories: [Data Mining, Social Media Analytics]
 tags: [Data Mining, Social Media, Social Network, Graph]
 math: true
 description: >-
