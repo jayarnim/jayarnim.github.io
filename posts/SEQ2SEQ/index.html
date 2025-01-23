@@ -861,6 +861,77 @@
     <!-- combine -->
     
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
 
   
 
@@ -1096,9 +1167,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1042 words"
+  title="1238 words"
 >
-  <em>5 min</em> read</span>
+  <em>6 min</em> read</span>
 
         </div>
       </div>
@@ -1173,9 +1244,7 @@
 
 \[\begin{aligned}
   \eta_{t}, \sigma_{t}
-  &amp;= \text{LSTM}\left[\hat{\mathbf{y}}_{t-1} \mid \eta_{t-1}, \sigma_{t-1}\right]\\
-  \hat{\mathbf{y}}_{t}
-  &amp;= \text{MLP}_{\text{Softmax}}\left[\eta_{t}\right]
+  &amp;= \text{LSTM}\left[\hat{\mathbf{y}}_{t-1} \mid \eta_{t-1}, \sigma_{t-1}\right]
   \end{aligned}\]
 
         <ul>
@@ -1185,7 +1254,7 @@
             </ul>
           </li>
           <li>\(\sigma_{t}\) : $t$ 시점 셀 상태</li>
-          <li>\(\hat{\mathbf{y}}_{t}\) : 목표 언어의 $t$ 번째 단어 확률 분포 벡터
+          <li>\(\hat{\mathbf{y}}_{t}=\text{MLP}_{\text{Softmax}}\left[\eta_{t}\right]\) : 목표 언어의 $t$ 번째 단어 확률 분포 벡터
             <ul>
               <li>\(\hat{\mathbf{y}}_{0}\) : 초기 입력값은 <code class="language-plaintext highlighter-rouge">&lt;SOS&gt;</code> 토큰을 활용함</li>
               <li>\(\hat{\mathbf{y}}_{T}\) : 마지막 출력값은 <code class="language-plaintext highlighter-rouge">&lt;EOS&gt;</code> 토큰을 활용함</li>
@@ -1225,10 +1294,17 @@
 <hr />
 
 <ul>
-  <li><strong>어텐션 메커니즘(Attention Application)</strong> : RNN 계열 레이어의 기울기 소실 문제를 보완하는 기법으로서, 문맥 벡터를 최종 은닉 상태로 활용하지 않고, 인코더 각 순번 은닉 상태와 디코더 현재 시점 간 관련성을 고려하여, 디코더의 각 시점에 특화된 문맥 벡터를 생성함
+  <li>
+    <p><strong>어텐션 메커니즘(Attention Application)</strong> : 개별 질의에 특화된 정답 후보군별 중요도를 도출하는 메커니즘</p>
+  </li>
+  <li>
+    <p><strong>SEQ2SEQ 적용 목적</strong> : RNN 계열 레이어의 기울기 소실 문제를 보완하기 위함으로서, 문맥 벡터를 최종 은닉 상태로 활용하지 않고, 인코더 각 순번 은닉 상태와 디코더 현재 시점 간 관련성을 고려하여, 디코더의 각 시점에 특화된 문맥 벡터를 생성함</p>
+  </li>
+  <li>
+    <p><strong>종류</strong></p>
     <ul>
-      <li><strong>루옹 어텐션(Luong Attention)</strong> : 디코더의 현재 시점 은닉 상태를 활용하여 문맥 벡터를 생성하는 어텐션 기법</li>
-      <li><strong>바다나우 어텐션(Bahdanau Attention)</strong> : 디코더의 이전 시점 은닉 상태를 활용하여 문맥 벡터를 생성하는 어텐션 기법</li>
+      <li><strong>루옹 어텐션(Luong Attention)</strong> : 디코더의 현재 시점 은닉 상태를 활용하여 문맥 벡터를 생성하고, 이를 현재 시점 은닉 상태에 적용하는 어텐션 기법</li>
+      <li><strong>바다나우 어텐션(Bahdanau Attention)</strong> : 디코더의 이전 시점 은닉 상태를 활용하여 문맥 벡터를 생성하고, 이를 현재 시점 입력값에 적용하는 어텐션 기법</li>
     </ul>
   </li>
 </ul>
@@ -1272,7 +1348,7 @@
           <td>Luong et al. (2015)</td>
         </tr>
         <tr>
-          <td>General</td>
+          <td>Learnable Weighted Attention</td>
           <td>\(f(\overrightarrow{\mathbf{q}}, \mathbf{K}) = \overrightarrow{\mathbf{q}}^{T} \cdot \mathbf{W} \cdot \mathbf{K}\)</td>
           <td>Luong et al. (2015)</td>
         </tr>
@@ -1298,7 +1374,7 @@
 
 <h3 id="luong-attention"><span class="me-2">Luong Attention</span><a href="#luong-attention" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p><a href="/_post_refer_img/TextAnalytics/08-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/08-04.png" alt="03" width="100%" loading="lazy"></a></p>
+<p><a href="/_post_refer_img/TextAnalytics/08-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/08-04.png" alt="04" width="100%" loading="lazy"></a></p>
 
 <ul>
   <li>
@@ -1335,6 +1411,46 @@
 </ul>
 
 <h3 id="bahdanau-attention"><span class="me-2">Bahdanau Attention</span><a href="#bahdanau-attention" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p><a href="/_post_refer_img/TextAnalytics/08-05.png" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/08-05.png" alt="05" width="100%" loading="lazy"></a></p>
+
+<ul>
+  <li>
+    <p>Attention Mechanism</p>
+
+\[\mathbf{A}^{(t)} = \text{Softmax}\left[\overrightarrow{\mathbf{q}}_{t} \cdot \mathbf{K}\right] \cdot \mathbf{V}\]
+
+    <ul>
+      <li>\(\overrightarrow{\mathbf{q}}_{t} = \eta_{t-1}\) : 디코더의 $t-1$ 시점 은닉 상태</li>
+      <li>\(\overrightarrow{\mathbf{k}}_{i} = h_{i}\) : 인코더의 $i$ 번째 순번 은닉 상태</li>
+      <li>\(\overrightarrow{\mathbf{v}}_{i} = h_{i}\) : 인코더의 $i$ 번째 순번 은닉 상태</li>
+    </ul>
+  </li>
+  <li>
+    <p>디코더의 $t$ 시점 특화 문맥 벡터(Context Vector) 도출</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{z}}_{t}
+  = \sum_{i}{\mathbf{A}^{(t)}_{i}}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>$t$ 시점 문맥 벡터와 $t$ 시점 입력 벡터 종합</p>
+
+\[\overrightarrow{\mathbf{s}}_{t}
+  = \overrightarrow{\mathbf{z}}_{t} \oplus \hat{\mathbf{y}}_{t-1}\]
+  </li>
+  <li>
+    <p>목표 언어의 $t$ 번째 단어 확률 분포 벡터 도출</p>
+
+\[\begin{aligned}
+  \eta_{t}, \sigma_{t}
+  &amp;= \text{LSTM}\left[\overrightarrow{\mathbf{s}}_{t} \mid \eta_{t-1}, \sigma_{t-1}\right]\\
+  \hat{\mathbf{y}}_{t}
+  &amp;= \text{MLP}_{\text{Softmax}}\left[\eta_{t}\right]
+  \end{aligned}\]
+  </li>
+</ul>
 
 <h2 id="metric"><span class="me-2">Metric</span><a href="#metric" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
