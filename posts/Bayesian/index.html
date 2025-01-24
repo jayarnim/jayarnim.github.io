@@ -829,7 +829,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1847 words"
+  title="1856 words"
 >
   <em>10 min</em> read</span>
 
@@ -969,22 +969,22 @@
     <ul>
       <li>$\theta$ : 모수</li>
       <li>$\mathcal{D}$ : 관측된 데이터</li>
-      <li>$P(\theta \mid \mathcal{D})$ : $\theta$ 의 사후확률분포</li>
-      <li>$\pi(\theta)=P(\theta)$ : $\theta$ 의 사전확률분포</li>
-      <li>$\mathcal{L}(\theta)=P(\mathcal{D} \mid \theta)$ : $\theta$ 에 대한 $\mathcal{D}$ 의 우도함수</li>
-      <li>$P(\mathcal{D})$ : $\mathcal{D}$ 의 주변확률</li>
+      <li>$P(\theta \mid \mathcal{D})$ : $\theta$ 의 사후 확률 분포</li>
+      <li>$\pi(\theta)=P(\theta)$ : $\theta$ 의 사전 확률 분포</li>
+      <li>$\mathcal{L}(\theta)=P(\mathcal{D} \mid \theta)$ : $\theta$ 에 대한 $\mathcal{D}$ 의 우도</li>
+      <li>$P(\mathcal{D})$ : $\mathcal{D}$ 의 주변 확률</li>
     </ul>
   </li>
   <li>
     <p><strong>모듈의 이해</strong></p>
     <ul>
       <li>
-        <p><strong>사전확률분포(Prior Probability Distribution)</strong> : 사전 지식의 불확실성을 모델링하는 모듈로서, 사전 정보를 기초로 설정된 초기 믿음</p>
+        <p><strong>사전 확률 분포(Prior Probability Distribution)</strong> : 사전 지식의 불확실성을 모델링하는 모듈로서, 사전 정보를 기초로 설정된 초기 믿음</p>
 
 \[\theta \sim P\]
       </li>
       <li>
-        <p><strong>우도(Likelihood or Likelihood Function)</strong> : 데이터의 불확실성을 모델링하는 모듈로서, 모수가 $\theta$ 로 주어졌을 때, 관측치 $\mathcal{D}$ 가 실현될 가능성</p>
+        <p><strong>우도(Likelihood or Likelihood Function)</strong> : 데이터의 불확실성을 모델링하는 모듈로서, 모수가 $\theta$ 로 주어졌을 때, 관측된 데이터 $\mathcal{D}$ 가 실현될 가능성</p>
 
 \[\begin{aligned}
   \mathcal{L}(\theta)
@@ -993,7 +993,7 @@
   \end{aligned}\]
       </li>
       <li>
-        <p><strong>사후확률분포(Posterior Probability Distribution)</strong> : 사건 발생 후, 추가된 정보를 고려하여 갱신된 믿음</p>
+        <p><strong>사후 확률 분포(Posterior Probability Distribution)</strong> : 사건 발생 후, 추가된 정보(발생된 데이터)를 고려하여 갱신된 믿음</p>
 
 \[\theta \mid \mathcal{D} \sim P\]
       </li>
