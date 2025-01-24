@@ -894,7 +894,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="925 words"
+  title="911 words"
 >
   <em>5 min</em> read</span>
 
@@ -904,19 +904,20 @@
   </header>
 
   <div class="content">
-    <h2 id="적분의-이해"><span class="me-2">적분의 이해</span><a href="#적분의-이해" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="integration"><span class="me-2">Integration</span><a href="#integration" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<h3 id="적분integration"><span class="me-2">적분(Integration)</span><a href="#적분integration" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="integration-1"><span class="me-2">Integration</span><a href="#integration-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
-    <p><strong>정의</strong> : 매우 작은 양을 쌓아가는 방법</p>
+    <p><strong>적분(Integration)</strong> : 매우 작은 양을 쌓아가는 방법</p>
 
     <p><a href="/_post_refer_img/Calculus/05-01.jpeg" class="popup img-link  shimmer"><img src="/_post_refer_img/Calculus/05-01.jpeg" alt="01" width="100%" loading="lazy"></a></p>
   </li>
   <li>
     <p><strong>미분과의 관계</strong></p>
+
     <ul>
       <li>
         <p><strong>미분</strong></p>
@@ -944,11 +945,11 @@
   </li>
 </ul>
 
-<h3 id="부정적분indefinite-integral"><span class="me-2">부정적분(Indefinite Integral)</span><a href="#부정적분indefinite-integral" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="indefinite-integral"><span class="me-2">Indefinite Integral</span><a href="#indefinite-integral" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
-    <p><strong>정의</strong> : 어떤 함수 $f(x)$ 를 도함수로 하는 모든 함수 $F(x)+C$ 를 구하는 연산</p>
+    <p><strong>부정적분(Indefinite Integral)</strong> : 어떤 함수 $f(x)$ 를 도함수로 하는 모든 함수 $F(x)+C$ 를 구하는 연산</p>
 
 \[F(x) + C = \int{f(x)dx}\]
 
@@ -973,11 +974,11 @@
   </li>
 </ul>
 
-<h3 id="정적분definite-integral"><span class="me-2">정적분(Definite Integral)</span><a href="#정적분definite-integral" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="definite-integral"><span class="me-2">Definite Integral</span><a href="#definite-integral" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
-    <p><strong>정의</strong> : $x \in [a,b]$ 과 피적분함수 $f(x)$ 로 둘러싸인 면적의 너비를 구하는 연산</p>
+    <p><strong>정적분(Definite Integral)</strong> : $x \in [a,b]$ 과 피적분함수 $f(x)$ 로 둘러싸인 면적의 너비를 구하는 연산</p>
 
 \[\begin{aligned}
   S
@@ -1003,38 +1004,35 @@
   </li>
 </ul>
 
-<h3 id="중적분multiple-integral"><span class="me-2">중적분(Multiple Integral)</span><a href="#중적분multiple-integral" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="multiple-integral"><span class="me-2">Multiple Integral</span><a href="#multiple-integral" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
-    <p><strong>정의</strong> : 영역 $B$ 에서 적분 가능한 다변수함수 $y=f(x_1,x_2,\cdots,x_n)$ 에 대하여 변수 $x_1,x_2,\cdots,x_n$ 에 대한 정적분</p>
+    <p><strong>중적분(Multiple Integral)</strong> : 영역 $B$ 에서 적분 가능한 다변수함수 $y=f(x_1,x_2,\cdots,x_n)$ 에 대하여 변수 $x_1,x_2,\cdots,x_n$ 에 대한 정적분</p>
 
 \[\begin{aligned}
   \int_{x_n} \cdots \int_{x_2} \int_{x_1} f(x_1,x_2,\cdots,x_n) dx_1 dx_2 \cdots dx_n
   \end{aligned}\]
   </li>
   <li>
-    <p><strong>이중적분(Double Integral)의 예시</strong></p>
-    <ul>
-      <li>
-        <p>영역 $B$ 를 다음과 같이 정의하자</p>
+    <p>영역 $B$ 를 다음과 같이 정의하자</p>
 
 \[\begin{aligned}
   B
   &amp;= [a,b]\times[c,d]\\
   &amp;= \{(x,y)|a \leq x \leq b, c \leq y \leq d\}
   \end{aligned}\]
-      </li>
-      <li>
-        <p>2변수함수 $z=f(x,y)$ 는 영역 $B$ 에서 적분 가능한 함수임</p>
+  </li>
+  <li>
+    <p>2변수함수 $z=f(x,y)$ 는 영역 $B$ 에서 적분 가능한 함수임</p>
 
 \[\begin{aligned}
   \lim_{x \rightarrow k-}f(x,y)=\lim_{x \rightarrow k+}f(x,y)=f(k,y)\;(a \leq k \leq b)\\
   \lim_{y \rightarrow k-}f(x,y)=\lim_{y \rightarrow k+}f(x,y)=f(x,k)\;(c \leq k \leq d)\\
   \end{aligned}\]
-      </li>
-      <li>
-        <p>피적분함수 $z=f(x,y)$ 를 영역 $B$ 에서 $y$ 에 대하여 적분하면 다음과 같음</p>
+  </li>
+  <li>
+    <p>피적분함수 $z=f(x,y)$ 를 영역 $B$ 에서 $y$ 에 대하여 적분하면 다음과 같음</p>
 
 \[\begin{aligned}
   g(x)
@@ -1042,31 +1040,29 @@
   &amp;= \int_{c}^{d}{f(x,y)}dy\\
   &amp;= F(x,d)-F(x,c)
   \end{aligned}\]
-      </li>
-      <li>
-        <p>$x$ 에 관한 함수 $g(x)$ 를 영역 $B$ 에서 $x$ 에 대하여 적분하면 다음과 같음</p>
+  </li>
+  <li>
+    <p>$x$ 에 관한 함수 $g(x)$ 를 영역 $B$ 에서 $x$ 에 대하여 적분하면 다음과 같음</p>
 
 \[\begin{aligned}
   \int_{a}^{b}{g(x)}dx
   &amp;= G(b) - G(a)
   \end{aligned}\]
-      </li>
-      <li>
-        <p>이상을 요약하면 다음과 같음</p>
+  </li>
+  <li>
+    <p>이상을 요약하면 다음과 같음</p>
 
 \[\begin{aligned}
   \int_{a}^{b}(\int_{c}^{d}{z}dy)dx
   &amp;= \int_{a}^{b}\int_{c}^{d}{f(x,y)}dy\,dx
   \end{aligned}\]
-      </li>
-    </ul>
   </li>
 </ul>
 
 <h2 id="특수한-경우의-적분법"><span class="me-2">특수한 경우의 적분법</span><a href="#특수한-경우의-적분법" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<h3 id="부분적분--곱셈의-적분법"><span class="me-2">부분적분 : 곱셈의 적분법</span><a href="#부분적분--곱셈의-적분법" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="부분적분-곱셈의-적분법"><span class="me-2">부분적분: 곱셈의 적분법</span><a href="#부분적분-곱셈의-적분법" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
@@ -1152,7 +1148,7 @@
   </li>
 </ul>
 
-<h3 id="이상적분--극한치의-적어도-한-개가-무한일-경우의-적분법"><span class="me-2">이상적분 : 극한치의 적어도 한 개가 무한일 경우의 적분법</span><a href="#이상적분--극한치의-적어도-한-개가-무한일-경우의-적분법" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="이상적분-극한치의-적어도-한-개가-무한일-경우의-적분법"><span class="me-2">이상적분: 극한치의 적어도 한 개가 무한일 경우의 적분법</span><a href="#이상적분-극한치의-적어도-한-개가-무한일-경우의-적분법" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>

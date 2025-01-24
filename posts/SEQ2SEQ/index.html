@@ -1167,7 +1167,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1537 words"
+  title="1532 words"
 >
   <em>8 min</em> read</span>
 
@@ -1254,7 +1254,7 @@
             </ul>
           </li>
           <li>\(\sigma_{t}\) : $t$ 시점 셀 상태</li>
-          <li>\(\hat{\mathbf{y}}_{t}=\text{arg} \max{\text{MLP}_{\text{Softmax}}\left[\eta_{t}\right]}\) : 목표 언어의 $t$ 시점에서 발생 확률이 가장 높은 단어의 임베딩 벡터
+          <li>\(\hat{\mathbf{y}}_{t}=\text{arg} \max{\text{F}_{\text{Softmax}}\left[\eta_{t}\right]}\) : 목표 언어의 $t$ 시점에서 발생 확률이 가장 높은 단어의 임베딩 벡터
             <ul>
               <li>\(\hat{\mathbf{y}}_{0}\) : 초기 입력값은 <code class="language-plaintext highlighter-rouge">&lt;SOS&gt;</code> 토큰을 활용함</li>
               <li>\(\hat{\mathbf{y}}_{T}\) : 마지막 출력값은 <code class="language-plaintext highlighter-rouge">&lt;EOS&gt;</code> 토큰을 활용함</li>
@@ -1400,7 +1400,7 @@
     <p>$t$ 시점 문맥 벡터와 $t$ 시점 은닉 상태 정보 종합</p>
 
 \[\overrightarrow{\mathbf{s}}_{t}
-  = \text{MLP}_{\text{tanh}}\left[\overrightarrow{\mathbf{z}}_{t} \oplus \eta_{t}\right]\]
+  = \text{F}_{\text{tanh}}\left[\overrightarrow{\mathbf{z}}_{t} \oplus \eta_{t}\right]\]
   </li>
 </ul>
 
@@ -1473,7 +1473,7 @@
   \end{aligned}\]
 
     <blockquote>
-      <p><strong>Why not intersection?</strong> <br /> 생성된 문장을 기준으로(분모로) 하는 정밀도 특성 상, 생성된 문장이 참조 문장과의 교집합에 해당하는 특정 유니그램을 반복 생성했을 때 성능이 과대평가되는 것을 방지하기 위하여 참조 문장에서 등장하는 최대 횟수까지만 매칭을 인정함</p>
+      <p><strong>Why not intersection?</strong> <br /> 생성된 문장을 기준으로(분모로) 하는 정밀도 특성 상, 참조 문장과의 교집합에 해당하는 특정 유니그램이 반복 생성되었을 때 성능이 과대평가되는 것을 방지하기 위하여 참조 문장에서 등장하는 최대 횟수까지만 매칭을 인정함</p>
     </blockquote>
 
     <ul>

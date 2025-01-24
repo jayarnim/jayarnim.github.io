@@ -1203,6 +1203,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -1210,6 +1221,93 @@
   
   
 
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
   
 
   
@@ -1315,9 +1413,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="869 words"
+  title="1302 words"
 >
-  <em>4 min</em> read</span>
+  <em>7 min</em> read</span>
 
         </div>
       </div>
@@ -1325,34 +1423,35 @@
   </header>
 
   <div class="content">
-    <h2 id="편미분partial-derivative"><span class="me-2">편미분(Partial Derivative)</span><a href="#편미분partial-derivative" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="partial-derivative"><span class="me-2">Partial Derivative</span><a href="#partial-derivative" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
+
+<h3 id="partial-derivative-1"><span class="me-2">Partial Derivative</span><a href="#partial-derivative-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
-    <p><strong>정의</strong> : 다변수함수 $y=f(x,\cdots)$ 에 대하여, 변수 $x$ 를 제외한 모든 변수를 일정한 상수로 고정하였을 때 $x$ 축에 평행한 방향에 대한 $y$ 의 순간변화율</p>
-
-    <ul>
-      <li>
-        <p>$z$ 에 대한 $x,y$ 의 2변수함수 $f$ 를 상정하자</p>
+    <p><strong>편미분(Partial Derivative)</strong> : 다변수함수 $y=f(x,\cdots)$ 에 대하여, 변수 $x$ 를 제외한 모든 변수를 일정한 상수로 고정하였을 때 $x$ 축에 평행한 방향에 대한 $y$ 의 순간변화율</p>
+  </li>
+  <li>
+    <p>$z$ 에 대한 $x,y$ 의 2변수함수 $f$ 를 상정하자</p>
 
 \[z=f(x,y)\]
-      </li>
-      <li>
-        <p>$y=b$ 로서 고정되어 있을 경우, $z$ 는 $x$ 만의 함수라고 볼 수 있음</p>
+  </li>
+  <li>
+    <p>$y=b$ 로서 고정되어 있을 경우, $z$ 는 $x$ 만의 함수라고 볼 수 있음</p>
 
 \[z=f(x,y=b)\]
-      </li>
-      <li>
-        <p>$z$ 에 대한 $x$ 만의 함수 $f(x,y=b)$ 가 $x=a$ 에서 미분 가능하다고 하자</p>
+  </li>
+  <li>
+    <p>$z$ 에 대한 $x$ 만의 함수 $f(x,y=b)$ 가 $x=a$ 에서 미분 가능하다고 하자</p>
 
 \[\begin{aligned}
   \frac{\partial}{\partial x}f(a,b)
   &amp;= \lim_{h\rightarrow 0}\frac{f(a+h,b)-f(a,b)}{h}
   \end{aligned}\]
-      </li>
-      <li>
-        <p>$(a,b)$ 에서 $x$ 에 관한 <strong>편미분계수(Partial Derivatial)</strong> 를 다음과 같이 표현함</p>
+  </li>
+  <li>
+    <p>$(a,b)$ 에서 $x$ 에 관한 <strong>편미분계수(Partial Derivatial)</strong> 를 다음과 같이 표현함</p>
 
 \[\begin{aligned}
   D_{x}f(x=a,y=b)
@@ -1360,48 +1459,55 @@
   &amp;=\frac{\partial}{\partial x} f(x=a,y=b)\\
   &amp;=\frac{\partial z}{\partial x}
   \end{aligned}\]
-      </li>
-    </ul>
   </li>
-  <li><strong>예시</strong>
-    <ul>
-      <li>
-        <p>$\text{temperature} = T(x, time)$</p>
+</ul>
 
-        <p><a href="/_post_refer_img/Calculus/04-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/Calculus/04-01.png" alt="01" width="100%" loading="lazy"></a></p>
-      </li>
-      <li>
-        <p>$\text{temperature} = T(x,time=3)$</p>
+<h3 id="example"><span class="me-2">Example</span><a href="#example" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-        <p><a href="/_post_refer_img/Calculus/04-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/Calculus/04-02.png" alt="02" width="100%" loading="lazy"></a></p>
-      </li>
-      <li>
-        <p>$\text{temperature} = T(x) \ (\text{s.t.} \, time=3)$</p>
+<ul>
+  <li>
+    <p>$\text{temperature} = T(x, time)$</p>
 
-        <p><a href="/_post_refer_img/Calculus/04-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/Calculus/04-03.png" alt="03" width="100%" loading="lazy"></a></p>
-      </li>
-      <li>
-        <p>$\displaystyle\frac{d}{dx}T(x,time=3)$</p>
-
-        <p><a href="/_post_refer_img/Calculus/04-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/Calculus/04-04.png" alt="04" width="100%" loading="lazy"></a></p>
-      </li>
-    </ul>
+    <p><a href="/_post_refer_img/Calculus/04-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/Calculus/04-01.png" alt="01" width="100%" loading="lazy"></a></p>
   </li>
-  <li><strong>고계편도함수</strong> : 다변수함수에 대하여 그 편도함수의 편도함수
-    <ul>
-      <li>
-        <p>$z$ 에 대한 $x,y$ 의 2변수함수 $f$ 를 상정하자</p>
+  <li>
+    <p>$\text{temperature} = T(x,time=3)$</p>
+
+    <p><a href="/_post_refer_img/Calculus/04-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/Calculus/04-02.png" alt="02" width="100%" loading="lazy"></a></p>
+  </li>
+  <li>
+    <p>$\text{temperature} = T(x) \ (\text{s.t.} \, time=3)$</p>
+
+    <p><a href="/_post_refer_img/Calculus/04-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/Calculus/04-03.png" alt="03" width="100%" loading="lazy"></a></p>
+  </li>
+  <li>
+    <p>$\displaystyle\frac{d}{dx}T(x,time=3)$</p>
+
+    <p><a href="/_post_refer_img/Calculus/04-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/Calculus/04-04.png" alt="04" width="100%" loading="lazy"></a></p>
+  </li>
+</ul>
+
+<h3 id="partial-derivative-function"><span class="me-2">Partial Derivative Function</span><a href="#partial-derivative-function" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p><strong>고계편도함수</strong> : 다변수함수에 대하여 그 편도함수의 편도함수</p>
+  </li>
+  <li>
+    <p>$z$ 에 대한 $x,y$ 의 2변수함수 $f$ 를 상정하자</p>
 
 \[z=f(x,y)\]
-      </li>
-      <li>
-        <p>$f$ 의 $x,y$ 에 대한 1계편도함수는 다음과 같음</p>
+  </li>
+  <li>
+    <p>$f$ 의 $x,y$ 에 대한 1계편도함수는 다음과 같음</p>
 
-\[f_{x}(x,y) = \frac{\partial}{\partial x}f(x,y)\\
-  f_{y}(x,y) = \frac{\partial}{\partial y}f(x,y)\]
-      </li>
-      <li>
-        <p>1계편도함수의 $x,y$ 에 대한 편도함수는 다음과 같음</p>
+\[\begin{aligned}
+  f_{x}(x,y) &amp;= \frac{\partial}{\partial x}f(x,y)\\
+  f_{y}(x,y) &amp;= \frac{\partial}{\partial y}f(x,y)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>1계편도함수의 $x,y$ 에 대한 편도함수는 다음과 같음</p>
 
 \[\begin{aligned}
   f_{xx}(x,y)
@@ -1417,12 +1523,10 @@
   &amp;= (f_{y})_{y}\\
   &amp;= \frac{\partial^2}{\partial y^2}f(x,y)
   \end{aligned}\]
-      </li>
-    </ul>
   </li>
 </ul>
 
-<h2 id="2변수함수의-극값"><span class="me-2">2변수함수의 극값</span><a href="#2변수함수의-극값" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="two-variable-function"><span class="me-2">Two-variable function</span><a href="#two-variable-function" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
@@ -1435,65 +1539,69 @@
       <li>2변수함수 $z=f(x,y)$ 의 그래프 ${(x,y,f(x,y)) \vert (x,y)\in D(f)}$ 는 $xyz$-공간에서의 곡면임</li>
     </ul>
   </li>
-  <li><strong>2변수함수의 임계점</strong>
-    <ul>
-      <li>
-        <p><strong>임계점(Critical Point)</strong> : 함수의 1계편도함수 값이 $0$ 이거나 존재하지 않는 지점</p>
+</ul>
+
+<h3 id="variable-points"><span class="me-2">Variable Points</span><a href="#variable-points" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p><strong>임계점(Critical Point)</strong> : 함수의 1계편도함수 값이 $0$ 이거나 존재하지 않는 지점</p>
 
 \[f_x = f_y = 0\]
+  </li>
+  <li>
+    <p><strong>극점(Local Extremum Point)</strong> : 임계점 중에서 극값을 갖는 지점</p>
+
+    <p><a href="/_post_refer_img/Calculus/04-06.png" class="popup img-link  shimmer"><img src="/_post_refer_img/Calculus/04-06.png" alt="06" width="100%" loading="lazy"></a></p>
+
+    <ul>
+      <li>$f$ 의 임계점 $(a,b)$ 의 모든 열린 근방 $(x,y)$ 에 대하여 다음 중 <strong>하나만을</strong> 만족하는 경우
+        <ul>
+          <li><strong>극대점</strong> : $f(a,b) \leq f(x,y)$</li>
+          <li><strong>극소점</strong> : $f(a,b) \ge f(x,y)$</li>
+        </ul>
       </li>
       <li>
-        <p><strong>극점(Local Extremum Point)</strong> : 임계점 중에서 극값을 갖는 지점</p>
-
-        <p><a href="/_post_refer_img/Calculus/04-06.png" class="popup img-link  shimmer"><img src="/_post_refer_img/Calculus/04-06.png" alt="06" width="100%" loading="lazy"></a></p>
-
-        <ul>
-          <li>$f$ 의 임계점 $(a,b)$ 의 모든 열린 근방 $(x,y)$ 에 대하여 다음 중 <strong>하나만을</strong> 만족하는 경우
-            <ul>
-              <li><strong>극대점</strong> : $f(a,b) \leq f(x,y)$</li>
-              <li><strong>극소점</strong> : $f(a,b) \ge f(x,y)$</li>
-            </ul>
-          </li>
-          <li>
-            <p>이는 $x,y$ 에 대한 이계편도함수가 다음을 만족함을 의미함</p>
+        <p>이는 $x,y$ 에 대한 이계편도함수가 다음을 만족함을 의미함</p>
 
 \[f_{xx} \cdot f_{yy} - f^{2}_{xy} &gt; 0\]
-          </li>
-        </ul>
-      </li>
-      <li>
-        <p><strong>안장점(Saddle Point)</strong> : 임계점 중에서 극값을 갖지 않는 점으로서, 어떤 측면에서는 극소값이 되고, 동시에 다른 측면에서는 극대값이 되는 지점</p>
-
-        <p><a href="/_post_refer_img/Calculus/04-07.png" class="popup img-link  shimmer"><img src="/_post_refer_img/Calculus/04-07.png" alt="07" width="100%" loading="lazy"></a></p>
-
-        <ul>
-          <li>$f$ 의 임계점 $(a,b)$ 의 모든 열린 근방 $(x,y)$ 에 대하여 다음을 <strong>동시에</strong> 만족하는 경우
-            <ul>
-              <li>$f(a,b) \leq f(x,y)$</li>
-              <li>$f(a,b) \ge f(x,y)$</li>
-            </ul>
-          </li>
-          <li>
-            <p>이는 $x,y$ 에 대한 이계편도함수가 다음을 만족함을 의미함</p>
-
-\[f_{xx} \cdot f_{yy} - f^{2}_{xy} &lt; 0\]
-          </li>
-        </ul>
       </li>
     </ul>
   </li>
-  <li><strong>헤시안 행렬의 행렬식을 활용한 2변수함수의 극값 판별</strong>
+  <li>
+    <p><strong>안장점(Saddle Point)</strong> : 임계점 중에서 극값을 갖지 않는 점으로서, 어떤 측면에서는 극소값이 되고, 동시에 다른 측면에서는 극대값이 되는 지점</p>
+
+    <p><a href="/_post_refer_img/Calculus/04-07.png" class="popup img-link  shimmer"><img src="/_post_refer_img/Calculus/04-07.png" alt="07" width="100%" loading="lazy"></a></p>
+
     <ul>
+      <li>$f$ 의 임계점 $(a,b)$ 의 모든 열린 근방 $(x,y)$ 에 대하여 다음을 <strong>동시에</strong> 만족하는 경우
+        <ul>
+          <li>$f(a,b) \leq f(x,y)$</li>
+          <li>$f(a,b) \ge f(x,y)$</li>
+        </ul>
+      </li>
       <li>
-        <p><strong>헤시안 행렬(Hessian Matrix)</strong> : 어떤 이변수함수의 이계편도함수를 표현한 행렬</p>
+        <p>이는 $x,y$ 에 대한 이계편도함수가 다음을 만족함을 의미함</p>
+
+\[f_{xx} \cdot f_{yy} - f^{2}_{xy} &lt; 0\]
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="hessian-matrix"><span class="me-2">Hessian Matrix</span><a href="#hessian-matrix" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p><strong>헤시안 행렬(Hessian Matrix)</strong> : 어떤 이변수함수의 이계편도함수를 표현한 행렬로서, 이를 활용하여 2변수함수의 극값을 판별할 수 있음</p>
 
 \[\begin{pmatrix}
   f_{xx}&amp;f_{xy}\\
   f_{xy}&amp;f_{yy}\\ 
   \end{pmatrix}\]
-      </li>
-      <li>
-        <p><strong>헤시안 행렬의 행렬식($D$)</strong></p>
+  </li>
+  <li>
+    <p><strong>헤시안 행렬의 행렬식($D$)</strong></p>
 
 \[\begin{aligned}
   D
@@ -1503,20 +1611,18 @@
   f_{xy}&amp;f_{yy}\\ 
   \end{vmatrix}
   \end{aligned}\]
-      </li>
-      <li>
-        <p><strong>헤시안 행렬의 행렬식을 활용한 2변수함수의 극값 판별</strong></p>
+  </li>
+  <li>
+    <p><strong>헤시안 행렬의 행렬식을 활용한 2변수함수의 극값 판별</strong></p>
+    <ul>
+      <li>$f_x=f_y=0$ 인 점 $(a,b)$ 의 근방에서 함수 $f$ 와 그 일계편도함수가 모두 연속이라고 하자
         <ul>
-          <li>$f_x=f_y=0$ 인 점 $(a,b)$ 의 근방에서 함수 $f$ 와 그 일계편도함수가 모두 연속이라고 하자
+          <li>$D=0$ : 극값의 존재 여부를 결정할 수 없음</li>
+          <li>$D&lt;0$ : $f$ 는 $(a,b)$ 에서 안장점을 가짐</li>
+          <li>$D&gt;0$ : $f$ 는 $(a,b)$ 에서 극값을 가짐
             <ul>
-              <li>$D=0$ : 극값의 존재 여부를 결정할 수 없음</li>
-              <li>$D&lt;0$ : $f$ 는 $(a,b)$ 에서 안장점을 가짐</li>
-              <li>$D&gt;0$ : $f$ 는 $(a,b)$ 에서 극값을 가짐
-                <ul>
-                  <li>$f_{xx} &lt; 0$ : 극대값</li>
-                  <li>$f_{xx} &gt; 0$ : 극소값</li>
-                </ul>
-              </li>
+              <li>$f_{xx} &lt; 0$ : 극대값</li>
+              <li>$f_{xx} &gt; 0$ : 극소값</li>
             </ul>
           </li>
         </ul>
@@ -1525,12 +1631,12 @@
   </li>
 </ul>
 
-<h2 id="그라디언트gradient"><span class="me-2">그라디언트(Gradient)</span><a href="#그라디언트gradient" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="gradient"><span class="me-2">Gradient</span><a href="#gradient" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
   <li>
-    <p><strong>정의</strong> : $n$ 변수함수 $y=f(x_{1},x_{2},\cdots,x_{n})$ 에 대하여 각 변수에 대한 일계편도함수로 구성된 벡터</p>
+    <p><strong>그라디언트(Gradient)</strong> : $n$ 변수함수 $y=f(x_{1},x_{2},\cdots,x_{n})$ 에 대하여 각 변수에 대한 일계편도함수로 구성된 벡터</p>
 
 \[\nabla f
   =(\frac{\partial f}{\partial x_{1}}, \frac{\partial f}{\partial x_{2}}, \cdots, \frac{\partial f}{\partial x_{n}})^{T}\]
@@ -1539,6 +1645,88 @@
     <p><strong>해석</strong> : \(\nabla f \vert _{(x_{1},x_{2},\cdots,x_{n})}\) 는 점 \((x_{1},x_{2},\cdots,x_{n})\) 에서 \(f\) 의 값이 가장 가파르게 증가하는 방향임</p>
 
     <p><a href="/_post_refer_img/Calculus/04-08.png" class="popup img-link  shimmer"><img src="/_post_refer_img/Calculus/04-08.png" alt="08" width="100%" loading="lazy"></a></p>
+  </li>
+</ul>
+
+<h2 id="lagrange-multipliers"><span class="me-2">Lagrange Multipliers</span><a href="#lagrange-multipliers" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><strong>라그랑주 승수법(Lagrange Multipliers)</strong> : 제약 조건이 주어진 최적화 문제(즉, 제한된 범위 내에서 최대값이나 최소값을 구하는 문제)를 해결하기 위한 수학적 기법으로서, 주로 다변수 함수의 최적화 문제 풀이에 사용됨</p>
+
+\[\begin{aligned}
+  \Theta^{*} =
+  \begin{cases}
+  \text{arg} \min{\mathcal{L}(\Theta)} \quad &amp; \text{minimum}\\
+  \text{arg} \max{\mathcal{L}(\Theta)} \quad &amp; \text{maximun}
+  \end{cases}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h3 id="how-to-solve"><span class="me-2">How to Solve</span><a href="#how-to-solve" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li><strong>함수 정의</strong>
+    <ul>
+      <li>$f(x,y,\cdots)$ : 목적 함수</li>
+      <li>$g_{i}(x,y,\cdots)=0$ : $i$ 번째 등식 제약 조건</li>
+      <li>$h_{j}(x,y,\cdots) \le 0$ : $j$ 번째 비등식 제약 조건</li>
+      <li>$\lambda_{i}$ : $i$ 번째 등식 제약 조건의 라그랑주 승수로서 해당 제약 조건의 영향력</li>
+      <li>$\mu_{j}$ : $j$ 번째 비등식 제약 조건의 라그랑주 승수로서 해당 제약 조건의 영향력</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>라그랑주 함수 도출</strong></p>
+
+\[\begin{aligned}
+  &amp;\mathcal{L}(x,y,\cdots,\lambda_{1}, \cdots, \mu_{1},\cdots)\\
+  &amp;= f(x,y,\cdots) + \sum_{i}{\lambda_{i} \cdot g_{i}(x,y,\cdots)} + \sum_{j}{\mu_{j} \cdot h_{j}(x,y,\cdots)}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>풀이</strong></p>
+
+\[\begin{aligned}
+  \nabla\mathcal{L}(x^{*},y^{*},\cdots,\lambda^{*}_{1}, \cdots, \mu_{1}^{*}, \cdots) = 0
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h3 id="kkt"><span class="me-2">KKT</span><a href="#kkt" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p><strong>KKT 조건(Karush-Kuhn-Tucker Conditions)</strong> : 비등식 제약 하 최적화 문제에서 라그랑주 승수법을 적용하기 위한 조건</p>
+  </li>
+  <li>
+    <p><strong>1차 최적성 조건(Stationarity)</strong> : 목적 함수의 기울기와 제약 조건의 기울기가 균형을 이룸</p>
+
+\[\begin{aligned}
+  \nabla f(x^{*}) + \sum_{i}{\lambda_{i} \cdot \nabla g_{i}(x^{*})} + \sum_{j}{\mu_{j} \cdot \nabla h_{j}(x^{*})} = 0
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>제약 조건의 만족(Primal Feasibility)</strong> : 최적의 해가 주어진 제약 조건을 만족해야 함</p>
+
+\[\begin{aligned}
+  g_{\forall}(x^{*}) = 0, \quad h_{\forall}(x^{*}) \le 0
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>이중성 조건 (Dual Feasibility)</strong> : 비등식 제약 조건에 대한 라그랑주 승수는 음수가 될 수 없음</p>
+
+\[\begin{aligned}
+  \mu_{\forall} \ge 0
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>슬랙 조건 (Complementary Slackness)</strong> : 비등식 제약 조건이 활성(active)일 때만 해당 제약 조건이 최적화 문제에 영향을 미침</p>
+
+\[\begin{aligned}
+  \mu_{\forall} \cdot h_{\forall}(x^{*}) = 0
+  \end{aligned}\]
   </li>
 </ul>
 
