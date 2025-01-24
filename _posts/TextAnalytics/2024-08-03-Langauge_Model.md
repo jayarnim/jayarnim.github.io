@@ -85,14 +85,14 @@ image:
 
     $$\begin{aligned}
     \overrightarrow{\mathbf{h}}_{t}
-    &= \text{MLP}_{\text{ReLU}}\left[\overrightarrow{\mathbf{z}}_{t}\right]
+    &= \text{F}_{\text{ReLU}}\left[\overrightarrow{\mathbf{z}}_{t}\right]
     \end{aligned}$$
 
 - **`HIDDEN` → `OUTPUT`**
 
     $$\begin{aligned}
     \hat{\mathbf{y}}_{t+1}
-    &= \text{MLP}_{\text{Softmax}}\left[\overrightarrow{\mathbf{h}}_{t}\right]
+    &= \text{F}_{\text{Softmax}}\left[\overrightarrow{\mathbf{h}}_{t}\right]
     \end{aligned}$$
 
 ### RNNLM
@@ -117,7 +117,7 @@ image:
 
     $$\begin{aligned}
     \hat{\mathbf{y}}_{t+1}
-    &= \text{MLP}_{\text{Softmax}}\left[h_{t}\right]
+    &= \text{F}_{\text{Softmax}}\left[h_{t}\right]
     \end{aligned}$$
 
 ## Metric

@@ -158,11 +158,11 @@ image:
             - 첫 번째 LSTM Layer 의 $t$ 시점 입력값 $$h^{(0)}_{t}$$ 은 $t$ 시점 단어 $w_{t}$ 의 임베딩 벡터임
         - $c^{(k)}_{t}$ : $k$ 번째 LSTM Layer 의 $t$ 시점 셀 상태 값
 
-    2. **Fully Connected Layers**
+    2. **Output Layer**
 
         $$\begin{aligned}
         \hat{\mathbf{y}}
-        &= \text{MLP}_{\text{softmax}}\left[h^{(K)}_{T}\right]
+        &= \text{F}_{\text{Softmax}}\left[h^{(K)}_{T}\right]
         \end{aligned}$$
 
 - **ELMo Representation**

@@ -11,16 +11,17 @@ image:
   path: /_post_refer_img/Calculus/Thumbnail.jpg
 ---
 
-## 적분의 이해
+## Integration
 -----
 
-### 적분(Integration)
+### Integration
 
-- **정의** : 매우 작은 양을 쌓아가는 방법
+- **적분(Integration)** : 매우 작은 양을 쌓아가는 방법
 
     ![01](/_post_refer_img/Calculus/05-01.jpeg){: width="100%"}
 
 - **미분과의 관계**
+    
     - **미분**
 
         $$
@@ -41,9 +42,9 @@ image:
         - $x$ 축과 피적분함수 $f(x)$ 로 둘러싸인 면적의 너비 $F(x)+C$ 를 구하는 방법
         - 미분소($f(x) \times \Delta x$)를 쌓아가는 방법
 
-### 부정적분(Indefinite Integral)
+### Indefinite Integral
 
-- **정의** : 어떤 함수 $f(x)$ 를 도함수로 하는 모든 함수 $F(x)+C$ 를 구하는 연산
+- **부정적분(Indefinite Integral)** : 어떤 함수 $f(x)$ 를 도함수로 하는 모든 함수 $F(x)+C$ 를 구하는 연산
 
     $$
     F(x) + C = \int{f(x)dx}
@@ -63,9 +64,9 @@ image:
     - $\displaystyle\int{\sin{x}dx} = -\cos{x}+C$
     - $\displaystyle\int{\cos{x}dx} = \sin{x}+C$
 
-### 정적분(Definite Integral)
+### Definite Integral
 
-- **정의** : $x \in [a,b]$ 과 피적분함수 $f(x)$ 로 둘러싸인 면적의 너비를 구하는 연산
+- **정적분(Definite Integral)** : $x \in [a,b]$ 과 피적분함수 $f(x)$ 로 둘러싸인 면적의 너비를 구하는 연산
 
     $$\begin{aligned}
     S
@@ -84,57 +85,56 @@ image:
     - $\displaystyle\int_{a}^{b}{\alpha f(x)dx} = -\displaystyle\int_{b}^{a}{\alpha f(x)dx}$
     - $\displaystyle\int_{a}^{b}{\alpha f(x)dx} + \displaystyle\int_{b}^{c}{\alpha f(x)dx} = \displaystyle\int_{a}^{c}{\alpha f(x)dx}\,(a<b<c)$
 
-### 중적분(Multiple Integral)
+### Multiple Integral
 
-- **정의** : 영역 $B$ 에서 적분 가능한 다변수함수 $y=f(x_1,x_2,\cdots,x_n)$ 에 대하여 변수 $x_1,x_2,\cdots,x_n$ 에 대한 정적분
+- **중적분(Multiple Integral)** : 영역 $B$ 에서 적분 가능한 다변수함수 $y=f(x_1,x_2,\cdots,x_n)$ 에 대하여 변수 $x_1,x_2,\cdots,x_n$ 에 대한 정적분
 
     $$\begin{aligned}
     \int_{x_n} \cdots \int_{x_2} \int_{x_1} f(x_1,x_2,\cdots,x_n) dx_1 dx_2 \cdots dx_n
     \end{aligned}$$
+    
+- 영역 $B$ 를 다음과 같이 정의하자
 
-- **이중적분(Double Integral)의 예시**
-    - 영역 $B$ 를 다음과 같이 정의하자
+    $$\begin{aligned}
+    B
+    &= [a,b]\times[c,d]\\
+    &= \{(x,y)|a \leq x \leq b, c \leq y \leq d\}
+    \end{aligned}$$
 
-        $$\begin{aligned}
-        B
-        &= [a,b]\times[c,d]\\
-        &= \{(x,y)|a \leq x \leq b, c \leq y \leq d\}
-        \end{aligned}$$
+- 2변수함수 $z=f(x,y)$ 는 영역 $B$ 에서 적분 가능한 함수임
 
-    - 2변수함수 $z=f(x,y)$ 는 영역 $B$ 에서 적분 가능한 함수임
+    $$\begin{aligned}
+    \lim_{x \rightarrow k-}f(x,y)=\lim_{x \rightarrow k+}f(x,y)=f(k,y)\;(a \leq k \leq b)\\
+    \lim_{y \rightarrow k-}f(x,y)=\lim_{y \rightarrow k+}f(x,y)=f(x,k)\;(c \leq k \leq d)\\
+    \end{aligned}$$
 
-        $$\begin{aligned}
-        \lim_{x \rightarrow k-}f(x,y)=\lim_{x \rightarrow k+}f(x,y)=f(k,y)\;(a \leq k \leq b)\\
-        \lim_{y \rightarrow k-}f(x,y)=\lim_{y \rightarrow k+}f(x,y)=f(x,k)\;(c \leq k \leq d)\\
-        \end{aligned}$$
+- 피적분함수 $z=f(x,y)$ 를 영역 $B$ 에서 $y$ 에 대하여 적분하면 다음과 같음
 
-    - 피적분함수 $z=f(x,y)$ 를 영역 $B$ 에서 $y$ 에 대하여 적분하면 다음과 같음
+    $$\begin{aligned}
+    g(x)
+    &= \int_{c}^{d}{z}dy\\
+    &= \int_{c}^{d}{f(x,y)}dy\\
+    &= F(x,d)-F(x,c)
+    \end{aligned}$$
 
-        $$\begin{aligned}
-        g(x)
-        &= \int_{c}^{d}{z}dy\\
-        &= \int_{c}^{d}{f(x,y)}dy\\
-        &= F(x,d)-F(x,c)
-        \end{aligned}$$
+- $x$ 에 관한 함수 $g(x)$ 를 영역 $B$ 에서 $x$ 에 대하여 적분하면 다음과 같음
 
-    - $x$ 에 관한 함수 $g(x)$ 를 영역 $B$ 에서 $x$ 에 대하여 적분하면 다음과 같음
+    $$\begin{aligned}
+    \int_{a}^{b}{g(x)}dx
+    &= G(b) - G(a)
+    \end{aligned}$$
 
-        $$\begin{aligned}
-        \int_{a}^{b}{g(x)}dx
-        &= G(b) - G(a)
-        \end{aligned}$$
+- 이상을 요약하면 다음과 같음
 
-    - 이상을 요약하면 다음과 같음
-
-        $$\begin{aligned}
-        \int_{a}^{b}(\int_{c}^{d}{z}dy)dx
-        &= \int_{a}^{b}\int_{c}^{d}{f(x,y)}dy\,dx
-        \end{aligned}$$
+    $$\begin{aligned}
+    \int_{a}^{b}(\int_{c}^{d}{z}dy)dx
+    &= \int_{a}^{b}\int_{c}^{d}{f(x,y)}dy\,dx
+    \end{aligned}$$
 
 ## 특수한 경우의 적분법
 -----
 
-### 부분적분 : 곱셈의 적분법
+### 부분적분: 곱셈의 적분법
 
 - $x$ 에 대하여 미분 가능한 함수 $u(x),v(x)$ 의 곱을 $x$ 에 대하여 미분하면 다음과 같음
 
@@ -205,7 +205,7 @@ image:
     &= \int{x}dx + \int{\frac{2}{x}}dx - \int{\frac{2}{x-1}}dx
     \end{aligned}$$
 
-### 이상적분 : 극한치의 적어도 한 개가 무한일 경우의 적분법
+### 이상적분: 극한치의 적어도 한 개가 무한일 경우의 적분법
 
 - 피적분함수 $f(x)=\displaystyle\frac{1}{x^2}$ 에 대한 정적분을 다음과 같이 가정하자
 
