@@ -1167,9 +1167,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1238 words"
+  title="1537 words"
 >
-  <em>6 min</em> read</span>
+  <em>8 min</em> read</span>
 
         </div>
       </div>
@@ -1229,13 +1229,13 @@
 
 \[\begin{aligned}
   h_{t}, c_{t}
-  &amp;= \text{LSTM}\left[\overrightarrow{\mathbf{w}}_{t} \mid h_{t-1}, c_{t-1}\right]
+  &amp;= \text{LSTM}\left[\overrightarrow{\mathbf{x}}_{t}, h_{t-1}, c_{t-1}\right]
   \end{aligned}\]
 
         <ul>
           <li>\(h_{t}\) : $t$ 시점 은닉 상태</li>
           <li>\(c_{t}\) : $t$ 시점 셀 상태</li>
-          <li>\(\overrightarrow{\mathbf{w}}_{t}\) : $t$ 번째 단어 임베딩 벡터</li>
+          <li>\(\overrightarrow{\mathbf{x}}_{t}\) : $t$ 번째 단어 임베딩 벡터</li>
           <li>\(\overrightarrow{\mathbf{z}}=h_{T}\) : 마지막 시점 은닉 상태로서 문맥 벡터(Context Vector)</li>
         </ul>
       </li>
@@ -1244,7 +1244,7 @@
 
 \[\begin{aligned}
   \eta_{t}, \sigma_{t}
-  &amp;= \text{LSTM}\left[\hat{\mathbf{y}}_{t-1} \mid \eta_{t-1}, \sigma_{t-1}\right]
+  &amp;= \text{LSTM}\left[\hat{\mathbf{v}}_{t-1}, \eta_{t-1}, \sigma_{t-1}\right]
   \end{aligned}\]
 
         <ul>
@@ -1254,7 +1254,7 @@
             </ul>
           </li>
           <li>\(\sigma_{t}\) : $t$ 시점 셀 상태</li>
-          <li>\(\hat{\mathbf{y}}_{t}=\text{MLP}_{\text{Softmax}}\left[\eta_{t}\right]\) : 목표 언어의 $t$ 번째 단어 확률 분포 벡터
+          <li>\(\hat{\mathbf{y}}_{t}=\text{arg} \max{\text{MLP}_{\text{Softmax}}\left[\eta_{t}\right]}\) : 목표 언어의 $t$ 시점에서 발생 확률이 가장 높은 단어의 임베딩 벡터
             <ul>
               <li>\(\hat{\mathbf{y}}_{0}\) : 초기 입력값은 <code class="language-plaintext highlighter-rouge">&lt;SOS&gt;</code> 토큰을 활용함</li>
               <li>\(\hat{\mathbf{y}}_{T}\) : 마지막 출력값은 <code class="language-plaintext highlighter-rouge">&lt;EOS&gt;</code> 토큰을 활용함</li>
@@ -1267,7 +1267,7 @@
   <li>
     <p><strong>교사 강요(Teacher Forcing)</strong> : 디코더 학습 과정에서, 다음 시점의 입력으로서 이전 시점에서 생성한 출력값 대신 정답 시퀀스를 사용하는 기법</p>
 
-    <p><a href="/_post_refer_img/TextAnalytics/08-03.jpg" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/08-03.jpg" alt="03" width="100%" loading="lazy"></a></p>
+    <p><a href="/_post_refer_img/TextAnalytics/08-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/08-03.png" alt="03" width="100%" loading="lazy"></a></p>
 
     <ul>
       <li>
@@ -1275,7 +1275,7 @@
 
 \[\begin{aligned}
   \eta_{t}, \sigma_{t}
-  &amp;= \text{LSTM}\left[\overrightarrow{\mathbf{y}}_{t-1} \mid \eta_{t-1}, \sigma_{t-1}\right]
+  &amp;= \text{LSTM}\left[\overrightarrow{\mathbf{y}}_{t-1}, \eta_{t-1}, \sigma_{t-1}\right]
   \end{aligned}\]
       </li>
       <li>
@@ -1283,7 +1283,7 @@
 
 \[\begin{aligned}
   \eta_{t}, \sigma_{t}
-  &amp;= \text{LSTM}\left[\hat{\mathbf{y}}_{t-1} \mid \eta_{t-1}, \sigma_{t-1}\right]
+  &amp;= \text{LSTM}\left[\hat{\mathbf{y}}_{t-1}, \eta_{t-1}, \sigma_{t-1}\right]
   \end{aligned}\]
       </li>
     </ul>
@@ -1298,13 +1298,13 @@
     <p><strong>어텐션 메커니즘(Attention Application)</strong> : 개별 질의에 특화된 정답 후보군별 중요도를 도출하는 메커니즘</p>
   </li>
   <li>
-    <p><strong>SEQ2SEQ 적용 목적</strong> : RNN 계열 레이어의 기울기 소실 문제를 보완하기 위함으로서, 문맥 벡터를 최종 은닉 상태로 활용하지 않고, 인코더 각 순번 은닉 상태와 디코더 현재 시점 간 관련성을 고려하여, 디코더의 각 시점에 특화된 문맥 벡터를 생성함</p>
+    <p><strong>SEQ2SEQ 적용 목적</strong> : RNN 계열 레이어의 초기 순번 정보 유실 문제 및 기울기 소실 문제를 보완하기 위함으로서, 문맥 벡터를 최종 은닉 상태로 획일화하여 사용하지 않고, 인코더 각 순번 은닉 상태와 디코더 현재 시점 간 관련성을 고려하여, 디코더의 각 시점에 특화된 문맥 벡터를 생성함</p>
   </li>
   <li>
     <p><strong>종류</strong></p>
     <ul>
-      <li><strong>루옹 어텐션(Luong Attention)</strong> : 디코더의 현재 시점 은닉 상태를 활용하여 문맥 벡터를 생성하고, 이를 현재 시점 은닉 상태에 적용하는 어텐션 기법</li>
-      <li><strong>바다나우 어텐션(Bahdanau Attention)</strong> : 디코더의 이전 시점 은닉 상태를 활용하여 문맥 벡터를 생성하고, 이를 현재 시점 입력값에 적용하는 어텐션 기법</li>
+      <li><strong>루옹 어텐션(Luong Attention)</strong> : 디코더의 <strong>현재 시점 은닉 상태를</strong> 활용하여 문맥 벡터를 생성하고, 이를 <strong>현재 시점 은닉 상태에</strong> 적용하는 어텐션 기법</li>
+      <li><strong>바다나우 어텐션(Bahdanau Attention)</strong> : 디코더의 <strong>이전 시점 은닉 상태를</strong> 활용하여 문맥 벡터를 생성하고, 이를 <strong>현재 시점 입력값에</strong> 적용하는 어텐션 기법</li>
     </ul>
   </li>
 </ul>
@@ -1321,16 +1321,16 @@
   \end{aligned}\]
 
     <ul>
-      <li>$Q$ : 특화할 대상으로서 질의(Query)</li>
-      <li>$K$ : 질의와의 관련성을 도출하기 위한 참조 정보로서 키(Key)</li>
-      <li>$V$ : 최종적으로 사용할 정보로서 정답(Value)</li>
+      <li>$Q$ : 특화할 대상으로서 <strong>질의(Query)</strong></li>
+      <li>$K$ : 질의와의 관련성을 도출하기 위한 참조 정보로서 <strong>키(Key)</strong></li>
+      <li>$V$ : 최종적으로 사용할 정보로서 <strong>선택지(Value)</strong></li>
     </ul>
   </li>
   <li>
-    <p><strong>주의 가중치(Attention Wieght) 도출 함수 정의</strong></p>
+    <p><strong>주의 가중치(Attention Weight) 도출 함수</strong></p>
 
 \[\begin{aligned}
-  \mathbf{A}^{(t)} = \text{Softmax}\left[f(\overrightarrow{\mathbf{q}}_{t}, \mathbf{K})\right]
+  \mathbf{W}^{(t)} = \mathcal{W}^{(t)} \cdot \mathbf{V} = \text{Softmax}\left[f(\overrightarrow{\mathbf{q}}_{t}, \mathbf{K})\right] \cdot \mathbf{V}
   \end{aligned}\]
 
     <div class="table-wrapper"><table>
@@ -1380,12 +1380,11 @@
   <li>
     <p>Attention Mechanism</p>
 
-\[\mathbf{A}^{(t)} = \text{Softmax}\left[\overrightarrow{\mathbf{q}}_{t} \cdot \mathbf{K}\right] \cdot \mathbf{V}\]
+\[\mathbf{W}^{(t)} = \text{Softmax}\left[\overrightarrow{\mathbf{q}}_{t} \cdot \mathbf{K}\right] \cdot \mathbf{V}\]
 
     <ul>
       <li>\(\overrightarrow{\mathbf{q}}_{t} = \eta_{t}\) : 디코더의 $t$ 시점 은닉 상태</li>
-      <li>\(\overrightarrow{\mathbf{k}}_{i} = h_{i}\) : 인코더의 $i$ 번째 순번 은닉 상태</li>
-      <li>\(\overrightarrow{\mathbf{v}}_{i} = h_{i}\) : 인코더의 $i$ 번째 순번 은닉 상태</li>
+      <li>\(\mathbf{K} = \mathbf{V} = \mathbf{H}\) : 인코더의 각 순번 은닉 상태 행렬</li>
     </ul>
   </li>
   <li>
@@ -1393,7 +1392,8 @@
 
 \[\begin{aligned}
   \overrightarrow{\mathbf{z}}_{t}
-  = \sum_{i}{\mathbf{A}^{(t)}_{i}}
+  = \sum_{i}{\mathbf{W}^{(t)}_{i}}
+  = \overrightarrow{\mathbf{w}}^{(t)}_{1} + \overrightarrow{\mathbf{w}}^{(t)}_{2} + \cdots + \overrightarrow{\mathbf{w}}^{(t)}_{T}
   \end{aligned}\]
   </li>
   <li>
@@ -1401,12 +1401,6 @@
 
 \[\overrightarrow{\mathbf{s}}_{t}
   = \text{MLP}_{\text{tanh}}\left[\overrightarrow{\mathbf{z}}_{t} \oplus \eta_{t}\right]\]
-  </li>
-  <li>
-    <p>목표 언어의 $t$ 번째 단어 확률 분포 벡터 도출</p>
-
-\[\hat{\mathbf{y}}_{t}
-  = \text{MLP}_{\text{Softmax}}\left[\overrightarrow{\mathbf{s}}_{t}\right]\]
   </li>
 </ul>
 
@@ -1418,12 +1412,11 @@
   <li>
     <p>Attention Mechanism</p>
 
-\[\mathbf{A}^{(t)} = \text{Softmax}\left[\overrightarrow{\mathbf{q}}_{t} \cdot \mathbf{K}\right] \cdot \mathbf{V}\]
+\[\mathbf{W}^{(t)} = \text{Softmax}\left[\overrightarrow{\mathbf{q}}_{t} \cdot \mathbf{K}\right] \cdot \mathbf{V}\]
 
     <ul>
       <li>\(\overrightarrow{\mathbf{q}}_{t} = \eta_{t-1}\) : 디코더의 $t-1$ 시점 은닉 상태</li>
-      <li>\(\overrightarrow{\mathbf{k}}_{i} = h_{i}\) : 인코더의 $i$ 번째 순번 은닉 상태</li>
-      <li>\(\overrightarrow{\mathbf{v}}_{i} = h_{i}\) : 인코더의 $i$ 번째 순번 은닉 상태</li>
+      <li>\(\mathbf{K} = \mathbf{V} = \mathbf{H}\) : 인코더의 각 순번 은닉 상태 행렬</li>
     </ul>
   </li>
   <li>
@@ -1431,24 +1424,15 @@
 
 \[\begin{aligned}
   \overrightarrow{\mathbf{z}}_{t}
-  = \sum_{i}{\mathbf{A}^{(t)}_{i}}
+  = \sum_{i}{\mathbf{W}^{(t)}_{i}}
+  = \overrightarrow{\mathbf{w}}^{(t)}_{1} + \overrightarrow{\mathbf{w}}^{(t)}_{2} + \cdots + \overrightarrow{\mathbf{w}}^{(t)}_{T}
   \end{aligned}\]
   </li>
   <li>
-    <p>$t$ 시점 문맥 벡터와 $t$ 시점 입력 벡터 종합</p>
+    <p>$t$ 시점 문맥 벡터와 $t$ 시점 입력 벡터 정보 종합</p>
 
 \[\overrightarrow{\mathbf{s}}_{t}
   = \overrightarrow{\mathbf{z}}_{t} \oplus \hat{\mathbf{y}}_{t-1}\]
-  </li>
-  <li>
-    <p>목표 언어의 $t$ 번째 단어 확률 분포 벡터 도출</p>
-
-\[\begin{aligned}
-  \eta_{t}, \sigma_{t}
-  &amp;= \text{LSTM}\left[\overrightarrow{\mathbf{s}}_{t} \mid \eta_{t-1}, \sigma_{t-1}\right]\\
-  \hat{\mathbf{y}}_{t}
-  &amp;= \text{MLP}_{\text{Softmax}}\left[\eta_{t}\right]
-  \end{aligned}\]
   </li>
 </ul>
 
@@ -1456,7 +1440,53 @@
 <hr />
 
 <ul>
-  <li><strong>BLEU Score(<code class="language-plaintext highlighter-rouge">B</code>i-<code class="language-plaintext highlighter-rouge">L</code>ingual <code class="language-plaintext highlighter-rouge">E</code>valuation <code class="language-plaintext highlighter-rouge">U</code>nderstudy Score)</strong></li>
+  <li>
+    <p><strong>BLEU Score(<code class="language-plaintext highlighter-rouge">B</code>i-<code class="language-plaintext highlighter-rouge">L</code>ingual <code class="language-plaintext highlighter-rouge">E</code>valuation <code class="language-plaintext highlighter-rouge">U</code>nderstudy Score)</strong> : 기계 번역 및 자연어 생성에서 기계 번역 결과와 기준 텍스트 간의 유사성을 정량화하는 성능 평가 지표</p>
+
+\[\begin{aligned}
+  \text{BLEU}
+  &amp;= \text{BP} \cdot \exp{\left[\sum_{n=1}^{N}{w_{n}\cdot\log{P_{n}}}\right]}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>$\text{BP}$ : 길이 패널티(Brevity Penalty)로서, 생성된 문장(Hypothesis)이 참조 문장(Reference)보다 지나치게 짧을 경우 패널티를 부여함</p>
+
+\[\begin{aligned}
+  \text{BP}
+  = \begin{cases}
+  1 \quad &amp; h &gt; r\\
+  \exp{\left[1-\displaystyle\frac{r}{h}\right]} \quad &amp; h \le r
+  \end{cases}
+  \end{aligned}\]
+
+    <ul>
+      <li>$h$ : 생성된 문장(Hypothesis)의 길이</li>
+      <li>$r$ : 참조 문장(Reference)의 길이</li>
+    </ul>
+  </li>
+  <li>
+    <p>$P_{n}$ : $n-\text{gram}$ 정밀도로서, 생성된 문장(Hypothesis)과 참조 문장(Reference) 간 $n-\text{gram}$ 중복 비율</p>
+
+\[\begin{aligned}
+  P_{n}
+  &amp;= \frac{\sum_{n-\text{gram} \in \text{Hypothesis}}{\min{\Big[\text{Count}_{\text{Hypothesis}}(n-\text{gram}), \text{Count}_{\text{Reference}}(n-\text{gram})\Big]}}}{\sum_{n-\text{gram} \in \text{Hypothesis}}{\text{Count}_{\text{Hypothesis}}(n-\text{gram})}}
+  \end{aligned}\]
+
+    <blockquote>
+      <p><strong>Why not intersection?</strong> <br /> 생성된 문장을 기준으로(분모로) 하는 정밀도 특성 상, 생성된 문장이 참조 문장과의 교집합에 해당하는 특정 유니그램을 반복 생성했을 때 성능이 과대평가되는 것을 방지하기 위하여 참조 문장에서 등장하는 최대 횟수까지만 매칭을 인정함</p>
+    </blockquote>
+
+    <ul>
+      <li>\(\text{Count}_{\text{Hypothesis}}(n-\text{gram})\) : 생성된 문장(Hypothesis)의 유니그램 중 특정 $n-\text{gram}$ 등장 횟수</li>
+      <li>\(\text{Count}_{\text{Reference}}(n-\text{gram})\) : 참조 문장(Reference)의 유니그램 중 특정 $n-\text{gram}$ 등장 횟수</li>
+    </ul>
+  </li>
+  <li>
+    <p>\(\sum_{n=1}^{N}{w_{n}\cdot\log{P_{n}}}\) : $n-\text{gram}$ 정밀도 가중 평균</p>
+    <ul>
+      <li>통상 가중치 $w_{n}$ 은 균등하게 분배함</li>
+    </ul>
+  </li>
 </ul>
 
 <hr />
@@ -1504,6 +1534,11 @@
             href="/tags/machine-translation/"
             class="post-tag no-text-decoration"
           >Machine Translation</a>
+        
+          <a
+            href="/tags/metric/"
+            class="post-tag no-text-decoration"
+          >Metric</a>
         
       </div>
     
@@ -2089,11 +2124,6 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -2322,269 +2352,10 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2909,6 +2680,250 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -3254,20 +3269,10 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
 
-  
-    
-    
-    
-    
   
     
     
@@ -3984,6 +3989,30 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -4088,6 +4117,34 @@
         </article>
       
         <article class="col">
+          <a href="/posts/Langauge_Model/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1722610800"
+  data-df="ll"
+  
+>
+  Aug  3, 2024
+</time>
+
+              <h4 class="pt-0 my-2">Language Model</h4>
+              <div class="text-muted">
+                <p>Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
           <a href="/posts/GPT/" class="post-preview card h-100">
             <div class="card-body">
               <!--
@@ -4108,34 +4165,6 @@
 </time>
 
               <h4 class="pt-0 my-2">GPT</h4>
-              <div class="text-muted">
-                <p>Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/BERT/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1722956400"
-  data-df="ll"
-  
->
-  Aug  7, 2024
-</time>
-
-              <h4 class="pt-0 my-2">BERT</h4>
               <div class="text-muted">
                 <p>Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</p>
               </div>
@@ -4673,11 +4702,6 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -4906,269 +4930,10 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -5493,6 +5258,250 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -5838,20 +5847,10 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
 
-  
-    
-    
-    
-    
   
     
     

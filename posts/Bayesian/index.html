@@ -695,6 +695,28 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -702,82 +724,6 @@
   
   
 
-  
-    
-    
-
-    
-      
-        
-        
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-
-    
   
 
   
@@ -883,9 +829,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1201 words"
+  title="1847 words"
 >
-  <em>6 min</em> read</span>
+  <em>10 min</em> read</span>
 
         </div>
       </div>
@@ -896,76 +842,102 @@
     <h2 id="compare-frequentist-and-bayesian"><span class="me-2">Compare Frequentist and Bayesian</span><a href="#compare-frequentist-and-bayesian" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<h3 id="빈도주의자-vs-베이지안"><span class="me-2">빈도주의자 vs. 베이지안</span><a href="#빈도주의자-vs-베이지안" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
 <ul>
-  <li><strong>사건 $X$ 가 발생할 확률 $P(X)$ 의 정의</strong>
+  <li><strong>불확실성(Uncertainty)</strong> : 정보 부족 또는 모호성으로 인해 결과나 상황을 완전히 알거나 예측할 수 없는 상태
+    <ul>
+      <li><strong>우발적 불확실성(Aleatoric Uncertainty)</strong> : 데이터 생성 과정에 내재된 변동성이나 관측의 무작위성으로 인해 발생하는 불확실성</li>
+      <li><strong>지식적 불확실성(Epistemic Uncertainty)</strong> : 인간 지식 체계의 결함에서 발생하는 불확실성</li>
+    </ul>
+  </li>
+  <li><strong>확률(Probability)</strong> : 주어진 모수 하에서 데이터가 관찰될 가능성을 나타내는 값
     <ul>
       <li>
-        <p><strong>빈도주의자(Frequentist)</strong> : 어떤 사건이 발생하는 장기적인 빈도</p>
+        <p><strong>빈도주의(Frequentist)</strong> : 특정 사건이 무한히 반복되었을 때 나타나는 상대적 빈도</p>
 
 \[P(X)\]
       </li>
       <li>
-        <p><strong>베이지안(Bayesian)</strong> : 어떤 사건이 발생할 것이라는 믿음 혹은 확신의 척도</p>
+        <p><strong>베이지안(Bayesian)</strong> : 주어진 지식 체계 하에서 특정 사건이 발생할 것이라는 믿음 혹은 확신의 척도</p>
 
 \[P(X \mid \theta)\]
       </li>
     </ul>
   </li>
-  <li><strong>모수 $\theta$ 의 이해</strong>
+  <li>
+    <p><strong>모수(Parameter)</strong> : 데이터 생성 과정의 근본적인 원리를 설명하는 상수</p>
+
     <ul>
       <li>
-        <p><strong>빈도주의자(Frequentist)</strong> : 사건 발생 빈도를 묘사하는 상수</p>
+        <p><strong>빈도주의(Frequentist)</strong>:</p>
 
 \[\theta=\mu, \sigma^2, p, \cdots\]
+
+        <blockquote>
+          <p><strong>모수는 밝혀지지 않았으나 객관적이고 절대적인 진리(상수)로서 존재한다.</strong> 데이터는 모수의 정체가 무엇이라는 주장의 근거로 작용하며, 이 주장의 신뢰성은 표본의 크기와 품질에 의해 전적으로 결정된다. 따라서 데이터의 불확실성(Aleatoric Uncertainty)을 모델링하는 것만으로도 모수 추정을 위한 충분한 근거가 된다.</p>
+        </blockquote>
       </li>
       <li>
-        <p><strong>베이지안(Bayesian)</strong> : 사건 발생에 대한 믿음의 분포를 묘사하는 확률변수</p>
+        <p><strong>베이지안(Bayesian)</strong>:</p>
 
 \[\theta \sim F\]
+
+        <blockquote>
+          <p>모수는 객관적이고 절대적인 진리일 수 있다. 그러나 인간의 불완전한 지식 체계에서는 그 값을 정확히 알거나 확실하게 추정할 수 없다. 따라서 <strong>모수는 확률로 표현되어야 하며,</strong> 이 표현은 주어진 지식 체계 하에서 관측된 데이터에 근거했을 때 모수가 어떠할 것이라는 믿음을 나타낸다. 모수를 추정할 때는 데이터가 내재적으로 가지는 불확실성(Aleatoric Uncertainty)뿐만 아니라, 기존 지식이 가지는 불확실성(Epistemic Uncertainty)까지 함께 모델링해야 한다.</p>
+        </blockquote>
       </li>
     </ul>
   </li>
 </ul>
 
-<h3 id="표본의-크기가-충분하다면"><span class="me-2">표본의 크기가 충분하다면</span><a href="#표본의-크기가-충분하다면" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h2 id="sample-size-the-necessity-for-bayesian"><span class="me-2">Sample Size: The Necessity for Bayesian</span><a href="#sample-size-the-necessity-for-bayesian" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
 
 <ul>
   <li>
-    <p>빈도주의자의 결론과 베이지안의 결론은 일치함</p>
+    <p><strong>대수의 법칙과 작은 수의 혼란</strong></p>
 
-\[\lim_{n \rightarrow \infty}{P(\theta \mid X_{1},X_{2},\cdots,X_{n})} \approx \mu, \sigma^2, p, \cdots\]
+    <blockquote>
+      <p>표본의 크기는 결코 크지 않다. 만일 N이 충분한 추정을 얻기에 부족하다면 더 많은 데이터(또는 더 많은 가정)을 확보해야 한다. 그러나 일단 N이 충분히 크다면 데이터를 나눠 더 많은 것(가령 여론조사에서 전국적으로 훌륭한 추정을 얻었다면 남과 여, 지역별, 연령대별 그룹 등으로 나눠 추정할 수 있다)을 얻을 수 있다. N은 충분하지 않다. 만약 충분하더라도 여러분은 이미 더 많은 데이터가 필요한 다음 문제에 직면하기 때문이다. (Andrew Gelman)</p>
+    </blockquote>
 
     <ul>
-      <li>사건 발생에 대한 믿음은 <strong>신규 관측치에 의해 끊임없이 갱신되어</strong> 사건 발생에 대한 장기적인 빈도로 수렴함</li>
+      <li><strong>대수의 법칙(Law of Large Numbers)</strong> : 무작위 실험을 반복해서 수행할수록 관측된 상대적 빈도(추정량)가 이론적 확률(모수)에 가까워진다는 법칙</li>
+      <li><strong>작은 수의 혼란(Law of Small Numbers)</strong> : 적은 표본에서도 대수의 법칙이 적용될 것이라고 잘못 가정하거나 소규모 데이터로 도출된 결과를 일반화하려는 오류</li>
     </ul>
   </li>
-</ul>
-
-<h3 id="표본의-크기가-충분하지-않다면"><span class="me-2">표본의 크기가 충분하지 않다면</span><a href="#표본의-크기가-충분하지-않다면" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<blockquote>
-  <p>표본의 크기는 결코 크지 않다. 만일 N이 충분한 추정을 얻기에 부족하다면 더 많은 데이터(또는 더 많은 가정)을 확보해야 한다. 그러나 일단 N이 충분히 크다면 데이터를 나눠 더 많은 것(가령 여론조사에서 전국적으로 훌륭한 추정을 얻었다면 남과 여, 지역별, 연령대별 그룹 등으로 나눠 추정할 수 있다)을 얻을 수 있다. N은 충분하지 않다. 만약 충분하더라도 여러분은 이미 더 많은 데이터가 필요한 다음 문제에 직면하기 때문이다. (Andrew Gelman)</p>
-</blockquote>
-
-<ul>
   <li>
-    <p><strong>빈도주의자(Frequentist)</strong> : 모수(미지의 상수)에 대한 신뢰구간을 확대함으로써 <strong>모수 추정 과정 상의 불확실성을 최소화함</strong></p>
+    <p><strong>If the sample size is sufficient,</strong></p>
 
-\[\text{CI}_{\theta}=\bar{X}\pm Z\cdot\frac{\sigma}{\sqrt{n}}\]
+\[\lim_{n \to \infty} P(\theta \mid X_{1}, X_{2}, \cdots, X_{n}) \to \mathcal{N}(\theta_{\text{true}}, \frac{\sigma^2}{n})\]
+
+    <ul>
+      <li>사건 발생에 대한 믿음은 신규 관측치에 의해 끊임없이 갱신되어 참값을 중심으로 집중됨</li>
+      <li>이는 빈도주의적 추정과 베이지안 추론의 결과가 장기적으로 일치함을 의미함</li>
+    </ul>
   </li>
   <li>
-    <p><strong>베이지안(Bayesian)</strong> : 모수(확률변수)에 대한 사전확률을 도입함으로써 <strong>모수 자체의 불확실성을 모형화함</strong></p>
+    <p><strong>If the sample size is not large enough,</strong></p>
+    <ul>
+      <li>
+        <p><strong>빈도주의자(Frequentist)</strong> : 신뢰수준을 상향 조정하여 표본의 변동성에 따른 모수 추정 과정 상의 불확실성을 모델링함</p>
+
+\[\text{CI}_{\theta}=\bar{X}\pm Z\cdot\frac{\sigma}{\sqrt{n}}\]
+
+        <ul>
+          <li><strong>신뢰구간</strong> : 표본을 반복적으로 무작위추출하여 계산했을 때 참 모수를 포함할 비율이 신뢰수준에 해당하는 구간으로서, 가령 95% 신뢰수준에서는 100번의 표본 추출로 신뢰구간을 계산했을 때, 약 95개의 신뢰구간이 참 모수를 포함함</li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>베이지안(Bayesian)</strong> : 모수에 대한 믿음의 불확실성을 확률로 표현함</p>
 
 \[P(\theta \mid X)=\frac{P(X \mid \theta)\cdot P(\theta)}{P(X)}\]
+      </li>
+    </ul>
   </li>
 </ul>
 
 <h2 id="bayesian-framework"><span class="me-2">Bayesian Framework</span><a href="#bayesian-framework" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
-
-<h3 id="bayes-theorem"><span class="me-2">Bayes’ Theorem</span><a href="#bayes-theorem" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
@@ -990,7 +962,7 @@
     </ul>
   </li>
   <li>
-    <p><strong>확률분포함수로 표현한 베이즈 정리</strong></p>
+    <p><strong>확률분포함수에의 적용</strong></p>
 
 \[P(\theta \mid \mathcal{D})=\frac{P(\theta) \cdot P(\mathcal{D} \mid \theta)}{P(\mathcal{D})} \propto \pi(\theta) \cdot \mathcal{L}(\theta)\]
 
@@ -1003,33 +975,34 @@
       <li>$P(\mathcal{D})$ : $\mathcal{D}$ 의 주변확률</li>
     </ul>
   </li>
-</ul>
-
-<h3 id="component"><span class="me-2">Component</span><a href="#component" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
   <li>
-    <p><strong>사전확률분포(Prior Probability Distribution)</strong> : 사건 발생 전, 가지고 있는 정보를 기초로 하여 설정된 초기 믿음</p>
+    <p><strong>모듈의 이해</strong></p>
+    <ul>
+      <li>
+        <p><strong>사전확률분포(Prior Probability Distribution)</strong> : 사전 지식의 불확실성을 모델링하는 모듈로서, 사전 정보를 기초로 설정된 초기 믿음</p>
 
 \[\theta \sim P\]
-  </li>
-  <li>
-    <p><strong>사후확률분포(Posterior Probability Distribution)</strong> : 사건 발생 후, 추가된 정보를 고려하여 갱신된 믿음</p>
-
-\[\theta \mid \mathcal{D} \sim P\]
-  </li>
-  <li>
-    <p><strong>우도(Likelihood or Likelihood Function)</strong> : 모수의 특정 값이 $\theta$ 로 주어졌을 때, 관측치 $\mathcal{D}$ 가 실현될 가능성</p>
+      </li>
+      <li>
+        <p><strong>우도(Likelihood or Likelihood Function)</strong> : 데이터의 불확실성을 모델링하는 모듈로서, 모수가 $\theta$ 로 주어졌을 때, 관측치 $\mathcal{D}$ 가 실현될 가능성</p>
 
 \[\begin{aligned}
   \mathcal{L}(\theta)
-  &amp;=P(\mathcal{D} \mid \theta)\\
-  &amp;=\prod_{i=1}^{n}{f(X_{i} \mid \theta)}
+  =P(\mathcal{D} \mid \theta)
+  =\prod_{i=1}^{n}{f(X_{i} \mid \theta)}
   \end{aligned}\]
+      </li>
+      <li>
+        <p><strong>사후확률분포(Posterior Probability Distribution)</strong> : 사건 발생 후, 추가된 정보를 고려하여 갱신된 믿음</p>
+
+\[\theta \mid \mathcal{D} \sim P\]
+      </li>
+    </ul>
   </li>
 </ul>
 
-<h3 id="example-동전-던지기"><span class="me-2"><code class="language-plaintext highlighter-rouge">[example]</code> 동전 던지기</span><a href="#example-동전-던지기" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h2 id="example-동전-던지기"><span class="me-2"><code class="language-plaintext highlighter-rouge">[example]</code> 동전 던지기</span><a href="#example-동전-던지기" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
 
 <blockquote>
   <p>동전을 던졌을 때 앞면이 나올 확률을 $\theta$ 라고 하자. $\theta$ 에 대한 정보가 아무것도 없다고 가정하자. 즉, $\theta$ 는 0과 1 사이의 무작위수일 것이라고 믿어지고 있다. 동전을 두 번 던졌는데 두 번 다 앞면이 나왔다. 그렇다면 $\theta$ 에 대한 믿음은 어떻게 변화할까?</p>
@@ -1744,11 +1717,6 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -1977,269 +1945,10 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2564,6 +2273,250 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2909,20 +2862,10 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
 
-  
-    
-    
-    
-    
   
     
     
@@ -4460,11 +4403,6 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -4693,269 +4631,10 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -5280,6 +4959,250 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -5625,20 +5548,10 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
 
-  
-    
-    
-    
-    
   
     
     
