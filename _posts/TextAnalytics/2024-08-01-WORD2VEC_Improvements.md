@@ -24,6 +24,8 @@ image:
 
 - **`EXAMPLE` "eating"**
 
+    ![07](/_post_refer_img/TextAnalytics/04-07.jpg){: width="100%"}
+
     - Character $n$-grams of `eating`
 
         | word | $n$ | n-grams(sub-word) |
@@ -94,6 +96,9 @@ image:
     - 고차원 행렬이기 때문에 SVD 등 차원 축소 기법을 추가로 활용해야 함
 
 - **GloVe(`Glo`bal `Ve`ctors for Word Representation)** : 단어 간 전역적 통계 정보를 활용하여 단어를 임베딩하는 방법론
+
+    ![06](/_post_refer_img/TextAnalytics/04-06.png){: width="100%"}
+
     - 중심 단어 $i$ 와 주변 단어 $j$ 간 임베딩 벡터의 내적값이 동시 발생 확률이 되도록 학습함
 
         $$\begin{aligned}
@@ -123,7 +128,7 @@ image:
     &= \sum_{i,j}{f(X_{i,j})\left(\overrightarrow{\mathbf{w}}_{i} \cdot \overrightarrow{\mathbf{v}}_{j} + (b_{i} + \beta_{j}) - \log{X_{i,j}}\right)^{2}}
     \end{aligned}$$
 
-    - $$f(X_{i,j})=\min{\left(1, \left(\frac{X_{i,j}}{X_{\text{max}}}\right)^{3/4}\right)}$$ : 학습 중 고빈도 단어 영향력 조정 함수
+    - $$f(X_{i,j})=\min{\left[1, \left(\displaystyle\frac{X_{i,j}}{X_{\text{max}}}\right)^{3/4}\right]}$$ : 학습 중 고빈도 단어 영향력 조정 함수
 
 ## ELMo
 -----

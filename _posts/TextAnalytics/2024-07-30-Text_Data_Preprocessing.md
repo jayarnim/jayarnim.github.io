@@ -24,9 +24,9 @@ image:
     |---|---|---|---|---|---|
     | 단어 표현 | One-Hot Encoding | - | Word2Vec | ELMo | - |
     | 문서 표현 | DTM | - | Doc2Vec | - | - |
-    | 언어 모형 | - | SLM |`NNLM | RNNLM | BERT |
+    | 언어 모형 | - | SLM | NNLM | RNNLM | BERT |
     | 토픽 모형 | - | LSA, LDA | - | - | BERTopic |
-    | 기계 번역 | RBMT | SMT | NMT | SEQ2SEQ | Transformer |
+    | 기계 번역 | RBMT | SMT | - | SEQ2SEQ | Transformer |
     | 생성 모형 | - | - | - | - | GPT |
 
 ## Process

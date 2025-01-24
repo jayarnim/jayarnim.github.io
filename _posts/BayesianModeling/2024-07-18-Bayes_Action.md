@@ -3,7 +3,7 @@ order: 4
 title: Bayes Action
 date: 2024-07-18
 categories: [Statistical Techs, Bayesian Modeling]
-tags: [Statistics, Bayesian, Optimization, Loss Function]
+tags: [Statistics, Bayesian, Optimization, Objective Function]
 math: true
 description: >-
     Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data & Management, College of Business Administration, Kookmin Univ.

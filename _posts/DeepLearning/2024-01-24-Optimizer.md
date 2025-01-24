@@ -3,7 +3,7 @@ order: 3
 title: Optimizer
 date: 2024-01-24
 categories: [Machine Learning Techs, Deep Learning]
-tags: [Deep Learning, Optimization]
+tags: [Deep Learning, Optimization, Objective Function]
 math: true
 description: >-
   Based on the lecture “Intro. to Deep Learning (2023-2)” by Prof. Seong Man An, Dept. of Data Science, The Grad. School, Kookmin Univ.
