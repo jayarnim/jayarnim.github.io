@@ -141,7 +141,7 @@ image:
 
 - **BiLM(`Bi`directional `L`anguage `M`odel)** : 문장 시퀀스를 순방향, 역방향으로 각각 학습하는 LSTM 기반 언어 모형
 
-    ![11](/_post_refer_img/TextAnalytics/04-04.png){: width="100%"}
+    ![11](/_post_refer_img/TextAnalytics/04-04.jpg){: width="100%"}
 
 - **Forward Path**
 
@@ -151,7 +151,7 @@ image:
 
         $$\begin{aligned}
         h^{(k)}_{t}, c^{(k)}_{t}
-        &= \text{LSTM}^{(k)}\left[h^{(k-1)}_{t} \mid h^{(k)}_{t-1}, c^{(k)}_{t-1}\right]
+        &= \text{LSTM}^{(k)}\left(h^{(k-1)}_{t}, h^{(k)}_{t-1}, c^{(k)}_{t-1}\right)
         \end{aligned}$$
 
         - $h^{(k)}_{t}$ : $k$ 번째 LSTM Layer 의 $t$ 시점 은닉 값
@@ -179,4 +179,6 @@ image:
 ### 이미지 출처
 
 - https://intoli.com/blog/pca-and-svd/
+- https://github.com/dvgodoy/dl-visuals/
+- https://www.researchgate.net/figure/The-recurrent-LSTM-language-model-structure-used-in-our-experiments_fig1_336086782
 - https://wikidocs.net/33930

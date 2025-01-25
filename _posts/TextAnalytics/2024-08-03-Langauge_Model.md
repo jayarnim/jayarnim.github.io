@@ -110,7 +110,7 @@ image:
 
     $$\begin{aligned}
     h_{t}, c_{t}
-    &= \text{LSTM}\left(\overrightarrow{\mathbf{w}}_{t} \mid h_{t-1}, c_{t-1}\right)
+    &= \text{LSTM}\left(\overrightarrow{\mathbf{w}}_{t}, h_{t-1}, c_{t-1}\right)
     \end{aligned}$$
 
 - **`HIDDEN` → `OUTPUT`**
