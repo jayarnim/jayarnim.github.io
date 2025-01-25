@@ -1287,7 +1287,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1078 words"
+  title="1079 words"
 >
   <em>5 min</em> read</span>
 
@@ -1601,7 +1601,7 @@
   <li>
     <p><strong>BiLM(<code class="language-plaintext highlighter-rouge">Bi</code>directional <code class="language-plaintext highlighter-rouge">L</code>anguage <code class="language-plaintext highlighter-rouge">M</code>odel)</strong> : 문장 시퀀스를 순방향, 역방향으로 각각 학습하는 LSTM 기반 언어 모형</p>
 
-    <p><a href="/_post_refer_img/TextAnalytics/04-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/04-04.png" alt="11" width="100%" loading="lazy"></a></p>
+    <p><a href="/_post_refer_img/TextAnalytics/04-04.jpg" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/04-04.jpg" alt="11" width="100%" loading="lazy"></a></p>
   </li>
   <li>
     <p><strong>Forward Path</strong></p>
@@ -1614,7 +1614,7 @@
 
 \[\begin{aligned}
  h^{(k)}_{t}, c^{(k)}_{t}
- &amp;= \text{LSTM}^{(k)}\left[h^{(k-1)}_{t} \mid h^{(k)}_{t-1}, c^{(k)}_{t-1}\right]
+ &amp;= \text{LSTM}^{(k)}\left(h^{(k-1)}_{t}, h^{(k)}_{t-1}, c^{(k)}_{t-1}\right)
  \end{aligned}\]
 
         <ul>
@@ -1654,6 +1654,8 @@
 
 <ul>
   <li>https://intoli.com/blog/pca-and-svd/</li>
+  <li>https://github.com/dvgodoy/dl-visuals/</li>
+  <li>https://www.researchgate.net/figure/The-recurrent-LSTM-language-model-structure-used-in-our-experiments_fig1_336086782</li>
   <li>https://wikidocs.net/33930</li>
 </ul>
 
