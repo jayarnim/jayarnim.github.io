@@ -1003,7 +1003,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1367 words"
+  title="1355 words"
 >
   <em>7 min</em> read</span>
 
@@ -1132,9 +1132,12 @@
     <p><strong>가중 어텐션(Weighted Attention)</strong> : 표현력을 강화하기 위하여 학습 가능한 가중치 행렬 $\mathcal{W}$ 을 활용하여 $\mathcal{Q}, \mathcal{K}, \mathcal{V}$ 를 선형 변환하고, 이를 기반으로 유사도를 계산하여 입력 간 상호작용 정보를 동적으로 학습하는 기법</p>
 
 \[\begin{aligned}
-  \mathcal{Q} &amp;= \mathbf{Q}_{M \times D_{Q}} \to \mathbf{Q}_{M \times D_{Q}} \cdot \mathcal{W}^{(Q)}_{D_{Q} \times D} &amp;\in \mathbb{R}^{M \times D}\\
-  \mathcal{K} &amp;= \mathbf{K}_{N \times D_{K}} \to \mathbf{K}_{N \times D_{K}} \cdot \mathcal{W}^{(K)}_{D_{K} \times D} &amp;\in \mathbb{R}^{N \times D}\\
-  \mathcal{V} &amp;= \mathbf{V}_{N \times D_{V}} \to \mathbf{V}_{N \times D_{V}} \cdot \mathcal{W}^{(V)}_{D_{V} \times D} &amp;\in \mathbb{R}^{N \times D}
+  \mathcal{Q}
+  &amp;= \mathbf{Q}_{M \times D_{Q}} \cdot \mathcal{W}^{(Q)}_{D_{Q} \times D} &amp;\in \mathbb{R}^{M \times D}\\
+  \mathcal{K}
+  &amp;= \mathbf{K}_{N \times D_{K}} \cdot \mathcal{W}^{(K)}_{D_{K} \times D} &amp;\in \mathbb{R}^{N \times D}\\
+  \mathcal{V}
+  &amp;= \mathbf{V}_{N \times D_{V}} \cdot \mathcal{W}^{(V)}_{D_{V} \times D} &amp;\in \mathbb{R}^{N \times D}
   \end{aligned}\]
 
     <ul>
