@@ -790,148 +790,6 @@
     <!-- combine -->
     
   
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
-    
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- create the image wrapper -->
-        
-
-        
-        
-      
-    
-
-    <!-- combine -->
-    
-  
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
-    
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- create the image wrapper -->
-        
-
-        
-        
-      
-    
-
-    <!-- combine -->
-    
-  
 
   
 
@@ -990,17 +848,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -1016,39 +863,6 @@
       
         
         
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
       
 
       
@@ -1167,9 +981,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1532 words"
+  title="902 words"
 >
-  <em>8 min</em> read</span>
+  <em>5 min</em> read</span>
 
         </div>
       </div>
@@ -1287,152 +1101,6 @@
   \end{aligned}\]
       </li>
     </ul>
-  </li>
-</ul>
-
-<h2 id="attention-application"><span class="me-2">Attention Application</span><a href="#attention-application" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<ul>
-  <li>
-    <p><strong>어텐션 메커니즘(Attention Application)</strong> : 개별 질의에 특화된 정답 후보군별 중요도를 도출하는 메커니즘</p>
-  </li>
-  <li>
-    <p><strong>SEQ2SEQ 적용 목적</strong> : RNN 계열 레이어의 초기 순번 정보 유실 문제 및 기울기 소실 문제를 보완하기 위함으로서, 문맥 벡터를 최종 은닉 상태로 획일화하여 사용하지 않고, 인코더 각 순번 은닉 상태와 디코더 현재 시점 간 관련성을 고려하여, 디코더의 각 시점에 특화된 문맥 벡터를 생성함</p>
-  </li>
-  <li>
-    <p><strong>종류</strong></p>
-    <ul>
-      <li><strong>루옹 어텐션(Luong Attention)</strong> : 디코더의 <strong>현재 시점 은닉 상태를</strong> 활용하여 문맥 벡터를 생성하고, 이를 <strong>현재 시점 은닉 상태에</strong> 적용하는 어텐션 기법</li>
-      <li><strong>바다나우 어텐션(Bahdanau Attention)</strong> : 디코더의 <strong>이전 시점 은닉 상태를</strong> 활용하여 문맥 벡터를 생성하고, 이를 <strong>현재 시점 입력값에</strong> 적용하는 어텐션 기법</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="how-to-attention"><span class="me-2">How to Attention</span><a href="#how-to-attention" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li>
-    <p><strong>Attention Mechanism</strong></p>
-
-\[\begin{aligned}
-  \text{ATTN}\left(Q,K,V\right)
-  = \underbrace{\text{Softmax}\left[f(Q,K)\right]}_{\text{Attention Weight}} \cdot V
-  \end{aligned}\]
-
-    <ul>
-      <li>$Q$ : 특화할 대상으로서 <strong>질의(Query)</strong></li>
-      <li>$K$ : 질의와의 관련성을 도출하기 위한 참조 정보로서 <strong>키(Key)</strong></li>
-      <li>$V$ : 최종적으로 사용할 정보로서 <strong>선택지(Value)</strong></li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>주의 가중치(Attention Weight) 도출 함수</strong></p>
-
-\[\begin{aligned}
-  \mathbf{W}^{(t)} = \mathcal{W}^{(t)} \cdot \mathbf{V} = \text{Softmax}\left[f(\overrightarrow{\mathbf{q}}_{t}, \mathbf{K})\right] \cdot \mathbf{V}
-  \end{aligned}\]
-
-    <div class="table-wrapper"><table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Function</th>
-          <th>Defined by</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Dot Product</td>
-          <td>\(f(\overrightarrow{\mathbf{q}}, \mathbf{K}) = \overrightarrow{\mathbf{q}} \cdot \mathbf{K}\)</td>
-          <td>Luong et al. (2015)</td>
-        </tr>
-        <tr>
-          <td>Learnable Weighted Attention</td>
-          <td>\(f(\overrightarrow{\mathbf{q}}, \mathbf{K}) = \overrightarrow{\mathbf{q}}^{T} \cdot \mathbf{W} \cdot \mathbf{K}\)</td>
-          <td>Luong et al. (2015)</td>
-        </tr>
-        <tr>
-          <td>Additive Attention</td>
-          <td>\(f(\overrightarrow{\mathbf{q}}, \mathbf{K}) = \mathbf{W}^{T}_{A} \cdot \text{tanh}\left[\mathbf{W}_{B} \cdot (\overrightarrow{\mathbf{q}} \oplus \mathbf{K})\right]\)</td>
-          <td>Bahdanau et al. (2015)</td>
-        </tr>
-        <tr>
-          <td>Concatenation</td>
-          <td>\(f(\overrightarrow{\mathbf{q}}, \mathbf{K}) = \mathbf{W}^{T}_{A} \cdot \text{tanh}\left[\mathbf{W}_{B} \cdot \overrightarrow{\mathbf{q}} + \mathbf{W}_{C} \cdot \mathbf{K}\right]\)</td>
-          <td>Bahdanau et al. (2015)</td>
-        </tr>
-        <tr>
-          <td>Scaled Dot Product</td>
-          <td>\(f(\overrightarrow{\mathbf{q}}, \mathbf{K}) = \displaystyle\frac{\overrightarrow{\mathbf{q}}^{T} \cdot \mathbf{K}}{\sqrt{n}}\)</td>
-          <td>Vaswani et al. (2017)</td>
-        </tr>
-      </tbody>
-    </table></div>
-  </li>
-</ul>
-
-<h3 id="luong-attention"><span class="me-2">Luong Attention</span><a href="#luong-attention" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p><a href="/_post_refer_img/TextAnalytics/08-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/08-04.png" alt="04" width="100%" loading="lazy"></a></p>
-
-<ul>
-  <li>
-    <p>Attention Mechanism</p>
-
-\[\mathbf{W}^{(t)} = \text{Softmax}\left[\overrightarrow{\mathbf{q}}_{t} \cdot \mathbf{K}\right] \cdot \mathbf{V}\]
-
-    <ul>
-      <li>\(\overrightarrow{\mathbf{q}}_{t} = \eta_{t}\) : 디코더의 $t$ 시점 은닉 상태</li>
-      <li>\(\mathbf{K} = \mathbf{V} = \mathbf{H}\) : 인코더의 각 순번 은닉 상태 행렬</li>
-    </ul>
-  </li>
-  <li>
-    <p>디코더의 $t$ 시점 특화 문맥 벡터(Context Vector) 도출</p>
-
-\[\begin{aligned}
-  \overrightarrow{\mathbf{z}}_{t}
-  = \sum_{i}{\mathbf{W}^{(t)}_{i}}
-  = \overrightarrow{\mathbf{w}}^{(t)}_{1} + \overrightarrow{\mathbf{w}}^{(t)}_{2} + \cdots + \overrightarrow{\mathbf{w}}^{(t)}_{T}
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>$t$ 시점 문맥 벡터와 $t$ 시점 은닉 상태 정보 종합</p>
-
-\[\overrightarrow{\mathbf{s}}_{t}
-  = \text{F}_{\text{tanh}}\left[\overrightarrow{\mathbf{z}}_{t} \oplus \eta_{t}\right]\]
-  </li>
-</ul>
-
-<h3 id="bahdanau-attention"><span class="me-2">Bahdanau Attention</span><a href="#bahdanau-attention" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p><a href="/_post_refer_img/TextAnalytics/08-05.png" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/08-05.png" alt="05" width="100%" loading="lazy"></a></p>
-
-<ul>
-  <li>
-    <p>Attention Mechanism</p>
-
-\[\mathbf{W}^{(t)} = \text{Softmax}\left[\overrightarrow{\mathbf{q}}_{t} \cdot \mathbf{K}\right] \cdot \mathbf{V}\]
-
-    <ul>
-      <li>\(\overrightarrow{\mathbf{q}}_{t} = \eta_{t-1}\) : 디코더의 $t-1$ 시점 은닉 상태</li>
-      <li>\(\mathbf{K} = \mathbf{V} = \mathbf{H}\) : 인코더의 각 순번 은닉 상태 행렬</li>
-    </ul>
-  </li>
-  <li>
-    <p>디코더의 $t$ 시점 특화 문맥 벡터(Context Vector) 도출</p>
-
-\[\begin{aligned}
-  \overrightarrow{\mathbf{z}}_{t}
-  = \sum_{i}{\mathbf{W}^{(t)}_{i}}
-  = \overrightarrow{\mathbf{w}}^{(t)}_{1} + \overrightarrow{\mathbf{w}}^{(t)}_{2} + \cdots + \overrightarrow{\mathbf{w}}^{(t)}_{T}
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>$t$ 시점 문맥 벡터와 $t$ 시점 입력 벡터 정보 종합</p>
-
-\[\overrightarrow{\mathbf{s}}_{t}
-  = \overrightarrow{\mathbf{z}}_{t} \oplus \hat{\mathbf{y}}_{t-1}\]
   </li>
 </ul>
 
@@ -1657,6 +1325,13 @@
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/VAE/">Generative Model (1) Variational AutoEncoder</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/FAWMF/">FAWMF</a>
         </li>
       
@@ -1665,13 +1340,6 @@
         
         <li class="text-truncate lh-lg">
           <a href="/posts/GPT/">GPT</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/BERT/">BERT</a>
         </li>
       
     </ul>
@@ -2431,85 +2099,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3099,6 +2688,256 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -3322,173 +3161,6 @@
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -3678,9 +3350,6 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/nlp/">NLP</a>
       
         
@@ -3690,10 +3359,13 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/text-mining/">Text Mining</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
     </div>
   </section>
@@ -4001,19 +3673,31 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -4101,6 +3785,34 @@
 
 <time
   
+  data-ts="1722956400"
+  data-df="ll"
+  
+>
+  Aug  7, 2024
+</time>
+
+              <h4 class="pt-0 my-2">Transformer</h4>
+              <div class="text-muted">
+                <p>Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/ATTN/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
   data-ts="1722870000"
   data-df="ll"
   
@@ -4108,7 +3820,7 @@
   Aug  6, 2024
 </time>
 
-              <h4 class="pt-0 my-2">Transformer</h4>
+              <h4 class="pt-0 my-2">Attention Mechanism</h4>
               <div class="text-muted">
                 <p>Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</p>
               </div>
@@ -4144,34 +3856,6 @@
           </a>
         </article>
       
-        <article class="col">
-          <a href="/posts/GPT/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1723042800"
-  data-df="ll"
-  
->
-  Aug  8, 2024
-</time>
-
-              <h4 class="pt-0 my-2">GPT</h4>
-              <div class="text-muted">
-                <p>Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
     </nav>
   </aside>
   <!-- #related-posts -->
@@ -4197,11 +3881,11 @@
 
   
     <a
-      href="/posts/Transformer/"
+      href="/posts/ATTN/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>Transformer</p>
+      <p>Attention Mechanism</p>
     </a>
   
 </nav>
@@ -5009,85 +4693,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -5677,6 +5282,256 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -5900,173 +5755,6 @@
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -6256,9 +5944,6 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/nlp/">NLP</a>
       
         
@@ -6268,10 +5953,13 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/text-mining/">Text Mining</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
     </div>
   </section>
