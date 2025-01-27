@@ -29,7 +29,7 @@
   
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
-<meta name="generator" content="Jekyll v4.3.4" />
+<meta name="generator" content="Jekyll v4.4.0" />
 <meta property="og:title" content="Attention Mechanism" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ." />
@@ -932,6 +932,77 @@
     <!-- combine -->
     
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
 
   
 
@@ -1167,7 +1238,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1759 words"
+  title="1713 words"
 >
   <em>9 min</em> read</span>
 
@@ -1391,24 +1462,14 @@
   <li>
     <p><strong>마스크 행렬(Mask Matrix)</strong> : (특히 시계열 데이터에 대한 셀프 어텐션에서) 특정 위치에 대한 가중치를 차단하거나 조정함으로써 다음 순번에 관한 정보가 유실되는 것을 방지함</p>
 
+    <p><a href="/_post_refer_img/TextAnalytics/09-06.png" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/09-06.png" alt="06" width="100%" loading="lazy"></a></p>
+
 \[\begin{aligned}
   f\left(\mathcal{Q}_{M \times D}, \mathcal{K}_{N \times D}\right) + \mathbf{M}_{M \times N}
   \end{aligned}\]
 
     <ul>
-      <li>
-        <p>셀프 어텐션은 입력 데이터의 모든 위치가 서로 영향을 주고받는 구조이나, 시퀀스 생성 모형은 <strong>현재 순번 데이터로만 다음 순번을 예측해야 하므로,</strong> 미래 위치에 대한 주의 점수를 $-\infty$ 로 처리하여 모형이 해당 정보를 보지 못하도록 강제함</p>
-
-\[\begin{aligned}
-  \mathbf{M}_{M \times N}
-  = \begin{pmatrix}
-  0 &amp; -\infty &amp; -\infty &amp; \cdots &amp; -\infty \\
-  0 &amp; 0 &amp; -\infty &amp; \cdots &amp; -\infty \\
-  \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-  0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0
-  \end{pmatrix}
-  \end{aligned}\]
-      </li>
+      <li>셀프 어텐션은 입력 데이터의 모든 위치가 서로 영향을 주고받는 구조이나, 시퀀스 생성 모형은 <strong>현재 순번 데이터로만 다음 순번을 예측해야 하므로,</strong> 미래 위치에 대한 주의 점수를 $-\infty$ 로 처리하여 모형이 해당 정보를 보지 못하도록 강제함</li>
     </ul>
   </li>
 </ul>
@@ -1502,6 +1563,7 @@
 <ul>
   <li>https://www.linkedin.com/pulse/what-self-attention-impact-large-language-models-llm-nikhil-goel-srpbc</li>
   <li>https://newsletter.theaiedge.io/p/the-multi-head-attention-mechanism</li>
+  <li>https://krypticmouse.hashnode.dev/attention-is-all-you-need</li>
   <li>https://wikidocs.net/22893</li>
   <li>https://wikidocs.net/73161</li>
 </ul>
