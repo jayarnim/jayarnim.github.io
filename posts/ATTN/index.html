@@ -861,6 +861,77 @@
     <!-- combine -->
     
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
 
   
 
@@ -886,6 +957,28 @@
       
         
         
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
       
 
       
@@ -1074,9 +1167,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1356 words"
+  title="1749 words"
 >
-  <em>7 min</em> read</span>
+  <em>9 min</em> read</span>
 
         </div>
       </div>
@@ -1101,13 +1194,16 @@
 
 \[\begin{aligned}
   \text{ATTN}\left(\mathcal{Q},\mathcal{K},\mathcal{V}\right)
-  = \underbrace{\text{Softmax}\left[f(\mathcal{Q},\mathcal{K})\right]}_{\text{Attention Weight}} \cdot \mathcal{V}
+  = \text{Softmax}\left[f(\mathcal{Q},\mathcal{K})\right] \cdot \mathcal{V}
   \end{aligned}\]
 
     <ul>
       <li>$\mathcal{Q}$ : 입력값에 대하여 정보를 얻고자 하는 기준점으로서 <strong>질의(Query)</strong></li>
       <li>$\mathcal{K}$ : 질의와 매칭하여 관련성을 평가할 기준으로서 <strong>키(Key)</strong></li>
       <li>$\mathcal{V}$ : 관련성을 기반으로 반환할 값으로서 <strong>선택지(Value)</strong></li>
+      <li>$\mathcal{A}=f(\mathcal{Q},\mathcal{K})$ : 질의와 키 간 유사도 행렬로서 <strong>주의 점수 행렬(Attention Score Matrix)</strong></li>
+      <li>$\mathcal{W}=\text{Softmax}\left[\mathcal{A}\right]$ : 주의 점수 정규화 행렬로서 <strong>주의 가중치 행렬(Attention Weight Matrix)</strong> 혹은 <strong>어텐션 맵(Attention Map)</strong></li>
+      <li>$\mathcal{O}=\mathcal{W} \cdot \mathcal{V}$ :</li>
     </ul>
   </li>
   <li>
@@ -1150,73 +1246,98 @@
     </table></div>
 
 \[\begin{aligned}
-  \overrightarrow{\mathbf{w}}_{i}
+  \overrightarrow{\mathcal{o}}_{i}
   = \text{ATTN}\left(\overrightarrow{\mathbf{q}}_{i}, \mathbf{K}, \mathbf{V}\right)
   \in \mathbb{R}^{N}
   \end{aligned}\]
   </li>
-  <li>
-    <p><strong>Attention Score Function</strong></p>
-
-    <div class="table-wrapper"><table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Function</th>
-          <th>Defined by</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Dot Product</td>
-          <td>\(f(\overrightarrow{\mathbf{q}}, \mathbf{K}) = \overrightarrow{\mathbf{q}} \cdot \mathbf{K}\)</td>
-          <td>Luong et al. (2015)</td>
-        </tr>
-        <tr>
-          <td>Learnable Weighted Attention</td>
-          <td>\(f(\overrightarrow{\mathbf{q}}, \mathbf{K}) = \overrightarrow{\mathbf{q}}^{T} \cdot \mathbf{W} \cdot \mathbf{K}\)</td>
-          <td>Luong et al. (2015)</td>
-        </tr>
-        <tr>
-          <td>Additive Attention</td>
-          <td>\(f(\overrightarrow{\mathbf{q}}, \mathbf{K}) = \mathbf{W}^{T}_{A} \cdot \text{tanh}\left[\mathbf{W}_{B} \cdot (\overrightarrow{\mathbf{q}} \oplus \mathbf{K})\right]\)</td>
-          <td>Bahdanau et al. (2015)</td>
-        </tr>
-        <tr>
-          <td>Concatenation</td>
-          <td>\(f(\overrightarrow{\mathbf{q}}, \mathbf{K}) = \mathbf{W}^{T}_{A} \cdot \text{tanh}\left[\mathbf{W}_{B} \cdot \overrightarrow{\mathbf{q}} + \mathbf{W}_{C} \cdot \mathbf{K}\right]\)</td>
-          <td>Bahdanau et al. (2015)</td>
-        </tr>
-        <tr>
-          <td>Scaled Dot Product</td>
-          <td>\(f(\overrightarrow{\mathbf{q}}, \mathbf{K}) = \displaystyle\frac{\overrightarrow{\mathbf{q}}^{T} \cdot \mathbf{K}}{\sqrt{n}}\)</td>
-          <td>Vaswani et al. (2017)</td>
-        </tr>
-      </tbody>
-    </table></div>
-  </li>
 </ul>
 
-<h2 id="multi-head-attention"><span class="me-2">Multi-Head Attention</span><a href="#multi-head-attention" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="attention-score-function"><span class="me-2">Attention Score Function</span><a href="#attention-score-function" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Function</th>
+      <th>Defined by</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Dot Product</td>
+      <td>\(f(\overrightarrow{\mathbf{q}}, \mathbf{K}) = \overrightarrow{\mathbf{q}} \cdot \mathbf{K}\)</td>
+      <td>Luong et al. (2015)</td>
+    </tr>
+    <tr>
+      <td>Learnable Weighted Attention</td>
+      <td>\(f(\overrightarrow{\mathbf{q}}, \mathbf{K}) = \overrightarrow{\mathbf{q}}^{T} \cdot \mathbf{W} \cdot \mathbf{K}\)</td>
+      <td>Luong et al. (2015)</td>
+    </tr>
+    <tr>
+      <td>Additive Attention</td>
+      <td>\(f(\overrightarrow{\mathbf{q}}, \mathbf{K}) = \mathbf{W}^{T}_{A} \cdot \text{tanh}\left[\mathbf{W}_{B} \cdot (\overrightarrow{\mathbf{q}} \oplus \mathbf{K})\right]\)</td>
+      <td>Bahdanau et al. (2015)</td>
+    </tr>
+    <tr>
+      <td>Concatenation</td>
+      <td>\(f(\overrightarrow{\mathbf{q}}, \mathbf{K}) = \mathbf{W}^{T}_{A} \cdot \text{tanh}\left[\mathbf{W}_{B} \cdot \overrightarrow{\mathbf{q}} + \mathbf{W}_{C} \cdot \mathbf{K}\right]\)</td>
+      <td>Bahdanau et al. (2015)</td>
+    </tr>
+    <tr>
+      <td>Scaled Dot Product</td>
+      <td>\(f(\overrightarrow{\mathbf{q}}, \mathbf{K}) = \displaystyle\frac{\overrightarrow{\mathbf{q}}^{T} \cdot \mathbf{K}}{\sqrt{n}}\)</td>
+      <td>Vaswani et al. (2017)</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<h2 id="adaptive-weight"><span class="me-2">Adaptive Weight</span><a href="#adaptive-weight" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
   <li>
-    <p><strong>가중 어텐션(Weighted Attention)</strong> : 표현력을 강화하기 위하여 학습 가능한 가중치 행렬 $\mathcal{W}$ 을 활용하여 $\mathcal{Q}, \mathcal{K}, \mathcal{V}$ 를 선형 변환하고, 이를 기반으로 유사도를 계산하여 입력 간 상호작용 정보를 동적으로 학습하는 기법</p>
+    <p><strong>적응형 가중치(Adaptive Weight)</strong> : 표현력을 강화하기 위하여 학습 가능한 가중치 행렬 $\mathbf{W}$ 을 활용하여 $\mathcal{Q}, \mathcal{K}, \mathcal{V}$ 를 선형 변환하고, 이를 기반으로 유사도를 계산하여 입력 간 상호작용 정보를 동적으로 학습하는 기법</p>
 
-\[\begin{aligned}
-  \mathcal{Q}
-  &amp;= \mathbf{Q}_{M \times D_{Q}} \cdot \mathcal{W}^{(Q)}_{D_{Q} \times D} &amp;\in \mathbb{R}^{M \times D}\\
-  \mathcal{K}
-  &amp;= \mathbf{K}_{N \times D_{K}} \cdot \mathcal{W}^{(K)}_{D_{K} \times D} &amp;\in \mathbb{R}^{N \times D}\\
-  \mathcal{V}
-  &amp;= \mathbf{V}_{N \times D_{V}} \cdot \mathcal{W}^{(V)}_{D_{V} \times D} &amp;\in \mathbb{R}^{N \times D}
-  \end{aligned}\]
+    <div class="table-wrapper"><table>
+      <thead>
+        <tr>
+          <th>WHAT</th>
+          <th>INPUT DATA</th>
+          <th>LEARNABLE WEIGHT</th>
+          <th>TOTAL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>\(\mathcal{Q}\)</td>
+          <td>\(\mathbf{Q} \in \mathbb{R}^{M \times D_{Q}}\)</td>
+          <td>\(\mathbf{W}_{Q} \in \mathbb{R}^{D_{Q} \times D}\)</td>
+          <td>\(\mathbf{Q} \cdot \mathbf{W}_{Q} \in \mathbb{R}^{M \times D}\)</td>
+        </tr>
+        <tr>
+          <td>\(\mathcal{K}\)</td>
+          <td>\(\mathbf{K} \in \mathbb{R}^{N \times D_{K}}\)</td>
+          <td>\(\mathbf{W}_{K} \in \mathbb{R}^{D_{K} \times D}\)</td>
+          <td>\(\mathbf{K} \cdot \mathbf{W}_{K} \in \mathbb{R}^{N \times D}\)</td>
+        </tr>
+        <tr>
+          <td>\(\mathcal{V}\)</td>
+          <td>\(\mathbf{V} \in \mathbb{R}^{N \times D_{V}}\)</td>
+          <td>\(\mathbf{W}_{V} \in \mathbb{R}^{D_{V} \times D}\)</td>
+          <td>\(\mathbf{V} \cdot \mathbf{W}_{V} \in \mathbb{R}^{N \times D}\)</td>
+        </tr>
+      </tbody>
+    </table></div>
+  </li>
+  <li>
+    <p><strong>WHY? NECESSITY</strong></p>
 
     <ul>
       <li>$\mathcal{Q}, \mathcal{K}, \mathcal{V}$ 간 <strong>차원 보정이</strong> 필요한 경우
         <ul>
-          <li>$\mathcal{Q}$ 와 $\mathcal{K}$ 가 서로 다른 특징 차원을 가지고 있는 경우</li>
+          <li>$\mathcal{Q}$ 와 $\mathcal{K}$ 가 서로 다른 특징 차원을 가지고 있는 경우($D_{Q} \ne D_{K} \ne D_{V}$)</li>
           <li>$\mathcal{Q}$ 와 $\mathcal{K}$ 가 서로 같은 특징 차원을 공유하고 있으나 상황에 따라 유사도가 중요도에 작용하는 방향(선호/비선호)이 다를 경우</li>
         </ul>
       </li>
@@ -1228,18 +1349,24 @@
       </li>
     </ul>
   </li>
+</ul>
+
+<h2 id="variations"><span class="me-2">Variations</span><a href="#variations" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
   <li>
-    <p><strong>멀티 헤드 어텐션(Multi-Head Attention)</strong> : 입력 데이터를 여러 독립적인 어텐션 메커니즘(헤드)으로 병렬 처리하여, 데이터 간 관계와 패턴을 다각도로 학습하는 기법</p>
+    <p><strong>멀티 헤드 어텐션(Multi-Head Attention)</strong> : 입력 데이터를 여러 독립적인 적응형 가중 어텐션 메커니즘(헤드)으로 병렬 처리하여, 데이터 간 관계와 패턴을 다각도로 학습하는 기법</p>
 
     <p><a href="/_post_refer_img/TextAnalytics/09-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/09-03.png" alt="03" width="100%" loading="lazy"></a></p>
 
     <ul>
       <li>
-        <p>하나의 헤드는 독립적인 가중 어텐션으로 이루어짐</p>
+        <p>하나의 헤드는 독립적인 적응형 가중 어텐션으로 이루어짐</p>
 
 \[\begin{aligned}
   \text{HEAD}^{(h)}
-  &amp;= \text{ATTN}^{(h)}\left(\mathbf{Q} \cdot \mathcal{W}_{Q}^{(h)}, \mathbf{K} \cdot \mathcal{W}_{K}^{(h)}, \mathbf{V} \cdot \mathcal{W}_{V}^{(h)}\right)
+  &amp;= \text{ATTN}^{(h)}\left(\mathbf{Q} \cdot \mathbf{W}_{\mathcal{Q}}^{(h)}, \mathbf{K} \cdot \mathbf{W}_{\mathcal{K}}^{(h)}, \mathbf{V} \cdot \mathbf{W}_{\mathcal{V}}^{(h)}\right)
   \end{aligned}\]
       </li>
       <li>
@@ -1247,7 +1374,39 @@
 
 \[\begin{aligned}
   \text{Multi-Head}\left(\mathbf{Q}, \mathbf{K}, \mathbf{V}\right)
-  &amp;= \left[\cdots \oplus \text{HEAD}^{(h)} \oplus \cdots \right] \cdot \mathcal{W}_{\mathcal{O}}
+  &amp;= \left[\cdots \oplus \text{HEAD}^{(h)} \oplus \cdots \right] \cdot \mathbf{W}_{\mathcal{O}}
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>셀프 어텐션(Self-Attention)</strong> : 입력값과 반환할 값이 같은 경우로서, 통상 역할($\mathcal{Q}, \mathcal{K}, \mathcal{V}$)에 따라 서로 다른 정보 처리를 수행하도록 적응형 가중 어텐션과 결합되어 활용됨</p>
+
+    <p><a href="/_post_refer_img/TextAnalytics/09-05.png" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/09-05.png" alt="05" width="100%" loading="lazy"></a></p>
+
+\[\begin{aligned}
+  \mathcal{Q}=\mathbf{X} \cdot \mathbf{W}^{(Q)}, \quad \mathcal{K}=\mathbf{X} \cdot \mathbf{W}^{(K)}, \quad \mathcal{Q}=\mathbf{V} \cdot \mathbf{W}^{(V)}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>마스크 행렬(Mask Matrix)</strong> : (특히 시계열 데이터에 대한 셀프 어텐션에서) 특정 위치에 대한 가중치를 차단하거나 조정함으로써 다음 순번에 관한 정보가 유실되는 것을 방지함</p>
+
+\[\begin{aligned}
+  f\left(\mathcal{Q}_{M \times D}, \mathcal{K}_{N \times D}\right) + \mathbf{M}_{M \times N}
+  \end{aligned}\]
+
+    <ul>
+      <li>
+        <p>셀프 어텐션은 입력 데이터의 모든 위치가 서로 영향을 주고받는 구조이나, 시퀀스 생성 모형은 <strong>현재 순번 데이터로만 다음 순번을 예측해야 하므로,</strong> 미래 위치에 대한 주의 점수를 $-\infty$ 로 처리하여 모형이 해당 정보를 보지 못하도록 강제함</p>
+
+\[\begin{aligned}
+  \mathbf{M}_{M \times N}
+  = \begin{pmatrix}
+  0 &amp; -\infty &amp; -\infty &amp; \cdots &amp; -\infty \\
+  0 &amp; 0 &amp; -\infty &amp; \cdots &amp; -\infty \\
+  \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+  0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0
+  \end{pmatrix}
   \end{aligned}\]
       </li>
     </ul>
@@ -1278,27 +1437,28 @@
   <li>
     <p>Attention Mechanism</p>
 
-\[\mathbf{W}^{(t)} = \text{Softmax}\left[\overrightarrow{\mathbf{q}}_{t} \cdot \mathbf{K}\right] \cdot \mathbf{V}\]
+\[\mathcal{O}^{(t)}
+  = \text{Softmax}\left[\eta_{t} \cdot \mathbf{H}\right] \cdot \mathbf{H}\]
 
     <ul>
-      <li>\(\overrightarrow{\mathbf{q}}_{t} = \eta_{t}\) : 디코더의 $t$ 시점 은닉 상태</li>
-      <li>\(\mathbf{K} = \mathbf{V} = \mathbf{H}\) : 인코더의 각 순번 은닉 상태 행렬</li>
+      <li>\(\overrightarrow{\mathcal{q}}_{t} = \eta_{t}\) : 디코더의 $t$ 시점 은닉 상태</li>
+      <li>\(\mathcal{K} = \mathcal{V} = \mathbf{H}\) : 인코더의 각 순번 은닉 상태 행렬</li>
     </ul>
   </li>
   <li>
     <p>디코더의 $t$ 시점 특화 문맥 벡터(Context Vector) 도출</p>
 
 \[\begin{aligned}
-  \overrightarrow{\mathbf{z}}_{t}
-  = \sum_{i}{\mathbf{W}^{(t)}_{i}}
-  = \overrightarrow{\mathbf{w}}^{(t)}_{1} + \overrightarrow{\mathbf{w}}^{(t)}_{2} + \cdots + \overrightarrow{\mathbf{w}}^{(t)}_{T}
+  \overrightarrow{\mathbf{c}}_{t}
+  = \sum_{i}{\mathcal{O}^{(t)}_{i}}
+  = \overrightarrow{\mathcal{o}}^{(t)}_{1} + \overrightarrow{\mathcal{o}}^{(t)}_{2} + \cdots + \overrightarrow{\mathcal{o}}^{(t)}_{T}
   \end{aligned}\]
   </li>
   <li>
     <p>$t$ 시점 문맥 벡터와 $t$ 시점 은닉 상태 정보 종합</p>
 
-\[\overrightarrow{\mathbf{s}}_{t}
-  = \text{F}_{\text{tanh}}\left[\overrightarrow{\mathbf{z}}_{t} \oplus \eta_{t}\right]\]
+\[\overrightarrow{\mathbf{z}}_{t}
+  = \text{F}_{\text{tanh}}\left[\overrightarrow{\mathbf{c}}_{t} \oplus \eta_{t}\right]\]
   </li>
 </ul>
 
@@ -1310,27 +1470,28 @@
   <li>
     <p>Attention Mechanism</p>
 
-\[\mathbf{W}^{(t)} = \text{Softmax}\left[\overrightarrow{\mathbf{q}}_{t} \cdot \mathbf{K}\right] \cdot \mathbf{V}\]
+\[\mathbf{O}^{(t)}
+  = \text{Softmax}\left[\eta_{t-1} \cdot \mathbf{H}\right] \cdot \mathbf{H}\]
 
     <ul>
-      <li>\(\overrightarrow{\mathbf{q}}_{t} = \eta_{t-1}\) : 디코더의 $t-1$ 시점 은닉 상태</li>
-      <li>\(\mathbf{K} = \mathbf{V} = \mathbf{H}\) : 인코더의 각 순번 은닉 상태 행렬</li>
+      <li>\(\overrightarrow{\mathcal{q}}_{t} = \eta_{t-1}\) : 디코더의 $t-1$ 시점 은닉 상태</li>
+      <li>\(\mathcal{K} = \mathcal{V} = \mathbf{H}\) : 인코더의 각 순번 은닉 상태 행렬</li>
     </ul>
   </li>
   <li>
     <p>디코더의 $t$ 시점 특화 문맥 벡터(Context Vector) 도출</p>
 
 \[\begin{aligned}
-  \overrightarrow{\mathbf{z}}_{t}
-  = \sum_{i}{\mathbf{W}^{(t)}_{i}}
-  = \overrightarrow{\mathbf{w}}^{(t)}_{1} + \overrightarrow{\mathbf{w}}^{(t)}_{2} + \cdots + \overrightarrow{\mathbf{w}}^{(t)}_{T}
+  \overrightarrow{\mathbf{c}}_{t}
+  = \sum_{i}{\mathcal{O}^{(t)}_{i}}
+  = \overrightarrow{\mathcal{o}}^{(t)}_{1} + \overrightarrow{\mathcal{o}}^{(t)}_{2} + \cdots + \overrightarrow{\mathcal{o}}^{(t)}_{T}
   \end{aligned}\]
   </li>
   <li>
     <p>$t$ 시점 문맥 벡터와 $t$ 시점 입력 벡터 정보 종합</p>
 
-\[\overrightarrow{\mathbf{s}}_{t}
-  = \overrightarrow{\mathbf{z}}_{t} \oplus \hat{\mathbf{y}}_{t-1}\]
+\[\overrightarrow{\mathbf{z}}_{t}
+  = \overrightarrow{\mathbf{c}}_{t} \oplus \hat{\mathbf{y}}_{t-1}\]
   </li>
 </ul>
 
