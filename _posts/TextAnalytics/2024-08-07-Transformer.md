@@ -10,3 +10,8 @@ description: >-
 image:
     path: /_post_refer_img/TextAnalytics/Thumbnail.png
 ---
+
+## Attention is all you need
+-----
+
+- **트랜스포머(Transformer)** : 순환 신경망을 배제하고 어텐션 메커니즘을 전적으로 활용한 기계 번역 아키텍처
