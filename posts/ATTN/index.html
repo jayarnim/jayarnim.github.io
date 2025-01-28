@@ -1238,7 +1238,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1706 words"
+  title="1771 words"
 >
   <em>9 min</em> read</span>
 
@@ -1252,7 +1252,7 @@
 <hr />
 
 <ul>
-  <li><strong>어텐션 메커니즘(Attention Mechanism)</strong> : 개별 질의에 특화된 정답 후보군별 중요도를 도출하는 메커니즘
+  <li><strong>어텐션 메커니즘(Attention Mechanism)</strong> : 질의와 선택지가 주어진 상황에서, 특정 질의가 입력되었을 때 해당 질의에 대한 대답으로서 선택지들의 적합도를 계산해 가중치를 부여하고, 이를 기반으로 개별 질의에 특화된 문맥 정보를 생성하는 메커니즘
     <ul>
       <li><strong>교차 어텐션(Cross Attention)</strong> : 입력값과 반환할 값이 다른 경우</li>
       <li><strong>셀프 어텐션(Self Attention)</strong> : 입력값과 반환할 값이 같은 경우</li>
@@ -1266,15 +1266,37 @@
 \[\begin{aligned}
   \text{ATTN}\left(\mathcal{Q},\mathcal{K},\mathcal{V}\right)
   = \text{Softmax}\left[f(\mathcal{Q},\mathcal{K})\right] \cdot \mathcal{V}
+  = \mathcal{C}
   \end{aligned}\]
 
     <ul>
-      <li>$\mathcal{Q}$ : 입력값에 대하여 정보를 얻고자 하는 기준점으로서 <strong>질의(Query)</strong></li>
-      <li>$\mathcal{K}$ : 질의와 매칭하여 관련성을 평가할 기준으로서 <strong>키(Key)</strong></li>
-      <li>$\mathcal{V}$ : 관련성을 기반으로 반환할 값으로서 <strong>선택지(Value)</strong></li>
-      <li>$\mathcal{A}=f(\mathcal{Q},\mathcal{K})$ : 질의와 키 간 유사도 행렬로서 <strong>주의 점수 행렬(Attention Score Matrix)</strong></li>
-      <li>$\mathcal{W}=\text{Softmax}\left[\mathcal{A}\right]$ : 주의 점수 정규화 행렬로서 <strong>주의 가중치 행렬(Attention Weight Matrix)</strong> 혹은 <strong>어텐션 맵(Attention Map)</strong></li>
-      <li>$\mathcal{O}=\mathcal{W} \cdot \mathcal{V}$ : <strong>주의 출력값(Attention Output)</strong></li>
+      <li><strong>INPUT</strong>
+        <ul>
+          <li>\(\mathcal{Q} \in \mathbb{R}^{M \times D}\) : 입력값에 대하여 정보를 얻고자 하는 기준점으로서 <strong>질의(Query)</strong></li>
+          <li>\(\mathcal{K} \in \mathbb{R}^{N \times D}\) : 질의와 매칭하여 관련성을 평가할 기준으로서 <strong>키(Key)</strong></li>
+          <li>\(\mathcal{V} \in \mathbb{R}^{N \times D_{V}}\) : 관련성을 기반으로 반환할 값으로서 <strong>선택지(Value)</strong></li>
+        </ul>
+      </li>
+      <li><strong>OUTPUT</strong>
+        <ul>
+          <li>\(\mathcal{A}=f(\mathcal{Q},\mathcal{K}) \in \mathbb{R}^{M \times N}\) : 질의와 키 간 유사도 행렬
+            <ul>
+              <li>\(\alpha_{m,n} \in \mathcal{A}\) : 주의 점수(Attention Score)</li>
+            </ul>
+          </li>
+          <li>\(\mathcal{W}=\text{Softmax}\left[\mathcal{A}\right] \in \mathbb{R}^{M \times N}\) : 유사도 정규화 행렬로서 어텐션 맵(Attention Map)
+            <ul>
+              <li>\(\overrightarrow{\omega} \in \mathcal{W}\) : 어텐션 분포(Attention Distribution)</li>
+              <li>\(\omega_{m,n} \in \overrightarrow{\omega} \in \mathcal{W}\) : 주의 가중치(Attention Weight)</li>
+            </ul>
+          </li>
+          <li>\(\mathcal{C}=\mathcal{W} \cdot \mathcal{V} \in \mathbb{R}^{M \times D_{V}}\) : 문맥 행렬(Context Matrix)
+            <ul>
+              <li>\(\overrightarrow{\sigma} \in \mathcal{C}\) : 문맥 벡터(Contex Vector)</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
     </ul>
   </li>
   <li>
@@ -1317,9 +1339,8 @@
     </table></div>
 
 \[\begin{aligned}
-  \overrightarrow{\mathcal{o}}_{i}
+  \overrightarrow{\sigma}_{i}
   = \text{ATTN}\left(\overrightarrow{\mathbf{q}}_{i}, \mathbf{K}, \mathbf{V}\right)
-  \in \mathbb{R}^{N}
   \end{aligned}\]
   </li>
 </ul>
@@ -1496,30 +1517,22 @@
 
 <ul>
   <li>
-    <p>Attention Mechanism</p>
+    <p><strong>Attention Mechanism</strong></p>
 
-\[\mathcal{O}^{(t)}
+\[\overrightarrow{\sigma}^{(t)}
   = \text{Softmax}\left[\eta_{t} \cdot \mathbf{H}\right] \cdot \mathbf{H}\]
 
     <ul>
       <li>\(\mathcal{Q} = \eta_{t}\) : 디코더의 $t$ 시점 은닉 상태</li>
       <li>\(\mathcal{K} = \mathcal{V} = \mathbf{H}\) : 인코더의 각 순번 은닉 상태 행렬</li>
+      <li>\(\overrightarrow{\sigma}^{(t)}\) : 디코더의 $t$ 시점 문맥 벡터(Context Vector)</li>
     </ul>
   </li>
   <li>
-    <p>디코더의 $t$ 시점 특화 문맥 벡터(Context Vector) 도출</p>
-
-\[\begin{aligned}
-  \overrightarrow{\mathbf{c}}_{t}
-  = \sum_{i}{\mathcal{O}^{(t)}_{i}}
-  = \overrightarrow{\mathcal{o}}^{(t)}_{1} + \overrightarrow{\mathcal{o}}^{(t)}_{2} + \cdots + \overrightarrow{\mathcal{o}}^{(t)}_{T}
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>$t$ 시점 문맥 벡터와 $t$ 시점 은닉 상태 정보 종합</p>
+    <p><strong>Combining information on the context vector at $t$ and the hidden state at $t$</strong></p>
 
 \[\overrightarrow{\mathbf{z}}_{t}
-  = \text{F}_{\text{tanh}}\left[\overrightarrow{\mathbf{c}}_{t} \oplus \eta_{t}\right]\]
+  = \text{F}_{\text{tanh}}\left[\overrightarrow{\sigma}^{(t)} \oplus \eta_{t}\right]\]
   </li>
 </ul>
 
@@ -1529,30 +1542,22 @@
 
 <ul>
   <li>
-    <p>Attention Mechanism</p>
+    <p><strong>Attention Mechanism</strong></p>
 
-\[\mathcal{O}^{(t)}
+\[\overrightarrow{\sigma}^{(t)}
   = \text{Softmax}\left[\eta_{t-1} \cdot \mathbf{H}\right] \cdot \mathbf{H}\]
 
     <ul>
       <li>\(\mathcal{Q} = \eta_{t-1}\) : 디코더의 $t-1$ 시점 은닉 상태</li>
       <li>\(\mathcal{K} = \mathcal{V} = \mathbf{H}\) : 인코더의 각 순번 은닉 상태 행렬</li>
+      <li>\(\overrightarrow{\sigma}^{(t)}\) : 디코더의 $t$ 시점 문맥 벡터(Context Vector)</li>
     </ul>
   </li>
   <li>
-    <p>디코더의 $t$ 시점 특화 문맥 벡터(Context Vector) 도출</p>
-
-\[\begin{aligned}
-  \overrightarrow{\mathbf{c}}_{t}
-  = \sum_{i}{\mathcal{O}^{(t)}_{i}}
-  = \overrightarrow{\mathcal{o}}^{(t)}_{1} + \overrightarrow{\mathcal{o}}^{(t)}_{2} + \cdots + \overrightarrow{\mathcal{o}}^{(t)}_{T}
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>$t$ 시점 문맥 벡터와 $t$ 시점 입력 벡터 정보 종합</p>
+    <p><strong>Combining information on the context vector at $t$ and the input vector at $t$</strong></p>
 
 \[\overrightarrow{\mathbf{z}}_{t}
-  = \overrightarrow{\mathbf{c}}_{t} \oplus \hat{\mathbf{y}}_{t-1}\]
+  = \overrightarrow{\sigma}^{(t)} \oplus \hat{\mathbf{y}}_{t-1}\]
   </li>
 </ul>
 
