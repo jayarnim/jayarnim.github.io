@@ -1502,7 +1502,7 @@
   = \text{Softmax}\left[\eta_{t} \cdot \mathbf{H}\right] \cdot \mathbf{H}\]
 
     <ul>
-      <li>\(\overrightarrow{\mathcal{q}}_{t} = \eta_{t}\) : 디코더의 $t$ 시점 은닉 상태</li>
+      <li>\(\mathcal{Q} = \eta_{t}\) : 디코더의 $t$ 시점 은닉 상태</li>
       <li>\(\mathcal{K} = \mathcal{V} = \mathbf{H}\) : 인코더의 각 순번 은닉 상태 행렬</li>
     </ul>
   </li>
@@ -1535,7 +1535,7 @@
   = \text{Softmax}\left[\eta_{t-1} \cdot \mathbf{H}\right] \cdot \mathbf{H}\]
 
     <ul>
-      <li>\(\overrightarrow{\mathcal{q}}_{t} = \eta_{t-1}\) : 디코더의 $t-1$ 시점 은닉 상태</li>
+      <li>\(\mathcal{Q} = \eta_{t-1}\) : 디코더의 $t-1$ 시점 은닉 상태</li>
       <li>\(\mathcal{K} = \mathcal{V} = \mathbf{H}\) : 인코더의 각 순번 은닉 상태 행렬</li>
     </ul>
   </li>
