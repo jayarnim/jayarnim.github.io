@@ -1238,7 +1238,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1713 words"
+  title="1706 words"
 >
   <em>9 min</em> read</span>
 
@@ -1460,7 +1460,7 @@
   \end{aligned}\]
   </li>
   <li>
-    <p><strong>마스크 행렬(Mask Matrix)</strong> : (특히 시계열 데이터에 대한 셀프 어텐션에서) 특정 위치에 대한 가중치를 차단하거나 조정함으로써 다음 순번에 관한 정보가 유실되는 것을 방지함</p>
+    <p><strong>마스크 행렬(Mask Matrix)</strong> : 특정 위치에 대한 가중치를 차단하거나 조정함으로써 예측해야 하는 정보가 유출되거나 불필요한 정보가 참조되는 것을 방지함</p>
 
     <p><a href="/_post_refer_img/TextAnalytics/09-06.png" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/09-06.png" alt="06" width="100%" loading="lazy"></a></p>
 
@@ -1469,7 +1469,7 @@
   \end{aligned}\]
 
     <ul>
-      <li>셀프 어텐션은 입력 데이터의 모든 위치가 서로 영향을 주고받는 구조이나, 시퀀스 생성 모형은 <strong>현재 순번 데이터로만 다음 순번을 예측해야 하므로,</strong> 미래 위치에 대한 주의 점수를 $-\infty$ 로 처리하여 모형이 해당 정보를 보지 못하도록 강제함</li>
+      <li>셀프 어텐션은 입력 데이터의 모든 위치가 서로 영향을 주고받는 구조이나, 시퀀스 생성 모형은 <strong>현재 순번 데이터로만 다음 순번을 예측해야 하므로,</strong> 미래 위치에 대한 주의 점수를 $-\infty$ 로 처리하여 모형이 해당 정보를 참조하지 못하도록 강제함</li>
     </ul>
   </li>
 </ul>
