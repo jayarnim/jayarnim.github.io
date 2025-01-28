@@ -1072,17 +1072,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -1098,17 +1087,6 @@
       
         
         
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
       
 
       
@@ -1238,7 +1216,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1767 words"
+  title="1758 words"
 >
   <em>9 min</em> read</span>
 
@@ -1300,90 +1278,89 @@
     </ul>
   </li>
   <li>
-    <p><strong><code class="language-plaintext highlighter-rouge">Example</code> Recommendation</strong> (Latent Factor Model)</p>
-
-    <blockquote>
-      <p>사용자 개인화 영화 추천 서비스를 기획하고 있다. 이때 사용자의 과거 시청 이력 외에, 사용자 프로파일 정보와 아이템 프로파일 정보를 추가 활용하고자 한다. 어떻게 하면 개별 사용자에 대한 영화별 중요도를 산출할 수 있을까?</p>
-    </blockquote>
+    <p><strong>Attention Score Function</strong></p>
 
     <div class="table-wrapper"><table>
       <thead>
         <tr>
-          <th>표현</th>
-          <th>정의</th>
-          <th>ATTN</th>
+          <th>Name</th>
+          <th>Function</th>
+          <th>Defined by</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>\(\overrightarrow{\mathbf{u}}_{i} \in \mathbf{U}_{M \times D}\)</td>
-          <td>사용자 임베딩 벡터</td>
-          <td>입력값</td>
+          <td>Dot Product</td>
+          <td>\(f(\overrightarrow{\mathbf{q}}, \mathbf{K}) = \overrightarrow{\mathbf{q}} \cdot \mathbf{K}\)</td>
+          <td>Luong et al. (2015)</td>
         </tr>
         <tr>
-          <td>\(\overrightarrow{\mathbf{q}}_{i} \in \mathbf{Q}_{M \times D}\)</td>
-          <td>사용자 프로파일 벡터</td>
-          <td>입력값에 대하여 정보를 얻고자 하는 기준점</td>
+          <td>Learnable Weighted Attention</td>
+          <td>\(f(\overrightarrow{\mathbf{q}}, \mathbf{K}) = \overrightarrow{\mathbf{q}}^{T} \cdot \mathbf{W} \cdot \mathbf{K}\)</td>
+          <td>Luong et al. (2015)</td>
         </tr>
         <tr>
-          <td>\(\overrightarrow{\mathbf{v}}_{j} \in \mathbf{V}_{N \times D}\)</td>
-          <td>아이템 임베딩 벡터</td>
-          <td>반환할 값</td>
+          <td>Additive Attention</td>
+          <td>\(f(\overrightarrow{\mathbf{q}}, \mathbf{K}) = \mathbf{W}^{T}_{A} \cdot \text{tanh}\left[\mathbf{W}_{B} \cdot (\overrightarrow{\mathbf{q}} \oplus \mathbf{K})\right]\)</td>
+          <td>Bahdanau et al. (2015)</td>
         </tr>
         <tr>
-          <td>\(\overrightarrow{\mathbf{k}}_{j} \in \mathbf{K}_{N \times D}\)</td>
-          <td>아이템 프로파일 벡터</td>
-          <td>반환할 값에 대하여 질의와 매칭하여 관련성을 평가할 기준</td>
+          <td>Concatenation</td>
+          <td>\(f(\overrightarrow{\mathbf{q}}, \mathbf{K}) = \mathbf{W}^{T}_{A} \cdot \text{tanh}\left[\mathbf{W}_{B} \cdot \overrightarrow{\mathbf{q}} + \mathbf{W}_{C} \cdot \mathbf{K}\right]\)</td>
+          <td>Bahdanau et al. (2015)</td>
+        </tr>
+        <tr>
+          <td>Scaled Dot Product</td>
+          <td>\(f(\overrightarrow{\mathbf{q}}, \mathbf{K}) = \displaystyle\frac{\overrightarrow{\mathbf{q}}^{T} \cdot \mathbf{K}}{\sqrt{n}}\)</td>
+          <td>Vaswani et al. (2017)</td>
         </tr>
       </tbody>
     </table></div>
-
-\[\begin{aligned}
-  \overrightarrow{\sigma}_{i}
-  = \text{ATTN}\left(\overrightarrow{\mathbf{q}}_{i}, \mathbf{K}, \mathbf{V}\right)
-  \end{aligned}\]
   </li>
 </ul>
 
-<h2 id="attention-score-function"><span class="me-2">Attention Score Function</span><a href="#attention-score-function" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
+<h3 id="example-recommendation"><span class="me-2"><code class="language-plaintext highlighter-rouge">Example</code> Recommendation</span><a href="#example-recommendation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<blockquote>
+  <p>사용자 개인화 영화 추천 서비스를 기획하고 있다. 이때 사용자의 과거 시청 이력 외에, 사용자 프로파일 정보와 아이템 프로파일 정보를 추가 활용하고자 한다. 어떻게 하면 개별 사용자에 대한 영화별 중요도를 산출할 수 있을까?</p>
+</blockquote>
 
 <div class="table-wrapper"><table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Function</th>
-      <th>Defined by</th>
+      <th>표현</th>
+      <th>정의</th>
+      <th>ATTN</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Dot Product</td>
-      <td>\(f(\overrightarrow{\mathbf{q}}, \mathbf{K}) = \overrightarrow{\mathbf{q}} \cdot \mathbf{K}\)</td>
-      <td>Luong et al. (2015)</td>
+      <td>\(\overrightarrow{\mathbf{u}}_{i} \in \mathbf{U}_{M \times D}\)</td>
+      <td>사용자 임베딩 벡터</td>
+      <td>입력값</td>
     </tr>
     <tr>
-      <td>Learnable Weighted Attention</td>
-      <td>\(f(\overrightarrow{\mathbf{q}}, \mathbf{K}) = \overrightarrow{\mathbf{q}}^{T} \cdot \mathbf{W} \cdot \mathbf{K}\)</td>
-      <td>Luong et al. (2015)</td>
+      <td>\(\overrightarrow{\mathbf{q}}_{i} \in \mathbf{Q}_{M \times D}\)</td>
+      <td>사용자 프로파일 벡터</td>
+      <td>입력값에 대하여 정보를 얻고자 하는 기준점</td>
     </tr>
     <tr>
-      <td>Additive Attention</td>
-      <td>\(f(\overrightarrow{\mathbf{q}}, \mathbf{K}) = \mathbf{W}^{T}_{A} \cdot \text{tanh}\left[\mathbf{W}_{B} \cdot (\overrightarrow{\mathbf{q}} \oplus \mathbf{K})\right]\)</td>
-      <td>Bahdanau et al. (2015)</td>
+      <td>\(\overrightarrow{\mathbf{v}}_{j} \in \mathbf{V}_{N \times D}\)</td>
+      <td>아이템 임베딩 벡터</td>
+      <td>반환할 값</td>
     </tr>
     <tr>
-      <td>Concatenation</td>
-      <td>\(f(\overrightarrow{\mathbf{q}}, \mathbf{K}) = \mathbf{W}^{T}_{A} \cdot \text{tanh}\left[\mathbf{W}_{B} \cdot \overrightarrow{\mathbf{q}} + \mathbf{W}_{C} \cdot \mathbf{K}\right]\)</td>
-      <td>Bahdanau et al. (2015)</td>
-    </tr>
-    <tr>
-      <td>Scaled Dot Product</td>
-      <td>\(f(\overrightarrow{\mathbf{q}}, \mathbf{K}) = \displaystyle\frac{\overrightarrow{\mathbf{q}}^{T} \cdot \mathbf{K}}{\sqrt{n}}\)</td>
-      <td>Vaswani et al. (2017)</td>
+      <td>\(\overrightarrow{\mathbf{k}}_{j} \in \mathbf{K}_{N \times D}\)</td>
+      <td>아이템 프로파일 벡터</td>
+      <td>반환할 값에 대하여 질의와 매칭하여 관련성을 평가할 기준</td>
     </tr>
   </tbody>
 </table></div>
+
+\[\begin{aligned}
+\overrightarrow{\sigma}_{i}
+= \text{ATTN}\left(\overrightarrow{\mathbf{q}}_{i}, \mathbf{K}, \mathbf{V}\right)
+\end{aligned}\]
 
 <h2 id="adaptive-weight"><span class="me-2">Adaptive Weight</span><a href="#adaptive-weight" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
@@ -1503,61 +1480,56 @@
     <p><strong>SEQ2SEQ 적용 목적</strong> : RNN 계열 레이어의 초기 순번 정보 유실 문제 및 기울기 소실 문제를 보완하기 위함으로서, 문맥 벡터를 최종 은닉 상태로 획일화하여 사용하지 않고, 인코더 각 순번 은닉 상태와 디코더 현재 시점 간 관련성을 고려하여, 디코더의 각 시점에 특화된 문맥 벡터를 생성함</p>
   </li>
   <li>
-    <p><strong>종류</strong></p>
+    <p><strong>루옹 어텐션(Luong Attention)</strong> : 디코더의 <strong>현재 시점 은닉 상태를</strong> 활용하여 문맥 벡터를 생성하고, 이를 <strong>현재 시점 은닉 상태에</strong> 적용하는 어텐션 기법</p>
+
+    <p><a href="/_post_refer_img/TextAnalytics/09-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/09-01.png" alt="01" width="100%" loading="lazy"></a></p>
+
     <ul>
-      <li><strong>루옹 어텐션(Luong Attention)</strong> : 디코더의 <strong>현재 시점 은닉 상태를</strong> 활용하여 문맥 벡터를 생성하고, 이를 <strong>현재 시점 은닉 상태에</strong> 적용하는 어텐션 기법</li>
-      <li><strong>바다나우 어텐션(Bahdanau Attention)</strong> : 디코더의 <strong>이전 시점 은닉 상태를</strong> 활용하여 문맥 벡터를 생성하고, 이를 <strong>현재 시점 입력값에</strong> 적용하는 어텐션 기법</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="luong-attention"><span class="me-2">Luong Attention</span><a href="#luong-attention" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p><a href="/_post_refer_img/TextAnalytics/09-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/09-01.png" alt="01" width="100%" loading="lazy"></a></p>
-
-<ul>
-  <li>
-    <p><strong>Attention Mechanism</strong></p>
+      <li>
+        <p><strong>Attention Mechanism</strong></p>
 
 \[\overrightarrow{\sigma}^{(t)}
   = \text{ATTN}\left(\eta_{t}, \mathbf{H}, \mathbf{H}\right)\]
 
-    <ul>
-      <li>\(\mathcal{Q} = \eta_{t}\) : 디코더의 $t$ 시점 은닉 상태</li>
-      <li>\(\mathcal{K} = \mathcal{V} = \mathbf{H}\) : 인코더의 각 순번 은닉 상태 행렬</li>
-      <li>\(\overrightarrow{\sigma}^{(t)}\) : 디코더의 $t$ 시점 문맥 벡터(Context Vector)</li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>Combining information on the context vector at $t$ and the hidden state at $t$</strong></p>
+        <ul>
+          <li>\(\mathcal{Q} = \eta_{t}\) : 디코더의 $t$ 시점 은닉 상태</li>
+          <li>\(\mathcal{K} = \mathcal{V} = \mathbf{H}\) : 인코더의 각 순번 은닉 상태 행렬</li>
+          <li>\(\overrightarrow{\sigma}^{(t)}\) : 디코더의 $t$ 시점 문맥 벡터(Context Vector)</li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>Combining information on the context vector at $t$ and the hidden state at $t$</strong></p>
 
 \[\overrightarrow{\mathbf{z}}_{t}
   = \text{F}_{\text{tanh}}\left[\overrightarrow{\sigma}^{(t)} \oplus \eta_{t}\right]\]
+      </li>
+    </ul>
   </li>
-</ul>
-
-<h3 id="bahdanau-attention"><span class="me-2">Bahdanau Attention</span><a href="#bahdanau-attention" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p><a href="/_post_refer_img/TextAnalytics/09-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/09-02.png" alt="02" width="100%" loading="lazy"></a></p>
-
-<ul>
   <li>
-    <p><strong>Attention Mechanism</strong></p>
+    <p><strong>바다나우 어텐션(Bahdanau Attention)</strong> : 디코더의 <strong>이전 시점 은닉 상태를</strong> 활용하여 문맥 벡터를 생성하고, 이를 <strong>현재 시점 입력값에</strong> 적용하는 어텐션 기법</p>
+
+    <p><a href="/_post_refer_img/TextAnalytics/09-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/09-02.png" alt="02" width="100%" loading="lazy"></a></p>
+
+    <ul>
+      <li>
+        <p><strong>Attention Mechanism</strong></p>
 
 \[\overrightarrow{\sigma}^{(t)}
   = \text{ATTN}\left(\eta_{t-1}, \mathbf{H}, \mathbf{H}\right)\]
 
-    <ul>
-      <li>\(\mathcal{Q} = \eta_{t-1}\) : 디코더의 $t-1$ 시점 은닉 상태</li>
-      <li>\(\mathcal{K} = \mathcal{V} = \mathbf{H}\) : 인코더의 각 순번 은닉 상태 행렬</li>
-      <li>\(\overrightarrow{\sigma}^{(t)}\) : 디코더의 $t$ 시점 문맥 벡터(Context Vector)</li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>Combining information on the context vector at $t$ and the input vector at $t$</strong></p>
+        <ul>
+          <li>\(\mathcal{Q} = \eta_{t-1}\) : 디코더의 $t-1$ 시점 은닉 상태</li>
+          <li>\(\mathcal{K} = \mathcal{V} = \mathbf{H}\) : 인코더의 각 순번 은닉 상태 행렬</li>
+          <li>\(\overrightarrow{\sigma}^{(t)}\) : 디코더의 $t$ 시점 문맥 벡터(Context Vector)</li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>Combining information on the context vector at $t$ and the input vector at $t$</strong></p>
 
 \[\overrightarrow{\mathbf{z}}_{t}
   = \overrightarrow{\sigma}^{(t)} \oplus \hat{\mathbf{y}}_{t-1}\]
+      </li>
+    </ul>
   </li>
 </ul>
 
