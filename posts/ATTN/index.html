@@ -1238,7 +1238,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1771 words"
+  title="1767 words"
 >
   <em>9 min</em> read</span>
 
@@ -1520,7 +1520,7 @@
     <p><strong>Attention Mechanism</strong></p>
 
 \[\overrightarrow{\sigma}^{(t)}
-  = \text{Softmax}\left[\eta_{t} \cdot \mathbf{H}\right] \cdot \mathbf{H}\]
+  = \text{ATTN}\left(\eta_{t}, \mathbf{H}, \mathbf{H}\right)\]
 
     <ul>
       <li>\(\mathcal{Q} = \eta_{t}\) : 디코더의 $t$ 시점 은닉 상태</li>
@@ -1545,7 +1545,7 @@
     <p><strong>Attention Mechanism</strong></p>
 
 \[\overrightarrow{\sigma}^{(t)}
-  = \text{Softmax}\left[\eta_{t-1} \cdot \mathbf{H}\right] \cdot \mathbf{H}\]
+  = \text{ATTN}\left(\eta_{t-1}, \mathbf{H}, \mathbf{H}\right)\]
 
     <ul>
       <li>\(\mathcal{Q} = \eta_{t-1}\) : 디코더의 $t-1$ 시점 은닉 상태</li>
