@@ -932,6 +932,77 @@
     <!-- combine -->
     
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
 
   
 
@@ -1134,7 +1205,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="778 words"
+  title="783 words"
 >
   <em>4 min</em> read</span>
 
@@ -1335,40 +1406,47 @@
   <li>
     <p><strong>MLM(<code class="language-plaintext highlighter-rouge">M</code>asked <code class="language-plaintext highlighter-rouge">L</code>anguage <code class="language-plaintext highlighter-rouge">M</code>odel)</strong> : 입력 문장에서 일부는 <code class="language-plaintext highlighter-rouge">MASK</code> 로 가리고, 일부는 다른 단어로 무작위 변경한 후(10%), 원래 단어를 예측하도록 양방향 학습함으로써 일반화된 언어 패턴을 학습하고 문맥을 이해하는 능력을 강화함</p>
 
-    <div class="table-wrapper"><table>
-      <thead>
-        <tr>
-          <th>역할</th>
-          <th>처리 방법</th>
-          <th>비중</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>CONTEXT</td>
-          <td>변경하지 않음</td>
-          <td>85%</td>
-        </tr>
-        <tr>
-          <td>PREDICTION</td>
-          <td>MASK</td>
-          <td>12%</td>
-        </tr>
-        <tr>
-          <td>PREDICTION</td>
-          <td>무작위 변경</td>
-          <td>1.5%</td>
-        </tr>
-        <tr>
-          <td>PREDICTION</td>
-          <td>변경하지 않음</td>
-          <td>1.5%</td>
-        </tr>
-      </tbody>
-    </table></div>
+    <p><a href="/_post_refer_img/TextAnalytics/11-07.png" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/11-07.png" alt="07" width="100%" loading="lazy"></a></p>
 
     <ul>
-      <li><strong>Bidirection</strong> : 트랜스포머 디코더가 단방향 예측($t-1$ 시점까지 정보를 기반으로 $t$ 시점을 예측)을 수행했던 것과 달리, 버트는 양방향 예측(이전 시점과 이후 시점의 정보를 종합하여 $t$ 시점을 예측)을 수행하므로, 문맥 벡터 생성 시 미래 순번 정보를 모두 마스킹 처리하지 않음</li>
+      <li>
+        <p><strong>Bidirection</strong> : 트랜스포머 디코더가 단방향 예측($t-1$ 시점까지 정보를 기반으로 $t$ 시점을 예측)을 수행했던 것과 달리, 버트는 양방향 예측(이전 시점과 이후 시점의 정보를 종합하여 $t$ 시점을 예측)을 수행하므로, 문맥 벡터 생성 시 미래 순번 정보를 모두 마스킹 처리하지 않음</p>
+      </li>
+      <li>
+        <p><strong>How to Process Target</strong></p>
+
+        <div class="table-wrapper"><table>
+          <thead>
+            <tr>
+              <th>역할</th>
+              <th>처리 방법</th>
+              <th>비중</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CONTEXT</td>
+              <td>변경하지 않음</td>
+              <td>85%</td>
+            </tr>
+            <tr>
+              <td>PREDICTION</td>
+              <td>MASK</td>
+              <td>12%</td>
+            </tr>
+            <tr>
+              <td>PREDICTION</td>
+              <td>무작위 변경</td>
+              <td>1.5%</td>
+            </tr>
+            <tr>
+              <td>PREDICTION</td>
+              <td>변경하지 않음</td>
+              <td>1.5%</td>
+            </tr>
+          </tbody>
+        </table></div>
+      </li>
     </ul>
   </li>
   <li>
@@ -1384,6 +1462,7 @@
 
 <ul>
   <li>https://pub.towardsai.net/demystifying-bert-efe9ac3c1c74</li>
+  <li>https://www.sbert.net/examples/unsupervised_learning/MLM/README.html</li>
   <li>https://wikidocs.net/115055</li>
 </ul>
 
