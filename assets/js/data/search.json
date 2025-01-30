@@ -72,7 +72,7 @@
     "title": "GPT",
     "url": "/posts/GPT/",
     "categories": "Data Mining, Text Analytics",
-    "tags": "Data Mining, NLP, Text Mining, Generative Model",
+    "tags": "Data Mining, NLP, Text Mining, Generative Model, Attention Mechanism",
     "date": "2024-08-09 00:00:00 +0900",
     
 
@@ -89,7 +89,7 @@
     "title": "BERT",
     "url": "/posts/BERT/",
     "categories": "Data Mining, Text Analytics",
-    "tags": "Data Mining, NLP, Text Mining, Language Model",
+    "tags": "Data Mining, NLP, Text Mining, Language Model, Attention Mechanism",
     "date": "2024-08-08 00:00:00 +0900",
     
 
@@ -106,7 +106,7 @@
     "title": "Transformer",
     "url": "/posts/Transformer/",
     "categories": "Data Mining, Text Analytics",
-    "tags": "Data Mining, NLP, Text Mining, Machine Translation",
+    "tags": "Data Mining, NLP, Text Mining, Machine Translation, Attention Mechanism",
     "date": "2024-08-07 00:00:00 +0900",
     
 
