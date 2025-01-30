@@ -261,6 +261,6 @@ image:
 
 -----
 
-### 이미지 출처
+### Reference
 
 - https://medium.com/@luvvaggarwal2002/linear-regression-in-machine-learning-9e8af948d3eb

@@ -166,7 +166,7 @@ $$\begin{aligned}
 
 -----
 
-### 이미지 출처
+### Reference
 
 - http://scott.fortmann-roe.com/docs/BiasVariance.html
 - https://github.com/lovit/python_ml_intro

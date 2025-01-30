@@ -313,7 +313,7 @@ image:
 
 -----
 
-### 이미지 출처
+### Reference
 
 - https://u5man.medium.com/to-err-is-human-what-the-heck-is-type-i-and-type-ii-error-b2c78190a45c
 - https://wikidocs.net/163986

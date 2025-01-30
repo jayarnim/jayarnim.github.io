@@ -141,7 +141,7 @@ image:
 
 -----
 
-### 이미지 출처
+### Reference
 
 - https://www.spotfire.com/glossary/what-is-regression-analysis
 - https://www.engati.com/glossary/classification-algorithm

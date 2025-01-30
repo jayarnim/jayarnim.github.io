@@ -143,7 +143,7 @@ image:
 
 -----
 
-### 이미지 출처
+### Reference
 
 - https://www.scaler.com/topics/supervised-and-unsupervised-learning/
 - https://towardsdatascience.com/a-brief-introduction-to-unsupervised-learning-20db46445283

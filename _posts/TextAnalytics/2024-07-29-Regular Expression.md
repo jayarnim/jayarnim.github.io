@@ -260,6 +260,6 @@ for result in results:
 
 -----
 
-### 이미지 출처
+### Reference
 
 - https://zephyrus1111.tistory.com/310

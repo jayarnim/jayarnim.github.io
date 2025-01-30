@@ -202,7 +202,7 @@ image:
 
 -----
 
-### 이미지 출처
+### Reference
 
 - https://policonomics.com/supply-and-demand/
 - https://thismatter.com/economics/supply.htm

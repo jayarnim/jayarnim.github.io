@@ -121,7 +121,7 @@ image:
 
 -----
 
-### 이미지 출처
+### Reference
 
 - https://multithreaded.stitchfix.com/blog/2020/08/05/bandits/
 - https://link.springer.com/article/10.1007/s10489-023-04955-0?fromPaywallRec=false

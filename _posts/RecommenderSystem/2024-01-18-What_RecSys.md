@@ -118,7 +118,7 @@ image:
 
 -----
 
-### 이미지 출처
+### Reference
 
 - https://www.idownloadblog.com/2016/04/26/youtube-new-homepage-design/
 - https://towardsdatascience.com/essentials-of-recommendation-engines-content-based-and-collaborative-filtering-31521c964922

@@ -103,7 +103,7 @@ image:
 
 -----
 
-### 이미지 출처
+### Reference
 
 - https://towardsdatascience.com/hierarchical-clustering-explained-e59b13846da8
 - https://harshsharma1091996.medium.com/hierarchical-clustering-996745fe656b

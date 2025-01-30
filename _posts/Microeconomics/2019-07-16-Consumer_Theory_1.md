@@ -170,6 +170,6 @@ $$
 
 -----
 
-### 이미지 출처
+### Reference
 
 - https://enotesworld.com/price-budget-line-or-budget-constraint/

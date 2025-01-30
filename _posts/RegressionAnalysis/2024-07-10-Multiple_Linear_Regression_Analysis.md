@@ -185,6 +185,6 @@ image:
 
 -----
 
-### 이미지 출처
+### Reference
 
 - https://www.linkedin.com/pulse/understanding-linear-regression-basics-divyesh-sonar-snv4c/

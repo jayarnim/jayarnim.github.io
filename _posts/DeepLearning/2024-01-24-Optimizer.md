@@ -229,6 +229,6 @@ $$
 
 -----
 
-### 이미지 출처
+### Reference
 
 - https://towardsdatascience.com/an-intuitive-explanation-of-gradient-descent-83adf68c9c33

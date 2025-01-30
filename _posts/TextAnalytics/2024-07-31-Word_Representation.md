@@ -167,7 +167,7 @@ image:
 
 -----
 
-### 이미지 출처
+### Reference
 
 - https://velog.io/@growthmindset/%EC%9B%90-%ED%95%AB-%EC%9D%B8%EC%BD%94%EB%94%A9One-Hot-Encoding
 - https://wikidocs.net/22660

@@ -176,7 +176,7 @@ image:
 
 -----
 
-### 이미지 출처
+### Reference
 
 - https://intoli.com/blog/pca-and-svd/
 - https://github.com/dvgodoy/dl-visuals/

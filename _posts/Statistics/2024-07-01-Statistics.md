@@ -236,7 +236,7 @@ image:
 
 -----
 
-### 이미지 출처
+### Reference
 
 - https://thirdspacelearning.com/gcse-maths/statistics/frequency-table/
 - https://www.jaspersoft.com/articles/what-is-a-bar-chart
