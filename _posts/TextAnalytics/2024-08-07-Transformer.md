@@ -136,7 +136,7 @@ $$\begin{aligned}
 
     - $\mathcal{M}$ : Causal Mask(Upper-triangular mask)
 
-- $$\text{Multi-Head}\left(\mathcal{H}^{(k)}_{1},\mathbf{Z},\mathbf{Z}\right)$$ : Multi-Head Cross Self Attention @ Decoder
+- $$\text{Multi-Head}\left(\mathcal{H}^{(k)}_{1},\mathbf{Z},\mathbf{Z}\right)$$ : Multi-Head Cross Attention @ Decoder
 
 	- $$\mathbf{Z}$$ : Output of Encoder Module
 
