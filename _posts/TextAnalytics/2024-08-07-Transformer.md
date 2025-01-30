@@ -16,19 +16,34 @@ image:
 
 - **트랜스포머(Transformer)** : 시계열 데이터를 순차 입력 받는 RNN 계열 레이어를 배제하고 어텐션 메커니즘을 전적으로 활용하여 시계열 데이터의 병렬 처리를 도모하는 기계 번역 아키텍처
 
-- **TOTAL ARCHITECTURE** : SEQ2SEQ 의 ENCODER-DECODER 구조를 따름
+- **TOTAL ARCHITECTURE** : SEQ2SEQ 의 `ENCODER`-`DECODER` 구조를 따름
 
     ![02](/_post_refer_img/TextAnalytics/10-03.png){: width="100%"}
 
-- **CORE TECHS**
+    - **`ENCODER`** : Natural Language Understanding & Feature Extraction
+    - **`DECODER`** : Natural Language Generation
 
-    ![03](/_post_refer_img/TextAnalytics/10-02.png){: width="100%"}
+- **Transformer Application**
 
-    - **Token Embedding** : 입력 문장 내 단어들 각각의 정보를 표현하는 벡터를 생성함
-    - **Positional Encoding** : 입력 문장 내 단어들의 위치 정보를 표현하는 벡터를 생성함
-    - **Multi-Head Self Attention @ Encoder** : 인코더에서 입력 문장 내 단어들 간 관계를 학습하여 각 단어가 문장에서 어떤 역할을 하는지를 반영하는 문맥 벡터를 생성함
-    - **Multi-Head Masked Self Attention @ Decoder** : 디코더에서 출력 문장 내 단어들 간 관계를 학습하여 각 단어의 문맥 벡터를 생성하되, 이전 순번까지의 단어만 참고하도록 마스킹하여 다음 순번에 관한 정보가 유출되는 것을 방지함
-    - **Multi-Head Cross Attention @ Decoder** : 출력 문장의 각 단어가 인코더의 출력들과 맺는 관계를 학습하여 출력 문장 생성 시 개별 순번마다 입력 문장에서 어떤 부분이 중요한지 반영하는 문맥 벡터를 생성함
+    ![06](/_post_refer_img/TextAnalytics/10-06.png){: width="100%"}
+
+    - **BERT(`B`idirectional `E`ncoder `R`epresentations from `T`ransformers)** : LLM, Transformer Encoder Application
+    - **GPT(`G`enerative `P`re-`T`raining)** : GM, Transformer Decoder Application
+
+## Core Techs
+-----
+
+![03](/_post_refer_img/TextAnalytics/10-02.png){: width="100%"}
+
+- **Token Embedding** : 입력 문장 내 단어들 각각의 정보를 표현하는 벡터를 생성함
+
+- **Positional Encoding** : 입력 문장 내 단어들의 위치 정보를 표현하는 벡터를 생성함
+
+- **Multi-Head Self Attention @ Encoder** : 인코더에서 입력 문장 내 단어들 간 관계를 학습하여 각 단어가 문장에서 어떤 역할을 하는지를 반영하는 문맥 벡터를 생성함
+
+- **Multi-Head Masked Self Attention @ Decoder** : 디코더에서 출력 문장 내 단어들 간 관계를 학습하여 각 단어의 문맥 벡터를 생성하되, 이전 순번까지의 단어만 참고하도록 마스킹하여 다음 순번에 관한 정보가 유출되는 것을 방지함
+
+- **Multi-Head Cross Attention @ Decoder** : 출력 문장의 각 단어가 인코더의 출력들과 맺는 관계를 학습하여 출력 문장 생성 시 개별 순번마다 입력 문장에서 어떤 부분이 중요한지 반영하는 문맥 벡터를 생성함
 
 ## Positional Encoding
 -----
@@ -54,6 +69,21 @@ image:
     - 원소값이 너무 작으면 위치 정보가 무시될 수 있음
 
 ### Positional Encoding
+
+$$\begin{aligned}
+\overrightarrow{\mathbf{e}}_{\text{POS}}
+&=\begin{pmatrix}
+\sin{\frac{POS}{10000^{0}}} \\
+\cos{\frac{POS}{10000^{0}}} \\
+\sin{\frac{POS}{10000^{2/8}}} \\
+\cos{\frac{POS}{10000^{2/8}}} \\
+\sin{\frac{POS}{10000^{4/8}}} \\
+\cos{\frac{POS}{10000^{4/8}}} \\
+\sin{\frac{POS}{10000^{6/8}}} \\
+\cos{\frac{POS}{10000^{6/8}}}
+\end{pmatrix},
+\quad \text{where} \quad d=8
+\end{aligned}$$
 
 - **FUNCTION**
 
