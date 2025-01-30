@@ -1134,7 +1134,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="794 words"
+  title="778 words"
 >
   <em>4 min</em> read</span>
 
@@ -1190,70 +1190,6 @@
   </li>
 </ul>
 
-<h2 id="pre-training-for-transfer-learning"><span class="me-2">Pre-Training for Transfer Learning</span><a href="#pre-training-for-transfer-learning" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<p><a href="/_post_refer_img/TextAnalytics/11-03.jpg" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/11-03.jpg" alt="03" width="100%" loading="lazy"></a></p>
-
-<ul>
-  <li>
-    <p><strong>Data Set</strong> : 관측치 하나당 최대 두 가지 시퀀스로 구성할 수 있음</p>
-
-    <blockquote>
-      <p><strong><code class="language-plaintext highlighter-rouge">CLS</code> <code class="language-plaintext highlighter-rouge">my</code> <code class="language-plaintext highlighter-rouge">dog</code> <code class="language-plaintext highlighter-rouge">is</code> <code class="language-plaintext highlighter-rouge">cute</code> <code class="language-plaintext highlighter-rouge">SEP</code> <code class="language-plaintext highlighter-rouge">he</code> <code class="language-plaintext highlighter-rouge">likes</code> <code class="language-plaintext highlighter-rouge">play</code> <code class="language-plaintext highlighter-rouge">##ing</code> <code class="language-plaintext highlighter-rouge">SEP</code></strong></p>
-    </blockquote>
-
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">CLS</code> : 입력 정보를 종합하여 대표하는 벡터</li>
-      <li><code class="language-plaintext highlighter-rouge">SEP</code> : 문장 구분자</li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>MLM(<code class="language-plaintext highlighter-rouge">M</code>asked <code class="language-plaintext highlighter-rouge">L</code>anguage <code class="language-plaintext highlighter-rouge">M</code>odel)</strong> : 입력 문장에서 일부는 <code class="language-plaintext highlighter-rouge">MASK</code> 로 가리고, 일부는 다른 단어로 무작위 변경한 후(10%), 원래 단어를 예측하도록 양방향 학습함으로써 일반화된 언어 패턴을 학습하고 문맥을 이해하는 능력을 강화함</p>
-
-    <div class="table-wrapper"><table>
-      <thead>
-        <tr>
-          <th>역할</th>
-          <th>처리 방법</th>
-          <th>비중</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>CONTEXT</td>
-          <td>변경하지 않음</td>
-          <td>85%</td>
-        </tr>
-        <tr>
-          <td>PREDICTION</td>
-          <td>MASK</td>
-          <td>12%</td>
-        </tr>
-        <tr>
-          <td>PREDICTION</td>
-          <td>무작위 변경</td>
-          <td>1.5%</td>
-        </tr>
-        <tr>
-          <td>PREDICTION</td>
-          <td>변경하지 않음</td>
-          <td>1.5%</td>
-        </tr>
-      </tbody>
-    </table></div>
-
-    <ul>
-      <li><strong>Bidirection</strong> : 트랜스포머 디코더가 단방향 예측($t-1$ 시점까지 정보를 기반으로 $t$ 시점을 예측)을 수행했던 것과 달리, 버트는 양방향 예측(이전 시점과 이후 시점의 정보를 종합하여 $t$ 시점을 예측)을 수행하므로, 문맥 벡터 생성 시 미래 순번 정보를 모두 마스킹 처리하지 않음</li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>NSP(<code class="language-plaintext highlighter-rouge">N</code>ext <code class="language-plaintext highlighter-rouge">S</code>entence <code class="language-plaintext highlighter-rouge">P</code>rediction)</strong> : <code class="language-plaintext highlighter-rouge">CLS</code> 토큰을 기반으로 두 문장이 연속된 문장인지 아닌지 예측하도록 학습함으로써 문장 간 관계를 학습함</p>
-
-    <p><a href="/_post_refer_img/TextAnalytics/11-06.jpg" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/11-06.jpg" alt="06" width="100%" loading="lazy"></a></p>
-  </li>
-</ul>
-
 <h2 id="word-representation"><span class="me-2">Word Representation</span><a href="#word-representation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
@@ -1290,6 +1226,18 @@
         </tr>
       </tbody>
     </table></div>
+  </li>
+  <li>
+    <p><strong>Each observation can contain up to two sequences</strong></p>
+
+    <blockquote>
+      <p><strong><code class="language-plaintext highlighter-rouge">CLS</code> <code class="language-plaintext highlighter-rouge">my</code> <code class="language-plaintext highlighter-rouge">dog</code> <code class="language-plaintext highlighter-rouge">is</code> <code class="language-plaintext highlighter-rouge">cute</code> <code class="language-plaintext highlighter-rouge">SEP</code> <code class="language-plaintext highlighter-rouge">he</code> <code class="language-plaintext highlighter-rouge">likes</code> <code class="language-plaintext highlighter-rouge">play</code> <code class="language-plaintext highlighter-rouge">##ing</code> <code class="language-plaintext highlighter-rouge">SEP</code></strong></p>
+    </blockquote>
+
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">CLS</code> : 입력 정보를 종합하여 대표하는 벡터</li>
+      <li><code class="language-plaintext highlighter-rouge">SEP</code> : 문장 구분자</li>
+    </ul>
   </li>
   <li><strong>Word-Piece Embedding</strong> : 토큰 임베딩 벡터를 생성함
     <ul>
@@ -1375,6 +1323,58 @@
       <li>$\mathbf{W}^{(k)}_{1} \in \mathbb{R}^{M \times 4d}$ : <strong>Dimension Expansion</strong> to four times the Dimension of the Embedding Vector</li>
       <li>$\mathbf{W}^{(k)}_{2} \in \mathbb{R}^{M \times d}$ : <strong>Dimension Reduction</strong> to Embedding Vector Dimension</li>
     </ul>
+  </li>
+</ul>
+
+<h2 id="pre-training-for-transfer-learning"><span class="me-2">Pre-Training for Transfer Learning</span><a href="#pre-training-for-transfer-learning" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<p><a href="/_post_refer_img/TextAnalytics/11-03.jpg" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/11-03.jpg" alt="03" width="100%" loading="lazy"></a></p>
+
+<ul>
+  <li>
+    <p><strong>MLM(<code class="language-plaintext highlighter-rouge">M</code>asked <code class="language-plaintext highlighter-rouge">L</code>anguage <code class="language-plaintext highlighter-rouge">M</code>odel)</strong> : 입력 문장에서 일부는 <code class="language-plaintext highlighter-rouge">MASK</code> 로 가리고, 일부는 다른 단어로 무작위 변경한 후(10%), 원래 단어를 예측하도록 양방향 학습함으로써 일반화된 언어 패턴을 학습하고 문맥을 이해하는 능력을 강화함</p>
+
+    <div class="table-wrapper"><table>
+      <thead>
+        <tr>
+          <th>역할</th>
+          <th>처리 방법</th>
+          <th>비중</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>CONTEXT</td>
+          <td>변경하지 않음</td>
+          <td>85%</td>
+        </tr>
+        <tr>
+          <td>PREDICTION</td>
+          <td>MASK</td>
+          <td>12%</td>
+        </tr>
+        <tr>
+          <td>PREDICTION</td>
+          <td>무작위 변경</td>
+          <td>1.5%</td>
+        </tr>
+        <tr>
+          <td>PREDICTION</td>
+          <td>변경하지 않음</td>
+          <td>1.5%</td>
+        </tr>
+      </tbody>
+    </table></div>
+
+    <ul>
+      <li><strong>Bidirection</strong> : 트랜스포머 디코더가 단방향 예측($t-1$ 시점까지 정보를 기반으로 $t$ 시점을 예측)을 수행했던 것과 달리, 버트는 양방향 예측(이전 시점과 이후 시점의 정보를 종합하여 $t$ 시점을 예측)을 수행하므로, 문맥 벡터 생성 시 미래 순번 정보를 모두 마스킹 처리하지 않음</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>NSP(<code class="language-plaintext highlighter-rouge">N</code>ext <code class="language-plaintext highlighter-rouge">S</code>entence <code class="language-plaintext highlighter-rouge">P</code>rediction)</strong> : <code class="language-plaintext highlighter-rouge">CLS</code> 토큰을 기반으로 두 문장이 연속된 문장인지 아닌지 예측하도록 학습함으로써 문장 간 관계를 학습함</p>
+
+    <p><a href="/_post_refer_img/TextAnalytics/11-06.jpg" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/11-06.jpg" alt="06" width="100%" loading="lazy"></a></p>
   </li>
 </ul>
 
