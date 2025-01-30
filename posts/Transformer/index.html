@@ -932,6 +932,77 @@
     <!-- combine -->
     
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
 
   
 
@@ -957,6 +1028,17 @@
       
         
         
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
       
 
       
@@ -1167,9 +1249,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1227 words"
+  title="1283 words"
 >
-  <em>6 min</em> read</span>
+  <em>7 min</em> read</span>
 
         </div>
       </div>
@@ -1185,22 +1267,47 @@
     <p><strong>트랜스포머(Transformer)</strong> : 시계열 데이터를 순차 입력 받는 RNN 계열 레이어를 배제하고 어텐션 메커니즘을 전적으로 활용하여 시계열 데이터의 병렬 처리를 도모하는 기계 번역 아키텍처</p>
   </li>
   <li>
-    <p><strong>TOTAL ARCHITECTURE</strong> : SEQ2SEQ 의 ENCODER-DECODER 구조를 따름</p>
+    <p><strong>TOTAL ARCHITECTURE</strong> : SEQ2SEQ 의 <code class="language-plaintext highlighter-rouge">ENCODER</code>-<code class="language-plaintext highlighter-rouge">DECODER</code> 구조를 따름</p>
 
     <p><a href="/_post_refer_img/TextAnalytics/10-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/10-03.png" alt="02" width="100%" loading="lazy"></a></p>
-  </li>
-  <li>
-    <p><strong>CORE TECHS</strong></p>
-
-    <p><a href="/_post_refer_img/TextAnalytics/10-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/10-02.png" alt="03" width="100%" loading="lazy"></a></p>
 
     <ul>
-      <li><strong>Token Embedding</strong> : 입력 문장 내 단어들 각각의 정보를 표현하는 벡터를 생성함</li>
-      <li><strong>Positional Encoding</strong> : 입력 문장 내 단어들의 위치 정보를 표현하는 벡터를 생성함</li>
-      <li><strong>Multi-Head Self Attention @ Encoder</strong> : 인코더에서 입력 문장 내 단어들 간 관계를 학습하여 각 단어가 문장에서 어떤 역할을 하는지를 반영하는 문맥 벡터를 생성함</li>
-      <li><strong>Multi-Head Masked Self Attention @ Decoder</strong> : 디코더에서 출력 문장 내 단어들 간 관계를 학습하여 각 단어의 문맥 벡터를 생성하되, 이전 순번까지의 단어만 참고하도록 마스킹하여 다음 순번에 관한 정보가 유출되는 것을 방지함</li>
-      <li><strong>Multi-Head Cross Attention @ Decoder</strong> : 출력 문장의 각 단어가 인코더의 출력들과 맺는 관계를 학습하여 출력 문장 생성 시 개별 순번마다 입력 문장에서 어떤 부분이 중요한지 반영하는 문맥 벡터를 생성함</li>
+      <li><strong><code class="language-plaintext highlighter-rouge">ENCODER</code></strong> : Natural Language Understanding &amp; Feature Extraction</li>
+      <li><strong><code class="language-plaintext highlighter-rouge">DECODER</code></strong> : Natural Language Generation</li>
     </ul>
+  </li>
+  <li>
+    <p><strong>Transformer Application</strong></p>
+
+    <p><a href="/_post_refer_img/TextAnalytics/10-06.png" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/10-06.png" alt="06" width="100%" loading="lazy"></a></p>
+
+    <ul>
+      <li><strong>BERT(<code class="language-plaintext highlighter-rouge">B</code>idirectional <code class="language-plaintext highlighter-rouge">E</code>ncoder <code class="language-plaintext highlighter-rouge">R</code>epresentations from <code class="language-plaintext highlighter-rouge">T</code>ransformers)</strong> : LLM, Transformer Encoder Application</li>
+      <li><strong>GPT(<code class="language-plaintext highlighter-rouge">G</code>enerative <code class="language-plaintext highlighter-rouge">P</code>re-<code class="language-plaintext highlighter-rouge">T</code>raining)</strong> : GM, Transformer Decoder Application</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="core-techs"><span class="me-2">Core Techs</span><a href="#core-techs" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<p><a href="/_post_refer_img/TextAnalytics/10-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/10-02.png" alt="03" width="100%" loading="lazy"></a></p>
+
+<ul>
+  <li>
+    <p><strong>Token Embedding</strong> : 입력 문장 내 단어들 각각의 정보를 표현하는 벡터를 생성함</p>
+  </li>
+  <li>
+    <p><strong>Positional Encoding</strong> : 입력 문장 내 단어들의 위치 정보를 표현하는 벡터를 생성함</p>
+  </li>
+  <li>
+    <p><strong>Multi-Head Self Attention @ Encoder</strong> : 인코더에서 입력 문장 내 단어들 간 관계를 학습하여 각 단어가 문장에서 어떤 역할을 하는지를 반영하는 문맥 벡터를 생성함</p>
+  </li>
+  <li>
+    <p><strong>Multi-Head Masked Self Attention @ Decoder</strong> : 디코더에서 출력 문장 내 단어들 간 관계를 학습하여 각 단어의 문맥 벡터를 생성하되, 이전 순번까지의 단어만 참고하도록 마스킹하여 다음 순번에 관한 정보가 유출되는 것을 방지함</p>
+  </li>
+  <li>
+    <p><strong>Multi-Head Cross Attention @ Decoder</strong> : 출력 문장의 각 단어가 인코더의 출력들과 맺는 관계를 학습하여 출력 문장 생성 시 개별 순번마다 입력 문장에서 어떤 부분이 중요한지 반영하는 문맥 벡터를 생성함</p>
   </li>
 </ul>
 
@@ -1239,6 +1346,21 @@
 </ul>
 
 <h3 id="positional-encoding-1"><span class="me-2">Positional Encoding</span><a href="#positional-encoding-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+\[\begin{aligned}
+\overrightarrow{\mathbf{e}}_{\text{POS}}
+&amp;=\begin{pmatrix}
+\sin{\frac{POS}{10000^{0}}} \\
+\cos{\frac{POS}{10000^{0}}} \\
+\sin{\frac{POS}{10000^{2/8}}} \\
+\cos{\frac{POS}{10000^{2/8}}} \\
+\sin{\frac{POS}{10000^{4/8}}} \\
+\cos{\frac{POS}{10000^{4/8}}} \\
+\sin{\frac{POS}{10000^{6/8}}} \\
+\cos{\frac{POS}{10000^{6/8}}}
+\end{pmatrix},
+\quad \text{where} \quad d=8
+\end{aligned}\]
 
 <ul>
   <li>
