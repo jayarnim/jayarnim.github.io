@@ -290,6 +290,23 @@
   },
   
   {
+    "title": "Gaussian Process",
+    "url": "/posts/GP/",
+    "categories": "Statistical Techs, Bayesian Modeling",
+    "tags": "Statistics, Bayesian, Nonparametric",
+    "date": "2024-07-22 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "Non-Parametric Estimation      비모수 추정(Non-Parametric Estimation)        커널 밀도 추정(Kernel Density Estimation; KDE)  Stochastic Process  확률적 과정(Stochastic Process)Gaussian Process      가우시안 프로세스(Gauss...",
+    "content": "Non-Parametric Estimation      비모수 추정(Non-Parametric Estimation)        커널 밀도 추정(Kernel Density Estimation; KDE)  Stochastic Process  확률적 과정(Stochastic Process)Gaussian Process      가우시안 프로세스(Gaussian Process; GP)        커널 함수(Kernel Function)  Optimization      MLE(Maximum Liklihood Estimation)        SGP(Sparse Gaussian Process)        SVGP(Sparse Variational Gaussian Process)  Gaussian Process ApplicationGPRGPLVM"
+  },
+  
+  {
     "title": "Bayesian Regression",
     "url": "/posts/Bayesian_Regression/",
     "categories": "Statistical Techs, Bayesian Modeling",
