@@ -1205,9 +1205,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="783 words"
+  title="682 words"
 >
-  <em>4 min</em> read</span>
+  <em>3 min</em> read</span>
 
         </div>
       </div>
@@ -1264,13 +1264,6 @@
 <h2 id="word-representation"><span class="me-2">Word Representation</span><a href="#word-representation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<p><a href="/_post_refer_img/TextAnalytics/11-02.jpg" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/11-02.jpg" alt="02" width="100%" loading="lazy"></a></p>
-
-\[\begin{aligned}
-\overrightarrow{\mathbf{x}}_{i}
-&amp;= \overrightarrow{\mathbf{x}}^{(i)}_{\text{TOKEN}} + \overrightarrow{\mathbf{x}}^{(i)}_{\text{POS}} + \overrightarrow{\mathbf{x}}^{(i)}_{\text{SEG}}
-\end{aligned}\]
-
 <ul>
   <li>
     <p><strong>Unique(or Max) Number of Vector</strong></p>
@@ -1284,7 +1277,7 @@
       </thead>
       <tbody>
         <tr>
-          <td>Tokens</td>
+          <td>Unique Tokens</td>
           <td>30,522</td>
         </tr>
         <tr>
@@ -1310,50 +1303,65 @@
       <li><code class="language-plaintext highlighter-rouge">SEP</code> : 문장 구분자</li>
     </ul>
   </li>
-  <li><strong>Word-Piece Embedding</strong> : 토큰 임베딩 벡터를 생성함
+  <li><strong>Tokenization Method</strong> : Word-Piece Encoding
     <ul>
-      <li><strong>OOV(<code class="language-plaintext highlighter-rouge">O</code>ut <code class="language-plaintext highlighter-rouge">o</code>f <code class="language-plaintext highlighter-rouge">V</code>ocabulary)</strong> : 단어 사전에 존재하는 단어들로 쪼개어 임베딩 벡터를 생성하고, 이때 Sub-Word 는 앞에 <code class="language-plaintext highlighter-rouge">##</code> 을 표기하여 온전한 단어가 아님을 나타냄</li>
-      <li>Here is the sentence I want <strong>embeddings</strong> for. <br /> → [<code class="language-plaintext highlighter-rouge">here</code>, <code class="language-plaintext highlighter-rouge">is</code>, <code class="language-plaintext highlighter-rouge">the</code>, <code class="language-plaintext highlighter-rouge">sentence</code>, <code class="language-plaintext highlighter-rouge">i</code>, <code class="language-plaintext highlighter-rouge">want</code>, <code class="language-plaintext highlighter-rouge">em</code>, <code class="language-plaintext highlighter-rouge">##bed</code>, <code class="language-plaintext highlighter-rouge">##ding</code>, <code class="language-plaintext highlighter-rouge">##s</code>, <code class="language-plaintext highlighter-rouge">for</code>, <code class="language-plaintext highlighter-rouge">.</code>]</li>
-    </ul>
-  </li>
-  <li><strong>Position Embedding</strong> : 토큰의 위치를 표현하는 벡터를 생성함
-    <ul>
-      <li>사전에 정의된 함수에 따라 위치를 표현하는 포지셔널 인코딩(Positional Encoding)과 달리, 학습 가능한 가중치를 사용하여 최적의 위치 정보를 학습함</li>
+      <li>단어 사전에 존재하는 단어들로 쪼개고, 이때 내부 단어(Sub-Word)는 앞에 <code class="language-plaintext highlighter-rouge">##</code> 을 표기하여 온전한 단어가 아님을 나타냄</li>
+      <li>Here is the sentence I want <strong>embeddings</strong> for.</li>
+      <li>[<code class="language-plaintext highlighter-rouge">here</code>, <code class="language-plaintext highlighter-rouge">is</code>, <code class="language-plaintext highlighter-rouge">the</code>, <code class="language-plaintext highlighter-rouge">sentence</code>, <code class="language-plaintext highlighter-rouge">i</code>, <code class="language-plaintext highlighter-rouge">want</code>, <code class="language-plaintext highlighter-rouge">em</code>, <code class="language-plaintext highlighter-rouge">##bed</code>, <code class="language-plaintext highlighter-rouge">##ding</code>, <code class="language-plaintext highlighter-rouge">##s</code>, <code class="language-plaintext highlighter-rouge">for</code>, <code class="language-plaintext highlighter-rouge">.</code>]</li>
     </ul>
   </li>
   <li>
-    <p><strong>Segment Embedding</strong> : 토큰이 소속된 시퀀스 범주를 구분하는 벡터를 생성함</p>
+    <p><strong>Embedding</strong></p>
 
-    <div class="table-wrapper"><table>
-      <thead>
-        <tr>
-          <th>Token</th>
-          <th>Segment Embedding</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">CLS</code></td>
-          <td>First Sequence Vector</td>
-        </tr>
-        <tr>
-          <td>Tokens @ First Sequence</td>
-          <td>First Sequence Vector</td>
-        </tr>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">SEP</code></td>
-          <td>First Sequence Vector</td>
-        </tr>
-        <tr>
-          <td>Tokens @ Second Sequence</td>
-          <td>Second Sequence Vector</td>
-        </tr>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">SEP</code></td>
-          <td>Second Sequence Vector</td>
-        </tr>
-      </tbody>
-    </table></div>
+    <p><a href="/_post_refer_img/TextAnalytics/11-02.jpg" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/11-02.jpg" alt="02" width="100%" loading="lazy"></a></p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{x}}_{i}
+  &amp;= \overrightarrow{\mathbf{x}}^{(i)}_{\text{TOKEN}} + \overrightarrow{\mathbf{x}}^{(i)}_{\text{POS}} + \overrightarrow{\mathbf{x}}^{(i)}_{\text{SEG}}
+  \end{aligned}\]
+
+    <ul>
+      <li>
+        <p>\(\overrightarrow{\mathbf{x}}^{(i)}_{\text{TOKEN}}\) : Token Embedding</p>
+      </li>
+      <li>
+        <p>\(\overrightarrow{\mathbf{x}}^{(i)}_{\text{POS}}\) : Position Embedding, Not Fixed But Learnable</p>
+      </li>
+      <li>
+        <p>\(\overrightarrow{\mathbf{x}}^{(i)}_{\text{SEG}}\) : Segment Embedding</p>
+
+        <div class="table-wrapper"><table>
+          <thead>
+            <tr>
+              <th>Token</th>
+              <th>Segment Embedding</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code class="language-plaintext highlighter-rouge">CLS</code></td>
+              <td>First Sequence Vector</td>
+            </tr>
+            <tr>
+              <td>Tokens @ First Sequence</td>
+              <td>First Sequence Vector</td>
+            </tr>
+            <tr>
+              <td><code class="language-plaintext highlighter-rouge">SEP</code></td>
+              <td>First Sequence Vector</td>
+            </tr>
+            <tr>
+              <td>Tokens @ Second Sequence</td>
+              <td>Second Sequence Vector</td>
+            </tr>
+            <tr>
+              <td><code class="language-plaintext highlighter-rouge">SEP</code></td>
+              <td>Second Sequence Vector</td>
+            </tr>
+          </tbody>
+        </table></div>
+      </li>
+    </ul>
   </li>
 </ul>
 

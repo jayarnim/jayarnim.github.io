@@ -577,6 +577,219 @@
     <!-- combine -->
     
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
 
   
 
@@ -594,6 +807,49 @@
   
   
 
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
   
 
   
@@ -704,9 +960,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="0 words"
+  title="496 words"
 >
-  <em>1 min</em> read</span>
+  <em>2 min</em> read</span>
 
         </div>
       </div>
@@ -714,7 +970,331 @@
   </header>
 
   <div class="content">
-    
+    <h2 id="gpt"><span class="me-2">GPT</span><a href="#gpt" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><strong>지피티(<code class="language-plaintext highlighter-rouge">G</code>enerative <code class="language-plaintext highlighter-rouge">P</code>re-trained <code class="language-plaintext highlighter-rouge">T</code>ransformer; GPT)</strong> : 트랜스포머의 디코더 아키텍처를 기반으로 하여 다양한 텍스트 데이터로 사전 훈련된 자기회귀모형(Auto-Regressive Model)</p>
+
+    <ul>
+      <li>
+        <p><strong>자기회귀모형(<code class="language-plaintext highlighter-rouge">A</code>uto-<code class="language-plaintext highlighter-rouge">R</code>egressive Model; AR)</strong> : 이전 출력값들을 참고하여 다음 출력값을 예측하는 모형</p>
+
+\[\begin{aligned}
+  X_{t}
+  &amp;= \beta + \sum_{i=1}^{p}{\alpha_{i} \cdot X_{t-i}} + \epsilon_{t}
+  \end{aligned}\]
+
+        <ul>
+          <li>\(X_{t}\) : 현재 시점 출력값</li>
+          <li>\(X_{t-i}\) : 이전 시점 출력값</li>
+          <li>\(\alpha_{i}\) : 각 시점에 대한 가중치</li>
+          <li>\(\beta\) : 편향</li>
+          <li>\(\epsilon_{t}\) : 노이즈</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>vs. BERT</strong></p>
+
+    <p><a href="/_post_refer_img/TextAnalytics/12-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/12-01.png" alt="01" width="100%" loading="lazy"></a></p>
+
+    <div class="table-wrapper"><table>
+      <thead>
+        <tr>
+          <th> </th>
+          <th>BERT</th>
+          <th>GPT</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Type</td>
+          <td><code class="language-plaintext highlighter-rouge">M</code>asked <code class="language-plaintext highlighter-rouge">L</code>anguage <code class="language-plaintext highlighter-rouge">M</code>odel</td>
+          <td><code class="language-plaintext highlighter-rouge">A</code>uto-<code class="language-plaintext highlighter-rouge">R</code>egressive Model</td>
+        </tr>
+        <tr>
+          <td>Task</td>
+          <td><code class="language-plaintext highlighter-rouge">N</code>atural <code class="language-plaintext highlighter-rouge">L</code>anguage <code class="language-plaintext highlighter-rouge">U</code>nderstanding</td>
+          <td><code class="language-plaintext highlighter-rouge">N</code>atural <code class="language-plaintext highlighter-rouge">L</code>anguage <code class="language-plaintext highlighter-rouge">G</code>eneration</td>
+        </tr>
+        <tr>
+          <td>Object</td>
+          <td>Predict Masked Word</td>
+          <td>Predict Next Word</td>
+        </tr>
+        <tr>
+          <td>Direction</td>
+          <td>Bidirectional</td>
+          <td>Unidirectional</td>
+        </tr>
+        <tr>
+          <td>Transformer</td>
+          <td>Encoder</td>
+          <td>Decoder</td>
+        </tr>
+      </tbody>
+    </table></div>
+  </li>
+  <li>
+    <p><strong>Version</strong></p>
+
+    <p><a href="/_post_refer_img/TextAnalytics/12-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/12-02.png" alt="02" width="100%" loading="lazy"></a></p>
+
+    <div class="table-wrapper"><table>
+      <thead>
+        <tr>
+          <th> </th>
+          <th>GPT-1</th>
+          <th>GPT-2</th>
+          <th>GPT-3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Year</td>
+          <td>2018</td>
+          <td>2019</td>
+          <td>2020</td>
+        </tr>
+        <tr>
+          <td>Embedding Dimension</td>
+          <td>768</td>
+          <td>1,024</td>
+          <td>12,288</td>
+        </tr>
+        <tr>
+          <td>Decoder Layers</td>
+          <td>12</td>
+          <td>48</td>
+          <td>96</td>
+        </tr>
+        <tr>
+          <td>Attention Heads</td>
+          <td>12</td>
+          <td>16</td>
+          <td>96</td>
+        </tr>
+        <tr>
+          <td>Total Parameters</td>
+          <td>117M</td>
+          <td>1.5B~15B</td>
+          <td>175B</td>
+        </tr>
+        <tr>
+          <td>Traning Data</td>
+          <td>BooksCorpus</td>
+          <td>OpenWebText</td>
+          <td>Common Crawl <br /> WebText2 <br /> Wikipedia <br /> BooksCorpus</td>
+        </tr>
+      </tbody>
+    </table></div>
+  </li>
+</ul>
+
+<h2 id="word-representation"><span class="me-2">Word Representation</span><a href="#word-representation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><strong>Unique(or Max) Number of Vector</strong></p>
+
+    <div class="table-wrapper"><table>
+      <thead>
+        <tr>
+          <th>VECTOR</th>
+          <th>GPT-1</th>
+          <th>GPT-2</th>
+          <th>GPT-3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Unique Tokens</td>
+          <td>40,000</td>
+          <td>50,257</td>
+          <td>50,257</td>
+        </tr>
+        <tr>
+          <td>Max Seq</td>
+          <td>512</td>
+          <td>1,024</td>
+          <td>2,048</td>
+        </tr>
+      </tbody>
+    </table></div>
+  </li>
+  <li><strong>Tokenization Method</strong> : BPE(<code class="language-plaintext highlighter-rouge">B</code>yte-<code class="language-plaintext highlighter-rouge">P</code>air <code class="language-plaintext highlighter-rouge">E</code>ncoding)
+    <ul>
+      <li>
+        <p>단어를 문자(Byte) 단위로 쪼갠 후 가장 많이 등장하는 문자 쌍(Pair)을 병합하는 과정을 반복하여 최종 내부 단어(Sub-Word) 단위 토큰을 생성함</p>
+      </li>
+      <li>
+        <p><strong>Split a Word into Bytes</strong></p>
+
+        <div class="table-wrapper"><table>
+          <thead>
+            <tr>
+              <th>Word</th>
+              <th>Bytes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>low</td>
+              <td>[<code class="language-plaintext highlighter-rouge">l</code>, <code class="language-plaintext highlighter-rouge">o</code>, <code class="language-plaintext highlighter-rouge">w</code>]</td>
+            </tr>
+            <tr>
+              <td>lower</td>
+              <td>[<code class="language-plaintext highlighter-rouge">l</code>, <code class="language-plaintext highlighter-rouge">o</code>, <code class="language-plaintext highlighter-rouge">w</code>, <code class="language-plaintext highlighter-rouge">e</code>, <code class="language-plaintext highlighter-rouge">r</code>]</td>
+            </tr>
+            <tr>
+              <td>newest</td>
+              <td>[<code class="language-plaintext highlighter-rouge">n</code>, <code class="language-plaintext highlighter-rouge">e</code>, <code class="language-plaintext highlighter-rouge">w</code>, <code class="language-plaintext highlighter-rouge">e</code>, <code class="language-plaintext highlighter-rouge">s</code>, <code class="language-plaintext highlighter-rouge">t</code>]</td>
+            </tr>
+            <tr>
+              <td>widest</td>
+              <td>[<code class="language-plaintext highlighter-rouge">w</code>, <code class="language-plaintext highlighter-rouge">i</code>, <code class="language-plaintext highlighter-rouge">d</code>, <code class="language-plaintext highlighter-rouge">e</code>, <code class="language-plaintext highlighter-rouge">s</code>, <code class="language-plaintext highlighter-rouge">t</code>]</td>
+            </tr>
+          </tbody>
+        </table></div>
+      </li>
+      <li>
+        <p><strong>Merge Pairs</strong></p>
+
+        <div class="table-wrapper"><table>
+          <thead>
+            <tr>
+              <th>Pair</th>
+              <th>Count</th>
+              <th>Merge</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>(<code class="language-plaintext highlighter-rouge">l</code>, <code class="language-plaintext highlighter-rouge">o</code>)</td>
+              <td>2</td>
+              <td><code class="language-plaintext highlighter-rouge">lo</code></td>
+            </tr>
+            <tr>
+              <td>(<code class="language-plaintext highlighter-rouge">o</code>, <code class="language-plaintext highlighter-rouge">w</code>)</td>
+              <td>2</td>
+              <td><code class="language-plaintext highlighter-rouge">ow</code></td>
+            </tr>
+            <tr>
+              <td>(<code class="language-plaintext highlighter-rouge">e</code>, <code class="language-plaintext highlighter-rouge">s</code>)</td>
+              <td>2</td>
+              <td><code class="language-plaintext highlighter-rouge">es</code></td>
+            </tr>
+            <tr>
+              <td>(<code class="language-plaintext highlighter-rouge">s</code>, <code class="language-plaintext highlighter-rouge">t</code>)</td>
+              <td>2</td>
+              <td><code class="language-plaintext highlighter-rouge">st</code></td>
+            </tr>
+            <tr>
+              <td>$\vdots$</td>
+              <td>$\vdots$</td>
+              <td>$\vdots$</td>
+            </tr>
+          </tbody>
+        </table></div>
+      </li>
+      <li>
+        <p><strong>Result</strong></p>
+
+        <div class="table-wrapper"><table>
+          <thead>
+            <tr>
+              <th>Word</th>
+              <th>Sub-Word Tokens</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>low</td>
+              <td>[<code class="language-plaintext highlighter-rouge">lo</code>, <code class="language-plaintext highlighter-rouge">w</code>]</td>
+            </tr>
+            <tr>
+              <td>lower</td>
+              <td>[<code class="language-plaintext highlighter-rouge">lo</code>, <code class="language-plaintext highlighter-rouge">w</code>, <code class="language-plaintext highlighter-rouge">er</code>]</td>
+            </tr>
+            <tr>
+              <td>newest</td>
+              <td>[<code class="language-plaintext highlighter-rouge">ne</code>, <code class="language-plaintext highlighter-rouge">w</code>, <code class="language-plaintext highlighter-rouge">est</code>]</td>
+            </tr>
+            <tr>
+              <td>widest</td>
+              <td>[<code class="language-plaintext highlighter-rouge">wi</code>, <code class="language-plaintext highlighter-rouge">d</code>, <code class="language-plaintext highlighter-rouge">est</code>]</td>
+            </tr>
+          </tbody>
+        </table></div>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Embedding</strong></p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{x}}_{i}
+  &amp;= \overrightarrow{\mathbf{x}}^{(i)}_{\text{TOKEN}} + \overrightarrow{\mathbf{x}}^{(i)}_{\text{POS}}
+  \end{aligned}\]
+
+    <ul>
+      <li>
+        <p>\(\overrightarrow{\mathbf{x}}^{(i)}_{\text{TOKEN}}\) : Token Embedding</p>
+      </li>
+      <li>
+        <p>\(\overrightarrow{\mathbf{x}}^{(i)}_{\text{POS}}\) : Position Embedding, Not Fixed But Learnable</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="single-layer"><span class="me-2">Single Layer</span><a href="#single-layer" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<p><a href="/_post_refer_img/TextAnalytics/12-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/TextAnalytics/12-03.png" alt="03" width="100%" loading="lazy"></a></p>
+
+\[\begin{aligned}
+\mathcal{X}^{(0)}
+&amp;=\text{Embeddings}\left(\text{Tokens}\right)\\
+\mathcal{H}^{(k)}
+&amp;=\text{Layer-Norm}\Big[\text{Multi-Head}\left(\mathcal{X}^{(k)};\mathcal{M}\right) + \mathcal{X}^{(k)}\Big]\\
+\mathcal{Y}^{(k)}
+&amp;=\text{Layer-Norm}\Big[\text{FFN}\left(\mathcal{H}^{(k)}\right) + \mathcal{H}^{(k)}\Big]
+\end{aligned}\]
+
+<ul>
+  <li>$\mathcal{X}$ is Input Data of Single Layer, $\mathcal{Y}$ is Output Data of Single Layer
+    <ul>
+      <li>\(\mathcal{X}^{(k+1)}=\mathcal{Y}^{(k)}\) : Input Data of $k+1$ Decoder Layer is Output Data of $k$</li>
+      <li>Input Data of Initial Layer \(\mathcal{X}^{(0)}\) is Sum of Token Embedding &amp; Position Embedding Vector</li>
+      <li>Output Data of Final Layer \(\mathcal{Z}=\mathcal{Y}^{(K)}\) is Output of Decoder Module</li>
+    </ul>
+  </li>
+  <li>
+    <p>\(\text{Multi-Head}\left(\mathcal{X}^{(k)};\mathcal{M}\right)\) : Multi-Head Masked Self Attention</p>
+
+    <ul>
+      <li>$\mathcal{M}$ : Causal Mask(Upper-triangular mask)</li>
+    </ul>
+  </li>
+  <li>
+    <p>\(\text{FFN}\left(\mathcal{H}^{(k)}\right)\) : <code class="language-plaintext highlighter-rouge">F</code>eed-<code class="language-plaintext highlighter-rouge">F</code>orward <code class="language-plaintext highlighter-rouge">N</code>etworks</p>
+
+\[\begin{aligned}
+  \text{FFN}\left(\mathcal{H}^{(k)}\right)
+  &amp;=\mathbf{W}^{(k)}_{2} \cdot \left(\text{ReLU}\left[\mathbf{W}^{(k)}_{1} \cdot \mathcal{H}^{(k)} + \overrightarrow{\mathbf{b}}^{(k)}_{1}\right]\right) + \overrightarrow{\mathbf{b}}^{(k)}_{2}
+  \end{aligned}\]
+
+    <ul>
+      <li>$\mathbf{W}^{(k)}_{1} \in \mathbb{R}^{M \times 4d}$ : <strong>Dimension Expansion</strong> to four times the Dimension of the Embedding Vector</li>
+      <li>$\mathbf{W}^{(k)}_{2} \in \mathbb{R}^{M \times d}$ : <strong>Dimension Reduction</strong> to Embedding Vector Dimension</li>
+    </ul>
+  </li>
+</ul>
 
   </div>
 
@@ -2944,6 +3524,11 @@
               
 
 
+
+  <section id="toc-wrapper" class="d-none ps-0 pe-4">
+    <h2 class="panel-heading ps-3 mb-2">Contents</h2>
+    <nav id="toc"></nav>
+  </section>
 
 
             
@@ -5660,9 +6245,16 @@
 
   
 
+  
+    
+
+    
+
+  
 
 
-  <script src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.11/dayjs.min.js,npm/dayjs@1.11.11/locale/en.min.js,npm/dayjs@1.11.11/plugin/relativeTime.min.js,npm/dayjs@1.11.11/plugin/localizedFormat.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.11/dayjs.min.js,npm/dayjs@1.11.11/locale/en.min.js,npm/dayjs@1.11.11/plugin/relativeTime.min.js,npm/dayjs@1.11.11/plugin/localizedFormat.min.js,npm/tocbot@4.27.20/dist/tocbot.min.js"></script>
 
 
 
