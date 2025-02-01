@@ -158,7 +158,7 @@ $$\begin{aligned}
 \end{aligned}$$
 
 - $\mathcal{X}$ is Input Data of Single Layer, $\mathcal{Y}$ is Output Data of Single Layer
-    - $$\mathcal{X}^{(k+1)}=\mathcal{Y}^{(k)}$$ : Input Data of $k+1$ Encoder Layer is Output Data of $k$
+    - $$\mathcal{X}^{(k+1)}=\mathcal{Y}^{(k)}$$ : Input Data of $k+1$ Decoder Layer is Output Data of $k$
     - Input Data of Initial Layer $$\mathcal{X}^{(0)}$$ is Sum of Token Embedding & Positional Encoding Vector
     - Output Data of Final Layer $$\mathcal{Z}=\mathcal{Y}^{(K)}$$ is Output of Decoder Module
 
