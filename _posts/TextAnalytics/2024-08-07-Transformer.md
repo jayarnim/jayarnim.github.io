@@ -98,7 +98,7 @@ $$\begin{aligned}
     - $d$ : 단어 임베딩 벡터 차원
     - $i=0,1,\cdots,\displaystyle\frac{d}{2}-1$ : 포지셔널 인코딩 벡터의 차원 인덱스
 
-- **PERIODICITY** : 포지셔널 인코딩 벡터는 위치 간 관계(혹은 위치의 변화)를 부드러운(연속적인) 회전 변환 형태로 표현함
+- **PERIODICITY**
 
     ![01](/_post_refer_img/TextAnalytics/10-05.png){: width="100%"}
 
@@ -110,6 +110,7 @@ $$\begin{aligned}
 
     - $$\displaystyle\begin{pmatrix}\cos{\frac{K}{10000^{2i/d}}} & \sin{\frac{K}{10000^{2i/d}}} \\ -\sin{\frac{K}{10000^{2i/d}}} & \cos{\frac{K}{10000^{2i/d}}}\end{pmatrix}$$ : $2 \times 2$ Rotation Matrix
     - 즉, 임베딩 차원 $d=2$ 일 때, 위치가 $K$ 만큼 이동하게 되면 벡터 공간 상에서 특정한 크기 $$\displaystyle\frac{K}{10000^{2i/d}}$$ 만큼의 회전 변환이 이루어짐
+    - 요컨대 포지셔널 인코딩 벡터는 위치 간 관계(혹은 위치의 변화)를 부드러운(연속적인) 회전 변환 형태로 표현함
 
 ## Single Layers
 -----

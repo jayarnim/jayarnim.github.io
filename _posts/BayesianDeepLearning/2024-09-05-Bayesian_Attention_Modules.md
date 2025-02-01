@@ -1,9 +1,9 @@
 ---
-order: 2
+order: 5
 title: Bayesian Attention Modules
 date: 2024-09-05
 categories: [Machine Learning Techs, Bayesian Deep Learning]
-tags: [Deep Learning, Bayesian, Attention Mechanism]
+tags: [Deep Learning, Bayesian, Attention Mechanism, Variational Inference]
 math: true
 description: >-
     <ul type="square">
@@ -13,50 +13,6 @@ description: >-
 image:
     path: /_post_refer_img/BayesianDeepLearning/Thumbnail.jpg
 ---
-
-## Pilot Study; Attention Mechanism
------
-
-- **Attention Mechanism** : 주어진 입력에서 중요한 부분에 선택적으로 집중하기 위하여, 중요도에 따라 정보에 더 많은 확률적 가중치를 할당하는 방법론
-
-- **Composition**
-
-    | 항목 | 예시 | 구성 요소 | 
-    |---|---|---|
-    | 목표 | 사용자가 무엇에서 진정으로 "재미"를 느끼는가? | |
-    | 질문 | 사용자가 정의하는 재미있는 소설 | 사용자의 선호 |
-    | 키 | 소설의 메타 정보 | 장르, 작가, 출판사 등 |
-    | 값 | 소설의 내용 정보 | 줄거리, 내용 전개 방식, 주제 의식 등 |
-
-    - **질문(Query; $$\mathbf{Q}_{M \times d_{K}}$$)** : 특정 정보나 입력에 대해 집중하고자 하는 요소
-    - **키(Key; $$\mathbf{K}_{N \times d_{K}}$$)** : 질문에 대하여 대응되는 입력 정보의 각 요소
-    - **값(Value; $$\mathbf{V}_{M \times D}$$)** : 입력 정보
-
-- **How to Modeling**
-
-    $$\begin{aligned}
-    \text{Attention}\left(\mathbf{Q}, \mathbf{K}, \mathbf{V}\right)
-    &= \underbrace{\text{softmax}\overbrace{\left(\frac{\mathbf{Q} \cdot \mathbf{K}}{\sqrt{d_{K}}}\right)}^{\text{Attention Score}}}_{\text{Attention Weight}} \cdot \mathbf{V}\\
-    &= \mathbf{X}
-    \end{aligned}$$
-
-    - **Attention Score** : $$\mathbf{q}_{i}, \mathbf{k}_{j}$$ 간 유사도를 통해 도출한 질문별 키에 대한 집중 점수
-
-        $$
-        \alpha_{(i,j)} \in \mathcal{A}_{M \times N} = \frac{\mathbf{Q} \cdot \mathbf{K}}{\sqrt{d_{K}}}
-        $$
-
-    - **Attention Weight** : 질문별 키에 대한 집중 점수의 확률화
-
-        $$
-        \omega_{(i,j)} \in \mathcal{W}_{M \times N}=\text{softmax}\left(\mathcal{A}\right)
-        $$
-
-    - $$\mathbf{X}_{M \times D}$$ : 질문 $j=1,2,\cdots,M$ 별 선택적으로 가중된 값의 정보 $d=1,2,\cdots,D$ 집합
-
-        $$
-        \mathbf{X}_{M \times D}=\mathcal{W}_{M \times N} \cdot \mathbf{V}_{N \times D}
-        $$
 
 ## Bayesian Attention Modules
 -----
