@@ -577,6 +577,148 @@
     <!-- combine -->
     
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
 
   
 
@@ -801,9 +943,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="63 words"
+  title="576 words"
 >
-  <em>1 min</em> read</span>
+  <em>3 min</em> read</span>
 
         </div>
       </div>
@@ -816,18 +958,102 @@
 
 <ul>
   <li>
-    <p><strong>비모수 추정(Non-Parametric Estimation)</strong></p>
+    <p><strong>밀도(Density)</strong> : 데이터가 특정 구간에 존재할 확률</p>
   </li>
   <li>
-    <p><strong>커널 밀도 추정(<code class="language-plaintext highlighter-rouge">K</code>ernel <code class="language-plaintext highlighter-rouge">D</code>ensity <code class="language-plaintext highlighter-rouge">E</code>stimation; KDE)</strong></p>
+    <p><strong>모수 추정(Parametric Estimation)</strong> : 데이터가 모수로써 정의되는 특정한 형태로 분포되었다고 가정하고, 소수의 모수를 추정함으로써 데이터 분포를 추정하는 방법</p>
+
+    <ul>
+      <li>
+        <p><strong><code class="language-plaintext highlighter-rouge">EXAMPLE</code> Probability Density Estimation</strong> <br /> 확률변수 $X$ 는 평균을 $\mu$, 분산을 $\sigma^{2}$ 으로 하는 가우시안 분포에 따라 분포되어 있음</p>
+
+\[\begin{aligned}
+  X \sim \mathcal{N}\left(\mu, \sigma^{2}\right)
+  \end{aligned}\]
+      </li>
+      <li>
+        <p><strong><code class="language-plaintext highlighter-rouge">EXAMPLE</code> Regression Analysis</strong> <br /> 한국인 남성의 키($Y$)는 몸무게($X$)와 선형 관계에 있음</p>
+
+\[\begin{aligned}
+  Y = \alpha \cdot X + \beta
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>비모수 추정(Non-Parametric Estimation)</strong> : 데이터가 특정한 형태로 분포되었다고 가정하지 않고, 주어진 데이터를 토대로 직접 추정하는 방법</p>
+
+    <div class="table-wrapper"><table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Desc</th>
+          <th>Method</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Histogram <br /> Density Estimation</td>
+          <td>데이터 범위를 여러 개의 구간(Bin)으로 나누고, <br /> 각 구간의 데이터를 세어서 확률 밀도를 추정하는 방법</td>
+          <td>Count <br /> Bin</td>
+        </tr>
+        <tr>
+          <td>Kernel <br /> Density Estimation</td>
+          <td>각 데이터 주변에서 작은 확률 분포(커널)를 만든 후, <br /> 이를 합산하여 전체 밀도를 추정하는 방법</td>
+          <td>Kernel <br /> Bandwidth</td>
+        </tr>
+        <tr>
+          <td>k-Nearest Neighbors <br /> Density Estimation</td>
+          <td>거리 기반 밀도 추정 방법</td>
+          <td>Distance <br /> k</td>
+        </tr>
+        <tr>
+          <td>Maximum Entropy <br /> Density Estimation</td>
+          <td>엔트로피를 최대화하는 확률 밀도 함수를 찾는 방법</td>
+          <td>Entropy <br /> Lagrangian</td>
+        </tr>
+        <tr>
+          <td>Regression-Based <br /> Density Estimation</td>
+          <td>밀도를 직접 모델링하지 않고, <br /> 데이터 분포를 회귀 모형으로 근사하는 방법</td>
+          <td>MLP</td>
+        </tr>
+      </tbody>
+    </table></div>
   </li>
 </ul>
 
-<h2 id="stochastic-process"><span class="me-2">Stochastic Process</span><a href="#stochastic-process" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="kde"><span class="me-2">KDE</span><a href="#kde" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
-  <li><strong>확률적 과정(Stochastic Process)</strong></li>
+  <li>
+    <p><strong>커널 밀도 추정(<code class="language-plaintext highlighter-rouge">K</code>ernel <code class="language-plaintext highlighter-rouge">D</code>ensity <code class="language-plaintext highlighter-rouge">E</code>stimation; KDE)</strong> : 각 데이터 주변에서 작은 확률 분포(커널)를 만든 후, 이를 합산하여 전체 밀도를 추정하는 방법</p>
+
+    <p><a href="/_post_refer_img/BayesianModeling/08-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/08-02.png" alt="02" width="100%" loading="lazy"></a></p>
+  </li>
+  <li>
+    <p><strong>확률 밀도 함수(Probability Density Function)</strong></p>
+
+\[\begin{aligned}
+  f(x)
+  &amp;= \frac{1}{h} \cdot \frac{1}{n} \cdot \sum_{i=1}^{n}{\mathcal{K}\left(\frac{x-x_{i}}{h}\right)}
+  \end{aligned}\]
+
+    <ul>
+      <li>$n$ : 데이터 포인트 갯수</li>
+      <li>$x_{i}$ : 개별 데이터 포인트</li>
+      <li>$h$ : 밴드위스(Bandwidth)</li>
+      <li>$\mathcal{K}\left(\cdot\right)$ : 커널 함수(Kernel Function)</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>밴드위스(Bandwidth)</strong> : 커널의 너비를 조절하는 하이퍼파라미터로서, 값이 클수록 전역적 패턴을, 작을수록 국소적 패턴을 포착함</p>
+
+    <p><a href="/_post_refer_img/BayesianModeling/08-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/08-01.png" alt="01" width="100%" loading="lazy"></a></p>
+  </li>
+  <li>
+    <p><strong>커널 함수(Kernel Function)</strong> :</p>
+  </li>
 </ul>
 
 <h2 id="gaussian-process"><span class="me-2">Gaussian Process</span><a href="#gaussian-process" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
@@ -835,10 +1061,10 @@
 
 <ul>
   <li>
-    <p><strong>가우시안 프로세스(<code class="language-plaintext highlighter-rouge">G</code>aussian <code class="language-plaintext highlighter-rouge">P</code>rocess; GP)</strong></p>
+    <p><strong>확률적 과정(Stochastic Process)</strong></p>
   </li>
   <li>
-    <p><strong>커널 함수(Kernel Function)</strong></p>
+    <p><strong>가우시안 프로세스(<code class="language-plaintext highlighter-rouge">G</code>aussian <code class="language-plaintext highlighter-rouge">P</code>rocess; GP)</strong></p>
   </li>
 </ul>
 
@@ -1481,11 +1707,6 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -1519,126 +1740,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1793,60 +1894,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
+      
     
   
     
@@ -2207,6 +2255,245 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2419,94 +2706,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2816,11 +3015,6 @@
         
         
 
-  
-    
-    
-    
-    
   
     
     
@@ -3051,6 +3245,9 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
       
         
@@ -3061,9 +3258,6 @@
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/text-mining/">Text Mining</a>
@@ -3121,6 +3315,42 @@
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -4114,11 +4344,6 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -4152,126 +4377,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -4426,60 +4531,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
+      
     
   
     
@@ -4840,6 +4892,245 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -5052,94 +5343,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
   
     
     
@@ -5449,11 +5652,6 @@
         
         
 
-  
-    
-    
-    
-    
   
     
     
@@ -5684,6 +5882,9 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
       
         
@@ -5694,9 +5895,6 @@
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/text-mining/">Text Mining</a>

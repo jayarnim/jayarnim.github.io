@@ -646,17 +646,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -801,9 +790,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1110 words"
+  title="785 words"
 >
-  <em>6 min</em> read</span>
+  <em>4 min</em> read</span>
 
         </div>
       </div>
@@ -811,84 +800,7 @@
   </header>
 
   <div class="content">
-    <h2 id="pilot-study-attention-mechanism"><span class="me-2">Pilot Study; Attention Mechanism</span><a href="#pilot-study-attention-mechanism" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<ul>
-  <li>
-    <p><strong>Attention Mechanism</strong> : 주어진 입력에서 중요한 부분에 선택적으로 집중하기 위하여, 중요도에 따라 정보에 더 많은 확률적 가중치를 할당하는 방법론</p>
-  </li>
-  <li>
-    <p><strong>Composition</strong></p>
-
-    <div class="table-wrapper"><table>
-      <thead>
-        <tr>
-          <th>항목</th>
-          <th>예시</th>
-          <th>구성 요소</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>목표</td>
-          <td>사용자가 무엇에서 진정으로 “재미”를 느끼는가?</td>
-          <td> </td>
-        </tr>
-        <tr>
-          <td>질문</td>
-          <td>사용자가 정의하는 재미있는 소설</td>
-          <td>사용자의 선호</td>
-        </tr>
-        <tr>
-          <td>키</td>
-          <td>소설의 메타 정보</td>
-          <td>장르, 작가, 출판사 등</td>
-        </tr>
-        <tr>
-          <td>값</td>
-          <td>소설의 내용 정보</td>
-          <td>줄거리, 내용 전개 방식, 주제 의식 등</td>
-        </tr>
-      </tbody>
-    </table></div>
-
-    <ul>
-      <li><strong>질문(Query; \(\mathbf{Q}_{M \times d_{K}}\))</strong> : 특정 정보나 입력에 대해 집중하고자 하는 요소</li>
-      <li><strong>키(Key; \(\mathbf{K}_{N \times d_{K}}\))</strong> : 질문에 대하여 대응되는 입력 정보의 각 요소</li>
-      <li><strong>값(Value; \(\mathbf{V}_{M \times D}\))</strong> : 입력 정보</li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>How to Modeling</strong></p>
-
-\[\begin{aligned}
-  \text{Attention}\left(\mathbf{Q}, \mathbf{K}, \mathbf{V}\right)
-  &amp;= \underbrace{\text{softmax}\overbrace{\left(\frac{\mathbf{Q} \cdot \mathbf{K}}{\sqrt{d_{K}}}\right)}^{\text{Attention Score}}}_{\text{Attention Weight}} \cdot \mathbf{V}\\
-  &amp;= \mathbf{X}
-  \end{aligned}\]
-
-    <ul>
-      <li>
-        <p><strong>Attention Score</strong> : \(\mathbf{q}_{i}, \mathbf{k}_{j}\) 간 유사도를 통해 도출한 질문별 키에 대한 집중 점수</p>
-
-\[\alpha_{(i,j)} \in \mathcal{A}_{M \times N} = \frac{\mathbf{Q} \cdot \mathbf{K}}{\sqrt{d_{K}}}\]
-      </li>
-      <li>
-        <p><strong>Attention Weight</strong> : 질문별 키에 대한 집중 점수의 확률화</p>
-
-\[\omega_{(i,j)} \in \mathcal{W}_{M \times N}=\text{softmax}\left(\mathcal{A}\right)\]
-      </li>
-      <li>
-        <p>\(\mathbf{X}_{M \times D}\) : 질문 $j=1,2,\cdots,M$ 별 선택적으로 가중된 값의 정보 $d=1,2,\cdots,D$ 집합</p>
-
-\[\mathbf{X}_{M \times D}=\mathcal{W}_{M \times N} \cdot \mathbf{V}_{N \times D}\]
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="bayesian-attention-modules"><span class="me-2">Bayesian Attention Modules</span><a href="#bayesian-attention-modules" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="bayesian-attention-modules"><span class="me-2">Bayesian Attention Modules</span><a href="#bayesian-attention-modules" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
@@ -1104,6 +1016,11 @@
             href="/tags/attention-mechanism/"
             class="post-tag no-text-decoration"
           >Attention Mechanism</a>
+        
+          <a
+            href="/tags/variational-inference/"
+            class="post-tag no-text-decoration"
+          >Variational Inference</a>
         
       </div>
     
@@ -1689,11 +1606,6 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -1727,126 +1639,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2001,60 +1793,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
+      
     
   
     
@@ -2415,6 +2154,245 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2627,94 +2605,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3024,11 +2914,6 @@
         
         
 
-  
-    
-    
-    
-    
   
     
     
@@ -3259,6 +3144,9 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
       
         
@@ -3269,9 +3157,6 @@
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/text-mining/">Text Mining</a>
@@ -3825,6 +3710,54 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
 
 
@@ -3841,6 +3774,62 @@
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
+          <a href="/posts/SVGD/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1718204400"
+  data-df="ll"
+  
+>
+  Jun 13, 2024
+</time>
+
+              <h4 class="pt-0 my-2">Stein Variational Gradient Descent</h4>
+              <div class="text-muted">
+                <p>&lt;ul type=&quot;square&quot;&gt; &lt;li&gt;&lt;strong&gt;Title&lt;/strong&gt;: &lt;a href=&quot; https://doi.org/10.48550/arXiv.1608.04471&quot;&gt;&lt;code&gt;Stein Variational Gradient Descent: A General Purpose Bayesian Inference Algorithm&lt;/code&gt;&lt;/...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/MC_Dropout/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1718118000"
+  data-df="ll"
+  
+>
+  Jun 12, 2024
+</time>
+
+              <h4 class="pt-0 my-2">MC Dropout</h4>
+              <div class="text-muted">
+                <p>&lt;ul type=&quot;square&quot;&gt; &lt;li&gt;&lt;strong&gt;Title&lt;/strong&gt;: &lt;a href=&quot; https://doi.org/10.48550/arXiv.1506.02142&quot;&gt;&lt;code&gt;Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning&lt;/code&gt;...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
           <a href="/posts/BBB/" class="post-preview card h-100">
             <div class="card-body">
               <!--
@@ -3853,72 +3842,16 @@
 
 <time
   
-  data-ts="1718722800"
+  data-ts="1718031600"
   data-df="ll"
   
 >
-  Jun 19, 2024
+  Jun 11, 2024
 </time>
 
               <h4 class="pt-0 my-2">Bayes by Backprop</h4>
               <div class="text-muted">
                 <p>&lt;ul type=&quot;square&quot;&gt; &lt;li&gt;&lt;strong&gt;Title&lt;/strong&gt;: &lt;a href=&quot;https://proceedings.mlr.press/v37/blundell15&quot;&gt;&lt;code&gt;Weight Uncertainty in Neural Networks&lt;/code&gt;&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Published&lt;/strong&gt;: &lt;em...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/DACR/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1724770800"
-  data-df="ll"
-  
->
-  Aug 28, 2024
-</time>
-
-              <h4 class="pt-0 my-2">DACR</h4>
-              <div class="text-muted">
-                <p>&lt;ul type=&quot;square&quot;&gt; &lt;li&gt;&lt;strong&gt;Title&lt;/strong&gt;: &lt;a href=&quot;https://doi.org/10.3390/app122010594&quot;&gt;&lt;code&gt;Deep Collaborative Recommendation Algorithm Based on Attention Mechanism&lt;/code&gt;&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;str...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/FAWMF/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1723561200"
-  data-df="ll"
-  
->
-  Aug 14, 2024
-</time>
-
-              <h4 class="pt-0 my-2">FAWMF</h4>
-              <div class="text-muted">
-                <p>&lt;ul type=&quot;square&quot;&gt; &lt;li&gt;&lt;strong&gt;Title&lt;/strong&gt;: &lt;a href=&quot;https://doi.org/10.1609/aaai.v34i04.5751&quot;&gt;&lt;code&gt;Fast Adaptively Weighted Matrix Factorization for Recommendation with Implicit Feedback&lt;/code...</p>
               </div>
             </div>
           </a>
@@ -4450,11 +4383,6 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -4488,126 +4416,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -4762,60 +4570,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
+      
     
   
     
@@ -5176,6 +4931,245 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -5388,94 +5382,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
   
     
     
@@ -5785,11 +5691,6 @@
         
         
 
-  
-    
-    
-    
-    
   
     
     
@@ -6020,6 +5921,9 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
       
         
@@ -6030,9 +5934,6 @@
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/text-mining/">Text Mining</a>
