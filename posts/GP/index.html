@@ -788,17 +788,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -814,6 +803,28 @@
       
         
         
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
       
 
       
@@ -943,9 +954,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="576 words"
+  title="1180 words"
 >
-  <em>3 min</em> read</span>
+  <em>6 min</em> read</span>
 
         </div>
       </div>
@@ -953,8 +964,108 @@
   </header>
 
   <div class="content">
-    <h2 id="non-parametric-estimation"><span class="me-2">Non-Parametric Estimation</span><a href="#non-parametric-estimation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="stochastic-process"><span class="me-2">Stochastic Process</span><a href="#stochastic-process" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
+
+<ul>
+  <li>
+    <p><strong>확률적 과정(Stochastic Process)</strong></p>
+
+    <blockquote>
+      <p>어떤 시점 혹은 위치 지표 $t$ 에 대하여 확률변수들의 집합 \(\{X_{t} \mid t \in T\}\) 이 주어졌을 때 이를 확률적 과정이라고 한다. 즉, 확률적 과정은 시간 또는 공간을 따라 변화하는 확률변수들의 집합으로서, 특정한 시점 또는 위치에서 확률변수가 결정된다. 이때 시간 또는 공간을 따라 확률변수가 변하는 양상은 특정한 확률적 패턴을 가질 수 있다.</p>
+    </blockquote>
+  </li>
+  <li>
+    <p><strong>vs. Deterministic</strong></p>
+
+    <ul>
+      <li>
+        <p><strong>결정론적 과정(Deterministic Process)</strong> : 시스템의 상태가 주어지면 미래 상태가 항상 유일하게 결정되므로 동일한 초기 조건에서는 항상 동일한 경로(Trajectory)가 생성됨</p>
+
+        <ul>
+          <li>
+            <p><strong><code class="language-plaintext highlighter-rouge">EXAMPLE</code> Deterministic Auto-Regressive Model</strong></p>
+
+\[\begin{aligned}
+  X_{t}
+  &amp;= \beta + \sum_{i=1}^{p}{\alpha_{i} \cdot X_{t-i}}
+  \end{aligned}\]
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>확률적 과정(Stochastic Process)</strong> : 초기 조건이 동일하더라도 매 실행(Realization)마다 다른 경로(Trajectory)가 생성될 수 있음</p>
+
+        <ul>
+          <li>
+            <p><strong><code class="language-plaintext highlighter-rouge">EXAMPLE</code> Auto-Regressive Model</strong> | Stochastic Error</p>
+
+\[\begin{aligned}
+  X_{t} = \beta + \sum_{i=1}^{p}{\alpha_{i} \cdot X_{t-i}} + \epsilon_{t}, \quad \epsilon_{t} \sim \mathcal{N}\left(0, \sigma^{2}\right)
+  \end{aligned}\]
+          </li>
+          <li>
+            <p><strong><code class="language-plaintext highlighter-rouge">EXAMPLE</code> Auto-Regressive Model</strong> | Stochastic Initial Variable</p>
+
+\[\begin{aligned}
+  X_{t} = \beta + \sum_{i=1}^{p}{\alpha_{i} \cdot X_{t-i}}, \quad X_{0} \sim \mathcal{N}\left(\mu, \sigma^{2}\right)
+  \end{aligned}\]
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Stochastic Patterns</strong></p>
+
+    <ul>
+      <li>
+        <p><strong>독립 확률 과정(Independent Stochastic Process)</strong> : 각 포인트에서의 확률변수 $X_{t}$ 가 서로 독립인 확률 과정</p>
+
+\[\begin{aligned}
+  P\left(X_{t} \mid X_{t-1}, X_{t-2}, \cdots, X_{0}\right) = P\left(X_{t}\right)
+  \end{aligned}\]
+      </li>
+      <li>
+        <p><strong>마코프 과정(Markov Process)</strong> : 현재 상태 $X_{t}$ 가 주어졌을 때, 미래 상태 $X_{t+1}$ 는 과거 상태들과 독립이고 오직 현재 상태에만 의존하는 과정</p>
+
+\[\begin{aligned}
+  P\left(X_{t+1} \mid X_{t}, X_{t-1}, X_{t-2}, \cdots, X_{0}\right) = P\left(X_{t+1} \mid X_{t}\right)
+  \end{aligned}\]
+      </li>
+      <li>
+        <p><strong>정상 과정(Stationary Process)</strong> : 시간 혹은 공간에 따라 확률적으로 변화하는 패턴이 일정한 성질을 유지하는 과정</p>
+
+\[\begin{aligned}
+  X_{t} = \alpha \cdot X_{t-1} + \epsilon_{t}, \quad \epsilon_{t} \sim \mathcal{N}\left(0, \sigma^{2}\right)
+  \end{aligned}\]
+
+        <ul>
+          <li>
+            <p>확률변수 \(X_{t}\) 의 기대값이 일정함</p>
+
+\[\text{E}\left[X_{t^{\forall}}\right]=\mu\]
+          </li>
+          <li>
+            <p>확률변수 \(X_{t}\) 의 변동성이 일정함</p>
+
+\[\text{Var}\left[X_{t^{\forall}}\right]=\text{E}\left[\left(X_{t^{\forall}}-\mu\right)\right]=\sigma^{2}\]
+          </li>
+          <li>
+            <p>$X_{t}$ 와 $X_{t+h}$ 의 관계가 시점 $t$ 자체가 아니라 시간 차이 $h$ 에만 의존함</p>
+
+\[\text{Cov}\left[X_{t},X_{t+h}\right]=\text{E}\left[\left(X_{t}-\mu\right)\left(X_{t+h}-\mu\right)\right]=\gamma\left(h\right)\]
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="non-parametric-density-estimation"><span class="me-2">Non-Parametric Density Estimation</span><a href="#non-parametric-density-estimation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<h3 id="non-parametric-method"><span class="me-2">Non-Parametric Method</span><a href="#non-parametric-method" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
@@ -982,52 +1093,21 @@
   </li>
   <li>
     <p><strong>비모수 추정(Non-Parametric Estimation)</strong> : 데이터가 특정한 형태로 분포되었다고 가정하지 않고, 주어진 데이터를 토대로 직접 추정하는 방법</p>
-
-    <div class="table-wrapper"><table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Desc</th>
-          <th>Method</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Histogram <br /> Density Estimation</td>
-          <td>데이터 범위를 여러 개의 구간(Bin)으로 나누고, <br /> 각 구간의 데이터를 세어서 확률 밀도를 추정하는 방법</td>
-          <td>Count <br /> Bin</td>
-        </tr>
-        <tr>
-          <td>Kernel <br /> Density Estimation</td>
-          <td>각 데이터 주변에서 작은 확률 분포(커널)를 만든 후, <br /> 이를 합산하여 전체 밀도를 추정하는 방법</td>
-          <td>Kernel <br /> Bandwidth</td>
-        </tr>
-        <tr>
-          <td>k-Nearest Neighbors <br /> Density Estimation</td>
-          <td>거리 기반 밀도 추정 방법</td>
-          <td>Distance <br /> k</td>
-        </tr>
-        <tr>
-          <td>Maximum Entropy <br /> Density Estimation</td>
-          <td>엔트로피를 최대화하는 확률 밀도 함수를 찾는 방법</td>
-          <td>Entropy <br /> Lagrangian</td>
-        </tr>
-        <tr>
-          <td>Regression-Based <br /> Density Estimation</td>
-          <td>밀도를 직접 모델링하지 않고, <br /> 데이터 분포를 회귀 모형으로 근사하는 방법</td>
-          <td>MLP</td>
-        </tr>
-      </tbody>
-    </table></div>
+    <ul>
+      <li>Histogram Density Estimation</li>
+      <li><strong>Kernel Density Estimation</strong></li>
+      <li>k-Nearest Neighbors Density Estimation</li>
+      <li>Maximum Entropy Density Estimation</li>
+      <li>Regression-Based Density Estimation</li>
+    </ul>
   </li>
 </ul>
 
-<h2 id="kde"><span class="me-2">KDE</span><a href="#kde" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
+<h3 id="kde"><span class="me-2">KDE</span><a href="#kde" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
-    <p><strong>커널 밀도 추정(<code class="language-plaintext highlighter-rouge">K</code>ernel <code class="language-plaintext highlighter-rouge">D</code>ensity <code class="language-plaintext highlighter-rouge">E</code>stimation; KDE)</strong> : 각 데이터 주변에서 작은 확률 분포(커널)를 만든 후, 이를 합산하여 전체 밀도를 추정하는 방법</p>
+    <p><strong>커널 밀도 추정(<code class="language-plaintext highlighter-rouge">K</code>ernel <code class="language-plaintext highlighter-rouge">D</code>ensity <code class="language-plaintext highlighter-rouge">E</code>stimation; KDE)</strong> : 각 데이터 주변에서 작은 확률 분포(Kernel)를 만든 후, 이를 합산하여 전체 밀도를 추정하는 방법</p>
 
     <p><a href="/_post_refer_img/BayesianModeling/08-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/08-02.png" alt="02" width="100%" loading="lazy"></a></p>
   </li>
@@ -1052,7 +1132,42 @@
     <p><a href="/_post_refer_img/BayesianModeling/08-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/08-01.png" alt="01" width="100%" loading="lazy"></a></p>
   </li>
   <li>
-    <p><strong>커널 함수(Kernel Function)</strong> :</p>
+    <p><strong>커널 함수(Kernel Function)</strong> : 특정 데이터 포인트 주변의 밀도를 조절하는 함수</p>
+
+    <div class="table-wrapper"><table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Function</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Gaussian</td>
+          <td>\(\mathcal{K}(u) = \displaystyle\frac{1}{\sqrt{2\pi}} \exp\left(-\displaystyle\frac{u^2}{2}\right)\)</td>
+        </tr>
+        <tr>
+          <td>Epanechnikov</td>
+          <td>\(\begin{aligned}\mathcal{K}(u)=\begin{cases}\displaystyle\frac{3}{4}(1-u^{2}), \quad &amp;\text{if} \quad \vert u \vert \le 1 \\0, \quad &amp;\text{otherwise}\end{cases}\end{aligned}\)</td>
+        </tr>
+        <tr>
+          <td>Tophat</td>
+          <td>\(\begin{aligned}\mathcal{K}(u) = \begin{cases}\displaystyle\frac{1}{2}, \quad &amp; \text{if} \quad \vert u \vert \le 1 \\0, \quad &amp; \text{otherwise}\end{cases}\end{aligned}\)</td>
+        </tr>
+        <tr>
+          <td>Logistic</td>
+          <td>\(\mathcal{K}(u) = \displaystyle\frac{1}{e^{u} + e^{-u} + 2}\)</td>
+        </tr>
+        <tr>
+          <td>Silverman</td>
+          <td>\(\mathcal{K}(u) = \displaystyle\frac{1}{2} \cdot \exp\left(-\displaystyle\frac{\vert u \vert}{\sqrt{2}}\right) \cdot \cos\left(\displaystyle\frac{\vert u \vert}{\sqrt{2}}\right)\)</td>
+        </tr>
+        <tr>
+          <td>Laplacian</td>
+          <td>\(\mathcal{K}(u) = \displaystyle\frac{1}{2} \cdot \exp(-\vert u \vert)\)</td>
+        </tr>
+      </tbody>
+    </table></div>
   </li>
 </ul>
 
@@ -1061,17 +1176,70 @@
 
 <ul>
   <li>
-    <p><strong>확률적 과정(Stochastic Process)</strong></p>
+    <p><strong>다변량 가우시안 분포(Multi-Variate Gaussian Distribution)</strong></p>
   </li>
   <li>
     <p><strong>가우시안 프로세스(<code class="language-plaintext highlighter-rouge">G</code>aussian <code class="language-plaintext highlighter-rouge">P</code>rocess; GP)</strong></p>
   </li>
-</ul>
+  <li>
+    <p><strong>커널 함수(Kernel Function)</strong> : 두 입력 벡터를 선형적으로 표현 가능한 고차원 공간에 매핑하고 그 유사도를 측정함</p>
 
-<h2 id="optimization"><span class="me-2">Optimization</span><a href="#optimization" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
+    <div class="table-wrapper"><table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Function</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Linear</td>
+          <td>\(\mathcal{K}\left(\overrightarrow{\mathbf{x}},\overrightarrow{\mathbf{y}}\right) = \overrightarrow{\mathbf{x}}^{T}\overrightarrow{\mathbf{y}}\)</td>
+        </tr>
+        <tr>
+          <td>Polynomial</td>
+          <td>\(\mathcal{K}\left(\overrightarrow{\mathbf{x}},\overrightarrow{\mathbf{y}}\right) = \left(\overrightarrow{\mathbf{x}}^{T}\overrightarrow{\mathbf{y}} + \beta\right)^{d}\)</td>
+        </tr>
+        <tr>
+          <td>RBF</td>
+          <td>\(\mathcal{K}\left(\overrightarrow{\mathbf{x}},\overrightarrow{\mathbf{y}}\right) = \exp{\left[-\displaystyle\frac{\Vert \overrightarrow{\mathbf{x}} - \overrightarrow{\mathbf{y}}\Vert^{2}}{2\sigma^{2}}\right]}\)</td>
+        </tr>
+        <tr>
+          <td>Sigmoid</td>
+          <td>\(\mathcal{K}\left(\overrightarrow{\mathbf{x}},\overrightarrow{\mathbf{y}}\right) = \text{tanh}\left(\alpha \cdot \overrightarrow{\mathbf{x}}^{T}\overrightarrow{\mathbf{y}} + \beta\right)\)</td>
+        </tr>
+        <tr>
+          <td>Laplacian</td>
+          <td>\(\mathcal{K}\left(\overrightarrow{\mathbf{x}},\overrightarrow{\mathbf{y}}\right) = \exp{\left[-\gamma \Vert \overrightarrow{\mathbf{x}} - \overrightarrow{\mathbf{y}} \Vert_{1}\right]}\)</td>
+        </tr>
+        <tr>
+          <td>Exponential</td>
+          <td>\(\mathcal{K}\left(\overrightarrow{\mathbf{x}},\overrightarrow{\mathbf{y}}\right) = \exp{\left[-\gamma \Vert \overrightarrow{\mathbf{x}} - \overrightarrow{\mathbf{y}} \Vert^{2}_{2}\right]}\)</td>
+        </tr>
+        <tr>
+          <td>Martern</td>
+          <td>\(\mathcal{K}\left(\overrightarrow{\mathbf{x}},\overrightarrow{\mathbf{y}}\right) = \displaystyle\frac{2^{1-\nu}}{\Gamma\left(\nu\right)} \cdot \left(\displaystyle\frac{\sqrt{2\nu} \Vert \overrightarrow{\mathbf{x}} - \overrightarrow{\mathbf{y}} \Vert}{\ell}\right)^{\nu} \cdot K_{\nu}\left(\displaystyle\frac{\sqrt{2\nu} \Vert \overrightarrow{\mathbf{x}} - \overrightarrow{\mathbf{y}} \Vert}{\ell}\right)\)</td>
+        </tr>
+        <tr>
+          <td>Periodic</td>
+          <td>\(\mathcal{K}\left(\overrightarrow{\mathbf{x}},\overrightarrow{\mathbf{y}}\right) = \exp\left[-2 \sin^2\left( \displaystyle\frac{\pi \vert \overrightarrow{\mathbf{x}}-\overrightarrow{\mathbf{y}} \vert}{p} \right) \Bigg/ \ell^2 \right]\)</td>
+        </tr>
+        <tr>
+          <td>Rational Quadratic</td>
+          <td>\(\mathcal{K}\left(\overrightarrow{\mathbf{x}},\overrightarrow{\mathbf{y}}\right) = \left( 1 + \displaystyle\frac{\vert \overrightarrow{\mathbf{x}} - \overrightarrow{\mathbf{y}}\vert^2}{2 \alpha \ell^2} \right)^{-\alpha}\)</td>
+        </tr>
+      </tbody>
+    </table></div>
 
-<ul>
+    <ul>
+      <li>
+        <p><strong>대칭성(Symmetry)</strong> : \(\mathcal{K}\left(x,x^{\prime}\right)=\mathcal{K}\left(x^{\prime},x\right)\)</p>
+      </li>
+      <li>
+        <p><strong>양의 반정치성(Positive Semi-Definiteness, PSD)</strong> : \(\sum_{i}\sum_{j}{\alpha_{i} \cdot \alpha_{j} \cdot \mathcal{K}\left(x_{i},x_{j}\right)} \ge 0\)</p>
+      </li>
+    </ul>
+  </li>
   <li>
     <p><strong>MLE(<code class="language-plaintext highlighter-rouge">M</code>aximum <code class="language-plaintext highlighter-rouge">L</code>iklihood <code class="language-plaintext highlighter-rouge">E</code>stimation)</strong></p>
   </li>
@@ -1119,9 +1287,14 @@
           >Bayesian</a>
         
           <a
-            href="/tags/nonparametric/"
+            href="/tags/stochastic-process/"
             class="post-tag no-text-decoration"
-          >Nonparametric</a>
+          >Stochastic Process</a>
+        
+          <a
+            href="/tags/nonparametric-estimation/"
+            class="post-tag no-text-decoration"
+          >Nonparametric Estimation</a>
         
       </div>
     
@@ -2675,6 +2848,11 @@
     
     
       
+    
+  
+    
+    
+    
     
   
     
@@ -5312,6 +5490,11 @@
     
     
       
+    
+  
+    
+    
+    
     
   
     
