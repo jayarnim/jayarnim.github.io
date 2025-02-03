@@ -8,8 +8,12 @@ Hi there! I'm dreaming of becoming a Data Scientist, **specializing in Recommend
 
 ## Research Interest
 ------
-- Recommender System
-- Bayesian Modeling
+- [x] AI Application
+- [x] Data Mining
+- [x] Information Uncertainty
+- [x] Bayesian Deep Learning
+- [ ] Graph Deep Learning
+- [x] Recommender System
 
 ## Degree
 ------
