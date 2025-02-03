@@ -8,19 +8,22 @@ Hi there! I'm dreaming of becoming a Data Scientist, **specializing in Recommend
 
 ## Research Interest
 ------
-- [x] AI Application
-- [x] Data Mining
-- [x] Information Uncertainty
-- [x] Bayesian Deep Learning
-- [ ] Graph Deep Learning
-- [x] Recommender System
+- Personalized Service
+- Information Uncertainty
+- Data Mining
+    - [x] Bayesian Deep Learning
+    - [ ] Graph Deep Learning
+    - [x] Text Mining
+- AI Application
+    - [x] Recommendation
+    - [ ] Finance
 
 ## Degree
 ------
 - 🎓 **Master’s Course in Data Science**, *2023.09 - Present*\\
 Concentration in Recommender System\\
 The Graduate School, Kookmin Univ., South Korea
-- 🎓 **B.E. in Economics**, *2016.03 - 2023.08*\\
+- 🎓 **B.A. in Economics**, *2016.03 - 2023.08*\\
 Concentration in Business Economics\\
 College of Economics & Commerce, Kookmin Univ., South Korea
 
