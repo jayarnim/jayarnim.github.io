@@ -719,6 +719,219 @@
     <!-- combine -->
     
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
 
   
 
@@ -803,6 +1016,39 @@
       
         
         
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
       
 
       
@@ -954,9 +1200,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1180 words"
+  title="2086 words"
 >
-  <em>6 min</em> read</span>
+  <em>11 min</em> read</span>
 
         </div>
       </div>
@@ -1171,18 +1417,133 @@
   </li>
 </ul>
 
-<h2 id="gaussian-process"><span class="me-2">Gaussian Process</span><a href="#gaussian-process" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="mvn"><span class="me-2">MVN</span><a href="#mvn" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
+
+<h3 id="multi-variate-gaussian-distribution"><span class="me-2">Multi-Variate Gaussian Distribution</span><a href="#multi-variate-gaussian-distribution" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
-    <p><strong>다변량 가우시안 분포(Multi-Variate Gaussian Distribution)</strong></p>
+    <p><strong>다변량 가우시안 분포(Multi-Variate Gaussian Distribution)</strong> : 유한 차원의 상관된 가우시안 확률변수 벡터에 대해 정의되는 가우시안 분포</p>
+
+    <p><a href="/_post_refer_img/BayesianModeling/08-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/08-03.png" alt="02" width="100%" loading="lazy"></a></p>
   </li>
   <li>
-    <p><strong>가우시안 프로세스(<code class="language-plaintext highlighter-rouge">G</code>aussian <code class="language-plaintext highlighter-rouge">P</code>rocess; GP)</strong></p>
+    <p><strong>Definition</strong></p>
+
+\[\begin{aligned}
+  \mathbf{X} \sim \mathcal{N}\left(\mu, \Sigma\right)
+  \end{aligned}\]
+
+    <ul>
+      <li>
+        <p>\(\mathbf{X}= \begin{pmatrix}X_{1} &amp; X_{2} &amp; \cdots &amp; X_{N}\end{pmatrix}^{T}\) : Multi-Variable</p>
+
+        <ul>
+          <li>\(X_{i} \sim \mathcal{N}\left(\mu_{i}, \sigma_{i}^{2}\right)\) : The elements are random variables that follow individual Gaussian dist.</li>
+        </ul>
+      </li>
+      <li>\(\mu=\begin{pmatrix}\mu_{1} &amp; \mu_{2} &amp; \cdots &amp; \mu_{N}\end{pmatrix}^{T}\) : Mean Vector</li>
+      <li>\(\Sigma=\begin{pmatrix}\Sigma_{11} &amp; \Sigma_{12} &amp; \cdots &amp; \Sigma_{1N}\\ \Sigma_{21} &amp; \Sigma_{22} &amp; \cdots &amp; \Sigma_{2N}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\ \Sigma_{N1} &amp; \Sigma_{N2} &amp; \cdots &amp; \Sigma_{NN} \end{pmatrix}\) : Covariance Matrix</li>
+    </ul>
   </li>
   <li>
-    <p><strong>커널 함수(Kernel Function)</strong> : 두 입력 벡터를 선형적으로 표현 가능한 고차원 공간에 매핑하고 그 유사도를 측정함</p>
+    <p><strong>Probability Density Function</strong></p>
+
+\[\begin{aligned}
+  f(\mathbf{X})
+  &amp;= \frac{1}{(2\pi)^{n/2} \vert \Sigma \vert^{1/2}} \exp{\left[-\frac{1}{2}(\mathbf{X}-\mu)^{T}\Sigma^{-1}(\mathbf{X}-\mu)\right]}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h3 id="conditional-probability"><span class="me-2">Conditional Probability</span><a href="#conditional-probability" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+\[\begin{aligned}
+Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{1}-\mu_{1}), \Sigma_{22}-\Sigma_{21}\Sigma_{11}^{-1}\Sigma_{12}\right)
+\end{aligned}\]
+
+<ul>
+  <li>
+    <p>Multi-Variate Gaussian Dist.</p>
+
+\[\begin{aligned}
+  \mathbf{Z}=\begin{bmatrix}Z_{1} \\ Z_{2}\end{bmatrix} \sim \mathcal{N}\left(\begin{bmatrix}\mu_{1} \\ \mu_{2}\end{bmatrix}, \begin{bmatrix}\Sigma_{11} &amp; \Sigma_{12}\\ \Sigma_{21} &amp; \Sigma_{22}\end{bmatrix}\right)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Probability Density Function</p>
+
+\[\begin{aligned}
+  f(\mathbf{Z})
+  &amp;= \frac{1}{(2\pi)^{n/2} \vert \Sigma \vert^{1/2}} \exp{\left[-\frac{1}{2}(\mathbf{Z}-\mu)^{T}\Sigma^{-1}(\mathbf{Z}-\mu)\right]}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Inv-Covariance Matrix</p>
+
+\[\begin{aligned}
+  \Sigma^{-1}
+  &amp;= \begin{bmatrix}
+  \Sigma_{11}^{-1}+\Sigma_{11}^{-1}\Sigma_{12} \cdot \mathbf{M} \cdot \Sigma_{12}\Sigma_{11}^{-1} &amp; -\Sigma_{11}^{-1}\Sigma_{12}\mathbf{M}\\
+  -\mathbf{M}\Sigma_{21}\Sigma_{11}^{-1} &amp; \mathbf{M}
+  \end{bmatrix}
+  \end{aligned}\]
+
+    <ul>
+      <li>\(\mathbf{M}=\left(\Sigma_{22}-\Sigma_{21}\Sigma_{11}^{-1}\Sigma_{12}\right)^{-1}\) : Schur Complement</li>
+    </ul>
+  </li>
+  <li>
+    <p>Exponent Formula Expansion</p>
+
+\[\begin{aligned}
+  (\mathbf{Z}-\mu)^{T}\Sigma^{-1}(\mathbf{Z}-\mu)
+  &amp;= \underbrace{(Z_{1}-\mu_{1})^{T}\Sigma_{11}^{-1}(Z_{1}-\mu_{1})}_{\text{Mahalanobis Distance of } Z_{1}}\\
+  &amp;\quad + \underbrace{\Bigg[Z_{2}-\bigg\{\mu_{2}+\Sigma_{21}\Sigma_{11}^{-1}(Z_{1}-\mu_{1})\bigg\}\Bigg]^{T}\mathbf{M}\Bigg[Z_{2}-\bigg\{\mu_{2}+\Sigma_{21}\Sigma_{11}^{-1}(Z_{1}-\mu_{1})\bigg\}\Bigg]}_{\text{Conditional Mahalanobis Distance of }Z_{2} \mid Z_{1}}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Therefore,</p>
+
+\[\begin{aligned}
+  \text{E}\left[Z_{2} \mid Z_{1}\right]
+  &amp;= \mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{1}-\mu_{1})\\
+  \text{Var}\left[Z_{2} \mid Z_{1}\right]
+  &amp;= \Sigma_{22}-\Sigma_{21}\Sigma_{11}^{-1}\Sigma_{12}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h2 id="gaussian-process"><span class="me-2">Gaussian Process</span><a href="#gaussian-process" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<h3 id="gaussian-process-1"><span class="me-2">Gaussian Process</span><a href="#gaussian-process-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p><strong>가우시안 프로세스(<code class="language-plaintext highlighter-rouge">G</code>aussian <code class="language-plaintext highlighter-rouge">P</code>rocess; GP)</strong> : 무한 차원의 다변량 가우시안 분포를 가정하는 비모수 확률적 과정(Non-Parametric Stochastic Process)</p>
+
+    <p><a href="/_post_refer_img/BayesianModeling/08-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/08-04.png" alt="04" width="100%" loading="lazy"></a></p>
+  </li>
+  <li>
+    <p><strong>Definition</strong></p>
+
+    <blockquote>
+      <p><strong>함수 분포(Function Distribution)</strong> <br /> 가우시안 프로세스는 각 입력값에 대한 관측치를 개별적인 확률변수로 간주하고 이를 무한 차원으로 확장함으로써 다변량 가우시안 분포의 개념을 함수 공간으로 확장함. 즉, 함수를 선험적으로 정의하지 않고 데이터를 통해 전체 함수 형태를 확률적으로 예측한다는 점에서, 가우시안 프로세스는 함수 자체를 하나의 확률변수로써 다루고, 이를 비모수 추정한다고 볼 수 있음.</p>
+    </blockquote>
+
+\[\begin{aligned}
+  \mathcal{F} \sim \mathcal{GP}\left(\mu(X), \mathcal{K}(X, X^{\prime})\right)
+  \end{aligned}\]
+
+    <ul>
+      <li>\(\mu(X)\) : 평균 함수(Mean Function)</li>
+      <li>\(\mathcal{K}(X, X^{\prime})\) : 공분산 함수(Covariance Function)</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>커널 함수(Kernel Function)</strong> : 두 입력 벡터 간 유사도 측정 함수로서 공분산 행렬을 구성함</p>
 
     <div class="table-wrapper"><table>
       <thead>
@@ -1194,69 +1555,169 @@
       <tbody>
         <tr>
           <td>Linear</td>
-          <td>\(\mathcal{K}\left(\overrightarrow{\mathbf{x}},\overrightarrow{\mathbf{y}}\right) = \overrightarrow{\mathbf{x}}^{T}\overrightarrow{\mathbf{y}}\)</td>
+          <td>\(\mathcal{K}\left(X,X^{\prime}\right) = X \cdot X^{\prime}\)</td>
         </tr>
         <tr>
           <td>Polynomial</td>
-          <td>\(\mathcal{K}\left(\overrightarrow{\mathbf{x}},\overrightarrow{\mathbf{y}}\right) = \left(\overrightarrow{\mathbf{x}}^{T}\overrightarrow{\mathbf{y}} + \beta\right)^{d}\)</td>
+          <td>\(\mathcal{K}\left(X,X^{\prime}\right) = \left(X \cdot X^{\prime} + \beta\right)^{d}\)</td>
         </tr>
         <tr>
           <td>RBF</td>
-          <td>\(\mathcal{K}\left(\overrightarrow{\mathbf{x}},\overrightarrow{\mathbf{y}}\right) = \exp{\left[-\displaystyle\frac{\Vert \overrightarrow{\mathbf{x}} - \overrightarrow{\mathbf{y}}\Vert^{2}}{2\sigma^{2}}\right]}\)</td>
+          <td>\(\mathcal{K}\left(X,X^{\prime}\right) = \exp{\left[-\displaystyle\frac{\Vert X-X^{\prime} \Vert^{2}}{2\ell^{2}}\right]}\)</td>
         </tr>
         <tr>
           <td>Sigmoid</td>
-          <td>\(\mathcal{K}\left(\overrightarrow{\mathbf{x}},\overrightarrow{\mathbf{y}}\right) = \text{tanh}\left(\alpha \cdot \overrightarrow{\mathbf{x}}^{T}\overrightarrow{\mathbf{y}} + \beta\right)\)</td>
+          <td>\(\mathcal{K}\left(X,X^{\prime}\right) = \text{tanh}\left(\alpha \cdot X \cdot X^{\prime} + \beta\right)\)</td>
         </tr>
         <tr>
           <td>Laplacian</td>
-          <td>\(\mathcal{K}\left(\overrightarrow{\mathbf{x}},\overrightarrow{\mathbf{y}}\right) = \exp{\left[-\gamma \Vert \overrightarrow{\mathbf{x}} - \overrightarrow{\mathbf{y}} \Vert_{1}\right]}\)</td>
+          <td>\(\mathcal{K}\left(X,X^{\prime}\right) = \exp{\left[-\gamma \Vert X-X^{\prime} \Vert_{1}\right]}\)</td>
         </tr>
         <tr>
           <td>Exponential</td>
-          <td>\(\mathcal{K}\left(\overrightarrow{\mathbf{x}},\overrightarrow{\mathbf{y}}\right) = \exp{\left[-\gamma \Vert \overrightarrow{\mathbf{x}} - \overrightarrow{\mathbf{y}} \Vert^{2}_{2}\right]}\)</td>
+          <td>\(\mathcal{K}\left(X,X^{\prime}\right) = \exp{\left[-\gamma \Vert X-X^{\prime} \Vert_{2}\right]}\)</td>
         </tr>
         <tr>
-          <td>Martern</td>
-          <td>\(\mathcal{K}\left(\overrightarrow{\mathbf{x}},\overrightarrow{\mathbf{y}}\right) = \displaystyle\frac{2^{1-\nu}}{\Gamma\left(\nu\right)} \cdot \left(\displaystyle\frac{\sqrt{2\nu} \Vert \overrightarrow{\mathbf{x}} - \overrightarrow{\mathbf{y}} \Vert}{\ell}\right)^{\nu} \cdot K_{\nu}\left(\displaystyle\frac{\sqrt{2\nu} \Vert \overrightarrow{\mathbf{x}} - \overrightarrow{\mathbf{y}} \Vert}{\ell}\right)\)</td>
+          <td>Matern</td>
+          <td>\(\mathcal{K}\left(X,X^{\prime}\right) = \displaystyle\frac{2^{1-\nu}}{\Gamma\left(\nu\right)} \cdot \left(\displaystyle\frac{\sqrt{2\nu} \Vert X-X^{\prime} \Vert}{\ell}\right)^{\nu} \cdot K_{\nu}\left(\displaystyle\frac{\sqrt{2\nu} \Vert X-X^{\prime} \Vert}{\ell}\right)\)</td>
         </tr>
         <tr>
           <td>Periodic</td>
-          <td>\(\mathcal{K}\left(\overrightarrow{\mathbf{x}},\overrightarrow{\mathbf{y}}\right) = \exp\left[-2 \sin^2\left( \displaystyle\frac{\pi \vert \overrightarrow{\mathbf{x}}-\overrightarrow{\mathbf{y}} \vert}{p} \right) \Bigg/ \ell^2 \right]\)</td>
+          <td>\(\mathcal{K}\left(X,X^{\prime}\right) = \exp\left[-2 \sin^2\left( \displaystyle\frac{\pi \vert X-X^{\prime} \vert}{p} \right) \Bigg/ \ell^2 \right]\)</td>
         </tr>
         <tr>
           <td>Rational Quadratic</td>
-          <td>\(\mathcal{K}\left(\overrightarrow{\mathbf{x}},\overrightarrow{\mathbf{y}}\right) = \left( 1 + \displaystyle\frac{\vert \overrightarrow{\mathbf{x}} - \overrightarrow{\mathbf{y}}\vert^2}{2 \alpha \ell^2} \right)^{-\alpha}\)</td>
+          <td>\(\mathcal{K}\left(X,X^{\prime}\right) = \left( 1 + \displaystyle\frac{\vert X-X^{\prime} \vert^2}{2 \alpha \ell^2} \right)^{-\alpha}\)</td>
         </tr>
       </tbody>
     </table></div>
 
     <ul>
       <li>
-        <p><strong>대칭성(Symmetry)</strong> : \(\mathcal{K}\left(x,x^{\prime}\right)=\mathcal{K}\left(x^{\prime},x\right)\)</p>
+        <p><strong>대칭성(Symmetry)</strong></p>
+
+\[\mathcal{K}\left(x,x^{\prime}\right)=\mathcal{K}\left(x^{\prime},x\right)\]
       </li>
       <li>
-        <p><strong>양의 반정치성(Positive Semi-Definiteness, PSD)</strong> : \(\sum_{i}\sum_{j}{\alpha_{i} \cdot \alpha_{j} \cdot \mathcal{K}\left(x_{i},x_{j}\right)} \ge 0\)</p>
+        <p><strong>양의 반정치성(<code class="language-plaintext highlighter-rouge">P</code>ositive <code class="language-plaintext highlighter-rouge">S</code>emi-<code class="language-plaintext highlighter-rouge">D</code>efiniteness, PSD)</strong></p>
+
+\[\sum_{i}\sum_{j}{\alpha_{i} \cdot \alpha_{j} \cdot \mathcal{K}\left(x_{i},x_{j}\right)} \ge 0\]
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="bayesian-framework"><span class="me-2">Bayesian Framework</span><a href="#bayesian-framework" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p><strong>SUMMARY</strong> : 베이지안 프레임워크로써 이해했을 때 가우시안 프로세스는 기존 데이터 \((X,Y)\) 를 통해 새로운 입력 \(X^{*}\) 에 대한 함수 \(\mathcal{F}^{*}\) 를 사후확률로 갱신하는 과정으로 볼 수 있음</p>
+
+\[\begin{aligned}
+  p\left(\mathcal{F}^{*} \mid X, Y, X^{*}\right)
+  &amp;= \frac{p\left(Y \mid \mathcal{F}, X\right) \cdot p\left(\mathcal{F}^{*} \mid X^{*}\right)}{p\left(Y \mid X\right)}
+  \end{aligned}\]
+
+    <ul>
+      <li>\(\mathcal{F}\) : Function Variable</li>
+      <li>\(\mathcal{F}^{*}\) : Function Variable Updated by New Observations</li>
+      <li>\(X,Y\) : Existing Observations</li>
+      <li>\(X^{*}\) : New Observations</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>MVN(<code class="language-plaintext highlighter-rouge">M</code>ulti-<code class="language-plaintext highlighter-rouge">V</code>ariate <code class="language-plaintext highlighter-rouge">N</code>ormal Distribution)</strong> : 기존 데이터와 신규 데이터를 하나의 결합 가우시안 분포로 표현할 수 있음</p>
+
+\[\begin{aligned}
+  \begin{bmatrix}Y \\ \mathcal{F}^{*}\end{bmatrix}
+  \sim \mathcal{N} \left(\begin{bmatrix}\mu(X) \\ \mu(X^{*})\end{bmatrix},\begin{bmatrix}\mathbf{K}_{N} + \sigma^{2}_{N}\mathbf{I} &amp; \overrightarrow{\mathbf{k}}_{N}^{*} \\ \left(\overrightarrow{\mathbf{k}}_{N}^{*}\right)^{T} &amp; \mathcal{K}(X^{*}, X^{*})\end{bmatrix}\right)
+  \end{aligned}\]
+
+    <ul>
+      <li>
+        <p>Covariance vector between old and new:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{k}}_{n}^{*}
+  = \begin{bmatrix}\mathcal{K}(X^{*},X_{1}) &amp; \mathcal{K}(X^{*},X_{2}) &amp; \cdots &amp; \mathcal{K}(X^{*},X_{N})\end{bmatrix}^{T}
+  \end{aligned}\]
       </li>
     </ul>
   </li>
   <li>
-    <p><strong>MLE(<code class="language-plaintext highlighter-rouge">M</code>aximum <code class="language-plaintext highlighter-rouge">L</code>iklihood <code class="language-plaintext highlighter-rouge">E</code>stimation)</strong></p>
+    <p><strong>Prior Dist.</strong> : 새로운 입력을 관측하지 않은 상태에서 함수가 가질 수 있는 형태에 대한 정보는 기존에 관측되었던 값들로써 추론됨</p>
+
+\[\begin{aligned}
+  \mathcal{F}^{*} \mid X^{*} \sim \mathcal{GP}\left(\mu(X), \mathcal{K}(X, X^{\prime})\right)
+  \end{aligned}\]
   </li>
   <li>
-    <p><strong>SGP(Sparse Gaussian Process)</strong></p>
+    <p><strong>Likelihood Function</strong> : 함수가 특정 형태일 때($\mathcal{F}$), 기존에 관측되었던 값은 함수 값을 중심으로 가우시안 분포 형태로 분포함</p>
+
+\[\begin{aligned}
+  Y
+  &amp;= \mathcal{F}\left(X\right) + \epsilon, \quad \epsilon \sim \mathcal{N}\left(0, \sigma_{N}^{2}\mathbf{I}\right)\\
+  &amp;\Updownarrow\\
+  Y \mid \mathcal{F}, X
+  &amp;\sim \mathcal{N}\left(\mathcal{F}, \sigma_{N}^{2}\mathbf{I}\right)
+  \end{aligned}\]
   </li>
   <li>
-    <p><strong>SVGP(Sparse Variational Gaussian Process)</strong></p>
+    <p><strong>Evidence</strong> : 기존에 관측되었던 값은 다변량 가우시안 분포를 따름</p>
+
+\[\begin{aligned}
+  Y \mid X  \sim \mathcal{N}\left(\mu\left(X\right), \mathbf{K}_{N} + \sigma_{N}^{2}\mathbf{I}\right)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>Posterior Dist.</strong> : 신규 데이터에 의해 갱신된 함수는 다시 가우시안 프로세스를 따름</p>
+
+\[\begin{aligned}
+  \mathcal{F}^{*} \mid X, Y, X^{*} \sim \mathcal{N}(\mu^{*}, (\sigma^{*})^{2})
+  \end{aligned}\]
+
+    <ul>
+      <li>
+        <p>Posterior Mean:</p>
+
+\[\begin{aligned}
+  \mu^{*}=\mu(X^{*}) + \overrightarrow{\mathbf{k}}_{N}^{*}(\mathbf{K}_{N}+\sigma^{2}_{N}\mathbf{I})^{-1}(Y-\mu(X))
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>Posterior Var.:</p>
+
+\[\begin{aligned}
+  (\sigma^{*})^{2}
+  =\mathcal{K}(X^{*},X^{*})-\overrightarrow{\mathbf{k}}_{N}^{*}(\mathbf{K}_{N}+\sigma^{2}_{N}\mathbf{I})^{-1}\left(\overrightarrow{\mathbf{k}}_{N}^{*}\right)^{T}
+  \end{aligned}\]
+      </li>
+    </ul>
   </li>
 </ul>
 
-<h2 id="gaussian-process-application"><span class="me-2">Gaussian Process Application</span><a href="#gaussian-process-application" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
+<h3 id="sgp"><span class="me-2">SGP</span><a href="#sgp" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<h3 id="gpr"><span class="me-2">GPR</span><a href="#gpr" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p><a href="/_post_refer_img/BayesianModeling/08-05.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/08-05.png" alt="05" width="100%" loading="lazy"></a></p>
 
-<h3 id="gplvm"><span class="me-2">GPLVM</span><a href="#gplvm" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<ul>
+  <li>
+    <p><strong>SGP(<code class="language-plaintext highlighter-rouge">S</code>parse <code class="language-plaintext highlighter-rouge">G</code>aussian <code class="language-plaintext highlighter-rouge">P</code>rocess)</strong> : $M &lt; N$ 개의 유도점(Inducing Points)을 도입하여 공분산 행렬을 근사하는 기법으로서, 계산량을 $\mathcal{O}(N^{3}) \to \mathcal{O}(M^{2}N)$ 으로 줄임으로써 효율성을 도모함</p>
+
+\[\begin{aligned}
+  \mathbf{K}_{N} \approx \mathbf{Q}_{N} = \mathbf{K}_{NM} \cdot \mathbf{K}^{-1}_{MM} \cdot \mathbf{K}_{MN}
+  \end{aligned}\]
+
+    <ul>
+      <li>\(\mathbf{K}_{MM}\) : 유도점끼리의 공분산 행렬</li>
+      <li>\(\mathbf{K}_{NM}\) : 전체 데이터와 유도점 간 공분산 행렬</li>
+      <li>\(\mathbf{K}_{MN}\) : \(\mathbf{K}_{NM}\) 의 전치 행렬</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>SVGP(<code class="language-plaintext highlighter-rouge">S</code>parse <code class="language-plaintext highlighter-rouge">V</code>ariational <code class="language-plaintext highlighter-rouge">G</code>aussian <code class="language-plaintext highlighter-rouge">P</code>rocess)</strong></p>
+  </li>
+</ul>
 
   </div>
 
