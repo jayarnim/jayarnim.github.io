@@ -1,5 +1,5 @@
 ---
-order: 5
+order: 6
 title: Bayesian Attention Modules
 date: 2024-09-05
 categories: [Machine Learning Techs, Bayesian Deep Learning]
@@ -13,6 +13,11 @@ description: >-
 image:
     path: /_post_refer_img/BayesianDeepLearning/Thumbnail.jpg
 ---
+
+## Attention Mechanism
+-----
+
+- [ATTN DESC.](https://jayarnim.github.io/posts/ATTN/)
 
 ## Bayesian Attention Modules
 -----

@@ -1,7 +1,7 @@
 ---
 order: 3
 title: MC Dropout
-date: 2024-06-12
+date: 2024-07-25
 categories: [Machine Learning Techs, Bayesian Deep Learning]
 tags: [Deep Learning, Bayesian, Variational Inference, Objective Function]
 math: true
