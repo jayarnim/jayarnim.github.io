@@ -1169,7 +1169,7 @@
     <p><strong>Distribution Optimization $\to$ Particle Optimization</strong></p>
 
     <blockquote>
-      <p>Stein Variational Gradient Descent 는 파라미터의 분포를 직접 모델링하지 않고 개별 입자들을 모델링함. 즉, 제안 분포와 목표 분포 간 차이를 줄임으로써 분포 전체를 직접 최적화하는 방식이 아니라(변분 미분), 제안 분포에서 샘플링된 개별 입자들의 위치가 목표 분포를 따르도록 조정하는 방식으로 학습이 진행됨(편미분). 입자가 이동해야 하는 최적 방향을 제공하는 지표는 분포 간 차이를 나타내는 \(D_{\text{STEIN}}(q \parallel p)\) 에 개별 입자의 위치를 편미분한 값 \(\phi(x_{i})=\displaystyle\frac{\partial}{\partial x_{i}}D_{\text{STEIN}}(q \parallel p)\) 으로, 이는 RKHS에서 유도된 최적의 함수와 동일함.</p>
+      <p>Stein Variational Gradient Descent 는 파라미터의 분포를 직접 모델링하지 않고 개별 입자들을 모델링함. 즉, 제안 분포와 목표 분포 간 차이를 줄임으로써 분포 전체를 직접 최적화하는 방식이 아니라(변분 미분), 제안 분포에서 샘플링된 개별 입자들의 위치가 목표 분포를 따르도록 조정하는 방식으로 학습이 진행됨(편미분). <br /> 입자가 이동해야 하는 최적 방향을 제공하는 지표는 분포 간 차이를 나타내는 \(D_{\text{STEIN}}(q \parallel p)\) 에 개별 입자의 위치를 편미분한 값 \(\phi(x_{i})=\displaystyle\frac{\partial}{\partial x_{i}}D_{\text{STEIN}}(q \parallel p)\) 으로, 이는 RKHS에서 유도된 최적의 함수와 동일함.</p>
     </blockquote>
   </li>
   <li>
