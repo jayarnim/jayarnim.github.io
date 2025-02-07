@@ -725,6 +725,49 @@
   
 
   
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
 
   
   
@@ -829,7 +872,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1875 words"
+  title="1876 words"
 >
   <em>10 min</em> read</span>
 
@@ -939,9 +982,35 @@
 <h2 id="bayesian-framework"><span class="me-2">Bayesian Framework</span><a href="#bayesian-framework" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
+<h3 id="modules"><span class="me-2">Modules</span><a href="#modules" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
 <ul>
   <li>
-    <p><strong>베이즈 정리(Bayes’ Theorem)</strong></p>
+    <p><strong>사전 확률 분포(Prior Probability Distribution)</strong> : 사전 지식의 불확실성을 모델링하는 모듈로서, 사전 정보를 기초로 설정된 초기 믿음</p>
+
+\[\theta \sim P\]
+  </li>
+  <li>
+    <p><strong>우도(Likelihood or Likelihood Function)</strong> : 데이터의 불확실성을 모델링하는 모듈로서, 모수가 $\theta$ 로 주어졌을 때, 관측된 데이터 $\mathcal{D}$ 가 실현될 가능성</p>
+
+\[\begin{aligned}
+  \mathcal{L}(\theta)
+  =P(\mathcal{D} \mid \theta)
+  =\prod_{i=1}^{n}{f(X_{i} \mid \theta)}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>사후 확률 분포(Posterior Probability Distribution)</strong> : 사건 발생 후, 추가된 정보(발생된 데이터)를 고려하여 갱신된 믿음</p>
+
+\[\theta \mid \mathcal{D} \sim P\]
+  </li>
+</ul>
+
+<h3 id="bayes-theorem"><span class="me-2">Bayes’ Theorem</span><a href="#bayes-theorem" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p><strong>Bayes’ Theorem</strong></p>
 
     <blockquote>
       <p>사상 $A_{1},A_{2},\cdots,A_{n}$ 이 표본공간 $S$ 의 분할이고, $P(A_{i})&gt;0,P(X)&gt;0$ 이면 $X$ 에 대한 $A_{k}$ 의 조건부 확률은 다음과 같음</p>
@@ -955,14 +1024,14 @@
   \end{aligned}\]
 
     <ul>
-      <li>$P(A_{k} \mid X)$ : 사건 $X$ 발생 조건부 $A_k$ 가 발생할 확률</li>
-      <li>$P(A_{k})$ : 사건 $A_{k}$ 가 발생할 확률</li>
-      <li>$P(X \mid A_{k})$ : 사건 $A_{k}$ 발생 조건부 $X$ 가 발생할 확률</li>
-      <li>$P(X)$ : 사건 $X$ 가 발생할 확률</li>
+      <li>$P(A_{k} \mid X)$ : 사건 $X$ 발생 조건부 $A_k$ 발생 확률</li>
+      <li>$P(A_{k})$ : 사건 $A_{k}$ 발생 확률</li>
+      <li>$P(X \mid A_{k})$ : 사건 $A_{k}$ 발생 조건부 $X$ 발생 확률</li>
+      <li>$P(X)$ : 사건 $X$ 발생 확률</li>
     </ul>
   </li>
   <li>
-    <p><strong>확률분포함수에의 적용</strong></p>
+    <p><strong>Application to Posterior Estimation</strong></p>
 
 \[P(\theta \mid \mathcal{D})=\frac{P(\theta) \cdot P(\mathcal{D} \mid \theta)}{P(\mathcal{D})} \propto \pi(\theta) \cdot \mathcal{L}(\theta)\]
 
@@ -975,29 +1044,22 @@
       <li>$P(\mathcal{D})$ : $\mathcal{D}$ 의 주변 확률</li>
     </ul>
   </li>
+</ul>
+
+<h3 id="posterior-estimation"><span class="me-2">Posterior Estimation</span><a href="#posterior-estimation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
   <li>
-    <p><strong>모듈의 이해</strong></p>
-    <ul>
-      <li>
-        <p><strong>사전 확률 분포(Prior Probability Distribution)</strong> : 사전 지식의 불확실성을 모델링하는 모듈로서, 사전 정보를 기초로 설정된 초기 믿음</p>
-
-\[\theta \sim P\]
-      </li>
-      <li>
-        <p><strong>우도(Likelihood or Likelihood Function)</strong> : 데이터의 불확실성을 모델링하는 모듈로서, 모수가 $\theta$ 로 주어졌을 때, 관측된 데이터 $\mathcal{D}$ 가 실현될 가능성</p>
-
-\[\begin{aligned}
-  \mathcal{L}(\theta)
-  =P(\mathcal{D} \mid \theta)
-  =\prod_{i=1}^{n}{f(X_{i} \mid \theta)}
-  \end{aligned}\]
-      </li>
-      <li>
-        <p><strong>사후 확률 분포(Posterior Probability Distribution)</strong> : 사건 발생 후, 추가된 정보(발생된 데이터)를 고려하여 갱신된 믿음</p>
-
-\[\theta \mid \mathcal{D} \sim P\]
-      </li>
-    </ul>
+    <p><strong>Bayes’ Theorem</strong></p>
+  </li>
+  <li>
+    <p><a href="https://jayarnim.github.io/posts/MCMC/"><strong><code class="language-plaintext highlighter-rouge">M</code>arkov <code class="language-plaintext highlighter-rouge">C</code>hain <code class="language-plaintext highlighter-rouge">M</code>onte <code class="language-plaintext highlighter-rouge">C</code>arlo</strong></a> : Sampling</p>
+  </li>
+  <li>
+    <p><a href="https://jayarnim.github.io/posts/VI/"><strong><code class="language-plaintext highlighter-rouge">V</code>ariational <code class="language-plaintext highlighter-rouge">I</code>nference</strong></a> : Parametric Approximation</p>
+  </li>
+  <li>
+    <p><a href="https://jayarnim.github.io/posts/SVGD/"><strong><code class="language-plaintext highlighter-rouge">S</code>tein <code class="language-plaintext highlighter-rouge">V</code>ariational <code class="language-plaintext highlighter-rouge">G</code>radient <code class="language-plaintext highlighter-rouge">D</code>escent</strong></a> : Non-Parametric Approximation</p>
   </li>
 </ul>
 
@@ -1236,6 +1298,13 @@
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/SGP/">Sparse Gaussian Process</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/Bayesian_Attention_Modules/">Bayesian Attention Modules</a>
         </li>
       
@@ -1258,13 +1327,6 @@
         
         <li class="text-truncate lh-lg">
           <a href="/posts/FAWMF/">FAWMF</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/GPT/">GPT</a>
         </li>
       
     </ul>
@@ -1909,6 +1971,8 @@
     
     
     
+      
+    
   
     
     
@@ -2703,6 +2767,11 @@
     
     
       
+    
+  
+    
+    
+    
     
   
     
@@ -3758,31 +3827,7 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
@@ -3882,11 +3927,11 @@
 
 <time
   
-  data-ts="1721228400"
+  data-ts="1721142000"
   data-df="ll"
   
 >
-  Jul 18, 2024
+  Jul 17, 2024
 </time>
 
               <h4 class="pt-0 my-2">Bayes Action</h4>
@@ -3910,11 +3955,11 @@
 
 <time
   
-  data-ts="1721574000"
+  data-ts="1721487600"
   data-df="ll"
   
 >
-  Jul 22, 2024
+  Jul 21, 2024
 </time>
 
               <h4 class="pt-0 my-2">Gaussian Process</h4>
@@ -3938,11 +3983,11 @@
 
 <time
   
-  data-ts="1721487600"
+  data-ts="1721401200"
   data-df="ll"
   
 >
-  Jul 21, 2024
+  Jul 20, 2024
 </time>
 
               <h4 class="pt-0 my-2">Bayesian Regression</h4>
@@ -4675,6 +4720,8 @@
     
     
     
+      
+    
   
     
     
@@ -5469,6 +5516,11 @@
     
     
       
+    
+  
+    
+    
+    
     
   
     
