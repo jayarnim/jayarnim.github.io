@@ -1,7 +1,7 @@
 ---
-order: 4
+order: 3
 title: Bayes Action
-date: 2024-07-18
+date: 2024-07-17
 categories: [Statistical Techs, Bayesian Modeling]
 tags: [Statistics, Bayesian, Optimization, Objective Function]
 math: true
