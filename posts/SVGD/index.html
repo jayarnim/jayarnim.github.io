@@ -810,9 +810,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1005 words"
+  title="1338 words"
 >
-  <em>5 min</em> read</span>
+  <em>7 min</em> read</span>
 
         </div>
       </div>
@@ -1119,6 +1119,78 @@
     <ul>
       <li><a href="https://doi.org/10.48550/arXiv.1608.04471">Stein Variational Gradient Descent: A General Purpose Bayesian Inference Algorithm(2016)</a></li>
     </ul>
+  </li>
+  <li>
+    <p><strong>Optimization Process through Gradient Descent</strong></p>
+
+    <div class="table-wrapper"><table>
+      <thead>
+        <tr>
+          <th> </th>
+          <th>Gradient Flow</th>
+          <th>Wasserstein Gradient Flow</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Space</td>
+          <td>Euclidean</td>
+          <td>Measure</td>
+        </tr>
+        <tr>
+          <td>Distance</td>
+          <td>Euclidean</td>
+          <td>Wasserstein</td>
+        </tr>
+        <tr>
+          <td>Target</td>
+          <td>$x$</td>
+          <td>$q(x)$</td>
+        </tr>
+        <tr>
+          <td>Loss Function</td>
+          <td>$\mathcal{L}(x)$</td>
+          <td>$D(q \parallel p)$</td>
+        </tr>
+        <tr>
+          <td>Gradient</td>
+          <td>$\partial \mathcal{L}(x) / \partial x$</td>
+          <td>$\delta D(q \parallel p) / \delta q$</td>
+        </tr>
+        <tr>
+          <td>Update</td>
+          <td>$x \to x^{*}$</td>
+          <td>$q \to p$</td>
+        </tr>
+      </tbody>
+    </table></div>
+  </li>
+  <li>
+    <p><strong>Distribution Optimization $\to$ Particle Optimization</strong></p>
+
+    <blockquote>
+      <p>Stein Variational Gradient Descent 는 파라미터의 분포를 직접 모델링하지 않고 개별 입자들을 모델링함. 즉, 제안 분포와 목표 분포 간 차이를 줄임으로써 분포 전체를 직접 최적화하는 방식이 아니라(변분 미분), 제안 분포에서 샘플링된 개별 입자들의 위치가 목표 분포를 따르도록 조정하는 방식으로 학습이 진행됨(편미분). 입자가 이동해야 하는 최적 방향을 제공하는 지표는 분포 간 차이를 나타내는 \(D_{\text{STEIN}}(q \parallel p)\) 에 개별 입자의 위치를 편미분한 값 \(\phi(x_{i})=\displaystyle\frac{\partial}{\partial x_{i}}D_{\text{STEIN}}(q \parallel p)\) 으로, 이는 RKHS에서 유도된 최적의 함수와 동일함.</p>
+    </blockquote>
+  </li>
+  <li>
+    <p><strong>Stein Gradient:</strong></p>
+
+\[\begin{aligned}
+  \phi(w_{i})
+  &amp;= \frac{1}{M}\sum_{j}^{M}{\underbrace{\mathcal{K}(w_{i}, w_{j})}_{\text{kernel}} \cdot \underbrace{\nabla_{w_{j}}\log{p(w_{j} \mid \mathcal{D})}}_{\text{score function}}+\underbrace{\nabla_{w_{j}}\mathcal{K}(w_{i}, w_{j})}_{\text{repulsion effect}}}
+  \end{aligned}\]
+
+    <ul>
+      <li><strong>스코어 함수(Score Function)</strong> : 입자 $w_{i} \sim q$ 가 확률 분포 $p$ 를 따라 움직이도록 유도함</li>
+      <li><strong>반발 효과(Repulsion Effect)</strong> : 입자 들이 서로 퍼지도록 함으로써 입자 간 분포를 유지함</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Update:</strong></p>
+
+\[\begin{aligned}
+  w_{i} \gets w_{i} + \epsilon \cdot \phi(w_{i})
+  \end{aligned}\]
   </li>
 </ul>
 
