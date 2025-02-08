@@ -810,7 +810,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1340 words"
+  title="1373 words"
 >
   <em>7 min</em> read</span>
 
@@ -1177,12 +1177,24 @@
 
 \[\begin{aligned}
   \phi(w_{i})
-  &amp;= \frac{1}{M}\sum_{j}^{M}{\underbrace{\mathcal{K}(w_{i}, w_{j})}_{\text{kernel}} \cdot \underbrace{\nabla_{w_{j}}\log{p(w_{j} \mid \mathcal{D})}}_{\text{score function}}+\underbrace{\nabla_{w_{j}}\mathcal{K}(w_{i}, w_{j})}_{\text{repulsion effect}}}
+  &amp;= \mathbb{E}_{w_{j} \sim q}[\mathcal{K}(w_{i}, w_{j}) \cdot \nabla_{w_{j}}\log{p(w_{j} \mid \mathcal{D})}+\nabla_{w_{j}}\mathcal{K}(w_{i}, w_{j})]\\
+  &amp;= \frac{1}{M}\sum_{j=1}^{M}{\underbrace{\mathcal{K}(w_{i}, w_{j})}_{\text{kernel}} \cdot \underbrace{\nabla_{w_{j}}\log{p(w_{j} \mid \mathcal{D})}}_{\text{score function}}+\underbrace{\nabla_{w_{j}}\mathcal{K}(w_{i}, w_{j})}_{\text{repulsion effect}}}
   \end{aligned}\]
 
     <ul>
-      <li><strong>스코어 함수(Score Function)</strong> : 입자 $w_{i} \sim q$ 가 확률 분포 $p$ 를 따라 움직이도록 유도함</li>
-      <li><strong>반발 효과(Repulsion Effect)</strong> : 입자들이 서로 퍼지도록 함으로써 입자 간 분포를 유지함</li>
+      <li>
+        <p><strong>스코어 함수(Score Function)</strong> : 입자 $w_{i} \sim q$ 가 확률 분포 $p$ 를 따라 움직이도록 유도함</p>
+
+\[\begin{aligned}
+  \underbrace{\log{p(w_{j} \mid \mathcal{D})}}_{\text{posterior}}
+  &amp;= \underbrace{\log{p(\mathcal{D} \mid w_{j})}}_{\text{likelihood}} + \underbrace{\log{p(w_{j})}}_{\text{prior}} - \underbrace{\log{p(\mathcal{D})}}_{\text{evidence}}\\
+  \therefore \nabla_{w_{j}}\log{p(w_{j} \mid \mathcal{D})}
+  &amp;= \nabla_{w_{j}}\log{p(\mathcal{D} \mid w_{j})} + \nabla_{w_{j}}\log{p(w_{j})}
+  \end{aligned}\]
+      </li>
+      <li>
+        <p><strong>반발 효과(Repulsion Effect)</strong> : 입자들이 서로 퍼지도록 함으로써 입자 간 분포를 유지함</p>
+      </li>
     </ul>
   </li>
   <li>
