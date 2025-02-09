@@ -32,8 +32,8 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="Sparse Gaussian Process" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Gaussian Process" />
-<meta property="og:description" content="Gaussian Process" />
+<meta name="description" content="Prerequisite" />
+<meta property="og:description" content="Prerequisite" />
 <link rel="canonical" href="https://jayarnim.github.io/posts/SGP/" />
 <meta property="og:url" content="https://jayarnim.github.io/posts/SGP/" />
 <meta property="og:site_name" content="Data Scientist" />
@@ -44,7 +44,7 @@
 <meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/BayesianDeepLearning/Thumbnail.jpg" />
 <meta property="twitter:title" content="Sparse Gaussian Process" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-23T00:00:00+09:00","datePublished":"2025-01-23T00:00:00+09:00","description":"Gaussian Process","headline":"Sparse Gaussian Process","image":"https://jayarnim.github.io/_post_refer_img/BayesianDeepLearning/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/SGP/"},"url":"https://jayarnim.github.io/posts/SGP/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-23T00:00:00+09:00","datePublished":"2025-01-23T00:00:00+09:00","description":"Prerequisite","headline":"Sparse Gaussian Process","image":"https://jayarnim.github.io/_post_refer_img/BayesianDeepLearning/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/SGP/"},"url":"https://jayarnim.github.io/posts/SGP/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -837,7 +837,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="216 words"
+  title="289 words"
 >
   <em>1 min</em> read</span>
 
@@ -847,11 +847,11 @@
   </header>
 
   <div class="content">
-    <h2 id="gaussian-process"><span class="me-2">Gaussian Process</span><a href="#gaussian-process" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="prerequisite"><span class="me-2">Prerequisite</span><a href="#prerequisite" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
-  <li><a href="https://jayarnim.github.io/posts/GP/">GP DESC.</a></li>
+  <li><a href="https://jayarnim.github.io/posts/GP/">Gaussian Process</a></li>
 </ul>
 
 <h2 id="sgp"><span class="me-2">SGP</span><a href="#sgp" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
@@ -861,7 +861,7 @@
   <li>
     <p><strong>SGP(<code class="language-plaintext highlighter-rouge">S</code>parse <code class="language-plaintext highlighter-rouge">G</code>aussian <code class="language-plaintext highlighter-rouge">P</code>rocess)</strong> : $M &lt; N$ 개의 유도점(Inducing Points)을 도입하여 공분산 행렬을 근사하는 기법으로서, 계산량을 $\mathcal{O}(N^{3}) \to \mathcal{O}(M^{2}N)$ 으로 줄임으로써 효율성을 도모함</p>
 
-    <p><a href="/_post_refer_img/BayesianDeepLearning/05-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianDeepLearning/05-01.png" alt="01" width="100%" loading="lazy"></a></p>
+    <p><a href="/_post_refer_img/BayesianDeepLearning/06-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianDeepLearning/06-01.png" alt="01" width="100%" loading="lazy"></a></p>
   </li>
   <li>
     <p><strong>Methods</strong></p>
@@ -953,8 +953,20 @@
     <p><strong>SVGP(<code class="language-plaintext highlighter-rouge">S</code>parse <code class="language-plaintext highlighter-rouge">V</code>ariational <code class="language-plaintext highlighter-rouge">G</code>aussian <code class="language-plaintext highlighter-rouge">P</code>rocess)</strong></p>
   </li>
   <li>
-    <p><strong>DGP(<code class="language-plaintext highlighter-rouge">D</code>ecoupled <code class="language-plaintext highlighter-rouge">G</code>aussian <code class="language-plaintext highlighter-rouge">P</code>rocess)</strong></p>
+    <p>$f$ 는 무한 차원의 확률 과정이므로 이를 직접 다루지 않고 유도점 $Z$ 와 이때의 함수 값 $u=f(Z)$ 를 이용하여 근사함</p>
   </li>
+</ul>
+
+\[\begin{aligned}
+\mathbb{E}_{f \sim q}[p(f \mid y, X)]
+&amp;= \int{q(f) \cdot p(f \mid y, X)\text{d}f}\\
+&amp;\downarrow\\
+\mathbb{E}_{u \sim q}[p(f \mid u, Z, X)]
+&amp;= \int{q(u) \cdot p(f \mid u, Z, X)\text{d}u}
+\end{aligned}\]
+
+<ul>
+  <li><strong>DGP(<code class="language-plaintext highlighter-rouge">D</code>ecoupled <code class="language-plaintext highlighter-rouge">G</code>aussian <code class="language-plaintext highlighter-rouge">P</code>rocess)</strong></li>
 </ul>
 
   </div>
@@ -1129,14 +1141,14 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/VAE/">Generative Model (1) Variational AutoEncoder</a>
+          <a href="/posts/FAWMF/">FAWMF</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/FAWMF/">FAWMF</a>
+          <a href="/posts/GPT/">GPT</a>
         </li>
       
     </ul>
@@ -1780,8 +1792,6 @@
     
     
     
-    
-      
     
   
     
@@ -3793,7 +3803,7 @@
         </article>
       
         <article class="col">
-          <a href="/posts/SVGD/" class="post-preview card h-100">
+          <a href="/posts/VAE/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -3805,26 +3815,30 @@
 
 <time
   
-  data-ts="1718722800"
+  data-ts="1719327600"
   data-df="ll"
   
 >
-  Jun 19, 2024
+  Jun 26, 2024
 </time>
 
-              <h4 class="pt-0 my-2">Stein Variational Gradient Descent</h4>
+              <h4 class="pt-0 my-2">Variational AutoEncoder</h4>
               <div class="text-muted">
-                <p>Stein Method
+                <p>AutoEncoder
 
 
-Stein Operator
+
+  오토인코더(AutoEncoder; AE) : 입력 데이터를 압축시켜 저차원 특징 공간으로 축소한 후, 이를 다시 확장하여 원본으로 복원하는 인공신경망 아키텍처
 
 
-  테스트 함수 $f(x)$ 를 확률 분포 $p(x)$ 의 구조가 반영된 형태로 변환하는 연산자로서, $x$ 의 변화에 따른 $f(x)$ 의 변화율를 측정하고, 그 변화를 $x$ 가 발생할 가능성이 반영된 형태로 조정하는 방식으로 동작함
+How to Modeling
 
 
-[\begin{aligned}
-\mathcal{T}{p...</p>
+  
+    Encoder:
+
+\[\begin{aligned}
+  \mathbf{z} = F\left(\mathbf{x} \mi...</p>
               </div>
             </div>
           </a>
@@ -4547,8 +4561,6 @@ Stein Operator
     
     
     
-    
-      
     
   
     

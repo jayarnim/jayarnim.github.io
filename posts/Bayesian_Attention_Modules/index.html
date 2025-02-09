@@ -801,7 +801,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="789 words"
+  title="788 words"
 >
   <em>4 min</em> read</span>
 
@@ -811,11 +811,11 @@
   </header>
 
   <div class="content">
-    <h2 id="attention-mechanism"><span class="me-2">Attention Mechanism</span><a href="#attention-mechanism" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="prerequisite"><span class="me-2">Prerequisite</span><a href="#prerequisite" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
-  <li><a href="https://jayarnim.github.io/posts/ATTN/">ATTN DESC.</a></li>
+  <li><a href="https://jayarnim.github.io/posts/ATTN/">Attention Mechanism</a></li>
 </ul>
 
 <h2 id="bayesian-attention-modules"><span class="me-2">Bayesian Attention Modules</span><a href="#bayesian-attention-modules" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
@@ -1164,14 +1164,14 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/VAE/">Generative Model (1) Variational AutoEncoder</a>
+          <a href="/posts/FAWMF/">FAWMF</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/FAWMF/">FAWMF</a>
+          <a href="/posts/GPT/">GPT</a>
         </li>
       
     </ul>
@@ -1815,8 +1815,6 @@
     
     
     
-    
-      
     
   
     
@@ -3841,11 +3839,11 @@
 
               <h4 class="pt-0 my-2">Sparse Gaussian Process</h4>
               <div class="text-muted">
-                <p>Gaussian Process
+                <p>Prerequisite
 
 
 
-  GP DESC.
+  Gaussian Process
 
 
 SGP
@@ -3853,7 +3851,49 @@ SGP
 
 
   
-    SGP(Sparse Gaussian Process) : $M &amp;lt; N$ 개의 유도점(Inducing Points)을 도입하여 공분산 행렬을 근사하는 기법으로서, 계산량을 $\mathcal{O}(N^{3}) \to \mathcal{O}(M^{2}N)$ 으로 줄임으로써...</p>
+    SGP(Sparse Gaussian Process) : $M &amp;lt; N$ 개의 유도점(Inducing Points)을 도입하여 공분산 행렬을 근사하는 기법으로서, 계산량을 $\mathcal{O}(N^{3}) \to \mathcal{O}(M^{2}N)$ 으로 줄...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/VAE/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1719327600"
+  data-df="ll"
+  
+>
+  Jun 26, 2024
+</time>
+
+              <h4 class="pt-0 my-2">Variational AutoEncoder</h4>
+              <div class="text-muted">
+                <p>AutoEncoder
+
+
+
+  오토인코더(AutoEncoder; AE) : 입력 데이터를 압축시켜 저차원 특징 공간으로 축소한 후, 이를 다시 확장하여 원본으로 복원하는 인공신경망 아키텍처
+
+
+How to Modeling
+
+
+  
+    Encoder:
+
+\[\begin{aligned}
+  \mathbf{z} = F\left(\mathbf{x} \mi...</p>
               </div>
             </div>
           </a>
@@ -3894,44 +3934,6 @@ Information Gain
   Shannon’s Information Theory Principles
     
     ...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/SVGD/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1718722800"
-  data-df="ll"
-  
->
-  Jun 19, 2024
-</time>
-
-              <h4 class="pt-0 my-2">Stein Variational Gradient Descent</h4>
-              <div class="text-muted">
-                <p>Stein Method
-
-
-Stein Operator
-
-
-  테스트 함수 $f(x)$ 를 확률 분포 $p(x)$ 의 구조가 반영된 형태로 변환하는 연산자로서, $x$ 의 변화에 따른 $f(x)$ 의 변화율를 측정하고, 그 변화를 $x$ 가 발생할 가능성이 반영된 형태로 조정하는 방식으로 동작함
-
-
-[\begin{aligned}
-\mathcal{T}{p...</p>
               </div>
             </div>
           </a>
@@ -4658,8 +4660,6 @@ Stein Operator
     
     
     
-    
-      
     
   
     

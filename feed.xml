@@ -4,7 +4,7 @@
   <id>https://jayarnim.github.io/</id>
   <title>Data Scientist</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-02-09T04:49:33+09:00</updated>
+  <updated>2025-02-10T04:38:44+09:00</updated>
   <author>
     <name>jayarnim</name>
     <uri>https://jayarnim.github.io/</uri>
@@ -40,11 +40,11 @@
     
   
 
-  <summary>Gaussian Process
+  <summary>Prerequisite
 
 
 
-  GP DESC.
+  Gaussian Process
 
 
 SGP
@@ -65,7 +65,7 @@ SGP
           Matrix Factorization
         
       
-      FITC(Fully Independent Trainin...</summary>
+      FITC(Fully Independent Tra...</summary>
 
   </entry>
 
@@ -126,32 +126,6 @@ SGP
 
   
   <entry>
-    <title>Generative Model (1) Variational AutoEncoder</title>
-    <link href="https://jayarnim.github.io/posts/VAE/" rel="alternate" type="text/html" title="Generative Model (1) Variational AutoEncoder" />
-    <published>2024-08-16T00:00:00+09:00</published>
-  
-    <updated>2024-08-16T00:00:00+09:00</updated>
-  
-    <id>https://jayarnim.github.io/posts/VAE/</id>
-    <content src="https://jayarnim.github.io/posts/VAE/" />
-    <author>
-      <name>jayarnim</name>
-    </author>
-
-  
-    
-    <category term="Data Mining" />
-    
-    <category term="Image Analytics" />
-    
-  
-
-  <summary>Based on the lecture “Vision AI (2024-1)” by Prof. Jong Hyuk Park, Dept. of Data Science, The Grad. School, Kookmin Univ.</summary>
-
-  </entry>
-
-  
-  <entry>
     <title>FAWMF</title>
     <link href="https://jayarnim.github.io/posts/FAWMF/" rel="alternate" type="text/html" title="FAWMF" />
     <published>2024-08-14T00:00:00+09:00</published>
@@ -176,6 +150,32 @@ SGP
     &amp;lt;ul&amp;gt;
     &amp;lt;li&amp;gt;&amp;lt;code&amp;gt;&amp;lt;a href=&amp;quot;https://grouplens.org/datasets/movielens/&amp;quot;&amp;gt;MovieLens&amp;lt;/a&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/li&amp;gt;
     &amp;lt;l...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>GPT</title>
+    <link href="https://jayarnim.github.io/posts/GPT/" rel="alternate" type="text/html" title="GPT" />
+    <published>2024-08-09T00:00:00+09:00</published>
+  
+    <updated>2024-08-09T00:00:00+09:00</updated>
+  
+    <id>https://jayarnim.github.io/posts/GPT/</id>
+    <content src="https://jayarnim.github.io/posts/GPT/" />
+    <author>
+      <name>jayarnim</name>
+    </author>
+
+  
+    
+    <category term="Data Mining" />
+    
+    <category term="Text Analytics" />
+    
+  
+
+  <summary>Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</summary>
 
   </entry>
 
