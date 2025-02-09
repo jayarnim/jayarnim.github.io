@@ -242,7 +242,7 @@ image:
 - **$\beta$ 의 범위**
 
     $$
-        \vert \beta \vert  \leq \frac{1}{\lambda}
+    \vert \beta \vert  \leq \frac{1}{\lambda}
     $$
 
     - $\lambda$ : 인접 행렬 $X$ 의 고유값
