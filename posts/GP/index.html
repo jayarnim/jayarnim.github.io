@@ -1011,6 +1011,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -1118,9 +1129,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1977 words"
+  title="2188 words"
 >
-  <em>10 min</em> read</span>
+  <em>12 min</em> read</span>
 
         </div>
       </div>
@@ -1370,8 +1381,24 @@
 
 \[\begin{aligned}
   f(\mathbf{X})
-  &amp;= \frac{1}{(2\pi)^{n/2} \vert \Sigma \vert^{1/2}} \exp{\left[-\frac{1}{2}(\mathbf{X}-\mu)^{T}\Sigma^{-1}(\mathbf{X}-\mu)\right]}
+  &amp;= \frac{1}{(2\pi)^{n/2} \vert \Sigma \vert^{1/2}} \exp{\left[-\frac{1}{2}\underbrace{(\mathbf{X}-\mu)^{T}\Sigma^{-1}(\mathbf{X}-\mu)}_{\text{Mahalanobis Distance}}\right]}
   \end{aligned}\]
+
+    <ul>
+      <li>
+        <p><strong>마할라노비스 거리(Mahalanobis Distance)</strong> : 상관관계가 존재하는 다변량 데이터에서, 하나의 데이터 포인트가 특정 분포 혹은 군집에서 얼마나 떨어져 있는지를 측정하는 개념으로서, 단순 좌표 상의 거리뿐만 아니라 데이터 분포(분산-공분산 구조)를 반영하여 측정함</p>
+
+\[\begin{aligned}
+  D_{M}(x)
+  &amp;= \sqrt{(x-\mu)^{T}\Sigma^{-1}(x-\mu)}
+  \end{aligned}\]
+
+        <ul>
+          <li>$\sqrt{(x-\mu)^{T}(x-\mu)}$ : 데이터 포인트와 특정 분포 중심점 간 편차로서 유클리드 거리</li>
+          <li>$\Sigma$ : 특정 분포의 공분산 행렬로서 데이터의 분산과 변수 간 상관관계를 포함하며, 이를 반영하여 방향성과 크기에 따라 거리를 조정함</li>
+        </ul>
+      </li>
+    </ul>
   </li>
 </ul>
 
@@ -1394,7 +1421,7 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
 
 \[\begin{aligned}
   f(\mathbf{Z})
-  &amp;= \frac{1}{(2\pi)^{n/2} \vert \Sigma \vert^{1/2}} \exp{\left[-\frac{1}{2}(\mathbf{Z}-\mu)^{T}\Sigma^{-1}(\mathbf{Z}-\mu)\right]}
+  &amp;= \frac{1}{(2\pi)^{n/2} \vert \Sigma \vert^{1/2}} \exp{\left[-\frac{1}{2}\underbrace{(\mathbf{Z}-\mu)^{T}\Sigma^{-1}(\mathbf{Z}-\mu)}_{\text{Mahalanobis Distance}}\right]}
   \end{aligned}\]
   </li>
   <li>
@@ -1448,7 +1475,7 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
     <p><strong>Definition</strong></p>
 
     <blockquote>
-      <p><strong>함수 분포(Function Distribution)</strong> <br /> 가우시안 프로세스는 각 입력값에 대한 관측치를 개별적인 확률변수로 간주하고 이를 무한 차원으로 확장함으로써 다변량 가우시안 분포의 개념을 함수 공간으로 확장함. 즉, 함수를 선험적으로 정의하지 않고 데이터를 통해 전체 함수 형태를 확률적으로 예측한다는 점에서, 가우시안 프로세스는 함수 자체를 하나의 확률변수로써 다루고, 이를 비모수 추정한다고 볼 수 있음.</p>
+      <p><strong>함수 분포(Function Distribution)</strong> <br /> 가우시안 프로세스는 각 입력값에 대한 관측치를 개별적인 확률변수로 간주하고 이를 무한 차원으로 확장함으로써 다변량 가우시안 분포의 개념을 함수 공간으로 확장함. 즉, 함수(설명변수와 반응변수 간 관계식)를 선험적으로 정의하지 않고 데이터를 통해 전체 함수 형태를 확률적으로 예측한다는 점에서, 가우시안 프로세스는 함수 자체를 하나의 확률변수로써 다루고, 이를 비모수 추정한다고 볼 수 있음.</p>
     </blockquote>
 
 \[\begin{aligned}
@@ -1544,25 +1571,6 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
     </ul>
   </li>
   <li>
-    <p><strong>MVN(<code class="language-plaintext highlighter-rouge">M</code>ulti-<code class="language-plaintext highlighter-rouge">V</code>ariate <code class="language-plaintext highlighter-rouge">N</code>ormal Distribution)</strong> : 기존 데이터와 신규 데이터를 하나의 결합 가우시안 분포로 표현할 수 있음</p>
-
-\[\begin{aligned}
-  \begin{bmatrix}Y \\ \mathcal{F}^{*}\end{bmatrix}
-  \sim \mathcal{N} \left(\begin{bmatrix}\mu(X) \\ \mu(X^{*})\end{bmatrix},\begin{bmatrix}\mathbf{K}_{N} + \sigma^{2}_{N}\mathbf{I} &amp; \overrightarrow{\mathbf{k}}_{N}^{*} \\ \left(\overrightarrow{\mathbf{k}}_{N}^{*}\right)^{T} &amp; \mathcal{K}(X^{*}, X^{*})\end{bmatrix}\right)
-  \end{aligned}\]
-
-    <ul>
-      <li>
-        <p>Covariance vector between old and new:</p>
-
-\[\begin{aligned}
-  \overrightarrow{\mathbf{k}}_{n}^{*}
-  = \begin{bmatrix}\mathcal{K}(X^{*},X_{1}) &amp; \mathcal{K}(X^{*},X_{2}) &amp; \cdots &amp; \mathcal{K}(X^{*},X_{N})\end{bmatrix}^{T}
-  \end{aligned}\]
-      </li>
-    </ul>
-  </li>
-  <li>
     <p><strong>Prior Dist.</strong> : 새로운 입력을 관측하지 않은 상태에서 함수가 가질 수 있는 형태에 대한 정보는 기존에 관측되었던 값들로써 추론됨</p>
 
 \[\begin{aligned}
@@ -1586,6 +1594,30 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
 \[\begin{aligned}
   Y \mid X  \sim \mathcal{N}\left(\mu\left(X\right), \mathbf{K}_{N} + \sigma_{N}^{2}\mathbf{I}\right)
   \end{aligned}\]
+  </li>
+</ul>
+
+<h3 id="posterior-estimation"><span class="me-2">Posterior Estimation</span><a href="#posterior-estimation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p><strong>MVN(<code class="language-plaintext highlighter-rouge">M</code>ulti-<code class="language-plaintext highlighter-rouge">V</code>ariate <code class="language-plaintext highlighter-rouge">N</code>ormal Distribution)</strong> : 기존 데이터와 신규 데이터를 하나의 결합 가우시안 분포로 표현할 수 있음</p>
+
+\[\begin{aligned}
+  \begin{bmatrix}Y \\ \mathcal{F}^{*}\end{bmatrix}
+  \sim \mathcal{N} \left(\begin{bmatrix}\mu(X) \\ \mu(X^{*})\end{bmatrix},\begin{bmatrix}\mathbf{K}_{N} + \sigma^{2}_{N}\mathbf{I} &amp; \overrightarrow{\mathbf{k}}_{N}^{*} \\ \left(\overrightarrow{\mathbf{k}}_{N}^{*}\right)^{T} &amp; \mathcal{K}(X^{*}, X^{*})\end{bmatrix}\right)
+  \end{aligned}\]
+
+    <ul>
+      <li>
+        <p>Covariance vector between old and new:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{k}}_{n}^{*}
+  = \begin{bmatrix}\mathcal{K}(X^{*},X_{1}) &amp; \mathcal{K}(X^{*},X_{2}) &amp; \cdots &amp; \mathcal{K}(X^{*},X_{N})\end{bmatrix}^{T}
+  \end{aligned}\]
+      </li>
+    </ul>
   </li>
   <li>
     <p><strong>Posterior Dist.</strong> : 신규 데이터에 의해 갱신된 함수는 다시 가우시안 프로세스를 따름</p>

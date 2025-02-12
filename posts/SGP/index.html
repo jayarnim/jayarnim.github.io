@@ -837,7 +837,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="289 words"
+  title="308 words"
 >
   <em>1 min</em> read</span>
 
@@ -951,22 +951,31 @@
 <ul>
   <li>
     <p><strong>SVGP(<code class="language-plaintext highlighter-rouge">S</code>parse <code class="language-plaintext highlighter-rouge">V</code>ariational <code class="language-plaintext highlighter-rouge">G</code>aussian <code class="language-plaintext highlighter-rouge">P</code>rocess)</strong></p>
-  </li>
-  <li>
-    <p>$f$ 는 무한 차원의 확률 과정이므로 이를 직접 다루지 않고 유도점 $Z$ 와 이때의 함수 값 $u=f(Z)$ 를 이용하여 근사함</p>
-  </li>
-</ul>
+
+    <ul>
+      <li>
+        <p>Variational Inference:</p>
 
 \[\begin{aligned}
-\mathbb{E}_{f \sim q}[p(f \mid y, X)]
-&amp;= \int{q(f) \cdot p(f \mid y, X)\text{d}f}\\
-&amp;\downarrow\\
-\mathbb{E}_{u \sim q}[p(f \mid u, Z, X)]
-&amp;= \int{q(u) \cdot p(f \mid u, Z, X)\text{d}u}
-\end{aligned}\]
+  \log{p(Y \mid X)} \ge \mathbb{E}_{f \sim q}[\log{p(Y \mid f, X)}] - D_{KL}(q(f) \parallel p(f))
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>$f$ 는 무한 차원의 확률 과정이므로 이를 직접 다루지 않고 유도점 $Z$ 와 이때의 함수 값 $u=f(Z)$ 를 이용하여 근사함:</p>
 
-<ul>
-  <li><strong>DGP(<code class="language-plaintext highlighter-rouge">D</code>ecoupled <code class="language-plaintext highlighter-rouge">G</code>aussian <code class="language-plaintext highlighter-rouge">P</code>rocess)</strong></li>
+\[\begin{aligned}
+  \mathbb{E}_{f \sim q}[p(f \mid y, X)]
+  &amp;= \int{q(f) \cdot p(f \mid y, X)\text{d}f}\\
+  &amp;\downarrow\\
+  \mathbb{E}_{u \sim q}[p(f \mid u, Z, X)]
+  &amp;= \int{q(u) \cdot p(f \mid u, Z, X)\text{d}u}
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>DGP(<code class="language-plaintext highlighter-rouge">D</code>ecoupled <code class="language-plaintext highlighter-rouge">G</code>aussian <code class="language-plaintext highlighter-rouge">P</code>rocess)</strong></p>
+  </li>
 </ul>
 
   </div>
