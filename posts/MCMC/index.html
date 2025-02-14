@@ -1378,7 +1378,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1993 words"
+  title="1992 words"
 >
   <em>11 min</em> read</span>
 
@@ -1506,17 +1506,12 @@
 <p><a href="/_post_refer_img/BayesianDeepLearning/01-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianDeepLearning/01-03.png" alt="03" width="100%" loading="lazy"></a></p>
 
 <ul>
-  <li><strong>Markov Chain Monte Carlo(MCMC)</strong>
+  <li>
+    <p><strong>Markov Chain Monte Carlo(MCMC)</strong> : 이전 단계에서 추출한 표본을 기반으로 다음 단계의 표본을 순차로 추출하는 방법으로서, 차원이 높아질수록 표본 분포가 목표 분포로 수렴하는 속도가 지연되는 문제를 완화하나, 자기상관 문제에서 자유롭지 못하고 역전파 학습이 불가능함</p>
+
     <ul>
-      <li><strong>정의</strong> : 이전 단계에서 추출한 표본을 기반으로 다음 단계의 표본을 순차로 추출하는 방법</li>
-      <li><strong>장점</strong> : 차원이 높아질수록 표본 분포가 목표 분포로 수렴하는 속도가 지연되는 문제를 완화함</li>
-      <li><strong>단점</strong> : 모든 표본($x^{(t)}$)이 이전 단계에서 추출한 표본($x^{(t-1)}$)에 의존함</li>
-      <li><strong>종류</strong>
-        <ul>
-          <li>Metropolis Hastings Method</li>
-          <li>Gibbs Sampling</li>
-        </ul>
-      </li>
+      <li>Metropolis Hastings Method</li>
+      <li>Gibbs Sampling</li>
     </ul>
   </li>
 </ul>
