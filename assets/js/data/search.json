@@ -3,7 +3,7 @@
   {
     "title": "Sparse Gaussian Process",
     "url": "/posts/SGP/",
-    "categories": "Machine Learning Techs, Bayesian Deep Learning",
+    "categories": "Data Mining Techs, Bayesian Deep Learning",
     "tags": "Deep Learning, Bayesian, Stochastic Process, Nonparametric Estimation, Gaussian Process, Variational Inference",
     "date": "2025-01-23 00:00:00 +0900",
     
@@ -20,7 +20,7 @@
   {
     "title": "Bayesian Attention Modules",
     "url": "/posts/Bayesian_Attention_Modules/",
-    "categories": "Machine Learning Techs, Bayesian Deep Learning",
+    "categories": "Data Mining Techs, Bayesian Deep Learning",
     "tags": "Deep Learning, Bayesian, Attention Mechanism, Variational Inference",
     "date": "2024-09-19 00:00:00 +0900",
     
@@ -37,8 +37,8 @@
   {
     "title": "DACR",
     "url": "/posts/DACR/",
-    "categories": "Data Mining, Recommender System",
-    "tags": "Paper Review, Data Mining, Recommender System, Collaborative Filtering, Latent Factor Model, Deep Learning, Attention Mechanism",
+    "categories": "AI Application, Recommender System",
+    "tags": "Paper Review, AI Application, Recommender System, Collaborative Filtering, Latent Factor Model, Deep Learning, Attention Mechanism",
     "date": "2024-09-05 00:00:00 +0900",
     
 
@@ -54,8 +54,8 @@
   {
     "title": "FAWMF",
     "url": "/posts/FAWMF/",
-    "categories": "Data Mining, Recommender System",
-    "tags": "Paper Review, Data Mining, Recommender System, Collaborative Filtering, Latent Factor Model, Deep Learning, Autoencoder, Implicit Feedback, Weight Approach, Bayesian",
+    "categories": "AI Application, Recommender System",
+    "tags": "Paper Review, AI Application, Recommender System, Collaborative Filtering, Latent Factor Model, Deep Learning, Autoencoder, Implicit Feedback, Weight Approach, Bayesian",
     "date": "2024-08-14 00:00:00 +0900",
     
 
@@ -71,8 +71,8 @@
   {
     "title": "GPT",
     "url": "/posts/GPT/",
-    "categories": "Data Mining, Text Analytics",
-    "tags": "Data Mining, NLP, Text Mining, Generative Model, Attention Mechanism",
+    "categories": "AI Application, Text Analytics",
+    "tags": "AI Application, NLP, Generative Model, Attention Mechanism",
     "date": "2024-08-09 00:00:00 +0900",
     
 
@@ -88,8 +88,8 @@
   {
     "title": "BERT",
     "url": "/posts/BERT/",
-    "categories": "Data Mining, Text Analytics",
-    "tags": "Data Mining, NLP, Text Mining, Language Model, Attention Mechanism",
+    "categories": "AI Application, Text Analytics",
+    "tags": "AI Application, NLP, Language Model, Attention Mechanism",
     "date": "2024-08-08 00:00:00 +0900",
     
 
@@ -105,8 +105,8 @@
   {
     "title": "Transformer",
     "url": "/posts/Transformer/",
-    "categories": "Data Mining, Text Analytics",
-    "tags": "Data Mining, NLP, Text Mining, Machine Translation, Attention Mechanism",
+    "categories": "AI Application, Text Analytics",
+    "tags": "AI Application, NLP, Machine Translation, Attention Mechanism",
     "date": "2024-08-07 00:00:00 +0900",
     
 
@@ -122,8 +122,8 @@
   {
     "title": "Attention Mechanism",
     "url": "/posts/ATTN/",
-    "categories": "Data Mining, Text Analytics",
-    "tags": "Data Mining, NLP, Text Mining, Machine Translation, Attention Mechanism",
+    "categories": "AI Application, Text Analytics",
+    "tags": "AI Application, NLP, Machine Translation, Attention Mechanism",
     "date": "2024-08-06 00:00:00 +0900",
     
 
@@ -139,8 +139,8 @@
   {
     "title": "SEQ2SEQ",
     "url": "/posts/SEQ2SEQ/",
-    "categories": "Data Mining, Text Analytics",
-    "tags": "Data Mining, NLP, Text Mining, Machine Translation, Metric",
+    "categories": "AI Application, Text Analytics",
+    "tags": "AI Application, NLP, Machine Translation, Metric",
     "date": "2024-08-05 00:00:00 +0900",
     
 
@@ -156,8 +156,8 @@
   {
     "title": "Topic Model",
     "url": "/posts/Topic_Model/",
-    "categories": "Data Mining, Text Analytics",
-    "tags": "Data Mining, NLP, Text Mining, Topic Model",
+    "categories": "AI Application, Text Analytics",
+    "tags": "AI Application, NLP, Topic Model",
     "date": "2024-08-04 00:00:00 +0900",
     
 
@@ -173,8 +173,8 @@
   {
     "title": "Language Model",
     "url": "/posts/Langauge_Model/",
-    "categories": "Data Mining, Text Analytics",
-    "tags": "Data Mining, NLP, Text Mining, Language Model, Metric",
+    "categories": "AI Application, Text Analytics",
+    "tags": "AI Application, NLP, Language Model, Metric",
     "date": "2024-08-03 00:00:00 +0900",
     
 
@@ -190,8 +190,8 @@
   {
     "title": "Docs Representation",
     "url": "/posts/Docs_Representation/",
-    "categories": "Data Mining, Text Analytics",
-    "tags": "Data Mining, NLP, Text Mining, Document Representation, Embedding",
+    "categories": "AI Application, Text Analytics",
+    "tags": "AI Application, NLP, Document Representation, Embedding",
     "date": "2024-08-02 00:00:00 +0900",
     
 
@@ -207,8 +207,8 @@
   {
     "title": "WORD2VEC Improvements",
     "url": "/posts/WORD2VEC_Improvements/",
-    "categories": "Data Mining, Text Analytics",
-    "tags": "Data Mining, NLP, Text Mining, Word Representation, Embedding",
+    "categories": "AI Application, Text Analytics",
+    "tags": "AI Application, NLP, Word Representation, Embedding",
     "date": "2024-08-01 00:00:00 +0900",
     
 
@@ -224,8 +224,8 @@
   {
     "title": "Word Representation",
     "url": "/posts/Word_Representation/",
-    "categories": "Data Mining, Text Analytics",
-    "tags": "Data Mining, NLP, Text Mining, Word Representation, Embedding",
+    "categories": "AI Application, Text Analytics",
+    "tags": "AI Application, NLP, Word Representation, Embedding",
     "date": "2024-07-31 00:00:00 +0900",
     
 
@@ -241,8 +241,8 @@
   {
     "title": "ExpoMF",
     "url": "/posts/EXMF/",
-    "categories": "Data Mining, Recommender System",
-    "tags": "Paper Review, Data Mining, Recommender System, Collaborative Filtering, Latent Factor Model, Implicit Feedback, Weight Approach, Bayesian",
+    "categories": "AI Application, Recommender System",
+    "tags": "Paper Review, AI Application, Recommender System, Collaborative Filtering, Latent Factor Model, Implicit Feedback, Weight Approach, Bayesian",
     "date": "2024-07-31 00:00:00 +0900",
     
 
@@ -258,8 +258,8 @@
   {
     "title": "Text Data Preprocessing",
     "url": "/posts/Text_Data_Preprocessing/",
-    "categories": "Data Mining, Text Analytics",
-    "tags": "Data Mining, NLP, Text Mining",
+    "categories": "AI Application, Text Analytics",
+    "tags": "AI Application, NLP",
     "date": "2024-07-30 00:00:00 +0900",
     
 
@@ -275,8 +275,8 @@
   {
     "title": "Regular Expression",
     "url": "/posts/Regular-Expression/",
-    "categories": "Data Mining, Text Analytics",
-    "tags": "Data Mining, NLP, Text Mining",
+    "categories": "AI Application, Text Analytics",
+    "tags": "AI Application, NLP",
     "date": "2024-07-29 00:00:00 +0900",
     
 
@@ -292,7 +292,7 @@
   {
     "title": "Gaussian Process",
     "url": "/posts/GP/",
-    "categories": "Statistical Techs, Bayesian Modeling",
+    "categories": "Data Mining Techs, Bayesian Modeling",
     "tags": "Statistics, Bayesian, Stochastic Process, Nonparametric Estimation, Gaussian Process",
     "date": "2024-07-21 00:00:00 +0900",
     
@@ -309,7 +309,7 @@
   {
     "title": "Bayesian Regression",
     "url": "/posts/Bayesian_Regression/",
-    "categories": "Statistical Techs, Bayesian Modeling",
+    "categories": "Data Mining Techs, Bayesian Modeling",
     "tags": "Statistics, Bayesian, Regression",
     "date": "2024-07-20 00:00:00 +0900",
     
@@ -326,7 +326,7 @@
   {
     "title": "Multi Armed Bandits",
     "url": "/posts/Multi_Armed_Bandits/",
-    "categories": "Statistical Techs, Bayesian Modeling",
+    "categories": "Data Mining Techs, Bayesian Modeling",
     "tags": "Statistics, Bayesian, MAB, Multi Armed Bandits",
     "date": "2024-07-19 00:00:00 +0900",
     
@@ -343,7 +343,7 @@
   {
     "title": "Bayesian A/B Test",
     "url": "/posts/Bayesian_A_B_Test/",
-    "categories": "Statistical Techs, Bayesian Modeling",
+    "categories": "Data Mining Techs, Bayesian Modeling",
     "tags": "Statistics, Bayesian, A/B Test",
     "date": "2024-07-18 00:00:00 +0900",
     
@@ -360,8 +360,8 @@
   {
     "title": "VABMF",
     "url": "/posts/VABMF/",
-    "categories": "Data Mining, Recommender System",
-    "tags": "Paper Review, Data Mining, Recommender System, Collaborative Filtering, Latent Factor Model, Deep Learning, Autoencoder, Implicit Feedback, Bayesian",
+    "categories": "AI Application, Recommender System",
+    "tags": "Paper Review, AI Application, Recommender System, Collaborative Filtering, Latent Factor Model, Deep Learning, Autoencoder, Implicit Feedback, Bayesian",
     "date": "2024-07-17 00:00:00 +0900",
     
 
@@ -377,7 +377,7 @@
   {
     "title": "Bayes Action",
     "url": "/posts/Bayes_Action/",
-    "categories": "Statistical Techs, Bayesian Modeling",
+    "categories": "Data Mining Techs, Bayesian Modeling",
     "tags": "Statistics, Bayesian, Optimization, Objective Function",
     "date": "2024-07-17 00:00:00 +0900",
     
@@ -394,7 +394,7 @@
   {
     "title": "Prior Determination",
     "url": "/posts/Prior/",
-    "categories": "Statistical Techs, Bayesian Modeling",
+    "categories": "Data Mining Techs, Bayesian Modeling",
     "tags": "Statistics, Bayesian",
     "date": "2024-07-16 00:00:00 +0900",
     
@@ -411,7 +411,7 @@
   {
     "title": "What? Bayesian",
     "url": "/posts/Bayesian/",
-    "categories": "Statistical Techs, Bayesian Modeling",
+    "categories": "Data Mining Techs, Bayesian Modeling",
     "tags": "Statistics, Bayesian, Optimization, MLE",
     "date": "2024-07-15 00:00:00 +0900",
     
@@ -428,7 +428,7 @@
   {
     "title": "Logistic Regression Analysis",
     "url": "/posts/Logistic_Regression_Analysis/",
-    "categories": "Statistical Techs, Regression Analysis",
+    "categories": "Data Mining Techs, Regression Analysis",
     "tags": "Statistics, Regression",
     "date": "2024-07-14 00:00:00 +0900",
     
@@ -445,7 +445,7 @@
   {
     "title": "Improvement of OLS",
     "url": "/posts/Improvement_of_OLS/",
-    "categories": "Statistical Techs, Regression Analysis",
+    "categories": "Data Mining Techs, Regression Analysis",
     "tags": "Statistics, Regression",
     "date": "2024-07-13 00:00:00 +0900",
     
@@ -462,7 +462,7 @@
   {
     "title": "Variable Issues",
     "url": "/posts/Variable_Issues/",
-    "categories": "Statistical Techs, Regression Analysis",
+    "categories": "Data Mining Techs, Regression Analysis",
     "tags": "Statistics, Regression",
     "date": "2024-07-12 00:00:00 +0900",
     
@@ -479,7 +479,7 @@
   {
     "title": "Regression Diagnostics",
     "url": "/posts/Regression_Diagnostics/",
-    "categories": "Statistical Techs, Regression Analysis",
+    "categories": "Data Mining Techs, Regression Analysis",
     "tags": "Statistics, Regression",
     "date": "2024-07-11 00:00:00 +0900",
     
@@ -496,7 +496,7 @@
   {
     "title": "Multiple Linear Regression Analysis",
     "url": "/posts/Multiple_Linear_Regression_Analysis/",
-    "categories": "Statistical Techs, Regression Analysis",
+    "categories": "Data Mining Techs, Regression Analysis",
     "tags": "Statistics, Regression, f Test",
     "date": "2024-07-10 00:00:00 +0900",
     
@@ -513,7 +513,7 @@
   {
     "title": "Regression Coefficient Estimation",
     "url": "/posts/Regression_Coefficient_Estimation/",
-    "categories": "Statistical Techs, Regression Analysis",
+    "categories": "Data Mining Techs, Regression Analysis",
     "tags": "Statistics, Regression, Estimation, OLS",
     "date": "2024-07-09 00:00:00 +0900",
     
@@ -530,7 +530,7 @@
   {
     "title": "Simple Linear Regression Analysis",
     "url": "/posts/Simple_Linear_Regression_Analysis/",
-    "categories": "Statistical Techs, Regression Analysis",
+    "categories": "Data Mining Techs, Regression Analysis",
     "tags": "Statistics, Regression, t Test, Goodness of Fit Test, R2",
     "date": "2024-07-08 00:00:00 +0900",
     
@@ -547,7 +547,7 @@
   {
     "title": "Summarize Statistical Method",
     "url": "/posts/Summarize_Statistical_Methods/",
-    "categories": "Statistical Techs, Statistics",
+    "categories": "Data Mining Techs, Statistics",
     "tags": "Statistics, Normality Test, Shapiro-Wilk Test, Homogeneity of Variance Test, Levene’s Test, ANOVA",
     "date": "2024-07-07 00:00:00 +0900",
     
@@ -564,7 +564,7 @@
   {
     "title": "A/B Test",
     "url": "/posts/A_B_Test/",
-    "categories": "Statistical Techs, Statistics",
+    "categories": "Data Mining Techs, Statistics",
     "tags": "Statistics, A/B Test, Two Sample t Test, Paired Sample t Test, Goodness of Fit Test, Test of Independence",
     "date": "2024-07-06 00:00:00 +0900",
     
@@ -581,7 +581,7 @@
   {
     "title": "Statistical Inference",
     "url": "/posts/Statistical_Inference/",
-    "categories": "Statistical Techs, Statistics",
+    "categories": "Data Mining Techs, Statistics",
     "tags": "Statistics, Estimation, z Test, t Test",
     "date": "2024-07-05 00:00:00 +0900",
     
@@ -598,7 +598,7 @@
   {
     "title": "Sample Dist.",
     "url": "/posts/Sample_Dist/",
-    "categories": "Statistical Techs, Statistics",
+    "categories": "Data Mining Techs, Statistics",
     "tags": "Statistics",
     "date": "2024-07-04 00:00:00 +0900",
     
@@ -615,7 +615,7 @@
   {
     "title": "Prob. Dist. Functions",
     "url": "/posts/Prob_Dist_Functions/",
-    "categories": "Statistical Techs, Statistics",
+    "categories": "Data Mining Techs, Statistics",
     "tags": "Statistics",
     "date": "2024-07-03 00:00:00 +0900",
     
@@ -632,8 +632,8 @@
   {
     "title": "BPMF",
     "url": "/posts/BPMF/",
-    "categories": "Data Mining, Recommender System",
-    "tags": "Paper Review, Data Mining, Recommender System, Collaborative Filtering, Latent Factor Model, Bayesian",
+    "categories": "AI Application, Recommender System",
+    "tags": "Paper Review, AI Application, Recommender System, Collaborative Filtering, Latent Factor Model, Bayesian",
     "date": "2024-07-03 00:00:00 +0900",
     
 
@@ -649,7 +649,7 @@
   {
     "title": "Probability",
     "url": "/posts/Probability/",
-    "categories": "Statistical Techs, Statistics",
+    "categories": "Data Mining Techs, Statistics",
     "tags": "Statistics",
     "date": "2024-07-02 00:00:00 +0900",
     
@@ -666,7 +666,7 @@
   {
     "title": "What? Statistics",
     "url": "/posts/Statistics/",
-    "categories": "Statistical Techs, Statistics",
+    "categories": "Data Mining Techs, Statistics",
     "tags": "Statistics",
     "date": "2024-07-01 00:00:00 +0900",
     
@@ -683,7 +683,7 @@
   {
     "title": "Variational AutoEncoder",
     "url": "/posts/VAE/",
-    "categories": "Machine Learning Techs, Bayesian Deep Learning",
+    "categories": "Data Mining Techs, Bayesian Deep Learning",
     "tags": "Deep Learning, Bayesian, Generative Model, Autoencoder, Variational Inference",
     "date": "2024-06-26 00:00:00 +0900",
     
@@ -700,7 +700,7 @@
   {
     "title": "Stein Variational Gradient Descent",
     "url": "/posts/SVGD/",
-    "categories": "Machine Learning Techs, Bayesian Deep Learning",
+    "categories": "Data Mining Techs, Bayesian Deep Learning",
     "tags": "Deep Learning, Bayesian, Objective Function, Stein Discrepancy, Nonparametric Estimation",
     "date": "2024-06-19 00:00:00 +0900",
     
@@ -717,7 +717,7 @@
   {
     "title": "Variational Inference",
     "url": "/posts/VI/",
-    "categories": "Machine Learning Techs, Bayesian Deep Learning",
+    "categories": "Data Mining Techs, Bayesian Deep Learning",
     "tags": "Deep Learning, Bayesian, Objective Function, Variational Inference",
     "date": "2024-06-12 00:00:00 +0900",
     
@@ -734,7 +734,7 @@
   {
     "title": "Monte Carlo Simulation",
     "url": "/posts/MCMC/",
-    "categories": "Machine Learning Techs, Bayesian Deep Learning",
+    "categories": "Data Mining Techs, Bayesian Deep Learning",
     "tags": "Deep Learning, Bayesian, Monte Carlo Simulation, Rejection Sampling, Markov Chain, Markov Chain Monte Carlo",
     "date": "2024-06-05 00:00:00 +0900",
     
@@ -751,8 +751,8 @@
   {
     "title": "AutoEncoder based Collaborative Filtering",
     "url": "/posts/AutoRec/",
-    "categories": "Data Mining, Recommender System",
-    "tags": "Paper Review, Data Mining, Recommender System, Collaborative Filtering, Deep Learning, Autoencoder, Bayesian",
+    "categories": "AI Application, Recommender System",
+    "tags": "Paper Review, AI Application, Recommender System, Collaborative Filtering, Deep Learning, Autoencoder, Bayesian",
     "date": "2024-05-01 00:00:00 +0900",
     
 
@@ -768,8 +768,8 @@
   {
     "title": "MLP based Latent Factor Models",
     "url": "/posts/NCF/",
-    "categories": "Data Mining, Recommender System",
-    "tags": "Paper Review, Data Mining, Recommender System, Collaborative Filtering, Latent Factor Model, Deep Learning",
+    "categories": "AI Application, Recommender System",
+    "tags": "Paper Review, AI Application, Recommender System, Collaborative Filtering, Latent Factor Model, Deep Learning",
     "date": "2024-04-17 00:00:00 +0900",
     
 
@@ -785,8 +785,8 @@
   {
     "title": "FPMC",
     "url": "/posts/FPMC/",
-    "categories": "Data Mining, Recommender System",
-    "tags": "Paper Review, Data Mining, Recommender System, Collaborative Filtering, Sequential Recommender System, Latent Factor Model",
+    "categories": "AI Application, Recommender System",
+    "tags": "Paper Review, AI Application, Recommender System, Collaborative Filtering, Sequential Recommender System, Latent Factor Model",
     "date": "2024-03-20 00:00:00 +0900",
     
 
@@ -802,8 +802,8 @@
   {
     "title": "TimeSVD++",
     "url": "/posts/TimeSVD++/",
-    "categories": "Data Mining, Recommender System",
-    "tags": "Paper Review, Data Mining, Recommender System, Collaborative Filtering, Temporal Recommender System, Latent Factor Model",
+    "categories": "AI Application, Recommender System",
+    "tags": "Paper Review, AI Application, Recommender System, Collaborative Filtering, Temporal Recommender System, Latent Factor Model",
     "date": "2024-03-06 00:00:00 +0900",
     
 
@@ -819,8 +819,8 @@
   {
     "title": "BPR",
     "url": "/posts/BPR/",
-    "categories": "Data Mining, Recommender System",
-    "tags": "Paper Review, Data Mining, Recommender System, Collaborative Filtering, Objective Function, Implicit Feedback, Pairewise Appoach, Ranking Prediction, Bayesian",
+    "categories": "AI Application, Recommender System",
+    "tags": "Paper Review, AI Application, Recommender System, Collaborative Filtering, Objective Function, Implicit Feedback, Pairewise Appoach, Ranking Prediction, Bayesian",
     "date": "2024-02-29 00:00:00 +0900",
     
 
@@ -836,8 +836,8 @@
   {
     "title": "Latent Factor Model",
     "url": "/posts/LFM/",
-    "categories": "Data Mining, Recommender System",
-    "tags": "Data Mining, Recommender System, Collaborative Filtering, Latent Factor Model",
+    "categories": "AI Application, Recommender System",
+    "tags": "AI Application, Recommender System, Collaborative Filtering, Latent Factor Model",
     "date": "2024-02-15 00:00:00 +0900",
     
 
@@ -853,8 +853,8 @@
   {
     "title": "Memory based Collaborative Filtering",
     "url": "/posts/CF/",
-    "categories": "Data Mining, Recommender System",
-    "tags": "Data Mining, Recommender System, Collaborative Filtering",
+    "categories": "AI Application, Recommender System",
+    "tags": "AI Application, Recommender System, Collaborative Filtering",
     "date": "2024-02-01 00:00:00 +0900",
     
 
@@ -904,8 +904,8 @@
   {
     "title": "What? RecSys",
     "url": "/posts/What_RecSys/",
-    "categories": "Data Mining, Recommender System",
-    "tags": "Data Mining, Recommender System, Metric",
+    "categories": "AI Application, Recommender System",
+    "tags": "AI Application, Recommender System, Metric",
     "date": "2024-01-18 00:00:00 +0900",
     
 
@@ -921,7 +921,7 @@
   {
     "title": "Neural Network",
     "url": "/posts/NN/",
-    "categories": "Machine Learning Techs, Machine Learning",
+    "categories": "Data Mining Techs, Machine Learning",
     "tags": "Deep Learning, FFNN",
     "date": "2024-01-16 00:00:00 +0900",
     
@@ -938,7 +938,7 @@
   {
     "title": "Ensemble",
     "url": "/posts/Ensemble/",
-    "categories": "Machine Learning Techs, Machine Learning",
+    "categories": "Data Mining Techs, Machine Learning",
     "tags": "Machine Learning, Supervised Learning, Ensemble",
     "date": "2024-01-15 00:00:00 +0900",
     
@@ -955,7 +955,7 @@
   {
     "title": "t-SNE",
     "url": "/posts/t_SNE/",
-    "categories": "Machine Learning Techs, Machine Learning",
+    "categories": "Data Mining Techs, Machine Learning",
     "tags": "Machine Learning, Unsupervised Learning, Feature Engineering",
     "date": "2024-01-14 00:00:00 +0900",
     
@@ -972,7 +972,7 @@
   {
     "title": "Linear Discriminant Analysis",
     "url": "/posts/LDA/",
-    "categories": "Machine Learning Techs, Machine Learning",
+    "categories": "Data Mining Techs, Machine Learning",
     "tags": "Machine Learning, Unsupervised Learning, Feature Engineering",
     "date": "2024-01-13 00:00:00 +0900",
     
@@ -989,7 +989,7 @@
   {
     "title": "Principal Component Analysis",
     "url": "/posts/PCA/",
-    "categories": "Machine Learning Techs, Machine Learning",
+    "categories": "Data Mining Techs, Machine Learning",
     "tags": "Machine Learning, Unsupervised Learning, Feature Engineering",
     "date": "2024-01-12 00:00:00 +0900",
     
@@ -1006,7 +1006,7 @@
   {
     "title": "Dimensionality Reduction",
     "url": "/posts/Dimensionality_Reduction/",
-    "categories": "Machine Learning Techs, Machine Learning",
+    "categories": "Data Mining Techs, Machine Learning",
     "tags": "Machine Learning, Unsupervised Learning, Feature Engineering",
     "date": "2024-01-11 00:00:00 +0900",
     
@@ -1023,7 +1023,7 @@
   {
     "title": "Hierarchical Clustering",
     "url": "/posts/Hierarchical_Clustering/",
-    "categories": "Machine Learning Techs, Machine Learning",
+    "categories": "Data Mining Techs, Machine Learning",
     "tags": "Machine Learning, Unsupervised Learning, Clustering",
     "date": "2024-01-10 00:00:00 +0900",
     
@@ -1040,7 +1040,7 @@
   {
     "title": "DBSCAN",
     "url": "/posts/DBSCAN/",
-    "categories": "Machine Learning Techs, Machine Learning",
+    "categories": "Data Mining Techs, Machine Learning",
     "tags": "Machine Learning, Unsupervised Learning, Clustering",
     "date": "2024-01-09 00:00:00 +0900",
     
@@ -1057,7 +1057,7 @@
   {
     "title": "k-Means",
     "url": "/posts/k_Means/",
-    "categories": "Machine Learning Techs, Machine Learning",
+    "categories": "Data Mining Techs, Machine Learning",
     "tags": "Machine Learning, Unsupervised Learning, Clustering",
     "date": "2024-01-08 00:00:00 +0900",
     
@@ -1074,7 +1074,7 @@
   {
     "title": "Clustering",
     "url": "/posts/Clustering/",
-    "categories": "Machine Learning Techs, Machine Learning",
+    "categories": "Data Mining Techs, Machine Learning",
     "tags": "Machine Learning, Unsupervised Learning, Clustering, Metric",
     "date": "2024-01-07 00:00:00 +0900",
     
@@ -1091,7 +1091,7 @@
   {
     "title": "Support Vector Machine",
     "url": "/posts/SVM/",
-    "categories": "Machine Learning Techs, Machine Learning",
+    "categories": "Data Mining Techs, Machine Learning",
     "tags": "Machine Learning, Supervised Learning, Classification",
     "date": "2024-01-06 00:00:00 +0900",
     
@@ -1108,7 +1108,7 @@
   {
     "title": "k-NN",
     "url": "/posts/k_NN/",
-    "categories": "Machine Learning Techs, Machine Learning",
+    "categories": "Data Mining Techs, Machine Learning",
     "tags": "Machine Learning, Supervised Learning, Classification",
     "date": "2024-01-05 00:00:00 +0900",
     
@@ -1125,7 +1125,7 @@
   {
     "title": "Naive Bayes",
     "url": "/posts/Naive_Bayes/",
-    "categories": "Machine Learning Techs, Machine Learning",
+    "categories": "Data Mining Techs, Machine Learning",
     "tags": "Machine Learning, Supervised Learning, Classification, Bayesian",
     "date": "2024-01-04 00:00:00 +0900",
     
@@ -1142,7 +1142,7 @@
   {
     "title": "Decision Tree",
     "url": "/posts/Decision_Tree/",
-    "categories": "Machine Learning Techs, Machine Learning",
+    "categories": "Data Mining Techs, Machine Learning",
     "tags": "Machine Learning, Supervised Learning, Classification",
     "date": "2024-01-03 00:00:00 +0900",
     
@@ -1159,7 +1159,7 @@
   {
     "title": "Supervised Model Selection",
     "url": "/posts/Supervised_Model_Selection/",
-    "categories": "Machine Learning Techs, Machine Learning",
+    "categories": "Data Mining Techs, Machine Learning",
     "tags": "Machine Learning, Supervised Learning, Metric, Cross Validation",
     "date": "2024-01-02 00:00:00 +0900",
     
@@ -1176,7 +1176,7 @@
   {
     "title": "What? Data Science",
     "url": "/posts/Data_Science/",
-    "categories": "Machine Learning Techs, Machine Learning",
+    "categories": "Data Mining Techs, Machine Learning",
     "tags": "Machine Learning",
     "date": "2024-01-01 00:00:00 +0900",
     
