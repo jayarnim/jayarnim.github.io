@@ -698,7 +698,7 @@
   },
   
   {
-    "title": "Stein Variational Gradient Descent",
+    "title": "Posterior Estimation (3) Stein Variational Gradient Descent",
     "url": "/posts/SVGD/",
     "categories": "Data Mining Techs, Bayesian Deep Learning",
     "tags": "Deep Learning, Bayesian, Objective Function, Stein Discrepancy, Nonparametric Estimation",
@@ -715,7 +715,7 @@
   },
   
   {
-    "title": "Variational Inference",
+    "title": "Posterior Estimation (2) Variational Inference",
     "url": "/posts/VI/",
     "categories": "Data Mining Techs, Bayesian Deep Learning",
     "tags": "Deep Learning, Bayesian, Objective Function, Variational Inference",
@@ -732,7 +732,7 @@
   },
   
   {
-    "title": "Monte Carlo Simulation",
+    "title": "Posterior Estimation (1) Monte Carlo Simulation",
     "url": "/posts/MCMC/",
     "categories": "Data Mining Techs, Bayesian Deep Learning",
     "tags": "Deep Learning, Bayesian, Monte Carlo Simulation, Rejection Sampling, Markov Chain, Markov Chain Monte Carlo",
@@ -865,40 +865,6 @@
     
     "snippet": "Collaborative Filtering      협업 필터링(Collaborative Filtering) : 과거 여러 사용자들이 다양한 아이템에 대하여 평가 점수를 매긴 기록을 활용하여 아직 상호작용하지 않은 아이템에 대한 사용자의 평점을 추론하는 방법론              사용자 기반 협업 필터링(User-Based Collaborative...",
     "content": "Collaborative Filtering      협업 필터링(Collaborative Filtering) : 과거 여러 사용자들이 다양한 아이템에 대하여 평가 점수를 매긴 기록을 활용하여 아직 상호작용하지 않은 아이템에 대한 사용자의 평점을 추론하는 방법론              사용자 기반 협업 필터링(User-Based Collaborative Filtering) : Identify like-minded users      아이템 기반 협업 필터링(Item-Based Collaborative Filtering) : Identify buying patterns            사용자-아이템 상호작용 행렬(User-Item Interaction Matrix) : $M$ 명의 사용자와 $N$ 가지 아이템 간의 상호작용을 수치적으로 표현한 행렬로서, 통상 행 벡터는 사용자를, 열 벡터는 아이템을 의미함    \\[r_{u,i} \\in \\mathbf{R} \\in \\mathbb{R}^{M \\times N}\\]          협업 필터링은 실질적으로 사용자-아이템 상호작용 행렬의 결측치(위 예시의 $-1$)를 채우는 방법이므로 행렬 완성 문제라고도 부름      Function      Bias-aware Collaborative Filtering Function\\[\\begin{aligned}  \\hat{r}_{u,i}  &amp;= \\mu + \\beta_{u} + \\beta_{i} + \\text{what}  \\end{aligned}\\]          $\\hat{r}_{u,i}$ : 사용자 $u$ 의 아이템 $i$ 에 대한 평점 예측값      $\\mu$ : 커뮤니티 평점 평균      $\\beta_{u}$ : 사용자 $u$ 의 평균 평점 편차로서 사용자의 평점 척도      $\\beta_{i}$ : 아이템 $i$ 의 평균 평점 편차로서 아이템의 인기도            What?          k-NN Algorithm(Memory based Collaborative Filtering)      Decision Tree Algorithm      Association Rules Algorithm      Naive Bayes Algorithm      Matrix Factorization Algorithm(Latent Factor Model)      Memory based Collaborative Filtering      메모리 기반 협업 필터링(Memory based Collaborative Filtering) : (사용자 기반 협업 필터링 기준으로) 사용자가 상호작용하지 않은 아이템에 대한 선호를 예측함에 있어, 해당 아이템에 대한 피어 그룹의 선호를 유사도만큼 가중 평균하는 방법\\[\\begin{aligned}  \\text{what}  &amp;= \\frac{\\sum_{v \\in p(i \\mid u)}{\\text{sim}(u,v) \\cdot \\left(r_{v,i}-\\overline{r}_{v}\\right)}}{\\sum_{v \\in p(i \\mid u)}{\\vert \\text{sim}(u,v) \\vert}}  \\end{aligned}\\]          $v \\in p(i \\mid u)$ : 타깃 사용자 $u$ 의 $k$-Nearest Neighbor 중 타깃 아이템 $i$ 에 대하여 펑점을 매긴 사용자 집합으로서 피어 그룹(Peer Group)      How to Calculate $\\text{sim}(u,v)$      피어슨 상관계수(Pearson Correlation Coefficient) : 사용자 벡터 간 평점 척도에 차이가 클 경우 유용함\\[\\begin{aligned}  \\text{sim}(u,v)  &amp;= \\frac{\\sum_{j \\in I_{u} \\cap I_{v}}{\\left(r_{u,j}-\\overline{r}_{u}\\right)\\cdot\\left(r_{v,j}-\\overline{r}_{v}\\right)}}{\\sqrt{\\sum_{j \\in I_{u} \\cap I_{v}}{\\left(r_{u,j}-\\overline{r}_{u}\\right)^{2}}}\\cdot\\sqrt{\\sum_{j \\in I_{u} \\cap I_{v}}{\\left(r_{v,j}-\\overline{r}_{v}\\right)^{2}}}}  \\end{aligned}\\]        코사인 유사도(Cosine Measure) : 상호작용 데이터가 희박할 경우 유용함\\[\\begin{aligned}  \\text{sim}(u,v)  &amp;= \\frac{\\overrightarrow{\\mathbf{r}}_{u} \\cdot \\overrightarrow{\\mathbf{r}}_{v}}{\\Vert \\overrightarrow{\\mathbf{r}}_{u} \\Vert_{L2} \\cdot \\Vert \\overrightarrow{\\mathbf{r}}_{v} \\Vert_{L2}}  \\end{aligned}\\]          \\(\\overrightarrow{\\mathbf{r}}_{u} \\in \\mathbf{R}_{M \\times N}\\) : 사용자-아이템 상호작용 행렬의 행 벡터로서 사용자 벡터      Discounted Similarity      유사도 할인(Discounted Similarity) : 두 사용자 간 공동으로 상호작용한 아이템 갯수($\\vert I_{u} \\cap I_{v}\\vert$)가 적을 경우, 유사도 값을 신뢰하기 어려우므로 이에 비례하여 유사도를 할인함\\[\\begin{aligned}  \\text{sim}(u,v)  &amp;\\leftarrow \\underbrace{\\frac{\\min{\\Big(\\vert I_{u} \\cap I_{v}\\vert, \\beta\\Big)}}{\\beta}}_{\\text{Discount Factor}} \\cdot \\text{sim}(u,v)  \\end{aligned}\\]  Discounted Importance      중요도 할인(Discounted Importance) : 대중성 있는 아이템의 경우 사용자가 이미 경험했거나 인지하고 있지만 소비하지 아니하기로 결정한 아이템일 가능성이 높으므로, 대중성에 비례하여 아이템의 중요도(평점)을 할인함\\[\\begin{aligned}  \\overrightarrow{\\mathbf{r}}_{i}  &amp;\\leftarrow \\underbrace{\\log{\\frac{M}{m_{i}}}}_{\\text{Discount Factor}} \\cdot \\overrightarrow{\\mathbf{r}}_{i}  \\end{aligned}\\]          \\(\\overrightarrow{\\mathbf{r}}_{i} \\in \\mathbf{R}_{M \\times N}\\) : 사용자-아이템 상호작용 행렬의 열 벡터로서 아이템 벡터      $M$ : 총 사용자 수      $m_{i}$ : 아이템 $i$ 에 대하여 상호작용한 사용자 수      Reference  https://towardsdatascience.com/essentials-of-recommendation-engines-content-based-and-collaborative-filtering-31521c964922  https://buomsoo-kim.github.io/recommender%20systems/2020/09/25/Recommender-systems-collab-filtering-12.md/"
-  },
-  
-  {
-    "title": "RNN",
-    "url": "/posts/RNN/",
-    "categories": "Machine Learning Techs, Deep Learning",
-    "tags": "Deep Learning, RNN, NLP",
-    "date": "2024-01-26 00:00:00 +0900",
-    
-
-
-
-
-
-    
-    "snippet": "RNNRecurrent Neural Network      완전 연결 계층의 문제점 : 시계열 데이터 처리 불가능              동시성의 문제      과거 상태를 보관할 메모리 장치의 부재            순환 신경망 : 이전 단계의 출력을 현재 단계에서 반복적으로 고려하며 입력 정보를 순차적으로 처리하는 신경망 알고리즘         ...",
-    "content": "RNNRecurrent Neural Network      완전 연결 계층의 문제점 : 시계열 데이터 처리 불가능              동시성의 문제      과거 상태를 보관할 메모리 장치의 부재            순환 신경망 : 이전 단계의 출력을 현재 단계에서 반복적으로 고려하며 입력 정보를 순차적으로 처리하는 신경망 알고리즘            용례              one to one      one to many : Image Captioning      many to one : 감성 분석(Sentiment Classification)      many to many : 기계 번역(Machine Translation)      작동 방식      은닉 상태($\\overrightarrow{s}_{t}$)의 갱신\\[\\begin{aligned}  \\overrightarrow{s}_{t}  &amp;= \\text{tanh}(\\mathbf{U}\\cdot\\overrightarrow{x}_{t}+\\mathbf{W}\\cdot\\overrightarrow{s}_{t-1}+\\overrightarrow{\\beta}_{s})  \\end{aligned}\\]          $\\text{tanh}$ : 활성화 함수      $\\overrightarrow{x}_{t}$ : $t$ 시점에서의 입력 벡터      $\\mathbf{U}$ : 입력값에 대한 가중치 행렬      $\\overrightarrow{s}_{t-1}$ : $t-1$ 시점에서의 은닉 상태 벡터      $\\mathbf{W}$ : 이전 은닉 상태에 대한 가중치 행렬      $\\overrightarrow{\\beta}_{s}$ : 편향 벡터            출력값($\\overrightarrow{o}_{t}$)의 도출\\[\\begin{aligned}  \\overrightarrow{o}_{t}  &amp;= \\text{softmax}(\\mathbf{V}\\cdot\\overrightarrow{s}_{t}+\\overrightarrow{\\beta}_{o})  \\end{aligned}\\]          $\\text{softmax}$ : 활성화 함수      $\\overrightarrow{s}_{t}$ : $t$ 시점에서의 은닉 상태 벡터      $\\mathbf{V}$ : 은닉값에 대한 가중치 행렬      $\\overrightarrow{\\beta}_{o}$ : 편향 벡터      LSTMLong Short-Term Memory      RNN의 한계점 : 장기 의존성 문제              역전파 과정에서 기울기가 소실되어 시퀀스가 길수록 초기 순번 정보에 대하여 학습되지 않음            장-단기 메모리 기법 : 여러 개의 게이트(Gate)를 설치하고 셀 상태와 은닉 상태를 구분함으로써 RNN의 한계점을 보완하는 기법      작동 방식      얼마나 잊을 것인가              망각 게이트($f_{t}(x_{t},h_{t-1})$) : 얼마나 잊을지 결정하는 관문            얼마나 기억할 것인가              입력 게이트($i_{t}(x_{t},h_{t-1})$) : 얼마나 기억할지 결정하는 관문      셀 상태 업데이트(\\(\\widetilde{C}_{t}(x_{t},h_{t-1})\\)) : 입력 게이트에서 판단할 정보를 도출하는 관문            현재 상태를 어떻게 정의할 것인가              셀 상태($C_{t}$) : 이전 셀 상태($C_{t-1}$)를 적당히 망각하고($f_{t}$), 현재 상태에서 갱신된 정보(\\(\\widetilde{C}_{t}\\))를 적당히 기억하는(\\(i_{t}\\)) 상태            얼마나 출력할 것인가              출력 게이트($o_{t}(x_{t},h_{t-1})$) : 얼마나 출력할지 결정하는 관문      은닉 상태($h_{t}$) : 셀 상태($C_{t}$)에서 적당히 출력된($o_{t}$) 상태      Reference  https://dgkim5360.tistory.com/entry/understanding-long-short-term-memory-lstm-kr"
-  },
-  
-  {
-    "title": "CNN",
-    "url": "/posts/CNN/",
-    "categories": "Machine Learning Techs, Deep Learning",
-    "tags": "Deep Learning, CNN, CV",
-    "date": "2024-01-25 00:00:00 +0900",
-    
-
-
-
-
-
-    
-    "snippet": "What? Cov-Net      완전 연결 계층의 문제점 : 입력값을 1차원으로 평탄화(Flatten)하는 과정에서 공간적 구조(Spatial Structure)를 무너뜨림    \\[\\mathbf{Y}_{N \\times P \\cdot Q \\cdot R}  = \\text{flatten}(\\mathbf{X}_{N \\times P \\times Q \\tim...",
-    "content": "What? Cov-Net      완전 연결 계층의 문제점 : 입력값을 1차원으로 평탄화(Flatten)하는 과정에서 공간적 구조(Spatial Structure)를 무너뜨림    \\[\\mathbf{Y}_{N \\times P \\cdot Q \\cdot R}  = \\text{flatten}(\\mathbf{X}_{N \\times P \\times Q \\times R})\\]        합성곱 신경망(Convolution Neural Network; CNN) : 형상의 특징을 추출하고 기록하는 전처리 과정이 존재하는 신경망 알고리즘              입력 계층(Input Layer) : 관측치의 속성값을 입력 받는 계층      컨볼루션 계층(Convolution Layer) : 자료의 공간 구조 상 특징을 포착하는 계층      풀링 계층(Pooling Layer) : 컨볼루션 계층에서 포착한 특징의 대표값을 선별함으로써 자료 규모를 축소하는 계층      완전 연결 계층(Fully-Connected Layer)      Convolution Layerfrom tensorflow.keras.layers import Conv2Dconv_layer = Conv2D(    filters = k,    kernel_size = (M,N),    strides = s,    padding = \"valid\",    activation = \"relu\"    )Convolution Operation      합성곱 연산(Convolution Operation) : 입력값의 부분공간을 커널과 아다마르 곱셈($\\odot$)하는 과정을 반복하여 새로운 행렬을 구성함    \\[\\begin{aligned}  \\mathbf{Y}  &amp;= \\text{ReLU}(\\mathbf{C}+\\mathbf{\\beta})\\\\  \\mathbf{C}  &amp; \\in \\mathbb{R}^{\\lfloor \\displaystyle\\frac{P-M}{s}+1 \\rfloor \\times \\lfloor \\displaystyle\\frac{Q-N}{s}+1 \\rfloor \\times k}\\\\  &amp;= \\mathbf{W}_{M \\times N} \\odot \\mathbf{X}_{P \\times Q}\\\\  c_{i,j}  &amp;= \\sum_{n=1}^{N}\\sum_{m=1}^{M}{w_{m,n} \\cdot x_{i+m-1,j+n-1}}\\\\  \\end{aligned}\\]                  특성 맵(Feature Map; $\\mathbf{Y}$) : 합성곱 연산 결과 입력값 형상의 특징으로서 반환된 새로운 배열                            커널(Kernel; $\\mathbf{W}_{M \\times N}$) : 입력값의 부분공간에 아다마르 곱셈하는 여과기(Filter)                  filters : 커널 갯수          kernel_size : 커널 크기          strides : 커널 이동 보폭                            $\\mathbf{X}_{P \\times Q}$ : 관측치            Strides &amp; Padding      스트라이드(Stride; $s$) : 커널 이동 보폭            패딩(Padding) : 입력값의 주변을 특정 값으로 채우는 기법              valid : 패딩을 적용하지 않음      same : 입력 크기와 동일하도록 출력 크기를 조절하여 모서리 정보를 보존함      Downsampling using Poolingfrom tensorflow.keras.layers import MaxPooling2Dpooling_layer = MaxPooling2D(    pool_size = (M,N),    strides = s,    padding = \"valid\"    )      합동 연산(Pooling Operation) : 주어진 행렬에 대하여 그 부분공간마다 대표값을 추출하여 새로운 행렬을 구성함            종류                  Max Pooling : 대표값을 부분공간의 가장 큰 값으로 설정함\\[\\begin{aligned}  \\mathbf{Y}  &amp;= \\left\\{y_{i,j}\\bigg|y_{i,j}=\\max_{n=1}^{N}{\\max_{m=1}^{M}{\\mathbf{X}[i:i \\cdot s + m-1, j:j \\cdot s + n-1]}}\\right\\}  \\end{aligned}\\]                    Average Pooling : 대표값을 부분공간의 평균으로 설정함\\[\\begin{aligned}  \\mathbf{Y}  &amp;= \\left\\{y_{i,j}\\bigg|y_{i,j}=\\frac{1}{M \\cdot N}\\sum_{n=1}^{N}{\\sum_{m=1}^{M}{\\mathbf{X}[i:i \\cdot s + m-1, j:j \\cdot s + n-1]}}\\right\\}  \\end{aligned}\\]            "
   },
   
   {
