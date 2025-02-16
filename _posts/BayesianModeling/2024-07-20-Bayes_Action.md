@@ -1,9 +1,9 @@
 ---
-order: 3
+order: 6
 title: Bayes Action
-date: 2024-07-17
+date: 2024-07-20
 categories: [Data Mining Techs, Bayesian Modeling]
-tags: [Statistics, Bayesian, Optimization, Objective Function]
+tags: [Bayesian, Optimization, Objective Function]
 math: true
 description: >-
     Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data & Management, College of Business Administration, Kookmin Univ.

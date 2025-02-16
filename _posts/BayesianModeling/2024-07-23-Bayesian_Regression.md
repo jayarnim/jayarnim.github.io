@@ -1,9 +1,9 @@
 ---
-order: 6
+order: 9
 title: Bayesian Regression
-date: 2024-07-20
+date: 2024-07-23
 categories: [Data Mining Techs, Bayesian Modeling]
-tags: [Statistics, Bayesian, Regression]
+tags: [Bayesian, Regression]
 math: true
 description: >-
     Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data & Management, College of Business Administration, Kookmin Univ.
@@ -12,7 +12,7 @@ image:
 ---
 
 <div style="text-align: center;">
-    <img src="/_post_refer_img/BayesianModeling/07-01.png" alt="01" width="100%">
+    <img src="/_post_refer_img/BayesianModeling/09-01.png" alt="01" width="100%">
     <p><em>Bayesian Regression Model</em></p>
 </div>
 
