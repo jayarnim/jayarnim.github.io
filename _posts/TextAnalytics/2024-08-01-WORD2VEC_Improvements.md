@@ -2,8 +2,8 @@
 order: 4
 title: WORD2VEC Improvements
 date: 2024-08-01
-categories: [Data Mining, Text Analytics]
-tags: [Data Mining, NLP, Text Mining, Word Representation, Embedding]
+categories: [AI Application, Text Analytics]
+tags: [AI Application, NLP, Word Representation, Embedding]
 math: true
 description: >-
     Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.

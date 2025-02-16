@@ -2,7 +2,7 @@
 order: 7
 title: Clustering
 date: 2024-01-07
-categories: [Machine Learning Techs, Machine Learning]
+categories: [Data Mining Techs, Machine Learning]
 tags: [Machine Learning, Unsupervised Learning, Clustering, Metric]
 math: true
 description: >-

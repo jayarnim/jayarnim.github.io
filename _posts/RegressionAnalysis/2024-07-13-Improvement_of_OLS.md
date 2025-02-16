@@ -2,7 +2,7 @@
 order: 6
 title: Improvement of OLS
 date: 2024-07-13
-categories: [Statistical Techs, Regression Analysis]
+categories: [Data Mining Techs, Regression Analysis]
 tags: [Statistics, Regression]
 math: true
 description: >-

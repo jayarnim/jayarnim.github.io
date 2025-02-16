@@ -2,8 +2,8 @@
 order: 1
 title: What? RecSys
 date: 2024-01-18
-categories: [Data Mining, Recommender System]
-tags: [Data Mining, Recommender System, Metric]
+categories: [AI Application, Recommender System]
+tags: [AI Application, Recommender System, Metric]
 math: true
 description: >-
     Based on the following lectures <br>

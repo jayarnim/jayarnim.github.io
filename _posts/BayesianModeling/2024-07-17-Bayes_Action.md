@@ -2,7 +2,7 @@
 order: 3
 title: Bayes Action
 date: 2024-07-17
-categories: [Statistical Techs, Bayesian Modeling]
+categories: [Data Mining Techs, Bayesian Modeling]
 tags: [Statistics, Bayesian, Optimization, Objective Function]
 math: true
 description: >-

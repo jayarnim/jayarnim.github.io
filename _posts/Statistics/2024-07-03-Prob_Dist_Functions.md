@@ -2,7 +2,7 @@
 order: 3
 title: Prob. Dist. Functions
 date: 2024-07-03
-categories: [Statistical Techs, Statistics]
+categories: [Data Mining Techs, Statistics]
 tags: [Statistics]
 math: true
 description: >-

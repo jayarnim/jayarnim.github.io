@@ -2,7 +2,7 @@
 order: 2
 title: Probability
 date: 2024-07-02
-categories: [Statistical Techs, Statistics]
+categories: [Data Mining Techs, Statistics]
 tags: [Statistics]
 math: true
 description: >-

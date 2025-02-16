@@ -2,7 +2,7 @@
 order: 2
 title: Supervised Model Selection
 date: 2024-01-02
-categories: [Machine Learning Techs, Machine Learning]
+categories: [Data Mining Techs, Machine Learning]
 tags: [Machine Learning, Supervised Learning, Metric, Cross Validation]
 math: true
 description: >-

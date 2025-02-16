@@ -2,7 +2,7 @@
 order: 1
 title: What? Data Science
 date: 2024-01-01
-categories: [Machine Learning Techs, Machine Learning]
+categories: [Data Mining Techs, Machine Learning]
 tags: [Machine Learning]
 math: true
 description: >-

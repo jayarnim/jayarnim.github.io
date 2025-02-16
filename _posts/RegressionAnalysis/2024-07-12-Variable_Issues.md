@@ -2,7 +2,7 @@
 order: 5
 title: Variable Issues
 date: 2024-07-12
-categories: [Statistical Techs, Regression Analysis]
+categories: [Data Mining Techs, Regression Analysis]
 tags: [Statistics, Regression]
 math: true
 description: >-

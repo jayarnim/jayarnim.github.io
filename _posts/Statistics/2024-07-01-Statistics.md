@@ -2,7 +2,7 @@
 order: 1
 title: What? Statistics
 date: 2024-07-01
-categories: [Statistical Techs, Statistics]
+categories: [Data Mining Techs, Statistics]
 tags: [Statistics]
 math: true
 description: >-

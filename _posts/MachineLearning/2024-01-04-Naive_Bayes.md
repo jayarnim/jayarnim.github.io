@@ -2,7 +2,7 @@
 order: 4
 title: Naive Bayes
 date: 2024-01-04
-categories: [Machine Learning Techs, Machine Learning]
+categories: [Data Mining Techs, Machine Learning]
 tags: [Machine Learning, Supervised Learning, Classification, Bayesian]
 math: true
 description: >-

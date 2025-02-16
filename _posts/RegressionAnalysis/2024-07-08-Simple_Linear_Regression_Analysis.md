@@ -2,7 +2,7 @@
 order: 1
 title: Simple Linear Regression Analysis
 date: 2024-07-08
-categories: [Statistical Techs, Regression Analysis]
+categories: [Data Mining Techs, Regression Analysis]
 tags: [Statistics, Regression, t Test, Goodness of Fit Test, R2]
 math: true
 description: >-

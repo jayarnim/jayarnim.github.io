@@ -2,7 +2,7 @@
 order: 5
 title: Multi Armed Bandits
 date: 2024-07-19
-categories: [Statistical Techs, Bayesian Modeling]
+categories: [Data Mining Techs, Bayesian Modeling]
 tags: [Statistics, Bayesian, MAB, Multi Armed Bandits]
 math: true
 description: >-

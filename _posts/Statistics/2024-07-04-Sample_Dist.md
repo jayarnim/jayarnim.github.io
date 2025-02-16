@@ -2,7 +2,7 @@
 order: 4
 title: Sample Dist.
 date: 2024-07-04
-categories: [Statistical Techs, Statistics]
+categories: [Data Mining Techs, Statistics]
 tags: [Statistics]
 math: true
 description: >-

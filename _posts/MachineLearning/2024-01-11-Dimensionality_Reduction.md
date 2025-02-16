@@ -2,7 +2,7 @@
 order: 11
 title: Dimensionality Reduction
 date: 2024-01-11
-categories: [Machine Learning Techs, Machine Learning]
+categories: [Data Mining Techs, Machine Learning]
 tags: [Machine Learning, Unsupervised Learning, Feature Engineering]
 math: true
 description: >-

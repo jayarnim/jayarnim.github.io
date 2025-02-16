@@ -2,7 +2,7 @@
 order: 7
 title: Logistic Regression Analysis
 date: 2024-07-14
-categories: [Statistical Techs, Regression Analysis]
+categories: [Data Mining Techs, Regression Analysis]
 tags: [Statistics, Regression]
 math: true
 description: >-

@@ -2,7 +2,7 @@
 order: 5
 title: Statistical Inference
 date: 2024-07-05
-categories: [Statistical Techs, Statistics]
+categories: [Data Mining Techs, Statistics]
 tags: [Statistics, Estimation, z Test, t Test]
 math: true
 description: >-

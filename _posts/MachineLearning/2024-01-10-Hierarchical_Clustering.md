@@ -2,7 +2,7 @@
 order: 10
 title: Hierarchical Clustering
 date: 2024-01-10
-categories: [Machine Learning Techs, Machine Learning]
+categories: [Data Mining Techs, Machine Learning]
 tags: [Machine Learning, Unsupervised Learning, Clustering]
 math: true
 description: >-

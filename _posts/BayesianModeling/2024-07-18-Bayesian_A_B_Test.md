@@ -2,7 +2,7 @@
 order: 4
 title: Bayesian A/B Test
 date: 2024-07-18
-categories: [Statistical Techs, Bayesian Modeling]
+categories: [Data Mining Techs, Bayesian Modeling]
 tags: [Statistics, Bayesian, A/B Test]
 math: true
 description: >-

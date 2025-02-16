@@ -2,7 +2,7 @@
 order: 5
 title: Bayesian Attention Modules
 date: 2024-09-19
-categories: [Machine Learning Techs, Bayesian Deep Learning]
+categories: [Data Mining Techs, Bayesian Deep Learning]
 tags: [Deep Learning, Bayesian, Attention Mechanism, Variational Inference]
 math: true
 description: >-

@@ -2,7 +2,7 @@
 order: 6
 title: Bayesian Regression
 date: 2024-07-20
-categories: [Statistical Techs, Bayesian Modeling]
+categories: [Data Mining Techs, Bayesian Modeling]
 tags: [Statistics, Bayesian, Regression]
 math: true
 description: >-

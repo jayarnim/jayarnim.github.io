@@ -2,7 +2,7 @@
 order: 3
 title: Multiple Linear Regression Analysis
 date: 2024-07-10
-categories: [Statistical Techs, Regression Analysis]
+categories: [Data Mining Techs, Regression Analysis]
 tags: [Statistics, Regression, f Test]
 math: true
 description: >-

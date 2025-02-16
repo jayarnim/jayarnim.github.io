@@ -2,7 +2,7 @@
 order: 3
 title: Decision Tree
 date: 2024-01-03
-categories: [Machine Learning Techs, Machine Learning]
+categories: [Data Mining Techs, Machine Learning]
 tags: [Machine Learning, Supervised Learning, Classification]
 math: true
 description: >-

@@ -2,8 +2,8 @@
 order: 3
 title: Word Representation
 date: 2024-07-31
-categories: [Data Mining, Text Analytics]
-tags: [Data Mining, NLP, Text Mining, Word Representation, Embedding]
+categories: [AI Application, Text Analytics]
+tags: [AI Application, NLP, Word Representation, Embedding]
 math: true
 description: >-
     Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.

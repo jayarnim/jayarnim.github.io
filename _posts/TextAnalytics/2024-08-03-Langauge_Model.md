@@ -2,8 +2,8 @@
 order: 6
 title: Language Model
 date: 2024-08-03
-categories: [Data Mining, Text Analytics]
-tags: [Data Mining, NLP, Text Mining, Language Model, Metric]
+categories: [AI Application, Text Analytics]
+tags: [AI Application, NLP, Language Model, Metric]
 math: true
 description: >-
     Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.

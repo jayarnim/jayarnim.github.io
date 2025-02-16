@@ -2,7 +2,7 @@
 order: 2
 title: Regression Coefficient Estimation
 date: 2024-07-09
-categories: [Statistical Techs, Regression Analysis]
+categories: [Data Mining Techs, Regression Analysis]
 tags: [Statistics, Regression, Estimation, OLS]
 math: true
 description: >-

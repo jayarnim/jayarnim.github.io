@@ -2,8 +2,8 @@
 order: 10
 title: Transformer
 date: 2024-08-07
-categories: [Data Mining, Text Analytics]
-tags: [Data Mining, NLP, Text Mining, Machine Translation, Attention Mechanism]
+categories: [AI Application, Text Analytics]
+tags: [AI Application, NLP, Machine Translation, Attention Mechanism]
 math: true
 description: >-
     Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.
