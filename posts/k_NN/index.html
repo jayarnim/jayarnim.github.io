@@ -1005,50 +1005,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -1156,9 +1112,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="608 words"
+  title="480 words"
 >
-  <em>3 min</em> read</span>
+  <em>2 min</em> read</span>
 
         </div>
       </div>
@@ -1182,125 +1138,54 @@
 <h2 id="distance"><span class="me-2">Distance</span><a href="#distance" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<h3 id="manhattan-distance"><span class="me-2">Manhattan Distance</span><a href="#manhattan-distance" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p><a href="/_post_refer_img/MachineLearning/05-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/05-02.png" alt="02" width="100%" loading="lazy"></a></p>
-
 <ul>
   <li>
     <p><strong>맨해튼 거리(Manhattan Distance; L1)</strong> : 두 점 사이의 엣지(Edge) 갯수</p>
 
+    <p><a href="/_post_refer_img/MachineLearning/05-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/05-02.png" alt="02" width="100%" loading="lazy"></a></p>
+
+\[\begin{aligned}
+  d(\overrightarrow{\mathbf{a}},\overrightarrow{\mathbf{b}})
+  &amp;= \Vert \overrightarrow{\mathbf{a}} - \overrightarrow{\mathbf{b}} \Vert _{L1}
+  = \displaystyle\sum_{i=1}^{n} \vert a_i - b_i \vert
+  \end{aligned}\]
+
     <ul>
-      <li>$\overrightarrow{i_{1}}, \overrightarrow{i_{2}}, \cdots, \overrightarrow{i_{n}}$ 를 기저벡터로 사용하는 $n$ 차원 좌표계에 위치한 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 에 대하여 각 축 방향으로의 기저벡터 단위 거리를 합산한 값</li>
+      <li>\(\overrightarrow{\mathbf{i}_{1}}, \overrightarrow{\mathbf{i}_{2}}, \cdots, \overrightarrow{\mathbf{i}_{n}}\) 를 기저벡터로 사용하는 $n$ 차원 좌표계에 위치한 두 벡터 $\overrightarrow{\mathbf{a}}, \overrightarrow{\mathbf{b}}$ 에 대하여 각 축 방향으로의 기저벡터 단위 거리를 합산한 값</li>
     </ul>
   </li>
   <li>
-    <p><strong>계산 방법</strong></p>
+    <p><strong>유클리드 거리(Euclidean Distance; L2)</strong> : 두 점 사이의 직선 거리</p>
+
+    <p><a href="/_post_refer_img/MachineLearning/05-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/05-03.png" alt="03" width="100%" loading="lazy"></a></p>
+
+\[\begin{aligned}
+  d(\overrightarrow{\mathbf{a}},\overrightarrow{\mathbf{b}})
+  &amp;= \Vert \overrightarrow{\mathbf{a}} - \overrightarrow{\mathbf{b}} \Vert _{L2}
+  = \sqrt{\displaystyle\sum_{i=1}^{n} (a_i - b_i)^2}
+  \end{aligned}\]
 
     <ul>
-      <li>
-        <p>벡터 $\overrightarrow{a},\overrightarrow{b}$ 를 다음과 같이 정의하자</p>
-
-\[\begin{aligned}
-  \overrightarrow{a}
-  &amp;= \begin{pmatrix}a_1&amp;a_2&amp;\cdots&amp;a_n\end{pmatrix}\\
-  \overrightarrow{b}
-  &amp;= \begin{pmatrix}b_1&amp;b_2&amp;\cdots&amp;b_n\end{pmatrix}
-  \end{aligned}\]
-      </li>
-      <li>
-        <p>$\overrightarrow{a}$ 와 $\overrightarrow{b}$ 의 맨해튼 거리 $d_{L1}(\overrightarrow{a},\overrightarrow{b})$ 는 다음과 같음</p>
-
-\[\begin{aligned}
-  d(\overrightarrow{a},\overrightarrow{b})
-  &amp;= || \overrightarrow{a} - \overrightarrow{b} ||_{L1} \\
-  &amp;= \displaystyle\sum_{i=1}^{n} |a_i - b_i|
-  \end{aligned}\]
-      </li>
+      <li>\(\overrightarrow{\mathbf{i}_{1}}, \overrightarrow{\mathbf{i}_{2}}, \cdots, \overrightarrow{\mathbf{i}_{n}}\) 를 기저벡터로 사용하는 $n$ 차원 좌표계에 위치한 두 벡터 \(\overrightarrow{\mathbf{a}}, \overrightarrow{\mathbf{b}}\) 에 대하여 각 축 방향으로의 기저벡터 단위 거리의 제곱을 합산한 후 제곱근한 값</li>
     </ul>
   </li>
-</ul>
-
-<h3 id="euclidean-distance"><span class="me-2">Euclidean Distance</span><a href="#euclidean-distance" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p><a href="/_post_refer_img/MachineLearning/05-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/05-03.png" alt="03" width="100%" loading="lazy"></a></p>
-
-<ul>
-  <li><strong>유클리드 거리(Euclidean Distance; L2)</strong> : 두 점 사이의 직선 거리
-    <ul>
-      <li>$\overrightarrow{i_{1}}, \overrightarrow{i_{2}}, \cdots, \overrightarrow{i_{n}}$ 를 기저벡터로 사용하는 $n$ 차원 좌표계에 위치한 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 에 대하여 각 축 방향으로의 기저벡터 단위 거리의 제곱을 합산한 후 제곱근한 값</li>
-    </ul>
-  </li>
-  <li><strong>계산 방법</strong>
-    <ul>
-      <li>
-        <p>벡터 $\overrightarrow{a},\overrightarrow{b}$ 를 다음과 같이 정의하자</p>
-
-\[\begin{aligned}
-  \overrightarrow{a}
-  &amp;= \begin{pmatrix}a_1&amp;a_2&amp;\cdots&amp;a_n\end{pmatrix}\\
-  \overrightarrow{b}
-  &amp;= \begin{pmatrix}b_1&amp;b_2&amp;\cdots&amp;b_n\end{pmatrix}
-  \end{aligned}\]
-      </li>
-      <li>
-        <p>$\overrightarrow{a}$ 와 $\overrightarrow{b}$ 의 유클리드 거리 $d_{L2}(\overrightarrow{a},\overrightarrow{b})$ 는 다음과 같음</p>
-
-\[\begin{aligned}
-  d(\overrightarrow{a},\overrightarrow{b})
-  &amp;= || \overrightarrow{a} - \overrightarrow{b} ||_{L2} \\
-  &amp;= \sqrt{\displaystyle\sum_{i=1}^{n} (a_i - b_i)^2}
-  \end{aligned}\]
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="cosine-distance"><span class="me-2">Cosine Distance</span><a href="#cosine-distance" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p><a href="/_post_refer_img/MachineLearning/05-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/05-04.png" alt="04" width="100%" loading="lazy"></a></p>
-
-<ul>
   <li>
     <p><strong>코사인 거리(Cosine Distance; $\cos$)</strong> : 임의의 두 점에 대하여, 원점과 각 점을 잇는 직선의 사이각 $\theta$ 의 코사인 값</p>
-  </li>
-  <li>
-    <p><strong>계산 방법</strong></p>
-    <ul>
-      <li>
-        <p>벡터 $\overrightarrow{a},\overrightarrow{b}$ 를 다음과 같이 정의하자</p>
+
+    <p><a href="/_post_refer_img/MachineLearning/05-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/05-04.png" alt="04" width="100%" loading="lazy"></a></p>
 
 \[\begin{aligned}
-  \overrightarrow{a}
-  &amp;= \begin{pmatrix}a_1&amp;a_2&amp;\cdots&amp;a_n\end{pmatrix}\\
-  \overrightarrow{b}
-  &amp;= \begin{pmatrix}b_1&amp;b_2&amp;\cdots&amp;b_n\end{pmatrix}
+  d(\overrightarrow{\mathbf{a}},\overrightarrow{\mathbf{b}})
+  &amp;= \cos{\theta}
+  = \frac{\overrightarrow{\mathbf{a}}^{T}\overrightarrow{\mathbf{b}}}{\Vert \overrightarrow{\mathbf{a}} \Vert \cdot \Vert \overrightarrow{\mathbf{b}} \Vert}
+  = \frac{\sum_{i=1}^{n}{a_{i}b_{i}}}{\sqrt{\sum_{i=1}^{n}{a_{i}^{2}}} \cdot \sqrt{\sum_{i=1}^{n}{b_{i}^{2}}}}
   \end{aligned}\]
-      </li>
-      <li>
-        <p>$\overrightarrow{a}$ 와 $\overrightarrow{b}$ 의 코사인 거리 $d_{cos}(\overrightarrow{a},\overrightarrow{b})$ 는 다음과 같음</p>
-
-\[\begin{aligned}
-  d(\overrightarrow{a},\overrightarrow{b})
-  &amp;= \cos{\theta}\\
-  &amp;= \frac{\overrightarrow{a}^{T}\overrightarrow{b}}{||a||\cdot||b||}\\
-  &amp;= \frac{\sum_{i=1}^{n}{a_{i}b_{i}}}{\sqrt{\sum_{i=1}^{n}{a_{i}^{2}}} \cdot \sqrt{\sum_{i=1}^{n}{b_{i}^{2}}}}\;(a_{i^{\forall}}\in\overrightarrow{a},b_{i^{\forall}}\in\overrightarrow{b})
-  \end{aligned}\]
-      </li>
-    </ul>
   </li>
-</ul>
-
-<h3 id="haversine-distance"><span class="me-2">Haversine Distance</span><a href="#haversine-distance" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p><a href="/_post_refer_img/MachineLearning/05-05.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/05-05.png" alt="05" width="100%" loading="lazy"></a></p>
-
-<ul>
   <li>
     <p><strong>하버사인 거리(Haversine Distance; $\text{hav}$)</strong> : 구 표면상에 존재하는 두 지점에 대하여, 위도($\varphi$), 경도($\lambda$) 및 호 중심각($\Theta$)을 활용하여 측정한 호의 길이</p>
-  </li>
-  <li>
-    <p><strong>계산 방법</strong></p>
+
+    <p><a href="/_post_refer_img/MachineLearning/05-05.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/05-05.png" alt="05" width="100%" loading="lazy"></a></p>
+
     <ul>
       <li>
         <p>반지름이 $r$, 호 $\overline{AB}$ 의 중심각이 $\Theta$ 일 때, 호 $\overline{AB}$ 의 길이 $d(A,B)$ 는 다음과 같음</p>

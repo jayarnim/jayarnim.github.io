@@ -1265,7 +1265,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="302 words"
+  title="304 words"
 >
   <em>1 min</em> read</span>
 
@@ -1307,7 +1307,9 @@
   <li>
     <p><strong>$k$ 개의 초기 군집 중심 벡터 $\overrightarrow{c}$ 를 임의로 선정함</strong></p>
 
-\[M=\{\overrightarrow{\mu}_{1},\overrightarrow{\mu}_{2},\cdots,\overrightarrow{\mu}_{k}\}\]
+\[\begin{aligned}
+ M=\left\{\overrightarrow{\mu}_{1},\overrightarrow{\mu}_{2},\cdots,\overrightarrow{\mu}_{k}\right\}
+ \end{aligned}\]
   </li>
   <li>
     <p><strong>모든 관측치 벡터 $\overrightarrow{x}$ 를 가장 가까운 거리에 위치한 중심 벡터 $\overrightarrow{\mu}$ 의 군집에 배타적으로 할당함</strong></p>
@@ -1332,7 +1334,7 @@
 
 \[\begin{aligned}
  \hat{M}
- &amp;= \{\overrightarrow{\mu}_{i} \mid \text{arg} \min_{\overrightarrow{\mu}_{i}}{\sum_{i=1}^{k}\sum_{\overrightarrow{x}_{j} \in C_{i}}{\Vert\overrightarrow{x}_{j}-\overrightarrow{\mu}_{i}\Vert^2}}\}
+ &amp;= \left\{\overrightarrow{\mu}_{i} \mid \text{arg} \min_{\overrightarrow{\mu}_{i}}{\sum_{i=1}^{k}\sum_{\overrightarrow{x}_{j} \in C_{i}}{\Vert\overrightarrow{x}_{j}-\overrightarrow{\mu}_{i}\Vert^2}}\right\}
  \end{aligned}\]
   </li>
 </ol>

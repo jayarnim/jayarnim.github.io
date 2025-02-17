@@ -1216,7 +1216,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="921 words"
+  title="923 words"
 >
   <em>5 min</em> read</span>
 
@@ -1236,7 +1236,7 @@
     <p><a href="/_post_refer_img/MachineLearning/03-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/03-02.png" alt="02" width="100%" loading="lazy"></a></p>
 
     <ul>
-      <li><strong>루트 노드(Root Node)</strong> : 깊이가 0인 꼭대기 노드로서 최상위 노드</li>
+      <li><strong>루트 노드(Root Node)</strong> : 깊이가 $0$ 인 꼭대기 노드로서 최상위 노드</li>
       <li><strong>결정 노드(Decision Node)</strong> : 규칙 조건</li>
       <li><strong>리프 노드(Leaf Node)</strong> : 하위 노드가 존재하지 않는 노드로서 최종 범주</li>
       <li><strong>서브트리(Subtree)</strong> : 어떠한 규칙 노드를 루트 노드로 가지는 하위 트리로서 판별 규칙 집합의 부분집합</li>
@@ -1276,40 +1276,44 @@
   <li>
     <p>어떤 노드에 대하여, 설명변수 $X_{i} \ge x_{i}$ 를 기준으로 해당 노드를 분할한다고 하자</p>
 
-\[y=\begin{cases}
-  \begin{aligned}
-  N_{left},\;&amp;if\;X_{i} \ge x_{i}\\
-  N_{right},\;&amp;if\;X_{i} &lt; x_{i}\\
-  \end{aligned}
-  \end{cases}\]
+\[\begin{aligned}
+  y=\begin{cases}
+  N_{\text{Left}},\quad &amp; \text{if} \quad X_{i} \ge x_{i}\\
+  N_{\text{Right}},\quad &amp; \text{if} \quad X_{i} &lt; x_{i}\\
+  \end{cases}
+  \end{aligned}\]
   </li>
   <li>
-    <p>판별 규칙 $X_{i} \ge x_{i}$ 의 비용 $J(X_{i} \ge x_{i})$ 는 다음과 같음</p>
+    <p>판별 규칙 $X_{i} \ge x_{i}$ 의 비용 $\mathcal{J}(X_{i} \ge x_{i})$ 는 다음과 같음</p>
 
 \[\begin{aligned}
-  J(X_{i} \ge x_{i})
-  &amp;= \frac{m_{left}}{m}I_{left} + \frac{m_{right}}{m}I_{right}
+  \mathcal{J}(X_{i} \ge x_{i})
+  &amp;= \frac{m_{\text{Left}}}{m}I_{\text{Left}} + \frac{m_{\text{Right}}}{m}I_{\text{Right}}
   \end{aligned}\]
 
     <ul>
       <li>$m$ : 결정 노드에 속한 관측치 갯수</li>
-      <li>$m_{left}$ : 좌측 하위 노드로 분기한 관측치 갯수</li>
-      <li>$I_{left}$ : 좌측 하위 노드의 불순도</li>
-      <li>$m_{right}$ : 우측 하위 노드로 분기한 관측치 갯수</li>
-      <li>$I_{right}$ : 우측 하위 노드의 불순도</li>
+      <li>$m_{\text{Left}}$ : 좌측 하위 노드로 분기한 관측치 갯수</li>
+      <li>$I_{\text{Left}}$ : 좌측 하위 노드의 불순도</li>
+      <li>$m_{\text{Right}}$ : 우측 하위 노드로 분기한 관측치 갯수</li>
+      <li>$I_{\text{Right}}$ : 우측 하위 노드의 불순도</li>
     </ul>
   </li>
   <li>
     <p>설명변수 $X_{i}$ 기준 분할 시 최적의 분기점 $\hat{x}_{i}$ 는 다음과 같음</p>
 
-\[\hat{x}_{i}
-  =\text{arg} \min_{x_{i}}{J(X_{i} \ge x_{i})}\]
+\[\begin{aligned}
+  \hat{x}_{i}
+  =\text{arg} \min_{x_{i}}{\mathcal{J}(X_{i} \ge x_{i})}
+  \end{aligned}\]
   </li>
   <li>
     <p>특정 노드를 분할하는 최적의 설명변수 $\hat{X}_{i}$ 는 다음과 같음</p>
 
-\[\hat{X}_{i}
-  = \text{arg} \min_{X_{i}}{\left\{\min{J(X_{1})},\min{J(X_{2})},\cdots,\min{J(X_{n})}\right\}}\]
+\[\begin{aligned}
+  \hat{X}_{i}
+  = \text{arg} \min_{X_{i}}{\left\{\min{\mathcal{J}(X_{1})},\min{\mathcal{J}(X_{2})},\cdots,\min{\mathcal{J}(X_{n})}\right\}}
+  \end{aligned}\]
   </li>
 </ul>
 
@@ -1351,35 +1355,24 @@
 
 <ul>
   <li>
-    <p><strong>가지치기(Pruning)</strong> : 자세하게 구분된 영역을 통합함으로써 과적합을 방지하는 기법</p>
-  </li>
-  <li><strong>절차</strong>
-    <ol>
-      <li>Full Tree 생성</li>
-      <li>모든 노드에 대하여 비용 복잡도 지수 계산</li>
-      <li>비용 복잡도 지수가 가장 낮은 노드에 대하여 가지치기 수행</li>
-      <li>2~3 단계를 반복하며 최적의 $\alpha$ 탐색</li>
-      <li>최적의 $\alpha$ 하 Tree 도출</li>
-    </ol>
+    <p><strong>가지치기(Pruning)</strong> : 자세하게 구분된 영역을 통합함으로써 과적합을 방지하는 기법으로서, Full Tree 를 생성하여 모든 노드에 대하여 비용 복잡도 지수를 계산하고, 그 값이 가장 낮은 노드에 대하여 가지치기를 반복적으로 수행하면서 최적의 가지치기 강도 $\alpha$ 하 트리를 도출함</p>
   </li>
   <li>
     <p><strong>비용 복잡도 지수(Cost-Complexity)</strong></p>
 
 \[\begin{aligned}
   R_{\alpha}(T)
-  &amp;= L(T) + \alpha \cdot |\text{leaf}(T)|\\
+  &amp;= L(T) + \alpha \cdot \vert\text{Leaf}(T)\vert\\
 
   L(T)
-  &amp;= \sum_{m=1}^{|\text{leaf}(T)|}{\sum_{\overrightarrow{x}_{i} \in R_{m}}{(y_{i}-\hat{y}_{i})^2}}
+  &amp;= \sum_{m=1}^{\vert\text{Leaf}(T)\vert}{\sum_{\overrightarrow{\mathbf{x}}_{i} \in R_{m}}{\left(y_{i}-\hat{y}_{i}\right)^2}}
   \end{aligned}\]
 
     <ul>
       <li>$T$ : 타깃 노드를 루트 노드로 하는 서브트리</li>
-      <li>$\text{leaf}(T)$ : $T$ 의 리프 노드 집합</li>
+      <li>$\text{Leaf}(T)$ : $T$ 의 리프 노드 집합</li>
       <li>$R_{m} \in \text{leaf}(T)$ : $T$ 의 $m$ 번째 리프 노드</li>
-      <li>\(\overrightarrow{x}_{i} \in R_{m}\) : \(R_{m}\) 에 속한 \(i\) 번째 관측치 벡터</li>
-      <li>$y_{i}$ : $\overrightarrow{x}_{i}$ 의 실제값</li>
-      <li>\(\hat{y}_{i}\) : \(\overrightarrow{x}_{i}\) 의 예측값</li>
+      <li>\(\overrightarrow{\mathbf{x}}_{i} \in R_{m}\) : \(R_{m}\) 에 속한 \(i\) 번째 관측치 벡터</li>
       <li>$\alpha$ : 가지치기 강도</li>
       <li>$L(T)$ : $T$ 의 훈련 관측치에 대한 예측 손실</li>
       <li>$R_{\alpha}(T)$ : 타깃 노드의 비용 복잡도 지수</li>
@@ -1398,15 +1391,15 @@
 
 \[\begin{aligned}
   \hat{X}_{i}
-  &amp;= \text{arg} \min_{X_{i}}{\{J(X_{1},\hat{x}_{1}),J(X_{2},\hat{x}_{2}),\cdots,J(X_{n},\hat{x}_{n})\}}\\
+  &amp;= \text{arg} \min_{X_{i}}{\{\mathcal{J}(X_{1},\hat{x}_{1}),\mathcal{J}(X_{2},\hat{x}_{2}),\cdots,\mathcal{J}(X_{n},\hat{x}_{n})\}}\\
   \hat{x}_{i}
-  &amp;= \text{arg} \min_{x_{i}}{J(X_{i},x_{i})}\\
-  J(X_{i},x_{i})
-  &amp;= \frac{m_{left}}{m}L_{left}+\frac{m_{right}}{m}L_{right}
+  &amp;= \text{arg} \min_{x_{i}}{\mathcal{J}(X_{i},x_{i})}\\
+  \mathcal{J}(X_{i},x_{i})
+  &amp;= \frac{m_{\text{Left}}}{m}L_{\text{Left}}+\frac{m_{\text{Right}}}{m}L_{\text{Right}}
   \end{aligned}\]
   </li>
   <li>
-    <p><strong>차이점</strong> : 손실 함수</p>
+    <p><strong>손실 함수</strong></p>
 
     <p><a href="/_post_refer_img/MachineLearning/03-07.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/03-07.png" alt="07" width="100%" loading="lazy"></a></p>
 
@@ -1415,7 +1408,7 @@
         <p><strong>판별 분석</strong> : 불순도(Impurity)를 최소화하도록 분기</p>
 
 \[\begin{aligned}
-  L_{gini}(N_{k})
+  \mathcal{L}_{\text{GINI}}(N_{k})
   &amp;= 1-\sum_{i=1}^{c}{p_{i}^2}
   \end{aligned}\]
       </li>
@@ -1423,7 +1416,7 @@
         <p><strong>회귀 분석</strong> : 오차(Error)를 최소화하도록 분기</p>
 
 \[\begin{aligned}
-  L_{MSE}(N_{k})
+  \mathcal{L}_{\text{MSE}}(N_{k})
   &amp;= \sum_{i=1}^{m}{(y_{i}-\hat{y}_{i})^2}
   \end{aligned}\]
       </li>
