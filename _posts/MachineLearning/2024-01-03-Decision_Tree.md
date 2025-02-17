@@ -16,10 +16,6 @@ image:
 
 - **결정 트리(Decision Tree)** : **순도(Uniformity)**를 최대로 가져가는 이진 판별 규칙들로 구성된 **수형도(Tree)**를 세우고 관측치를 분류하는 알고리즘
 
-    ![01](/_post_refer_img/MachineLearning/03-01.png){: width="100%"}
-
-- **구조**
-
     ![02](/_post_refer_img/MachineLearning/03-02.png){: width="100%"}
 
     - **루트 노드(Root Node)** : 깊이가 0인 꼭대기 노드로서 최상위 노드

@@ -25,14 +25,12 @@ image:
     - $$P(A)$$ : 사건 $$A$$ 가 발생할 확률
     - $$P(B)$$ : 사건 $$B$$ 가 발생할 확률
 
-- **한계점** : Class Conditional Independent Assumption
+- **Class Conditional Independent Assumption** : 범주 내에서 특정 특성의 존재 또는 부재가 다른 특성의 존재 또는 부재와 독립적이라는 가정을 전제함함
 
-    - **Class Conditional Independent Assumption** : 범주 내에서 특정 특성의 존재 또는 부재가 다른 특성의 존재 또는 부재와 독립적이라는 가정
-
-        $$\begin{aligned}
-        P(X_{1},X_{2},\cdots,X_{n} \mid Y)
-        &= P(X_{1} \mid Y) \times P(X_{2} \mid Y) \times \cdots \times P(X_{n} \mid Y)
-        \end{aligned}$$
+    $$\begin{aligned}
+    P(X_{1},X_{2},\cdots,X_{n} \mid Y)
+    &= P(X_{1} \mid Y) \times P(X_{2} \mid Y) \times \cdots \times P(X_{n} \mid Y)
+    \end{aligned}$$
 
 ## Decision Function
 -----
