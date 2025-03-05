@@ -4,7 +4,7 @@
   <id>https://jayarnim.github.io/</id>
   <title>Data Scientist</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-02-18T02:04:42+09:00</updated>
+  <updated>2025-03-05T18:50:38+09:00</updated>
   <author>
     <name>jayarnim</name>
     <uri>https://jayarnim.github.io/</uri>
@@ -17,57 +17,6 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
-
-  
-  <entry>
-    <title>Sparse Gaussian Process</title>
-    <link href="https://jayarnim.github.io/posts/SGP/" rel="alternate" type="text/html" title="Sparse Gaussian Process" />
-    <published>2025-01-23T00:00:00+09:00</published>
-  
-    <updated>2025-01-23T00:00:00+09:00</updated>
-  
-    <id>https://jayarnim.github.io/posts/SGP/</id>
-    <content src="https://jayarnim.github.io/posts/SGP/" />
-    <author>
-      <name>jayarnim</name>
-    </author>
-
-  
-    
-    <category term="Data Mining Techs" />
-    
-    <category term="Bayesian Modeling" />
-    
-  
-
-  <summary>Prerequisite
-
-
-
-  Gaussian Process
-
-
-SGP
-
-
-
-  
-    SGP(Sparse Gaussian Process) : $M &amp;amp;lt; N$ 개의 유도점(Inducing Points)을 도입하여 공분산 행렬을 근사하는 기법으로서, 계산량을 $\mathcal{O}(N^{3}) \to \mathcal{O}(M^{2}N)$ 으로 줄임으로써 효율성을 도모함
-
-    
-  
-  
-    Methods
-    
-      Nyström Approximation BASIC
-        
-          Inducing Points Sampling
-          Matrix Factorization
-        
-      
-      FITC(Fully Independent Tra...</summary>
-
-  </entry>
 
   
   <entry>
@@ -192,6 +141,32 @@ SGP
     &amp;lt;ul&amp;gt;
     &amp;lt;li&amp;gt;&amp;lt;code&amp;gt;&amp;lt;a href=&amp;quot;https://grouplens.org/datasets/movielens/&amp;quot;&amp;gt;MovieLens&amp;lt;/a&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/li&amp;gt;
     &amp;lt;l...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>GPT</title>
+    <link href="https://jayarnim.github.io/posts/GPT/" rel="alternate" type="text/html" title="GPT" />
+    <published>2024-08-09T00:00:00+09:00</published>
+  
+    <updated>2024-08-09T00:00:00+09:00</updated>
+  
+    <id>https://jayarnim.github.io/posts/GPT/</id>
+    <content src="https://jayarnim.github.io/posts/GPT/" />
+    <author>
+      <name>jayarnim</name>
+    </author>
+
+  
+    
+    <category term="AI Application" />
+    
+    <category term="Text Analytics" />
+    
+  
+
+  <summary>Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</summary>
 
   </entry>
 
