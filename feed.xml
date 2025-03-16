@@ -4,7 +4,7 @@
   <id>https://jayarnim.github.io/</id>
   <title>Data Scientist</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-03-16T01:41:07+09:00</updated>
+  <updated>2025-03-16T11:31:29+09:00</updated>
   <author>
     <name>jayarnim</name>
     <uri>https://jayarnim.github.io/</uri>
@@ -64,9 +64,9 @@
   <entry>
     <title>Bayesian Attention Modules</title>
     <link href="https://jayarnim.github.io/posts/Bayesian_Attention_Modules/" rel="alternate" type="text/html" title="Bayesian Attention Modules" />
-    <published>2024-09-19T00:00:00+09:00</published>
+    <published>2024-09-05T00:00:00+09:00</published>
   
-    <updated>2024-09-19T00:00:00+09:00</updated>
+    <updated>2024-09-05T00:00:00+09:00</updated>
   
     <id>https://jayarnim.github.io/posts/Bayesian_Attention_Modules/</id>
     <content src="https://jayarnim.github.io/posts/Bayesian_Attention_Modules/" />
@@ -90,9 +90,9 @@
   <entry>
     <title>DACR</title>
     <link href="https://jayarnim.github.io/posts/DACR/" rel="alternate" type="text/html" title="DACR" />
-    <published>2024-09-05T00:00:00+09:00</published>
+    <published>2024-08-28T00:00:00+09:00</published>
   
-    <updated>2024-09-05T00:00:00+09:00</updated>
+    <updated>2024-08-28T00:00:00+09:00</updated>
   
     <id>https://jayarnim.github.io/posts/DACR/</id>
     <content src="https://jayarnim.github.io/posts/DACR/" />
@@ -119,9 +119,9 @@
   <entry>
     <title>FAWMF</title>
     <link href="https://jayarnim.github.io/posts/FAWMF/" rel="alternate" type="text/html" title="FAWMF" />
-    <published>2024-08-14T00:00:00+09:00</published>
+    <published>2024-08-21T00:00:00+09:00</published>
   
-    <updated>2024-08-14T00:00:00+09:00</updated>
+    <updated>2024-08-21T00:00:00+09:00</updated>
   
     <id>https://jayarnim.github.io/posts/FAWMF/</id>
     <content src="https://jayarnim.github.io/posts/FAWMF/" />
@@ -146,14 +146,14 @@
 
   
   <entry>
-    <title>GPT</title>
-    <link href="https://jayarnim.github.io/posts/GPT/" rel="alternate" type="text/html" title="GPT" />
-    <published>2024-08-09T00:00:00+09:00</published>
+    <title>ExpoMF</title>
+    <link href="https://jayarnim.github.io/posts/EXMF/" rel="alternate" type="text/html" title="ExpoMF" />
+    <published>2024-08-14T00:00:00+09:00</published>
   
-    <updated>2024-08-09T00:00:00+09:00</updated>
+    <updated>2024-08-14T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/GPT/</id>
-    <content src="https://jayarnim.github.io/posts/GPT/" />
+    <id>https://jayarnim.github.io/posts/EXMF/</id>
+    <content src="https://jayarnim.github.io/posts/EXMF/" />
     <author>
       <name>jayarnim</name>
     </author>
@@ -162,11 +162,15 @@
     
     <category term="AI Application" />
     
-    <category term="Text Analytics" />
+    <category term="Recommender System" />
     
   
 
-  <summary>Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</summary>
+  <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://doi.org/10.1145/2872427.2883090&amp;quot;&amp;gt;&amp;lt;code&amp;gt;Modeling User Exposure in Recommendation&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2016&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Data Set&amp;lt;/strong&amp;gt;:
+    &amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;code&amp;gt;&amp;lt;a href=&amp;quot;https://snap.stanford.edu/data/loc-Gowalla.html&amp;quot;&amp;gt;Gowalla&amp;lt;/a&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://www.kaggle.com/datase...</summary>
 
   </entry>
 
