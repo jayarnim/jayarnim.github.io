@@ -706,6 +706,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -855,9 +866,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="511 words"
+  title="644 words"
 >
-  <em>2 min</em> read</span>
+  <em>3 min</em> read</span>
 
         </div>
       </div>
@@ -870,11 +881,96 @@
 
 <ul>
   <li>
-    <p><strong>BPR(<code class="language-plaintext highlighter-rouge">B</code>ayesian <code class="language-plaintext highlighter-rouge">P</code>ersonalized <code class="language-plaintext highlighter-rouge">R</code>anking)</strong> : 베이지안 접근법을 활용한 개인화 순위 목적 함수</p>
+    <p><strong>BPR(<code class="language-plaintext highlighter-rouge">B</code>ayesian <code class="language-plaintext highlighter-rouge">P</code>ersonalized <code class="language-plaintext highlighter-rouge">R</code>anking)</strong> : Probabilistc Pairwise Ranking Objective Function</p>
 
     <blockquote>
       <p>선행 연구들은 대체로 평점 예측에 집중하는 경향을 보였으며, 이는 명시적 피드백 환경에 적합함. 하지만 실제에서는 주로 암묵적 피드백이 사용되며, 때문에 개별 아이템의 평점을 정확히 맞추는 것보다는 중요한 상호작용 정보과 중요하지 않은 상호작용 정보 간 차등을 두는 (아이템 간 선호 순위를 맞추는) 목적 함수가 요구됨.</p>
     </blockquote>
+  </li>
+</ul>
+
+<h2 id="auc-optimization"><span class="me-2">AUC Optimization</span><a href="#auc-optimization" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><strong>ROC(<code class="language-plaintext highlighter-rouge">R</code>eceiver <code class="language-plaintext highlighter-rouge">O</code>perating <code class="language-plaintext highlighter-rouge">C</code>haracteristic)</strong> is the set of $(x, y)$ pairs for all threshold $t$ values:</p>
+
+\[\begin{aligned}
+  \text{ROC}
+  &amp;=\left\{(x,y) \mid t \in [0,1]\right\}
+  \end{aligned}\]
+
+    <ul>
+      <li>
+        <p>$x$ is FPR(<code class="language-plaintext highlighter-rouge">F</code>alse <code class="language-plaintext highlighter-rouge">P</code>ositive <code class="language-plaintext highlighter-rouge">R</code>ate):</p>
+
+\[\begin{aligned}
+  x
+  &amp;=f(t)\\
+  &amp;=p\left(\hat{z} &gt; t\mid z=\text{NEG}\right)
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>$y$ is TPR(<code class="language-plaintext highlighter-rouge">T</code>rue <code class="language-plaintext highlighter-rouge">P</code>ositive <code class="language-plaintext highlighter-rouge">R</code>ate):</p>
+
+\[\begin{aligned}
+  y
+  &amp;=g(t)\\
+  &amp;=p\left(\hat{z} &gt; t\mid z=\text{POS}\right)
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>AUC(<code class="language-plaintext highlighter-rouge">A</code>rea <code class="language-plaintext highlighter-rouge">U</code>nder the <code class="language-plaintext highlighter-rouge">C</code>urve)</strong> is the area under the ROC curve:</p>
+
+\[\begin{aligned}
+  \text{AUC}
+  &amp;=\int_{0}^{1}{g \circ f^{-1}\left(x\right)\text{d}x}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>Convert to Probability</strong></p>
+
+    <ul>
+      <li>
+        <p>Change of Variables:</p>
+
+\[\begin{aligned}
+  x
+  &amp;= f(t)\\
+  \frac{\text{d}x}{\text{d}t}
+  &amp;= \frac{\text{d}f(t)}{\text{d}t}\\
+  \therefore \text{d}x
+  &amp;= \frac{\text{d}f(t)}{\text{d}t} \text{d}t
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>$f(t), g(t)$ is related to CDF(<code class="language-plaintext highlighter-rouge">C</code>umulative <code class="language-plaintext highlighter-rouge">D</code>istribution <code class="language-plaintext highlighter-rouge">F</code>unction):</p>
+
+\[\begin{aligned}
+  f(t)
+  &amp;= p\left(\hat{z} &gt; t\mid z=\text{NEG}\right)\\
+  &amp;= 1 - p\left(\hat{z} \le t\mid z=\text{NEG}\right)\\
+  \\
+  \therefore \text{d}x
+  &amp;= \frac{\text{d}f(t)}{\text{d}t} \text{d}t\\
+  &amp;= -p\left(\hat{z}=t \mid z=\text{NEG}\right)\text{d}t
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>Therefore:</p>
+
+\[\begin{aligned}
+  \text{AUC}
+  &amp;=\int_{0}^{1}{g \circ f^{-1}\left(x\right)\text{d}x}\\
+  &amp;= -\int_{0}^{1}{g(t) \frac{\text{d}f(t)}{\text{d}t} \text{d}t} \quad \because \frac{\text{d}x}{\text{d}t} &lt; 0\\
+  &amp;= \int_{0}^{1}{p\left(\hat{z} &gt; t\mid z=\text{POS}\right) p\left(\hat{z}=t \mid z=\text{NEG}\right)\text{d}t}\\
+  &amp;= p(\hat{z}_{\text{POS}} &gt; \hat{z}_{\text{NEG}})
+  \end{aligned}\]
+      </li>
+    </ul>
   </li>
 </ul>
 
