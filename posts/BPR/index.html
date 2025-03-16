@@ -866,7 +866,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="644 words"
+  title="651 words"
 >
   <em>3 min</em> read</span>
 
@@ -935,27 +935,27 @@
 
     <ul>
       <li>
-        <p>Change of Variables:</p>
-
-\[\begin{aligned}
-  x
-  &amp;= f(t)\\
-  \frac{\text{d}x}{\text{d}t}
-  &amp;= \frac{\text{d}f(t)}{\text{d}t}\\
-  \therefore \text{d}x
-  &amp;= \frac{\text{d}f(t)}{\text{d}t} \text{d}t
-  \end{aligned}\]
-      </li>
-      <li>
         <p>$f(t), g(t)$ is related to CDF(<code class="language-plaintext highlighter-rouge">C</code>umulative <code class="language-plaintext highlighter-rouge">D</code>istribution <code class="language-plaintext highlighter-rouge">F</code>unction):</p>
 
 \[\begin{aligned}
   f(t)
   &amp;= p\left(\hat{z} &gt; t\mid z=\text{NEG}\right)\\
-  &amp;= 1 - p\left(\hat{z} \le t\mid z=\text{NEG}\right)\\
+  &amp;= 1 - \underbrace{p\left(\hat{z} \le t\mid z=\text{NEG}\right)}_{\text{CDF}}\\
+  \\
+  g(t)
+  &amp;= p\left(\hat{z} &gt; t\mid z=\text{POS}\right)\\
+  &amp;= 1 - \underbrace{p\left(\hat{z} \le t\mid z=\text{POS}\right)}_{\text{CDF}}
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>Change of Variables:</p>
+
+\[\begin{aligned}
+  \frac{\text{d}x}{\text{d}t}
+  &amp;= \frac{\text{d}f(t)}{\text{d}t}\\
+  &amp;= -\underbrace{p\left(\hat{z}=t \mid z=\text{NEG}\right)}_{\text{PDF}}\\
   \\
   \therefore \text{d}x
-  &amp;= \frac{\text{d}f(t)}{\text{d}t} \text{d}t\\
   &amp;= -p\left(\hat{z}=t \mid z=\text{NEG}\right)\text{d}t
   \end{aligned}\]
       </li>
