@@ -14,18 +14,16 @@ image:
 ## Curse of Dimensionality
 -----
 
-- **정의** : 고차원일수록 알고리즘이 제대로 학습하지 못하는 현상
+- **정의** : 고차원일수록 관측치 간 거리가 기하급수적으로 멀어짐에 따라 차원별 학습 가능한 관측치가 희소해져서 알고리즘이 제대로 학습하지 못하는 현상
 
     ![01](/_post_refer_img/MachineLearning/11-01.png){: width="100%"}
 
-    - 관측치 간 거리가 기하급수적으로 멀어짐에 따라 차원별 학습 가능한 관측치가 희소해짐
-
 - **차원 축소의 당위성**
-
-    ![02](/_post_refer_img/MachineLearning/11-02.jpeg){: width="100%"}
 
     > #### Manifold hypothesis
     > Many high-dimensional data sets that occur in the real world actually lie along low-dimensional latent manifolds inside that high-dimensional space.
+
+    ![02](/_post_refer_img/MachineLearning/11-02.jpeg){: width="100%"}
 
 ## Dimensionality Reduction Methods
 -----
@@ -43,7 +41,7 @@ image:
         - 주성분 분석(`P`rinciple `C`omponent `A`nalysis; PCA)
         - 선형 판별 분석(`L`inear `D`iscriminant `A`nalysis; LDA)
 
-    - $\text{arg} \max_{\overrightarrow{w}}{dist}$
+    - $\text{arg} \max_{\overrightarrow{w}}{\text{dist}}$
         - 다차원 척도법(`M`ulti-`D`imensional `S`caling; MDS)
 
     - **Reveal Non-Linear Structure**

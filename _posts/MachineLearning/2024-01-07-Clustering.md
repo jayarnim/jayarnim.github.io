@@ -22,6 +22,15 @@ image:
 
     ![01](/_post_refer_img/MachineLearning/07-01.png){: width="100%"}
 
+- **구분**
+    - **관측치 중복 여부**
+        - **Hard(or Crisp) Clustering** : 관측치가 하나의 군집에만 할당됨
+        - **Soft(or Fuzzy) Clustering** : 관측치가 여러 개의 군집에 할당될 수 있음
+
+    - **군집 간 위계 여부**
+        - **Partitional Clustering** : 군집 간 위계가 존재하지 않음
+        - **Hierarchical Clustering** : 군집 간 위계가 존재함
+
 - **판별 분석과 비교**
 
     ![02](/_post_refer_img/MachineLearning/07-02.png){: width="100%"}
@@ -33,23 +42,6 @@ image:
     - **군집 분석(Cluster Analysis)**
         - **학습 방식** : 비지도학습(훈련 관측치의 정답 정보를 사전에 알 수 없거나 존재하지 않음)
         - **학습 목표** : 주어진 표본을 분할하는 여러 개의 군집을 탐색함
-
-## Type
------
-
-- **관측치 중복 여부에 따른 구분**
-
-    ![03](/_post_refer_img/MachineLearning/07-03.png){: width="100%"}
-
-    - **Hard(or Crisp) Clustering** : 관측치가 하나의 군집에만 할당됨
-    - **Soft(or Fuzzy) Clustering** : 관측치가 여러 개의 군집에 할당될 수 있음
-
-- **군집 간 위계 여부에 따른 구분**
-
-    ![04](/_post_refer_img/MachineLearning/07-04.png){: width="100%"}
-
-    - **Partitional Clustering** : 군집 간 위계가 존재하지 않음
-    - **Hierarchical Clustering** : 군집 간 위계가 존재함
 
 ## Metrics
 -----
