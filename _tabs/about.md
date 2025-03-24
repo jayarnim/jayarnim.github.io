@@ -9,12 +9,14 @@ Hi there! I'm dreaming of becoming a Data Scientist, **specializing in Recommend
 ## Research Interest
 ------
 
-- Topic
+- **Topic**
     - Personalized Service
     - Information Uncertainty
-- AI Application
+
+- **AI Application**
     - [x] Recommendation
-- Data Mining
+
+- **Data Mining**
     - [x] Bayesian Deep Learning
     - [ ] Graph Deep Learning
     - [x] Text Mining
