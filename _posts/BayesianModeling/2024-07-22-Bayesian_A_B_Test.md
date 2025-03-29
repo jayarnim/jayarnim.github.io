@@ -1,7 +1,7 @@
 ---
-order: 7
+order: 8
 title: Bayesian A/B Test
-date: 2024-07-21
+date: 2024-07-22
 categories: [Data Mining Techs, Bayesian Modeling]
 tags: [Bayesian, A/B Test]
 math: true
@@ -11,7 +11,7 @@ image:
     path: /_post_refer_img/BayesianModeling/Thumbnail.jpeg
 ---
 
-![01](/_post_refer_img/BayesianModeling/07-01.png){: width="100%"}
+![01](/_post_refer_img/BayesianModeling/08-01.png){: width="100%"}
 
 > #### Question
 > 프론트엔드 웹 개발자는 전환율(Conversion Rate)을 개선하기 위해 웹사이트 디자인을 기존 $A$ 안에서 $B$ 안으로 개편하고자 한다. 변경 전, 개발자는 개편이 성공적이었는지 확인하기 위해 A/B Test 를 실시하였다. 구체적으로 방문객 일부에게는 $A$ 를, 나머지는 $B$ 를 제공한 후, 전환 수를 아래와 같이 기록하였다. $A,B$ 전환율 간에 유의한 차이가 있다고 볼 수 있는가? (단, $$\sigma^2_{A}=\sigma^2_{B}$$ 임이 알려져 있다고 가정한다.)

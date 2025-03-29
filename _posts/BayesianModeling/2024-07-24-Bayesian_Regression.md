@@ -1,7 +1,7 @@
 ---
-order: 9
+order: 10
 title: Bayesian Regression
-date: 2024-07-23
+date: 2024-07-24
 categories: [Data Mining Techs, Bayesian Modeling]
 tags: [Bayesian, Regression]
 math: true
@@ -12,7 +12,7 @@ image:
 ---
 
 <div style="text-align: center;">
-    <img src="/_post_refer_img/BayesianModeling/09-01.png" alt="01" width="100%">
+    <img src="/_post_refer_img/BayesianModeling/10-01.png" alt="01" width="100%">
     <p><em>Bayesian Regression Model</em></p>
 </div>
 

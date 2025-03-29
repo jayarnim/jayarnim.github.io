@@ -1,7 +1,7 @@
 ---
-order: 6
+order: 7
 title: Bayes Action
-date: 2024-07-20
+date: 2024-07-21
 categories: [Data Mining Techs, Bayesian Modeling]
 tags: [Bayesian, Optimization, Objective Function]
 math: true

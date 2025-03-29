@@ -1,5 +1,5 @@
 ---
-order: 11
+order: 12
 title: Bayesian Attention Modules
 date: 2024-09-19
 categories: [Data Mining Techs, Bayesian Modeling]
