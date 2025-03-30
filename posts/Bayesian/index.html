@@ -927,7 +927,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="4018 words"
+  title="4083 words"
 >
   <em>22 min</em> read</span>
 
@@ -1091,10 +1091,10 @@
 
 <ul>
   <li>
-    <p><strong><em>신념도를 수량화할 수 있는가?</em></strong></p>
+    <p><strong><em>신념도를 확률로써 수량화할 수 있는가?</em></strong></p>
 
     <blockquote>
-      <p>윤리적으로 중립인 명제에 대하여 그것의 참 여부에 따라 $0-1$ 사이의 서수적 효용을 획득하거나 상실할 수 있는 내기 상황을 가정함으로써, 베이즈주의는 개인의 신념도를 행위의 자발성과 동일시하는 행동주의적 접근을 취한다(이영의, 2015, p.35). 즉, <strong>내기 상황 하에서 신념과 선호를 기대 효용의 형태로 연결하고, 이를 최적화 혹은 효용 극대화라는 선택으로써 측정 가능한 형태로 이끌어낸다.</strong></p>
+      <p>윤리적으로 중립인 명제에 대하여 그것의 참 여부에 따라 $0-1$ 사이의 서수적 효용을 획득하거나 상실할 수 있는 내기 상황을 가정함으로써, 베이즈주의는 개인의 신념도를 행위의 자발성과 동일시하는 행동주의적 접근을 취한다(이영의, 2015, p.35). 즉, <strong>내기 상황 하에서 신념과 선호를 기대 효용의 형태로 연결하고, 이를 최적화 혹은 효용 극대화라는 선택으로써 측정 가능한 형태로 이끌어낸다.</strong> 또한 이 신념 체계의 정합성을 콕스 정리를 통해 형식적으로, 더치북 논증을 통해 실용적으로 입증한다.</p>
     </blockquote>
   </li>
 </ul>
@@ -1146,7 +1146,7 @@
     <p><strong>콕스 정리(Cox’s Theorem)</strong> | 논리적 정합화</p>
 
     <blockquote>
-      <p>함수 $G,H$ 가 실수 전체에 대하여 연속이고, 한 개인의 신념 함수 $b$ 가 논리 집합 $\mathcal{L}$ 에 대하여 $b:\mathcal{L} \times \mathcal{L} \to \mathbb{R}$ 인 단조 함수라고 하자. 아래 조건을 만족하는 신념 함수 $b$ 는 존재론적으로 유일한 확률 함수 $P$ 와 엄격히 증가하는 실수 함수 $F$ 에 대하여 다음을 만족한다. <br /> $b(A \mid B) = F(P(A \mid B))$</p>
+      <p>함수 $G,H$ 가 실수 전체에 대하여 연속이고, 한 개인의 신념 함수 $b$ 가 논리 집합 $\mathcal{L}$ 에 대하여 $b:\mathcal{L} \times \mathcal{L} \to \mathbb{R}$ 인 단조 함수라고 하자. 아래 조건을 만족하는 신념 함수 $b$ 는 존재론적으로 유일한 확률 함수 $P$ 와 엄격히 증가하는 실수 함수 $F$ 에 대하여 $b(A \mid B) = F(P(A \mid B))$ 임을 만족한다. 즉, 신념 함수 $b$ 는 확률 함수 $P$ 와 동형이다.</p>
     </blockquote>
 
     <ul>
@@ -1154,14 +1154,16 @@
         <p><strong>논리 연산의 일관성(Associativity &amp; Consistency)</strong> : 이변수 함수 $G$ 가 논리 연산 $\wedge$ 의 구조적 결합성과 일치하기 위해서는 $G$ 가 반드시 곱셈형 형태여야 함</p>
 
 \[\begin{aligned}
-  b(A \wedge B \mid C) = G(b(A \mid C), b(B \mid A \wedge C))
+  b(A \wedge B \mid C)
+  &amp;= G(b(A \mid C), b(B \mid A \wedge C))
   \end{aligned}\]
       </li>
       <li>
         <p><strong>부정의 일관성(Negation)</strong> : 일변수 함수 $H$ 가 부정을 나타내기 위해서는 확률의 여사건 법칙 $1-p$ 에 대응하는 형태를 만족해야 함</p>
 
 \[\begin{aligned}
-  b(\neg A \mid B) = H(b(A \mid B))
+  b(\neg A \mid B)
+  &amp;= H(b(A \mid B))
   \end{aligned}\]
       </li>
       <li>
