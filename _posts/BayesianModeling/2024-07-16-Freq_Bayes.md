@@ -11,16 +11,13 @@ image:
     path: /_post_refer_img/BayesianModeling/Thumbnail.jpeg
 ---
 
-## Compare Frequentist and Bayesian
------
-
-### Uncertainty
+## Uncertainty
 
 - **불확실성(Uncertainty)** : 어떠한 사건(Outcome)에 대하여 확신할 수 없는 상태
 
 - **우발적 불확실성(Aleatoric Uncertainty)** : 시스템이 본질적으로 확률적이기에 발생하는 불확실성
     - **확률적 시스템(Stochastic System)** : 동일한 조건에서 실험을 반복하더라도 결과가 동일하지 않고 일정한 확률 분포를 따르는 시스템
-    - 표본 변동성(Sample Variability)으로 인해 발생함
+    - 표본 변동성(Sample Variability), 데이터 생성 과정상의 우연성(Randomness)으로 인해 발생함
     - 시스템에 내재된 불확실성이므로 줄일 수 없음
 
 - **인식 불확실성(Epistemic Uncertainty)** : 연구자가 충분한 정보를 확보하지 못했기에 발생하는 불확실성
@@ -32,22 +29,35 @@ image:
     - **모형(Model)** : 어떠한 현상을 설명하거나 예측하기 위하여 수학적으로 혹은 논리적으로 정의된 체계
     - **모수(Parameter)** : 모수 추정에서 확률 모형을 정의하는 요소로서, 확률 모형의 구조와 가정 하에서 사건 발생 원리를 제한적으로 설명함
 
+## Frequentist vs. Bayesian
+-----
+
+- **모수(Parameter)** : 세계에 존재하는 고정된 사실
+
+    | | 빈도주의 | 베이즈주의 |
+    |---|---|---|
+    | 불확실성 대상 | 모수 추정 과정 | 모수 |
+    | 모델링 대상 | 모수 추정량 $\hat{\theta} \sim F$ | 모수 $\theta \mid \mathcal{D} \sim F$ |
+    | 우발적 불확실성 | 표본 추출의 변동 | 데이터 생성 과정 |
+    | 인식 불확실성 | X | 신념도 |
+
 ### Frequentist
 
-- **빈도주의(Frequentist)** : 확률을 무한 반복 실험에서 사건이 발생하는 **상대 빈도(Relative Frequency)** 로 해석하는 관점
+- **빈도주의(Frequentist)**
 
-- **모수는 미지의 상수(Unknown Constant)**
+    - `PERSPECTIVE`
+        - **실증주의(Positivism)** : 사건들의 결과의 집합에 대하여 정의
+        - **확률의 빈도적 해석(Frequentist interpretation)** : 무한 반복 실험에서 사건이 발생하는 **상대 빈도(Relative Frequency)**
 
-    > 사건 발생 원리가 매 실험마다 변한다면 동일한 실험을 반복할 수 없으므로, 확률의 개념이 성립할 수 없음. 따라서 사건 발생 원리를 설명하는 모수는 비록 그 정체를 알 수 없더라도 상수(Constant)로 정의되어야 함.
+    - `TARGET` 모수(Parameter)
+ 
+    - `QUESTION` *모수는 무엇인가?*
 
-    $$\begin{aligned}
-    \theta
-    &=\mu, \sigma^2, p, \cdots
-    \end{aligned}$$
+    - `GOAL` *모수의 정체를 실증적으로 규명하겠다.*
 
-- **모수 추정 과정상의 불확실성**
+    - `ASSUMPTION` *실험을 반복하면 그 결과는 장기적으로 모수로 수렴할 것이다.*
 
-    > 모수는 비록 정체를 알 수는 없지만 상수이므로, 그 자체를 모델링할 필요가 없음. 빈도주의에서 모델링하는 대상은 모수 추정치(Estimated Value)임. 구체적으로 우도(Likelihood)를 최대화하는 모수의 점 추정치 혹은 구간 추정치를 탐색함. 따라서 빈도주의는 우발적 불확실성에서 비롯한 모수 추정 과정상의 불확실성만을 반영함.
+    - `REASON` 대수의 법칙(Law of Large Numbers)
 
 - **최우추정(`M`aximum `L`ikelihood `E`stimation)** : 우도를 최대화하는 모수의 추정치를 탐색하는 방법
 
@@ -59,21 +69,26 @@ image:
     - **신뢰 구간(Confidence Interval)** : 구간 추정에서의 추정치로서, 모수를 포함할 것으로 기대되는 구간
     - **신뢰 수준(Confidence Level)** : 무한 반복 실험에서 생성된 여러 신뢰 구간 중, 모수를 포함하는 신뢰 구간의 비율
 
-### Bayesian
+### Bayesianism
 
-- **베이지안(Bayesian)** : 확률을 주어진 정보에 근거했을 때 사건이 발생할 것이라는 **신념(Belief)의 강도** 로 해석하는 관점
+- **베이즈주의(Bayesianism)**
 
-- **모수는 확률변수(Random Variable)**
+    - `PERSPECTIVE`
+        - **인식론(Epistemology)** : 단일 사건들의 진술에 대하여 정의
+        - **확률의 주관적 해석(Subjective interpretation)** : 주어진 정보에 근거했을 때 사건이 발생할 것이라는 **신념도(Degree of Belief)**
 
-    > 확률을 무한 반복 실험에서 정의하지 않으므로, 사건 발생 원리를 설명하는 모수가 반드시 상수일 필요는 없음. 모수를 정의함에 있어 중요한 것은 모수가 알 수 없는 값이라는 것임. 이때 주장할 수 있는 것은 모수가 어떠한 값이라는 객관적인 사실이 아님. 주어진 정보에 근거했을 때, 모수가 어떠한 값일 가능성이 높다는 주관적인 믿음임. 따라서 모수에 대한 주장의 불확실성을 나타내기 위하여, 모수는 확률변수(Random Variable)로 정의되어야 함.
+    - `TARGET` 모수의 정체를 규명하는 명제에 대한 신념도(Degree of Belief)
 
-    $$\begin{aligned}
-    \theta \mid \mathcal{D} \sim F
-    \end{aligned}$$
+    - `QUESTION` *모수에 대하여 얼마나 알고 있는가?*
 
-- **모수의 불확실성**
+    - `GOAL` *모수의 정체에 대한 신념을 참된 앎으로서 정당화하고 갱신하겠다.*
 
-    > 베이지안에서는 모수 자체가 확률변수로서 모델링의 대상이 됨. 확률은 주어진 정보에 근거했을 때 사건이 발생할 것이라는 신념임. 따라서 모수는 주어진 정보에 근거했을 때 특정 값이라는 신념의 강도로써 모델링됨. 그 결과로 도출되는 사후 확률 분포(Posterior Probability Distribution)는 모수의 불확실성을 직접 나타내며, 그 원인을 관찰된 데이터의 변동성에서 비롯한 우발적 불확실성과, 정보의 한계에서 기인하는 모수에 대한 인식 불확실성으로 구분하여 반영함.
+    - `ASSUMPTION` *믿음을 확률로써 표현하고 이를 정보 갱신으로써 정당화할 수 있다.*
+
+    - `REASON`
+        - **기대 효용 이론(Expected Utility Theory)** : 신념의 측정 가능성 정당화
+        - **더치북 논증(Dutch Book Argument)** : 신념의 확률적 정합성 강제화
+        - **마틴게일 수렴 정리(Doob’s Martingale Convergence Theorem)** : 조건부 정보 갱신의 진리 접근성 정당화
 
 - **베이즈 정리(Bayes' Theorem)** : 모수의 사후 확률 분포를 추정하는 방법
 
