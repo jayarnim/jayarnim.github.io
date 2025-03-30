@@ -927,9 +927,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="3722 words"
+  title="4018 words"
 >
-  <em>20 min</em> read</span>
+  <em>22 min</em> read</span>
 
         </div>
       </div>
@@ -1143,7 +1143,34 @@
     </blockquote>
   </li>
   <li>
-    <p><strong>더치북 논증(Dutch Book Argument)</strong></p>
+    <p><strong>콕스 정리(Cox’s Theorem)</strong> | 논리적 정합화</p>
+
+    <blockquote>
+      <p>함수 $G,H$ 가 실수 전체에 대하여 연속이고, 한 개인의 신념 함수 $b$ 가 논리 집합 $\mathcal{L}$ 에 대하여 $b:\mathcal{L} \times \mathcal{L} \to \mathbb{R}$ 인 단조 함수라고 하자. 아래 조건을 만족하는 신념 함수 $b$ 는 존재론적으로 유일한 확률 함수 $P$ 와 엄격히 증가하는 실수 함수 $F$ 에 대하여 다음을 만족한다. <br /> $b(A \mid B) = F(P(A \mid B))$</p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <p><strong>논리 연산의 일관성(Associativity &amp; Consistency)</strong> : 이변수 함수 $G$ 가 논리 연산 $\wedge$ 의 구조적 결합성과 일치하기 위해서는 $G$ 가 반드시 곱셈형 형태여야 함</p>
+
+\[\begin{aligned}
+  b(A \wedge B \mid C) = G(b(A \mid C), b(B \mid A \wedge C))
+  \end{aligned}\]
+      </li>
+      <li>
+        <p><strong>부정의 일관성(Negation)</strong> : 일변수 함수 $H$ 가 부정을 나타내기 위해서는 확률의 여사건 법칙 $1-p$ 에 대응하는 형태를 만족해야 함</p>
+
+\[\begin{aligned}
+  b(\neg A \mid B) = H(b(A \mid B))
+  \end{aligned}\]
+      </li>
+      <li>
+        <p><strong>존재 가능성(Non-Triviality)</strong> : 전적으로 확신하는 신념과 완전히 부정하는 신념은 서로 다른 값이어야 함</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>더치북 논증(Dutch Book Argument)</strong> | 실용적 정합화</p>
 
     <blockquote>
       <p>특정인의 확률함수가 공리체계를 만족시키지 못할 경우에, 하나의 내기 전략이 있고 판돈의 집합이 있는 내기 상황에서 그는 결과에 상관없이 항상 일정한 액수를 잃게 된다. (이영의, 2015, p.58)</p>
@@ -1214,21 +1241,21 @@
 
     <ul>
       <li>
-        <p><strong>귀납의 문제(the Problem of Induction)</strong></p>
+        <p>귀납의 문제(the Problem of Induction)</p>
 
         <blockquote>
           <p>특정 사례들로부터 보편 결론을 이끌어낼 수 없다.</p>
         </blockquote>
       </li>
       <li>
-        <p><strong>마틴게일 수렴 정리(Doob’s Martingale Convergence Theorem)</strong></p>
+        <p>마틴게일 수렴 정리(Doob’s Martingale Convergence Theorem)</p>
 
         <blockquote>
           <p>일반적 환경에서 조건화에 의한 확률 변화는 참으로 수렴한다. (이영의, 2015, p.54) <br /> $\lim_{n \to \infty}{P(\theta^{*} \mid X_{1}, X_{2}, \cdots, X_{n})} \xrightarrow{p} 1$</p>
         </blockquote>
       </li>
       <li>
-        <p><strong>베이즈주의 결론</strong></p>
+        <p>베이즈주의 결론</p>
 
         <blockquote>
           <p>확률 계산법을 준수하고 조건화 규칙에 따라 개정이 이루어진다면, 그리고 그러한 개정의 결과가 궁극적으로 참으로 수렴한다는 점이 보증된다면, 베이즈주의 추리에서는 귀납의 문제가 성립될 수 없다. (이영의, 2015, p.55)</p>
