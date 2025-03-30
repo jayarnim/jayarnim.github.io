@@ -245,7 +245,7 @@
 
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
   <header class="profile-wrapper">
-    <a href="/" id="avatar" class="rounded-circle"><img src="/assets/img/profile/avatar.jpg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
+    <a href="/" id="avatar" class="rounded-circle"><img src="/assets/img/profile/avatar.png" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
 
     <h1 class="site-title">
       <a href="/">Data Scientist</a>
@@ -739,6 +739,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -754,6 +765,17 @@
       
         
         
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
       
 
       
@@ -905,7 +927,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="3754 words"
+  title="3722 words"
 >
   <em>20 min</em> read</span>
 
@@ -1011,7 +1033,7 @@
       <li><code class="language-plaintext highlighter-rouge">B4</code> $P(A) \ne 0$ 인 경우 $P(B \mid A) = \displaystyle\frac{P(A \wedge B)}{P(A)}$</li>
     </ul>
   </li>
-  <li><strong>정리</strong>
+  <li><strong>성질(Property)</strong>
     <ul>
       <li><code class="language-plaintext highlighter-rouge">T1</code> $B,C$ 가 독립적이면 $P(B \wedge C \mid A) = P(B \mid A) \cdot P(C \mid A)$</li>
       <li><code class="language-plaintext highlighter-rouge">T2</code> $P(\neg B \mid A) = 1 - P(B \mid A)$</li>
@@ -1062,31 +1084,22 @@
       <li><code class="language-plaintext highlighter-rouge">s5</code> <em>합리적 개인의 신념은 확률론의 계산법과 무모순적이어야 하고, 동시에 그것에 의해 규제되어야 한다.</em></li>
     </ul>
   </li>
-  <li>
-    <p><strong><em>신념도를 확률로써 수량화할 수 있는가?</em></strong></p>
-
-    <ul>
-      <li>측정 조건(Measurement Condition)</li>
-      <li>정합성 조건(Consistency Condition)</li>
-    </ul>
-  </li>
-  <li>
-    <p><strong><em>신념이 주관적 체계를 넘어 객관적 체계로서 정당화될 수 있는가?</em></strong></p>
-    <ul>
-      <li>사전 확률 제약하기(Constraining Priors)</li>
-      <li>사전 확률 씻겨내기(Washing Out Priors)</li>
-    </ul>
-  </li>
 </ul>
 
 <h2 id="condition"><span class="me-2">Condition</span><a href="#condition" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<blockquote>
-  <p>윤리적으로 중립인 명제에 대하여 그것의 참 여부에 따라 $0-1$ 사이의 서수적 효용을 획득하거나 상실할 수 있는 내기 상황을 가정하자. $X$ 에 대한 행위자의 신념도가 $p$ 이라는 것은 그 행위자는 $X$ 이면 단위 $1$ 을 지불하고 그렇지 않은 경우에는 $0$ 을 지불하는 도박에 대해 $p$ 를 지불할 용의가 있다는 것이다(de Finetti, 1937, p.62). <br /> <br /> 이처럼 베이즈주의는 개인의 신념도를 행위의 자발성과 동일시하는 행동주의적 접근을 취한다(이영의, 2015, p.35). 즉, <strong>내기 상황 하에서 신념과 선호를 기대 효용의 형태로 연결하고, 이를 최적화 혹은 효용 극대화라는 선택으로써 측정 가능한 형태로 이끌어낸다.</strong></p>
-</blockquote>
+<ul>
+  <li>
+    <p><strong><em>신념도를 수량화할 수 있는가?</em></strong></p>
 
-<h3 id="measurement"><span class="me-2">Measurement</span><a href="#measurement" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+    <blockquote>
+      <p>윤리적으로 중립인 명제에 대하여 그것의 참 여부에 따라 $0-1$ 사이의 서수적 효용을 획득하거나 상실할 수 있는 내기 상황을 가정함으로써, 베이즈주의는 개인의 신념도를 행위의 자발성과 동일시하는 행동주의적 접근을 취한다(이영의, 2015, p.35). 즉, <strong>내기 상황 하에서 신념과 선호를 기대 효용의 형태로 연결하고, 이를 최적화 혹은 효용 극대화라는 선택으로써 측정 가능한 형태로 이끌어낸다.</strong></p>
+    </blockquote>
+  </li>
+</ul>
+
+<h3 id="measurement-condition"><span class="me-2">Measurement Condition</span><a href="#measurement-condition" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
@@ -1112,7 +1125,7 @@
   </li>
 </ul>
 
-<h3 id="consistency"><span class="me-2">Consistency</span><a href="#consistency" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="consistency-condition"><span class="me-2">Consistency Condition</span><a href="#consistency-condition" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
@@ -1141,9 +1154,15 @@
 <h2 id="bayesian-objectivity"><span class="me-2">Bayesian Objectivity</span><a href="#bayesian-objectivity" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<blockquote>
-  <p>절차의 합리성과 결과의 합리성이 대응하지 않을 경우는 어떻게 해야 하는가? (중략) 이 부분에서 우리의 논의에서 처음으로 합리성의 문제가 객관성의 문제와 관련된다. 진리성과 관련하여 어느 사회에서나 통용되는 기준들이 있으며 우리는 그것들이 객관적이라고 부른다. (중략) 베이즈주의적 객관성은 <strong>확실하지 않은 의견들 간 성립하는 간주관적 일치이다.</strong> (이영의, 2015, p.41)</p>
-</blockquote>
+<ul>
+  <li>
+    <p><strong><em>신념이 주관적 체계를 넘어 객관적 체계로서 정당화될 수 있는가?</em></strong></p>
+
+    <blockquote>
+      <p>절차의 합리성과 결과의 합리성이 대응하지 않을 경우는 어떻게 해야 하는가? (중략) 이 부분에서 우리의 논의에서 처음으로 합리성의 문제가 객관성의 문제와 관련된다. 진리성과 관련하여 어느 사회에서나 통용되는 기준들이 있으며 우리는 그것들이 객관적이라고 부른다. (중략) 베이즈주의적 객관성은 <strong>확실하지 않은 의견들 간 성립하는 간주관적 일치이다.</strong> (이영의, 2015, p.41)</p>
+    </blockquote>
+  </li>
+</ul>
 
 <h3 id="constraining-priors"><span class="me-2">Constraining Priors</span><a href="#constraining-priors" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -1184,6 +1203,39 @@
       <p>동전의 미래 행위에 대한 당신의 견해가 이웃 사람의 견해와 크게 다르더라도, 당신의 견해와 이웃 사람의 견해는 일상적으로 실험적인 던지기의 긴 연속에 베이즈의 정리를 적용하여 변형되어 거의 구별할 수 없게 될 것이다. (Edwards, Lindman, and Savage, 1963, p.197)</p>
     </blockquote>
   </li>
+</ul>
+
+<h2 id="epistemic-access-to-truth"><span class="me-2">Epistemic Access to Truth</span><a href="#epistemic-access-to-truth" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><strong>진리 접근성 문제(the Problem of Epistemic Access to Truth)</strong></p>
+
+    <ul>
+      <li>
+        <p><strong>귀납의 문제(the Problem of Induction)</strong></p>
+
+        <blockquote>
+          <p>특정 사례들로부터 보편 결론을 이끌어낼 수 없다.</p>
+        </blockquote>
+      </li>
+      <li>
+        <p><strong>마틴게일 수렴 정리(Doob’s Martingale Convergence Theorem)</strong></p>
+
+        <blockquote>
+          <p>일반적 환경에서 조건화에 의한 확률 변화는 참으로 수렴한다. (이영의, 2015, p.54) <br /> $\lim_{n \to \infty}{P(\theta^{*} \mid X_{1}, X_{2}, \cdots, X_{n})} \xrightarrow{p} 1$</p>
+        </blockquote>
+      </li>
+      <li>
+        <p><strong>베이즈주의 결론</strong></p>
+
+        <blockquote>
+          <p>확률 계산법을 준수하고 조건화 규칙에 따라 개정이 이루어진다면, 그리고 그러한 개정의 결과가 궁극적으로 참으로 수렴한다는 점이 보증된다면, 베이즈주의 추리에서는 귀납의 문제가 성립될 수 없다. (이영의, 2015, p.55)</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
   <li>
     <p><strong>조건화 규칙(Rule of Conditionalization)</strong></p>
 
@@ -1206,36 +1258,9 @@
       </li>
     </ul>
   </li>
-  <li>
-    <p><strong>진리 접근성</strong></p>
-
-    <ul>
-      <li>
-        <p>귀납의 문제(the problem of induction)</p>
-
-        <blockquote>
-          <p>특정 사례들로부터 보편 결론을 이끌어낼 수 없다.</p>
-        </blockquote>
-      </li>
-      <li>
-        <p>마틴게일 수렴 정리(Doob’s Martingale Convergence Theorem)</p>
-
-        <blockquote>
-          <p>일반적 환경에서 조건화에 의한 확률 변화는 참으로 수렴한다. (이영의, 2015, p.54) <br /> $\lim_{n \to \infty}{P(\theta^{*} \mid X_{1}, X_{2}, \cdots, X_{n})} \xrightarrow{p} 1$</p>
-        </blockquote>
-      </li>
-      <li>
-        <p>베이즈주의 결론</p>
-
-        <blockquote>
-          <p>확률 계산법을 준수하고 조건화 규칙에 따라 개정이 이루어진다면, 그리고 그러한 개정의 결과가 궁극적으로 참으로 수렴한다는 점이 보증된다면, 베이즈주의 추리에서는 귀납의 문제가 성립될 수 없다. (이영의, 2015, p.55)</p>
-        </blockquote>
-      </li>
-    </ul>
-  </li>
 </ul>
 
-<h2 id="inverse-inference"><span class="me-2">Inverse Inference</span><a href="#inverse-inference" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="causal-inference"><span class="me-2">Causal Inference</span><a href="#causal-inference" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
@@ -1266,7 +1291,7 @@
     </ul>
   </li>
   <li>
-    <p><strong>당구대의 비유(Bayes’s Billiard Table Analogy)</strong></p>
+    <p><strong>당구대의 비유(Bayes’ Billiard Table Analogy)</strong></p>
 
     <p><a href="/_post_refer_img/BayesianModeling/01-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/01-01.png" alt="01" width="100%" loading="lazy"></a></p>
 
@@ -1308,9 +1333,17 @@
     <p><strong>예증(Scholium)</strong></p>
 
     <blockquote>
-      <p>내가 $Z$ 라고 불렀던 그러한 사건의 경우에, 일정 횟수로 시행하고 그것이 발생하고 실패한 횟수를 통해, 그것에 대해서는 다른 어떤 것도 알지 못한 상태에서 그것의 확률에 관해 추측할 수 있고, 언급한 명적들의 크기를 계산하는 일반적인 방법에 의해 그러한 추측이 옳을 기회를 알 수 있다. <br /> <br /> 그리고 동일한 규칙이 그것에 관해 이루어진 어떤 시행에서도, 우리가 사전에 전혀 알지 못하는 확률을 갖는 사건의 경우에도 사용될 수 있다는 것은 다음을 생각해보면 나타난 것 같다. 즉, 어떤 횟수의 시행에서 그것이 다른 횟수보다 어떤 가능한 다른 횟수로 발생할 것이라는 점을 생각할 이유가 없다. <br /> <br /> 그러므로 나는 다음부터 당연히 사건 $Z$ 에 대해 주어진 규칙이 또한 어떠한 시행이 이루어지거나 관찰되기 전에 어떤 것도 알려지지 않은 사건의 확률에도 이용될 수 있다고 간주할 것이다. 나는 그러한 사건을 알려지지 않은 사건이라고 부를 것이다. (Bayes, 1763, p.393)</p>
+      <p>내가 $Z$ 라고 불렀던 그러한 사건의 경우에, 일정 횟수로 시행하고($n$) 그것이 발생하고($p$) 실패한 횟수($n-p$)를 통해, 그것에 대해서는 다른 어떤 것도 알지 못한 상태에서 그것의 확률에 관해 추측할 수 있고(Non-Informative Prior of $\theta$), 언급한 면적들의 크기를 계산하는 일반적인 방법에 의해 그러한 추측이 옳을 기회를 알 수 있다(Posterior of $\theta \mid \mathcal{D}$). <br /> <br /> 그리고 동일한 규칙이 그것에 관해 이루어진 어떤 시행에서도, 우리가 사전에 전혀 알지 못하는 확률을 갖는 사건의 경우에도 사용될 수 있다는 것은 다음을 생각해보면 나타난 것 같다. 즉, 어떤 횟수의 시행에서 그것이 다른 횟수보다 어떤 가능한 다른 횟수로 발생할 것이라는 점을 생각할 이유가 없다. <br /> <br /> 그러므로 나는 다음부터 당연히 사건 $Z$ 에 대해 주어진 규칙($\theta$)이 또한 어떠한 시행이 이루어지거나 관찰되기 전에(Prior) 어떤 것도 알려지지 않은(Non-Informative) 사건의 확률(Posterior of $\theta \mid \mathcal{D}$)에도 이용될 수 있다고 간주할 것이다. 나는 그러한 사건을 알려지지 않은 사건(Non-Informative Prior)이라고 부를 것이다. (Bayes, 1763, p.393)</p>
     </blockquote>
   </li>
+</ul>
+
+<hr />
+
+<h3 id="reference"><span class="me-2">Reference</span><a href="#reference" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li><a href="https://product.kyobobook.co.kr/detail/S000001052837">베이즈주의; 합리성으로부터 객관성으로의 여정</a><br />이영의. (2015). 한국연구재단 저술총서 4. 한국문화사</li>
 </ul>
 
   </div>

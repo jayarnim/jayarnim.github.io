@@ -245,7 +245,7 @@
 
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
   <header class="profile-wrapper">
-    <a href="/" id="avatar" class="rounded-circle"><img src="/assets/img/profile/avatar.jpg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
+    <a href="/" id="avatar" class="rounded-circle"><img src="/assets/img/profile/avatar.png" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
 
     <h1 class="site-title">
       <a href="/">Data Scientist</a>
@@ -706,6 +706,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -721,17 +732,6 @@
       
         
         
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
       
 
       
@@ -861,9 +861,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="2354 words"
+  title="2109 words"
 >
-  <em>13 min</em> read</span>
+  <em>11 min</em> read</span>
 
         </div>
       </div>
@@ -871,10 +871,7 @@
   </header>
 
   <div class="content">
-    <h2 id="compare-frequentist-and-bayesian"><span class="me-2">Compare Frequentist and Bayesian</span><a href="#compare-frequentist-and-bayesian" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<h3 id="uncertainty"><span class="me-2">Uncertainty</span><a href="#uncertainty" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+    <h2 id="uncertainty"><span class="me-2">Uncertainty</span><a href="#uncertainty" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <ul>
   <li>
@@ -883,7 +880,7 @@
   <li><strong>우발적 불확실성(Aleatoric Uncertainty)</strong> : 시스템이 본질적으로 확률적이기에 발생하는 불확실성
     <ul>
       <li><strong>확률적 시스템(Stochastic System)</strong> : 동일한 조건에서 실험을 반복하더라도 결과가 동일하지 않고 일정한 확률 분포를 따르는 시스템</li>
-      <li>표본 변동성(Sample Variability)으로 인해 발생함</li>
+      <li>표본 변동성(Sample Variability), 데이터 생성 과정상의 우연성(Randomness)으로 인해 발생함</li>
       <li>시스템에 내재된 불확실성이므로 줄일 수 없음</li>
     </ul>
   </li>
@@ -902,30 +899,74 @@
   </li>
 </ul>
 
+<h2 id="frequentist-vs-bayesian"><span class="me-2">Frequentist vs. Bayesian</span><a href="#frequentist-vs-bayesian" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><strong>모수(Parameter)</strong> : 세계에 존재하는 고정된 사실</p>
+
+    <div class="table-wrapper"><table>
+      <thead>
+        <tr>
+          <th> </th>
+          <th>빈도주의</th>
+          <th>베이즈주의</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>불확실성 대상</td>
+          <td>모수 추정 과정</td>
+          <td>모수</td>
+        </tr>
+        <tr>
+          <td>모델링 대상</td>
+          <td>모수 추정량 $\hat{\theta} \sim F$</td>
+          <td>모수 $\theta \mid \mathcal{D} \sim F$</td>
+        </tr>
+        <tr>
+          <td>우발적 불확실성</td>
+          <td>표본 추출의 변동</td>
+          <td>데이터 생성 과정</td>
+        </tr>
+        <tr>
+          <td>인식 불확실성</td>
+          <td>X</td>
+          <td>신념도</td>
+        </tr>
+      </tbody>
+    </table></div>
+  </li>
+</ul>
+
 <h3 id="frequentist"><span class="me-2">Frequentist</span><a href="#frequentist" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
-    <p><strong>빈도주의(Frequentist)</strong> : 확률을 무한 반복 실험에서 사건이 발생하는 <strong>상대 빈도(Relative Frequency)</strong> 로 해석하는 관점</p>
-  </li>
-  <li>
-    <p><strong>모수는 미지의 상수(Unknown Constant)</strong></p>
+    <p><strong>빈도주의(Frequentist)</strong></p>
 
-    <blockquote>
-      <p>사건 발생 원리가 매 실험마다 변한다면 동일한 실험을 반복할 수 없으므로, 확률의 개념이 성립할 수 없음. 따라서 사건 발생 원리를 설명하는 모수는 비록 그 정체를 알 수 없더라도 상수(Constant)로 정의되어야 함.</p>
-    </blockquote>
-
-\[\begin{aligned}
-  \theta
-  &amp;=\mu, \sigma^2, p, \cdots
-  \end{aligned}\]
-  </li>
-  <li>
-    <p><strong>모수 추정 과정상의 불확실성</strong></p>
-
-    <blockquote>
-      <p>모수는 비록 정체를 알 수는 없지만 상수이므로, 그 자체를 모델링할 필요가 없음. 빈도주의에서 모델링하는 대상은 모수 추정치(Estimated Value)임. 구체적으로 우도(Likelihood)를 최대화하는 모수의 점 추정치 혹은 구간 추정치를 탐색함. 따라서 빈도주의는 우발적 불확실성에서 비롯한 모수 추정 과정상의 불확실성만을 반영함.</p>
-    </blockquote>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">PERSPECTIVE</code>
+        <ul>
+          <li><strong>실증주의(Positivism)</strong> : 사건들의 결과의 집합에 대하여 정의</li>
+          <li><strong>확률의 빈도적 해석(Frequentist interpretation)</strong> : 무한 반복 실험에서 사건이 발생하는 <strong>상대 빈도(Relative Frequency)</strong></li>
+        </ul>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">TARGET</code> 모수(Parameter)</p>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">QUESTION</code> <em>모수는 무엇인가?</em></p>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">GOAL</code> <em>모수의 정체를 실증적으로 규명하겠다.</em></p>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">ASSUMPTION</code> <em>실험을 반복하면 그 결과는 장기적으로 모수로 수렴할 것이다.</em></p>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">REASON</code> 대수의 법칙(Law of Large Numbers)</li>
+    </ul>
   </li>
   <li>
     <p><strong>최우추정(<code class="language-plaintext highlighter-rouge">M</code>aximum <code class="language-plaintext highlighter-rouge">L</code>ikelihood <code class="language-plaintext highlighter-rouge">E</code>stimation)</strong> : 우도를 최대화하는 모수의 추정치를 탐색하는 방법</p>
@@ -942,29 +983,39 @@
   </li>
 </ul>
 
-<h3 id="bayesian"><span class="me-2">Bayesian</span><a href="#bayesian" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="bayesianism"><span class="me-2">Bayesianism</span><a href="#bayesianism" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
-    <p><strong>베이지안(Bayesian)</strong> : 확률을 주어진 정보에 근거했을 때 사건이 발생할 것이라는 <strong>신념(Belief)의 강도</strong> 로 해석하는 관점</p>
-  </li>
-  <li>
-    <p><strong>모수는 확률변수(Random Variable)</strong></p>
+    <p><strong>베이즈주의(Bayesianism)</strong></p>
 
-    <blockquote>
-      <p>확률을 무한 반복 실험에서 정의하지 않으므로, 사건 발생 원리를 설명하는 모수가 반드시 상수일 필요는 없음. 모수를 정의함에 있어 중요한 것은 모수가 알 수 없는 값이라는 것임. 이때 주장할 수 있는 것은 모수가 어떠한 값이라는 객관적인 사실이 아님. 주어진 정보에 근거했을 때, 모수가 어떠한 값일 가능성이 높다는 주관적인 믿음임. 따라서 모수에 대한 주장의 불확실성을 나타내기 위하여, 모수는 확률변수(Random Variable)로 정의되어야 함.</p>
-    </blockquote>
-
-\[\begin{aligned}
-  \theta \mid \mathcal{D} \sim F
-  \end{aligned}\]
-  </li>
-  <li>
-    <p><strong>모수의 불확실성</strong></p>
-
-    <blockquote>
-      <p>베이지안에서는 모수 자체가 확률변수로서 모델링의 대상이 됨. 확률은 주어진 정보에 근거했을 때 사건이 발생할 것이라는 신념임. 따라서 모수는 주어진 정보에 근거했을 때 특정 값이라는 신념의 강도로써 모델링됨. 그 결과로 도출되는 사후 확률 분포(Posterior Probability Distribution)는 모수의 불확실성을 직접 나타내며, 그 원인을 관찰된 데이터의 변동성에서 비롯한 우발적 불확실성과, 정보의 한계에서 기인하는 모수에 대한 인식 불확실성으로 구분하여 반영함.</p>
-    </blockquote>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">PERSPECTIVE</code>
+        <ul>
+          <li><strong>인식론(Epistemology)</strong> : 단일 사건들의 진술에 대하여 정의</li>
+          <li><strong>확률의 주관적 해석(Subjective interpretation)</strong> : 주어진 정보에 근거했을 때 사건이 발생할 것이라는 <strong>신념도(Degree of Belief)</strong></li>
+        </ul>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">TARGET</code> 모수의 정체를 규명하는 명제에 대한 신념도(Degree of Belief)</p>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">QUESTION</code> <em>모수에 대하여 얼마나 알고 있는가?</em></p>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">GOAL</code> <em>모수의 정체에 대한 신념을 참된 앎으로서 정당화하고 갱신하겠다.</em></p>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">ASSUMPTION</code> <em>믿음을 확률로써 표현하고 이를 정보 갱신으로써 정당화할 수 있다.</em></p>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">REASON</code>
+        <ul>
+          <li><strong>기대 효용 이론(Expected Utility Theory)</strong> : 신념의 측정 가능성 정당화</li>
+          <li><strong>더치북 논증(Dutch Book Argument)</strong> : 신념의 확률적 정합성 강제화</li>
+          <li><strong>마틴게일 수렴 정리(Doob’s Martingale Convergence Theorem)</strong> : 조건부 정보 갱신의 진리 접근성 정당화</li>
+        </ul>
+      </li>
+    </ul>
   </li>
   <li>
     <p><strong>베이즈 정리(Bayes’ Theorem)</strong> : 모수의 사후 확률 분포를 추정하는 방법</p>
