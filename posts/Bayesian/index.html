@@ -927,7 +927,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="4347 words"
+  title="4452 words"
 >
   <em>24 min</em> read</span>
 
@@ -1232,6 +1232,13 @@
       <p>동전의 미래 행위에 대한 당신의 견해가 이웃 사람의 견해와 크게 다르더라도, 당신의 견해와 이웃 사람의 견해는 일상적으로 실험적인 던지기의 긴 연속에 베이즈의 정리를 적용하여 변형되어 거의 구별할 수 없게 될 것이다. (Edwards, Lindman, and Savage, 1963, p.197)</p>
     </blockquote>
   </li>
+  <li>
+    <p><strong>두브의 마틴게일 수렴 정리(Doob’s Martingale Convergence Theorem)</strong></p>
+
+    <blockquote>
+      <p>일반적 환경에서 조건화에 의한 확률 변화는 장기적으로 안정화된다. (이영의, 2015, p.54) <br /> \(\mathbb{E}\left[\theta \mid \mathcal{D}_{n}\right] \to \mathbb{E}\left[\theta \mid \mathcal{D}_{\infty}\right]\)</p>
+    </blockquote>
+  </li>
 </ul>
 
 <h2 id="epistemic-access-to-truth"><span class="me-2">Epistemic Access to Truth</span><a href="#epistemic-access-to-truth" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
@@ -1239,31 +1246,25 @@
 
 <ul>
   <li>
-    <p><strong>진리 접근성 문제(the Problem of Epistemic Access to Truth)</strong></p>
+    <p><strong>귀납의 문제(the Problem of Induction)</strong></p>
 
-    <ul>
-      <li>
-        <p>귀납의 문제(the Problem of Induction)</p>
+    <blockquote>
+      <p>특정 사례들로부터 보편 결론을 이끌어낼 수 없다.</p>
+    </blockquote>
+  </li>
+  <li>
+    <p><strong>후험 일치성(Posterior Consistency)</strong></p>
 
-        <blockquote>
-          <p>특정 사례들로부터 보편 결론을 이끌어낼 수 없다.</p>
-        </blockquote>
-      </li>
-      <li>
-        <p>마틴게일 수렴 정리(Doob’s Martingale Convergence Theorem)</p>
+    <blockquote>
+      <p>확률 계산법을 준수하고 조건화 규칙에 따라 개정이 이루어진다면, 그리고 그러한 개정의 결과가 궁극적으로 참으로 수렴한다는 점이 보증된다면, 베이즈주의 추리에서는 귀납의 문제가 성립될 수 없다. (이영의, 2015, p.55)</p>
+    </blockquote>
+  </li>
+  <li>
+    <p><strong>슈바르츠 정리(Schwartz’s Theorem)</strong></p>
 
-        <blockquote>
-          <p>일반적 환경에서 조건화에 의한 확률 변화는 참으로 수렴한다. (이영의, 2015, p.54) <br /> $\lim_{n \to \infty}{P(\theta^{*} \mid X_{1}, X_{2}, \cdots, X_{n})} \xrightarrow{p} 1$</p>
-        </blockquote>
-      </li>
-      <li>
-        <p>베이즈주의 결론</p>
-
-        <blockquote>
-          <p>확률 계산법을 준수하고 조건화 규칙에 따라 개정이 이루어진다면, 그리고 그러한 개정의 결과가 궁극적으로 참으로 수렴한다는 점이 보증된다면, 베이즈주의 추리에서는 귀납의 문제가 성립될 수 없다. (이영의, 2015, p.55)</p>
-        </blockquote>
-      </li>
-    </ul>
+    <blockquote>
+      <p>관측치 \(X \sim P(\theta)\), 모수 \(\theta \in \Theta\), 사전 확률 분포 \(\Pi\), 참 모수 \(\theta^{*}\) 에 대하여, \(\theta^{*}\) 의 근방에 위치한 \(\theta\) 가 사전 확률 분포에서 양의 질량을 가진다고 하자. 즉, \(\Pi\left(\{\theta : D_{KL}\left[P_{\theta^{*}} \Vert P_{\theta}\right] &lt; \epsilon\}\right) &gt; 0\) 이다. 이때 사후 확률 분포는 장기적으로 \(\theta^{*}\) 에 집중된다. 즉, \(\Pi\left(\theta^{*} \mid X_{1}, \cdots, X_{n}\right) \xrightarrow{n \to \infty} 1\) 이다.</p>
+    </blockquote>
   </li>
   <li>
     <p><strong>조건화 규칙(Rule of Conditionalization)</strong></p>
@@ -1319,7 +1320,7 @@
 
     <ul>
       <li>
-        <p><strong>직접 확률(Direct Probability; $P(B \mid A)$)</strong> : 시행의 성질이 먼저 규정되고($A$) 이어서 시행에서($B$) 하나 또는 그 이상의 가능한 결과가 발생할 확률($P(A \wedge B)$) (이영의, 2015, p.62)</p>
+        <p><strong>직접 확률(Direct Probability; $P(B \mid A)$)</strong> : 시행의 성질이 먼저 규정되고($P(A)$) 이어서 시행에서($B$) 하나 또는 그 이상의 가능한 결과가 발생할 확률($P(A \wedge B)$) (이영의, 2015, p.62)</p>
 
 \[\begin{aligned}
   P(B \mid A)
@@ -1327,7 +1328,7 @@
   \end{aligned}\]
       </li>
       <li>
-        <p><strong>역확률(Inverse Probability; $P(A \mid B)$)</strong> : 이미 시행의 결과가 제시되고($B$) 그 다음 실제로 실행된 시행이($A$) 가능한 시행 중($P(B)=\int{P(B \mid A) \cdot P(A)\text{d}A}$) 특정 시행에 해당할 확률($P(A \wedge B)$) (이영의, 2015, p.62)</p>
+        <p><strong>역확률(Inverse Probability; $P(A \mid B)$)</strong> : 이미 시행의 결과가 제시되고($P(B)$) 그 다음 실제로 실행된 시행이($P(B \mid A)$) 가능한 시행 중($P(B)=\int{P(B \mid A) \cdot P(A)\text{d}A}$) 특정 시행에 해당할 확률($P(A \wedge B)$) (이영의, 2015, p.62)</p>
 
 \[\begin{aligned}
   P(A \mid B)

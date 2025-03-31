@@ -861,9 +861,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="2141 words"
+  title="2299 words"
 >
-  <em>11 min</em> read</span>
+  <em>12 min</em> read</span>
 
         </div>
       </div>
@@ -884,7 +884,7 @@
       <li>시스템에 내재된 불확실성이므로 줄일 수 없음</li>
     </ul>
   </li>
-  <li><strong>인식 불확실성(Epistemic Uncertainty)</strong> : 연구자가 충분한 정보를 확보하지 못했기에 발생하는 불확실성
+  <li><strong>인식적 불확실성(Epistemic Uncertainty)</strong> : 연구자가 충분한 정보를 확보하지 못했기에 발생하는 불확실성
     <ul>
       <li>모형의 구조적 불완전성, 모형 가정의 부적합, 데이터 희소성, 데이터 신호의 모호성, 데이터의 모집단 대표성 부족 등으로 인해 발생함</li>
       <li>적합한 모형을 선택하거나 데이터를 추가 확보함으로써 줄일 수 있음</li>
@@ -909,6 +909,36 @@
     <div class="table-wrapper"><table>
       <thead>
         <tr>
+          <th>관점</th>
+          <th>진리</th>
+          <th>설명</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>존재론<br />(Ontology)</td>
+          <td>사실적 진리<br />(Factual Truth)</td>
+          <td>실제 세계에서 어떤 일이 일어났는가?</td>
+        </tr>
+        <tr>
+          <td>실증주의<br />(Positivism)</td>
+          <td>빈도적 진리<br />(Frequentist Truth)</td>
+          <td>반복된 시행에서 수렴하는 비율</td>
+        </tr>
+        <tr>
+          <td>인식론<br />(Epistemology)</td>
+          <td>인식적 진리<br />(Epistemic Truth)</td>
+          <td>정보에 따라 믿음이 수렴해가는 대상</td>
+        </tr>
+      </tbody>
+    </table></div>
+  </li>
+  <li>
+    <p>진리에 대한 <strong>불확실성(Uncertainty)</strong></p>
+
+    <div class="table-wrapper"><table>
+      <thead>
+        <tr>
           <th> </th>
           <th>빈도주의</th>
           <th>베이즈주의</th>
@@ -916,7 +946,7 @@
       </thead>
       <tbody>
         <tr>
-          <td>불확실성 원천</td>
+          <td>원천</td>
           <td>모수 추정 과정</td>
           <td>모수에 대한 무지</td>
         </tr>
@@ -926,12 +956,12 @@
           <td>데이터 생성 과정</td>
         </tr>
         <tr>
-          <td>인식 불확실성</td>
+          <td>인식적 불확실성</td>
           <td>X</td>
           <td>신념도</td>
         </tr>
         <tr>
-          <td>모델링 대상</td>
+          <td>모델링</td>
           <td>모수 추정량 $\hat{\theta} \sim F$</td>
           <td>모수의 사후 확률 분포 $\theta \mid \mathcal{D} \sim F$</td>
         </tr>
@@ -1006,14 +1036,23 @@
         <p><code class="language-plaintext highlighter-rouge">GOAL</code> <em>모수의 정체에 대한 신념을 참인 앎으로서 정당화하겠다.</em></p>
       </li>
       <li>
-        <p><code class="language-plaintext highlighter-rouge">ASSUMPTION</code> <em>신념을 확률로써 표현하고 이를 정보 갱신으로써 정당화할 수 있다.</em></p>
+        <p><code class="language-plaintext highlighter-rouge">ASSUMPTION</code> <em>(1) 신념을 확률로써 표현하고 (2) 이를 정보 갱신으로써 정당화할 수 있다.</em></p>
       </li>
       <li><code class="language-plaintext highlighter-rouge">REASON</code>
         <ul>
-          <li><strong>기대 효용 이론(Expected Utility Theory)</strong> : 신념의 측정 가능성 입증</li>
-          <li><strong>콕스 정리(Cox’s Theorem)</strong> : 신념의 확률적 정합성 논리적 강제화</li>
-          <li><strong>더치북 논증(Dutch Book Argument)</strong> : 신념의 확률적 정합성 실용적 강제화</li>
-          <li><strong>마틴게일 수렴 정리(Doob’s Martingale Convergence Theorem)</strong> : 조건부 정보 갱신의 진리 접근성 정당화</li>
+          <li>(1) 신념을 확률로써 표현할 수 있는가?
+            <ul>
+              <li><strong>기대 효용 이론(Expected Utility Theory)</strong> : 신념의 측정 가능성 입증</li>
+              <li><strong>콕스 정리(Cox’s Theorem)</strong> : 신념의 확률적 정합성 논리적 강제화</li>
+              <li><strong>더치북 논증(Dutch Book Argument)</strong> : 신념의 확률적 정합성 실용적 강제화</li>
+            </ul>
+          </li>
+          <li>(2) 이를 정보 갱신으로써 정당화할 수 있는가?
+            <ul>
+              <li><strong>두브의 마틴게일 수렴 정리(Doob’s Martingale Convergence Theorem)</strong> : 주관적 신념 체계의 간주관적 일치 가능성 입증</li>
+              <li><strong>슈바르츠 정리(Schwartz’s Theorem)</strong> : 사후 확률 분포의 진리 접근 가능성 입증</li>
+            </ul>
+          </li>
         </ul>
       </li>
     </ul>
