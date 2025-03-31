@@ -927,9 +927,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="4098 words"
+  title="4343 words"
 >
-  <em>22 min</em> read</span>
+  <em>24 min</em> read</span>
 
         </div>
       </div>
@@ -1294,6 +1294,23 @@
 
 <ul>
   <li>
+    <p><strong><em>베이즈 정리가 인과 추론의 프레임워크로서 적합한가?</em></strong></p>
+
+\[\begin{aligned}
+  P(\text{cause} \mid \text{outcome})
+  = \frac{P(\text{cause} \wedge \text{outcome})}{P(\text{outcome})}
+  = \frac{P(\text{outcome} \mid \text{cause}) \cdot P(\text{cause})}{P(\text{outcome})}
+  \end{aligned}\]
+
+    <blockquote>
+      <p>어떤 알려지지 않은 사건($Z$)이 발생하고($p$) 실패한 횟수($n-p$)가 주어졌을 때, 하나의 시행에서 그 사건이 발생할 확률($\theta$)이 지정될 수 있는 두 가지 확률($\alpha, \beta$) 사이에 있을 기회가 요청된다($\alpha &lt; \theta &lt; \beta$). (Bayes, 1763, p.376)</p>
+    </blockquote>
+
+    <blockquote>
+      <p>베이즈 정리는 주어진 환경에서 하나의 사건($Z$)에 대해 동일한 환경에서 그것이 어떤 횟수만큼 발생했고($p$) 어떤 다른 횟수만큼 발생하는 데 실패했다는 것을($n-p$) 제외한 그 밖의 것에 대해 아무 것도 알지 못한다는 가정에서($\theta \sim \text{Uniform}$) 해당 사건이 발생할 확률($\theta$)을 판단할 방법을 찾는 일이다. (Price, 1763, 서문)</p>
+    </blockquote>
+  </li>
+  <li>
     <p><strong>역추리 문제(Inverse Inference Problem)</strong> : 다양한 원인 중 하나로부터 발생했음이 틀림없는 한 가지 사건이 발생했다고 가정하고, 그 원인들이 존재할 각각의 확률을 추리하는 문제(이영의, 2015, p.62)</p>
 
     <blockquote>
@@ -1302,7 +1319,7 @@
 
     <ul>
       <li>
-        <p><strong>직접 확률(Direct Probability)</strong> : 시행의 성질이 먼저 규정되고($A$) 이어서 시행에서($B$) 하나 또는 그 이상의 가능한 결과가 발생할 확률($P(B \mid A)$) (이영의, 2015, p.62)</p>
+        <p><strong>직접 확률(Direct Probability; $P(B \mid A)$)</strong> : 시행의 성질이 먼저 규정되고($A$) 이어서 시행에서($B$) 하나 또는 그 이상의 가능한 결과가 발생할 확률($P(A \wedge B)$) (이영의, 2015, p.62)</p>
 
 \[\begin{aligned}
   P(B \mid A)
@@ -1310,7 +1327,7 @@
   \end{aligned}\]
       </li>
       <li>
-        <p><strong>역확률(Inverse Probability)</strong> : 이미 시행의 결과가 제시되고($B$) 그 다음 실제로 실행된 시행이($A$) 가능한 시행 중($P(B)=\int{P(B \mid A) \cdot P(A)\text{d}A}$) 특정 시행에 해당할 확률($P(A \mid B)$) (이영의, 2015, p.62)</p>
+        <p><strong>역확률(Inverse Probability; $P(A \mid B)$)</strong> : 이미 시행의 결과가 제시되고($B$) 그 다음 실제로 실행된 시행이($A$) 가능한 시행 중($P(B)=\int{P(B \mid A) \cdot P(A)\text{d}A}$) 특정 시행에 해당할 확률($P(A \wedge B)$) (이영의, 2015, p.62)</p>
 
 \[\begin{aligned}
   P(A \mid B)
@@ -1347,7 +1364,7 @@
   \end{aligned}\]
       </li>
       <li>
-        <p>$\theta$ 의 값에 대해 어느 것도 알려지기 이전에, 사건 $Z$ 가 $n$ 번의 시행에서 $p$ 번 발생하고 $n-p$ 번 실패한 것으로 드러날 때, 그로부터 $\theta$ 가 $\alpha, \beta$ 사이에 있다고 추측한다면, 그 추측이 옳을 확률</p>
+        <p>$\theta$ 의 값에 대해 어느 것도 알려지기 이전에($0&lt;\theta&lt;1$), 사건 $Z$ 가 $n$ 번의 시행에서 $p$ 번 발생하고 $n-p$ 번 실패한 것으로 드러날 때, 그로부터 $\theta$ 가 $\alpha, \beta$ 사이에 있다고 추측한다면, 그 추측이 옳을 확률</p>
 
 \[\begin{aligned}
   P(\alpha &lt; \theta &lt; \beta \mid X=p)
