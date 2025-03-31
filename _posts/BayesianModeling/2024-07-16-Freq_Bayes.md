@@ -86,7 +86,7 @@ image:
     - `ASSUMPTION` *신념을 확률로써 표현하고 이를 정보 갱신으로써 정당화할 수 있다.*
 
     - `REASON`
-        - **기대 효용 이론(Expected Utility Theory)** : 신념의 측정 가능성 정당화
+        - **기대 효용 이론(Expected Utility Theory)** : 신념의 측정 가능성 입증
         - **콕스 정리(Cox's Theorem)** : 신념의 확률적 정합성 형식적 강제화
         - **더치북 논증(Dutch Book Argument)** : 신념의 확률적 정합성 실용적 강제화
         - **마틴게일 수렴 정리(Doob’s Martingale Convergence Theorem)** : 조건부 정보 갱신의 진리 접근성 정당화
