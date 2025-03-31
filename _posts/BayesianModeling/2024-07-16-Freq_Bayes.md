@@ -20,7 +20,7 @@ image:
     - 표본 변동성(Sample Variability), 데이터 생성 과정상의 우연성(Randomness)으로 인해 발생함
     - 시스템에 내재된 불확실성이므로 줄일 수 없음
 
-- **인식 불확실성(Epistemic Uncertainty)** : 연구자가 충분한 정보를 확보하지 못했기에 발생하는 불확실성
+- **인식적 불확실성(Epistemic Uncertainty)** : 연구자가 충분한 정보를 확보하지 못했기에 발생하는 불확실성
     - 모형의 구조적 불완전성, 모형 가정의 부적합, 데이터 희소성, 데이터 신호의 모호성, 데이터의 모집단 대표성 부족 등으로 인해 발생함
     - 적합한 모형을 선택하거나 데이터를 추가 확보함으로써 줄일 수 있음
 
@@ -34,12 +34,20 @@ image:
 
 - **모수(Parameter)** : 세계에 존재하는 고정된 사실
 
+    | 관점 | 진리 | 설명 |
+    |---|---|---|
+    | 존재론<br>(Ontology) | 사실적 진리<br>(Factual Truth) | 실제 세계에서 어떤 일이 일어났는가? |
+    | 실증주의<br>(Positivism) | 빈도적 진리<br>(Frequentist Truth) | 반복된 시행에서 수렴하는 비율 |
+    | 인식론<br>(Epistemology) | 인식적 진리<br>(Epistemic Truth) | 정보에 따라 믿음이 수렴해가는 대상 |
+
+- 진리에 대한 **불확실성(Uncertainty)**
+
     | | 빈도주의 | 베이즈주의 |
     |---|---|---|
-    | 불확실성 원천 | 모수 추정 과정 | 모수에 대한 무지 |
+    | 원천 | 모수 추정 과정 | 모수에 대한 무지 |
     | 우발적 불확실성 | 표본추출의 변동 | 데이터 생성 과정 |
-    | 인식 불확실성 | X | 신념도 |
-    | 모델링 대상 | 모수 추정량 $\hat{\theta} \sim F$ | 모수의 사후 확률 분포 $\theta \mid \mathcal{D} \sim F$ |
+    | 인식적 불확실성 | X | 신념도 |
+    | 모델링 | 모수 추정량 $\hat{\theta} \sim F$ | 모수의 사후 확률 분포 $\theta \mid \mathcal{D} \sim F$ |
 
 ### Frequentist
 
@@ -83,13 +91,17 @@ image:
 
     - `GOAL` *모수의 정체에 대한 신념을 참인 앎으로서 정당화하겠다.*
 
-    - `ASSUMPTION` *신념을 확률로써 표현하고 이를 정보 갱신으로써 정당화할 수 있다.*
+    - `ASSUMPTION` *(1) 신념을 확률로써 표현하고 (2) 이를 정보 갱신으로써 정당화할 수 있다.*
 
     - `REASON`
-        - **기대 효용 이론(Expected Utility Theory)** : 신념의 측정 가능성 입증
-        - **콕스 정리(Cox's Theorem)** : 신념의 확률적 정합성 논리적 강제화
-        - **더치북 논증(Dutch Book Argument)** : 신념의 확률적 정합성 실용적 강제화
-        - **마틴게일 수렴 정리(Doob’s Martingale Convergence Theorem)** : 조건부 정보 갱신의 진리 접근성 정당화
+        - (1) 신념을 확률로써 표현할 수 있는가?
+            - **기대 효용 이론(Expected Utility Theory)** : 신념의 측정 가능성 입증
+            - **콕스 정리(Cox's Theorem)** : 신념의 확률적 정합성 논리적 강제화
+            - **더치북 논증(Dutch Book Argument)** : 신념의 확률적 정합성 실용적 강제화
+
+        - (2) 이를 정보 갱신으로써 정당화할 수 있는가?
+            - **두브의 마틴게일 수렴 정리(Doob’s Martingale Convergence Theorem)** : 주관적 신념 체계의 간주관적 일치 가능성 입증
+            - **슈바르츠 정리(Schwartz’s Theorem)** : 사후 확률 분포의 진리 접근 가능성 입증
 
 - **베이즈 정리(Bayes' Theorem)** : 모수의 사후 확률 분포를 추정하는 방법
 
