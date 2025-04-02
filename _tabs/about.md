@@ -12,6 +12,7 @@ Hi there! I'm dreaming of becoming a Data Scientist, **specializing in Recommend
 - **Topic**
     - Personalized Service
     - Information Uncertainty
+    - Point-of-Interest
 
 - **AI Application**
     - [x] Recommendation
