@@ -694,6 +694,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -801,7 +812,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="855 words"
+  title="857 words"
 >
   <em>4 min</em> read</span>
 
@@ -831,34 +842,34 @@
       <li><strong>Soft Attention</strong> : 사후 분포의 근사 분포를 디리클레 분포, 정규 분포 등으로 설정하는데, 디리클레 분포는 마찬가지로 재매개변수가 불가능하고, 정규 분포는 확률변수의 범위를 양수로 제한하지 않아 샘플링된 Attention Weight 를 확률적으로 해석할 수 없음</li>
     </ul>
   </li>
-  <li>
-    <p><strong>Bayesian Attention Modules 의 해법</strong> : 재매개변수화 가능하고 확률변수의 범위를 양수로 제한하는 확률 분포를 근사 분포로 설정함으로써 샘플링된 Attention Weight 의 역전파 학습 및 확률적 해석을 도모함</p>
+  <li><strong>Bayesian Attention Modules 의 해법</strong> : 재매개변수화 가능하고 확률변수의 범위를 양수로 제한하는 확률 분포를 근사 분포로 설정함으로써 샘플링된 Attention Weight 의 역전파 학습 및 확률적 해석을 도모함</li>
+</ul>
 
-    <ul>
-      <li>
-        <p><strong>와이블 분포(Weibull Distribution)</strong> : 특정 사건이 발생하기까지의 대기 시간에 관한 확률 분포</p>
+<h3 id="approx-prob-dist"><span class="me-2">Approx. Prob. Dist.</span><a href="#approx-prob-dist" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p><strong>와이블 분포(Weibull Distribution)</strong> : 특정 사건이 발생하기까지의 대기 시간에 관한 확률 분포</p>
 
 \[\begin{aligned}
   \mathcal{A} \sim \text{Weibull}\left(k, \lambda\right) \quad \text{for} \quad \mathcal{A} &gt; 0
   \end{aligned}\]
 
-        <ul>
-          <li><strong>Shape Parameter($k$)</strong> : 사건 발생 대기 시간에 따른 사건 발생 가능성의 증가 혹은 감소 패턴</li>
-          <li><strong>Scale Parameter($\lambda$)</strong> : 사건 발생 대기 시간의 범위</li>
-        </ul>
-      </li>
-      <li>
-        <p><strong>로그 정규 분포(Log Normal Distribution)</strong> : 로그 값이 정규 분포를 따르는 확률변수에 관한 분포</p>
+    <ul>
+      <li><strong>Shape Parameter($k$)</strong> : 사건 발생 대기 시간에 따른 사건 발생 가능성의 증가 혹은 감소 패턴</li>
+      <li><strong>Scale Parameter($\lambda$)</strong> : 사건 발생 대기 시간의 범위</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>로그 정규 분포(Log Normal Distribution)</strong> : 로그 값이 정규 분포를 따르는 확률변수에 관한 분포</p>
 
 \[\begin{aligned}
   \mathcal{A} \sim \text{Log-Normal}\left(\mu, \sigma^{2}\right) \quad \text{for} \quad \mathcal{A} &gt; 0
   \end{aligned}\]
 
-        <ul>
-          <li><strong>Shape Parameter($\mu$)</strong></li>
-          <li><strong>Scale Parameter($\sigma^{2}$)</strong></li>
-        </ul>
-      </li>
+    <ul>
+      <li><strong>Shape Parameter($\mu$)</strong></li>
+      <li><strong>Scale Parameter($\sigma^{2}$)</strong></li>
     </ul>
   </li>
 </ul>
@@ -1006,7 +1017,7 @@
   &amp;= \frac{1}{\sqrt{2 \pi \sigma^{2}}} \exp{\left[\frac{(y - \mu)^{2}}{2\sigma^{2}}\right]}\\
   \log{p\left(y \mid \mu, \sigma^{2}\right)}
   &amp;= -\frac{1}{2}\log{2\pi \sigma^{2}} - \frac{(y - \mu)^{2}}{2\sigma^{2}}\\
-  &amp;\approx \cancel{-\frac{1}{2}\log{2\pi \sigma^{2}}} -\frac{1}{2}\log{\sigma^{2}} - \frac{(y - \mu)^{2}}{2\sigma^{2}}
+  &amp;\approx \cancel{-\frac{1}{2}\log{2\pi}} -\frac{1}{2}\log{\sigma^{2}} - \frac{(y - \mu)^{2}}{2\sigma^{2}}
   \end{aligned}\]
       </li>
       <li>
