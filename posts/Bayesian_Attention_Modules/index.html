@@ -801,7 +801,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="788 words"
+  title="855 words"
 >
   <em>4 min</em> read</span>
 
@@ -995,10 +995,46 @@
   \end{aligned}\]
   </li>
   <li>
+    <p>Gaussian Negative Log-Likelihood</p>
+
+    <ul>
+      <li>
+        <p>if \(y \sim \mathcal{N}\left(\mu, \sigma^{2}\right)\)</p>
+
+\[\begin{aligned}
+  p\left(y \mid \mu, \sigma^{2}\right)
+  &amp;= \frac{1}{\sqrt{2 \pi \sigma^{2}}} \exp{\left[\frac{(y - \mu)^{2}}{2\sigma^{2}}\right]}\\
+  \log{p\left(y \mid \mu, \sigma^{2}\right)}
+  &amp;= -\frac{1}{2}\log{2\pi \sigma^{2}} - \frac{(y - \mu)^{2}}{2\sigma^{2}}\\
+  &amp;\approx \cancel{-\frac{1}{2}\log{2\pi \sigma^{2}}} -\frac{1}{2}\log{\sigma^{2}} - \frac{(y - \mu)^{2}}{2\sigma^{2}}
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>Negative Log-Likelihood</p>
+
+\[\begin{aligned}
+  \text{NLL}
+  &amp;= -\log{p\left(y \mid \mu, \sigma^{2}\right)}\\
+  &amp;\approx \frac{1}{2}\log{\sigma^{2}} + \frac{(y - \mu)^{2}}{2\sigma^{2}}
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>if $\sigma^{2}_{\forall} = \sigma^{2}$</p>
+
+\[\begin{aligned}
+  \text{NLL}
+  \approx \text{MSE}
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+  <li>
     <p>Optimization</p>
 
-\[\mathcal{A},\Theta,\Phi \mid \eta,\cdots
-  = \text{arg}\min{-\text{ELBO}}\]
+\[\begin{aligned}
+  \mathcal{A},\Theta,\Phi \mid \eta,\cdots
+  = \text{arg}\min{-\text{ELBO}}
+  \end{aligned}\]
   </li>
 </ul>
 
