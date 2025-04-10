@@ -150,9 +150,36 @@ image:
     - D_{KL}\Big[q\left(\mathcal{A};\Phi\right) \parallel \pi\left(\mathcal{A};\Theta,\eta\right)\Big]
     \end{aligned}$$
 
+- Gaussian Negative Log-Likelihood
+
+    - if $$y \sim \mathcal{N}\left(\mu, \sigma^{2}\right)$$
+
+        $$\begin{aligned}
+        p\left(y \mid \mu, \sigma^{2}\right)
+        &= \frac{1}{\sqrt{2 \pi \sigma^{2}}} \exp{\left[\frac{(y - \mu)^{2}}{2\sigma^{2}}\right]}\\
+        \log{p\left(y \mid \mu, \sigma^{2}\right)}
+        &= -\frac{1}{2}\log{2\pi \sigma^{2}} - \frac{(y - \mu)^{2}}{2\sigma^{2}}\\
+        &\approx \cancel{-\frac{1}{2}\log{2\pi \sigma^{2}}} -\frac{1}{2}\log{\sigma^{2}} - \frac{(y - \mu)^{2}}{2\sigma^{2}}
+        \end{aligned}$$
+
+    - Negative Log-Likelihood
+
+        $$\begin{aligned}
+        \text{NLL}
+        &= -\log{p\left(y \mid \mu, \sigma^{2}\right)}\\
+        &\approx \frac{1}{2}\log{\sigma^{2}} + \frac{(y - \mu)^{2}}{2\sigma^{2}}
+        \end{aligned}$$
+
+    - if $\sigma^{2}_{\forall} = \sigma^{2}$
+
+        $$\begin{aligned}
+        \text{NLL}
+        \approx \text{MSE}
+        \end{aligned}$$
+
 - Optimization
 
-    $$
+    $$\begin{aligned}
     \mathcal{A},\Theta,\Phi \mid \eta,\cdots
     = \text{arg}\min{-\text{ELBO}}
-    $$
+    \end{aligned}$$
