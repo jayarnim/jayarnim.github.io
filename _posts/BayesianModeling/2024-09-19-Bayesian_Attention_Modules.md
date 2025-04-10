@@ -30,23 +30,25 @@ image:
 
 - **Bayesian Attention Modules 의 해법** : 재매개변수화 가능하고 확률변수의 범위를 양수로 제한하는 확률 분포를 근사 분포로 설정함으로써 샘플링된 Attention Weight 의 역전파 학습 및 확률적 해석을 도모함
 
-    - **와이블 분포(Weibull Distribution)** : 특정 사건이 발생하기까지의 대기 시간에 관한 확률 분포
+### Approx. Prob. Dist.
 
-        $$\begin{aligned}
-        \mathcal{A} \sim \text{Weibull}\left(k, \lambda\right) \quad \text{for} \quad \mathcal{A} > 0
-        \end{aligned}$$
+- **와이블 분포(Weibull Distribution)** : 특정 사건이 발생하기까지의 대기 시간에 관한 확률 분포
 
-        - **Shape Parameter($k$)** : 사건 발생 대기 시간에 따른 사건 발생 가능성의 증가 혹은 감소 패턴
-        - **Scale Parameter($\lambda$)** : 사건 발생 대기 시간의 범위
+    $$\begin{aligned}
+    \mathcal{A} \sim \text{Weibull}\left(k, \lambda\right) \quad \text{for} \quad \mathcal{A} > 0
+    \end{aligned}$$
 
-    - **로그 정규 분포(Log Normal Distribution)** : 로그 값이 정규 분포를 따르는 확률변수에 관한 분포
+    - **Shape Parameter($k$)** : 사건 발생 대기 시간에 따른 사건 발생 가능성의 증가 혹은 감소 패턴
+    - **Scale Parameter($\lambda$)** : 사건 발생 대기 시간의 범위
 
-        $$\begin{aligned}
-        \mathcal{A} \sim \text{Log-Normal}\left(\mu, \sigma^{2}\right) \quad \text{for} \quad \mathcal{A} > 0
-        \end{aligned}$$
+- **로그 정규 분포(Log Normal Distribution)** : 로그 값이 정규 분포를 따르는 확률변수에 관한 분포
 
-        - **Shape Parameter($\mu$)**
-        - **Scale Parameter($\sigma^{2}$)**
+    $$\begin{aligned}
+    \mathcal{A} \sim \text{Log-Normal}\left(\mu, \sigma^{2}\right) \quad \text{for} \quad \mathcal{A} > 0
+    \end{aligned}$$
+
+    - **Shape Parameter($\mu$)**
+    - **Scale Parameter($\sigma^{2}$)**
 
 ## Bayesian Framework
 -----
@@ -159,7 +161,7 @@ image:
         &= \frac{1}{\sqrt{2 \pi \sigma^{2}}} \exp{\left[\frac{(y - \mu)^{2}}{2\sigma^{2}}\right]}\\
         \log{p\left(y \mid \mu, \sigma^{2}\right)}
         &= -\frac{1}{2}\log{2\pi \sigma^{2}} - \frac{(y - \mu)^{2}}{2\sigma^{2}}\\
-        &\approx \cancel{-\frac{1}{2}\log{2\pi \sigma^{2}}} -\frac{1}{2}\log{\sigma^{2}} - \frac{(y - \mu)^{2}}{2\sigma^{2}}
+        &\approx \cancel{-\frac{1}{2}\log{2\pi}} -\frac{1}{2}\log{\sigma^{2}} - \frac{(y - \mu)^{2}}{2\sigma^{2}}
         \end{aligned}$$
 
     - Negative Log-Likelihood
