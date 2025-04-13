@@ -812,7 +812,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="857 words"
+  title="871 words"
 >
   <em>4 min</em> read</span>
 
@@ -915,6 +915,14 @@
 \[\begin{aligned}
   p\left(\mathcal{A} \mid \mathbf{Y}, \mathbf{Q}, \cdots\right)
   \propto \mathcal{L}\left(\mathbf{Y} \mid \mathcal{A}, \mathbf{Q}, \cdots\right) \cdot \pi\left(\mathcal{A} ; \Theta, \eta \right)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Attention weights are derived <strong>using simplex projection, not softmax</strong></p>
+
+\[\begin{aligned}
+  W
+  &amp;= \frac{\mathcal{A}}{\sum_{j}{\mathcal{A}_{j}}}
   \end{aligned}\]
   </li>
 </ul>
