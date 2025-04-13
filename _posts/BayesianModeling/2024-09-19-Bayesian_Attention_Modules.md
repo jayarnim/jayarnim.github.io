@@ -84,6 +84,13 @@ image:
     \propto \mathcal{L}\left(\mathbf{Y} \mid \mathcal{A}, \mathbf{Q}, \cdots\right) \cdot \pi\left(\mathcal{A} ; \Theta, \eta \right)
     \end{aligned}$$
 
+- Attention weights are derived **using simplex projection, not softmax**
+
+    $$\begin{aligned}
+    W
+    &= \frac{\mathcal{A}}{\sum_{j}{\mathcal{A}_{j}}}
+    \end{aligned}$$
+
 ## Approx. Dist. Determination
 -----
 
