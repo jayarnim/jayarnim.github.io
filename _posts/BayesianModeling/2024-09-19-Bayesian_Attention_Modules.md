@@ -100,6 +100,8 @@ image:
     \mathcal{A} \sim \mathcal{Q}\left(\Phi\right)
     $$
 
+    - $\Phi = \mathcal{F}\left(\mathbf{Q} \oplus \mathbf{K}\right)$
+
 ### Weibull Dist.
 
 - If Approx. Dist. $\mathcal{A} \sim \mathcal{Q}\left(\Phi\right)$ is set to $\text{Weibull}\left(k,\lambda\right)$
