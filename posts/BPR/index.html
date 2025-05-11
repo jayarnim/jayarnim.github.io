@@ -866,7 +866,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="650 words"
+  title="657 words"
 >
   <em>3 min</em> read</span>
 
@@ -964,9 +964,11 @@
 
 \[\begin{aligned}
   \text{AUC}
-  &amp;=\int_{0}^{1}{g \circ f^{-1}\left(x\right)\text{d}x}\\
-  &amp;= -\int_{1}^{0}{g(t) \frac{\text{d}f(t)}{\text{d}t} \text{d}t} \quad \because \frac{\text{d}x}{\text{d}t} &lt; 0\\
-  &amp;= \int_{0}^{1}{p\left(\hat{z} &gt; t\mid z=\text{POS}\right) p\left(\hat{z}=t \mid z=\text{NEG}\right)\text{d}t}\\
+  &amp;=\int_{x=0}^{x=1}{g \circ f^{-1}\left(x\right)\text{d}x}\\
+  &amp;= \int_{t=1}^{t=0}{g(t) \frac{\text{d}f(t)}{\text{d}t} \text{d}t}\\
+  &amp;= -\int_{t=0}^{t=1}{g(t) \frac{\text{d}f(t)}{\text{d}t} \text{d}t}\\
+  &amp;= \int_{t=0}^{t=1}{p\left(\hat{z} &gt; t\mid z=\text{POS}\right) p\left(\hat{z}=t \mid z=\text{NEG}\right)\text{d}t}\\
+  &amp;= \int_{t=0}^{t=1}\int_{\tau&gt;t}{p\left(\hat{z} = \tau\mid z=\text{POS}\right) p\left(\hat{z}=t \mid z=\text{NEG}\right)\text{d}t}\\
   &amp;= p(\hat{z}_{\text{POS}} &gt; \hat{z}_{\text{NEG}})
   \end{aligned}\]
       </li>
