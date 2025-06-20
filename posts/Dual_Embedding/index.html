@@ -695,6 +695,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -828,7 +839,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="385 words"
+  title="447 words"
 >
   <em>2 min</em> read</span>
 
@@ -838,20 +849,42 @@
   </header>
 
   <div class="content">
-    <h2 id="dncf"><span class="me-2">DNCF</span><a href="#dncf" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="embedding-type"><span class="me-2">Embedding Type</span><a href="#embedding-type" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
-  <li><strong>DELF(<code class="language-plaintext highlighter-rouge">D</code>ual-<code class="language-plaintext highlighter-rouge">E</code>mbedding based <code class="language-plaintext highlighter-rouge">L</code>atent <code class="language-plaintext highlighter-rouge">F</code>actor Model)</strong>
+  <li><strong>아이디 임베딩(ID Embedding)</strong>
     <ul>
-      <li><strong>ID Embedding</strong> : 사용자, 아이템의 ID만을 활용하므로 사용자 행동 패턴이나 아이템 구매 패턴을 유추할 만한 맥락 정보가 부족함</li>
-      <li><strong>History Embedding</strong> : 사용자와 아이템의 고유한 정체성, 예컨대 사용자의 독립적인 선호나 아이템의 독립적 특성보다는 과거 어떤 아이템, 사용자와 상호작용했는지에 지나치게 의존함</li>
-      <li>이중 임베딩(Dual-Embedding)을 결합하지 않고 독립적으로 학습하여 최종 표현을 생성하므로 각각의 한계점을 서로 보완하는 표현력을 기대하기 어려움</li>
+      <li>Embedding user and item identifiers into a low-dimensional vector space</li>
+      <li>사용자의 고유한 선호 정보나 아이템의 고유한 특징 정보를 반영한 표현을 도출함</li>
+      <li>사용자와 아이템의 맥락 정보가 부족하여 행동 패턴이나 구매 패턴을 반영하기 어려움</li>
     </ul>
   </li>
-  <li><strong>DNCF(<code class="language-plaintext highlighter-rouge">D</code>ual-embedding based <code class="language-plaintext highlighter-rouge">N</code>eural <code class="language-plaintext highlighter-rouge">C</code>ollaborative <code class="language-plaintext highlighter-rouge">F</code>iltering)</strong> : 이중 임베딩을 사용하되, 두 임베딩을 결합하여 학습함으로써 사용자, 아이템 표현을 개선함
+  <li><strong>히스토리 임베딩(History Embedding)</strong>
     <ul>
-      <li><a href="https://doi.org/10.48550/arXiv.2102.02549">Dual-embedding based Neural Collaborative Filtering for Recommender Systems(2021)</a></li>
+      <li>Generate each user and item expressions based on past interaction history</li>
+      <li>사용자의 행동 패턴이나 아이템의 구매 패턴을 반영한 표현을 도출함</li>
+      <li>사용자와 아이템을 상호간에 의존하여 표현하므로 고유 정보를 보존하기 어려움</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="dncf"><span class="me-2">DNCF</span><a href="#dncf" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li><strong>문제 의식</strong>: 아이디 임베딩과 히스토리 임베딩의 상호 보완적 관계
+    <ul>
+      <li>아이디 임베딩은 고유 정보를 보존한 표현을 생성하는 데 강점</li>
+      <li>히스토리 임베딩은 맥락 정보를 반영한 표현을 생성하는 데 강점</li>
+    </ul>
+  </li>
+  <li><a href="https://doi.org/10.48550/arXiv.2102.02549"><strong><code class="language-plaintext highlighter-rouge">DNCF</code></strong></a>: 아이디 임베딩과 히스토리 임베딩을 결합하여 표현력을 강화하는 모형
+    <ul>
+      <li>He, G., Zhao, D., &amp; Ding, L.<br />
+  (2021).<br />
+  Dual-embedding based neural collaborative filtering for recommender systems.<br />
+  arXiv preprint arXiv:2102.02549.</li>
     </ul>
   </li>
 </ul>
