@@ -17,39 +17,70 @@ image:
 -----
 
 - **표현 학습(Representation Learning)**
+    - 사용자와 아이템을 공동의 잠재요인 공간에 표현하는 방법
+    - 내적(Inner Product) 등 선형 유사도 함수를 통해 매칭 강도를 추정함
+    - 저차원(Low-rank) 유사도 구조를 효율적으로 포착할 수 있음
+    - 복잡하고 비선형적인 매칭을 유연하게 표현하기에 한계가 있음
 
 - **매칭 함수 학습(Matching Function Learning)**
+    - 사용자-아이템 쌍을 입력으로 하여 매칭 함수를 직접 학습하는 방법
+    - 복잡하고 비선형적인 매칭 함수를 근사할 수 있음
+    - 저차원(Low-rank) 유사도 구조를 효율적으로 포착하기에 한계가 있음
 
 ## DMF
 -----
 
+- **문제 의식**:
+
+- [**`DMF`**](https://doi.org/10.24963/ijcai.2017/447): 
+    - Xue, H. J., Dai, X., Zhang, J., Huang, S., & Chen, J.\\
+    (2017, August).\\
+    Deep matrix factorization models for recommender systems.\\
+    In IJCAI (Vol. 17, pp. 3203-3209).
+
+### How to Modeling
+
 ![01](/_post_refer_img/RecommenderSystem/06-01.png){: width="100%"}
+
+- **Annotation**
 
 ## J-NCF
 -----
 
+- **문제 의식**:
+
+- [**`J-NCF`**](https://doi.org/10.1145/3343117):
+    - Chen, W., Cai, F., Chen, H., & Rijke, M. D.\\
+    (2019).\\
+    Joint neural collaborative filtering for recommender systems.\\
+    ACM Transactions on Information Systems (TOIS), 37(4), 1-30.
+
+### How to Modeling
+
 ![02](/_post_refer_img/RecommenderSystem/06-02.png){: width="100%"}
+
+- **Annotation**
 
 ## DeepCF
 -----
 
-- **Representation Learning based Collaborative Filtering** : 사용자와 아이템을 공통의 잠재 공간에 사상하여 **내적(Dot Product)** 을 통해 유사도를 측정함
-    - 내적은 선형성을 가정하므로 상호작용의 비선형성을 학습할 수 없음
-    - 내적은 잠재요인 차원 간 독립성을 가정하므로 차원 간 상호작용을 학습할 수 없음
-    - 내적은 모든 차원의 비중을 동일하게 취급하므로 차원 간 중요도에 차등을 둘 수 없음
+- **문제 의식**: 표현 학습 방식과 매칭 함수 학습 방식의 상호 보완적 관계
+    - 표현 학습은 저차원 유사도 구조를 포착하여 사용자, 아이템의 일반화된 표현을 도출하는 데 강점
+    - 매칭 함수 학습은 사용자와 아이템 간 복잡하고 비선형적인 상호작용 과정을 근사하는 데 강점
 
-- **Matching Function Learning based Collaborative Filtering** : 벡터 결합(Vector Concatenation)과 **신경망 알고리즘(Neural Network Algorithm)** 을 통해 사용자와 아이템 쌍의 복잡한 매칭 함수를 학습함
-    - 사용자와 아이템 간 단순 선형 유사성이나 각각의 주요 패턴을 포착하여 일반화된 표현을 학습하기에 어려움
-    - 파라미터 수가 기하급수적으로 증가하므로 데이터 희박성에 따른 차원의 저주 발생
-
-- **DeepCF(`Deep` `C`ollaborative `F`iltering)** : 표현 학습과 매칭 함수 학습을 결합함으로써 저랭크 표현 학습 효율성을 달성하는 동시에 사용자와 아이템 간 상호작용에 대한 풍부한 표현력을 확보함
-    - [DeepCF: A Unified Framework of Representation Learning and Matching Function Learning in Recommender System(2019)](https://doi.org/10.48550/arXiv.1901.04704)
+- [**`DeepCF`**](https://doi.org/10.48550/arXiv.1901.04704): 표현 학습 모듈과 매칭 함수 학습 모듈을 병렬 학습하는 앙상블 모형
+    - Deng, Z. H., Huang, L., Wang, C. D., Lai, J. H., & Yu, P. S.\\
+    (2019, July).\\
+    Deepcf: A unified framework of representation learning and matching function learning in recommender system.\\
+    In Proceedings of the AAAI conference on artificial intelligence (Vol. 33, No. 01, pp. 61-68).
 
 ### How to Modeling
 
 ![03](/_post_refer_img/RecommenderSystem/06-03.png){: width="100%"}
 
-- **Representation Learning** : Dimension Reduction
+- **Annotation**
+
+- **`CFNet-rl`** : Dimension Reduction
 
     $$\begin{aligned}
     \mathbf{Y}_{\text{RL}}
@@ -61,7 +92,7 @@ image:
     - $$\mathbf{Q}_{\text{RL}}=\text{MLP}_{\text{ReLU}}\left(\mathbf{R}^{T}\right) \in \mathbb{R}^{N \times K}$$ : Item-Latent Factor Matrix of Representation Learning
     - $$\mathbf{Y}_{\text{RL}} \in \mathbb{R}^{(M \times N) \times K}$$ : Predictive Vector of Representation Learning
 
-- **Matching Function Learning** : Linear Transformation
+- **`CFNet-ml`** : Linear Transformation
 
     $$\begin{aligned}
     \mathbf{Y}_{\text{ML}}
@@ -72,7 +103,7 @@ image:
     - $$\mathbf{Q}_{\text{ML}} = \mathbf{W}^{(Q)} \cdot \mathbf{R}^{T} \in \mathbb{R}^{N \times K}$$ : Item-Latent Factor Matrix of Matching Function Learning
     - $$\mathbf{Y}_{\text{RL}} \in \mathbb{R}^{(M \times N) \times K}$$ : Predictive Vector of Matching Function Learning
 
-- **Fusion**
+- **`CFNet`**
 
     $$\begin{aligned}
     \mathbf{Y}

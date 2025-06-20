@@ -13,7 +13,7 @@ image:
     path: /_post_refer_img/RecommenderSystem/Thumbnail.jpg
 ---
 
-## Dual Embedding Method: DNCF
+## DNCF
 -----
 
 - **DELF(`D`ual-`E`mbedding based `L`atent `F`actor Model)**
@@ -76,3 +76,6 @@ image:
     $$\begin{aligned}
     \hat{r}_{u,i} &= \sigma\Big[\text{MLP}_{\text{ReLU}}\left[\overrightarrow{\mathbf{x}}_{u} \oplus \overrightarrow{\mathbf{y}}_{i}\right]\Big]
     \end{aligned}$$
+
+## COMET
+-----

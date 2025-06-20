@@ -58,7 +58,7 @@ image:
     - $\overrightarrow{\mathbf{z}}_{u,i} \in \mathbb{R}^{K}$: predictive vector of user $u$ and item $i$
     - $\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$
 
-- **GMF(`G`eneralized `M`atrix `F`actorization)** : 요소별 곱 기반 선형 매칭 함수 모듈
+- **`GMF`(`G`eneralized `M`atrix `F`actorization)** : 요소별 곱 기반 선형 매칭 함수 모듈
 
     ![02](/_post_refer_img/RecommenderSystem/05-02.png){: width="100%"}
 
@@ -76,7 +76,7 @@ image:
         &= \sigma(\mathbf{W} \cdot \overrightarrow{\mathbf{z}}_{u,i}^{\text{(GMF)}} + \overrightarrow{\mathbf{b}})
         \end{aligned}$$
 
-- **NCF(`N`eural `C`ollaborative `F`iltering)** : 벡터 결합 및 다층 신경망(MLP) 기반 비선형 매칭 함수 학습 모듈
+- **`NCF`(`N`eural `C`ollaborative `F`iltering)** : 벡터 결합 및 다층 신경망(MLP) 기반 비선형 매칭 함수 학습 모듈
 
     ![03](/_post_refer_img/RecommenderSystem/05-03.png){: width="100%"}
 
@@ -94,7 +94,7 @@ image:
         &= \sigma(\mathbf{W} \cdot \overrightarrow{\mathbf{z}}_{u,i}^{\text{(NCF)}} + \overrightarrow{\mathbf{b}})
         \end{aligned}$$
 
-- **NeuMF** : GMF 와 NCF 의 예측 벡터(Predictive Vector)를 종합하여 예측을 수행하는 앙상블 모형
+- **`NeuMF`** : GMF 와 NCF 의 예측 벡터(Predictive Vector)를 종합하여 예측을 수행하는 앙상블 모형
 
     ![04](/_post_refer_img/RecommenderSystem/05-04.png){: width="100%"}
 
@@ -106,8 +106,8 @@ image:
 ## ConvNCF
 -----
 
-- **문제 의식**: `NeuMF` 의 고차 상호작용 포착 한계점
-    - `GMF` 는 동일 차원 상호작용만 포착하므로 다차원 상호작용 반영 불가
+- **문제 의식**: `NeuMF` 의 다차원 고차 상호작용 포착 한계점
+    - `GMF` 는 동일 차원 상호작용만 포착하므로 다차원 고차 상호작용 반영 불가
     - `NCF` 는 다양한 매칭 함수 근사 가능하나 고차원 입력 시 파라미터 수 폭증
 
 - [**`ConvNCF`**](https://doi.org/10.48550/arXiv.1808.03912): 외적과 합성곱 신경망을 활용하여 다차원 간 고차 상호작용을 포착하는 단일 모형

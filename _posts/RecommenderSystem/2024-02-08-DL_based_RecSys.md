@@ -51,7 +51,7 @@ image:
     Joint neural collaborative filtering for recommender systems.\\
     ACM Transactions on Information Systems (TOIS), 37(4), 1-30.
 
-- [`DeepCF`]( https://doi.org/10.48550/arXiv.1901.04704): History Embedding based Latent Factor Model\\
+- [`DeepCF`](https://doi.org/10.48550/arXiv.1901.04704): History Embedding based Latent Factor Model\\
 (Representation Learning and Matching Function Learning Ensemble)
     - Deng, Z. H., Huang, L., Wang, C. D., Lai, J. H., & Yu, P. S.\\
     (2019, July).\\
