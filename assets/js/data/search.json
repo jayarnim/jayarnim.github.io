@@ -919,8 +919,8 @@
   },
   
   {
-    "title": "Deep Learning based RecSys",
-    "url": "/posts/DL_based_RecSys/",
+    "title": "Deep Learning based Collaborative Filtering",
+    "url": "/posts/DL_based_CF/",
     "categories": "AI Application, Recommender System",
     "tags": "AI Application, Recommender System, Collaborative Filtering",
     "date": "2024-02-08 00:00:00 +0900",
