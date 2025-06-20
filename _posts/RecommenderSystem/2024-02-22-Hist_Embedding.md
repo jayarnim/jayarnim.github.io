@@ -18,7 +18,7 @@ image:
 
 - **표현 학습(Representation Learning)**
     - 사용자와 아이템을 공동의 잠재요인 공간에 표현하는 방법
-    - 내적(Inner Product) 등 선형 유사도 함수를 통해 매칭 강도를 추정함
+    - 매칭 강도 추정 시 내적(Inner Product) 등 선형 유사도 함수를 적용함
     - 저차원(Low-rank) 유사도 구조를 효율적으로 포착할 수 있음
 
 - **매칭 함수 학습(Matching Function Learning)**
