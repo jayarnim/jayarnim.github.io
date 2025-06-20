@@ -37,9 +37,12 @@ image:
 
 ### History Embedding
 
-- **History Embedding**: Reduce the dimensionality of the user-item interaction matrix and its transpose
+- **History Embedding**: Generate each user and item expressions based on past interaction history
 
     ![02](/_post_refer_img/RecommenderSystem/04-02.png){: width="100%"}
+
+    - by aggregating the raw representations of one entity with which the another entity interacted
+    - by reducing the dimensionality of the user-item interaction matrix and its transpose
 
 - [`DMF`](https://doi.org/10.24963/ijcai.2017/447): History Embedding based Latent Factor Model\\
 (Representation Learning)

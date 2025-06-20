@@ -13,16 +13,31 @@ image:
     path: /_post_refer_img/RecommenderSystem/Thumbnail.jpg
 ---
 
+## Embedding Type
+-----
+
+- **아이디 임베딩(ID Embedding)**
+    - Embedding user and item identifiers into a low-dimensional vector space
+    - 사용자의 고유한 선호 정보나 아이템의 고유한 특징 정보를 반영한 표현을 도출함
+    - 사용자와 아이템의 맥락 정보가 부족하여 행동 패턴이나 구매 패턴을 반영하기 어려움
+
+- **히스토리 임베딩(History Embedding)**
+    - Generate each user and item expressions based on past interaction history
+    - 사용자의 행동 패턴이나 아이템의 구매 패턴을 반영한 표현을 도출함
+    - 사용자와 아이템을 상호간에 의존하여 표현하므로 고유 정보를 보존하기 어려움
+
 ## DNCF
 -----
 
-- **DELF(`D`ual-`E`mbedding based `L`atent `F`actor Model)**
-    - **ID Embedding** : 사용자, 아이템의 ID만을 활용하므로 사용자 행동 패턴이나 아이템 구매 패턴을 유추할 만한 맥락 정보가 부족함
-    - **History Embedding** : 사용자와 아이템의 고유한 정체성, 예컨대 사용자의 독립적인 선호나 아이템의 독립적 특성보다는 과거 어떤 아이템, 사용자와 상호작용했는지에 지나치게 의존함
-    - 이중 임베딩(Dual-Embedding)을 결합하지 않고 독립적으로 학습하여 최종 표현을 생성하므로 각각의 한계점을 서로 보완하는 표현력을 기대하기 어려움
+- **문제 의식**: 아이디 임베딩과 히스토리 임베딩의 상호 보완적 관계
+    - 아이디 임베딩은 고유 정보를 보존한 표현을 생성하는 데 강점
+    - 히스토리 임베딩은 맥락 정보를 반영한 표현을 생성하는 데 강점
 
-- **DNCF(`D`ual-embedding based `N`eural `C`ollaborative `F`iltering)** : 이중 임베딩을 사용하되, 두 임베딩을 결합하여 학습함으로써 사용자, 아이템 표현을 개선함
-    - [Dual-embedding based Neural Collaborative Filtering for Recommender Systems(2021)](https://doi.org/10.48550/arXiv.2102.02549)
+- [**`DNCF`**](https://doi.org/10.48550/arXiv.2102.02549): 아이디 임베딩과 히스토리 임베딩을 결합하여 표현력을 강화하는 모형
+    - He, G., Zhao, D., & Ding, L.\\
+    (2021).\\
+    Dual-embedding based neural collaborative filtering for recommender systems.\\
+    arXiv preprint arXiv:2102.02549.
 
 ### How to Modeling
 
