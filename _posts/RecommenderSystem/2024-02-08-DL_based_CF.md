@@ -1,6 +1,6 @@
 ---
 order: 4
-title: Deep Learning based RecSys
+title: Deep Learning based Collaborative Filtering
 date: 2024-02-08
 categories: [AI Application, Recommender System]
 tags: [AI Application, Recommender System, Collaborative Filtering]
