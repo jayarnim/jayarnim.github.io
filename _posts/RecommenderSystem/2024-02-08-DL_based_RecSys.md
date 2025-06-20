@@ -26,6 +26,8 @@ image:
 
 - **ID Embedding**: Embedding user and item identifiers into a low-dimensional vector space
 
+    ![01](/_post_refer_img/RecommenderSystem/04-01.png){: width="100%"}
+
 - [`NCF`](https://doi.org/10.1145/3038912.3052569): ID Embedding based Latent Factor Model\\
 (Linear and Non-Linear Matching Function Ensemble)
     - He, X., Liao, L., Zhang, H., Nie, L., Hu, X., & Chua, T. S.\\
@@ -36,6 +38,8 @@ image:
 ### History Embedding
 
 - **History Embedding**: Reduce the dimensionality of the user-item interaction matrix and its transpose
+
+    ![02](/_post_refer_img/RecommenderSystem/04-02.png){: width="100%"}
 
 - [`DMF`](https://doi.org/10.24963/ijcai.2017/447): History Embedding based Latent Factor Model\\
 (Representation Learning)
@@ -62,6 +66,8 @@ image:
 
 - **Dual Embedding**: Use both ID Embedding and History Embedding
 
+    ![03](/_post_refer_img/RecommenderSystem/04-03.png){: width="100%"}
+
 - [`DNCF`](https://doi.org/10.48550/arXiv.2102.02549): Dual Embedding based Latent Factor Model
     - He, G., Zhao, D., & Ding, L.\\
     (2021).\\
@@ -87,6 +93,8 @@ image:
 
 ## AutoEncoder
 -----
+
+![04](/_post_refer_img/RecommenderSystem/04-04.png){: width="100%"}
 
 - **Merit**
     - Restore the user-item interaction matrix
