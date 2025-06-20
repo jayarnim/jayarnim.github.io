@@ -1,5 +1,5 @@
 ---
-order: 18
+order: 17
 title: LambdaRank
 date: 2024-08-28
 categories: [AI Application, Recommender System]

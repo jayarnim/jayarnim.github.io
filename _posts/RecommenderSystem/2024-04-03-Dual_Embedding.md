@@ -1,7 +1,7 @@
 ---
 order: 7
-title: Dual Embedding based Latent Factor Models
-date: 2024-02-29
+title: Dual Embedding based Latent Factor Model
+date: 2024-04-03
 categories: [AI Application, Recommender System]
 tags: [AI Application, Recommender System, Collaborative Filtering, Latent Factor Model, MLP]
 math: true
@@ -91,6 +91,3 @@ image:
     $$\begin{aligned}
     \hat{r}_{u,i} &= \sigma\Big[\text{MLP}_{\text{ReLU}}\left[\overrightarrow{\mathbf{x}}_{u} \oplus \overrightarrow{\mathbf{y}}_{i}\right]\Big]
     \end{aligned}$$
-
-## COMET
------

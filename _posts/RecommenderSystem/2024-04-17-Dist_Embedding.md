@@ -1,7 +1,7 @@
 ---
 order: 8
-title: Distance Embedding based Latent Factor Models
-date: 2024-03-06
+title: Distance Embedding based Latent Factor Model
+date: 2024-04-17
 categories: [AI Application, Recommender System]
 tags: [AI Application, Recommender System, Collaborative Filtering, Latent Factor Model, MLP]
 math: true

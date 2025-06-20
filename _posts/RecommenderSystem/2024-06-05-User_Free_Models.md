@@ -1,7 +1,7 @@
 ---
-order: 10
+order: 11
 title: User Free Models
-date: 2024-03-20
+date: 2024-06-05
 categories: [AI Application, Recommender System]
 tags: [AI Application, Recommender System, Collaborative Filtering, MLP, Attention Mechanism]
 math: true

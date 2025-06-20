@@ -1,7 +1,7 @@
 ---
 order: 6
 title: History Embedding based Latent Factor Models
-date: 2024-02-22
+date: 2024-03-20
 categories: [AI Application, Recommender System]
 tags: [AI Application, Recommender System, Collaborative Filtering, Latent Factor Model, MLP]
 math: true
@@ -28,9 +28,10 @@ image:
 ## DMF
 -----
 
-- **문제 의식**:
+- **문제 의식**: 아이디 임베딩(ID Embedding) 입력 표현의 한계점
+    - 아이디 임베딩 방식은 초기 표현(식별자)의 정보량이 부족하여 학습이 느리거나 성능이 제한됨
 
-- [**`DMF`**](https://doi.org/10.24963/ijcai.2017/447): 
+- [**`DMF`**](https://doi.org/10.24963/ijcai.2017/447): 사용자-아이템 상호작용 행렬과 그 전치 행렬을 초기 표현으로 사용하여 저차원 표현 학습을 수행하는 모형
     - Xue, H. J., Dai, X., Zhang, J., Huang, S., & Chen, J.\\
     (2017, August).\\
     Deep matrix factorization models for recommender systems.\\
@@ -41,6 +42,34 @@ image:
 ![01](/_post_refer_img/RecommenderSystem/06-01.png){: width="100%"}
 
 - **Annotation**
+    - $u=1,2,\cdots,M$: user idx
+    - $i=1,2,\cdots,N$: item idx
+    - $\mathbf{Y} \in \mathbb{R}^{M \times N}$: user-item interaction matrix
+    - $\overrightarrow{\mathbf{u}}_{u} \in \mathbb{R}^{K}$: user latent factor vector
+    - $\overrightarrow{\mathbf{v}}_{i} \in \mathbb{R}^{K}$: item latent factor vector
+    - $\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$
+
+- user latent factor vector representation learning:
+
+    $$\begin{aligned}
+    \overrightarrow{\mathbf{u}}_{u}
+    &= \text{MLP}_{\text{ReLU}}(\mathbf{Y}_{u*})
+    \end{aligned}$$
+
+- item latent factor vector representation learning:
+
+    $$\begin{aligned}
+    \overrightarrow{\mathbf{v}}_{i}
+    &= \text{MLP}_{\text{ReLU}}(\mathbf{Y}_{*i})
+    \end{aligned}$$
+
+- Predict interaction probability of user $u$ and item $i$:
+
+    $$\begin{aligned}
+    \hat{y}_{u,i}
+    &= \cos(\overrightarrow{\mathbf{u}}_{u}, \overrightarrow{\mathbf{v}}_{i})\\
+    &= \frac{\overrightarrow{\mathbf{u}}_{u} \cdot \overrightarrow{\mathbf{v}}_{i}}{\Vert \overrightarrow{\mathbf{u}}_{u} \Vert \cdot \Vert \overrightarrow{\mathbf{v}}_{i} \Vert}
+    \end{aligned}$$
 
 ## J-NCF
 -----

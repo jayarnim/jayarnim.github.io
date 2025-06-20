@@ -1,7 +1,7 @@
 ---
 order: 4
 title: Deep Learning based Collaborative Filtering
-date: 2024-02-08
+date: 2024-02-29
 categories: [AI Application, Recommender System]
 tags: [AI Application, Recommender System, Collaborative Filtering]
 math: true
@@ -77,12 +77,6 @@ image:
     Dual-embedding based neural collaborative filtering for recommender systems.\\
     arXiv preprint arXiv:2102.02549.
 
-- [`COMET`](https://doi.org/10.1145/3588576): Dual Embedding based Latent Factor Model
-    - Lin, Z., Feng, L., Guo, X., Zhang, Y., Yin, R., Kwoh, C. K., & Xu, C.\\
-    (2023).\\
-    Comet: Convolutional dimension interaction for collaborative filtering.\\
-    ACM Transactions on Intelligent Systems and Technology, 14(4), 1-18.
-
 ### Distance Embedding
 
 - **Distance Embedding** : Calculate Similarity through distance, not inner product, outer product, or concatenation
@@ -127,7 +121,6 @@ image:
 
 - **Merit**
     - Modeling interdimensional high-level interactions between users and items
-    - Multi-Modal Recommendation
 
 - [`ConvNCF`](https://doi.org/10.48550/arXiv.1808.03912): Modeling interdimensional high-level interactions
     - He, X., Du, X., Wang, X., Tian, F., Tang, J., & Chua, T. S.\\
@@ -135,44 +128,17 @@ image:
     Outer product-based neural collaborative filtering.\\
     arXiv preprint arXiv:1808.03912.
 
-- [`DeepCoNN`](https://doi.org/10.1145/3018661.3018665): Text review data application
-    - Zheng, L., Noroozi, V., & Yu, P. S.\\
-    (2017, February).\\
-    Joint deep modeling of users and items using reviews for recommendation.\\
-    In Proceedings of the tenth ACM international conference on web search and data mining (pp. 425-434).
-
-- [`VBPR`](https://doi.org/10.1609/aaai.v30i1.9973): Image meta data application
-    - He, R., & McAuley, J.\\
-    (2016, February).\\
-    VBPR: visual bayesian personalized ranking from implicit feedback.\\
-    In Proceedings of the AAAI conference on artificial intelligence (Vol. 30, No. 1).
-
-## RNN
------
-
-- **Merit**
-    - Session Recommendation
-    - Temporal Recommendation
-
-- [`GRU4REC`](https://doi.org/10.48550/arXiv.1511.06939): Session Recommendation
-    - Hidasi, B., Karatzoglou, A., Baltrunas, L., & Tikk, D.\\
-    (2015).\\
-    Session-based recommendations with recurrent neural networks.\\
-    arXiv preprint arXiv:1511.06939.
-
-- [`RRN`](https://doi.org/10.1145/3018661.3018689): Temporal Recommendation
-    - Wu, C. Y., Ahmed, A., Beutel, A., Smola, A. J., & Jing, H.\\
-    (2017, February).\\
-    Recurrent recommender networks.\\
-    In Proceedings of the tenth ACM international conference on web search and data mining (pp. 495-503).
+- [`COMET`](https://doi.org/10.1145/3588576): Modeling interdimensional high-level interactions
+    - Lin, Z., Feng, L., Guo, X., Zhang, Y., Yin, R., Kwoh, C. K., & Xu, C.\\
+    (2023).\\
+    Comet: Convolutional dimension interaction for collaborative filtering.\\
+    ACM Transactions on Intelligent Systems and Technology, 14(4), 1-18.
 
 ## Attention Mechanism
 -----
 
 - **Merit**
     - Select important information and remove noise
-    - Explainable & Interpretable Recommendation
-    - Long-term dependencies
 
 - [`DRNet`](https://doi.org/10.1109/ACCESS.2020.3002102): ID Embedding based Latent Factor Model Assist.
     - Ji, D., Xiang, Z., & Li, Y.\\
@@ -191,29 +157,3 @@ image:
     (2018, July).\\
     DELF: A dual-embedding based deep latent factor model for recommendation.\\
     In IJCAI (Vol. 18, pp. 3329-3335).
-
-- [`SASREC`](https://doi.org/10.1109/ICDM.2018.00035): Session Recommendation
-    - Kang, W. C., & McAuley, J.\\
-    (2018, November).\\
-    Self-attentive sequential recommendation.\\
-    In 2018 IEEE international conference on data mining (ICDM) (pp. 197-206).\\
-    IEEE.
-
-## Generative Models
------
-
-- **Merit**
-    - Cold-start
-    - Data sparsity
-
-- [`IRGAN`](https://doi.org/10.1145/3077136.3080786): GAN Application
-    - Wang, J., Yu, L., Zhang, W., Gong, Y., Xu, Y., Wang, B., ... & Zhang, D.\\
-    (2017, August).\\
-    Irgan: A minimax game for unifying generative and discriminative information retrieval models.\\
-    In Proceedings of the 40th International ACM SIGIR conference on Research and Development in Information Retrieval (pp. 515-524).
-
-- [`DiffRec`](https://doi.org/10.1145/3539618.3591663): Diffusion Application
-    - Wang, W., Xu, Y., Feng, F., Lin, X., He, X., & Chua, T. S.\\
-    (2023, July).\\
-    Diffusion recommender model.\\
-    In Proceedings of the 46th International ACM SIGIR Conference on Research and Development in Information Retrieval (pp. 832-841).

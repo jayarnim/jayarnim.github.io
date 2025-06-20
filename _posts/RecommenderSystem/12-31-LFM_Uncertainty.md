@@ -1,7 +1,7 @@
 ---
-order: 12
-title: BPMF
-date: 2024-04-03
+order: 11
+title: Latent Factor Models with Uncertainty
+date: 2024-03-27
 categories: [AI Application, Recommender System]
 tags: [Paper Review, AI Application, Recommender System, Collaborative Filtering, Latent Factor Model, Bayesian]
 math: true

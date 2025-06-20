@@ -1,7 +1,7 @@
 ---
 order: 5
-title: ID Embedding based Latent Factor Models
-date: 2024-02-15
+title: ID Embedding based Latent Factor Model
+date: 2024-03-06
 categories: [AI Application, Recommender System]
 tags: [AI Application, Recommender System, Collaborative Filtering, Latent Factor Model, MLP]
 math: true
@@ -101,63 +101,6 @@ image:
     $$\begin{aligned}
     \hat{y}_{u,i}
     &= \sigma(\mathbf{W} \cdot [\overrightarrow{\mathbf{z}}_{u,i}^{\text{(GMF)}} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{\text{(NCF)}}] + \overrightarrow{\mathbf{b}})
-    \end{aligned}$$
-
-## ConvNCF
------
-
-- **문제 의식**: `NeuMF` 의 다차원 고차 상호작용 포착 한계점
-    - `GMF` 는 동일 차원 상호작용만 포착하므로 다차원 고차 상호작용 반영 불가
-    - `NCF` 는 다양한 매칭 함수 근사 가능하나 고차원 입력 시 파라미터 수 폭증
-
-- [**`ConvNCF`**](https://doi.org/10.48550/arXiv.1808.03912): 외적과 합성곱 신경망을 활용하여 다차원 간 고차 상호작용을 포착하는 단일 모형
-    - He, X., Du, X., Wang, X., Tian, F., Tang, J., & Chua, T. S.\\
-    (2018).\\
-    Outer product-based neural collaborative filtering.\\
-    arXiv preprint arXiv:1808.03912.
-
-### How to Modeling
-
-![05](/_post_refer_img/RecommenderSystem/05-05.png){: width="100%"}
-
-- **Annotation**
-    - $u=1,2,\cdots,M$: user idx
-    - $i=1,2,\cdots,N$: item idx
-    - $\overrightarrow{\mathbf{u}}_{u} \in \mathbb{R}^{K}$: user latent factor vector
-    - $\overrightarrow{\mathbf{v}}_{i} \in \mathbb{R}^{K}$: item latent factor vector
-    - $\mathbf{E}_{u,i} \in \mathbb{R}^{K \times K}$: interaction map of user $u$ and item $i$
-    - $\overrightarrow{\mathbf{x}}_{u,i}$: interdimensional high-level interaction vector of user $u$ and item $i$
-    - $\overrightarrow{\mathbf{z}}_{u,i} \in \mathbb{R}^{K}$: predictive vector of user $u$ and item $i$
-    - $\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$
-
-- Outer product of user $u$ and item $i$:
-
-    $$\begin{aligned}
-    \mathbf{E}_{u,i}
-    &= \overrightarrow{\mathbf{u}}_{u} \otimes \overrightarrow{\mathbf{v}}_{i}
-    \end{aligned}$$
-
-- Capture interdimensional high-level interaction of user $u$ and item $i$: 
-
-    ![06](/_post_refer_img/RecommenderSystem/05-06.png){: width="100%"}
-
-    $$\begin{aligned}
-    \overrightarrow{\mathbf{x}}_{u,i}
-    &= \text{Flatten}\left[\text{Conv}_{\text{ReLU}}(\mathbf{E}_{u,i})\right]
-    \end{aligned}$$
-
-- Predictive Vector of user $u$ and item $i$:
-
-    $$\begin{aligned}
-    \overrightarrow{\mathbf{z}}_{u,i}
-    &= \text{MLP}_{\text{ReLU}}(\overrightarrow{\mathbf{x}}_{u,i})
-    \end{aligned}$$
-
-- Predict interaction probability of user $u$ and item $i$:
-
-    $$\begin{aligned}
-    \hat{y}_{u,i}
-    &= \sigma(\mathbf{W} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
     \end{aligned}$$
 
 -----
