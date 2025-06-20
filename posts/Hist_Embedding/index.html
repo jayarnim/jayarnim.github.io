@@ -885,6 +885,28 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -992,9 +1014,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="489 words"
+  title="568 words"
 >
-  <em>2 min</em> read</span>
+  <em>3 min</em> read</span>
 
         </div>
       </div>
@@ -1006,55 +1028,105 @@
 <hr />
 
 <ul>
-  <li>
-    <p><strong>표현 학습(Representation Learning)</strong></p>
+  <li><strong>표현 학습(Representation Learning)</strong>
+    <ul>
+      <li>사용자와 아이템을 공동의 잠재요인 공간에 표현하는 방법</li>
+      <li>내적(Inner Product) 등 선형 유사도 함수를 통해 매칭 강도를 추정함</li>
+      <li>저차원(Low-rank) 유사도 구조를 효율적으로 포착할 수 있음</li>
+      <li>복잡하고 비선형적인 매칭을 유연하게 표현하기에 한계가 있음</li>
+    </ul>
   </li>
-  <li>
-    <p><strong>매칭 함수 학습(Matching Function Learning)</strong></p>
+  <li><strong>매칭 함수 학습(Matching Function Learning)</strong>
+    <ul>
+      <li>사용자-아이템 쌍을 입력으로 하여 매칭 함수를 직접 학습하는 방법</li>
+      <li>복잡하고 비선형적인 매칭 함수를 근사할 수 있음</li>
+      <li>저차원(Low-rank) 유사도 구조를 효율적으로 포착하기에 한계가 있음</li>
+    </ul>
   </li>
 </ul>
 
 <h2 id="dmf"><span class="me-2">DMF</span><a href="#dmf" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<p><a href="/_post_refer_img/RecommenderSystem/06-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/06-01.png" alt="01" width="100%" loading="lazy"></a></p>
-
-<h2 id="j-ncf"><span class="me-2">J-NCF</span><a href="#j-ncf" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<p><a href="/_post_refer_img/RecommenderSystem/06-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/06-02.png" alt="02" width="100%" loading="lazy"></a></p>
-
-<h2 id="deepcf"><span class="me-2">DeepCF</span><a href="#deepcf" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
 <ul>
-  <li><strong>Representation Learning based Collaborative Filtering</strong> : 사용자와 아이템을 공통의 잠재 공간에 사상하여 <strong>내적(Dot Product)</strong> 을 통해 유사도를 측정함
-    <ul>
-      <li>내적은 선형성을 가정하므로 상호작용의 비선형성을 학습할 수 없음</li>
-      <li>내적은 잠재요인 차원 간 독립성을 가정하므로 차원 간 상호작용을 학습할 수 없음</li>
-      <li>내적은 모든 차원의 비중을 동일하게 취급하므로 차원 간 중요도에 차등을 둘 수 없음</li>
-    </ul>
+  <li>
+    <p><strong>문제 의식</strong>:</p>
   </li>
-  <li><strong>Matching Function Learning based Collaborative Filtering</strong> : 벡터 결합(Vector Concatenation)과 <strong>신경망 알고리즘(Neural Network Algorithm)</strong> 을 통해 사용자와 아이템 쌍의 복잡한 매칭 함수를 학습함
+  <li>
+    <p><a href="https://doi.org/10.24963/ijcai.2017/447"><strong><code class="language-plaintext highlighter-rouge">DMF</code></strong></a>:</p>
     <ul>
-      <li>사용자와 아이템 간 단순 선형 유사성이나 각각의 주요 패턴을 포착하여 일반화된 표현을 학습하기에 어려움</li>
-      <li>파라미터 수가 기하급수적으로 증가하므로 데이터 희박성에 따른 차원의 저주 발생</li>
-    </ul>
-  </li>
-  <li><strong>DeepCF(<code class="language-plaintext highlighter-rouge">Deep</code> <code class="language-plaintext highlighter-rouge">C</code>ollaborative <code class="language-plaintext highlighter-rouge">F</code>iltering)</strong> : 표현 학습과 매칭 함수 학습을 결합함으로써 저랭크 표현 학습 효율성을 달성하는 동시에 사용자와 아이템 간 상호작용에 대한 풍부한 표현력을 확보함
-    <ul>
-      <li><a href="https://doi.org/10.48550/arXiv.1901.04704">DeepCF: A Unified Framework of Representation Learning and Matching Function Learning in Recommender System(2019)</a></li>
+      <li>Xue, H. J., Dai, X., Zhang, J., Huang, S., &amp; Chen, J.<br />
+  (2017, August).<br />
+  Deep matrix factorization models for recommender systems.<br />
+  In IJCAI (Vol. 17, pp. 3203-3209).</li>
     </ul>
   </li>
 </ul>
 
 <h3 id="how-to-modeling"><span class="me-2">How to Modeling</span><a href="#how-to-modeling" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
+<p><a href="/_post_refer_img/RecommenderSystem/06-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/06-01.png" alt="01" width="100%" loading="lazy"></a></p>
+
+<ul>
+  <li><strong>Annotation</strong></li>
+</ul>
+
+<h2 id="j-ncf"><span class="me-2">J-NCF</span><a href="#j-ncf" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><strong>문제 의식</strong>:</p>
+  </li>
+  <li>
+    <p><a href="https://doi.org/10.1145/3343117"><strong><code class="language-plaintext highlighter-rouge">J-NCF</code></strong></a>:</p>
+    <ul>
+      <li>Chen, W., Cai, F., Chen, H., &amp; Rijke, M. D.<br />
+  (2019).<br />
+  Joint neural collaborative filtering for recommender systems.<br />
+  ACM Transactions on Information Systems (TOIS), 37(4), 1-30.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="how-to-modeling-1"><span class="me-2">How to Modeling</span><a href="#how-to-modeling-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p><a href="/_post_refer_img/RecommenderSystem/06-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/06-02.png" alt="02" width="100%" loading="lazy"></a></p>
+
+<ul>
+  <li><strong>Annotation</strong></li>
+</ul>
+
+<h2 id="deepcf"><span class="me-2">DeepCF</span><a href="#deepcf" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li><strong>문제 의식</strong>: 표현 학습 방식과 매칭 함수 학습 방식의 상호 보완적 관계
+    <ul>
+      <li>표현 학습은 저차원 유사도 구조를 포착하여 사용자, 아이템의 일반화된 표현을 도출하는 데 강점</li>
+      <li>매칭 함수 학습은 사용자와 아이템 간 복잡하고 비선형적인 상호작용 과정을 근사하는 데 강점</li>
+    </ul>
+  </li>
+  <li><a href="https://doi.org/10.48550/arXiv.1901.04704"><strong><code class="language-plaintext highlighter-rouge">DeepCF</code></strong></a>: 표현 학습 모듈과 매칭 함수 학습 모듈을 병렬 학습하는 앙상블 모형
+    <ul>
+      <li>Deng, Z. H., Huang, L., Wang, C. D., Lai, J. H., &amp; Yu, P. S.<br />
+  (2019, July).<br />
+  Deepcf: A unified framework of representation learning and matching function learning in recommender system.<br />
+  In Proceedings of the AAAI conference on artificial intelligence (Vol. 33, No. 01, pp. 61-68).</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="how-to-modeling-2"><span class="me-2">How to Modeling</span><a href="#how-to-modeling-2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
 <p><a href="/_post_refer_img/RecommenderSystem/06-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/06-03.png" alt="03" width="100%" loading="lazy"></a></p>
 
 <ul>
   <li>
-    <p><strong>Representation Learning</strong> : Dimension Reduction</p>
+    <p><strong>Annotation</strong></p>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">CFNet-rl</code></strong> : Dimension Reduction</p>
 
 \[\begin{aligned}
   \mathbf{Y}_{\text{RL}}
@@ -1069,7 +1141,7 @@
     </ul>
   </li>
   <li>
-    <p><strong>Matching Function Learning</strong> : Linear Transformation</p>
+    <p><strong><code class="language-plaintext highlighter-rouge">CFNet-ml</code></strong> : Linear Transformation</p>
 
 \[\begin{aligned}
   \mathbf{Y}_{\text{ML}}
@@ -1083,7 +1155,7 @@
     </ul>
   </li>
   <li>
-    <p><strong>Fusion</strong></p>
+    <p><strong><code class="language-plaintext highlighter-rouge">CFNet</code></strong></p>
 
 \[\begin{aligned}
   \mathbf{Y}
@@ -3677,7 +3749,7 @@
   Mar  6, 2024
 </time>
 
-              <h4 class="pt-0 my-2">Distance Embedding based Latent Factor Model</h4>
+              <h4 class="pt-0 my-2">Distance Embedding based Latent Factor Models</h4>
               <div class="text-muted">
                 <p>Based on the following lectures &lt;br&gt; (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. &lt;br&gt; (2) &quot;Recommender System ...</p>
               </div>
