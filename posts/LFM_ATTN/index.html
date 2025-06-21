@@ -30,7 +30,7 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="Latent Factor Models with Attention Mechanism" />
+<meta property="og:title" content="Latent Factor Model with Attention Mechanism" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="Based on the following lectures (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. (2) “Recommender System (2024-2)” by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ." />
 <meta property="og:description" content="Based on the following lectures (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. (2) “Recommender System (2024-2)” by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ." />
@@ -42,13 +42,13 @@
 <meta property="article:published_time" content="2024-05-22T00:00:00+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg" />
-<meta property="twitter:title" content="Latent Factor Models with Attention Mechanism" />
+<meta property="twitter:title" content="Latent Factor Model with Attention Mechanism" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-05-22T00:00:00+09:00","datePublished":"2024-05-22T00:00:00+09:00","description":"Based on the following lectures (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. (2) “Recommender System (2024-2)” by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ.","headline":"Latent Factor Models with Attention Mechanism","image":"https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/LFM_ATTN/"},"url":"https://jayarnim.github.io/posts/LFM_ATTN/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-05-22T00:00:00+09:00","datePublished":"2024-05-22T00:00:00+09:00","description":"Based on the following lectures (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. (2) “Recommender System (2024-2)” by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ.","headline":"Latent Factor Model with Attention Mechanism","image":"https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/LFM_ATTN/"},"url":"https://jayarnim.github.io/posts/LFM_ATTN/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Latent Factor Models with Attention Mechanism | Data Scientist
+  <title>Latent Factor Model with Attention Mechanism | Data Scientist
   </title>
 
   <!--
@@ -415,7 +415,7 @@
         
           
             
-              <span>Latent Factor Models with Attention Mechanism</span>
+              <span>Latent Factor Model with Attention Mechanism</span>
             
 
           
@@ -648,77 +648,6 @@
     <!-- combine -->
     
   
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
-    
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- create the image wrapper -->
-        
-
-        
-        
-      
-    
-
-    <!-- combine -->
-    
-  
 
   
 
@@ -766,17 +695,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -792,17 +710,6 @@
       
         
         
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
       
 
       
@@ -860,7 +767,7 @@
 
 <article class="px-1">
   <header>
-    <h1 data-toc-skip>Latent Factor Models with Attention Mechanism</h1>
+    <h1 data-toc-skip>Latent Factor Model with Attention Mechanism</h1>
     
       <p class="post-desc fw-light mb-4">Based on the following lectures <br> (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. <br> (2) "Recommender System (2024-2)" by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ.</p>
     
@@ -943,9 +850,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="982 words"
+  title="635 words"
 >
-  <em>5 min</em> read</span>
+  <em>3 min</em> read</span>
 
         </div>
       </div>
@@ -953,77 +860,7 @@
   </header>
 
   <div class="content">
-    <h2 id="id-embedding-assist-drnet"><span class="me-2">ID Embedding Assist.: DRNet</span><a href="#id-embedding-assist-drnet" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<ul>
-  <li><strong>Previous Research</strong>
-    <ul>
-      <li><strong>User based Collaborative Filtering</strong> : 선호 패턴이 유사한 사용자 간 연관성을 학습할 수 있지만, 아이템 특성을 명시적으로 표현할 수 없음</li>
-      <li><strong>Item based Collaborative Filtering</strong> : 구매 패턴이 유사한 아이템 간 연관성을 학습할 수 있지만, 사용자 선호를 명시적으로 표현할 수 없음</li>
-      <li><strong>Latent Factor Model</strong> : 사용자와 아이템의 고유성을 명시적으로 표현할 수 있지만, 희박성(Sparsity)이 높을 경우 표현력을 신뢰할 수 없고, 특정 아이템과 사용자의 과거 행동 간 연관성을 반영하지 못함</li>
-    </ul>
-  </li>
-  <li><strong>DRNet(<code class="language-plaintext highlighter-rouge">D</code>ual <code class="language-plaintext highlighter-rouge">R</code>elation <code class="language-plaintext highlighter-rouge">Net</code>-work)</strong> : Latent Factor Model 과 Item based Collaborative Filtering 을 결합하여 사용자-아이템 관계와 아이템-아이템 관계를 동시에 모델링함으로써 개인화 추천 정확도를 높이면서도 데이터 희박성 문제에 대한 강건성을 도모함
-    <ul>
-      <li><a href="https://doi.org/10.1109/ACCESS.2020.3002102">Dual Relations Network for Collaborative Filtering(2020)</a></li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="how-to-modeling"><span class="me-2">How to Modeling</span><a href="#how-to-modeling" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p><a href="/_post_refer_img/RecommenderSystem/09-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/09-01.png" alt="04" width="100%" loading="lazy"></a></p>
-
-<ul>
-  <li>
-    <p><strong>Affection Network</strong> : Modeling User-Item Relation</p>
-
-\[\begin{aligned}
-  \overrightarrow{\mathbf{z}}_{u,i}^{\text{Affection}}
-  &amp;= \text{MLP}_{\text{ReLU}}\left[\overrightarrow{\mathbf{p}}_{u} \odot \overrightarrow{\mathbf{q}}_{i}\right]
-  \end{aligned}\]
-  </li>
-  <li>
-    <p><strong>Association Network</strong> : Modeling Item-Item Relation</p>
-
-    <ul>
-      <li>
-        <p>Global Item Vector of User $u$:</p>
-
-\[\begin{aligned}
-  \overrightarrow{\mathbf{g}}_{u}
-  &amp;= \text{ATTN}\left[\overrightarrow{\mathbf{v}}_{i}, \overrightarrow{\mathbf{s}}^{(u)}_{j}, \overrightarrow{\mathbf{s}}^{(u)}_{j}\right] \in \mathbb{R}^{K}
-  \end{aligned}\]
-
-        <ul>
-          <li>$i$ : Target Item</li>
-          <li>$j^{\forall} \in \mathbf{R}_{u}^{+} \setminus i$ : Interaction Item of User $u$</li>
-          <li>$\overrightarrow{\mathbf{v}}_{i} \in \mathbb{R}^{K}$ : Target Item Vector @ Association Network</li>
-          <li>$\overrightarrow{\mathbf{s}}^{(u)}_{j} \in \mathbb{R}^{K}$ : Historical Item Vector of User $u$</li>
-        </ul>
-      </li>
-      <li>
-        <p>Deep Interaction:</p>
-
-\[\begin{aligned}
-  \overrightarrow{\mathbf{z}}_{u,i}^{\text{Association}}
-  &amp;= \text{MLP}_{\text{ReLU}}\left[\overrightarrow{\mathbf{g}}_{u} \odot \overrightarrow{\mathbf{v}}_{i}\right]
-  \end{aligned}\]
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>Fusion</strong></p>
-
-\[\begin{aligned}
-  r_{u,i}
-  &amp;= \sigma\left[\overrightarrow{\mathbf{z}}_{u,i}^{\text{Affection}} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{\text{Association}} \right]
-  \end{aligned}\]
-  </li>
-</ul>
-
-<h2 id="history-embedding-assist-dacr"><span class="me-2">History Embedding Assist.: DACR</span><a href="#history-embedding-assist-dacr" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="history-embedding-assist-dacr"><span class="me-2">History Embedding Assist.: DACR</span><a href="#history-embedding-assist-dacr" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
@@ -1058,10 +895,10 @@
   </li>
 </ul>
 
-<h2 id="how-to-modeling-1"><span class="me-2">How to Modeling</span><a href="#how-to-modeling-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="how-to-modeling"><span class="me-2">How to Modeling</span><a href="#how-to-modeling" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<p><a href="/_post_refer_img/RecommenderSystem/09-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/09-02.png" alt="01" width="100%" loading="lazy"></a></p>
+<p><a href="/_post_refer_img/RecommenderSystem/10-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/10-01.png" alt="02" width="100%" loading="lazy"></a></p>
 
 <ul>
   <li>$\oplus$ : Vector Concatenation</li>
@@ -1231,21 +1068,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Latent%20Factor%20Models%20with%20Attention%20Mechanism%20-%20Data%20Scientist&url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FLFM_ATTN%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=Latent%20Factor%20Model%20with%20Attention%20Mechanism%20-%20Data%20Scientist&url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FLFM_ATTN%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Latent%20Factor%20Models%20with%20Attention%20Mechanism%20-%20Data%20Scientist&u=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FLFM_ATTN%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=Latent%20Factor%20Model%20with%20Attention%20Mechanism%20-%20Data%20Scientist&u=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FLFM_ATTN%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FLFM_ATTN%2F&text=Latent%20Factor%20Models%20with%20Attention%20Mechanism%20-%20Data%20Scientist" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FLFM_ATTN%2F&text=Latent%20Factor%20Model%20with%20Attention%20Mechanism%20-%20Data%20Scientist" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -3833,7 +3670,7 @@
         </article>
       
         <article class="col">
-          <a href="/posts/Dual_Embedding/" class="post-preview card h-100">
+          <a href="/posts/Semi_Dual_Embedding/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -3852,7 +3689,7 @@
   Apr  3, 2024
 </time>
 
-              <h4 class="pt-0 my-2">Dual Embedding based Latent Factor Model</h4>
+              <h4 class="pt-0 my-2">Semi-Dual Embedding based Latent Factor Model</h4>
               <div class="text-muted">
                 <p>Based on the following lectures &lt;br&gt; (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. &lt;br&gt; (2) &quot;Recommender System ...</p>
               </div>

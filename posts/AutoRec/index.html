@@ -1005,7 +1005,7 @@
     <h2 id="autorec"><span class="me-2">AutoRec</span><a href="#autorec" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<p><a href="/_post_refer_img/RecommenderSystem/13-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/13-01.png" alt="01" width="100%" loading="lazy"></a></p>
+<p><a href="/_post_refer_img/RecommenderSystem/11-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/11-01.png" alt="01" width="100%" loading="lazy"></a></p>
 
 <ul>
   <li><strong>AutoRec</strong> : 오토인코더를 활용한 협업필터링 모형으로서, 사용자-아이템 상호작용 행렬(\(\mathbf{R}\), If User based Collaborative Filtering) 혹은 아이템-사용자 상호작용 행렬(\(\mathbf{R}^{T}\), If Item based Collaborative Filtering)의 입력 벡터를 저차원 공간으로 축소했다가 복원하는 과정을 통해 누락된 평점을 예측함
@@ -1034,7 +1034,7 @@
 <h2 id="cdae"><span class="me-2">CDAE</span><a href="#cdae" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<p><a href="/_post_refer_img/RecommenderSystem/13-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/13-02.png" alt="02" width="100%" loading="lazy"></a></p>
+<p><a href="/_post_refer_img/RecommenderSystem/11-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/11-02.png" alt="02" width="100%" loading="lazy"></a></p>
 
 <ul>
   <li><strong>CDAE(<code class="language-plaintext highlighter-rouge">C</code>ollaborative <code class="language-plaintext highlighter-rouge">D</code>enoising <code class="language-plaintext highlighter-rouge">A</code>uto<code class="language-plaintext highlighter-rouge">E</code>ncoder)</strong> : 암시적 피드백에서, 관찰된 사용자-아이템 상호작용이 실제 선호도가 손상된 상태 혹은 편향된 상태라고 가정하고, 잡음 제거 오토인코더(<code class="language-plaintext highlighter-rouge">D</code>enoising <code class="language-plaintext highlighter-rouge">A</code>uto<code class="language-plaintext highlighter-rouge">E</code>ncoder)를 활용하여 손상된 선호도를 복원함
@@ -1067,7 +1067,7 @@
 <h2 id="mult-vae"><span class="me-2">Mult-VAE</span><a href="#mult-vae" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<p><a href="/_post_refer_img/RecommenderSystem/13-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/13-03.png" alt="03" width="100%" loading="lazy"></a></p>
+<p><a href="/_post_refer_img/RecommenderSystem/11-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/11-03.png" alt="03" width="100%" loading="lazy"></a></p>
 
 <ul>
   <li><strong>Mult-VAE(<code class="language-plaintext highlighter-rouge">Mult</code>inomial <code class="language-plaintext highlighter-rouge">V</code>ariational <code class="language-plaintext highlighter-rouge">A</code>uto<code class="language-plaintext highlighter-rouge">E</code>ncoder)</strong> : 변분 오토인코더를 활용하여 <strong>파라미터를 확률적으로 추정(Probabilistic Parameter Estimation Using the Bayesian Method)</strong> 함으로써 암시적 피드백의 정보 불확실성을 반영하고, 이때 우도 함수로서 <strong>다항 우도 함수(Multinomial Likelihood Function)</strong> 를 적용하여 아이템 간 암묵적 경쟁 관계를 반영함

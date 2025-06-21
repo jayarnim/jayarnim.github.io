@@ -30,7 +30,7 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="Dual Embedding based Latent Factor Model" />
+<meta property="og:title" content="Dual Embedding based Latent Factor Models" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="Based on the following lectures (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. (2) “Recommender System (2024-2)” by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ." />
 <meta property="og:description" content="Based on the following lectures (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. (2) “Recommender System (2024-2)” by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ." />
@@ -39,16 +39,16 @@
 <meta property="og:site_name" content="Data Scientist" />
 <meta property="og:image" content="https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-04-03T00:00:00+09:00" />
+<meta property="article:published_time" content="2024-03-20T00:00:00+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg" />
-<meta property="twitter:title" content="Dual Embedding based Latent Factor Model" />
+<meta property="twitter:title" content="Dual Embedding based Latent Factor Models" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-04-03T00:00:00+09:00","datePublished":"2024-04-03T00:00:00+09:00","description":"Based on the following lectures (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. (2) “Recommender System (2024-2)” by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ.","headline":"Dual Embedding based Latent Factor Model","image":"https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/Dual_Embedding/"},"url":"https://jayarnim.github.io/posts/Dual_Embedding/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-03-20T00:00:00+09:00","datePublished":"2024-03-20T00:00:00+09:00","description":"Based on the following lectures (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. (2) “Recommender System (2024-2)” by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ.","headline":"Dual Embedding based Latent Factor Models","image":"https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/Dual_Embedding/"},"url":"https://jayarnim.github.io/posts/Dual_Embedding/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Dual Embedding based Latent Factor Model | Data Scientist
+  <title>Dual Embedding based Latent Factor Models | Data Scientist
   </title>
 
   <!--
@@ -415,7 +415,7 @@
         
           
             
-              <span>Dual Embedding based Latent Factor Model</span>
+              <span>Dual Embedding based Latent Factor Models</span>
             
 
           
@@ -695,6 +695,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -721,6 +732,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -728,6 +750,38 @@
   
   
 
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
   
 
   
@@ -745,7 +799,7 @@
 
 <article class="px-1">
   <header>
-    <h1 data-toc-skip>Dual Embedding based Latent Factor Model</h1>
+    <h1 data-toc-skip>Dual Embedding based Latent Factor Models</h1>
     
       <p class="post-desc fw-light mb-4">Based on the following lectures <br> (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. <br> (2) "Recommender System (2024-2)" by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ.</p>
     
@@ -764,13 +818,13 @@
 
 <time
   
-  data-ts="1712070000"
+  data-ts="1710860400"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Apr  3, 2024
+  Mar 20, 2024
 </time>
 
       </span>
@@ -828,9 +882,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="446 words"
+  title="765 words"
 >
-  <em>2 min</em> read</span>
+  <em>4 min</em> read</span>
 
         </div>
       </div>
@@ -858,17 +912,47 @@
   </li>
 </ul>
 
-<h2 id="dncf"><span class="me-2">DNCF</span><a href="#dncf" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="delf"><span class="me-2">DELF</span><a href="#delf" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
-  <li><strong>문제 의식</strong>: 아이디 임베딩과 히스토리 임베딩의 상호 보완적 관계
+  <li><strong>문제 의식</strong>: 아이디 임베딩(ID Embedding)과 히스토리 임베딩(History Embedding)의 상호 보완적 관계
     <ul>
       <li>아이디 임베딩은 고유 정보를 보존한 표현을 생성하는 데 강점</li>
       <li>히스토리 임베딩은 맥락 정보를 반영한 표현을 생성하는 데 강점</li>
     </ul>
   </li>
-  <li><a href="https://doi.org/10.48550/arXiv.2102.02549"><strong><code class="language-plaintext highlighter-rouge">DNCF</code></strong></a>: 아이디 임베딩과 히스토리 임베딩을 결합하여 표현력을 강화하는 모형
+  <li><a href="https://doi.org/10.24963/ijcai.2018/462"><code class="language-plaintext highlighter-rouge">DELF</code></a>: 사용자와 아이템의 아이디 임베딩과 히스토리 임베딩을 조합하여 다양한 매칭 함수 학습을 수행하는 모형<br />
+(Ensemble with separate ID embedding and history embedding)
+    <ul>
+      <li>Cheng, W., Shen, Y., Zhu, Y., &amp; Huang, L.<br />
+  (2018, July).<br />
+  DELF: A dual-embedding based deep latent factor model for recommendation.<br />
+  In IJCAI (Vol. 18, pp. 3329-3335).</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="how-to-modeling"><span class="me-2">How to Modeling</span><a href="#how-to-modeling" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p>Annotation</p>
+  </li>
+  <li></li>
+</ul>
+
+<h2 id="dncf"><span class="me-2">DNCF</span><a href="#dncf" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li><strong>문제 의식</strong>: 아이디 임베딩(ID Embedding)과 히스토리 임베딩(History Embedding)의 분리로 인한 표현력의 제약
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">DELF</code> 는 아이디 임베딩과 히스토리 임베딩을 분리하여 매칭 함수 학습을 수행함</li>
+      <li>각 표현이 서로의 표현력을 보완하거나 강화하지 못함</li>
+    </ul>
+  </li>
+  <li><a href="https://doi.org/10.48550/arXiv.2102.02549"><strong><code class="language-plaintext highlighter-rouge">DNMF</code></strong></a>: 아이디 임베딩과 히스토리 임베딩을 결합한 하나의 표현을 생성하여 <code class="language-plaintext highlighter-rouge">NeuMF</code> 의 표현력을 강화하는 앙상블 모형
     <ul>
       <li>He, G., Zhao, D., &amp; Ding, L.<br />
   (2021).<br />
@@ -876,72 +960,150 @@
   arXiv preprint arXiv:2102.02549.</li>
     </ul>
   </li>
+  <li><strong>Components</strong>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">DGMF</code>: <code class="language-plaintext highlighter-rouge">D</code>ual-Embedding based <code class="language-plaintext highlighter-rouge">G</code>eneralized <code class="language-plaintext highlighter-rouge">M</code>atrix <code class="language-plaintext highlighter-rouge">F</code>actorization</li>
+      <li><code class="language-plaintext highlighter-rouge">DMLP</code>: <code class="language-plaintext highlighter-rouge">D</code>ual-Embedding based <code class="language-plaintext highlighter-rouge">M</code>ulti-<code class="language-plaintext highlighter-rouge">L</code>ayer <code class="language-plaintext highlighter-rouge">P</code>erceptron</li>
+      <li><code class="language-plaintext highlighter-rouge">DNMF</code>: <code class="language-plaintext highlighter-rouge">DGMF</code> &amp; <code class="language-plaintext highlighter-rouge">DMLP</code> Ensemble</li>
+    </ul>
+  </li>
 </ul>
 
-<h3 id="how-to-modeling"><span class="me-2">How to Modeling</span><a href="#how-to-modeling" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="how-to-modeling-1"><span class="me-2">How to Modeling</span><a href="#how-to-modeling-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p><a href="/_post_refer_img/RecommenderSystem/07-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/07-01.png" alt="03" width="100%" loading="lazy"></a></p>
+<p><a href="/_post_refer_img/RecommenderSystem/06-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/06-02.png" alt="02" width="100%" loading="lazy"></a></p>
+
+<ul>
+  <li><strong>Annotation</strong>
+    <ul>
+      <li>$u=1,2,\cdots,M$: user idx</li>
+      <li>$i=1,2,\cdots,N$: item idx</li>
+      <li>$\mathbf{Y} \in \mathbb{R}^{M \times N}$: user-item interaction matrix</li>
+      <li>$\overrightarrow{\mathbf{p}}_{u} \in \mathbb{R}^{K}$: user ID embedding vector</li>
+      <li>$\overrightarrow{\mathbf{q}}_{i} \in \mathbb{R}^{K}$: item ID embedding vector</li>
+      <li>$\overrightarrow{\mathbf{m}}_{u} \in \mathbb{R}^{K}$: user history embedding vector</li>
+      <li>$\overrightarrow{\mathbf{n}}_{i} \in \mathbb{R}^{K}$: item history embedding vector</li>
+      <li>$\overrightarrow{\mathbf{u}}_{u}$: user embedding combination vector</li>
+      <li>$\overrightarrow{\mathbf{v}}_{i}$: item embedding combination vector</li>
+      <li>$\overrightarrow{\mathbf{z}}_{u,i}$: predictive vector of user $u$ and item $i$</li>
+      <li>$\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$</li>
+    </ul>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">DNMF</code> is <code class="language-plaintext highlighter-rouge">DGMF</code> &amp; <code class="language-plaintext highlighter-rouge">DMLP</code> Ensemble</p>
+
+\[\begin{aligned}
+  \hat{y}_{u,i}
+  &amp;= \sigma(\overrightarrow{\mathbf{h}} \cdot [\overrightarrow{\mathbf{z}}_{u,i}^{\text{(DGMF)}} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{\text{(DMLP)}}] + \overrightarrow{\mathbf{b}})
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h4 id="dgmf"><span class="me-2">DGMF</span><a href="#dgmf" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
 <ul>
   <li>
-    <p><strong>ID based Embedding</strong></p>
+    <p>ID Embedding:</p>
 
 \[\begin{aligned}
-  \overrightarrow{\mathbf{p}}_{u}&amp;=\text{Embedding}\left[\overrightarrow{\mathbf{z}}_{u}\right] \in \mathbb{R}^{K}\\
-  \overrightarrow{\mathbf{q}}_{i}&amp;=\text{Embedding}\left[\overrightarrow{\mathbf{z}}_{i}\right] \in \mathbb{R}^{K}
+  \overrightarrow{\mathbf{p}}_{u}
+  &amp;=\text{Emb}(u) \in \mathbb{R}^{K}\\
+  \overrightarrow{\mathbf{q}}_{i}
+  &amp;=\text{Emb}(i) \in \mathbb{R}^{K}
   \end{aligned}\]
-
-    <ul>
-      <li>$\overrightarrow{\mathbf{z}}_{u}$ : ID One-Hot Vector of User $i$</li>
-      <li>$\overrightarrow{\mathbf{z}}_{i}$ : ID One-Hot Vector of Item $j$</li>
-      <li>$\overrightarrow{\mathbf{p}}_{u}$ : ID Embedding Vector of User $i$</li>
-      <li>$\overrightarrow{\mathbf{q}}_{i}$ : ID Embedding Vector of Item $j$</li>
-    </ul>
   </li>
   <li>
-    <p><strong>Interaction based Embedding</strong></p>
+    <p>History Embedding:</p>
 
 \[\begin{aligned}
   \overrightarrow{\mathbf{m}}_{u}
-  &amp;=\text{AGG}\left[\left\{\overrightarrow{\mathbf{h}}_{j} \mid j \in \mathcal{R}_{u}^{+}\right\}\right] \in \mathbb{R}^{K}\\
-  &amp;=\frac{1}{\sqrt{\vert \mathcal{R}_{u}^{+}\vert}}\mathbf{W}^{(P)} \cdot \mathbf{R}_{u,:}\\
+  &amp;=\frac{1}{\sqrt{\vert \mathcal{R}_{u}^{+} \setminus \{i\} \vert}}\mathbf{W} \cdot \mathbf{Y}_{u*} \in \mathbb{R}^{K}\\
   \overrightarrow{\mathbf{n}}_{i}
-  &amp;=\text{AGG}\left[\left\{\overrightarrow{\mathbf{h}}_{v} \mid v \in \mathcal{R}_{i}^{+}\right\}\right] \in \mathbb{R}^{K}\\
-  &amp;=\frac{1}{\sqrt{\vert \mathcal{R}_{i}^{+}\vert}}\mathbf{W}^{(Q)} \cdot \mathbf{R}_{:,i}
+  &amp;=\frac{1}{\sqrt{\vert \mathcal{R}_{i}^{+} \setminus \{u\} \vert}}\mathbf{W} \cdot \mathbf{Y}_{*i} \in \mathbb{R}^{K}
   \end{aligned}\]
-
-    <ul>
-      <li>$\mathbf{R}_{u,:}$ : Multi-Hot Vector of User $u$ @ User-Item Interaction Matrix</li>
-      <li>$\mathbf{R}_{:,i}$ : Multi-Hot Vector of Item $i$ @ User-Item Interaction Matrix</li>
-      <li>$\overrightarrow{\mathbf{m}}_{u}$ : ID Embedding Vector of User $u$</li>
-      <li>$\overrightarrow{\mathbf{n}}_{i}$ : ID Embedding Vector of Item $i$</li>
-    </ul>
   </li>
-  <li><strong>Embedding Combination</strong>
+  <li>
+    <p>Embedding Combination:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{u}}_{u}
+  &amp;= \text{Agg}(\overrightarrow{\mathbf{p}}_{u}, \overrightarrow{\mathbf{m}}_{u})\\
+  \overrightarrow{\mathbf{v}}_{i}
+  &amp;= \text{Agg}(\overrightarrow{\mathbf{q}}_{i}, \overrightarrow{\mathbf{n}}_{i})
+  \end{aligned}\]
+
     <ul>
-      <li>
-        <p>User Embedding Combination:</p>
-
-\[\begin{aligned}
-  \overrightarrow{\mathbf{x}}_{u}
-  &amp;=\overrightarrow{\mathbf{p}}_{u} \oplus \overrightarrow{\mathbf{m}}_{u} \in \mathbb{R}^{2K}
-  \end{aligned}\]
-      </li>
-      <li>
-        <p>Item Embedding Combination:</p>
-
-\[\begin{aligned}
-  \overrightarrow{\mathbf{y}}_{i}
-  &amp;=\overrightarrow{\mathbf{q}}_{i} \oplus \overrightarrow{\mathbf{n}}_{i} \in \mathbb{R}^{2K}
-  \end{aligned}\]
-      </li>
+      <li>element-wise sum</li>
+      <li>element-wise mean</li>
+      <li>concatenation</li>
+      <li>attention</li>
     </ul>
   </li>
   <li>
-    <p><strong>Neural Collaborative Filtering and Predict</strong></p>
+    <p>Predictive Vector of user $u$ and item $i$:</p>
 
 \[\begin{aligned}
-  \hat{r}_{u,i} &amp;= \sigma\Big[\text{MLP}_{\text{ReLU}}\left[\overrightarrow{\mathbf{x}}_{u} \oplus \overrightarrow{\mathbf{y}}_{i}\right]\Big]
+  \overrightarrow{\mathbf{z}}_{u,i}
+  &amp;= \overrightarrow{\mathbf{u}}_{u} \odot \overrightarrow{\mathbf{v}}_{i}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>If use <code class="language-plaintext highlighter-rouge">DGMF</code> as a single prediction module:</p>
+
+\[\begin{aligned}
+  \hat{y}_{u,i}
+  &amp;= \sigma(\overrightarrow{\mathbf{h}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h4 id="dmlp"><span class="me-2">DMLP</span><a href="#dmlp" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
+<ul>
+  <li>
+    <p>ID Embedding:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{p}}_{u}
+  &amp;=\text{Emb}(u) \in \mathbb{R}^{K}\\
+  \overrightarrow{\mathbf{q}}_{i}
+  &amp;=\text{Emb}(i) \in \mathbb{R}^{K}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>History Embedding:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{m}}_{u}
+  &amp;=\frac{1}{\sqrt{\vert \mathcal{R}_{u}^{+} \setminus \{i\} \vert}}\mathbf{W} \cdot \mathbf{Y}_{u*} \in \mathbb{R}^{K}\\
+  \overrightarrow{\mathbf{n}}_{i}
+  &amp;=\frac{1}{\sqrt{\vert \mathcal{R}_{i}^{+} \setminus \{u\} \vert}}\mathbf{W} \cdot \mathbf{Y}_{*i} \in \mathbb{R}^{K}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Embedding Combination:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{u}}_{u}
+  &amp;= \overrightarrow{\mathbf{p}}_{u} \oplus \overrightarrow{\mathbf{m}}_{u}\\
+  \overrightarrow{\mathbf{v}}_{i}
+  &amp;= \overrightarrow{\mathbf{q}}_{i} \oplus \overrightarrow{\mathbf{n}}_{i}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Predictive Vector of user $u$ and item $i$:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{z}}_{u,i}
+  &amp;= \text{MLP}_{\text{ReLU}}(\overrightarrow{\mathbf{u}}_{u} \oplus \overrightarrow{\mathbf{v}}_{i})
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>If use <code class="language-plaintext highlighter-rouge">DMLP</code> as a single prediction module:</p>
+
+\[\begin{aligned}
+  \hat{y}_{u,i}
+  &amp;= \sigma(\overrightarrow{\mathbf{h}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
   \end{aligned}\]
   </li>
 </ul>
@@ -1023,21 +1185,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Dual%20Embedding%20based%20Latent%20Factor%20Model%20-%20Data%20Scientist&url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FDual_Embedding%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=Dual%20Embedding%20based%20Latent%20Factor%20Models%20-%20Data%20Scientist&url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FDual_Embedding%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Dual%20Embedding%20based%20Latent%20Factor%20Model%20-%20Data%20Scientist&u=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FDual_Embedding%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=Dual%20Embedding%20based%20Latent%20Factor%20Models%20-%20Data%20Scientist&u=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FDual_Embedding%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FDual_Embedding%2F&text=Dual%20Embedding%20based%20Latent%20Factor%20Model%20-%20Data%20Scientist" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FDual_Embedding%2F&text=Dual%20Embedding%20based%20Latent%20Factor%20Models%20-%20Data%20Scientist" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -3253,19 +3415,19 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -3576,7 +3738,7 @@
   May 22, 2024
 </time>
 
-              <h4 class="pt-0 my-2">Latent Factor Models with Attention Mechanism</h4>
+              <h4 class="pt-0 my-2">Latent Factor Model with Attention Mechanism</h4>
               <div class="text-muted">
                 <p>Based on the following lectures &lt;br&gt; (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. &lt;br&gt; (2) &quot;Recommender System ...</p>
               </div>
@@ -3665,11 +3827,11 @@
 
   
     <a
-      href="/posts/Dist_Embedding/"
+      href="/posts/Semi_Dual_Embedding/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>Distance Embedding based Latent Factor Model</p>
+      <p>Semi-Dual Embedding based Latent Factor Model</p>
     </a>
   
 </nav>
