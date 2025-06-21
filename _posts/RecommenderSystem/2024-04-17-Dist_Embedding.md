@@ -36,7 +36,7 @@ image:
 
 ### How to Modeling
 
-![05](/_post_refer_img/RecommenderSystem/08-01.png){: width="100%"}
+![01](/_post_refer_img/RecommenderSystem/07-01.png){: width="100%"}
 
 - **MeFL(`Me`tric `F`unction `L`earning)** : 사용자, 아이템 표현 학습 시 삼각 부등식을 고려함으로써 합리적 추천 결과를 도모함
 

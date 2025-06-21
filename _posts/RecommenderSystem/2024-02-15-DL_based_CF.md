@@ -1,7 +1,7 @@
 ---
-order: 4
+order: 3
 title: Deep Learning based Collaborative Filtering
-date: 2024-02-29
+date: 2024-02-15
 categories: [AI Application, Recommender System]
 tags: [AI Application, Recommender System, Collaborative Filtering]
 math: true
@@ -26,7 +26,7 @@ image:
 
 - **ID Embedding**: Embedding user and item identifiers into a low-dimensional vector space
 
-    ![01](/_post_refer_img/RecommenderSystem/04-01.png){: width="100%"}
+    ![01](/_post_refer_img/RecommenderSystem/03-01.png){: width="100%"}
 
 - [`NCF`](https://doi.org/10.1145/3038912.3052569): ID Embedding based Latent Factor Model\\
 (Linear and Non-Linear Matching Function Ensemble)
@@ -39,7 +39,7 @@ image:
 
 - **History Embedding**: Generate each user and item expressions based on past interaction history
 
-    ![02](/_post_refer_img/RecommenderSystem/04-02.png){: width="100%"}
+    ![02](/_post_refer_img/RecommenderSystem/03-02.png){: width="100%"}
 
     - by aggregating the raw representations of one entity with which the another entity interacted
     - by reducing the dimensionality of the user-item interaction matrix and its transpose
@@ -51,13 +51,6 @@ image:
     Deep matrix factorization models for recommender systems.\\
     In IJCAI (Vol. 17, pp. 3203-3209).
 
-- [`J-NCF`](https://doi.org/10.1145/3343117): History Embedding based Latent Factor Model\\
-(Representation Learning and Matching Function Learning Serial)
-    - Chen, W., Cai, F., Chen, H., & Rijke, M. D.\\
-    (2019).\\
-    Joint neural collaborative filtering for recommender systems.\\
-    ACM Transactions on Information Systems (TOIS), 37(4), 1-30.
-
 - [`DeepCF`](https://doi.org/10.48550/arXiv.1901.04704): History Embedding based Latent Factor Model\\
 (Representation Learning and Matching Function Learning Ensemble)
     - Deng, Z. H., Huang, L., Wang, C. D., Lai, J. H., & Yu, P. S.\\
@@ -65,21 +58,46 @@ image:
     Deepcf: A unified framework of representation learning and matching function learning in recommender system.\\
     In Proceedings of the AAAI conference on artificial intelligence (Vol. 33, No. 01, pp. 61-68).
 
+- [`J-NCF`](https://doi.org/10.1145/3343117): History Embedding based Latent Factor Model\\
+(Representation Learning and Matching Function Learning Serial)
+    - Chen, W., Cai, F., Chen, H., & Rijke, M. D.\\
+    (2019).\\
+    Joint neural collaborative filtering for recommender systems.\\
+    ACM Transactions on Information Systems (TOIS), 37(4), 1-30.
+
 ### Dual Embedding
 
 - **Dual Embedding**: Use both ID Embedding and History Embedding
 
-    ![03](/_post_refer_img/RecommenderSystem/04-03.png){: width="100%"}
+    ![03](/_post_refer_img/RecommenderSystem/03-03.png){: width="100%"}
 
-- [`DNCF`](https://doi.org/10.48550/arXiv.2102.02549): Dual Embedding based Latent Factor Model
+- [`DELF`](https://doi.org/10.24963/ijcai.2018/462): Dual Embedding based Latent Factor Model\\
+(Ensemble with separate ID embedding and history embedding)
+    - Cheng, W., Shen, Y., Zhu, Y., & Huang, L.\\
+    (2018, July).\\
+    DELF: A dual-embedding based deep latent factor model for recommendation.\\
+    In IJCAI (Vol. 18, pp. 3329-3335).
+
+- [`DNCF`](https://doi.org/10.48550/arXiv.2102.02549): Dual Embedding based Latent Factor Model\\
+(Ensemble combining ID embedding and history embedding)
     - He, G., Zhao, D., & Ding, L.\\
     (2021).\\
     Dual-embedding based neural collaborative filtering for recommender systems.\\
     arXiv preprint arXiv:2102.02549.
 
+### Semi-Dual Embedding
+
+- **Semi-Dual Embedding**: Apply dual embedding to only one side of the user or item
+
+- [`DRNet`](https://doi.org/10.1109/ACCESS.2020.3002102): ID Embedding based Latent Factor Model Assist.
+    - Ji, D., Xiang, Z., & Li, Y.\\
+    (2020).\\
+    Dual relations network for collaborative filtering.\\
+    IEEE Access, 8, 109747-109757.
+
 ### Distance Embedding
 
-- **Distance Embedding** : Calculate Similarity through distance, not inner product, outer product, or concatenation
+- **Distance Embedding**: Calculate Similarity through distance, not inner product, outer product, or concatenation
 
 - [`DDFL`](https://doi.org/10.1007/978-3-030-59419-0_36): Distance Embedding based Latent Factor Model
     - Shah, S. T. U., Li, J., Guo, Z., Li, G., & Zhou, Q.\\
@@ -91,7 +109,7 @@ image:
 ## AutoEncoder
 -----
 
-![04](/_post_refer_img/RecommenderSystem/04-04.png){: width="100%"}
+![04](/_post_refer_img/RecommenderSystem/03-04.png){: width="100%"}
 
 - **Merit**
     - Restore the user-item interaction matrix
@@ -140,20 +158,8 @@ image:
 - **Merit**
     - Select important information and remove noise
 
-- [`DRNet`](https://doi.org/10.1109/ACCESS.2020.3002102): ID Embedding based Latent Factor Model Assist.
-    - Ji, D., Xiang, Z., & Li, Y.\\
-    (2020).\\
-    Dual relations network for collaborative filtering.\\
-    IEEE Access, 8, 109747-109757.
-
 - [`DACR`](https://doi.org/10.3390/app122010594): History Embedding based Latent Factor Model Assist.
     - Cui, C., Qin, J., & Ren, Q.\\
     (2022).\\
     Deep collaborative recommendation algorithm based on attention mechanism.\\
     Applied Sciences, 12(20), 10594.
-
-- [`DELF`](https://doi.org/10.24963/ijcai.2018/462): Dual Embedding based Latent Factor Model Assist.
-    - Cheng, W., Shen, Y., Zhu, Y., & Huang, L.\\
-    (2018, July).\\
-    DELF: A dual-embedding based deep latent factor model for recommendation.\\
-    In IJCAI (Vol. 18, pp. 3329-3335).

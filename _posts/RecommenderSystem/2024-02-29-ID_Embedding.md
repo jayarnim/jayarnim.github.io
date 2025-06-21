@@ -1,7 +1,7 @@
 ---
-order: 5
+order: 4
 title: ID Embedding based Latent Factor Model
-date: 2024-03-06
+date: 2024-02-29
 categories: [AI Application, Recommender System]
 tags: [AI Application, Recommender System, Collaborative Filtering, Latent Factor Model, MLP]
 math: true
@@ -16,7 +16,7 @@ image:
 ## How to aggregate
 -----
 
-![01](/_post_refer_img/RecommenderSystem/05-01.png){: width="100%"}
+![01](/_post_refer_img/RecommenderSystem/04-01.png){: width="100%"}
 
 - **요소별 곱(Element-wise Product)**: 두 벡터 간 상응하는 차원끼리 곱셈하는 방법
     - 사용자, 아이템 잠재요인 공간 동일 가정
@@ -48,7 +48,15 @@ image:
     Neural collaborative filtering.\\
     In Proceedings of the 26th international conference on world wide web (pp. 173-182).
 
-### How to Modeling
+- **Components**
+    - **`GMF`(`G`eneralized `M`atrix `F`actorization)** : 요소별 곱 기반 선형 매칭 함수 모듈
+    - **`NCF`(`N`eural `C`ollaborative `F`iltering)** : 벡터 결합 및 다층 신경망(MLP) 기반 비선형 매칭 함수 학습 모듈
+    - **`NeuMF`** : GMF 와 NCF 의 예측 벡터(Predictive Vector)를 종합하여 예측을 수행하는 앙상블 모형
+
+## How to Modeling
+-----
+
+![04](/_post_refer_img/RecommenderSystem/04-04.png){: width="100%"}
 
 - **Annotation**
     - $u=1,2,\cdots,M$: user idx
@@ -58,49 +66,65 @@ image:
     - $\overrightarrow{\mathbf{z}}_{u,i} \in \mathbb{R}^{K}$: predictive vector of user $u$ and item $i$
     - $\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$
 
-- **`GMF`(`G`eneralized `M`atrix `F`actorization)** : 요소별 곱 기반 선형 매칭 함수 모듈
-
-    ![02](/_post_refer_img/RecommenderSystem/05-02.png){: width="100%"}
-
-    - Predictive Vector of user $u$ and item $i$:
-
-        $$\begin{aligned}
-        \overrightarrow{\mathbf{z}}_{u,i}^{\text{(GMF)}}
-        &= \overrightarrow{\mathbf{u}}_{u}^{\text{(GMF)}} \odot \overrightarrow{\mathbf{v}}_{i}^{\text{(GMF)}}
-        \end{aligned}$$
-
-    - If use GMF as a single prediction module:
-
-        $$\begin{aligned}
-        \hat{y}_{u,i}
-        &= \sigma(\mathbf{W} \cdot \overrightarrow{\mathbf{z}}_{u,i}^{\text{(GMF)}} + \overrightarrow{\mathbf{b}})
-        \end{aligned}$$
-
-- **`NCF`(`N`eural `C`ollaborative `F`iltering)** : 벡터 결합 및 다층 신경망(MLP) 기반 비선형 매칭 함수 학습 모듈
-
-    ![03](/_post_refer_img/RecommenderSystem/05-03.png){: width="100%"}
-
-    - Predictive Vector of user $u$ and item $i$:
-
-        $$\begin{aligned}
-        \overrightarrow{\mathbf{z}}_{u,i}^{\text{(NCF)}}
-        &= \text{MLP}_{\text{ReLU}}(\overrightarrow{\mathbf{u}}_{u}^{\text{(NCF)}} \oplus \overrightarrow{\mathbf{v}}_{i}^{\text{(NCF)}})
-        \end{aligned}$$
-
-    - If use NCF as a single prediction module:
-
-        $$\begin{aligned}
-        \hat{y}_{u,i}
-        &= \sigma(\mathbf{W} \cdot \overrightarrow{\mathbf{z}}_{u,i}^{\text{(NCF)}} + \overrightarrow{\mathbf{b}})
-        \end{aligned}$$
-
-- **`NeuMF`** : GMF 와 NCF 의 예측 벡터(Predictive Vector)를 종합하여 예측을 수행하는 앙상블 모형
-
-    ![04](/_post_refer_img/RecommenderSystem/05-04.png){: width="100%"}
+- `NeuMF` is `GMF` & `NCF` Ensemble
 
     $$\begin{aligned}
     \hat{y}_{u,i}
-    &= \sigma(\mathbf{W} \cdot [\overrightarrow{\mathbf{z}}_{u,i}^{\text{(GMF)}} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{\text{(NCF)}}] + \overrightarrow{\mathbf{b}})
+    &= \sigma(\overrightarrow{\mathbf{h}} \cdot [\overrightarrow{\mathbf{z}}_{u,i}^{\text{(GMF)}} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{\text{(NCF)}}] + \overrightarrow{\mathbf{b}})
+    \end{aligned}$$
+
+### GMF
+
+![02](/_post_refer_img/RecommenderSystem/04-02.png){: width="100%"}
+
+- ID Embedding:
+
+    $$\begin{aligned}
+    \overrightarrow{\mathbf{u}}_{u}
+    &= \text{Emb}(u) \in \mathbb{R}^{K}\\
+    \overrightarrow{\mathbf{v}}_{i}
+    &= \text{Emb}(i) \in \mathbb{R}^{K}
+    \end{aligned}$$
+
+- Predictive Vector of user $u$ and item $i$:
+
+    $$\begin{aligned}
+    \overrightarrow{\mathbf{z}}_{u,i}
+    &= \overrightarrow{\mathbf{u}}_{u} \odot \overrightarrow{\mathbf{v}}_{i}
+    \end{aligned}$$
+
+- If use `GMF` as a single prediction module:
+
+    $$\begin{aligned}
+    \hat{y}_{u,i}
+    &= \sigma(\overrightarrow{\mathbf{h}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
+    \end{aligned}$$
+
+### NCF
+
+![03](/_post_refer_img/RecommenderSystem/04-03.png){: width="100%"}
+
+- ID Embedding:
+
+    $$\begin{aligned}
+    \overrightarrow{\mathbf{u}}_{u}
+    &= \text{Emb}(u) \in \mathbb{R}^{K}\\
+    \overrightarrow{\mathbf{v}}_{i}
+    &= \text{Emb}(i) \in \mathbb{R}^{K}
+    \end{aligned}$$
+
+- Predictive Vector of user $u$ and item $i$:
+
+    $$\begin{aligned}
+    \overrightarrow{\mathbf{z}}_{u,i}
+    &= \text{MLP}_{\text{ReLU}}(\overrightarrow{\mathbf{u}}_{u} \oplus \overrightarrow{\mathbf{v}}_{i})
+    \end{aligned}$$
+
+- If use `NCF` as a single prediction module:
+
+    $$\begin{aligned}
+    \hat{y}_{u,i}
+    &= \sigma(\overrightarrow{\mathbf{h}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
     \end{aligned}$$
 
 -----
