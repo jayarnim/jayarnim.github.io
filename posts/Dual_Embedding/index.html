@@ -39,12 +39,12 @@
 <meta property="og:site_name" content="Data Scientist" />
 <meta property="og:image" content="https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-03-20T00:00:00+09:00" />
+<meta property="article:published_time" content="2024-03-27T00:00:00+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg" />
 <meta property="twitter:title" content="Dual Embedding based Latent Factor Models" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-03-20T00:00:00+09:00","datePublished":"2024-03-20T00:00:00+09:00","description":"Based on the following lectures (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. (2) “Recommender System (2024-2)” by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ.","headline":"Dual Embedding based Latent Factor Models","image":"https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/Dual_Embedding/"},"url":"https://jayarnim.github.io/posts/Dual_Embedding/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-03-27T00:00:00+09:00","datePublished":"2024-03-27T00:00:00+09:00","description":"Based on the following lectures (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. (2) “Recommender System (2024-2)” by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ.","headline":"Dual Embedding based Latent Factor Models","image":"https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/Dual_Embedding/"},"url":"https://jayarnim.github.io/posts/Dual_Embedding/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -648,6 +648,77 @@
     <!-- combine -->
     
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
 
   
 
@@ -721,6 +792,17 @@
       
         
         
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
       
 
       
@@ -818,13 +900,13 @@
 
 <time
   
-  data-ts="1710860400"
+  data-ts="1711465200"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Mar 20, 2024
+  Mar 27, 2024
 </time>
 
       </span>
@@ -882,9 +964,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="765 words"
+  title="993 words"
 >
-  <em>4 min</em> read</span>
+  <em>5 min</em> read</span>
 
         </div>
       </div>
@@ -922,8 +1004,7 @@
       <li>히스토리 임베딩은 맥락 정보를 반영한 표현을 생성하는 데 강점</li>
     </ul>
   </li>
-  <li><a href="https://doi.org/10.24963/ijcai.2018/462"><code class="language-plaintext highlighter-rouge">DELF</code></a>: 사용자와 아이템의 아이디 임베딩과 히스토리 임베딩을 조합하여 다양한 매칭 함수 학습을 수행하는 모형<br />
-(Ensemble with separate ID embedding and history embedding)
+  <li><strong><a href="https://doi.org/10.24963/ijcai.2018/462"><code class="language-plaintext highlighter-rouge">DELF</code></a>(<code class="language-plaintext highlighter-rouge">D</code>ual <code class="language-plaintext highlighter-rouge">E</code>mbedding based Deep <code class="language-plaintext highlighter-rouge">L</code>atent <code class="language-plaintext highlighter-rouge">F</code>actor Model)</strong>: 사용자와 아이템의 아이디 임베딩과 히스토리 임베딩을 조합하여 다양한 매칭 함수를 병렬 학습하는 모형
     <ul>
       <li>Cheng, W., Shen, Y., Zhu, Y., &amp; Huang, L.<br />
   (2018, July).<br />
@@ -935,11 +1016,125 @@
 
 <h3 id="how-to-modeling"><span class="me-2">How to Modeling</span><a href="#how-to-modeling" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
+<p><a href="/_post_refer_img/RecommenderSystem/06-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/06-01.png" alt="01" width="100%" loading="lazy"></a></p>
+
+<ul>
+  <li><strong>Annotation</strong>
+    <ul>
+      <li>$u=1,2,\cdots,M$: user idx</li>
+      <li>$i=1,2,\cdots,N$: item idx</li>
+      <li>$\overrightarrow{\mathbf{p}}_{u} \in \mathbb{R}^{K}$: user ID embedding vector</li>
+      <li>$\overrightarrow{\mathbf{q}}_{i} \in \mathbb{R}^{K}$: item ID embedding vector</li>
+      <li>$\overrightarrow{\mathbf{m}}_{u} \in \mathbb{R}^{K}$: user history embedding vector</li>
+      <li>$\overrightarrow{\mathbf{n}}_{i} \in \mathbb{R}^{K}$: item history embedding vector</li>
+      <li>$\overrightarrow{\mathbf{z}}_{u,i}$: predictive vector of user $u$ and item $i$</li>
+      <li>$\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$</li>
+    </ul>
+  </li>
+  <li>
+    <p>ID Embedding:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{p}}_{u}
+  &amp;=\text{Emb}(u)\\
+  \overrightarrow{\mathbf{q}}_{i}
+  &amp;=\text{Emb}(i)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>History Embedding:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{m}}_{u}
+  &amp;=\text{ATTN}(\overrightarrow{\mathbf{h}}^{\text{(user)}}, \overrightarrow{\mathbf{h}}_{j \in \mathcal{R}_{u}^{+} \setminus \{i\}}, \overrightarrow{\mathbf{y}}_{j \in \mathcal{R}_{u}^{+} \setminus \{i\}})\\
+  \overrightarrow{\mathbf{n}}_{i}
+  &amp;=\text{ATTN}(\overrightarrow{\mathbf{h}}^{\text{(item)}}, \overrightarrow{\mathbf{h}}_{v \in \mathcal{R}_{i}^{+} \setminus \{u\}}, \overrightarrow{\mathbf{x}}_{v \in \mathcal{R}_{i}^{+} \setminus \{u\}})
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Pairwise Neural Interaction Layers:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{z}}_{u,i}^{(1)}
+  &amp;= \text{MLP}_{\text{ReLU}}(\overrightarrow{\mathbf{p}}_{u} \oplus \overrightarrow{\mathbf{q}}_{i})\\
+  \overrightarrow{\mathbf{z}}_{u,i}^{(2)}
+  &amp;= \text{MLP}_{\text{ReLU}}(\overrightarrow{\mathbf{m}}_{u} \oplus \overrightarrow{\mathbf{n}}_{i})\\
+  \overrightarrow{\mathbf{z}}_{u,i}^{(3)}
+  &amp;= \text{MLP}_{\text{ReLU}}(\overrightarrow{\mathbf{p}}_{u} \oplus \overrightarrow{\mathbf{n}}_{i})\\
+  \overrightarrow{\mathbf{z}}_{u,i}^{(4)}
+  &amp;= \text{MLP}_{\text{ReLU}}(\overrightarrow{\mathbf{m}}_{u} \oplus \overrightarrow{\mathbf{q}}_{i})
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Predict interaction probability of user $u$ and item $i$:</p>
+
+\[\begin{aligned}
+  \hat{y}_{u,i}
+  &amp;= \sigma(\overrightarrow{\mathbf{w}} \cdot [\overrightarrow{\mathbf{z}}_{u,i}^{(1)} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{(2)} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{(3)} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{(4)}] + \overrightarrow{\mathbf{b}})
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h3 id="how-to-attention"><span class="me-2">How to Attention</span><a href="#how-to-attention" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
 <ul>
   <li>
-    <p>Annotation</p>
+    <p>Another ID Embedding:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{x}}_{v}
+  &amp;=\text{Emb}(v)\\
+  \overrightarrow{\mathbf{y}}_{j}
+  &amp;=\text{Emb}(j)
+  \end{aligned}\]
   </li>
-  <li></li>
+  <li>
+    <p>Query Vector is Global Context Vector:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{h}}^{\text{(user)}},
+  \quad
+  \overrightarrow{\mathbf{h}}^{\text{(item)}}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Key Vector is Generated by:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{h}}_{v}
+  &amp;= \text{tanh}(\mathbf{W} \cdot \overrightarrow{\mathbf{x}}_{v} + \overrightarrow{\mathbf{b}})\\
+  \overrightarrow{\mathbf{h}}_{j}
+  &amp;= \text{tanh}(\mathbf{W} \cdot \overrightarrow{\mathbf{y}}_{j} + \overrightarrow{\mathbf{b}})
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>History Embedding Vector is Generated by:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{m}}_{u}
+  &amp;= \sum_{j \in \mathcal{R}_{u}^{+} \setminus \{i\}}{\alpha_{j} \cdot \overrightarrow{\mathbf{y}}_{j}}\\
+  \overrightarrow{\mathbf{n}}_{i}
+  &amp;= \sum_{v \in \mathcal{R}_{i}^{+} \setminus \{u\}}{\alpha_{v} \cdot \overrightarrow{\mathbf{x}}_{v}}\\
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Attention Weight is Calculated by Softmax:</p>
+
+\[\begin{aligned}
+  \alpha_{j}
+  &amp;= \frac{\exp{f(\overrightarrow{\mathbf{h}}^{\text{(user)}},\overrightarrow{\mathbf{h}}_{j})}}{\sum_{j \in \mathcal{R}_{u}^{+} \setminus \{i\}}{\exp{f(\overrightarrow{\mathbf{h}}^{\text{(user)}},\overrightarrow{\mathbf{h}}_{j})}}}\\
+  \alpha_{v}
+  &amp;= \frac{\exp{f(\overrightarrow{\mathbf{h}}^{\text{(item)}},\overrightarrow{\mathbf{h}}_{v})}}{\sum_{v \in \mathcal{R}_{i}^{+} \setminus \{u\}}{\exp{f(\overrightarrow{\mathbf{h}}^{\text{(item)}},\overrightarrow{\mathbf{h}}_{v})}}}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Attention Score Function is Dot Product:</p>
+
+\[\begin{aligned}
+  f(q,k)
+  &amp;= q \cdot k
+  \end{aligned}\]
+  </li>
 </ul>
 
 <h2 id="dncf"><span class="me-2">DNCF</span><a href="#dncf" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
@@ -952,7 +1147,7 @@
       <li>각 표현이 서로의 표현력을 보완하거나 강화하지 못함</li>
     </ul>
   </li>
-  <li><a href="https://doi.org/10.48550/arXiv.2102.02549"><strong><code class="language-plaintext highlighter-rouge">DNMF</code></strong></a>: 아이디 임베딩과 히스토리 임베딩을 결합한 하나의 표현을 생성하여 <code class="language-plaintext highlighter-rouge">NeuMF</code> 의 표현력을 강화하는 앙상블 모형
+  <li><strong><a href="https://doi.org/10.48550/arXiv.2102.02549"><code class="language-plaintext highlighter-rouge">DNMF</code></a>(<code class="language-plaintext highlighter-rouge">D</code>eep <code class="language-plaintext highlighter-rouge">N</code>eural <code class="language-plaintext highlighter-rouge">M</code>atrix <code class="language-plaintext highlighter-rouge">F</code>actorization)</strong>: 아이디 임베딩과 히스토리 임베딩을 결합한 하나의 표현을 생성하여 <code class="language-plaintext highlighter-rouge">NeuMF</code> 의 표현력을 강화하는 앙상블 모형
     <ul>
       <li>He, G., Zhao, D., &amp; Ding, L.<br />
   (2021).<br />
@@ -994,7 +1189,7 @@
 
 \[\begin{aligned}
   \hat{y}_{u,i}
-  &amp;= \sigma(\overrightarrow{\mathbf{h}} \cdot [\overrightarrow{\mathbf{z}}_{u,i}^{\text{(DGMF)}} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{\text{(DMLP)}}] + \overrightarrow{\mathbf{b}})
+  &amp;= \sigma(\overrightarrow{\mathbf{w}} \cdot [\overrightarrow{\mathbf{z}}_{u,i}^{\text{(DGMF)}} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{\text{(DMLP)}}] + \overrightarrow{\mathbf{b}})
   \end{aligned}\]
   </li>
 </ul>
@@ -1007,9 +1202,9 @@
 
 \[\begin{aligned}
   \overrightarrow{\mathbf{p}}_{u}
-  &amp;=\text{Emb}(u) \in \mathbb{R}^{K}\\
+  &amp;=\text{Emb}(u)\\
   \overrightarrow{\mathbf{q}}_{i}
-  &amp;=\text{Emb}(i) \in \mathbb{R}^{K}
+  &amp;=\text{Emb}(i)
   \end{aligned}\]
   </li>
   <li>
@@ -1017,9 +1212,9 @@
 
 \[\begin{aligned}
   \overrightarrow{\mathbf{m}}_{u}
-  &amp;=\frac{1}{\sqrt{\vert \mathcal{R}_{u}^{+} \setminus \{i\} \vert}}\mathbf{W} \cdot \mathbf{Y}_{u*} \in \mathbb{R}^{K}\\
+  &amp;=\frac{1}{\sqrt{\vert \mathcal{R}_{u}^{+} \setminus \{i\} \vert}}\mathbf{W} \cdot \mathbf{Y}_{u*}\\
   \overrightarrow{\mathbf{n}}_{i}
-  &amp;=\frac{1}{\sqrt{\vert \mathcal{R}_{i}^{+} \setminus \{u\} \vert}}\mathbf{W} \cdot \mathbf{Y}_{*i} \in \mathbb{R}^{K}
+  &amp;=\frac{1}{\sqrt{\vert \mathcal{R}_{i}^{+} \setminus \{u\} \vert}}\mathbf{W} \cdot \mathbf{Y}_{*i}
   \end{aligned}\]
   </li>
   <li>
@@ -1052,7 +1247,7 @@
 
 \[\begin{aligned}
   \hat{y}_{u,i}
-  &amp;= \sigma(\overrightarrow{\mathbf{h}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
+  &amp;= \sigma(\overrightarrow{\mathbf{w}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
   \end{aligned}\]
   </li>
 </ul>
@@ -1065,9 +1260,9 @@
 
 \[\begin{aligned}
   \overrightarrow{\mathbf{p}}_{u}
-  &amp;=\text{Emb}(u) \in \mathbb{R}^{K}\\
+  &amp;=\text{Emb}(u)\\
   \overrightarrow{\mathbf{q}}_{i}
-  &amp;=\text{Emb}(i) \in \mathbb{R}^{K}
+  &amp;=\text{Emb}(i)
   \end{aligned}\]
   </li>
   <li>
@@ -1075,9 +1270,9 @@
 
 \[\begin{aligned}
   \overrightarrow{\mathbf{m}}_{u}
-  &amp;=\frac{1}{\sqrt{\vert \mathcal{R}_{u}^{+} \setminus \{i\} \vert}}\mathbf{W} \cdot \mathbf{Y}_{u*} \in \mathbb{R}^{K}\\
+  &amp;=\frac{1}{\sqrt{\vert \mathcal{R}_{u}^{+} \setminus \{i\} \vert}}\mathbf{W} \cdot \mathbf{Y}_{u*}\\
   \overrightarrow{\mathbf{n}}_{i}
-  &amp;=\frac{1}{\sqrt{\vert \mathcal{R}_{i}^{+} \setminus \{u\} \vert}}\mathbf{W} \cdot \mathbf{Y}_{*i} \in \mathbb{R}^{K}
+  &amp;=\frac{1}{\sqrt{\vert \mathcal{R}_{i}^{+} \setminus \{u\} \vert}}\mathbf{W} \cdot \mathbf{Y}_{*i}
   \end{aligned}\]
   </li>
   <li>
@@ -1103,7 +1298,7 @@
 
 \[\begin{aligned}
   \hat{y}_{u,i}
-  &amp;= \sigma(\overrightarrow{\mathbf{h}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
+  &amp;= \sigma(\overrightarrow{\mathbf{w}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
   \end{aligned}\]
   </li>
 </ul>
@@ -3759,11 +3954,11 @@
 
 <time
   
-  data-ts="1714489200"
+  data-ts="1715094000"
   data-df="ll"
   
 >
-  May  1, 2024
+  May  8, 2024
 </time>
 
               <h4 class="pt-0 my-2">Latent Factor Models with CNN</h4>
@@ -3787,11 +3982,11 @@
 
 <time
   
-  data-ts="1713279600"
+  data-ts="1713884400"
   data-df="ll"
   
 >
-  Apr 17, 2024
+  Apr 24, 2024
 </time>
 
               <h4 class="pt-0 my-2">Distance Embedding based Latent Factor Model</h4>

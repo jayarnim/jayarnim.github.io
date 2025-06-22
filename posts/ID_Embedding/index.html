@@ -1074,7 +1074,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="675 words"
+  title="669 words"
 >
   <em>3 min</em> read</span>
 
@@ -1137,7 +1137,7 @@
     <ul>
       <li><strong><code class="language-plaintext highlighter-rouge">GMF</code>(<code class="language-plaintext highlighter-rouge">G</code>eneralized <code class="language-plaintext highlighter-rouge">M</code>atrix <code class="language-plaintext highlighter-rouge">F</code>actorization)</strong> : 요소별 곱 기반 선형 매칭 함수 모듈</li>
       <li><strong><code class="language-plaintext highlighter-rouge">NCF</code>(<code class="language-plaintext highlighter-rouge">N</code>eural <code class="language-plaintext highlighter-rouge">C</code>ollaborative <code class="language-plaintext highlighter-rouge">F</code>iltering)</strong> : 벡터 결합 및 다층 신경망(MLP) 기반 비선형 매칭 함수 학습 모듈</li>
-      <li><strong><code class="language-plaintext highlighter-rouge">NeuMF</code></strong> : GMF 와 NCF 의 예측 벡터(Predictive Vector)를 종합하여 예측을 수행하는 앙상블 모형</li>
+      <li><strong><code class="language-plaintext highlighter-rouge">NeuMF</code>(<code class="language-plaintext highlighter-rouge">Neu</code>ral <code class="language-plaintext highlighter-rouge">M</code>atrix <code class="language-plaintext highlighter-rouge">F</code>actorization)</strong> : GMF 와 NCF 의 예측 벡터(Predictive Vector)를 종합하여 예측을 수행하는 앙상블 모형</li>
     </ul>
   </li>
 </ul>
@@ -1163,7 +1163,7 @@
 
 \[\begin{aligned}
   \hat{y}_{u,i}
-  &amp;= \sigma(\overrightarrow{\mathbf{h}} \cdot [\overrightarrow{\mathbf{z}}_{u,i}^{\text{(GMF)}} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{\text{(NCF)}}] + \overrightarrow{\mathbf{b}})
+  &amp;= \sigma(\overrightarrow{\mathbf{w}} \cdot [\overrightarrow{\mathbf{z}}_{u,i}^{\text{(GMF)}} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{\text{(NCF)}}] + \overrightarrow{\mathbf{b}})
   \end{aligned}\]
   </li>
 </ul>
@@ -1178,9 +1178,9 @@
 
 \[\begin{aligned}
   \overrightarrow{\mathbf{u}}_{u}
-  &amp;= \text{Emb}(u) \in \mathbb{R}^{K}\\
+  &amp;= \text{Emb}(u)\\
   \overrightarrow{\mathbf{v}}_{i}
-  &amp;= \text{Emb}(i) \in \mathbb{R}^{K}
+  &amp;= \text{Emb}(i)
   \end{aligned}\]
   </li>
   <li>
@@ -1196,7 +1196,7 @@
 
 \[\begin{aligned}
   \hat{y}_{u,i}
-  &amp;= \sigma(\overrightarrow{\mathbf{h}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
+  &amp;= \sigma(\overrightarrow{\mathbf{w}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
   \end{aligned}\]
   </li>
 </ul>
@@ -1211,9 +1211,9 @@
 
 \[\begin{aligned}
   \overrightarrow{\mathbf{u}}_{u}
-  &amp;= \text{Emb}(u) \in \mathbb{R}^{K}\\
+  &amp;= \text{Emb}(u)\\
   \overrightarrow{\mathbf{v}}_{i}
-  &amp;= \text{Emb}(i) \in \mathbb{R}^{K}
+  &amp;= \text{Emb}(i)
   \end{aligned}\]
   </li>
   <li>
@@ -1229,14 +1229,14 @@
 
 \[\begin{aligned}
   \hat{y}_{u,i}
-  &amp;= \sigma(\overrightarrow{\mathbf{h}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
+  &amp;= \sigma(\overrightarrow{\mathbf{w}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
   \end{aligned}\]
   </li>
 </ul>
 
 <hr />
 
-<h2 id="refer"><span class="me-2">Refer.</span><a href="#refer" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="source"><span class="me-2">Source</span><a href="#source" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <ul>
   <li>https://iq.opengenus.org/neural-collaborative-filtering/</li>
@@ -3893,11 +3893,11 @@
 
 <time
   
-  data-ts="1714489200"
+  data-ts="1715094000"
   data-df="ll"
   
 >
-  May  1, 2024
+  May  8, 2024
 </time>
 
               <h4 class="pt-0 my-2">Latent Factor Models with CNN</h4>
@@ -3921,11 +3921,11 @@
 
 <time
   
-  data-ts="1713279600"
+  data-ts="1713884400"
   data-df="ll"
   
 >
-  Apr 17, 2024
+  Apr 24, 2024
 </time>
 
               <h4 class="pt-0 my-2">Distance Embedding based Latent Factor Model</h4>

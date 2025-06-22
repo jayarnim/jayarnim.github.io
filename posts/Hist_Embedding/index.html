@@ -39,12 +39,12 @@
 <meta property="og:site_name" content="Data Scientist" />
 <meta property="og:image" content="https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-03-06T00:00:00+09:00" />
+<meta property="article:published_time" content="2024-03-13T00:00:00+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg" />
 <meta property="twitter:title" content="History Embedding based Latent Factor Models" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-03-06T00:00:00+09:00","datePublished":"2024-03-06T00:00:00+09:00","description":"Based on the following lectures (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. (2) “Recommender System (2024-2)” by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ.","headline":"History Embedding based Latent Factor Models","image":"https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/Hist_Embedding/"},"url":"https://jayarnim.github.io/posts/Hist_Embedding/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-03-13T00:00:00+09:00","datePublished":"2024-03-13T00:00:00+09:00","description":"Based on the following lectures (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. (2) “Recommender System (2024-2)” by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ.","headline":"History Embedding based Latent Factor Models","image":"https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/Hist_Embedding/"},"url":"https://jayarnim.github.io/posts/Hist_Embedding/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -982,13 +982,13 @@
 
 <time
   
-  data-ts="1709650800"
+  data-ts="1710255600"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Mar  6, 2024
+  Mar 13, 2024
 </time>
 
       </span>
@@ -1046,7 +1046,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1045 words"
+  title="1050 words"
 >
   <em>5 min</em> read</span>
 
@@ -1084,7 +1084,7 @@
       <li>아이디 임베딩 방식은 초기 표현(식별자)의 정보량이 부족하여 학습이 느리거나 성능이 제한됨</li>
     </ul>
   </li>
-  <li><a href="https://doi.org/10.24963/ijcai.2017/447"><strong><code class="language-plaintext highlighter-rouge">DMF</code></strong></a>: 사용자-아이템 상호작용 행렬과 그 전치 행렬을 초기 표현으로 사용하여 저차원 표현 학습을 수행하는 모형
+  <li><strong><a href="https://doi.org/10.24963/ijcai.2017/447"><code class="language-plaintext highlighter-rouge">DMF</code></a>(<code class="language-plaintext highlighter-rouge">D</code>eep <code class="language-plaintext highlighter-rouge">M</code>atrix <code class="language-plaintext highlighter-rouge">F</code>actorization)</strong>: 사용자-아이템 상호작용 행렬과 그 전치 행렬을 초기 표현으로 사용하여 저차원 표현 학습을 수행하는 모형
     <ul>
       <li>Xue, H. J., Dai, X., Zhang, J., Huang, S., &amp; Chen, J.<br />
   (2017, August).<br />
@@ -1184,7 +1184,7 @@
 
 \[\begin{aligned}
   \hat{y}_{u,i}
-  &amp;= \sigma(\overrightarrow{\mathbf{h}} \cdot [\overrightarrow{\mathbf{z}}_{u,i}^{\text{(RL)}} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{\text{(ML)}}] + \overrightarrow{\mathbf{b}})
+  &amp;= \sigma(\overrightarrow{\mathbf{w}} \cdot [\overrightarrow{\mathbf{z}}_{u,i}^{\text{(RL)}} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{\text{(ML)}}] + \overrightarrow{\mathbf{b}})
   \end{aligned}\]
   </li>
 </ul>
@@ -1221,7 +1221,7 @@
 
 \[\begin{aligned}
   \hat{y}_{u,i}
-  &amp;= \sigma(\overrightarrow{\mathbf{h}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
+  &amp;= \sigma(\overrightarrow{\mathbf{w}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
   \end{aligned}\]
   </li>
 </ul>
@@ -1258,7 +1258,7 @@
 
 \[\begin{aligned}
   \hat{y}_{u,i}
-  &amp;= \sigma(\overrightarrow{\mathbf{h}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
+  &amp;= \sigma(\overrightarrow{\mathbf{w}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
   \end{aligned}\]
   </li>
 </ul>
@@ -1274,7 +1274,7 @@
       <li><strong>앙상블(Ensemble)</strong>: 표현 학습과 매칭 함수 학습을 분리하여 수행하므로 각 모듈이 서로의 학습을 보완하거나 강화하지 못함 (ex. <code class="language-plaintext highlighter-rouge">CFNet</code>)</li>
     </ul>
   </li>
-  <li><a href="https://doi.org/10.1145/3343117"><strong><code class="language-plaintext highlighter-rouge">J-NCF</code></strong></a>: 표현 학습과 매칭 함수 학습을 통합 훈련(Joint Training)하는 모형
+  <li><strong><a href="https://doi.org/10.1145/3343117"><code class="language-plaintext highlighter-rouge">J-NCF</code></a>(<code class="language-plaintext highlighter-rouge">J</code>oint <code class="language-plaintext highlighter-rouge">N</code>eural <code class="language-plaintext highlighter-rouge">C</code>ollaborative <code class="language-plaintext highlighter-rouge">F</code>iltering)</strong>: 표현 학습과 매칭 함수 학습을 통합 훈련(Joint Training)하는 모형
     <ul>
       <li>Chen, W., Cai, F., Chen, H., &amp; Rijke, M. D.<br />
   (2019).<br />
@@ -1329,7 +1329,7 @@
 
 \[\begin{aligned}
   \hat{y}_{u,i}
-  &amp;= \sigma(\overrightarrow{\mathbf{h}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
+  &amp;= \sigma(\overrightarrow{\mathbf{w}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
   \end{aligned}\]
   </li>
 </ul>
@@ -3985,11 +3985,11 @@
 
 <time
   
-  data-ts="1714489200"
+  data-ts="1715094000"
   data-df="ll"
   
 >
-  May  1, 2024
+  May  8, 2024
 </time>
 
               <h4 class="pt-0 my-2">Latent Factor Models with CNN</h4>
@@ -4013,11 +4013,11 @@
 
 <time
   
-  data-ts="1713279600"
+  data-ts="1713884400"
   data-df="ll"
   
 >
-  Apr 17, 2024
+  Apr 24, 2024
 </time>
 
               <h4 class="pt-0 my-2">Distance Embedding based Latent Factor Model</h4>

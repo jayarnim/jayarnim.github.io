@@ -39,12 +39,12 @@
 <meta property="og:site_name" content="Data Scientist" />
 <meta property="og:image" content="https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-04-17T00:00:00+09:00" />
+<meta property="article:published_time" content="2024-04-24T00:00:00+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg" />
 <meta property="twitter:title" content="Distance Embedding based Latent Factor Model" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-04-17T00:00:00+09:00","datePublished":"2024-04-17T00:00:00+09:00","description":"Based on the following lectures (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. (2) “Recommender System (2024-2)” by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ.","headline":"Distance Embedding based Latent Factor Model","image":"https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/Dist_Embedding/"},"url":"https://jayarnim.github.io/posts/Dist_Embedding/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-04-24T00:00:00+09:00","datePublished":"2024-04-24T00:00:00+09:00","description":"Based on the following lectures (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. (2) “Recommender System (2024-2)” by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ.","headline":"Distance Embedding based Latent Factor Model","image":"https://jayarnim.github.io/_post_refer_img/RecommenderSystem/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/Dist_Embedding/"},"url":"https://jayarnim.github.io/posts/Dist_Embedding/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -648,6 +648,148 @@
     <!-- combine -->
     
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
 
   
 
@@ -684,6 +826,28 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -699,6 +863,17 @@
       
         
         
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
       
 
       
@@ -753,13 +928,13 @@
 
 <time
   
-  data-ts="1713279600"
+  data-ts="1713884400"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Apr 17, 2024
+  Apr 24, 2024
 </time>
 
       </span>
@@ -817,9 +992,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="416 words"
+  title="668 words"
 >
-  <em>2 min</em> read</span>
+  <em>3 min</em> read</span>
 
         </div>
       </div>
@@ -827,21 +1002,43 @@
   </header>
 
   <div class="content">
-    <h2 id="distance-embedding-method-ddfl"><span class="me-2">Distance Embedding Method: DDFL</span><a href="#distance-embedding-method-ddfl" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="learning-objectives"><span class="me-2">Learning Objectives</span><a href="#learning-objectives" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
-  <li><strong>Representation Learning based Collaborative Filtering</strong> : 내적(Dot Product)을 활용한 유사도 계산은 삼각 부등식(Triangular Inequality)을 만족하지 못함
+  <li><strong>표현 학습(Representation Learning)</strong>
+    <ul>
+      <li>사용자와 아이템을 공동의 잠재요인 공간에 표현하는 방법</li>
+      <li>매칭 강도 추정 시 내적(Inner Product) 등 선형 유사도 함수를 적용함</li>
+      <li>저차원(Low-rank) 유사도 구조를 효율적으로 포착할 수 있음</li>
+    </ul>
+  </li>
+  <li><strong>매칭 함수 학습(Matching Function Learning)</strong>
+    <ul>
+      <li>사용자-아이템 쌍을 입력으로 하여 매칭 함수를 직접 학습하는 방법</li>
+      <li>복잡하고 비선형적인 매칭 함수를 근사할 수 있음</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="ddfl"><span class="me-2">DDFL</span><a href="#ddfl" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><strong>문제 의식</strong>: 내적(Dot Product) 혹은 코사인 유사도(Cosine Similarity)를 매칭 함수로 사용하여 학습된 사용자, 아이템 표현은 삼각 부등식(Triangular Inequality)을 만족하기 어려움</p>
+  </li>
+  <li><strong>삼각 부등식(Triangular Inequality)</strong>
     <ul>
       <li>
-        <p><strong>삼각 부등식(Triangular Inequality)</strong> : 세 점 사이의 거리에 대한 제한 조건으로서, $A$ 와 $C$ 사이 거리는 $A$ 에서 $B$, 그리고 $B$ 에서 $C$ 로 우회하는 거리보다 크거나 같아야 함</p>
+        <p>세 점 사이의 거리에 대한 제한 조건으로서, $A$ 와 $C$ 사이 거리는 $A$ 에서 $B$, 그리고 $B$ 에서 $C$ 로 우회하는 거리보다 크거나 같아야 함</p>
 
 \[\begin{aligned}
   \text{d}\left[A,C\right] \le \text{d}\left[A,B\right] + \text{d}\left[B,C\right]
   \end{aligned}\]
       </li>
       <li>
-        <p>즉, 사용자 $u$ 가 아이템 $i$ 를 직접적으로 선호하는 정도는, 사용자 $u$ 가 아이템 $j$ 를 선호하는 정도 및 아이템 $i$ 와 $j$ 간 유사한 정도의 합보다 작거나 같아야 함</p>
+        <p>사용자 $u$ 가 아이템 $i$ 를 직접적으로 선호하는 정도는, 사용자 $u$ 가 아이템 $j$ 를 선호하는 정도 및 아이템 $i$ 와 $j$ 간 유사한 정도의 합보다 작거나 같아야 함</p>
 
 \[\begin{aligned}
   \overrightarrow{\mathbf{p}}_{u} \cdot \overrightarrow{\mathbf{q}}_{i}
@@ -851,89 +1048,165 @@
       </li>
     </ul>
   </li>
-  <li><strong>DDFL(<code class="language-plaintext highlighter-rouge">D</code>eep <code class="language-plaintext highlighter-rouge">D</code>ual <code class="language-plaintext highlighter-rouge">F</code>unction <code class="language-plaintext highlighter-rouge">L</code>earning-based Model)</strong> : 히스토리 임베딩(History Embedding)에서 표현 학습과 매칭 함수 학습을 결합하는 대신, 거리 함수 학습(MeFL)과 매칭 함수 학습(MaFL)을 결합함으로써 삼각 부등식이 위배됨에 따른 비합리적 추천 결과를 보완함
+  <li><strong><a href="https://doi.org/10.1007/978-3-030-59419-0_36"><code class="language-plaintext highlighter-rouge">DDFL</code></a>(<code class="language-plaintext highlighter-rouge">D</code>eep <code class="language-plaintext highlighter-rouge">D</code>ual <code class="language-plaintext highlighter-rouge">F</code>unction <code class="language-plaintext highlighter-rouge">L</code>earning-based Model)</strong> : 거리 함수 학습 모듈과 매칭 함수 학습 모듈을 병렬 학습하는 앙상블 모형
     <ul>
-      <li><a href="https://doi.org/10.1007/978-3-030-59419-0_36">DDFL: A Deep Dual Function Learning-Based Model for Recommender Systems(2020)</a></li>
+      <li>Shah, S. T. U., Li, J., Guo, Z., Li, G., &amp; Zhou, Q.<br />
+  (2020, September).<br />
+  DDFL: a deep dual function learning-based model for recommender systems.<br />
+  In International Conference on Database Systems for Advanced Applications (pp. 590-606).<br />
+  Cham: Springer International Publishing.</li>
+    </ul>
+  </li>
+  <li>Components
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">MeFL</code>: <code class="language-plaintext highlighter-rouge">Me</code>tric <code class="language-plaintext highlighter-rouge">F</code>unction <code class="language-plaintext highlighter-rouge">L</code>earning</li>
+      <li><code class="language-plaintext highlighter-rouge">MaFL</code>: <code class="language-plaintext highlighter-rouge">Ma</code>tching <code class="language-plaintext highlighter-rouge">F</code>unction <code class="language-plaintext highlighter-rouge">L</code>earning</li>
+      <li><code class="language-plaintext highlighter-rouge">DDFL</code>: <code class="language-plaintext highlighter-rouge">MeFL</code> &amp; <code class="language-plaintext highlighter-rouge">MaFL</code> Ensemble</li>
     </ul>
   </li>
 </ul>
 
-<h3 id="how-to-modeling"><span class="me-2">How to Modeling</span><a href="#how-to-modeling" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h2 id="how-to-modeling"><span class="me-2">How to Modeling</span><a href="#how-to-modeling" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
 
-<p><a href="/_post_refer_img/RecommenderSystem/07-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/07-01.png" alt="01" width="100%" loading="lazy"></a></p>
+<p><a href="/_post_refer_img/RecommenderSystem/08-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/08-01.png" alt="01" width="100%" loading="lazy"></a></p>
+
+<ul>
+  <li><strong>Annotation</strong>
+    <ul>
+      <li>$u=1,2,\cdots,M$: user idx</li>
+      <li>$i=1,2,\cdots,N$: item idx</li>
+      <li>$\mathbf{Y} \in \mathbb{R}^{M \times N}$: user-item interaction matrix</li>
+      <li>$\overrightarrow{\mathbf{p}}_{u} \in \mathbb{R}^{K}$: user latent factor vector @ <code class="language-plaintext highlighter-rouge">MeFL</code></li>
+      <li>$\overrightarrow{\mathbf{q}}_{i} \in \mathbb{R}^{K}$: item latent factor vector @ <code class="language-plaintext highlighter-rouge">MeFL</code></li>
+      <li>$\overrightarrow{\mathbf{u}}_{u} \in \mathbb{R}^{K}$: user latent factor vector @ <code class="language-plaintext highlighter-rouge">MaFL</code></li>
+      <li>$\overrightarrow{\mathbf{v}}_{i} \in \mathbb{R}^{K}$: item latent factor vector @ <code class="language-plaintext highlighter-rouge">MaFL</code></li>
+      <li>$\overrightarrow{\mathbf{z}}_{u,i}$: predictive vector of user $u$ and item $i$</li>
+      <li>$\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$</li>
+    </ul>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">DDFL</code> is <code class="language-plaintext highlighter-rouge">MeFL</code> &amp; <code class="language-plaintext highlighter-rouge">MaFL</code> Ensemble:</p>
+
+    <ul>
+      <li>
+        <p>predictive vector of user $u$ and item $i$:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{z}}_{u,i}
+  &amp;= \text{MLP}_{\text{ReLU}}(\overrightarrow{\mathbf{z}}_{u,i}^{\text{(MeFL)}} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{\text{(MaFL)}})
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>final matching score of user $u$ and item $i$:</p>
+
+\[\begin{aligned}
+  \hat{y}_{u,i}
+  &amp;= \sigma(\overrightarrow{\mathbf{w}} \cdot \overrightarrow{\mathbf{z}}_{u,i})
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="mefl"><span class="me-2">MeFL</span><a href="#mefl" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p><a href="/_post_refer_img/RecommenderSystem/08-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/08-02.png" alt="02" width="100%" loading="lazy"></a></p>
 
 <ul>
   <li>
-    <p><strong>MeFL(<code class="language-plaintext highlighter-rouge">Me</code>tric <code class="language-plaintext highlighter-rouge">F</code>unction <code class="language-plaintext highlighter-rouge">L</code>earning)</strong> : 사용자, 아이템 표현 학습 시 삼각 부등식을 고려함으로써 합리적 추천 결과를 도모함</p>
+    <p>Conversion Transformation:</p>
+
+\[\begin{aligned}
+  x_{u,i}
+  &amp;=\alpha\left(1-y_{u,i}\right)
+  \end{aligned}\]
+
+    <ul>
+      <li>$y_{u,i} \in \mathbf{Y}$ is Implicit Feedback</li>
+      <li>$\alpha$ is Distance Factor</li>
+    </ul>
+  </li>
+  <li>
+    <p>History Embedding:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{p}}_{u}
+  &amp;= \mathbf{W} \cdot \mathbf{X}_{u*}\\
+  \overrightarrow{\mathbf{q}}_{i}
+  &amp;= \mathbf{W} \cdot \mathbf{X}_{*i}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Calculate Euclidean Distance:</p>
+
+\[\begin{aligned}
+  \text{dist}[\overrightarrow{\mathbf{p}}_{u}, \overrightarrow{\mathbf{q}}_{i}]
+  &amp;= \Vert \overrightarrow{\mathbf{p}}_{u} - \overrightarrow{\mathbf{q}}_{i} \Vert_{2}\\
+  &amp;= \sqrt{\sum_{k=1}^{K}{(p_{k}^{(u)} - q_{k}^{(i)})^{2}}}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>predictive vector of user $u$ and item $i$:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{z}}_{u,i}
+  &amp;= \text{MLP}_{\text{ReLU}}(\text{dist}[\overrightarrow{\mathbf{p}}_{u}, \overrightarrow{\mathbf{q}}_{i}])
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>if use <code class="language-plaintext highlighter-rouge">MeFL</code> as a single prediction module:</p>
 
     <ul>
       <li>
-        <p>Conversion Transformation:</p>
+        <p>compute distance:</p>
 
 \[\begin{aligned}
-  y_{u,i}&amp;=\alpha\left(1-r_{u,i}\right)
-  \end{aligned}\]
-
-        <ul>
-          <li>$r_{u,i} \in \mathbf{R}$ is Implicit Feedback</li>
-        </ul>
-      </li>
-      <li>
-        <p>Linear Transformation:</p>
-
-\[\begin{aligned}
-  \mathbf{P}^{\text{MeFL}}&amp;= \mathbf{W}_{\text{MeFL}}^{(P)} \cdot \mathbf{Y} \in \mathbb{R}^{M \times K}\\
-  \mathbf{Q}^{\text{MeFL}}&amp;= \mathbf{W}_{\text{MeFL}}^{(P)} \cdot \mathbf{Y}^{T} \in \mathbb{R}^{N \times K}
+  \hat{d}_{u,i}
+  &amp;= \sigma(\overrightarrow{\mathbf{w}} \cdot \overrightarrow{\mathbf{z}}_{u,i})
   \end{aligned}\]
       </li>
       <li>
-        <p>Calculate Euclidean Distance:</p>
+        <p>convert distance to matching score:</p>
 
 \[\begin{aligned}
-  \overrightarrow{\mathbf{d}}_{u,i}
-  = \begin{bmatrix}
-  \left(p^{\text{MeFL}}_{u,1}-q^{\text{MeFL}}_{i,1}\right)^{2}
-  &amp; \left(p^{\text{MeFL}}_{u,2}-q^{\text{MeFL}}_{i,2}\right)^{2} 
-  &amp; \cdots 
-  &amp; \left(p^{\text{MeFL}}_{u,K}-q^{\text{MeFL}}_{i,K}\right)^{2}
-  \end{bmatrix}
-  \end{aligned}\]
-      </li>
-      <li>
-        <p>Metric Function Predictive Vector:</p>
-
-\[\begin{aligned}
-  \overrightarrow{\mathbf{z}}^{\text{MeFL}}_{u,i} &amp;= \text{MLP}_{\text{ReLU}}\left[\overrightarrow{\mathbf{d}}_{u,i}\right]
+  \hat{y}_{u,i}
+  &amp;= 1 - \frac{\hat{d}_{u,i}}{\alpha}
   \end{aligned}\]
       </li>
     </ul>
   </li>
+</ul>
+
+<h3 id="mafl"><span class="me-2">MaFL</span><a href="#mafl" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p><a href="/_post_refer_img/RecommenderSystem/08-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/08-03.png" alt="03" width="100%" loading="lazy"></a></p>
+
+<ul>
   <li>
-    <p><strong>MaFL(<code class="language-plaintext highlighter-rouge">Ma</code>tching <code class="language-plaintext highlighter-rouge">F</code>unction <code class="language-plaintext highlighter-rouge">L</code>earning)</strong></p>
-
-    <ul>
-      <li>
-        <p>Linear Transformation:</p>
+    <p>History Embedding:</p>
 
 \[\begin{aligned}
-  \mathbf{P}^{\text{MaFL}}&amp;= \mathbf{W}_{\text{MaFL}}^{(P)} \cdot \mathbf{R} \in \mathbb{R}^{M \times K}\\
-  \mathbf{Q}^{\text{MaFL}}&amp;= \mathbf{W}_{\text{MaFL}}^{(Q)} \cdot \mathbf{R}^{T} \in \mathbb{R}^{N \times K}
+  \overrightarrow{\mathbf{u}}_{u}
+  &amp;= \mathbf{W} \cdot \mathbf{Y}_{u*}\\
+  \overrightarrow{\mathbf{v}}_{i}
+  &amp;= \mathbf{W} \cdot \mathbf{Y}_{*i}
   \end{aligned}\]
-      </li>
-      <li>
-        <p>Matching Function Predictive Vector:</p>
-
-\[\begin{aligned}
-  \overrightarrow{\mathbf{z}}^{\text{MaFL}}_{u,i} &amp;= \text{MLP}_{\text{ReLU}}\left[\overrightarrow{\mathbf{p}}_{u} \oplus \overrightarrow{\mathbf{q}}_{i}\right]
-  \end{aligned}\]
-      </li>
-    </ul>
   </li>
   <li>
-    <p><strong>Fusion</strong></p>
+    <p>predictive vector of user $u$ and item $i$:</p>
 
 \[\begin{aligned}
-  \hat{r}_{u,i} &amp;= \sigma\Bigg(\text{MLP}_{\text{ReLU}}\left[\overrightarrow{\mathbf{z}}^{\text{MeFL}}_{u,i} \oplus \overrightarrow{\mathbf{z}}^{\text{MaFL}}_{u,i}\right]\Bigg)
+  \overrightarrow{\mathbf{z}}_{u,i}
+  &amp;= \text{MLP}_{\text{ReLU}}(\overrightarrow{\mathbf{u}}_{u} \oplus \overrightarrow{\mathbf{v}}_{i})
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>if use <code class="language-plaintext highlighter-rouge">MaFL</code> as a single prediction module:</p>
+
+\[\begin{aligned}
+  \hat{y}_{u,i}
+  &amp;= \sigma(\overrightarrow{\mathbf{w}} \cdot \overrightarrow{\mathbf{z}}_{u,i})
   \end{aligned}\]
   </li>
 </ul>
@@ -3589,11 +3862,11 @@
 
 <time
   
-  data-ts="1714489200"
+  data-ts="1715094000"
   data-df="ll"
   
 >
-  May  1, 2024
+  May  8, 2024
 </time>
 
               <h4 class="pt-0 my-2">Latent Factor Models with CNN</h4>
@@ -3617,11 +3890,11 @@
 
 <time
   
-  data-ts="1710860400"
+  data-ts="1711465200"
   data-df="ll"
   
 >
-  Mar 20, 2024
+  Mar 27, 2024
 </time>
 
               <h4 class="pt-0 my-2">Dual Embedding based Latent Factor Models</h4>
