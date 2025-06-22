@@ -51,7 +51,7 @@ image:
 - **Components**
     - **`GMF`(`G`eneralized `M`atrix `F`actorization)** : 요소별 곱 기반 선형 매칭 함수 모듈
     - **`NCF`(`N`eural `C`ollaborative `F`iltering)** : 벡터 결합 및 다층 신경망(MLP) 기반 비선형 매칭 함수 학습 모듈
-    - **`NeuMF`** : GMF 와 NCF 의 예측 벡터(Predictive Vector)를 종합하여 예측을 수행하는 앙상블 모형
+    - **`NeuMF`(`Neu`ral `M`atrix `F`actorization)** : GMF 와 NCF 의 예측 벡터(Predictive Vector)를 종합하여 예측을 수행하는 앙상블 모형
 
 ## How to Modeling
 -----
@@ -70,7 +70,7 @@ image:
 
     $$\begin{aligned}
     \hat{y}_{u,i}
-    &= \sigma(\overrightarrow{\mathbf{h}} \cdot [\overrightarrow{\mathbf{z}}_{u,i}^{\text{(GMF)}} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{\text{(NCF)}}] + \overrightarrow{\mathbf{b}})
+    &= \sigma(\overrightarrow{\mathbf{w}} \cdot [\overrightarrow{\mathbf{z}}_{u,i}^{\text{(GMF)}} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{\text{(NCF)}}] + \overrightarrow{\mathbf{b}})
     \end{aligned}$$
 
 ### GMF
@@ -81,9 +81,9 @@ image:
 
     $$\begin{aligned}
     \overrightarrow{\mathbf{u}}_{u}
-    &= \text{Emb}(u) \in \mathbb{R}^{K}\\
+    &= \text{Emb}(u)\\
     \overrightarrow{\mathbf{v}}_{i}
-    &= \text{Emb}(i) \in \mathbb{R}^{K}
+    &= \text{Emb}(i)
     \end{aligned}$$
 
 - Predictive Vector of user $u$ and item $i$:
@@ -97,7 +97,7 @@ image:
 
     $$\begin{aligned}
     \hat{y}_{u,i}
-    &= \sigma(\overrightarrow{\mathbf{h}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
+    &= \sigma(\overrightarrow{\mathbf{w}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
     \end{aligned}$$
 
 ### NCF
@@ -108,9 +108,9 @@ image:
 
     $$\begin{aligned}
     \overrightarrow{\mathbf{u}}_{u}
-    &= \text{Emb}(u) \in \mathbb{R}^{K}\\
+    &= \text{Emb}(u)\\
     \overrightarrow{\mathbf{v}}_{i}
-    &= \text{Emb}(i) \in \mathbb{R}^{K}
+    &= \text{Emb}(i)
     \end{aligned}$$
 
 - Predictive Vector of user $u$ and item $i$:
@@ -124,11 +124,11 @@ image:
 
     $$\begin{aligned}
     \hat{y}_{u,i}
-    &= \sigma(\overrightarrow{\mathbf{h}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
+    &= \sigma(\overrightarrow{\mathbf{w}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
     \end{aligned}$$
 
 -----
 
-## Refer.
+## Source
 
 - https://iq.opengenus.org/neural-collaborative-filtering/

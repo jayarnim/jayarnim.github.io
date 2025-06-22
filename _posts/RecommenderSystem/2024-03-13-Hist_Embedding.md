@@ -1,7 +1,7 @@
 ---
 order: 5
 title: History Embedding based Latent Factor Models
-date: 2024-03-06
+date: 2024-03-13
 categories: [AI Application, Recommender System]
 tags: [AI Application, Recommender System, Collaborative Filtering, Latent Factor Model, MLP]
 math: true
@@ -31,7 +31,7 @@ image:
 - **문제 의식**: 아이디 임베딩(ID Embedding) 입력 표현의 한계점
     - 아이디 임베딩 방식은 초기 표현(식별자)의 정보량이 부족하여 학습이 느리거나 성능이 제한됨
 
-- [**`DMF`**](https://doi.org/10.24963/ijcai.2017/447): 사용자-아이템 상호작용 행렬과 그 전치 행렬을 초기 표현으로 사용하여 저차원 표현 학습을 수행하는 모형
+- **[`DMF`](https://doi.org/10.24963/ijcai.2017/447)(`D`eep `M`atrix `F`actorization)**: 사용자-아이템 상호작용 행렬과 그 전치 행렬을 초기 표현으로 사용하여 저차원 표현 학습을 수행하는 모형
     - Xue, H. J., Dai, X., Zhang, J., Huang, S., & Chen, J.\\
     (2017, August).\\
     Deep matrix factorization models for recommender systems.\\
@@ -106,7 +106,7 @@ image:
 
     $$\begin{aligned}
     \hat{y}_{u,i}
-    &= \sigma(\overrightarrow{\mathbf{h}} \cdot [\overrightarrow{\mathbf{z}}_{u,i}^{\text{(RL)}} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{\text{(ML)}}] + \overrightarrow{\mathbf{b}})
+    &= \sigma(\overrightarrow{\mathbf{w}} \cdot [\overrightarrow{\mathbf{z}}_{u,i}^{\text{(RL)}} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{\text{(ML)}}] + \overrightarrow{\mathbf{b}})
     \end{aligned}$$
 
 #### CFNet-rl
@@ -136,7 +136,7 @@ image:
 
     $$\begin{aligned}
     \hat{y}_{u,i}
-    &= \sigma(\overrightarrow{\mathbf{h}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
+    &= \sigma(\overrightarrow{\mathbf{w}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
     \end{aligned}$$
 
 #### CFNet-ml
@@ -166,7 +166,7 @@ image:
 
     $$\begin{aligned}
     \hat{y}_{u,i}
-    &= \sigma(\overrightarrow{\mathbf{h}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
+    &= \sigma(\overrightarrow{\mathbf{w}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
     \end{aligned}$$
 
 ## J-NCF
@@ -177,7 +177,7 @@ image:
     - **히스토리 임베딩(History Embedding)**: 사용자-아이템 상호작용 행렬과 그 전치 행렬을 활용하여 표현 학습을 수행하나 매칭 함수는 선형 유사도 함수에 의존함 (ex. `DMF`)
     - **앙상블(Ensemble)**: 표현 학습과 매칭 함수 학습을 분리하여 수행하므로 각 모듈이 서로의 학습을 보완하거나 강화하지 못함 (ex. `CFNet`)
 
-- [**`J-NCF`**](https://doi.org/10.1145/3343117): 표현 학습과 매칭 함수 학습을 통합 훈련(Joint Training)하는 모형
+- **[`J-NCF`](https://doi.org/10.1145/3343117)(`J`oint `N`eural `C`ollaborative `F`iltering)**: 표현 학습과 매칭 함수 학습을 통합 훈련(Joint Training)하는 모형
     - Chen, W., Cai, F., Chen, H., & Rijke, M. D.\\
     (2019).\\
     Joint neural collaborative filtering for recommender systems.\\
@@ -221,5 +221,5 @@ image:
 
     $$\begin{aligned}
     \hat{y}_{u,i}
-    &= \sigma(\overrightarrow{\mathbf{h}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
+    &= \sigma(\overrightarrow{\mathbf{w}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
     \end{aligned}$$

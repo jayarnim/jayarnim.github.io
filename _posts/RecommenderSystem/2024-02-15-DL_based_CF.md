@@ -89,7 +89,7 @@ image:
 
 - **Semi-Dual Embedding**: Apply dual embedding to only one side of the user or item
 
-- [`DRNet`](https://doi.org/10.1109/ACCESS.2020.3002102): ID Embedding based Latent Factor Model Assist.
+- [`DRNet`](https://doi.org/10.1109/ACCESS.2020.3002102): User Dual Embedding
     - Ji, D., Xiang, Z., & Li, Y.\\
     (2020).\\
     Dual relations network for collaborative filtering.\\
