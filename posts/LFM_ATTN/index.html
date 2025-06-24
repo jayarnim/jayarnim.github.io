@@ -732,17 +732,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -850,7 +839,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="635 words"
+  title="556 words"
 >
   <em>3 min</em> read</span>
 
@@ -860,37 +849,40 @@
   </header>
 
   <div class="content">
-    <h2 id="history-embedding-assist-dacr"><span class="me-2">History Embedding Assist.: DACR</span><a href="#history-embedding-assist-dacr" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="dacr"><span class="me-2">DACR</span><a href="#dacr" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
-  <li>
-    <p><strong>Implicit Feedback Problem</strong></p>
-
-    <blockquote>
-      <p>암시적 피드백은 선호/비선호 모호성 문제를 지님. 즉, 양성 데이터가 반드시 선호를 나타내지 않고, 반대로 음성 데이터가 반드시 비선호를 나타내지 않음. 때문에 암시적 피드백을 활용할 때는 암시적 피드백에 내재된 잡음을 적절히 거르고 함축되어 있는 잠재 정보를 적절히 부각하는 절차가 수반되어야 함.</p>
-    </blockquote>
-  </li>
-  <li><strong>Previous Research</strong>
+  <li><strong>문제 의식</strong>: Implicit Feedback Problem
     <ul>
-      <li><strong><code class="language-plaintext highlighter-rouge">MF</code> based Latent Factor Models</strong> : 사용자와 아이템 간 비선형 상호작용 포착 어려움</li>
-      <li><strong><code class="language-plaintext highlighter-rouge">MLP</code> based Latent Factor Models</strong> : 사용자, 아이템 저랭크 표현 학습의 간결성 및 효율성 보장 어려움</li>
-      <li><strong><code class="language-plaintext highlighter-rouge">ATTN</code> Based Latent Factor Models</strong> : 암시적 피드백에 함축되어 있는 잠재 정보 포착 가능하나, 다양한 차원을 종합적으로 통합하는데 미흡함</li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>DACR(<code class="language-plaintext highlighter-rouge">D</code>eep <code class="language-plaintext highlighter-rouge">C</code>ollaborative <code class="language-plaintext highlighter-rouge">R</code>ecommendation Algorithm Based on <code class="language-plaintext highlighter-rouge">A</code>ttention Mechanism)</strong> : 다차원적 상호작용을 고려한, 표현 학습과 매칭 학습을 결합한 앙상블 모형</p>
-
-    <ul>
-      <li><strong><code class="language-plaintext highlighter-rouge">R</code>epresentation <code class="language-plaintext highlighter-rouge">L</code>earning Module</strong> : 사용자와 아이템의 표현에 초점을 맞추어 학습함</li>
-      <li><strong><code class="language-plaintext highlighter-rouge">M</code>atching Function <code class="language-plaintext highlighter-rouge">L</code>earning Module</strong> : 사용자와 아이템 간 다차원적 상호작용에 초점을 맞추어 학습함</li>
-      <li><strong>Fusion Module</strong> : 표현 학습과 매칭 학습의 결과들을 종합하여 최종 예측값을 출력함</li>
-      <li><strong>ATTN</strong> : 암시적 피드백에 내재된 잡음을 적절히 거르고 함축되어 있는 잠재 정보를 적절히 부각함
+      <li><strong><code class="language-plaintext highlighter-rouge">DeepCF</code></strong>
         <ul>
-          <li><strong>Representation</strong> : 사용자와 아이템 표현에서, 중요한 차원을 부각하고, 덜 중요한 차원을 억제함</li>
-          <li><strong>Matching Function</strong> : 다차원적 상호작용 중에서, 중요한 상호작용을 부각하고, 덜 중요한 상호작용을 억제함</li>
+          <li><strong>표현 학습(Representation Learning)</strong>: 사용자와 아이템 간 선형 관계를 바탕으로 저차원 잠재요인 공간을 효율적으로 구성</li>
+          <li><strong>매칭 함수 학습(Matching Function Learning)</strong>: 다양한 매칭 함수를 근사하여 사용자와 아이템 간 비선형 상호작용 포착</li>
         </ul>
       </li>
+      <li><strong>Implicit Feedback Problem</strong>
+        <ul>
+          <li><strong>관측치의 불완전성(Observation Incompleteness)</strong>: 관측과 미관측이 반드시 선호와 비선호를 의미하지 않음</li>
+          <li><strong>선호의 비가시성(Hidden Signal)</strong>: 관측치의 불완전성으로 인하여 선호의 정도나 의도를 포착하기 어려움</li>
+          <li>즉, 암시적 피드백 데이터는 행동 매칭 데이터이기에 선호 매칭에 사용하기 위해서는 내재된 선호 정보를 부각하고 잡음을 여과하는 절차가 필요함</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong><a href="https://doi.org/10.3390/app122010594"><code class="language-plaintext highlighter-rouge">DACR</code></a>(<code class="language-plaintext highlighter-rouge">D</code>eep <code class="language-plaintext highlighter-rouge">C</code>ollaborative <code class="language-plaintext highlighter-rouge">R</code>ecommendation Algorithm Based on <code class="language-plaintext highlighter-rouge">A</code>ttention Mechanism)</strong>: 사용자, 아이템 표현 및 그 결합 표현에 어텐션 메커니즘(Attention Mechanism)을 적용하여 차원별 가중치를 명시적으로 설계함으로써 입력 중 집중할(Focus) 정보를 선별하여 강조하는 앙상블 모형
+    <ul>
+      <li>Cui, C., Qin, J., &amp; Ren, Q.<br />
+  (2022).<br />
+  Deep collaborative recommendation algorithm based on attention mechanism.<br />
+  Applied Sciences, 12(20), 10594.</li>
+    </ul>
+  </li>
+  <li><strong>Components</strong>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">ARL</code>: <code class="language-plaintext highlighter-rouge">A</code>ttention <code class="language-plaintext highlighter-rouge">R</code>epresentation <code class="language-plaintext highlighter-rouge">L</code>earning</li>
+      <li><code class="language-plaintext highlighter-rouge">AML</code>: <code class="language-plaintext highlighter-rouge">A</code>ttnetion <code class="language-plaintext highlighter-rouge">M</code>atching Function <code class="language-plaintext highlighter-rouge">L</code>earning</li>
+      <li><code class="language-plaintext highlighter-rouge">DACR</code>: <code class="language-plaintext highlighter-rouge">ARL</code> &amp; <code class="language-plaintext highlighter-rouge">AML</code> Emsemble</li>
     </ul>
   </li>
 </ul>
@@ -901,88 +893,129 @@
 <p><a href="/_post_refer_img/RecommenderSystem/10-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/10-01.png" alt="02" width="100%" loading="lazy"></a></p>
 
 <ul>
-  <li>$\oplus$ : Vector Concatenation</li>
-  <li>$\odot$ : Element-wise Product</li>
-  <li>$\mathbf{R} \in \mathbb{R}^{M\times N}$ : User-Item Interaction Matrix</li>
-  <li>$M$ : Number of User</li>
-  <li>$N$ : Number of Item</li>
-  <li>$K$ : Latent Factor Dimension</li>
-</ul>
-
-<h3 id="representation-learning"><span class="me-2">Representation Learning</span><a href="#representation-learning" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li><strong>User Representation</strong>
+  <li><strong>Annotation</strong>
     <ul>
-      <li>
-        <p>User Attentional Representation:</p>
-
-\[\mathbf{U} = \text{Self-ATTN}\left[\mathbf{R}\right]\]
-      </li>
-      <li>
-        <p>User-Latent Factor Vector for Representation Module:</p>
-
-\[\overrightarrow{\mathbf{P}}^{(RL)} = \text{MLP}_{\text{ReLU}}\left[\mathbf{U}\right]\]
-      </li>
-    </ul>
-  </li>
-  <li><strong>Item Representation</strong>
-    <ul>
-      <li>
-        <p>Item Attentional Representation:</p>
-
-\[\mathbf{V} = \text{Self-ATTN}\left[\mathbf{R}^{T}\right]\]
-      </li>
-      <li>
-        <p>Item-Latent Factor Matrix for Representation Module:</p>
-
-\[\overrightarrow{\mathbf{Q}}^{(RL)} = \text{MLP}_{\text{ReLU}}\left[\mathbf{V}\right]\]
-      </li>
+      <li>$u=1,2,\cdots,M$: user idx</li>
+      <li>$i=1,2,\cdots,N$: item idx</li>
+      <li>$\mathbf{Y} \in \mathbb{R}^{M \times N}$: user-item interaction matrix</li>
+      <li>$\overrightarrow{\mathbf{u}}_{u} \in \mathbb{R}^{K}$: user latent factor vector</li>
+      <li>$\overrightarrow{\mathbf{v}}_{i} \in \mathbb{R}^{K}$: item latent factor vector</li>
+      <li>$\overrightarrow{\mathbf{z}}_{u,i}$: predictive vector of user $u$ and item $i$</li>
+      <li>$\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$</li>
+      <li>$\delta$: softmax function</li>
+      <li>$\sigma$: sigmoid function</li>
     </ul>
   </li>
   <li>
-    <p><strong>User-Item Predictive Matrix</strong> for Representation Module:</p>
+    <p><code class="language-plaintext highlighter-rouge">DACR</code> is <code class="language-plaintext highlighter-rouge">ARL</code> &amp; <code class="language-plaintext highlighter-rouge">AML</code> Emsemble</p>
 
-\[\mathbf{R}^{(RL)} = \mathbf{P}^{(RL)} \odot \mathbf{Q}^{(RL)}\]
+\[\begin{aligned}
+  \hat{y}_{u,i}
+  &amp;= \sigma(\overrightarrow{\mathbf{w}} \cdot [\overrightarrow{\mathbf{z}}_{u,i}^{\text{(ARL)}} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{\text{(AML)}}])
+  \end{aligned}\]
   </li>
 </ul>
 
-<h3 id="matching-function-learning"><span class="me-2">Matching Function Learning</span><a href="#matching-function-learning" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="arl"><span class="me-2">ARL</span><a href="#arl" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
-    <p><strong>User-Item Concatenation:</strong></p>
+    <p>Linear Transformation:</p>
 
-\[\mathbf{X}
-  =\mathbf{P}^{(ML)} \oplus \mathbf{Q}^{(ML)}\]
+\[\begin{aligned}
+  \overrightarrow{\mathbf{p}}_{u}
+  &amp;= \mathbf{W} \cdot \mathbf{Y}_{u*}\\
+  \overrightarrow{\mathbf{q}}_{i}
+  &amp;= \mathbf{W} \cdot \mathbf{Y}_{*i}
+  \end{aligned}\]
 
     <ul>
-      <li>\(\mathbf{P}^{(ML)} = \mathbf{W}^{(P)} \cdot \mathbf{R} \in \mathbb{R}^{M \times K}\) : User-Latent Factor Matrix for Matching Module</li>
-      <li>\(\mathbf{Q}^{(ML)} = \mathbf{W}^{(Q)} \cdot \mathbf{R}^{T} \in \mathbb{R}^{N \times K}\) : Item-Latent Factor Matrix for Matching Module</li>
+      <li>$\overrightarrow{\mathbf{p}}_{u} \in \mathbb{R}^{D}$</li>
+      <li>$\overrightarrow{\mathbf{q}}_{i} \in \mathbb{R}^{D}$</li>
     </ul>
   </li>
   <li>
-    <p><strong>User-Item Pair Attentional Interaction Matrix</strong> Across Different Dimensions:</p>
+    <p>Attention Weight:</p>
 
-\[\mathbf{Y}
-  = \text{Self-ATTN}\left[\mathbf{Z}\right]\]
+\[\begin{aligned}
+  \alpha_{u}
+  &amp;= \delta(\mathbf{W} \cdot \overrightarrow{\mathbf{p}}_{u} + \overrightarrow{\mathbf{b}})\\
+  \alpha_{i}
+  &amp;= \delta(\mathbf{W} \cdot \overrightarrow{\mathbf{q}}_{i} + \overrightarrow{\mathbf{b}})
+  \end{aligned}\]
   </li>
   <li>
-    <p><strong>User-Item Predictive Matrix</strong> for Matching Module:</p>
+    <p>Representation Learning:</p>
 
-\[\mathbf{R}^{(ML)}
-  = \text{MLP}_{\text{ReLU}}\left[\mathbf{X} \oplus \mathbf{Y}\right]\]
+\[\begin{aligned}
+  \overrightarrow{\mathbf{u}}_{u}
+  &amp;= \text{MLP}_{\text{ReLU}}\left(\overrightarrow{\mathbf{p}}_{u} \oplus [\alpha_{u} \odot \overrightarrow{\mathbf{p}}_{u}]\right)\\
+  \overrightarrow{\mathbf{v}}_{i}
+  &amp;= \text{MLP}_{\text{ReLU}}\left(\overrightarrow{\mathbf{q}}_{i} \oplus [\alpha_{i} \odot \overrightarrow{\mathbf{q}}_{i}]\right)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>predictive vector of user $u$ and item $i$:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{z}}_{u,i}
+  &amp;= \overrightarrow{\mathbf{u}}_{u} \odot \overrightarrow{\mathbf{v}}_{i}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>if use <code class="language-plaintext highlighter-rouge">ARL</code> as a single prediction module:</p>
+
+\[\begin{aligned}
+  \hat{y}_{u,i}
+  &amp;= \sigma(\overrightarrow{\mathbf{w}} \cdot \overrightarrow{\mathbf{z}}_{u,i})
+  \end{aligned}\]
   </li>
 </ul>
 
-<h3 id="fusion"><span class="me-2">Fusion</span><a href="#fusion" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="aml"><span class="me-2">AML</span><a href="#aml" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
-    <p><strong>User-Item Predict Score:</strong></p>
+    <p>History Embedding:</p>
 
-\[\hat{\mathbf{R}}
-  =\sigma\left[\mathbf{R}^{(RL)} \oplus \mathbf{R}^{(ML)}\right]\]
+\[\begin{aligned}
+  \overrightarrow{\mathbf{u}}_{u}
+  &amp;= \mathbf{W} \cdot \mathbf{Y}_{u*}\\
+  \overrightarrow{\mathbf{v}}_{i}
+  &amp;= \mathbf{W} \cdot \mathbf{Y}_{*i}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Vector Concatenation:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{x}}_{u,i}
+  &amp;= \overrightarrow{\mathbf{p}}_{u} \oplus \overrightarrow{\mathbf{q}}_{i}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Attention Weight:</p>
+
+\[\begin{aligned}
+  \alpha_{u,i}
+  &amp;= \delta(\mathbf{W} \cdot \overrightarrow{\mathbf{x}}_{u,i} + \overrightarrow{\mathbf{b}})
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Matching Function Learning:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{z}}_{u,i}
+  &amp;= \text{MLP}_{\text{ReLU}}\left(\overrightarrow{\mathbf{x}}_{u,i} \oplus [\alpha_{u,i} \odot \overrightarrow{\mathbf{x}}_{u,i}]\right)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>if use <code class="language-plaintext highlighter-rouge">AML</code> as a single prediction module:</p>
+
+\[\begin{aligned}
+  \hat{y}_{u,i}
+  &amp;= \sigma(\overrightarrow{\mathbf{w}} \cdot \overrightarrow{\mathbf{z}}_{u,i})
+  \end{aligned}\]
   </li>
 </ul>
 
