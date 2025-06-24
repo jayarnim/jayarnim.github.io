@@ -70,7 +70,7 @@ image:
 
     $$\begin{aligned}
     \hat{y}_{u,i}
-    &= \sigma(\overrightarrow{\mathbf{w}} \cdot [\overrightarrow{\mathbf{z}}_{u,i}^{\text{(GMF)}} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{\text{(NCF)}}] + \overrightarrow{\mathbf{b}})
+    &= \sigma(\overrightarrow{\mathbf{w}} \cdot [\overrightarrow{\mathbf{z}}_{u,i}^{\text{(GMF)}} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{\text{(NCF)}}])
     \end{aligned}$$
 
 ### GMF
@@ -97,7 +97,7 @@ image:
 
     $$\begin{aligned}
     \hat{y}_{u,i}
-    &= \sigma(\overrightarrow{\mathbf{w}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
+    &= \sigma(\overrightarrow{\mathbf{w}} \cdot \overrightarrow{\mathbf{z}}_{u,i})
     \end{aligned}$$
 
 ### NCF
@@ -124,7 +124,7 @@ image:
 
     $$\begin{aligned}
     \hat{y}_{u,i}
-    &= \sigma(\overrightarrow{\mathbf{w}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
+    &= \sigma(\overrightarrow{\mathbf{w}} \cdot \overrightarrow{\mathbf{z}}_{u,i})
     \end{aligned}$$
 
 -----

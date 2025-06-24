@@ -106,7 +106,7 @@ image:
 
     $$\begin{aligned}
     \hat{y}_{u,i}
-    &= \sigma(\overrightarrow{\mathbf{w}} \cdot [\overrightarrow{\mathbf{z}}_{u,i}^{\text{(RL)}} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{\text{(ML)}}] + \overrightarrow{\mathbf{b}})
+    &= \sigma(\overrightarrow{\mathbf{w}} \cdot [\overrightarrow{\mathbf{z}}_{u,i}^{\text{(RL)}} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{\text{(ML)}}])
     \end{aligned}$$
 
 #### CFNet-rl
@@ -136,7 +136,7 @@ image:
 
     $$\begin{aligned}
     \hat{y}_{u,i}
-    &= \sigma(\overrightarrow{\mathbf{w}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
+    &= \sigma(\overrightarrow{\mathbf{w}} \cdot \overrightarrow{\mathbf{z}}_{u,i})
     \end{aligned}$$
 
 #### CFNet-ml
@@ -166,7 +166,7 @@ image:
 
     $$\begin{aligned}
     \hat{y}_{u,i}
-    &= \sigma(\overrightarrow{\mathbf{w}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
+    &= \sigma(\overrightarrow{\mathbf{w}} \cdot \overrightarrow{\mathbf{z}}_{u,i})
     \end{aligned}$$
 
 ## J-NCF
@@ -221,5 +221,5 @@ image:
 
     $$\begin{aligned}
     \hat{y}_{u,i}
-    &= \sigma(\overrightarrow{\mathbf{w}} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
+    &= \sigma(\overrightarrow{\mathbf{w}} \cdot \overrightarrow{\mathbf{z}}_{u,i})
     \end{aligned}$$

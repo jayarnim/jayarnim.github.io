@@ -56,7 +56,7 @@ image:
 
     $$\begin{aligned}
     \hat{y}_{u,i}
-    &= \sigma(\overrightarrow{\mathbf{w}} \cdot [\overrightarrow{\mathbf{z}}_{u,i}^{\text{(AFFECT)}} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{\text{(ASSO)}}] + \overrightarrow{\mathbf{b}})
+    &= \sigma\left(\overrightarrow{\mathbf{w}} \cdot [\overrightarrow{\mathbf{z}}_{u,i}^{\text{(AFFECT)}} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{\text{(ASSO)}}]\right)
     \end{aligned}$$
 
 ### Affection Network
