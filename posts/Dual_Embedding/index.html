@@ -825,6 +825,28 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -964,7 +986,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="993 words"
+  title="1005 words"
 >
   <em>5 min</em> read</span>
 
@@ -1014,23 +1036,25 @@
   </li>
 </ul>
 
+<h3 id="notation"><span class="me-2">Notation</span><a href="#notation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>$u=1,2,\cdots,M$: user idx</li>
+  <li>$i=1,2,\cdots,N$: item idx</li>
+  <li>$\mathbf{R} \in \mathbb{R}^{M \times N}$: user-item interaction matrix</li>
+  <li>$\overrightarrow{\mathbf{p}}_{u} \in \mathbb{R}^{K}$: user ID embedding vector</li>
+  <li>$\overrightarrow{\mathbf{q}}_{i} \in \mathbb{R}^{K}$: item ID embedding vector</li>
+  <li>$\overrightarrow{\mathbf{m}}_{u} \in \mathbb{R}^{K}$: user history embedding vector</li>
+  <li>$\overrightarrow{\mathbf{n}}_{i} \in \mathbb{R}^{K}$: item history embedding vector</li>
+  <li>$\overrightarrow{\mathbf{z}}_{u,i}$: predictive vector of user $u$ and item $i$</li>
+  <li>$\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$</li>
+</ul>
+
 <h3 id="how-to-modeling"><span class="me-2">How to Modeling</span><a href="#how-to-modeling" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <p><a href="/_post_refer_img/RecommenderSystem/06-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/06-01.png" alt="01" width="100%" loading="lazy"></a></p>
 
 <ul>
-  <li><strong>Annotation</strong>
-    <ul>
-      <li>$u=1,2,\cdots,M$: user idx</li>
-      <li>$i=1,2,\cdots,N$: item idx</li>
-      <li>$\overrightarrow{\mathbf{p}}_{u} \in \mathbb{R}^{K}$: user ID embedding vector</li>
-      <li>$\overrightarrow{\mathbf{q}}_{i} \in \mathbb{R}^{K}$: item ID embedding vector</li>
-      <li>$\overrightarrow{\mathbf{m}}_{u} \in \mathbb{R}^{K}$: user history embedding vector</li>
-      <li>$\overrightarrow{\mathbf{n}}_{i} \in \mathbb{R}^{K}$: item history embedding vector</li>
-      <li>$\overrightarrow{\mathbf{z}}_{u,i}$: predictive vector of user $u$ and item $i$</li>
-      <li>$\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$</li>
-    </ul>
-  </li>
   <li>
     <p>ID Embedding:</p>
 
@@ -1046,9 +1070,9 @@
 
 \[\begin{aligned}
   \overrightarrow{\mathbf{m}}_{u}
-  &amp;=\text{ATTN}(\overrightarrow{\mathbf{h}}^{\text{(user)}}, \overrightarrow{\mathbf{h}}_{j \in \mathcal{R}_{u}^{+} \setminus \{i\}}, \overrightarrow{\mathbf{y}}_{j \in \mathcal{R}_{u}^{+} \setminus \{i\}})\\
+  &amp;=\text{ATTN}(\overrightarrow{\mathbf{h}}^{\text{(user)}}, \mathbf{H}[\forall j \in \mathcal{R}_{u}^{+} \setminus \{i\},:], \mathbf{Y}[\forall j \in \mathcal{R}_{u}^{+} \setminus \{i\},:])\\
   \overrightarrow{\mathbf{n}}_{i}
-  &amp;=\text{ATTN}(\overrightarrow{\mathbf{h}}^{\text{(item)}}, \overrightarrow{\mathbf{h}}_{v \in \mathcal{R}_{i}^{+} \setminus \{u\}}, \overrightarrow{\mathbf{x}}_{v \in \mathcal{R}_{i}^{+} \setminus \{u\}})
+  &amp;=\text{ATTN}(\overrightarrow{\mathbf{h}}^{\text{(item)}}, \mathbf{H}[\forall v \in \mathcal{R}_{i}^{+} \setminus \{u\},:], \mathbf{X}[\forall v \in \mathcal{R}_{i}^{+} \setminus \{u\},:])
   \end{aligned}\]
   </li>
   <li>
@@ -1164,26 +1188,27 @@
   </li>
 </ul>
 
+<h3 id="notation-1"><span class="me-2">Notation</span><a href="#notation-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>$u=1,2,\cdots,M$: user idx</li>
+  <li>$i=1,2,\cdots,N$: item idx</li>
+  <li>$\mathbf{Y} \in \mathbb{R}^{M \times N}$: user-item interaction matrix</li>
+  <li>$\overrightarrow{\mathbf{p}}_{u} \in \mathbb{R}^{K}$: user ID embedding vector</li>
+  <li>$\overrightarrow{\mathbf{q}}_{i} \in \mathbb{R}^{K}$: item ID embedding vector</li>
+  <li>$\overrightarrow{\mathbf{m}}_{u} \in \mathbb{R}^{K}$: user history embedding vector</li>
+  <li>$\overrightarrow{\mathbf{n}}_{i} \in \mathbb{R}^{K}$: item history embedding vector</li>
+  <li>$\overrightarrow{\mathbf{u}}_{u}$: user embedding combination vector</li>
+  <li>$\overrightarrow{\mathbf{v}}_{i}$: item embedding combination vector</li>
+  <li>$\overrightarrow{\mathbf{z}}_{u,i}$: predictive vector of user $u$ and item $i$</li>
+  <li>$\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$</li>
+</ul>
+
 <h3 id="how-to-modeling-1"><span class="me-2">How to Modeling</span><a href="#how-to-modeling-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <p><a href="/_post_refer_img/RecommenderSystem/06-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/06-02.png" alt="02" width="100%" loading="lazy"></a></p>
 
 <ul>
-  <li><strong>Annotation</strong>
-    <ul>
-      <li>$u=1,2,\cdots,M$: user idx</li>
-      <li>$i=1,2,\cdots,N$: item idx</li>
-      <li>$\mathbf{Y} \in \mathbb{R}^{M \times N}$: user-item interaction matrix</li>
-      <li>$\overrightarrow{\mathbf{p}}_{u} \in \mathbb{R}^{K}$: user ID embedding vector</li>
-      <li>$\overrightarrow{\mathbf{q}}_{i} \in \mathbb{R}^{K}$: item ID embedding vector</li>
-      <li>$\overrightarrow{\mathbf{m}}_{u} \in \mathbb{R}^{K}$: user history embedding vector</li>
-      <li>$\overrightarrow{\mathbf{n}}_{i} \in \mathbb{R}^{K}$: item history embedding vector</li>
-      <li>$\overrightarrow{\mathbf{u}}_{u}$: user embedding combination vector</li>
-      <li>$\overrightarrow{\mathbf{v}}_{i}$: item embedding combination vector</li>
-      <li>$\overrightarrow{\mathbf{z}}_{u,i}$: predictive vector of user $u$ and item $i$</li>
-      <li>$\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$</li>
-    </ul>
-  </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">DNMF</code> is <code class="language-plaintext highlighter-rouge">DGMF</code> &amp; <code class="language-plaintext highlighter-rouge">DMLP</code> Ensemble</p>
 

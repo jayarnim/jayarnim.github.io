@@ -790,6 +790,77 @@
     <!-- combine -->
     
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
 
   
 
@@ -837,17 +908,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -863,6 +923,50 @@
       
         
         
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
       
 
       
@@ -981,9 +1085,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="529 words"
+  title="777 words"
 >
-  <em>2 min</em> read</span>
+  <em>4 min</em> read</span>
 
         </div>
       </div>
@@ -991,37 +1095,7 @@
   </header>
 
   <div class="content">
-    <h2 id="how-to-aggregate"><span class="me-2">How to aggregate</span><a href="#how-to-aggregate" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<p><a href="/_post_refer_img/RecommenderSystem/09-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/09-01.png" alt="01" width="100%" loading="lazy"></a></p>
-
-<ul>
-  <li><strong>요소별 곱(Element-wise Product)</strong>: 두 벡터 간 상응하는 차원끼리 곱셈하는 방법
-    <ul>
-      <li>사용자, 아이템 잠재요인 공간 동일 가정</li>
-      <li>잠재요인 차원 간 독립성 가정</li>
-      <li>사용자-아이템 쌍별(Pairwise) 상호작용(Interaction) 신호 반영 표현</li>
-      <li>동일 차원 상호작용만 포착하므로 다차원 상호작용 반영 불가</li>
-    </ul>
-  </li>
-  <li><strong>벡터 결합(Vector Concatenation)</strong>: 두 벡터를 결합하는 방법
-    <ul>
-      <li>사용자, 아이템 잠재요인 공간 독립 가정</li>
-      <li>사용자, 아이템 벡터 정보 보존 표현</li>
-      <li>모형이 사용자-아이템 쌍별(Pairwise) 상호작용(Interaction) 신호 직접 학습</li>
-    </ul>
-  </li>
-  <li><strong>외적(Outer Product)</strong>: 두 벡터 간 외적하는 방법
-    <ul>
-      <li>사용자, 아이템 잠재요인 공간 동일 가정</li>
-      <li>잠재요인 차원 간 종속성 가정</li>
-      <li>그 대각성분은 요소별 곱셈에서 포착하는 동일 차원 간 상호작용 신호에 해당함</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="convncf"><span class="me-2">ConvNCF</span><a href="#convncf" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="convncf-id-embedding-with-cnn"><span class="me-2">ConvNCF: ID Embedding with CNN</span><a href="#convncf-id-embedding-with-cnn" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
@@ -1041,23 +1115,24 @@
   </li>
 </ul>
 
-<h3 id="how-to-modeling"><span class="me-2">How to Modeling</span><a href="#how-to-modeling" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p><a href="/_post_refer_img/RecommenderSystem/09-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/09-02.png" alt="02" width="100%" loading="lazy"></a></p>
+<h3 id="notation"><span class="me-2">Notation</span><a href="#notation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
-  <li><strong>Annotation</strong>
-    <ul>
-      <li>$u=1,2,\cdots,M$: user idx</li>
-      <li>$i=1,2,\cdots,N$: item idx</li>
-      <li>$\overrightarrow{\mathbf{u}}_{u} \in \mathbb{R}^{K}$: user latent factor vector</li>
-      <li>$\overrightarrow{\mathbf{v}}_{i} \in \mathbb{R}^{K}$: item latent factor vector</li>
-      <li>$\mathbf{E}_{u,i} \in \mathbb{R}^{K \times K}$: interaction map of user $u$ and item $i$</li>
-      <li>$\overrightarrow{\mathbf{x}}_{u,i}$: interdimensional high-level interaction vector of user $u$ and item $i$</li>
-      <li>$\overrightarrow{\mathbf{z}}_{u,i} \in \mathbb{R}^{K}$: predictive vector of user $u$ and item $i$</li>
-      <li>$\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$</li>
-    </ul>
-  </li>
+  <li>$u=1,2,\cdots,M$: user idx</li>
+  <li>$i=1,2,\cdots,N$: item idx</li>
+  <li>$\overrightarrow{\mathbf{p}}_{u} \in \mathbb{R}^{K}$: user latent factor vector</li>
+  <li>$\overrightarrow{\mathbf{q}}_{i} \in \mathbb{R}^{K}$: item latent factor vector</li>
+  <li>$\mathbf{E}_{u,i} \in \mathbb{R}^{K \times K}$: interaction map of user $u$ and item $i$</li>
+  <li>$\overrightarrow{\mathbf{x}}_{u,i}$: interdimensional high-level interaction vector of user $u$ and item $i$</li>
+  <li>$\overrightarrow{\mathbf{z}}_{u,i} \in \mathbb{R}^{K}$: predictive vector of user $u$ and item $i$</li>
+  <li>$\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$</li>
+</ul>
+
+<h3 id="how-to-modeling"><span class="me-2">How to Modeling</span><a href="#how-to-modeling" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p><a href="/_post_refer_img/RecommenderSystem/09-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/09-01.png" alt="01" width="100%" loading="lazy"></a></p>
+
+<ul>
   <li>
     <p>ID Embedding:</p>
 
@@ -1079,12 +1154,18 @@
   <li>
     <p>Capture interdimensional high-level interaction of user $u$ and item $i$:</p>
 
-    <p><a href="/_post_refer_img/RecommenderSystem/09-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/09-03.png" alt="03" width="100%" loading="lazy"></a></p>
+    <p><a href="/_post_refer_img/RecommenderSystem/09-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/09-02.png" alt="02" width="100%" loading="lazy"></a></p>
 
 \[\begin{aligned}
   \overrightarrow{\mathbf{x}}_{u,i}
   &amp;= \text{Flatten}\left[\text{Conv}_{\text{ReLU}}(\mathbf{E}_{u,i})\right]
   \end{aligned}\]
+
+    <ul>
+      <li>\(\mathcal{W} \in \mathbb{R}^{2 \times 2}\): Kernel Window Dimension</li>
+      <li>The number of Filters per Kernel Size is 32</li>
+      <li>Dimension of Feature Map is reduced $K \times K, K/2 \times K/2, \cdots, 1 \times 1$</li>
+    </ul>
   </li>
   <li>
     <p>Predictive Vector of user $u$ and item $i$:</p>
@@ -1099,13 +1180,139 @@
 
 \[\begin{aligned}
   \hat{y}_{u,i}
-  &amp;= \sigma(\mathbf{W} \cdot \overrightarrow{\mathbf{z}}_{u,i} + \overrightarrow{\mathbf{b}})
+  &amp;= \sigma(\mathbf{W} \cdot \overrightarrow{\mathbf{z}}_{u,i})
   \end{aligned}\]
   </li>
 </ul>
 
-<h2 id="comet"><span class="me-2">COMET</span><a href="#comet" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="comet-dual-embedding-with-cnn"><span class="me-2">COMET: Dual Embedding with CNN</span><a href="#comet-dual-embedding-with-cnn" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
+
+<ul>
+  <li><strong>문제 의식</strong>: 히스토리의 다차원 고차 상호작용 구조 모델링 부재
+    <ul>
+      <li><strong>아이디 임베딩(ID Embedding)</strong>: 맥락 정보 없이 목표 사용자-아이템 쌍 상호작용만을 반영함</li>
+      <li><strong>히스토리 임베딩(History Embedding)</strong>: 맥락 정보를 반영하나 맥락 내 구조적 관계 정보를 모델링하지 않음</li>
+      <li>실제 추천은 사용자의 히스토리 아이템 간 상호작용과, 아이템에 반응한 사용자 간 집합의 구조적 맥락에서 발생함</li>
+    </ul>
+  </li>
+  <li><strong><a href="https://doi.org/10.1145/3588576"><code class="language-plaintext highlighter-rouge">COMET</code></a>(<code class="language-plaintext highlighter-rouge">CO</code>nvolutional di<code class="language-plaintext highlighter-rouge">ME</code>nsion in<code class="language-plaintext highlighter-rouge">T</code>eraction)</strong>: 히스토리 간 다차원 고차 상호작용 구조를 반영한 듀얼 임베딩(Dual-Embedding) 기반 잠재요인 모형
+    <ul>
+      <li>Lin, Z., Feng, L., Guo, X., Zhang, Y., Yin, R., Kwoh, C. K., &amp; Xu, C.<br />
+  (2023).<br />
+  Comet: Convolutional dimension interaction for collaborative filtering.<br />
+  ACM Transactions on Intelligent Systems and Technology, 14(4), 1-18.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="notation-1"><span class="me-2">Notation</span><a href="#notation-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>$u=1,2,\cdots,M$: user idx</li>
+  <li>$i=1,2,\cdots,N$: item idx</li>
+  <li>$\overrightarrow{\mathbf{p}}_{u} \in \mathbb{R}^{K}$: user id embedding vector</li>
+  <li>$\overrightarrow{\mathbf{q}}_{i} \in \mathbb{R}^{K}$: item id embedding vector</li>
+  <li>\(\mathbf{E}_{u} \in \mathbb{R}^{\vert \mathcal{R}_{u}^{+} \setminus \{i\} \vert \times K}\): history embedding map of user $u$</li>
+  <li>\(\mathbf{E}_{i} \in \mathbb{R}^{\vert \mathcal{R}_{i}^{+} \setminus \{u\} \vert \times K}\): history embedding map of item $i$</li>
+  <li>$\overrightarrow{\mathbf{x}}_{u}$: history interaction vector of user $u$</li>
+  <li>$\overrightarrow{\mathbf{x}}_{i}$: history interaction vector of item $i$</li>
+  <li>$\overrightarrow{\mathbf{u}}_{u} \in \mathbb{R}^{K}$: user history embedding vector</li>
+  <li>$\overrightarrow{\mathbf{v}}_{i} \in \mathbb{R}^{K}$: item history embedding vector</li>
+  <li>$\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$</li>
+</ul>
+
+<h3 id="how-to-modeling-1"><span class="me-2">How to Modeling</span><a href="#how-to-modeling-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p><a href="/_post_refer_img/RecommenderSystem/09-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/09-03.png" alt="03" width="100%" loading="lazy"></a></p>
+
+<ul>
+  <li>
+    <p>ID Embedding:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{p}}_{u}
+  &amp;= \text{Emb}(u)\\
+  \overrightarrow{\mathbf{q}}_{i}
+  &amp;= \text{Emb}(i)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Interaction Modeling:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{u}}_{u}
+  &amp;= \cdots (\left\{\overrightarrow{\mathbf{q}}_{j} \mid \forall j \in \mathcal{R}_{u}^{+} \setminus \{i\}\right\})\\
+  \overrightarrow{\mathbf{v}}_{i}
+  &amp;= \cdots (\left\{\overrightarrow{\mathbf{p}}_{v} \mid \forall v \in \mathcal{R}_{i}^{+} \setminus \{u\}\right\})
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Predict interaction probability of user $u$ and item $i$:</p>
+
+\[\begin{aligned}
+  \hat{y}_{u,i}
+  &amp;= \sigma(\overrightarrow{\mathbf{w}} \cdot \left[(\overrightarrow{\mathbf{p}}_{u} + \overrightarrow{\mathbf{u}}_{u}) \odot (\overrightarrow{\mathbf{q}}_{i} + \overrightarrow{\mathbf{v}}_{i})\right])
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h3 id="interaction-modeling"><span class="me-2">Interaction Modeling</span><a href="#interaction-modeling" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p><a href="/_post_refer_img/RecommenderSystem/09-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/09-04.png" alt="04" width="100%" loading="lazy"></a></p>
+
+<ul>
+  <li>
+    <p>History Embedding Maps:</p>
+
+\[\begin{aligned}
+  \mathbf{E}_{u}
+  = \begin{bmatrix}
+  \overrightarrow{\mathbf{q}}_{1 \in \mathcal{R}_{u}^{+} \setminus \{i\}}\\
+  \overrightarrow{\mathbf{q}}_{2 \in \mathcal{R}_{u}^{+} \setminus \{i\}}\\
+  \vdots\\
+  \overrightarrow{\mathbf{q}}_{j \in \mathcal{R}_{u}^{+} \setminus \{i\}}
+  \end{bmatrix},\quad
+  \mathbf{E}_{i}
+  = \begin{bmatrix}
+  \overrightarrow{\mathbf{p}}_{1 \in \mathcal{R}_{i}^{+} \setminus \{u\}}\\
+  \overrightarrow{\mathbf{p}}_{2 \in \mathcal{R}_{i}^{+} \setminus \{u\}}\\
+  \vdots\\
+  \overrightarrow{\mathbf{p}}_{v \in \mathcal{R}_{i}^{+} \setminus \{u\}}
+  \end{bmatrix}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>CNN:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{x}}_{u}
+  &amp;= \text{Flatten}\left[\text{Conv}_{\text{ReLU}}(\mathbf{E}_{u})\right]\\
+  \overrightarrow{\mathbf{x}}_{i}
+  &amp;= \text{Flatten}\left[\text{Conv}_{\text{ReLU}}(\mathbf{E}_{i})\right]
+  \end{aligned}\]
+
+    <ul>
+      <li>\(\mathcal{W} \in \mathbb{R}^{\vert \mathcal{R}^{+} \setminus \{u,i\} \vert \times H}\): Kernel Window Dimension
+        <ul>
+          <li>\(H \in \{1,8,32,128\}\): Kernel Window Size</li>
+          <li>The number of Filters per Kernel Size is 8</li>
+          <li>Max Pooling Applied</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Generate History Embedding:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{u}}_{u}
+  &amp;= \text{MLP}_{\text{ReLU}}(\overrightarrow{\mathbf{x}}_{u})\\
+  \overrightarrow{\mathbf{v}}_{i}
+  &amp;= \text{MLP}_{\text{ReLU}}(\overrightarrow{\mathbf{x}}_{i})
+  \end{aligned}\]
+  </li>
+</ul>
 
   </div>
 

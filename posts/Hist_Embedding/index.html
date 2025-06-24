@@ -907,6 +907,39 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -1094,21 +1127,22 @@
   </li>
 </ul>
 
+<h3 id="notation"><span class="me-2">Notation</span><a href="#notation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>$u=1,2,\cdots,M$: user idx</li>
+  <li>$i=1,2,\cdots,N$: item idx</li>
+  <li>$\mathbf{Y} \in \mathbb{R}^{M \times N}$: user-item interaction matrix</li>
+  <li>$\overrightarrow{\mathbf{u}}_{u} \in \mathbb{R}^{K}$: user latent factor vector</li>
+  <li>$\overrightarrow{\mathbf{v}}_{i} \in \mathbb{R}^{K}$: item latent factor vector</li>
+  <li>$\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$</li>
+</ul>
+
 <h3 id="how-to-modeling"><span class="me-2">How to Modeling</span><a href="#how-to-modeling" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <p><a href="/_post_refer_img/RecommenderSystem/05-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/05-01.png" alt="01" width="100%" loading="lazy"></a></p>
 
 <ul>
-  <li><strong>Annotation</strong>
-    <ul>
-      <li>$u=1,2,\cdots,M$: user idx</li>
-      <li>$i=1,2,\cdots,N$: item idx</li>
-      <li>$\mathbf{Y} \in \mathbb{R}^{M \times N}$: user-item interaction matrix</li>
-      <li>$\overrightarrow{\mathbf{u}}_{u} \in \mathbb{R}^{K}$: user latent factor vector</li>
-      <li>$\overrightarrow{\mathbf{v}}_{i} \in \mathbb{R}^{K}$: item latent factor vector</li>
-      <li>$\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$</li>
-    </ul>
-  </li>
   <li>
     <p>user latent factor vector representation learning:</p>
 
@@ -1163,22 +1197,23 @@
   </li>
 </ul>
 
+<h3 id="notation-1"><span class="me-2">Notation</span><a href="#notation-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>$u=1,2,\cdots,M$: user idx</li>
+  <li>$i=1,2,\cdots,N$: item idx</li>
+  <li>$\mathbf{Y} \in \mathbb{R}^{M \times N}$: user-item interaction matrix</li>
+  <li>$\overrightarrow{\mathbf{u}}_{u} \in \mathbb{R}^{K}$: user latent factor vector</li>
+  <li>$\overrightarrow{\mathbf{v}}_{i} \in \mathbb{R}^{K}$: item latent factor vector</li>
+  <li>$\overrightarrow{\mathbf{z}}_{u,i}$: predictive vector of user $u$ and item $i$</li>
+  <li>$\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$</li>
+</ul>
+
 <h3 id="how-to-modeling-1"><span class="me-2">How to Modeling</span><a href="#how-to-modeling-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <p><a href="/_post_refer_img/RecommenderSystem/05-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/05-03.png" alt="03" width="100%" loading="lazy"></a></p>
 
 <ul>
-  <li><strong>Annotation</strong>
-    <ul>
-      <li>$u=1,2,\cdots,M$: user idx</li>
-      <li>$i=1,2,\cdots,N$: item idx</li>
-      <li>$\mathbf{Y} \in \mathbb{R}^{M \times N}$: user-item interaction matrix</li>
-      <li>$\overrightarrow{\mathbf{u}}_{u} \in \mathbb{R}^{K}$: user latent factor vector</li>
-      <li>$\overrightarrow{\mathbf{v}}_{i} \in \mathbb{R}^{K}$: item latent factor vector</li>
-      <li>$\overrightarrow{\mathbf{z}}_{u,i}$: predictive vector of user $u$ and item $i$</li>
-      <li>$\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$</li>
-    </ul>
-  </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">CFNet</code> is <code class="language-plaintext highlighter-rouge">CFNet-rl</code> &amp; <code class="language-plaintext highlighter-rouge">CFNet-ml</code> Ensemble</p>
 
@@ -1284,22 +1319,23 @@
   </li>
 </ul>
 
+<h3 id="notation-2"><span class="me-2">Notation</span><a href="#notation-2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>$u=1,2,\cdots,M$: user idx</li>
+  <li>$i=1,2,\cdots,N$: item idx</li>
+  <li>$\mathbf{Y} \in \mathbb{R}^{M \times N}$: user-item interaction matrix</li>
+  <li>$\overrightarrow{\mathbf{u}}_{u} \in \mathbb{R}^{K}$: user latent factor vector</li>
+  <li>$\overrightarrow{\mathbf{v}}_{i} \in \mathbb{R}^{K}$: item latent factor vector</li>
+  <li>$\overrightarrow{\mathbf{z}}_{u,i}$: predictive vector of user $u$ and item $i$</li>
+  <li>$\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$</li>
+</ul>
+
 <h3 id="how-to-modeling-2"><span class="me-2">How to Modeling</span><a href="#how-to-modeling-2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <p><a href="/_post_refer_img/RecommenderSystem/05-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/05-02.png" alt="02" width="100%" loading="lazy"></a></p>
 
 <ul>
-  <li><strong>Annotation</strong>
-    <ul>
-      <li>$u=1,2,\cdots,M$: user idx</li>
-      <li>$i=1,2,\cdots,N$: item idx</li>
-      <li>$\mathbf{Y} \in \mathbb{R}^{M \times N}$: user-item interaction matrix</li>
-      <li>$\overrightarrow{\mathbf{u}}_{u} \in \mathbb{R}^{K}$: user latent factor vector</li>
-      <li>$\overrightarrow{\mathbf{v}}_{i} \in \mathbb{R}^{K}$: item latent factor vector</li>
-      <li>$\overrightarrow{\mathbf{z}}_{u,i}$: predictive vector of user $u$ and item $i$</li>
-      <li>$\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$</li>
-    </ul>
-  </li>
   <li>
     <p>user latent factor vector representation learning:</p>
 

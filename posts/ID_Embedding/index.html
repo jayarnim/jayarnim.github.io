@@ -930,6 +930,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -1142,22 +1153,24 @@
   </li>
 </ul>
 
+<h2 id="notation"><span class="me-2">Notation</span><a href="#notation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>$u=1,2,\cdots,M$: user idx</li>
+  <li>$i=1,2,\cdots,N$: item idx</li>
+  <li>$\overrightarrow{\mathbf{u}}_{u} \in \mathbb{R}^{K}$: user latent factor vector</li>
+  <li>$\overrightarrow{\mathbf{v}}_{i} \in \mathbb{R}^{K}$: item latent factor vector</li>
+  <li>$\overrightarrow{\mathbf{z}}_{u,i} \in \mathbb{R}^{K}$: predictive vector of user $u$ and item $i$</li>
+  <li>$\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$</li>
+</ul>
+
 <h2 id="how-to-modeling"><span class="me-2">How to Modeling</span><a href="#how-to-modeling" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <p><a href="/_post_refer_img/RecommenderSystem/04-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/04-04.png" alt="04" width="100%" loading="lazy"></a></p>
 
 <ul>
-  <li><strong>Annotation</strong>
-    <ul>
-      <li>$u=1,2,\cdots,M$: user idx</li>
-      <li>$i=1,2,\cdots,N$: item idx</li>
-      <li>$\overrightarrow{\mathbf{u}}_{u} \in \mathbb{R}^{K}$: user latent factor vector</li>
-      <li>$\overrightarrow{\mathbf{v}}_{i} \in \mathbb{R}^{K}$: item latent factor vector</li>
-      <li>$\overrightarrow{\mathbf{z}}_{u,i} \in \mathbb{R}^{K}$: predictive vector of user $u$ and item $i$</li>
-      <li>$\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$</li>
-    </ul>
-  </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">NeuMF</code> is <code class="language-plaintext highlighter-rouge">GMF</code> &amp; <code class="language-plaintext highlighter-rouge">NCF</code> Ensemble</p>
 

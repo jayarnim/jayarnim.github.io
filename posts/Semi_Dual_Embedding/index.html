@@ -706,6 +706,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -850,7 +861,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="493 words"
+  title="496 words"
 >
   <em>2 min</em> read</span>
 
@@ -897,27 +908,29 @@
   </li>
 </ul>
 
+<h2 id="notation"><span class="me-2">Notation</span><a href="#notation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>$u=1,2,\cdots,M$: user idx</li>
+  <li>$i=1,2,\cdots,N$: item idx</li>
+  <li>$\mathbf{Y} \in \mathbb{R}^{M \times N}$: user-item interaction matrix</li>
+  <li>$\overrightarrow{\mathbf{u}}_{u} \in \mathbb{R}^{K}$: user id embedding vector @ affection network</li>
+  <li>$\overrightarrow{\mathbf{v}}_{i} \in \mathbb{R}^{K}$: item id embedding vector @ affection network</li>
+  <li>$\overrightarrow{\mathbf{p}}_{i} \in \mathbb{R}^{K}$: target item id embedding vector @ association network</li>
+  <li>$\overrightarrow{\mathbf{q}}_{j} \in \mathbb{R}^{K}$: history item id embedding vector @ association network</li>
+  <li>$\overrightarrow{\mathbf{z}}_{u,i}$: predictive vector of user $u$ and item $i$</li>
+  <li>$\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$</li>
+</ul>
+
 <h2 id="how-to-modeling"><span class="me-2">How to Modeling</span><a href="#how-to-modeling" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <p><a href="/_post_refer_img/RecommenderSystem/07-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/07-01.png" alt="01" width="100%" loading="lazy"></a></p>
 
 <ul>
-  <li><strong>Annotation</strong>
-    <ul>
-      <li>$u=1,2,\cdots,M$: user idx</li>
-      <li>$i=1,2,\cdots,N$: item idx</li>
-      <li>$\mathbf{Y} \in \mathbb{R}^{M \times N}$: user-item interaction matrix</li>
-      <li>$\overrightarrow{\mathbf{u}}_{u} \in \mathbb{R}^{K}$: user id embedding vector @ affection network</li>
-      <li>$\overrightarrow{\mathbf{v}}_{i} \in \mathbb{R}^{K}$: item id embedding vector @ affection network</li>
-      <li>$\overrightarrow{\mathbf{p}}_{i} \in \mathbb{R}^{K}$: target item id embedding vector @ association network</li>
-      <li>$\overrightarrow{\mathbf{q}}_{j} \in \mathbb{R}^{K}$: history item id embedding vector @ association network</li>
-      <li>$\overrightarrow{\mathbf{z}}_{u,i}$: predictive vector of user $u$ and item $i$</li>
-      <li>$\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$</li>
-    </ul>
-  </li>
   <li>
-    <p><strong>Dual-Relation Network</strong></p>
+    <p>Dual-Relation Network:</p>
 
 \[\begin{aligned}
   \hat{y}_{u,i}
@@ -967,8 +980,7 @@
 
 \[\begin{aligned}
   \overrightarrow{\mathbf{x}}_{u}
-  &amp;= \text{ATTN}(\overrightarrow{\mathbf{h}},\overrightarrow{\mathbf{z}}_{u,j}^{\text{(AFFECT)}},\overrightarrow{\mathbf{q}}_{j})
-  \quad \text{for} \quad j \in \mathcal{R}_{u}^{+} \setminus \{i\}
+  &amp;= \text{ATTN}(\overrightarrow{\mathbf{h}},\text{Affection}(u,\forall j \in \mathcal{R}_{u}^{+} \setminus \{i\}), \mathbf{Q}[\forall j \in \mathcal{R}_{u}^{+} \setminus \{i\},:])
   \end{aligned}\]
   </li>
   <li>
