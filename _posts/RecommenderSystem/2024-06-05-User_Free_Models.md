@@ -16,8 +16,32 @@ image:
 ## SLIM
 -----
 
+- **문제 의식**:
+
+- **[`SLIM`]()()**:
+
+### Notation
+
+### How to Modeling
+
 ## FISM
 -----
 
+- **문제 의식**:
+
+- **[`FISM`]()()**:
+
+### Notation
+
+### How to Modeling
+
 ## NAIS
 -----
+
+- **문제 의식**:
+
+- **[`NAIS`]()()**:
+
+### Notation
+
+### How to Modeling
