@@ -577,6 +577,77 @@
     <!-- combine -->
     
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
 
   
 
@@ -650,6 +721,17 @@
       
         
         
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
       
 
       
@@ -823,9 +905,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="33 words"
+  title="946 words"
 >
-  <em>1 min</em> read</span>
+  <em>5 min</em> read</span>
 
         </div>
       </div>
@@ -837,49 +919,233 @@
 <hr />
 
 <ul>
-  <li>
-    <p><strong>문제 의식</strong>:</p>
+  <li><strong>문제 의식</strong>: 효율성과 정확성의 Trade-off
+    <ul>
+      <li><strong>이웃 기반 협업 필터링(Neighborhood-based Collaborative Filtering)</strong>: 유사도 기반 휴리스틱 함수를 통해 예측하므로 계산 효율성은 높지만 아이템 간 관계 학습이 불가하여 추천 정확도가 낮음</li>
+      <li><strong>잠재요인 모형(Latent Factor Model)</strong>: 사용자, 아이템 간 관계 학습을 수반하므로 추천 정확도는 높지만 계산 비용이 발생하여 실시간 추천에 부적합</li>
+    </ul>
   </li>
-  <li>
-    <p><strong><a href=""><code class="language-plaintext highlighter-rouge">SLIM</code></a>()</strong>:</p>
+  <li><strong><a href="https://doi.org/10.1109/ICDM.2011.134"><code class="language-plaintext highlighter-rouge">SLIM</code></a>(<code class="language-plaintext highlighter-rouge">S</code>parse <code class="language-plaintext highlighter-rouge">LI</code>near <code class="language-plaintext highlighter-rouge">M</code>ethods)</strong>: 아이템 간 유사도를 선형 회귀계수 행렬로 학습하고 이를 기반으로 예측을 수행하는 선형 회귀 모형
+    <ul>
+      <li>Ning, X., &amp; Karypis, G.<br />
+  (2011, December).<br />
+  Slim: Sparse linear methods for top-n recommender systems.<br />
+  In 2011 IEEE 11th international conference on data mining (pp. 497-506).<br />
+  IEEE.</li>
+    </ul>
   </li>
 </ul>
 
 <h3 id="notation"><span class="me-2">Notation</span><a href="#notation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
+<ul>
+  <li>$u=1,2,\cdots,M$: user idx</li>
+  <li>$i=1,2,\cdots,N$: item idx</li>
+  <li>$\mathbf{Y} \in \mathbb{R}^{M \times N}$: user-item interaction matrix</li>
+  <li>$\mathbf{W} \in \mathbb{R}^{N \times N}$: sparse aggregation coefficient matrix</li>
+  <li>$\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$</li>
+</ul>
+
 <h3 id="how-to-modeling"><span class="me-2">How to Modeling</span><a href="#how-to-modeling" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p>Linear Regression:</p>
+
+\[\begin{aligned}
+  \hat{y}_{u,i}
+  &amp;= \mathbf{W}_{i} \cdot \mathbf{Y}_{u*}\\
+  &amp;= \sum_{j \in \mathcal{R}_{u}^{+} \setminus \{i\}}{w_{i,j} \cdot y_{u,j}}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Objective Function:</p>
+
+\[\begin{gathered}
+  \hat{\mathbf{W}}
+  = \text{arg} \min{\frac{1}{2} \Vert \mathbf{Y} - \mathbf{Y}\mathbf{W}\Vert_{F}^{2} + \frac{\beta}{2} \Vert \mathbf{W} \Vert_{F}^{2} + \lambda \Vert \mathbf{W} \Vert_{1}}\\
+  \text{subject to} \quad
+  \begin{aligned}
+  \mathbf{W} &amp;\ge 0\\
+  \text{diag}(\mathbf{W})&amp;=0
+  \end{aligned}
+  \end{gathered}\]
+
+    <ul>
+      <li>\(\Vert \mathbf{Y} - \mathbf{Y}\mathbf{W}\Vert_{F}^{2}\): Reconstruction Loss</li>
+      <li>\(\Vert \mathbf{W} \Vert_{F}^{2}\): L2 Norm Regulation to Prevent Overfitting</li>
+      <li>\(\Vert \mathbf{W} \Vert_{1}\): L1 Norm Regulation to Induce Sparsity</li>
+    </ul>
+  </li>
+</ul>
 
 <h2 id="fism"><span class="me-2">FISM</span><a href="#fism" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
-  <li>
-    <p><strong>문제 의식</strong>:</p>
+  <li><strong>문제 의식</strong>: <code class="language-plaintext highlighter-rouge">SLIM</code> 의 사용자 선호 구성 방식
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">SLIM</code> 은 아이템 간 유사도를 휴리스틱 함수가 아니라 학습을 통해 도출한다는 점에서 아이템 기반 협업 필터링의 정확도 문제를 개선함</li>
+      <li>하지만 사용자의 타깃 아이템에 대한 선호 구성 시 히스토리를 구성하는 아이템들이 서로 독립적으로 기여한다고 가정함</li>
+      <li>이 독립성 가정은 사용자 선호가 과거 경험의 단순 집계로 환원될 수 있다는 잘못된 전제에 기반함</li>
+      <li>즉, 사용자 선호가 히스토리 아이템들의 집합적 구성과 그 내부의 상호작용 구조에 의해 형성된다는 점을 간과함</li>
+    </ul>
   </li>
-  <li>
-    <p><strong><a href=""><code class="language-plaintext highlighter-rouge">FISM</code></a>()</strong>:</p>
+  <li><strong><a href="https://doi.org/10.1145/2487575.2487589"><code class="language-plaintext highlighter-rouge">FISM</code></a>(<code class="language-plaintext highlighter-rouge">F</code>actored <code class="language-plaintext highlighter-rouge">I</code>tem <code class="language-plaintext highlighter-rouge">S</code>imilarity <code class="language-plaintext highlighter-rouge">M</code>odels)</strong>: 사용자 선호를 히스토리 아이템들의 집합적 평균으로 구성하는 아이템 기반 협업 필터링 모형
+    <ul>
+      <li>Kabbur, S., Ning, X., &amp; Karypis, G.<br />
+  (2013, August).<br />
+  Fism: factored item similarity models for top-n recommender systems.<br />
+  In Proceedings of the 19th ACM SIGKDD international conference on Knowledge discovery and data mining (pp. 659-667).</li>
+    </ul>
   </li>
 </ul>
 
 <h3 id="notation-1"><span class="me-2">Notation</span><a href="#notation-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
+<ul>
+  <li>$u=1,2,\cdots,M$: user idx</li>
+  <li>$i=1,2,\cdots,N$: target item idx</li>
+  <li>$j=1,2,\cdots,N$: history item idx</li>
+  <li>$\overrightarrow{\mathbf{p}}_{i} \in \mathbb{R}^{K}$: target item id embedding vector</li>
+  <li>$\overrightarrow{\mathbf{q}}_{j} \in \mathbb{R}^{K}$: history item id embedding vector</li>
+</ul>
+
 <h3 id="how-to-modeling-1"><span class="me-2">How to Modeling</span><a href="#how-to-modeling-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p>ID Embedding:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{p}}_{i}
+  &amp;= \text{Emb}(j)\\
+  \overrightarrow{\mathbf{q}}_{j}
+  &amp;= \text{Emb}(i)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>History Item Aggregation:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{u}}_{u}
+  &amp;= \frac{1}{\vert \mathcal{R}_{u}^{+} \setminus \{i\} \vert^{\beta}}\sum_{j \in \mathcal{R}_{u}^{+} \setminus \{i\}}{\overrightarrow{\mathbf{q}}_{j}}
+  \end{aligned}\]
+
+    <ul>
+      <li>$0 &lt; \beta \le 1$</li>
+    </ul>
+  </li>
+  <li>
+    <p>Predict interaction probability of user $u$ and item $i$:</p>
+
+\[\begin{aligned}
+  \hat{y}_{u,i}
+  &amp;= \overrightarrow{\mathbf{u}}_{u} \cdot \overrightarrow{\mathbf{p}}_{i}
+  \end{aligned}\]
+  </li>
+</ul>
 
 <h2 id="nais"><span class="me-2">NAIS</span><a href="#nais" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
-  <li>
-    <p><strong>문제 의식</strong>:</p>
+  <li><strong>문제 의식</strong>: <code class="language-plaintext highlighter-rouge">FISM</code> 의 히스토리 아이템 집계 방식
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">FISM</code> 은 사용자 선호 표현 시 히스토리 아이템 간 기여도 차이를 간과하여 히스토리 아이템들을 단순 평균함</li>
+    </ul>
   </li>
-  <li>
-    <p><strong><a href=""><code class="language-plaintext highlighter-rouge">NAIS</code></a>()</strong>:</p>
+  <li><strong><a href="https://doi.org/10.1109/TKDE.2018.2831682"><code class="language-plaintext highlighter-rouge">NAIS</code></a>(<code class="language-plaintext highlighter-rouge">N</code>eural <code class="language-plaintext highlighter-rouge">A</code>ttentive <code class="language-plaintext highlighter-rouge">I</code>tem <code class="language-plaintext highlighter-rouge">S</code>imilarity Model)</strong>: 사용자 선호를 히스토리 아이템으로써 구성하되, 개별 아이템의 기여도에 따라 가중 평균하는 아이템 기반 협업 필터링 모형
+    <ul>
+      <li>He, X., He, Z., Song, J., Liu, Z., Jiang, Y. G., &amp; Chua, T. S.<br />
+  (2018).<br />
+  NAIS: Neural attentive item similarity model for recommendation.<br />
+  IEEE Transactions on Knowledge and Data Engineering, 30(12), 2354-2366.</li>
+    </ul>
   </li>
 </ul>
 
 <h3 id="notation-2"><span class="me-2">Notation</span><a href="#notation-2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
+<ul>
+  <li>$u=1,2,\cdots,M$: user idx</li>
+  <li>$i=1,2,\cdots,N$: target item idx</li>
+  <li>$j=1,2,\cdots,N$: history item idx</li>
+  <li>$\overrightarrow{\mathbf{p}}_{i} \in \mathbb{R}^{K}$: target item id embedding vector</li>
+  <li>$\overrightarrow{\mathbf{q}}_{j} \in \mathbb{R}^{K}$: history item id embedding vector</li>
+</ul>
+
 <h3 id="how-to-modeling-2"><span class="me-2">How to Modeling</span><a href="#how-to-modeling-2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p><a href="/_post_refer_img/RecommenderSystem/11-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/11-01.png" alt="01" width="100%" loading="lazy"></a></p>
+
+<ul>
+  <li>
+    <p>ID Embedding:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{p}}_{i}
+  &amp;= \text{Emb}(i)\\
+  \overrightarrow{\mathbf{q}}_{j}
+  &amp;= \text{Emb}(j)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>History Item Aggregation:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{u}}_{u}
+  &amp;= \text{ATTN}(\overrightarrow{\mathbf{p}}_{i}, \mathbf{Q}[\forall j \in \mathcal{R}_{u}^{+} \setminus \{i\},:], \mathbf{Q}[\forall j \in \mathcal{R}_{u}^{+} \setminus \{i\},:])
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Predict interaction probability of user $u$ and item $i$:</p>
+
+\[\begin{aligned}
+  \hat{y}_{u,i}
+  &amp;= \overrightarrow{\mathbf{u}}_{u} \cdot \overrightarrow{\mathbf{p}}_{i}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h3 id="how-to-attention"><span class="me-2">How to Attention</span><a href="#how-to-attention" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p>Attention Weight is Calculated by Smoothed Softmax:</p>
+
+\[\begin{aligned}
+  \alpha_{i,j}
+  &amp;= \frac{\exp{f(\overrightarrow{\mathbf{p}}_{i},\overrightarrow{\mathbf{q}}_{j})}}{\left[\sum_{j \in \mathcal{R}_{u}^{+} \setminus \{i\}}{\exp{f(\overrightarrow{\mathbf{p}}_{i},\overrightarrow{\mathbf{q}}_{j})}}\right]^{\beta}}
+  \end{aligned}\]
+
+    <ul>
+      <li>$0 &lt; \beta \le 1$</li>
+    </ul>
+  </li>
+  <li>
+    <p>Attention Score Function:</p>
+
+    <ul>
+      <li>
+        <p>Concatenation:</p>
+
+\[\begin{aligned}
+  f(\overrightarrow{\mathbf{p}}_{i},\overrightarrow{\mathbf{q}}_{j})
+  &amp;= \overrightarrow{\mathbf{w}} \cdot \text{ReLU}(\mathbf{W}[\overrightarrow{\mathbf{p}}_{i} \oplus \overrightarrow{\mathbf{q}}_{j}] + \overrightarrow{\mathbf{b}})
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>Element-wise Product:</p>
+
+\[\begin{aligned}
+  f(\overrightarrow{\mathbf{p}}_{i},\overrightarrow{\mathbf{q}}_{j})
+  &amp;= \overrightarrow{\mathbf{w}} \cdot \text{ReLU}(\mathbf{W}[\overrightarrow{\mathbf{p}}_{i} \odot \overrightarrow{\mathbf{q}}_{j}] + \overrightarrow{\mathbf{b}})
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+</ul>
 
   </div>
 
