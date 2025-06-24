@@ -36,23 +36,25 @@ image:
     - **Association Network**: Modeling Item-Item Relation
     - **Dual-Relation Network**: Affection Network & Association Network Combination
 
+## Notation
+-----
+
+- $u=1,2,\cdots,M$: user idx
+- $i=1,2,\cdots,N$: item idx
+- $\mathbf{Y} \in \mathbb{R}^{M \times N}$: user-item interaction matrix
+- $\overrightarrow{\mathbf{u}}_{u} \in \mathbb{R}^{K}$: user id embedding vector @ affection network
+- $\overrightarrow{\mathbf{v}}_{i} \in \mathbb{R}^{K}$: item id embedding vector @ affection network
+- $\overrightarrow{\mathbf{p}}_{i} \in \mathbb{R}^{K}$: target item id embedding vector @ association network
+- $\overrightarrow{\mathbf{q}}_{j} \in \mathbb{R}^{K}$: history item id embedding vector @ association network
+- $\overrightarrow{\mathbf{z}}_{u,i}$: predictive vector of user $u$ and item $i$
+- $\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$
+
 ## How to Modeling
 -----
 
 ![01](/_post_refer_img/RecommenderSystem/07-01.png){: width="100%"}
 
-- **Annotation**
-    - $u=1,2,\cdots,M$: user idx
-    - $i=1,2,\cdots,N$: item idx
-    - $\mathbf{Y} \in \mathbb{R}^{M \times N}$: user-item interaction matrix
-    - $\overrightarrow{\mathbf{u}}_{u} \in \mathbb{R}^{K}$: user id embedding vector @ affection network
-    - $\overrightarrow{\mathbf{v}}_{i} \in \mathbb{R}^{K}$: item id embedding vector @ affection network
-    - $\overrightarrow{\mathbf{p}}_{i} \in \mathbb{R}^{K}$: target item id embedding vector @ association network
-    - $\overrightarrow{\mathbf{q}}_{j} \in \mathbb{R}^{K}$: history item id embedding vector @ association network
-    - $\overrightarrow{\mathbf{z}}_{u,i}$: predictive vector of user $u$ and item $i$
-    - $\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$
-
-- **Dual-Relation Network**
+- Dual-Relation Network:
 
     $$\begin{aligned}
     \hat{y}_{u,i}
@@ -92,8 +94,7 @@ image:
 
     $$\begin{aligned}
     \overrightarrow{\mathbf{x}}_{u}
-    &= \text{ATTN}(\overrightarrow{\mathbf{h}},\overrightarrow{\mathbf{z}}_{u,j}^{\text{(AFFECT)}},\overrightarrow{\mathbf{q}}_{j})
-    \quad \text{for} \quad j \in \mathcal{R}_{u}^{+} \setminus \{i\}
+    &= \text{ATTN}(\overrightarrow{\mathbf{h}},\text{Affection}(u,\forall j \in \mathcal{R}_{u}^{+} \setminus \{i\}), \mathbf{Q}[\forall j \in \mathcal{R}_{u}^{+} \setminus \{i\},:])
     \end{aligned}$$
 
 - Predictive Vector of user $u$ and item $i$:

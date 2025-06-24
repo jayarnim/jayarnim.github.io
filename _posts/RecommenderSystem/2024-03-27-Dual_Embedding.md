@@ -39,19 +39,21 @@ image:
     DELF: A dual-embedding based deep latent factor model for recommendation.\\
     In IJCAI (Vol. 18, pp. 3329-3335).
 
+### Notation
+
+- $u=1,2,\cdots,M$: user idx
+- $i=1,2,\cdots,N$: item idx
+- $\mathbf{R} \in \mathbb{R}^{M \times N}$: user-item interaction matrix
+- $\overrightarrow{\mathbf{p}}_{u} \in \mathbb{R}^{K}$: user ID embedding vector
+- $\overrightarrow{\mathbf{q}}_{i} \in \mathbb{R}^{K}$: item ID embedding vector
+- $\overrightarrow{\mathbf{m}}_{u} \in \mathbb{R}^{K}$: user history embedding vector
+- $\overrightarrow{\mathbf{n}}_{i} \in \mathbb{R}^{K}$: item history embedding vector
+- $\overrightarrow{\mathbf{z}}_{u,i}$: predictive vector of user $u$ and item $i$
+- $\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$
+
 ### How to Modeling
 
 ![01](/_post_refer_img/RecommenderSystem/06-01.png){: width="100%"}
-
-- **Annotation**
-    - $u=1,2,\cdots,M$: user idx
-    - $i=1,2,\cdots,N$: item idx
-    - $\overrightarrow{\mathbf{p}}_{u} \in \mathbb{R}^{K}$: user ID embedding vector
-    - $\overrightarrow{\mathbf{q}}_{i} \in \mathbb{R}^{K}$: item ID embedding vector
-    - $\overrightarrow{\mathbf{m}}_{u} \in \mathbb{R}^{K}$: user history embedding vector
-    - $\overrightarrow{\mathbf{n}}_{i} \in \mathbb{R}^{K}$: item history embedding vector
-    - $\overrightarrow{\mathbf{z}}_{u,i}$: predictive vector of user $u$ and item $i$
-    - $\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$
 
 - ID Embedding:
 
@@ -66,9 +68,9 @@ image:
 
     $$\begin{aligned}
     \overrightarrow{\mathbf{m}}_{u}
-    &=\text{ATTN}(\overrightarrow{\mathbf{h}}^{\text{(user)}}, \overrightarrow{\mathbf{h}}_{j \in \mathcal{R}_{u}^{+} \setminus \{i\}}, \overrightarrow{\mathbf{y}}_{j \in \mathcal{R}_{u}^{+} \setminus \{i\}})\\
+    &=\text{ATTN}(\overrightarrow{\mathbf{h}}^{\text{(user)}}, \mathbf{H}[\forall j \in \mathcal{R}_{u}^{+} \setminus \{i\},:], \mathbf{Y}[\forall j \in \mathcal{R}_{u}^{+} \setminus \{i\},:])\\
     \overrightarrow{\mathbf{n}}_{i}
-    &=\text{ATTN}(\overrightarrow{\mathbf{h}}^{\text{(item)}}, \overrightarrow{\mathbf{h}}_{v \in \mathcal{R}_{i}^{+} \setminus \{u\}}, \overrightarrow{\mathbf{x}}_{v \in \mathcal{R}_{i}^{+} \setminus \{u\}})
+    &=\text{ATTN}(\overrightarrow{\mathbf{h}}^{\text{(item)}}, \mathbf{H}[\forall v \in \mathcal{R}_{i}^{+} \setminus \{u\},:], \mathbf{X}[\forall v \in \mathcal{R}_{i}^{+} \setminus \{u\},:])
     \end{aligned}$$
 
 - Pairwise Neural Interaction Layers:
@@ -162,22 +164,23 @@ image:
     - `DMLP`: `D`ual-Embedding based `M`ulti-`L`ayer `P`erceptron
     - `DNMF`: `DGMF` & `DMLP` Ensemble
 
+### Notation
+
+- $u=1,2,\cdots,M$: user idx
+- $i=1,2,\cdots,N$: item idx
+- $\mathbf{Y} \in \mathbb{R}^{M \times N}$: user-item interaction matrix
+- $\overrightarrow{\mathbf{p}}_{u} \in \mathbb{R}^{K}$: user ID embedding vector
+- $\overrightarrow{\mathbf{q}}_{i} \in \mathbb{R}^{K}$: item ID embedding vector
+- $\overrightarrow{\mathbf{m}}_{u} \in \mathbb{R}^{K}$: user history embedding vector
+- $\overrightarrow{\mathbf{n}}_{i} \in \mathbb{R}^{K}$: item history embedding vector
+- $\overrightarrow{\mathbf{u}}_{u}$: user embedding combination vector
+- $\overrightarrow{\mathbf{v}}_{i}$: item embedding combination vector
+- $\overrightarrow{\mathbf{z}}_{u,i}$: predictive vector of user $u$ and item $i$
+- $\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$
+
 ### How to Modeling
 
 ![02](/_post_refer_img/RecommenderSystem/06-02.png){: width="100%"}
-
-- **Annotation**
-    - $u=1,2,\cdots,M$: user idx
-    - $i=1,2,\cdots,N$: item idx
-    - $\mathbf{Y} \in \mathbb{R}^{M \times N}$: user-item interaction matrix
-    - $\overrightarrow{\mathbf{p}}_{u} \in \mathbb{R}^{K}$: user ID embedding vector
-    - $\overrightarrow{\mathbf{q}}_{i} \in \mathbb{R}^{K}$: item ID embedding vector
-    - $\overrightarrow{\mathbf{m}}_{u} \in \mathbb{R}^{K}$: user history embedding vector
-    - $\overrightarrow{\mathbf{n}}_{i} \in \mathbb{R}^{K}$: item history embedding vector
-    - $\overrightarrow{\mathbf{u}}_{u}$: user embedding combination vector
-    - $\overrightarrow{\mathbf{v}}_{i}$: item embedding combination vector
-    - $\overrightarrow{\mathbf{z}}_{u,i}$: predictive vector of user $u$ and item $i$
-    - $\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$
 
 - `DNMF` is `DGMF` & `DMLP` Ensemble
 

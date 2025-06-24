@@ -53,18 +53,20 @@ image:
     - **`NCF`(`N`eural `C`ollaborative `F`iltering)** : 벡터 결합 및 다층 신경망(MLP) 기반 비선형 매칭 함수 학습 모듈
     - **`NeuMF`(`Neu`ral `M`atrix `F`actorization)** : GMF 와 NCF 의 예측 벡터(Predictive Vector)를 종합하여 예측을 수행하는 앙상블 모형
 
+## Notation
+-----
+
+- $u=1,2,\cdots,M$: user idx
+- $i=1,2,\cdots,N$: item idx
+- $\overrightarrow{\mathbf{u}}_{u} \in \mathbb{R}^{K}$: user latent factor vector
+- $\overrightarrow{\mathbf{v}}_{i} \in \mathbb{R}^{K}$: item latent factor vector
+- $\overrightarrow{\mathbf{z}}_{u,i} \in \mathbb{R}^{K}$: predictive vector of user $u$ and item $i$
+- $\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$
+
 ## How to Modeling
 -----
 
 ![04](/_post_refer_img/RecommenderSystem/04-04.png){: width="100%"}
-
-- **Annotation**
-    - $u=1,2,\cdots,M$: user idx
-    - $i=1,2,\cdots,N$: item idx
-    - $\overrightarrow{\mathbf{u}}_{u} \in \mathbb{R}^{K}$: user latent factor vector
-    - $\overrightarrow{\mathbf{v}}_{i} \in \mathbb{R}^{K}$: item latent factor vector
-    - $\overrightarrow{\mathbf{z}}_{u,i} \in \mathbb{R}^{K}$: predictive vector of user $u$ and item $i$
-    - $\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$
 
 - `NeuMF` is `GMF` & `NCF` Ensemble
 

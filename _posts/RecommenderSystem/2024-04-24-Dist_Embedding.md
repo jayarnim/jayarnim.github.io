@@ -57,21 +57,23 @@ image:
     - `MaFL`: `Ma`tching `F`unction `L`earning
     - `DDFL`: `MeFL` & `MaFL` Ensemble
 
+## Notation
+-----
+
+- $u=1,2,\cdots,M$: user idx
+- $i=1,2,\cdots,N$: item idx
+- $\mathbf{Y} \in \mathbb{R}^{M \times N}$: user-item interaction matrix
+- $\overrightarrow{\mathbf{p}}_{u} \in \mathbb{R}^{K}$: user latent factor vector @ `MeFL`
+- $\overrightarrow{\mathbf{q}}_{i} \in \mathbb{R}^{K}$: item latent factor vector @ `MeFL`
+- $\overrightarrow{\mathbf{u}}_{u} \in \mathbb{R}^{K}$: user latent factor vector @ `MaFL`
+- $\overrightarrow{\mathbf{v}}_{i} \in \mathbb{R}^{K}$: item latent factor vector @ `MaFL`
+- $\overrightarrow{\mathbf{z}}_{u,i}$: predictive vector of user $u$ and item $i$
+- $\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$
+
 ## How to Modeling
 -----
 
 ![01](/_post_refer_img/RecommenderSystem/08-01.png){: width="100%"}
-
-- **Annotation**
-    - $u=1,2,\cdots,M$: user idx
-    - $i=1,2,\cdots,N$: item idx
-    - $\mathbf{Y} \in \mathbb{R}^{M \times N}$: user-item interaction matrix
-    - $\overrightarrow{\mathbf{p}}_{u} \in \mathbb{R}^{K}$: user latent factor vector @ `MeFL`
-    - $\overrightarrow{\mathbf{q}}_{i} \in \mathbb{R}^{K}$: item latent factor vector @ `MeFL`
-    - $\overrightarrow{\mathbf{u}}_{u} \in \mathbb{R}^{K}$: user latent factor vector @ `MaFL`
-    - $\overrightarrow{\mathbf{v}}_{i} \in \mathbb{R}^{K}$: item latent factor vector @ `MaFL`
-    - $\overrightarrow{\mathbf{z}}_{u,i}$: predictive vector of user $u$ and item $i$
-    - $\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$
 
 - `DDFL` is `MeFL` & `MaFL` Ensemble:
 
