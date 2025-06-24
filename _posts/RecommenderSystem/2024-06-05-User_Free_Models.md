@@ -12,3 +12,12 @@ description: >-
 image:
     path: /_post_refer_img/RecommenderSystem/Thumbnail.jpg
 ---
+
+## SLIM
+-----
+
+## FISM
+-----
+
+## NAIS
+-----
