@@ -885,6 +885,50 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -992,9 +1036,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="606 words"
+  title="1437 words"
 >
-  <em>3 min</em> read</span>
+  <em>7 min</em> read</span>
 
         </div>
       </div>
@@ -1005,28 +1049,82 @@
     <h2 id="autorec"><span class="me-2">AutoRec</span><a href="#autorec" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
+<ul>
+  <li><strong>문제 의식</strong>
+    <ul>
+      <li><strong><code class="language-plaintext highlighter-rouge">RBM-CF</code>(<code class="language-plaintext highlighter-rouge">R</code>estricted <code class="language-plaintext highlighter-rouge">B</code>oltzmann <code class="language-plaintext highlighter-rouge">M</code>achines for <code class="language-plaintext highlighter-rouge">C</code>ollaborative <code class="language-plaintext highlighter-rouge">F</code>iltering)</strong>: <strong>확률적 생성 모형으로서,</strong> 평점값마다 별도의 파라미터를 설정하므로 학습 파라미터 수가 급증하고, 확률 생성 과정을 근사 학습하므로 수렴 속도가 느림</li>
+      <li><strong><code class="language-plaintext highlighter-rouge">LLORMA</code>(<code class="language-plaintext highlighter-rouge">L</code>ocal <code class="language-plaintext highlighter-rouge">Lo</code>w-<code class="language-plaintext highlighter-rouge">R</code>ank <code class="language-plaintext highlighter-rouge">M</code>atrix <code class="language-plaintext highlighter-rouge">A</code>pproximation)</strong>: <strong>행렬분해 기반 잠재요인 모형으로서,</strong> 사용자 취향이 전역적으로 일관되지 않을 수 있다는 전제 하에 사용자-아이템 상호작용 행렬을 다수의 하위 행렬로 재구성하고, 각각을 지역적 저차원(Local Low Rank)으로 근사하나, 구조가 복잡함</li>
+    </ul>
+  </li>
+  <li><strong><a href="https://doi.org/10.1145/2740908.2742726"><code class="language-plaintext highlighter-rouge">AutoRec</code></a></strong>: 오토인코더 기반 협업필터링 모형으로서, <strong>연속적 출력값을 결정론적 함수로 도출하는 단일 신경망 구조를 통해</strong> 선행 협업필터링 모형에 비해 계산 효율성과 구조적 간결성을 도모함
+    <ul>
+      <li>Sedhain, S., Menon, A. K., Sanner, S., &amp; Xie, L.<br />
+  (2015, May).<br />
+  Autorec: Autoencoders meet collaborative filtering.<br />
+  In Proceedings of the 24th international conference on World Wide Web (pp. 111-112).</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="notation"><span class="me-2">Notation</span><a href="#notation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>$u=1,2,\cdots,M$: user idx</li>
+  <li>$i=1,2,\cdots,N$: item idx</li>
+  <li>$\mathbf{R} \in \mathbb{R}^{M \times N}$: user-item <strong>explicit feedback</strong> matrix</li>
+  <li>$\mathbf{V} \in \mathbb{R}^{M \times K}$: linear transformation matrix @ encoder</li>
+  <li>$\mathbf{W} \in \mathbb{R}^{K \times M}$: linear transformation matrix @ decoder</li>
+  <li>$\overrightarrow{\beta} \in \mathbb{R}^{K}$: bias vector @ encoder</li>
+  <li>$\overrightarrow{\mathbf{b}} \in \mathbb{R}^{M}$: bias vector @ decoder</li>
+  <li>$f(\cdot)$: activation function @ encoder</li>
+  <li>$g(\cdot)$: activation function @ decoder</li>
+</ul>
+
+<h3 id="how-to-modeling"><span class="me-2">How to Modeling</span><a href="#how-to-modeling" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
 <p><a href="/_post_refer_img/RecommenderSystem/12-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/12-01.png" alt="01" width="100%" loading="lazy"></a></p>
 
 <ul>
-  <li><strong>AutoRec</strong> : 오토인코더를 활용한 협업필터링 모형으로서, 사용자-아이템 상호작용 행렬(\(\mathbf{R}\), If User based Collaborative Filtering) 혹은 아이템-사용자 상호작용 행렬(\(\mathbf{R}^{T}\), If Item based Collaborative Filtering)의 입력 벡터를 저차원 공간으로 축소했다가 복원하는 과정을 통해 누락된 평점을 예측함
+  <li>
+    <p><strong>Prediction</strong></p>
+
+\[\begin{aligned}
+  \hat{\mathbf{r}}_{i}
+  &amp;= g\left[\mathbf{W} \cdot f(\mathbf{V} \cdot \overrightarrow{\mathbf{r}}_{i} + \overrightarrow{\beta}) + \overrightarrow{\mathbf{b}} \right]
+  \end{aligned}\]
+
     <ul>
-      <li><a href="https://doi.org/10.1145/2740908.2742726">AutoRec: Autoencoders Meet Collaborative Filtering(2015)</a></li>
+      <li>
+        <p>Encoder(Dimensionality Reduction):</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{z}}_{i}
+  &amp;= f(\mathbf{V} \cdot \overrightarrow{\mathbf{r}}_{i} + \overrightarrow{\beta})
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>Decoder(Reconstruction):</p>
+
+\[\begin{aligned}
+  \hat{\mathbf{r}}_{i}
+  &amp;= g(\mathbf{W} \cdot \overrightarrow{\mathbf{z}}_{i} + \overrightarrow{\mathbf{b}})
+  \end{aligned}\]
+      </li>
     </ul>
   </li>
   <li>
     <p><strong>Optimization</strong></p>
 
 \[\begin{aligned}
-  \hat{\theta}, \hat{\phi}, \hat{\mathbf{z}} \mid K = \text{arg} \min{\sum_{(u,i) \in \Omega}{\Vert r_{u,i} - \hat{r}_{u,i}\Vert^{2}} + \lambda_{\Theta} \Vert \Theta \Vert^{2}}
+  \hat{\Theta}
+  &amp;= \text{arg} \min{\sum_{i=1}^{N}{\Vert \overrightarrow{\mathbf{r}}_{i} - h(\overrightarrow{\mathbf{r}}_{i} ; \Theta) \Vert_{\mathcal{O}}^{2}} + \frac{\lambda}{2}\Vert \Theta \Vert_{F}^{2}}
   \end{aligned}\]
 
     <ul>
-      <li>Encoder: \(\overrightarrow{\mathbf{z}}_{u}=F(\overrightarrow{\mathbf{r}}_{u} \mid \theta)\)
-        <ul>
-          <li>$K$ is Latent Space Dimension</li>
-        </ul>
-      </li>
-      <li>Decoder: \(\hat{\mathbf{r}}_{u}=G(\overrightarrow{\mathbf{z}}_{u} \mid \phi)\)</li>
+      <li>\(h(\overrightarrow{\mathbf{r}}_{i} ; \Theta)\): Reconstruction Output</li>
+      <li>\(\Theta\): Learning Parameters</li>
+      <li>\(\Vert \cdot \Vert_{\mathcal{O}}^{2}\): L2 Loss Computed only for Observed Entries</li>
+      <li>\(\Vert \cdot \Vert_{F}^{2}\): Regularization Term</li>
     </ul>
   </li>
 </ul>
@@ -1034,32 +1132,102 @@
 <h2 id="cdae"><span class="me-2">CDAE</span><a href="#cdae" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
+<ul>
+  <li><strong>문제 의식</strong>: <code class="language-plaintext highlighter-rouge">AutoRec</code> 의 한계점
+    <ul>
+      <li><strong>Implicit Feedback Problem</strong>
+        <ul>
+          <li><strong>구조적 편향 문제(Structural Bias)</strong>: 관측과 미관측이 특정한 선택 경로와 제약 조건 하에서 발생했다는 점을 간과하고 선호와 비선호로 이분하는 데서 오는 체계적 왜곡</li>
+          <li><strong>자명해 문제(Trivial Solution)</strong>: <code class="language-plaintext highlighter-rouge">AutoRec</code> 은 명시적 피드백 데이터 하에서 관측만을 사용하여 최적화를 수행하나, 암시적 피드백 데이터 하에서 이는 모든 상호작용을 $1$ 로 예측하는 자명해로 수렴함</li>
+        </ul>
+      </li>
+      <li><strong>Personalization Problem</strong>: <code class="language-plaintext highlighter-rouge">AutoRec</code> 은 행렬 복원에 초점을 맞추어 최적화를 수행하므로 히스토리는 유사하나 잠재적 선호 구조(latent preference structure)는 다른 사용자들 간에 제공되는 추천의 개인화가 미흡할 수 있음</li>
+    </ul>
+  </li>
+  <li><strong><a href="https://doi.org/10.1145/2835776.2835837"><code class="language-plaintext highlighter-rouge">CDAE</code></a>(<code class="language-plaintext highlighter-rouge">C</code>ollaborative <code class="language-plaintext highlighter-rouge">D</code>enoising <code class="language-plaintext highlighter-rouge">A</code>uto<code class="language-plaintext highlighter-rouge">E</code>ncoder)</strong>: 잡음을 활용하여 암시적 피드백 데이터 하에서 손상된 선호도를 복원하고, 사용자 잠재 벡터를 활용하여 개인화 성능 향상을 꾀하는 오토인코더 기반 협업필터링 모형
+    <ul>
+      <li>Wu, Y., DuBois, C., Zheng, A. X., &amp; Ester, M.<br />
+  (2016, February).<br />
+  Collaborative denoising auto-encoders for top-n recommender systems.<br />
+  In Proceedings of the ninth ACM international conference on web search and data mining (pp. 153-162).</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="notation-1"><span class="me-2">Notation</span><a href="#notation-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>$u=1,2,\cdots,M$: user idx</li>
+  <li>$i=1,2,\cdots,N$: item idx</li>
+  <li>$\mathbf{Y} \in \mathbb{R}^{M \times N}$: user-item <strong>implicit feedback</strong> matrix</li>
+  <li>$\mathbf{X} \in \mathbb{R}^{M \times N}$: masked $\mathbf{Y}$</li>
+  <li>$\mathbf{M} \in \mathbb{R}^{M \times N}$: masking matrix</li>
+  <li>$\overrightarrow{\mathbf{u}}_{u} \in \mathbb{R}^{K}$: user latent factor vector</li>
+  <li>$\mathbf{V} \in \mathbb{R}^{M \times K}$: linear transformation matrix @ encoder</li>
+  <li>$\mathbf{W} \in \mathbb{R}^{K \times M}$: linear transformation matrix @ decoder</li>
+  <li>$\overrightarrow{\beta} \in \mathbb{R}^{K}$: bias vector @ encoder</li>
+  <li>$\overrightarrow{\mathbf{b}} \in \mathbb{R}^{M}$: bias vector @ decoder</li>
+  <li>$f(\cdot)$: activation function @ encoder</li>
+  <li>$g(\cdot)$: activation function @ decoder</li>
+</ul>
+
+<h3 id="how-to-modeling-1"><span class="me-2">How to Modeling</span><a href="#how-to-modeling-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
 <p><a href="/_post_refer_img/RecommenderSystem/12-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/12-02.png" alt="02" width="100%" loading="lazy"></a></p>
 
 <ul>
-  <li><strong>CDAE(<code class="language-plaintext highlighter-rouge">C</code>ollaborative <code class="language-plaintext highlighter-rouge">D</code>enoising <code class="language-plaintext highlighter-rouge">A</code>uto<code class="language-plaintext highlighter-rouge">E</code>ncoder)</strong> : 암시적 피드백에서, 관찰된 사용자-아이템 상호작용이 실제 선호도가 손상된 상태 혹은 편향된 상태라고 가정하고, 잡음 제거 오토인코더(<code class="language-plaintext highlighter-rouge">D</code>enoising <code class="language-plaintext highlighter-rouge">A</code>uto<code class="language-plaintext highlighter-rouge">E</code>ncoder)를 활용하여 손상된 선호도를 복원함
+  <li>
+    <p><strong>Generate Masking Noise</strong></p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{x}}_{u}
+  &amp;= \overrightarrow{\mathbf{y}}_{u} \odot \overrightarrow{\mathbf{m}}_{u}, \quad \overrightarrow{\mathbf{m}}_{u} \sim \text{Bernouli}(1-p)^{N}
+  \end{aligned}\]
+
     <ul>
-      <li><a href="https://doi.org/10.1145/2835776.2835837">Collaborative Denoising Auto-Encoders for Top-N Recommender Systems(2016)</a></li>
+      <li>\(\overrightarrow{\mathbf{m}}_{u} \sim \text{Bernouli}(1-p)^{N}\): \(m_{u,i} \sim \text{Bernouli}(1-p)\) independently</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Prediction</strong></p>
+
+\[\begin{aligned}
+  \hat{\mathbf{y}}_{u}
+  &amp;= g\left[\mathbf{W} \cdot f(\mathbf{V} \cdot \overrightarrow{\mathbf{x}}_{u} + \overrightarrow{\mathbf{u}}_{u} + \overrightarrow{\beta}) + \overrightarrow{\mathbf{b}} \right]
+  \end{aligned}\]
+
+    <ul>
+      <li>
+        <p>Encoder(Dimensionality Reduction):</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{z}}_{u}
+  &amp;= f(\mathbf{V} \cdot \overrightarrow{\mathbf{x}}_{u} + \overrightarrow{\mathbf{u}}_{u} + \overrightarrow{\beta})
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>Decoder(Reconstruction):</p>
+
+\[\begin{aligned}
+  \hat{\mathbf{y}}_{u}
+  &amp;= g(\mathbf{W} \cdot \overrightarrow{\mathbf{z}}_{u} + \overrightarrow{\mathbf{b}})
+  \end{aligned}\]
+      </li>
     </ul>
   </li>
   <li>
     <p><strong>Optimization</strong></p>
 
 \[\begin{aligned}
-  \hat{\theta}, \hat{\phi}, \hat{\mathbf{z}}, \hat{v} \mid K, p = \text{arg} \min{\sum_{(u,i) \in \Omega}{\Vert r_{u,i} - \hat{r}_{u,i}\Vert^{2}} + \lambda_{\Theta} \Vert \Theta \Vert^{2}}
+  \Theta
+  &amp;= \text{arg} \min{\frac{1}{M}\sum_{u=1}^{M}{\mathbb{E}_{\mathbf{X} \sim P(\cdot \mid \mathbf{Y})}[\mathcal{L}(\mathbf{y}_{u}, \hat{\mathbf{y}}_{u})] + \frac{\lambda}{2} \Vert \Theta \Vert_{F}^{2}}}
   \end{aligned}\]
 
     <ul>
-      <li>
-        <p>Generate Masking Noise: \(x_{u,i} = r_{u,i} \cdot m, \quad m \sim \text{Bernouli}(1-p)\)</p>
-      </li>
-      <li>Encoder: \(\overrightarrow{\mathbf{z}}_{u}=F(\overrightarrow{\mathbf{x}}_{u}, v_{u} \mid \theta)\)
-        <ul>
-          <li>$K$ is Latent Space Dimension</li>
-          <li>$v_{u}$ is Bias of User $u$</li>
-        </ul>
-      </li>
-      <li>Decoder: \(\hat{\mathbf{r}}_{u}=G(\overrightarrow{\mathbf{z}}_{u} \mid \phi)\)</li>
+      <li>\(\mathcal{L}(\mathbf{y}_{u}, \hat{\mathbf{y}}_{u})\): Reconstruction Loss</li>
+      <li>\(\mathbb{E}_{\mathbf{X} \sim P(\cdot \mid \mathbf{Y})}\): Average Loss because of Stochasticity of Noise</li>
+      <li>\(\Theta\): Learning Parameters</li>
+      <li>\(\Vert \cdot \Vert_{F}^{2}\): Regularization Term</li>
     </ul>
   </li>
 </ul>
@@ -1067,77 +1235,94 @@
 <h2 id="mult-vae"><span class="me-2">Mult-VAE</span><a href="#mult-vae" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<p><a href="/_post_refer_img/RecommenderSystem/12-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/12-03.png" alt="03" width="100%" loading="lazy"></a></p>
-
 <ul>
-  <li><strong>Mult-VAE(<code class="language-plaintext highlighter-rouge">Mult</code>inomial <code class="language-plaintext highlighter-rouge">V</code>ariational <code class="language-plaintext highlighter-rouge">A</code>uto<code class="language-plaintext highlighter-rouge">E</code>ncoder)</strong> : 변분 오토인코더를 활용하여 <strong>파라미터를 확률적으로 추정(Probabilistic Parameter Estimation Using the Bayesian Method)</strong> 함으로써 암시적 피드백의 정보 불확실성을 반영하고, 이때 우도 함수로서 <strong>다항 우도 함수(Multinomial Likelihood Function)</strong> 를 적용하여 아이템 간 암묵적 경쟁 관계를 반영함
+  <li><strong>문제 의식</strong>
     <ul>
-      <li><a href="https://doi.org/10.1145/3178876.3186150">Variational Autoencoders for Collaborative Filtering(2018)</a></li>
+      <li><strong>Implicit Feedback Problem</strong>
+        <ul>
+          <li><strong>구조적 편향 문제(Structural Bias)</strong>: 관측을 선호, 미관측을 비선호로 확정적으로 간주하기에 불확실한 요소가 존재함(관측 불완전성)</li>
+          <li><strong>자명해 문제(Trivial Solution)</strong>: 관측과 미관측의 비율이 균등하지 않아 모든 상호작용을 $0$ 으로 예측하는 자명해로 수렴할 위험이 있음(데이터 희소성)</li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>Competitive Relationship between Items</strong>: 사용자 선택 과정에는 아이템 간 암묵적인 경쟁적 구조가 존재하므로 사용자가 특정 아이템과 상호작용할 확률은 다른 아이템과 상호작용할 확률과 독립적으로 계산되어서는 안 됨</p>
+      </li>
+      <li><strong>Uncertainty of Latent Representation</strong>: 관측 불완전성, 데이터 희소성 등 암시적 피드백 데이터의 정보 불확실성으로 인하여 사용자 잠재 선호를 확정적으로 도출하기에 문제가 있으므로 사용자 선호가 취할 수 있는 다양한 가능성을 고려해야 함</li>
+    </ul>
+  </li>
+  <li><strong><a href="https://doi.org/10.1145/3178876.3186150"><code class="language-plaintext highlighter-rouge">Mult-VAE</code></a>(<code class="language-plaintext highlighter-rouge">Mult</code>inomial <code class="language-plaintext highlighter-rouge">V</code>ariational <code class="language-plaintext highlighter-rouge">A</code>uto<code class="language-plaintext highlighter-rouge">E</code>ncoder)</strong>: 확률적 생성 과정을 통해 표현의 다양성을 확보하되, 사전 정보로 규제함으로써 과잉 표현을 규제하고 일반화를 도모하는 오토인코더 기반 협업필터링 모형
+    <ul>
+      <li>Liang, D., Krishnan, R. G., Hoffman, M. D., &amp; Jebara, T.<br />
+  (2018, April).<br />
+  Variational autoencoders for collaborative filtering.<br />
+  In Proceedings of the 2018 world wide web conference (pp. 689-698).</li>
     </ul>
   </li>
 </ul>
 
-<h3 id="bayesian-framework"><span class="me-2">Bayesian Framework</span><a href="#bayesian-framework" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="notation-2"><span class="me-2">Notation</span><a href="#notation-2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>$u=1,2,\cdots,M$: user idx</li>
+  <li>$i=1,2,\cdots,N$: item idx</li>
+  <li>$\mathbf{Y} \in \mathbb{R}^{M \times N}$: user-item <strong>implicit feedback</strong> matrix</li>
+  <li>$f(\cdot)$: encoder networks</li>
+  <li>$g(\cdot)$: decoder networks</li>
+</ul>
+
+<h3 id="how-to-modeling-2"><span class="me-2">How to Modeling</span><a href="#how-to-modeling-2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p><a href="/_post_refer_img/RecommenderSystem/12-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/12-03.png" alt="03" width="100%" loading="lazy"></a></p>
 
 <ul>
   <li>
-    <p>사용자 벡터 \(\overrightarrow{\mathbf{x}}_{u}\) 가 파라미터 \(\overrightarrow{\mathbf{z}}_{u}\) 에서 생성되었다고 가정하자. \(\overrightarrow{\mathbf{x}}_{u}\) 의 우도 함수:</p>
-
-\[\overrightarrow{\mathbf{x}_{u}} \mid \overrightarrow{\mathbf{z}}_{u} \sim \mathcal{L}\left(\Theta \right) = \text{Multinomial}\left(N_{u},\overrightarrow{\mathbf{p}}_{u}\right)\]
+    <p>Bayesian Framework</p>
 
     <ul>
-      <li>$N_{u}$ : 사용자 $u$ 의 총 상호작용 횟수</li>
       <li>
-        <p>\(\overrightarrow{\mathbf{p}}_{u}\) : 파라미터 \(\overrightarrow{\mathbf{z}}_{u}\) 로부터 계산된, 아이템에 대한 확률 벡터</p>
+        <p>$Q$ is approx. dist. of latent preference vector:</p>
 
-\[\overrightarrow{\mathbf{p}}_{u} = \text{Softmax}\left[G(\overrightarrow{\mathbf{z}}_{u}; \Theta)\right]\]
+\[\begin{aligned}
+  \overrightarrow{\mathbf{z}}_{u} \sim \mathcal{N}(\mu_{u}, \text{diag}(\sigma_{u}^{2}))
+  \end{aligned}\]
 
         <ul>
-          <li>$G(\Theta)$ : Decoder Network</li>
+          <li>$\mu_{u}, \text{diag}(\sigma_{u}^{2})$ is inferred by encoder networks $f(\cdot)$</li>
+        </ul>
+      </li>
+      <li>
+        <p>$\Pi$ is prior dist. of latent preference vector:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{z}}_{u} \sim \mathcal{N}(0, \mathbf{I})
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>$P$ is likelihood:</p>
+
+\[\begin{aligned}
+  \overrightarrow{\mathbf{y}}_{u} \mid \overrightarrow{\mathbf{z}}_{u} \sim \text{Multinomial}(\vert \mathcal{R}_{u}^{+} \vert, \delta[g(\overrightarrow{\mathbf{z}}_{u})])
+  \end{aligned}\]
+
+        <ul>
+          <li>\(\overrightarrow{\mathbf{y}}_{u} \mid \overrightarrow{\mathbf{z}}_{u}\) is generated by decoder networks \(g(\cdot)\)</li>
+          <li>to reflect the <strong>competitive relationship between items</strong> when the user selects an item,
+            <ul>
+              <li>likelihood is multinomial dist., not $n$ independent binomial dist.</li>
+              <li>$\delta(\cdot)$ is softmax function, not sigmoid function</li>
+            </ul>
+          </li>
         </ul>
       </li>
     </ul>
   </li>
   <li>
-    <p>파라미터 $\overrightarrow{\mathbf{z}}_{u}$ 의 사전 확률 분포 결정:</p>
-
-\[\overrightarrow{\mathbf{z}}_{u} \sim \mathcal{N}\left(0, \mathbf{I}_{K}\right)\]
-  </li>
-  <li>
-    <p>파라미터 $\overrightarrow{\mathbf{z}}_{u}$ 의 사후 확률 분포 추정:</p>
-
-\[p\left(\overrightarrow{\mathbf{z}}_{u} \mid \overrightarrow{\mathbf{x}}_{u} ; \Theta\right) \propto \mathcal{L}\left(\overrightarrow{\mathbf{x}}_{u} \mid \overrightarrow{\mathbf{z}}_{u} ; \Theta \right) \cdot \pi\left(\overrightarrow{\mathbf{z}}_{u}\right)\]
-  </li>
-</ul>
-
-<h3 id="variational-inference"><span class="me-2">Variational Inference</span><a href="#variational-inference" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li>
-    <p>\(\overrightarrow{\mathbf{z}}_{u} \mid \overrightarrow{\mathbf{x}}_{u} \sim P(\Theta)\) 의 근사 분포 \(\overrightarrow{\mathbf{z}}_{u} \sim Q(\Phi)\) 정의:</p>
+    <p>Objective Function is ELBO:</p>
 
 \[\begin{aligned}
-  q\left(\overrightarrow{\mathbf{z}}_{u} ; \Phi\right)
-  &amp;= \mathcal{N}\left(\mu(\overrightarrow{\mathbf{x}}_{u} ; \Phi), \text{diag}[\sigma^2(\overrightarrow{\mathbf{x}}_{u} ; \Phi)]\right)\\
-  &amp;\approx \mu(\overrightarrow{\mathbf{x}}_{u} ; \Phi) + \sigma(\overrightarrow{\mathbf{x}}_{u} ; \Phi) \odot \epsilon \quad \text{for} \quad \epsilon \sim \mathcal{N}\left(0, \mathbf{I}_{K}\right)
+  \hat{\Theta}
+  &amp;= \text{arg} \max{\mathbb{E}_{\mathbf{Z} \mid \mathbf{Y} \sim Q}[\log{p(\overrightarrow{\mathbf{y}}_{u} \mid \overrightarrow{\mathbf{z}}_{u})}] - \beta \cdot KL[Q(\overrightarrow{\mathbf{z}}_{u}) \Vert \Pi(\overrightarrow{\mathbf{z}}_{u})]}
   \end{aligned}\]
-  </li>
-  <li>
-    <p>ELBO:</p>
-
-\[\text{ELBO}
-  = \underbrace{\mathbb{E}_{\mathbf{z}_{u} \sim Q(\Phi)}\Big[\log{\mathcal{L}\left(\overrightarrow{\mathbf{x}}_{u} \mid \overrightarrow{\mathbf{z}}_{u} ; \Theta \right)}\Big]}_{-\text{Reconstruction Loss}} - \beta \cdot \underbrace{D_{KL}\Big[q\left(\overrightarrow{\mathbf{z}}_{u} ; \Phi\right) \parallel \pi\left(\overrightarrow{\mathbf{z}}_{u}\right)\Big]}_{\text{KL Divergence}}\]
-  </li>
-  <li>
-    <p>Optimization:</p>
-
-\[\hat{\Theta},\hat{\Phi} \mid K, \beta
-  = \text{arg}\max_{\Theta,\Phi}{\text{ELBO}}\]
-
-    <ul>
-      <li>$K$ : Dimension of Latent Space</li>
-      <li>$0 \le \beta \le 1$ : KL Annealing Param</li>
-    </ul>
   </li>
 </ul>
 
