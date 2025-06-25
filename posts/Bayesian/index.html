@@ -842,6 +842,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -949,7 +960,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="4534 words"
+  title="4529 words"
 >
   <em>25 min</em> read</span>
 
@@ -1105,6 +1116,27 @@
       <li><code class="language-plaintext highlighter-rouge">s4</code> <em>사건은 고유한 확률을 갖지 않는다. 개인은 자신의 확률을 논리적으로 자유롭게 결정할 수 있다.</em></li>
       <li><code class="language-plaintext highlighter-rouge">s5</code> <em>합리적 개인의 신념은 확률론의 계산법과 무모순적이어야 하고, 동시에 그것에 의해 규제되어야 한다.</em></li>
     </ul>
+  </li>
+</ul>
+
+<h3 id="rule-of-conditionalization"><span class="me-2">Rule of Conditionalization</span><a href="#rule-of-conditionalization" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p>엄밀조건화 규칙(Rule of Strict Conditionalization)</p>
+
+\[\begin{aligned}
+  \Pi\left(\Theta\right)
+  &amp;= P\left(\Theta \mid \mathcal{D}\right)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>제프리 조건화 규칙(Jeffrey’s Conditionalization)</p>
+
+\[\begin{aligned}
+  \Pi\left(\Theta\right)
+  &amp;= Q\left(\mathcal{D}\right) \cdot P\left(\Theta \mid \mathcal{D}\right) + Q\left(\neg\mathcal{D}\right) \cdot p\left(\Theta \mid \neg\mathcal{D}\right)
+  \end{aligned}\]
   </li>
 </ul>
 
@@ -1283,28 +1315,6 @@
     <blockquote>
       <p>관측치 \(X \sim P(\theta)\), 모수 \(\theta \in \Theta\), 사전 확률 분포 \(\Pi\), 참 모수 \(\theta^{*}\) 에 대하여, \(\theta^{*}\) 의 근방에 위치한 \(\theta\) 가 사전 확률 분포에서 양의 질량을 가진다고 하자. 즉, \(\Pi\left(\{\theta : D_{KL}\left[P_{\theta^{*}} \Vert P_{\theta}\right] &lt; \epsilon\}\right) &gt; 0\) 이다. 이때 사후 확률 분포는 장기적으로 \(\theta^{*}\) 에 집중된다. 즉, \(\Pi\left(\theta^{*} \mid X_{1}, \cdots, X_{n}\right) \xrightarrow{n \to \infty} 1\) 이다.</p>
     </blockquote>
-  </li>
-  <li>
-    <p><strong>조건화 규칙(Rule of Conditionalization)</strong></p>
-
-    <ul>
-      <li>
-        <p>엄밀조건화 규칙(Rule of Strict Conditionalization)</p>
-
-\[\begin{aligned}
-  \Pi\left(\Theta\right)
-  &amp;= P\left(\Theta \mid \mathcal{D}\right)
-  \end{aligned}\]
-      </li>
-      <li>
-        <p>제프리 조건화 규칙(Jeffrey’s Conditionalization)</p>
-
-\[\begin{aligned}
-  \Pi\left(\Theta\right)
-  &amp;= Q\left(\mathcal{D}\right) \cdot P\left(\Theta \mid \mathcal{D}\right) + Q\left(\neg\mathcal{D}\right) \cdot p\left(\Theta \mid \neg\mathcal{D}\right)
-  \end{aligned}\]
-      </li>
-    </ul>
   </li>
 </ul>
 
