@@ -717,6 +717,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -938,7 +949,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="4470 words"
+  title="4464 words"
 >
   <em>24 min</em> read</span>
 
@@ -1344,35 +1355,37 @@
       </li>
     </ul>
   </li>
+</ul>
+
+<h2 id="bayes-billiard-table-analogy"><span class="me-2">Bayes’ Billiard Table Analogy</span><a href="#bayes-billiard-table-analogy" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<p><a href="/_post_refer_img/BayesianModeling/01-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/01-01.png" alt="01" width="100%" loading="lazy"></a></p>
+
+<blockquote>
+  <p>당구대 $ABCD$ 를 가정하자. 공 $\mathcal{W}, \mathcal{O}$ 가 그 위에 굴려지면 어떤 하나의 동일한 부분에 정지할 동일한 확률을 가진다. $\mathcal{W}$ 으로 선분 $OS$ 의 위치가 결정된다. 그 우측 또는 좌측에 $\mathcal{O}$ 이 정지하는가에 따라서 사건 $Z$ 의 발생 또는 실패가 결정된다. $\mathcal{O}$ 를 연속하여 $n$ 회 던진 결과 $p$ 회만큼 우측에 정지했음이 관찰되었다. 이때 $AD$ 와 $OS$ 사이의 미지의 거리 $\theta$ 가 두 가지 값 $\alpha, \beta$ 사잇값을 취할 확률은?</p>
+</blockquote>
+
+<ul>
   <li>
-    <p><strong>당구대의 비유(Bayes’ Billiard Table Analogy)</strong></p>
-
-    <p><a href="/_post_refer_img/BayesianModeling/01-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/01-01.png" alt="01" width="100%" loading="lazy"></a></p>
-
-    <blockquote>
-      <p>당구대 $ABCD$ 를 가정하자. 공 $\mathcal{W}, \mathcal{O}$ 가 그 위에 굴려지면 어떤 하나의 동일한 부분에 정지할 동일한 확률을 가진다. $\mathcal{W}$ 으로 선분 $OS$ 의 위치가 결정된다. 그 우측 또는 좌측에 $\mathcal{O}$ 이 정지하는가에 따라서 사건 $Z$ 의 발생 또는 실패가 결정된다. $\mathcal{O}$ 를 연속하여 $n$ 회 던진 결과 $p$ 회만큼 우측에 정지했음이 관찰되었다. 이때 $AD$ 와 $OS$ 사이의 미지의 거리 $\theta$ 가 두 가지 값 $\alpha, \beta$ 사잇값을 취할 확률은?</p>
-    </blockquote>
-
-    <ul>
-      <li>
-        <p>공 $\mathcal{W}$ 가 던져지기 이전에 $\theta$ 가 $\alpha, \beta$ 사이에 있고, 사건 $Z$ 가 $n$ 번의 시행에서 $p$ 번 발생하고 $n-p$ 번 실패할 확률</p>
+    <p>공 $\mathcal{W}$ 가 던져지기 이전에 $\theta$ 가 $\alpha, \beta$ 사이에 있고, 사건 $Z$ 가 $n$ 번의 시행에서 $p$ 번 발생하고 $n-p$ 번 실패할 확률</p>
 
 \[\begin{aligned}
   P(\alpha &lt; \theta &lt; \beta, X=p)
   &amp;= \int_{\alpha}^{\beta}{\binom{n}{p} \theta^{p}(1-\theta)^{n-p}\text{d}\theta}
   \end{aligned}\]
-      </li>
-      <li>
-        <p>사건 $Z$ 가 $p$ 번 발생할 확률</p>
+  </li>
+  <li>
+    <p>사건 $Z$ 가 $p$ 번 발생할 확률</p>
 
 \[\begin{aligned}
   P(X=p)
   &amp;= P(0 &lt; \theta &lt; 1, X=p)\\
   &amp;= \int_{0}^{1}{\binom{n}{p} \theta^{p}(1-\theta)^{n-p}\text{d}\theta}
   \end{aligned}\]
-      </li>
-      <li>
-        <p>$\theta$ 의 값에 대해 어느 것도 알려지기 이전에($0&lt;\theta&lt;1$), 사건 $Z$ 가 $n$ 번의 시행에서 $p$ 번 발생하고 $n-p$ 번 실패한 것으로 드러날 때, 그로부터 $\theta$ 가 $\alpha, \beta$ 사이에 있다고 추측한다면, 그 추측이 옳을 확률</p>
+  </li>
+  <li>
+    <p>$\theta$ 의 값에 대해 어느 것도 알려지기 이전에($0&lt;\theta&lt;1$), 사건 $Z$ 가 $n$ 번의 시행에서 $p$ 번 발생하고 $n-p$ 번 실패한 것으로 드러날 때, 그로부터 $\theta$ 가 $\alpha, \beta$ 사이에 있다고 추측한다면, 그 추측이 옳을 확률</p>
 
 \[\begin{aligned}
   P(\alpha &lt; \theta &lt; \beta \mid X=p)
@@ -1380,8 +1393,6 @@
   &amp;= \frac{\int_{\alpha}^{\beta}{\cancel{\binom{n}{p}} \theta^{p}(1-\theta)^{n-p}\text{d}\theta}}{\int_{0}^{1}{\cancel{\binom{n}{p}} \theta^{p}(1-\theta)^{n-p}\text{d}\theta}}\\
   &amp;= \frac{\int_{\alpha}^{\beta}{\theta^{p}(1-\theta)^{n-p}\text{d}\theta}}{\int_{0}^{1}{\theta^{p}(1-\theta)^{n-p}\text{d}\theta}}
   \end{aligned}\]
-      </li>
-    </ul>
   </li>
   <li>
     <p><strong>예증(Scholium)</strong></p>
