@@ -39,12 +39,12 @@
 <meta property="og:site_name" content="Data Scientist" />
 <meta property="og:image" content="https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-01-16T00:00:00+09:00" />
+<meta property="article:published_time" content="2024-07-31T00:00:00+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg" />
 <meta property="twitter:title" content="Gaussian Process" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-16T00:00:00+09:00","datePublished":"2025-01-16T00:00:00+09:00","description":"Stochastic Process","headline":"Gaussian Process","image":"https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/GP/"},"url":"https://jayarnim.github.io/posts/GP/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-31T00:00:00+09:00","datePublished":"2024-07-31T00:00:00+09:00","description":"Stochastic Process","headline":"Gaussian Process","image":"https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/GP/"},"url":"https://jayarnim.github.io/posts/GP/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1063,13 +1063,13 @@
 
 <time
   
-  data-ts="1736953200"
+  data-ts="1722351600"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Jan 16, 2025
+  Jul 31, 2024
 </time>
 
       </span>
@@ -1127,9 +1127,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="2188 words"
+  title="2035 words"
 >
-  <em>12 min</em> read</span>
+  <em>11 min</em> read</span>
 
         </div>
       </div>
@@ -1147,46 +1147,6 @@
     <blockquote>
       <p>어떤 시점 혹은 위치 지표 $t$ 에 대하여 확률변수들의 집합 \(\{X_{t} \mid t \in T\}\) 이 주어졌을 때 이를 확률적 과정이라고 한다. 즉, 확률적 과정은 시간 또는 공간을 따라 변화하는 확률변수들의 집합으로서, 특정한 시점 또는 위치에서 확률변수가 결정된다. 이때 시간 또는 공간을 따라 확률변수가 변하는 양상은 특정한 확률적 패턴을 가질 수 있다.</p>
     </blockquote>
-  </li>
-  <li>
-    <p><strong>vs. Deterministic</strong></p>
-
-    <ul>
-      <li>
-        <p><strong>결정론적 과정(Deterministic Process)</strong> : 시스템의 상태가 주어지면 미래 상태가 항상 유일하게 결정되므로 동일한 초기 조건에서는 항상 동일한 경로(Trajectory)가 생성됨</p>
-
-        <ul>
-          <li>
-            <p><strong><code class="language-plaintext highlighter-rouge">EXAMPLE</code> Deterministic Auto-Regressive Model</strong></p>
-
-\[\begin{aligned}
-  X_{t}
-  &amp;= \beta + \sum_{i=1}^{p}{\alpha_{i} \cdot X_{t-i}}
-  \end{aligned}\]
-          </li>
-        </ul>
-      </li>
-      <li>
-        <p><strong>확률적 과정(Stochastic Process)</strong> : 초기 조건이 동일하더라도 매 실행(Realization)마다 다른 경로(Trajectory)가 생성될 수 있음</p>
-
-        <ul>
-          <li>
-            <p><strong><code class="language-plaintext highlighter-rouge">EXAMPLE</code> Auto-Regressive Model</strong> | Stochastic Error</p>
-
-\[\begin{aligned}
-  X_{t} = \beta + \sum_{i=1}^{p}{\alpha_{i} \cdot X_{t-i}} + \epsilon_{t}, \quad \epsilon_{t} \sim \mathcal{N}\left(0, \sigma^{2}\right)
-  \end{aligned}\]
-          </li>
-          <li>
-            <p><strong><code class="language-plaintext highlighter-rouge">EXAMPLE</code> Auto-Regressive Model</strong> | Stochastic Initial Variable</p>
-
-\[\begin{aligned}
-  X_{t} = \beta + \sum_{i=1}^{p}{\alpha_{i} \cdot X_{t-i}}, \quad X_{0} \sim \mathcal{N}\left(\mu, \sigma^{2}\right)
-  \end{aligned}\]
-          </li>
-        </ul>
-      </li>
-    </ul>
   </li>
   <li>
     <p><strong>Stochastic Patterns</strong></p>
@@ -1282,7 +1242,7 @@
   <li>
     <p><strong>커널 밀도 추정(<code class="language-plaintext highlighter-rouge">K</code>ernel <code class="language-plaintext highlighter-rouge">D</code>ensity <code class="language-plaintext highlighter-rouge">E</code>stimation; KDE)</strong> : 각 데이터 주변에서 작은 확률 분포(Kernel)를 만든 후, 이를 합산하여 전체 밀도를 추정하는 방법</p>
 
-    <p><a href="/_post_refer_img/BayesianModeling/13-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/13-02.png" alt="02" width="100%" loading="lazy"></a></p>
+    <p><a href="/_post_refer_img/BayesianModeling/03-05-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/03-05-02.png" alt="02" width="100%" loading="lazy"></a></p>
   </li>
   <li>
     <p><strong>확률 밀도 함수(Probability Density Function)</strong></p>
@@ -1302,7 +1262,7 @@
   <li>
     <p><strong>밴드위스(Bandwidth)</strong> : 커널의 너비를 조절하는 하이퍼파라미터로서, 값이 클수록 전역적 패턴을, 작을수록 국소적 패턴을 포착함</p>
 
-    <p><a href="/_post_refer_img/BayesianModeling/13-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/13-01.png" alt="01" width="100%" loading="lazy"></a></p>
+    <p><a href="/_post_refer_img/BayesianModeling/03-05-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/03-05-01.png" alt="01" width="100%" loading="lazy"></a></p>
   </li>
   <li>
     <p><strong>커널 함수(Kernel Function)</strong> : 특정 데이터 포인트 주변의 밀도를 조절하는 함수</p>
@@ -1353,7 +1313,7 @@
   <li>
     <p><strong>다변량 가우시안 분포(<code class="language-plaintext highlighter-rouge">M</code>ulti-<code class="language-plaintext highlighter-rouge">V</code>ariate Gaussian/<code class="language-plaintext highlighter-rouge">N</code>ormal Distribution; MVN)</strong> : 유한 차원의 상관된 가우시안 확률변수 벡터에 대해 정의되는 가우시안 분포</p>
 
-    <p><a href="/_post_refer_img/BayesianModeling/13-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/13-03.png" alt="02" width="100%" loading="lazy"></a></p>
+    <p><a href="/_post_refer_img/BayesianModeling/03-05-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/03-05-03.png" alt="02" width="100%" loading="lazy"></a></p>
   </li>
   <li>
     <p><strong>Definition</strong></p>
@@ -1467,7 +1427,7 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
   <li>
     <p><strong>가우시안 프로세스(<code class="language-plaintext highlighter-rouge">G</code>aussian <code class="language-plaintext highlighter-rouge">P</code>rocess; GP)</strong> : 무한 차원의 다변량 가우시안 분포를 가정하는 비모수 확률적 과정(Non-Parametric Stochastic Process)</p>
 
-    <p><a href="/_post_refer_img/BayesianModeling/13-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/13-04.png" alt="04" width="100%" loading="lazy"></a></p>
+    <p><a href="/_post_refer_img/BayesianModeling/03-05-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/03-05-04.png" alt="04" width="100%" loading="lazy"></a></p>
   </li>
   <li>
     <p><strong>Definition</strong></p>
@@ -1652,8 +1612,8 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
       <div class="post-meta mb-3">
         <i class="far fa-folder-open fa-fw me-1"></i>
         
-          <a href="/categories/data-mining-techs/">Data Mining Techs</a>,
-          <a href="/categories/bayesian-modeling/">Bayesian Modeling</a>
+          <a href="/categories/bayes/">BAYES</a>,
+          <a href="/categories/3-bayes-applications/">3.bayes applications</a>
       </div>
     
 
@@ -1785,14 +1745,28 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/GP/">Gaussian Process</a>
+          <a href="/posts/Hierarchical_Clustering/">Hierarchical Clustering</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Bayesian_Attention_Modules/">Bayesian Attention Modules</a>
+          <a href="/posts/LDA/">Linear Discriminant Analysis</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/PCA/">Principal Component Analysis</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/BAM/">Bayesian Attention Modules</a>
         </li>
       
         
@@ -1800,20 +1774,6 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
         
         <li class="text-truncate lh-lg">
           <a href="/posts/CLiMF/">CLiMF</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/LambdaRank/">LambdaRank</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/ListMLE/">ListMLE</a>
         </li>
       
     </ul>
@@ -1891,6 +1851,55 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2255,52 +2264,6 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2325,395 +2288,6 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3148,6 +2722,128 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -3442,60 +3138,6 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3650,7 +3292,179 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -3687,6 +3501,235 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -3806,10 +3849,10 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
         <a class="post-tag btn btn-outline-primary" href="/tags/ai-application/">AI Application</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
@@ -3827,10 +3870,10 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/objective-function/">Objective Function</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/microeconomics/">Microeconomics</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
       
     </div>
   </section>
@@ -4126,307 +4169,31 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -4442,7 +4209,7 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
-          <a href="/posts/KSD/" class="post-preview card h-100">
+          <a href="/posts/SVGD/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -4454,16 +4221,52 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
 
 <time
   
-  data-ts="1721401200"
+  data-ts="1721919600"
   data-df="ll"
   
 >
-  Jul 20, 2024
+  Jul 26, 2024
 </time>
 
-              <h4 class="pt-0 my-2">Posterior Estimation (3) Kernelized Stein Discrepancy</h4>
+              <h4 class="pt-0 my-2">Stein Variational Gradient Descent</h4>
               <div class="text-muted">
-                <p>Stein Method
+                <p>SVGD
+
+
+
+  
+    SVGD(Stein Variational Gradient Descent) : Stein Discrepancy 를 활용하여 제안 분포 $W \sim Q$ 를 목표 분포 $W \mid \mathcal{D} \sim P$ 에 근사하는 비모수 방법론(Non-Parametric Method)
+
+    
+      Stein Varia...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/Stein/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1721833200"
+  data-df="ll"
+  
+>
+  Jul 25, 2024
+</time>
+
+              <h4 class="pt-0 my-2">Stein's Method</h4>
+              <div class="text-muted">
+                <p>Stein’s Method
 
 
 Stein Operator
@@ -4473,14 +4276,14 @@ Stein Operator
 
 
 [\begin{aligned}
-\mathcal{T}{p...</p>
+\mathcal{T}...</p>
               </div>
             </div>
           </a>
         </article>
       
         <article class="col">
-          <a href="/posts/Bayesian_Attention_Modules/" class="post-preview card h-100">
+          <a href="/posts/BAM/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -4507,48 +4310,6 @@ Stein Operator
           </a>
         </article>
       
-        <article class="col">
-          <a href="/posts/VAE/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1721833200"
-  data-df="ll"
-  
->
-  Jul 25, 2024
-</time>
-
-              <h4 class="pt-0 my-2">Variational AutoEncoder</h4>
-              <div class="text-muted">
-                <p>AutoEncoder
-
-
-
-  오토인코더(AutoEncoder; AE) : 입력 데이터를 압축시켜 저차원 특징 공간으로 축소한 후, 이를 다시 확장하여 원본으로 복원하는 인공신경망 아키텍처
-
-
-How to Modeling
-
-
-  
-    Encoder:
-
-\[\begin{aligned}
-  \mathbf{z} = F\left(\mathbf{x} \mi...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
     </nav>
   </aside>
   <!-- #related-posts -->
@@ -4564,18 +4325,22 @@ How to Modeling
 
   
     <a
-      href="/posts/Bayesian_Attention_Modules/"
+      href="/posts/Bayesian_Regression/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>Bayesian Attention Modules</p>
+      <p>Bayesian Regression</p>
     </a>
   
 
   
-    <div class="btn btn-outline-primary disabled" aria-label="Newer">
-      <p>-</p>
-    </div>
+    <a
+      href="/posts/BPR/"
+      class="btn btn-outline-primary"
+      aria-label="Newer"
+    >
+      <p>BPR</p>
+    </a>
   
 </nav>
 
@@ -4700,6 +4465,55 @@ How to Modeling
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -5064,52 +4878,6 @@ How to Modeling
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -5134,395 +4902,6 @@ How to Modeling
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -5957,6 +5336,128 @@ How to Modeling
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -6251,60 +5752,6 @@ How to Modeling
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -6459,7 +5906,179 @@ How to Modeling
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -6496,6 +6115,235 @@ How to Modeling
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -6615,10 +6463,10 @@ How to Modeling
         <a class="post-tag btn btn-outline-primary" href="/tags/ai-application/">AI Application</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
@@ -6636,10 +6484,10 @@ How to Modeling
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/objective-function/">Objective Function</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/microeconomics/">Microeconomics</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
       
     </div>
   </section>

@@ -4,7 +4,7 @@
   <id>https://jayarnim.github.io/</id>
   <title>Data Scientist</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-06-26T05:15:11+09:00</updated>
+  <updated>2025-06-28T01:06:49+09:00</updated>
   <author>
     <name>jayarnim</name>
     <uri>https://jayarnim.github.io/</uri>
@@ -20,65 +20,101 @@
 
   
   <entry>
-    <title>Gaussian Process</title>
-    <link href="https://jayarnim.github.io/posts/GP/" rel="alternate" type="text/html" title="Gaussian Process" />
-    <published>2025-01-16T00:00:00+09:00</published>
+    <title>Hierarchical Clustering</title>
+    <link href="https://jayarnim.github.io/posts/Hierarchical_Clustering/" rel="alternate" type="text/html" title="Hierarchical Clustering" />
+    <published>2025-01-09T00:00:00+09:00</published>
   
-    <updated>2025-01-16T00:00:00+09:00</updated>
+    <updated>2025-01-09T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/GP/</id>
-    <content src="https://jayarnim.github.io/posts/GP/" />
+    <id>https://jayarnim.github.io/posts/Hierarchical_Clustering/</id>
+    <content src="https://jayarnim.github.io/posts/Hierarchical_Clustering/" />
     <author>
       <name>jayarnim</name>
     </author>
 
   
     
-    <category term="Data Mining Techs" />
+    <category term="DATA MINING TECHS" />
     
-    <category term="Bayesian Modeling" />
+    <category term="3.multivariate statistical analysis" />
+    
+  
+
+  <summary>Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Linear Discriminant Analysis</title>
+    <link href="https://jayarnim.github.io/posts/LDA/" rel="alternate" type="text/html" title="Linear Discriminant Analysis" />
+    <published>2025-01-06T00:00:00+09:00</published>
+  
+    <updated>2025-01-06T00:00:00+09:00</updated>
+  
+    <id>https://jayarnim.github.io/posts/LDA/</id>
+    <content src="https://jayarnim.github.io/posts/LDA/" />
+    <author>
+      <name>jayarnim</name>
+    </author>
+
+  
+    
+    <category term="DATA MINING TECHS" />
+    
+    <category term="3.multivariate statistical analysis" />
     
   
 
-  <summary>Stochastic Process
+  <summary>Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</summary>
 
-
+  </entry>
 
   
-    확률적 과정(Stochastic Process)
+  <entry>
+    <title>Principal Component Analysis</title>
+    <link href="https://jayarnim.github.io/posts/PCA/" rel="alternate" type="text/html" title="Principal Component Analysis" />
+    <published>2025-01-05T00:00:00+09:00</published>
+  
+    <updated>2025-01-05T00:00:00+09:00</updated>
+  
+    <id>https://jayarnim.github.io/posts/PCA/</id>
+    <content src="https://jayarnim.github.io/posts/PCA/" />
+    <author>
+      <name>jayarnim</name>
+    </author>
 
+  
     
-      어떤 시점 혹은 위치 지표 $t$ 에 대하여 확률변수들의 집합 \(\{X_{t} \mid t \in T\}\) 이 주어졌을 때 이를 확률적 과정이라고 한다. 즉, 확률적 과정은 시간 또는 공간을 따라 변화하는 확률변수들의 집합으로서, 특정한 시점 또는 위치에서 확률변수가 결정된다. 이때 시간 또는 공간을 따라 확률변수가 변하는 양상은 특정한 확률적 패턴을 가질 수 있다.
+    <category term="DATA MINING TECHS" />
+    
+    <category term="3.multivariate statistical analysis" />
     
   
-  
-    vs. Deterministic
 
-    
-      
-        결정론적 과정(Deterministic Process) : 시스템의 상태가 주어지면 미래 상태가 항상 유일하게 결정되므...</summary>
+  <summary>Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</summary>
 
   </entry>
 
   
   <entry>
     <title>Bayesian Attention Modules</title>
-    <link href="https://jayarnim.github.io/posts/Bayesian_Attention_Modules/" rel="alternate" type="text/html" title="Bayesian Attention Modules" />
+    <link href="https://jayarnim.github.io/posts/BAM/" rel="alternate" type="text/html" title="Bayesian Attention Modules" />
     <published>2024-09-19T00:00:00+09:00</published>
   
     <updated>2024-09-19T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/Bayesian_Attention_Modules/</id>
-    <content src="https://jayarnim.github.io/posts/Bayesian_Attention_Modules/" />
+    <id>https://jayarnim.github.io/posts/BAM/</id>
+    <content src="https://jayarnim.github.io/posts/BAM/" />
     <author>
       <name>jayarnim</name>
     </author>
 
   
     
-    <category term="Data Mining Techs" />
+    <category term="BAYES" />
     
-    <category term="Bayesian Modeling" />
+    <category term="3.bayes applications" />
     
   
 
@@ -102,65 +138,13 @@
 
   
     
-    <category term="AI Application" />
+    <category term="RECOMMENDER SYSTEM" />
     
-    <category term="Recommender System" />
+    <category term="4.one class collaborative filtering" />
     
   
 
   <summary>&amp;lt;ul type=&amp;quot;square&amp;quot;&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Title&amp;lt;/strong&amp;gt;: &amp;lt;a href=&amp;quot;https://doi.org/10.1145/2365952.2365981&amp;quot;&amp;gt;&amp;lt;code&amp;gt;CLiMF: Learning to Maximize Reciprocal Rank with Collaborative Less-is-More Filtering&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Published&amp;lt;/strong&amp;gt;: &amp;lt;em&amp;gt;2012&amp;lt;/em&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;strong&amp;gt;Data Set&amp;lt;/strong&amp;gt;: &amp;lt;code&amp;gt;&amp;lt;a href=&amp;quot;https://www.kaggle.com/datasets/masoud3/epinions-trust-network&amp;quot;&amp;gt;Epinions&amp;lt;/a&amp;gt;&amp;lt;/code&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>LambdaRank</title>
-    <link href="https://jayarnim.github.io/posts/LambdaRank/" rel="alternate" type="text/html" title="LambdaRank" />
-    <published>2024-08-28T00:00:00+09:00</published>
-  
-    <updated>2024-08-28T00:00:00+09:00</updated>
-  
-    <id>https://jayarnim.github.io/posts/LambdaRank/</id>
-    <content src="https://jayarnim.github.io/posts/LambdaRank/" />
-    <author>
-      <name>jayarnim</name>
-    </author>
-
-  
-    
-    <category term="AI Application" />
-    
-    <category term="Recommender System" />
-    
-  
-
-  <summary></summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>ListMLE</title>
-    <link href="https://jayarnim.github.io/posts/ListMLE/" rel="alternate" type="text/html" title="ListMLE" />
-    <published>2024-08-14T00:00:00+09:00</published>
-  
-    <updated>2024-08-14T00:00:00+09:00</updated>
-  
-    <id>https://jayarnim.github.io/posts/ListMLE/</id>
-    <content src="https://jayarnim.github.io/posts/ListMLE/" />
-    <author>
-      <name>jayarnim</name>
-    </author>
-
-  
-    
-    <category term="AI Application" />
-    
-    <category term="Recommender System" />
-    
-  
-
-  <summary></summary>
 
   </entry>
 

@@ -39,12 +39,12 @@
 <meta property="og:site_name" content="Data Scientist" />
 <meta property="og:image" content="https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-07-16T00:00:00+09:00" />
+<meta property="article:published_time" content="2024-07-18T00:00:00+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg" />
 <meta property="twitter:title" content="Frequentist vs. Bayesian" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-16T00:00:00+09:00","datePublished":"2024-07-16T00:00:00+09:00","description":"Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp; Management, College of Business Administration, Kookmin Univ.","headline":"Frequentist vs. Bayesian","image":"https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/Freq_Bayes/"},"url":"https://jayarnim.github.io/posts/Freq_Bayes/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-18T00:00:00+09:00","datePublished":"2024-07-18T00:00:00+09:00","description":"Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp; Management, College of Business Administration, Kookmin Univ.","headline":"Frequentist vs. Bayesian","image":"https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/Freq_Bayes/"},"url":"https://jayarnim.github.io/posts/Freq_Bayes/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -577,77 +577,6 @@
     <!-- combine -->
     
   
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
-    
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- create the image wrapper -->
-        
-
-        
-        
-      
-    
-
-    <!-- combine -->
-    
-  
 
   
 
@@ -673,17 +602,6 @@
       
         
         
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
       
 
       
@@ -765,13 +683,13 @@
 
 <time
   
-  data-ts="1721055600"
+  data-ts="1721228400"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Jul 16, 2024
+  Jul 18, 2024
 </time>
 
       </span>
@@ -829,9 +747,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1698 words"
+  title="1223 words"
 >
-  <em>9 min</em> read</span>
+  <em>6 min</em> read</span>
 
         </div>
       </div>
@@ -970,9 +888,9 @@
   \end{aligned}\]
 
     <ul>
-      <li><strong>우도(Likelihood)</strong> : 특정 모수 하에서 사건이 관찰되는 상대 빈도로서, 해당 모수 하에서 표본 추출의 우발성으로 인한 불확실성을 반영함</li>
-      <li><strong>신뢰 구간(Confidence Interval)</strong> : 구간 추정에서의 추정치로서, 모수를 포함할 것으로 기대되는 구간</li>
-      <li><strong>신뢰 수준(Confidence Level)</strong> : 무한 반복 실험에서 생성된 여러 신뢰 구간 중, 모수를 포함하는 신뢰 구간의 비율</li>
+      <li><strong>우도(Likelihood)</strong>: 특정 모수 하에서 사건이 관찰되는 상대 빈도</li>
+      <li><strong>신뢰 구간(Confidence Interval)</strong>: 모수를 포함할 것으로 기대되는 구간</li>
+      <li><strong>신뢰 수준(Confidence Level)</strong>: 여러 신뢰 구간 중 모수를 포함하는 신뢰 구간의 비율</li>
     </ul>
   </li>
   <li>
@@ -985,16 +903,10 @@
   \end{aligned}\]
 
     <ul>
-      <li><strong>사후 확률 분포(Posterior Probability Distribution)</strong> : 모수에 대한 인식적 불확실성</li>
-      <li><strong>우도(Likelihood)</strong> :  데이터에 대한 모수의 상대적 적합성으로서, 데이터 생성 과정상의 무작위성으로 인한 불확실성을 반영함</li>
-      <li><strong>사전 확률 분포(Prior Probability Distribution)</strong> : 주어진 정보의 한계에서 비롯한 모수에 대한 인식 불확실성을 반영함</li>
-      <li>
-        <p><strong>증거(Evidence)</strong> : 데이터가 관찰될 확률로서, 모수에 대한 신념을 뒷받침하는 증거로 해석됨</p>
-
-        <blockquote>
-          <p>베이지안에서는 모수에 대하여 주장함에 있어 사전 지식이나 관찰된 데이터 등 현재 주어진 정보를 기반으로 함. 는 따라서 현재까지 관찰된 데이터가 실현될 가능성은 모수에 대한 주장의 증거(Evidence)임.</p>
-        </blockquote>
-      </li>
+      <li><strong>사후 확률 분포(Posterior Probability Distribution)</strong>: 모수에 대한 인식적 불확실성</li>
+      <li><strong>우도(Likelihood)</strong>:  데이터에 대한 모수의 상대적 적합성</li>
+      <li><strong>사전 확률 분포(Prior Probability Distribution)</strong>: 모수에 대한 사전 정보</li>
+      <li><strong>증거(Evidence)</strong>: 데이터가 관찰될 확률</li>
     </ul>
   </li>
 </ul>
@@ -1008,10 +920,10 @@
 
 <ul>
   <li>
-    <p><strong>대수의 법칙(Law of Large Numbers)</strong> : 무작위 실험을 반복해서 수행할수록 관측된 상대적 빈도(추정치)가 이론적 확률(모수)에 가까워진다는 법칙</p>
+    <p><strong>대수의 법칙(Law of Large Numbers)</strong>: 무작위 실험을 반복해서 수행할수록 관측된 상대적 빈도(추정치)가 이론적 확률(모수)에 가까워진다는 법칙</p>
   </li>
   <li>
-    <p><strong>작은 수의 혼란(Law of Small Numbers)</strong> : 적은 표본에서도 대수의 법칙이 적용될 것이라고 잘못 가정하거나 소규모 데이터로 도출된 결과를 일반화하려는 오류</p>
+    <p><strong>작은 수의 혼란(Law of Small Numbers)</strong>: 적은 표본에서도 대수의 법칙이 적용될 것이라고 잘못 가정하거나 소규모 데이터로 도출된 결과를 일반화하려는 오류</p>
   </li>
   <li>
     <p><strong>If the sample size is sufficient,</strong></p>
@@ -1026,99 +938,14 @@
     <p><strong>If the sample size is not large enough,</strong></p>
     <ul>
       <li>
-        <p><strong>빈도주의(Frequentist)</strong> : 신뢰 수준을 상향 조정하여 모수 추정 과정상의 불확실성을 줄이고자 함</p>
+        <p><strong>빈도주의(Frequentist)</strong>: 신뢰 수준을 상향 조정하여 모수 추정 과정상의 불확실성을 줄이고자 함</p>
 
 \[\text{CI}_{\theta}=\bar{X}\pm Z\cdot\frac{\sigma}{\sqrt{n}}\]
       </li>
       <li>
-        <p><strong>베이즈주의(Bayesianism)</strong> : 모수의 불확실성을 확률로써 표현함</p>
+        <p><strong>베이즈주의(Bayesianism)</strong>: 모수의 불확실성을 확률로써 표현함</p>
 
 \[p\left(\theta \mid \mathcal{D}\right)=\frac{p\left(\mathcal{D} \mid \theta\right) \cdot p\left(\theta\right)}{p\left(\mathcal{D}\right)}\]
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="example-동전-던지기"><span class="me-2"><code class="language-plaintext highlighter-rouge">[example]</code> 동전 던지기</span><a href="#example-동전-던지기" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<blockquote>
-  <p>동전을 던졌을 때 앞면이 나올 확률을 $\theta$ 라고 하자. $\theta$ 에 대한 정보가 아무것도 없다고 가정하자. 즉, $\theta$ 는 0과 1 사이의 무작위수일 것이라고 믿어지고 있다. 동전을 두 번 던졌는데 두 번 다 앞면이 나왔다. 그렇다면 $\theta$ 에 대한 믿음은 어떻게 변화할까?</p>
-</blockquote>
-
-<p><a href="/_post_refer_img/BayesianModeling/02-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/02-01.png" alt="01" width="100%" loading="lazy"></a></p>
-
-<ul>
-  <li>
-    <p>Prior Prob. Dist.:</p>
-
-\[\begin{aligned}
-  p(\theta)
-  =1 \quad \because \theta \sim \text{Uniform}(0,1)
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>Likelihood:</p>
-
-\[\begin{aligned}
-  p\left(X \mid \theta\right)
-  =\frac{n!}{X!(n-X)!} \cdot \theta^{X} \cdot (1-\theta)^{n-X} \quad \because X \mid \theta \sim \text{Bin}(n,\theta)
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>Evidence:</p>
-
-\[\begin{aligned}
-  p(X)
-  &amp;= \int_{0}^{1}{p\left(X \mid \theta\right)}\text{d}\theta\\
-  &amp;= \int_{0}^{1}{\frac{n!}{X!(n-X)!} \cdot \theta^{X} \cdot (1-\theta)^{n-X}}\text{d}\theta\\
-  &amp;= \frac{n!}{X!(n-X)!} \cdot \int_{0}^{1}{\theta^{X} \cdot (1-\theta)^{n-X}}\text{d}\theta\\
-  &amp;= \frac{n!}{X!(n-X)!} \cdot \text{B}(X+1,n-X+1)\\
-  &amp;= \frac{n!}{X!(n-X)!} \cdot \frac{\Gamma(X+1)\Gamma(n-X+1)}{\Gamma(n+2)} \quad \because (X+1),(n-X+1) \in \mathbf{R}^{+}\\
-  &amp;= \frac{n!}{X!(n-X)!} \cdot \frac{X!(n-X)!}{(n+1)!} \quad \because (X+1),(n-X+1) \in \mathbf{Z}^{+}\\
-  &amp;= \frac{1}{n+1}
-  \end{aligned}\]
-
-    <ul>
-      <li>
-        <p>$\text{B}(\alpha,\beta)$ : 베타 함수</p>
-
-\[\begin{aligned}
-  \text{B}(\alpha,\beta)
-  &amp;= \int_{0}^{1}{t^{\alpha-1}(1-t)^{\beta-1}}\text{d}t\\
-  &amp;= \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)} \quad \text{where}\; \alpha,\beta \in \mathbb{R}^{+}
-  \end{aligned}\]
-      </li>
-      <li>
-        <p>$\Gamma(n)$ : 감마 함수</p>
-
-\[\begin{aligned}
-  \Gamma(n)
-  &amp;= \int_{0}^{\infty}{t^{(n-1)}e^{-t}}\text{d}t\\
-  &amp;= (n-1)! \quad \text{where}\; n \in \mathbb{Z}^{+}
-  \end{aligned}\]
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p>Posterior Prob. Dist.:</p>
-
-\[\begin{aligned}
-  p\left(\theta \mid X\right)
-  &amp;\propto p\left(X \mid \theta\right) \cdot p\left(\theta\right)\\
-  &amp;= \frac{n!}{X!(n-X)!} \cdot \theta^{X} \cdot (1-\theta)^{n-X}\\
-  \\
-  \therefore \theta \mid X
-  &amp;\sim \text{Beta}(X+1,n-X+1)
-  \end{aligned}\]
-
-    <ul>
-      <li>
-        <p>$\text{Beta}(\alpha,\beta)$ : 베타분포</p>
-
-\[f(x)
-  = \frac{x^{\alpha-1}(1-x)^{\beta-1}}{\text{B}(\alpha,\beta)}
-  \sim \text{Beta}(\alpha,\beta)\]
       </li>
     </ul>
   </li>
@@ -1132,8 +959,8 @@
       <div class="post-meta mb-3">
         <i class="far fa-folder-open fa-fw me-1"></i>
         
-          <a href="/categories/data-mining-techs/">Data Mining Techs</a>,
-          <a href="/categories/bayesian-modeling/">Bayesian Modeling</a>
+          <a href="/categories/bayes/">BAYES</a>,
+          <a href="/categories/1-bayes-basic/">1.bayes basic</a>
       </div>
     
 
@@ -1265,14 +1092,28 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/GP/">Gaussian Process</a>
+          <a href="/posts/Hierarchical_Clustering/">Hierarchical Clustering</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Bayesian_Attention_Modules/">Bayesian Attention Modules</a>
+          <a href="/posts/LDA/">Linear Discriminant Analysis</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/PCA/">Principal Component Analysis</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/BAM/">Bayesian Attention Modules</a>
         </li>
       
         
@@ -1280,20 +1121,6 @@
         
         <li class="text-truncate lh-lg">
           <a href="/posts/CLiMF/">CLiMF</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/LambdaRank/">LambdaRank</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/ListMLE/">ListMLE</a>
         </li>
       
     </ul>
@@ -1371,6 +1198,55 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1735,52 +1611,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -1805,395 +1635,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2628,6 +2069,128 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2922,60 +2485,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3130,7 +2639,179 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -3167,6 +2848,235 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -3286,10 +3196,10 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/ai-application/">AI Application</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
@@ -3307,10 +3217,10 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/objective-function/">Objective Function</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/microeconomics/">Microeconomics</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
       
     </div>
   </section>
@@ -3510,343 +3420,67 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -3994,35 +3628,7 @@
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
-          <a href="/posts/Bayes_Action/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1721487600"
-  data-df="ll"
-  
->
-  Jul 21, 2024
-</time>
-
-              <h4 class="pt-0 my-2">Bayes Action</h4>
-              <div class="text-muted">
-                <p>Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp; Management, College of Business Administration, Kookmin Univ.</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/Bayesian/" class="post-preview card h-100">
+          <a href="/posts/Bayesianism/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -4041,7 +3647,7 @@
   Jul 15, 2024
 </time>
 
-              <h4 class="pt-0 my-2">What? Bayesian</h4>
+              <h4 class="pt-0 my-2">Bayesianism</h4>
               <div class="text-muted">
                 <p>Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp; Management, College of Business Administration, Kookmin Univ.</p>
               </div>
@@ -4050,7 +3656,7 @@
         </article>
       
         <article class="col">
-          <a href="/posts/GP/" class="post-preview card h-100">
+          <a href="/posts/Bayes_Action/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -4062,24 +3668,44 @@
 
 <time
   
-  data-ts="1736953200"
+  data-ts="1721401200"
   data-df="ll"
   
 >
-  Jan 16, 2025
+  Jul 20, 2024
 </time>
 
-              <h4 class="pt-0 my-2">Gaussian Process</h4>
+              <h4 class="pt-0 my-2">Bayes Action</h4>
               <div class="text-muted">
-                <p>Stochastic Process
+                <p>Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp; Management, College of Business Administration, Kookmin Univ.</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/Bayesian_Framework/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
 
 
 
+
+<time
   
-    확률적 과정(Stochastic Process)
+  data-ts="1721142000"
+  data-df="ll"
+  
+>
+  Jul 17, 2024
+</time>
 
-    
-      어떤 시점 혹은 위치 지표 $t$ 에 대하여 확률변수들의 집합 \(\{X_{t} \mid t \in T\}\) 이 주어졌을 때 이를 확률적 과정이라고 한다. 즉, 확률적 과정은 시간 또는 공간을 따라 변화하는 확률변수들의 집합으로서...</p>
+              <h4 class="pt-0 my-2">Bayesian Framework</h4>
+              <div class="text-muted">
+                <p>Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp; Management, College of Business Administration, Kookmin Univ.</p>
               </div>
             </div>
           </a>
@@ -4100,11 +3726,11 @@
 
   
     <a
-      href="/posts/Bayesian/"
+      href="/posts/ExpoMF/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>What? Bayesian</p>
+      <p>ExpoMF</p>
     </a>
   
 
@@ -4240,6 +3866,55 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -4604,52 +4279,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -4674,395 +4303,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -5497,6 +4737,128 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -5791,60 +5153,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -5999,7 +5307,179 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -6036,6 +5516,235 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -6155,10 +5864,10 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/ai-application/">AI Application</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
@@ -6176,10 +5885,10 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/objective-function/">Objective Function</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/microeconomics/">Microeconomics</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
       
     </div>
   </section>

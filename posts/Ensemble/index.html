@@ -37,14 +37,14 @@
 <link rel="canonical" href="https://jayarnim.github.io/posts/Ensemble/" />
 <meta property="og:url" content="https://jayarnim.github.io/posts/Ensemble/" />
 <meta property="og:site_name" content="Data Scientist" />
-<meta property="og:image" content="https://jayarnim.github.io/_post_refer_img/MachineLearning/Thumbnail.jpg" />
+<meta property="og:image" content="https://jayarnim.github.io/_post_refer_img/DataMiningTechs/4.MachineLearning/Thumbnail.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-01-15T00:00:00+09:00" />
+<meta property="article:published_time" content="2024-01-06T00:00:00+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/MachineLearning/Thumbnail.jpg" />
+<meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/DataMiningTechs/4.MachineLearning/Thumbnail.jpg" />
 <meta property="twitter:title" content="Ensemble" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-01-15T00:00:00+09:00","datePublished":"2024-01-15T00:00:00+09:00","description":"Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.","headline":"Ensemble","image":"https://jayarnim.github.io/_post_refer_img/MachineLearning/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/Ensemble/"},"url":"https://jayarnim.github.io/posts/Ensemble/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-01-06T00:00:00+09:00","datePublished":"2024-01-06T00:00:00+09:00","description":"Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.","headline":"Ensemble","image":"https://jayarnim.github.io/_post_refer_img/DataMiningTechs/4.MachineLearning/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/Ensemble/"},"url":"https://jayarnim.github.io/posts/Ensemble/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -930,6 +930,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -937,71 +948,6 @@
   
   
 
-  
-    
-    
-
-    
-      
-        
-        
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-
-    
   
 
   
@@ -1043,13 +989,13 @@
 
 <time
   
-  data-ts="1705244400"
+  data-ts="1704466800"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Jan 15, 2024
+  Jan  6, 2024
 </time>
 
       </span>
@@ -1065,7 +1011,7 @@
         
 
         <div class="mt-3 mb-3">
-          <a href="/_post_refer_img/MachineLearning/Thumbnail.jpg" class="popup img-link preview-img shimmer"><img src="/_post_refer_img/MachineLearning/Thumbnail.jpg"  alt="Preview Image" width="1200" height="630"  loading="lazy"></a></div>
+          <a href="/_post_refer_img/DataMiningTechs/4.MachineLearning/Thumbnail.jpg" class="popup img-link preview-img shimmer"><img src="/_post_refer_img/DataMiningTechs/4.MachineLearning/Thumbnail.jpg"  alt="Preview Image" width="1200" height="630"  loading="lazy"></a></div>
       
 
       <div class="d-flex justify-content-between">
@@ -1107,9 +1053,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1296 words"
+  title="1179 words"
 >
-  <em>7 min</em> read</span>
+  <em>6 min</em> read</span>
 
         </div>
       </div>
@@ -1117,61 +1063,7 @@
   </header>
 
   <div class="content">
-    <h2 id="generalization-problem"><span class="me-2">Generalization Problem</span><a href="#generalization-problem" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<hr />
-
-<h3 id="components-of-error"><span class="me-2">Components of Error</span><a href="#components-of-error" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p><a href="/_post_refer_img/MachineLearning/15-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/15-01.png" alt="01" width="100%" loading="lazy"></a></p>
-
-\[\begin{aligned}
-\text{Error}
-&amp;= \mathbb{E}\left[\left(Y-\hat{f}(X)\right)^{2}\right]\\
-&amp;= \mathbb{E}\left[\left(f(X) + \varepsilon - \hat{f}(X)\right)^{2}\right]\\
-&amp;= \mathbb{E}\left[\left(f(X)-\hat{f}(X)\right)^{2} + \varepsilon^{2} - 2 \cdot \varepsilon \cdot \left(f(X)-\hat{f}(X)\right) \right]\\
-&amp;= \mathbb{E}\left[\left(f(X)-\hat{f}(X)\right)^{2}\right] + \mathbb{E}\left[\varepsilon^{2}\right] - 2 \cdot \mathbb{E}\left[\varepsilon\right] \cdot \mathbb{E}\left[f(X)-\hat{f}(X) \right]\\
-&amp;= \mathbb{E}\left[\left(f(X)-\hat{f}(X)\right)^{2}\right] + \sigma^{2}\\
-\\
-\mathbb{E}\left[\left(f(X)-\hat{f}(X)\right)^{2}\right]
-&amp;= \mathbb{E}\left[\left(f(X)-\overline{f}(X)+\overline{f}(X)-\hat{f}(X)\right)^{2}\right]\\
-&amp;= \mathbb{E}\left[\left(f(X)-\overline{f}(X)\right)^{2}\right] + \mathbb{E}\left[\left(\overline{f}(X)-\hat{f}(X)\right)^{2}\right] + 2 \cdot \mathbb{E}\left[f(X)-\overline{f}(X)\right] \cdot \mathbb{E}\left[\overline{f}(X)-\hat{f}(X)\right]\\
-&amp;= \mathbb{E}\left[\left(f(X)-\overline{f}(X)\right)^{2}\right] + \mathbb{E}\left[\left(\overline{f}(X)-\hat{f}(X)\right)^{2}\right]\\
-\\
-\mathbb{Bias}\left[\hat{f}(X)\right]
-&amp;= \mathbb{E}\left[\hat{f}(X)\right] - f(X)\\
-\mathbb{Var}\left[\hat{f}(X)\right]
-&amp;= \mathbb{E}\left[\left(\overline{f}(X)-\hat{f}(X)\right)^{2}\right]\\
-\\
-\therefore \text{Error}
-&amp;= \mathbb{Bias}^{2}\left[\hat{f}(X)\right] + \mathbb{Var}\left[\hat{f}(X)\right] + \sigma^{2}
-\end{aligned}\]
-
-<ul>
-  <li>$Y$ : 실제 관측치</li>
-  <li>$\varepsilon \sim N(0, \sigma^2)$ : 노이즈</li>
-  <li>$f(X)$ : 실제 함수</li>
-  <li>$\hat{f}(X)$ : $f(X)$ 에 대한 예측값</li>
-  <li>$\overline{f}(X)$ : $\hat{f}(X)$ 의 평균</li>
-</ul>
-
-<h3 id="bias-variance-trade-off"><span class="me-2">Bias-Variance Trade-off</span><a href="#bias-variance-trade-off" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p><a href="/_post_refer_img/MachineLearning/15-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/15-02.png" alt="02" width="100%" loading="lazy"></a></p>
-
-<ul>
-  <li>
-    <p><strong>편향(Bias)</strong> : 모형이 학습 데이터의 패턴을 충분히 학습하지 못해 발생하는 <strong>과소적합(Underfitting)</strong> 문제로서, 학습 데이터에 내재된 패턴의 복잡도에 비해 모형이 간소화되어 설계된 경우 발생함</p>
-  </li>
-  <li>
-    <p><strong>분산(Variance)</strong> : 모형이 학습 데이터에 너무 과도하게 적응하여 발생하는 <strong>과대적합(Overfitting)</strong> 문제로서, 모형 복잡도에 비해 학습 데이터가 희소한 경우 발생함</p>
-  </li>
-  <li>
-    <p><strong>편향-분산 트레이드오프(Bias-Variance Trade-off)</strong> : 모형 복잡도에 따른 편향과 분산의 상충 관계</p>
-  </li>
-</ul>
-
-<h2 id="ensemble"><span class="me-2">Ensemble</span><a href="#ensemble" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="ensemble"><span class="me-2">Ensemble</span><a href="#ensemble" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
@@ -1198,7 +1090,75 @@
   </li>
 </ul>
 
-<h3 id="necessity"><span class="me-2">Necessity</span><a href="#necessity" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h2 id="bias-variance-trade-off"><span class="me-2">Bias-Variance Trade-off</span><a href="#bias-variance-trade-off" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<p><a href="/_post_refer_img/DataMiningTechs/4.MachineLearning/06-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/DataMiningTechs/4.MachineLearning/06-01.png" alt="01" width="100%" loading="lazy"></a></p>
+
+<ul>
+  <li><strong>Notation</strong>
+    <ul>
+      <li>$Y$ : 실제 관측치</li>
+      <li>$\varepsilon \sim N(0, \sigma^2)$ : 노이즈</li>
+      <li>$f(X)$ : 실제 함수</li>
+      <li>$\hat{f}(X)$ : $f(X)$ 에 대한 예측값</li>
+      <li>$\overline{f}(X)$ : $\hat{f}(X)$ 의 평균</li>
+    </ul>
+  </li>
+  <li>
+    <p>error segmentation:</p>
+
+\[\begin{aligned}
+  \text{Error}
+  &amp;= \mathbb{E}\left[\left(Y-\hat{f}(X)\right)^{2}\right]\\
+  &amp;= \mathbb{E}\left[\left(f(X) + \varepsilon - \hat{f}(X)\right)^{2}\right]\\
+  &amp;= \mathbb{E}\left[\left(f(X)-\hat{f}(X)\right)^{2} + \varepsilon^{2} - 2 \cdot \varepsilon \cdot \left(f(X)-\hat{f}(X)\right) \right]\\
+  &amp;= \mathbb{E}\left[\left(f(X)-\hat{f}(X)\right)^{2}\right] + \mathbb{E}\left[\varepsilon^{2}\right] - 2 \cdot \mathbb{E}\left[\varepsilon\right] \cdot \mathbb{E}\left[f(X)-\hat{f}(X) \right]\\
+  &amp;= \mathbb{E}\left[\left(f(X)-\hat{f}(X)\right)^{2}\right] + \sigma^{2}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>estimation error:</p>
+
+\[\begin{aligned}
+  &amp;\mathbb{E}\left[\left(f(X)-\hat{f}(X)\right)^{2}\right]\\
+  &amp;= \mathbb{E}\left[\left(f(X)-\overline{f}(X)+\overline{f}(X)-\hat{f}(X)\right)^{2}\right]\\
+  &amp;= \mathbb{E}\left[\left(f(X)-\overline{f}(X)\right)^{2}\right] + \mathbb{E}\left[\left(\overline{f}(X)-\hat{f}(X)\right)^{2}\right] + 2 \cdot \mathbb{E}\left[f(X)-\overline{f}(X)\right] \cdot \mathbb{E}\left[\overline{f}(X)-\hat{f}(X)\right]\\
+  &amp;= \mathbb{E}\left[\left(f(X)-\overline{f}(X)\right)^{2}\right] + \mathbb{E}\left[\left(\overline{f}(X)-\hat{f}(X)\right)^{2}\right]
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>estimation error consists of bias and variance:</p>
+
+\[\begin{aligned}
+  \mathbb{Bias}\left[\hat{f}(X)\right]
+  &amp;= \mathbb{E}\left[\hat{f}(X)\right] - f(X)\\
+  \mathbb{Var}\left[\hat{f}(X)\right]
+  &amp;= \mathbb{E}\left[\left(\overline{f}(X)-\hat{f}(X)\right)^{2}\right]
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>therefore:</p>
+
+\[\begin{aligned}
+  \therefore \text{Error}
+  &amp;= \mathbb{Bias}^{2}\left[\hat{f}(X)\right] + \mathbb{Var}\left[\hat{f}(X)\right] + \sigma^{2}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Bias-Variance Trade-off:</p>
+
+    <p><a href="/_post_refer_img/DataMiningTechs/4.MachineLearning/06-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/DataMiningTechs/4.MachineLearning/06-02.png" alt="02" width="100%" loading="lazy"></a></p>
+
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Bias</code> is the <code class="language-plaintext highlighter-rouge">underfitting</code> problem that occurs when a model does not sufficiently learn the patterns of the training data.</li>
+      <li><code class="language-plaintext highlighter-rouge">Variance</code> is the <code class="language-plaintext highlighter-rouge">overfitting</code> problem that occurs when a model adapts too much to the training data.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="why-ensemble"><span class="me-2">Why? Ensemble</span><a href="#why-ensemble" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
 
 \[\begin{aligned}
 \xi_{\text{ensemble}} \le \xi_{\text{avg}}
@@ -1269,23 +1229,18 @@
   <li>
     <p><strong>Bagging(<code class="language-plaintext highlighter-rouge">B</code>ootstrap <code class="language-plaintext highlighter-rouge">Agg</code>regat<code class="language-plaintext highlighter-rouge">ing</code>)</strong> : 데이터 세트로부터 생성된 $M$ 개의 부트스트랩(Bootstrap)을 통해 $M$ 개의 개별 모형들을 병렬 학습하는 방법</p>
 
-    <p><a href="/_post_refer_img/MachineLearning/15-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/15-03.png" alt="03" width="100%" loading="lazy"></a></p>
+    <p><a href="/_post_refer_img/DataMiningTechs/4.MachineLearning/06-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/DataMiningTechs/4.MachineLearning/06-03.png" alt="03" width="100%" loading="lazy"></a></p>
+
+\[\begin{aligned}
+  y(x)
+  &amp;= \delta\Big[y_{1}(x), y_{2}(x), \cdots, y_{M}(x)\Big]
+  \end{aligned}\]
 
     <ul>
       <li>By Reducing Variance, Prevent Overfitting</li>
       <li>Provide different random subset of the training data to each other</li>
     </ul>
   </li>
-</ul>
-
-<h3 id="how-to"><span class="me-2">How to</span><a href="#how-to" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-\[\begin{aligned}
-y(x)
-&amp;= \delta\Big[y_{1}(x), y_{2}(x), \cdots, y_{M}(x)\Big]
-\end{aligned}\]
-
-<ul>
   <li>
     <p><strong>부트스트랩(Bootstrap)</strong> : 전체 데이터 세트를 $K$ 개의 데이터 블록으로 분할한 후 $K$ 번 복원추출하여 재구성한 훈련용 데이터 세트</p>
 
@@ -1349,23 +1304,18 @@ y(x)
   <li>
     <p><strong>Boosting</strong> : 직렬로 나열된 개별 모형들에 대하여 모든 훈련 데이터 세트를 순차 학습하되, 현재 순번 모형이 오류를 줄이는 데 실패한 데이터 포인트에 대하여, 해당 포인트의 중요도를 가중함으로써 다음 모형이 더 집중하여 학습시키는 방법</p>
 
-    <p><a href="/_post_refer_img/MachineLearning/15-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/MachineLearning/15-04.png" alt="04" width="100%" loading="lazy"></a></p>
+    <p><a href="/_post_refer_img/DataMiningTechs/4.MachineLearning/06-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/DataMiningTechs/4.MachineLearning/06-04.png" alt="04" width="100%" loading="lazy"></a></p>
+
+\[\begin{aligned}
+  y_{M}(x)
+  &amp;= \sum_{t=1}^{M}{\alpha_{t} \cdot h_{t}(x)}
+  \end{aligned}\]
 
     <ul>
       <li>By Reducing Bias, Prevent Underfitting</li>
       <li>Using some measurement ensuring it is substantially different from the other members</li>
     </ul>
   </li>
-</ul>
-
-<h3 id="how-to-1"><span class="me-2">How to</span><a href="#how-to-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-\[\begin{aligned}
-y_{M}(x)
-&amp;= \sum_{t=1}^{M}{\alpha_{t} \cdot h_{t}(x)}
-\end{aligned}\]
-
-<ul>
   <li>
     <p><strong>예측값 $y_{t}(x)$ 및 모형 $h_{t}(x)$</strong></p>
 
@@ -1450,8 +1400,8 @@ y_{M}(x)
       <div class="post-meta mb-3">
         <i class="far fa-folder-open fa-fw me-1"></i>
         
-          <a href="/categories/data-mining-techs/">Data Mining Techs</a>,
-          <a href="/categories/machine-learning/">Machine Learning</a>
+          <a href="/categories/data-mining-techs/">DATA MINING TECHS</a>,
+          <a href="/categories/4-machine-learning/">4.machine learning</a>
       </div>
     
 
@@ -1578,14 +1528,28 @@ y_{M}(x)
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/GP/">Gaussian Process</a>
+          <a href="/posts/Hierarchical_Clustering/">Hierarchical Clustering</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Bayesian_Attention_Modules/">Bayesian Attention Modules</a>
+          <a href="/posts/LDA/">Linear Discriminant Analysis</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/PCA/">Principal Component Analysis</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/BAM/">Bayesian Attention Modules</a>
         </li>
       
         
@@ -1593,20 +1557,6 @@ y_{M}(x)
         
         <li class="text-truncate lh-lg">
           <a href="/posts/CLiMF/">CLiMF</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/LambdaRank/">LambdaRank</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/ListMLE/">ListMLE</a>
         </li>
       
     </ul>
@@ -1684,6 +1634,55 @@ y_{M}(x)
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2048,52 +2047,6 @@ y_{M}(x)
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2118,395 +2071,6 @@ y_{M}(x)
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2941,6 +2505,128 @@ y_{M}(x)
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -3235,60 +2921,6 @@ y_{M}(x)
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3443,7 +3075,179 @@ y_{M}(x)
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -3480,6 +3284,235 @@ y_{M}(x)
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -3599,10 +3632,10 @@ y_{M}(x)
         <a class="post-tag btn btn-outline-primary" href="/tags/ai-application/">AI Application</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
@@ -3620,10 +3653,10 @@ y_{M}(x)
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/objective-function/">Objective Function</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/microeconomics/">Microeconomics</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
       
     </div>
   </section>
@@ -3739,115 +3772,103 @@ y_{M}(x)
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -4199,6 +4220,34 @@ y_{M}(x)
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
+          <a href="/posts/Decision_Tree/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1704380400"
+  data-df="ll"
+  
+>
+  Jan  5, 2024
+</time>
+
+              <h4 class="pt-0 my-2">Decision Tree</h4>
+              <div class="text-muted">
+                <p>Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
           <a href="/posts/SVM/" class="post-preview card h-100">
             <div class="card-body">
               <!--
@@ -4211,11 +4260,11 @@ y_{M}(x)
 
 <time
   
-  data-ts="1704466800"
+  data-ts="1704294000"
   data-df="ll"
   
 >
-  Jan  6, 2024
+  Jan  4, 2024
 </time>
 
               <h4 class="pt-0 my-2">Support Vector Machine</h4>
@@ -4239,42 +4288,14 @@ y_{M}(x)
 
 <time
   
-  data-ts="1704380400"
+  data-ts="1704207600"
   data-df="ll"
   
 >
-  Jan  5, 2024
+  Jan  3, 2024
 </time>
 
               <h4 class="pt-0 my-2">k-NN</h4>
-              <div class="text-muted">
-                <p>Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/Naive_Bayes/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1704294000"
-  data-df="ll"
-  
->
-  Jan  4, 2024
-</time>
-
-              <h4 class="pt-0 my-2">Naive Bayes</h4>
               <div class="text-muted">
                 <p>Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</p>
               </div>
@@ -4297,21 +4318,21 @@ y_{M}(x)
 
   
     <a
-      href="/posts/t_SNE/"
+      href="/posts/Decision_Tree/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>t-SNE</p>
+      <p>Decision Tree</p>
     </a>
   
 
   
     <a
-      href="/posts/NN/"
+      href="/posts/Clustering/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>Neural Network</p>
+      <p>Clustering</p>
     </a>
   
 </nav>
@@ -4437,6 +4458,55 @@ y_{M}(x)
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -4801,52 +4871,6 @@ y_{M}(x)
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -4871,395 +4895,6 @@ y_{M}(x)
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -5694,6 +5329,128 @@ y_{M}(x)
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -5988,60 +5745,6 @@ y_{M}(x)
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -6196,7 +5899,179 @@ y_{M}(x)
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -6233,6 +6108,235 @@ y_{M}(x)
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -6352,10 +6456,10 @@ y_{M}(x)
         <a class="post-tag btn btn-outline-primary" href="/tags/ai-application/">AI Application</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
@@ -6373,10 +6477,10 @@ y_{M}(x)
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/objective-function/">Objective Function</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/microeconomics/">Microeconomics</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
       
     </div>
   </section>

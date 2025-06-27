@@ -30,7 +30,7 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="Posterior Estimation (2) Variational Inference" />
+<meta property="og:title" content="Variational Inference" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="Information Theory" />
 <meta property="og:description" content="Information Theory" />
@@ -39,16 +39,16 @@
 <meta property="og:site_name" content="Data Scientist" />
 <meta property="og:image" content="https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-07-19T00:00:00+09:00" />
+<meta property="article:published_time" content="2024-07-22T00:00:00+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg" />
-<meta property="twitter:title" content="Posterior Estimation (2) Variational Inference" />
+<meta property="twitter:title" content="Variational Inference" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-19T00:00:00+09:00","datePublished":"2024-07-19T00:00:00+09:00","description":"Information Theory","headline":"Posterior Estimation (2) Variational Inference","image":"https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/VI/"},"url":"https://jayarnim.github.io/posts/VI/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-22T00:00:00+09:00","datePublished":"2024-07-22T00:00:00+09:00","description":"Information Theory","headline":"Variational Inference","image":"https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/VI/"},"url":"https://jayarnim.github.io/posts/VI/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Posterior Estimation (2) Variational Inference | Data Scientist
+  <title>Variational Inference | Data Scientist
   </title>
 
   <!--
@@ -415,7 +415,7 @@
         
           
             
-              <span>Posterior Estimation (2) Variational Inference</span>
+              <span>Variational Inference</span>
             
 
           
@@ -635,17 +635,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -653,60 +642,6 @@
   
   
 
-  
-    
-    
-
-    
-      
-        
-        
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-
-    
   
 
   
@@ -729,7 +664,7 @@
 
 <article class="px-1">
   <header>
-    <h1 data-toc-skip>Posterior Estimation (2) Variational Inference</h1>
+    <h1 data-toc-skip>Variational Inference</h1>
     
 
     <div class="post-meta text-muted">
@@ -746,13 +681,13 @@
 
 <time
   
-  data-ts="1721314800"
+  data-ts="1721574000"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Jul 19, 2024
+  Jul 22, 2024
 </time>
 
       </span>
@@ -810,9 +745,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1576 words"
+  title="1076 words"
 >
-  <em>8 min</em> read</span>
+  <em>5 min</em> read</span>
 
         </div>
       </div>
@@ -824,12 +759,9 @@
 <hr />
 
 <ul>
-  <li><strong>정보이론(Information Theory)</strong> : 신호에 존재하는 정보의 양을 측정하는 이론으로서, 특정 확률분포의 특성을 알아내거나, 두 확률분포 간 유사성을 정량화하는 데 사용함</li>
-</ul>
-
-<h3 id="information-gain"><span class="me-2">Information Gain</span><a href="#information-gain" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
+  <li>
+    <p><strong>정보이론(Information Theory)</strong>: 신호에 존재하는 정보의 양을 측정하는 이론으로서, 특정 확률분포의 특성을 알아내거나, 두 확률분포 간 유사성을 정량화하는 데 사용함</p>
+  </li>
   <li><strong>Shannon’s Information Theory Principles</strong>
     <ul>
       <li>자주 발생하지 않는 사건(Unlikely Event)일수록 높은 정보량을 가짐(Informative)
@@ -845,23 +777,20 @@
     </ul>
   </li>
   <li>
-    <p><strong>자기정보(Self-Information)</strong> : 확률변수 $X \sim P$ 에 대하여, 사건 $X=x$ 가 발생했을 때의 정보량</p>
+    <p><strong>자기정보(Self-Information)</strong>: 확률변수 $X \sim P$ 에 대하여, 사건 $X=x$ 가 발생했을 때의 정보량</p>
 
 \[\begin{aligned}
   I(X=x)
-  &amp;= \log{\frac{1}{P(X=x)}}\\
   &amp;=-\log{P(X=x)}
   \end{aligned}\]
   </li>
   <li>
-    <p><strong>엔트로피(Entropy)</strong> : 자기정보의 기대값으로서, 주어진 확률분포에서 발생 가능한 사건들의 평균적인 정보량</p>
+    <p><strong>엔트로피(Entropy)</strong>: 자기정보의 기대값으로서, 주어진 확률분포에서 발생 가능한 사건들의 평균적인 정보량</p>
 
 \[\begin{aligned}
   H(P)
-  &amp;= \mathbb{E}_{X \sim P}\left[I(X)\right]\\
-  &amp;= \mathbb{E}_{X \sim P}\left[-\log{P(X)}\right]\\
-  &amp;= -\mathbb{E}_{X \sim P}\left[\log{P(X)}\right]\\
-  &amp;= -\sum_{x}{\log{P(x)} \cdot P(x)}
+  = \mathbb{E}_{X \sim P}\left[I(X)\right]
+  = -\sum_{X}{\log{P(x)} \cdot P(x)}
   \end{aligned}\]
 
     <ul>
@@ -869,30 +798,22 @@
       <li>사건의 분포가 균등할수록(Uniform) 엔트로피가 증가함</li>
     </ul>
   </li>
-</ul>
-
-<h3 id="information-discrepancy"><span class="me-2">Information Discrepancy</span><a href="#information-discrepancy" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
   <li>
-    <p><strong>교차 엔트로피(Cross Entropy)</strong> : 확률변수 $X$ 의 분포 $P$ 와 그 근사 분포 $Q$ 에 대하여, $Q$ 가 $P$ 에 대하여 제공하는 <strong>정보의 불확실성을</strong> 측정하는 지표</p>
+    <p><strong>교차 엔트로피(Cross Entropy)</strong>: 확률변수 $X$ 의 분포 $P$ 와 그 근사 분포 $Q$ 에 대하여, $Q$ 가 $P$ 에 대하여 제공하는 <strong>정보의 불확실성을</strong> 측정하는 지표</p>
 
 \[\begin{aligned}
   H(P,Q)
-  &amp;= \mathbb{E}_{X \sim P}\left[-\log{Q(X)}\right]\\
-  &amp;= - \sum_{x}{\log{Q(x)} \cdot P(x)}
+  = \mathbb{E}_{X \sim P}\left[-\log{Q(X)}\right]
+  = -\sum_{X}{\log{Q(X)} \cdot \log{P(X)}}
   \end{aligned}\]
   </li>
   <li>
-    <p><strong>쿨백 라이블러 발산(Kullback-Leibler Divergence)</strong> : 확률변수 $X$ 의 분포 $P$ 와 그 근사 분포 $Q$ 에 대하여, $Q$ 를 $P$ 의 <strong>근사 분포로 사용할 때의 비효율성을</strong> 측정하는 지표로서, $P$ 에서 샘플링된 $X$ 에 대하여, $P$ 가 제공하는 평균적인 정보량과 $Q$ 가 제공하는 평균적인 정보량의 차이</p>
+    <p><strong>쿨백 라이블러 발산(Kullback-Leibler Divergence)</strong>: 확률변수 $X$ 의 분포 $P$ 와 그 근사 분포 $Q$ 에 대하여, $Q$ 를 $P$ 의 <strong>근사 분포로 사용할 때의 비효율성을</strong> 측정하는 지표로서, $P$ 에서 샘플링된 $X$ 에 대하여, $P$ 가 제공하는 평균적인 정보량과 $Q$ 가 제공하는 평균적인 정보량의 차이</p>
 
 \[\begin{aligned}
-  D_{KL}(P \parallel Q)
-  &amp;= H(P,Q) - H(P)\\
-  &amp;= \mathbb{E}_{X \sim P}\left[-\log{Q(X)}\right] - \mathbb{E}_{X \sim P}\left[-\log{P(X)}\right]\\
-  &amp;= -\mathbb{E}_{X \sim P}\left[\log{\frac{Q(X)}{P(X)}}\right]\\
-  &amp;= \mathbb{E}_{X \sim P}\left[\log{\frac{P(X)}{Q(X)}}\right]\\
-  &amp;= \sum_{x}{\log{\frac{P(x)}{Q(x)}} \cdot P(x)}
+  KL[P(X) \parallel Q(X)]
+  = H(P,Q) - H(P)
+  = \sum_{X}{\log{\frac{P(X)}{Q(X)}} \cdot P(X)}
   \end{aligned}\]
   </li>
 </ul>
@@ -900,236 +821,134 @@
 <h2 id="variational-inference"><span class="me-2">Variational Inference</span><a href="#variational-inference" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<h3 id="variational-inference-1"><span class="me-2">Variational Inference</span><a href="#variational-inference-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
 <ul>
   <li>
-    <p><strong>변분 추론(Variational Inference)</strong> : 정보 이론을 활용하여 제안 분포 $W \sim Q$ 를 목표 분포 $W \mid \mathcal{D} \sim P$ 에 근사하는 모수 방법론(Parametric Method)</p>
+    <p><strong>변분 추론(<code class="language-plaintext highlighter-rouge">V</code>ariational <code class="language-plaintext highlighter-rouge">I</code>nference)</strong>: 정보 이론을 활용하여 제안 분포 $W \sim Q$ 를 목표 분포 $W \mid \mathcal{D} \sim P$ 에 근사하는 모수 방법론(Parametric Method)</p>
 
 \[\begin{aligned}
-  \hat{\theta}
-  &amp;= \text{arg}\min_{\theta}{D_{KL}\big[Q(W) \parallel P(W \mid \mathcal{D})\big]}
+  \hat{\Theta}
+  &amp;= \text{arg}\min{KL\big[Q(W) \parallel P(W \mid \mathcal{D})\big]}
   \end{aligned}\]
 
     <ul>
       <li>
-        <p>두 분포 간 쿨백 라이블러 발산을 직접 계산하기에 어려움이 있으므로 증거 하한(<code class="language-plaintext highlighter-rouge">E</code>vidence <code class="language-plaintext highlighter-rouge">L</code>ower <code class="language-plaintext highlighter-rouge">B</code> <code class="language-plaintext highlighter-rouge">o</code>und; ELBO)을 최대화함으로써 목표 분포에 근사하도록 함</p>
-
-\[\begin{aligned}
-  \hat{\theta} &amp;= \text{arg}\max_{\theta}{\text{ELBO}}
-  \end{aligned}\]
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>이상</strong> : 목표 분포 $W \mid \mathcal{D} \sim P$ 를 잘 설명하는 제안 분포 $W \sim Q$ 를 탐색함</p>
+        <p>목표 분포 $W \mid \mathcal{D} \sim P$ 를 잘 설명하는 제안 분포 $W \sim Q$ 를 탐색하는 것이 이상적</p>
 
 \[\begin{aligned}
   D_{KL}\big[P(W \mid \mathcal{D}) \parallel Q(W)\big]
   &amp;= \mathbb{E}_{W \mid \mathcal{D} \sim P}\left[\log{\frac{P(W \mid \mathcal{D})}{Q(W)}}\right]
   \end{aligned}\]
-  </li>
-  <li>
-    <p><strong>대안</strong> : 목표 분포 $W \mid \mathcal{D} \sim P$ 로 잘 설명될 수 있는 제안 분포 $W \sim Q$ 를 탐색함</p>
+      </li>
+      <li>
+        <p>목표 분포 $W \mid \mathcal{D} \sim P$ 에서 샘플을 추출할 수 없으므로 대안으로서 목표 분포로 잘 설명될 수 있는 제안 분포 $W \sim Q$ 를 탐색함</p>
 
 \[\begin{aligned}
   D_{KL}\big[Q(W) \parallel P(W \mid \mathcal{D})\big]
   &amp;= \mathbb{E}_{W \sim Q}\left[\log{\frac{Q(W)}{P(W \mid \mathcal{D})}}\right]
   \end{aligned}\]
-  </li>
-</ul>
-
-<h3 id="elbo"><span class="me-2">ELBO</span><a href="#elbo" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li>
-    <p><strong>사후 분포 $W \mid \mathcal{D} \sim P$ 와 그 근사 분포 $W \sim Q$ 의 차이 세분화</strong></p>
-
-\[\begin{aligned}
-  D_{KL}\big[Q(W) \parallel P(W \mid \mathcal{D})\big]
-  &amp;= \mathbb{E}_{W \sim Q}\left[\log{\frac{Q(W)}{P(W \mid \mathcal{D})}}\right]\\
-  &amp;= \mathbb{E}_{W \sim Q}\left[\log{Q(W)}\right] - \mathbb{E}_{W \sim Q}\left[\log{P(W \mid \mathcal{D})}\right]\\
-  &amp;= \mathbb{E}_{W \sim Q}\left[\log{Q(W)}\right] - \mathbb{E}_{W \sim Q}\left[\log{\frac{P(\mathcal{D} \mid W) \cdot P(W)}{P(\mathcal{D})}}\right]\\
-  &amp;= \mathbb{E}_{W \sim Q}\left[\log{Q(W)}\right] - \bigg(\mathbb{E}_{W \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] + \mathbb{E}_{W \sim Q}\left[\log{P(W)}\right] - \mathbb{E}_{W \sim Q}\left[\log{P(\mathcal{D})}\right]\bigg)\\
-  &amp;= \mathbb{E}_{W \sim Q}\left[\log{Q(W)} - \log{P(W)}\right] - \mathbb{E}_{W \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] + \mathbb{E}_{W \sim Q}\left[\log{P(\mathcal{D})}\right]\\
-  &amp;= D_{KL}\big[Q(W) \parallel P(W)\big] - \mathbb{E}_{W \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] + \log{P(\mathcal{D})}
-  \end{aligned}\]
-
-    <ul>
-      <li>$D_{KL}\big[Q(W) \parallel P(W)\big]$ : 사후 분포의 근사 분포 $W \sim Q$ 와 사전 분포 $W \sim P$ 의 차이</li>
-      <li>$\mathbb{E}_{W \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right]$ : 사후 분포의 근사 분포 $W \sim Q$ 에서 샘플링된 가중치 $W$ 에 대한 로그 우도의 기대값</li>
-      <li>$\log{P(\mathcal{D})}$ : 데이터 $\mathcal{D}$ 에 대한 로그 마진 우도(Marginal Liklihood)로서, $\mathcal{D}$ 가 발생할 확률</li>
+      </li>
     </ul>
   </li>
   <li>
-    <p><strong>$\log{P(\mathcal{D})}$ 의 이해</strong></p>
+    <p>Kullback-Leibler divergence segmentation:</p>
+
+\[\begin{aligned}
+  &amp;KL[Q(W) \parallel P(W \mid \mathcal{D})]\\
+  &amp;= \mathbb{E}_{W \sim Q}\left[\log{\frac{Q(W)}{P(W \mid \mathcal{D})}}\right]\\
+  &amp;= \mathbb{E}_{W \sim Q}[\log{Q(W)}] - \mathbb{E}_{W \sim Q}[\log{P(W \mid \mathcal{D})}]
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>posterior is decomposed by Bayes’ theorem:</p>
+
+\[\begin{aligned}
+  &amp;\mathbb{E}_{W \sim Q}[\log{P(W \mid \mathcal{D})}]\\
+  &amp;= \mathbb{E}_{W \sim Q}\left[\log{\frac{P(\mathcal{D} \mid W) \cdot P(W)}{P(\mathcal{D})}}\right]\\
+  &amp;= \mathbb{E}_{W \sim Q}[\log{P(\mathcal{D} \mid W)}] + \mathbb{E}_{W \sim Q}[\log{P(W)}] - \mathbb{E}_{W \sim Q}[\log{P(\mathcal{D})}]
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Therefore:</p>
+
+\[\begin{aligned}
+  &amp;KL[Q(W) \parallel P(W \mid \mathcal{D})]\\
+  &amp;= \mathbb{E}_{W \sim Q}[\log{Q(W)}] - \Big(\mathbb{E}_{W \sim Q}[\log{p(\mathcal{D} \mid W)}] + \mathbb{E}_{W \sim Q}[\log{P(W)}] - \mathbb{E}_{W \sim Q}[\log{P(\mathcal{D})}]\Big)\\
+  &amp;= \mathbb{E}_{W \sim Q}[\log{Q(W)}] - \mathbb{E}_{W \sim Q}[\log{P(W)}] - \mathbb{E}_{W \sim Q}[\log{P(\mathcal{D} \mid W)}] + \mathbb{E}_{W \sim Q}[\log{P(\mathcal{D})}]
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Some items are tied to the Kullback Leibler divergence:</p>
+
+\[\begin{aligned}
+  &amp;KL[Q(W) \parallel P(W)]\\
+  &amp;= \mathbb{E}_{W \sim Q}\left[\log{\frac{Q(W)}{P(W)}}\right]\\
+  &amp;= \mathbb{E}_{W \sim Q}[\log{Q(W)} - \log{P(W)}]\\
+  &amp;= \mathbb{E}_{W \sim Q}[\log{Q(W)}] - \mathbb{E}_{W \sim Q}[\log{P(W)}]
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Finally:</p>
+
+\[\begin{aligned}
+  &amp;KL[Q(W) \parallel P(W \mid \mathcal{D})]\\
+  &amp;= KL[Q(W) \parallel P(W)] - \mathbb{E}_{W \sim Q}[\log{P(\mathcal{D} \mid W)}] + \mathbb{E}_{W \sim Q}[\log{P(\mathcal{D})}]
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h2 id="elbo"><span class="me-2">ELBO</span><a href="#elbo" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><strong>증거 하한(<code class="language-plaintext highlighter-rouge">E</code>vidence <code class="language-plaintext highlighter-rouge">L</code>ower <code class="language-plaintext highlighter-rouge">B</code> <code class="language-plaintext highlighter-rouge">o</code>und)</strong>: 변분 추론의 목적 함수로서 증거 $\log{P(\mathcal{D})}$ 의 하한</p>
+
+\[\begin{aligned}
+  \text{ELBO}
+  &amp;= \mathbb{E}_{W \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] - KL[Q(W) \parallel P(W)]
+  \end{aligned}\]
 
     <ul>
-      <li>
-        <p>목표 분포와 제안 분포 간 차이가 없다면:</p>
+      <li>$\mathbb{E}_{W \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right]$: 기대 로그 우도로서 근사 분포의 데이터 적합도</li>
+      <li>$KL[Q(W) \parallel P(W)]$: 근사 분포와 사전 분포 간 쿨백 라이블러 발산으로서 사전 신념 기준 근사 분포의 복잡도</li>
+    </ul>
+  </li>
+  <li>
+    <p>Kullback-Leibler divergence segmentation:</p>
 
 \[\begin{aligned}
-  D_{KL}\big[Q(W) \parallel P(W \mid \mathcal{D})\big]
-  &amp;= 0
+  &amp;KL[Q(W) \parallel P(W \mid \mathcal{D})]\\
+  &amp;= KL[Q(W) \parallel P(W)] - \mathbb{E}_{W \sim Q}[\log{P(\mathcal{D} \mid W)}] + \mathbb{E}_{W \sim Q}[\log{P(\mathcal{D})}]
   \end{aligned}\]
-      </li>
-      <li>
-        <p>따라서:</p>
+
+    <ul>
+      <li>$KL\big[Q(W) \parallel P(W)\big]$ : Kullback-Leibler divergence between approx. and prior</li>
+      <li>$\mathbb{E}_{W \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right]$ : expected log likelihood, goodness of fit of the approx. dist. to the data</li>
+      <li>$\log{P(\mathcal{D})}$ : log marginal likelihood</li>
+    </ul>
+  </li>
+  <li>
+    <p>best approx.:</p>
 
 \[\begin{aligned}
-  D_{KL}\big[Q(W) \parallel P(W)\big] - \mathbb{E}_{W \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] + \log{P(\mathcal{D})}
+  KL[Q(W) \parallel P(W)] - \mathbb{E}_{W \sim Q}[\log{P(\mathcal{D} \mid W)}] + \mathbb{E}_{W \sim Q}[\log{P(\mathcal{D})}]
   &amp;=0
   \end{aligned}\]
-      </li>
-      <li>
-        <p>증거(Evidence)를 기준으로 정리하면:</p>
+  </li>
+  <li>
+    <p>to summarize the evidence,</p>
 
 \[\begin{aligned}
-  \log{P(\mathcal{D})}
-  &amp;= \mathbb{E}_{W \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] - D_{KL}\big[Q(W) \parallel P(W)\big]
-  \end{aligned}\]
-      </li>
-      <li>
-        <p>증거(Evidence)는 파라미터에 대하여 상수이므로:</p>
-
-\[\begin{aligned}
-  \therefore \log{P(\mathcal{D})}
-  &amp;\ge \mathbb{E}_{W \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] - D_{KL}\big[Q(W) \parallel P(W)\big]
-  \end{aligned}\]
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>증거 하한(<code class="language-plaintext highlighter-rouge">E</code>vidence <code class="language-plaintext highlighter-rouge">L</code>ower <code class="language-plaintext highlighter-rouge">B</code> <code class="language-plaintext highlighter-rouge">o</code>und; ELBO)</strong> : 파라미터 갱신 증거 $\log{P(\mathcal{D})}$ 의 하한값</p>
-
-\[\begin{aligned}
-  \text{ELBO}
-  &amp;= \mathbb{E}_{W \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] - D_{KL}\big[Q(W) \parallel P(W)\big]
-  \end{aligned}\]
-
-    <ul>
-      <li>\(\mathbb{E}_{W \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right]\) : Log Likelihood Function</li>
-      <li>\(D_{KL}\big[Q(W) \parallel P(W)\big]\) : KL Divergence from Approx. to Prior</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="bayes-by-backprop"><span class="me-2">Bayes by Backprop</span><a href="#bayes-by-backprop" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<ul>
-  <li>
-    <p><strong>BBB(<code class="language-plaintext highlighter-rouge">B</code>ayes <code class="language-plaintext highlighter-rouge">b</code>y <code class="language-plaintext highlighter-rouge">B</code>ackprop)</strong> : 변분 추론을 사용하여 신경망의 가중치에 대한 사후 확률 분포를 근사하는 과정에서, 재매개변수화 트릭을 도입함으로써 역전파 알고리즘을 활용한 최적화 학습을 도모한 방법론</p>
-
-    <ul>
-      <li><a href="https://proceedings.mlr.press/v37/blundell15">Weight Uncertainty in Neural Networks(2015)</a></li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>재매개변수화 트릭(Reparameterization Trick)</strong> : 샘플링을 미분 가능한 함수로 변형하는 방법</p>
-
-\[w \sim \mathcal{N}(\mu,\sigma^{2}) \quad \rightarrow \quad w = \mu + \sigma \cdot \epsilon\]
-  </li>
-  <li>
-    <p><strong>후방 템퍼링(Posterior Tempering)</strong> : 데이터에 과적합되는 것을 방지하도록 우도 항목의 영향력을 할인하는 방법</p>
-
-\[\begin{aligned}
-  \text{ELBO}
-  &amp;= \frac{1}{T} \cdot \mathbb{E}_{W \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] - D_{KL}\big[Q(W) \parallel P(W)\big]
-  \end{aligned}\]
-  </li>
-</ul>
-
-<h2 id="monte-carlo-dropout"><span class="me-2">Monte Carlo Dropout</span><a href="#monte-carlo-dropout" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<ul>
-  <li>
-    <p><strong>MC Dropout(<code class="language-plaintext highlighter-rouge">M</code>onte <code class="language-plaintext highlighter-rouge">C</code>arlo Dropout)</strong> : 드롭아웃의 확률적 성질을 변분추론 관점에서 해석하여 사후 확률 분포를 근사하는 모수 방법론으로서, 평가 과정에서도 드롭아웃을 유지하고 여러 번 샘플링한 결과값에 평균을 내어 최종 결론을 도출함</p>
-
-    <ul>
-      <li><a href="https://doi.org/10.48550/arXiv.1506.02142">Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning(2016)</a></li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>Original ELBO</strong></p>
-
-\[\begin{aligned}
-  \text{ELBO}
-  = \mathbb{E}_{W \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] - D_{KL}\big[Q(W) \parallel P(W)\big]
-  \end{aligned}\]
-
-    <ul>
-      <li>$P(W)$ : Prior Dist.</li>
-      <li>$Q(W)$ : Approx. Dist.</li>
-      <li>\(\mathbb{E}_{W \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right]\) : Likelihood</li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>Prior Dist.</strong> : Normality Assumption</p>
-
-\[\begin{aligned}
-  \mathcal{W} \sim \mathcal{N}\left(0, \sigma^{2}_{p}\mathbf{I}\right)
+  \mathbb{E}_{W \sim Q}[\log{P(\mathcal{D})}]
+  &amp;\ge \mathbb{E}_{W \sim Q}[\log{P(\mathcal{D} \mid W)}] - KL[Q(W) \parallel P(W)]
   \end{aligned}\]
   </li>
   <li>
-    <p><strong>Approx. Dist.</strong></p>
-
-    <ul>
-      <li>
-        <p>Dropout is a process of applying Bernoulli sampling to weights, <br /> so each weight has stochastic properties:</p>
+    <p>since evidence is constant for the parameters,</p>
 
 \[\begin{aligned}
-  \mathcal{W} \mid \mathbf{M} &amp;\sim Q
-  \end{aligned}\]
-
-        <ul>
-          <li>$\mathcal{W} = \mathbf{W} \odot \mathbf{M}$</li>
-          <li>$M_{i,j} \sim \text{Bernoulli}(p)$</li>
-        </ul>
-      </li>
-      <li>
-        <p>According to the CLS, <br /> the mean and variance of multiple samplings converge to a normal dist.</p>
-
-\[\begin{aligned}
-  q(\mathcal{\omega}) \approx \mathcal{N}\left(0, \sigma^{2}_{q}\mathbf{I}\right)
-  \end{aligned}\]
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>KL Divergence from Approx. to Prior</strong></p>
-
-\[\begin{aligned}
-  D_{KL}(q \parallel p)
-  &amp;= \frac{1}{2}\sum_{i}\left(\frac{\sigma_{q}^{2}}{\sigma_{p}^{2}} + \frac{\sigma_{p}^{2}}{\sigma_{q}^{2}} - 1\right)
-  \end{aligned}\]
-
-    <ul>
-      <li>
-        <p>If $\sigma_{p}^{2} \approx \sigma_{q}^{2}$:</p>
-
-\[\begin{aligned}
-  D_{KL}(q \parallel p)
-  &amp;= \frac{1}{2\sigma^{2}}\Vert \mathcal{W} \Vert^{2}
-  \end{aligned}\]
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>Likelihood</strong> <br /> Approximated by averaging the results of multiple samplings</p>
-
-\[\begin{aligned}
-  \mathbb{E}_{\omega \sim q}[\log{p(\mathcal{D} \mid \omega)}]
-  \approx \frac{1}{T}\sum_{t=1}^{T}{\log{p(\mathcal{D} \mid \omega_{t})}}
-  \end{aligned}\]
-  </li>
-  <li>
-    <p><strong>Therefore:</strong></p>
-
-\[\begin{aligned}
-  \text{ELBO}
-  &amp;= \frac{1}{T}\sum_{t=1}^{T}{\log{p(\mathcal{D} \mid \omega_{t})}} - \frac{1}{2\sigma^{2}}\Vert \mathcal{W} \Vert^{2}
+  &amp;\min{KL[Q(W) \parallel P(W \mid \mathcal{D})]}\\
+  &amp;\Leftrightarrow \max{\mathbb{E}_{W \sim Q}[\log{P(\mathcal{D} \mid W)}] - KL[Q(W) \parallel P(W)]}
   \end{aligned}\]
   </li>
 </ul>
@@ -1142,8 +961,8 @@
       <div class="post-meta mb-3">
         <i class="far fa-folder-open fa-fw me-1"></i>
         
-          <a href="/categories/data-mining-techs/">Data Mining Techs</a>,
-          <a href="/categories/bayesian-modeling/">Bayesian Modeling</a>
+          <a href="/categories/bayes/">BAYES</a>,
+          <a href="/categories/2-posterior-approx/">2.posterior approx.</a>
       </div>
     
 
@@ -1201,21 +1020,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Posterior%20Estimation%20(2)%20Variational%20Inference%20-%20Data%20Scientist&url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FVI%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=Variational%20Inference%20-%20Data%20Scientist&url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FVI%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Posterior%20Estimation%20(2)%20Variational%20Inference%20-%20Data%20Scientist&u=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FVI%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=Variational%20Inference%20-%20Data%20Scientist&u=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FVI%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FVI%2F&text=Posterior%20Estimation%20(2)%20Variational%20Inference%20-%20Data%20Scientist" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FVI%2F&text=Variational%20Inference%20-%20Data%20Scientist" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -1270,14 +1089,28 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/GP/">Gaussian Process</a>
+          <a href="/posts/Hierarchical_Clustering/">Hierarchical Clustering</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Bayesian_Attention_Modules/">Bayesian Attention Modules</a>
+          <a href="/posts/LDA/">Linear Discriminant Analysis</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/PCA/">Principal Component Analysis</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/BAM/">Bayesian Attention Modules</a>
         </li>
       
         
@@ -1285,20 +1118,6 @@
         
         <li class="text-truncate lh-lg">
           <a href="/posts/CLiMF/">CLiMF</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/LambdaRank/">LambdaRank</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/ListMLE/">ListMLE</a>
         </li>
       
     </ul>
@@ -1376,6 +1195,55 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1740,52 +1608,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -1810,395 +1632,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2633,6 +2066,128 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2927,60 +2482,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3135,7 +2636,179 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -3172,6 +2845,235 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -3291,10 +3193,10 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/ai-application/">AI Application</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
@@ -3312,10 +3214,10 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/objective-function/">Objective Function</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/microeconomics/">Microeconomics</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
       
     </div>
   </section>
@@ -3539,319 +3441,43 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -3963,7 +3589,7 @@
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
-          <a href="/posts/Bayesian_Attention_Modules/" class="post-preview card h-100">
+          <a href="/posts/MC_Dropout/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -3975,23 +3601,31 @@
 
 <time
   
-  data-ts="1726671600"
+  data-ts="1721746800"
   data-df="ll"
   
 >
-  Sep 19, 2024
+  Jul 24, 2024
 </time>
 
-              <h4 class="pt-0 my-2">Bayesian Attention Modules</h4>
+              <h4 class="pt-0 my-2">Monte Carlo Dropout</h4>
               <div class="text-muted">
-                <p>&lt;ul type=&quot;square&quot;&gt; &lt;li&gt;&lt;strong&gt;Title&lt;/strong&gt;: &lt;a href=&quot; https://doi.org/10.48550/arXiv.2010.10604&quot;&gt;&lt;code&gt;Bayesian Attention Modules&lt;/code&gt;&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Published&lt;/strong&gt;: &lt;em&gt;2020&lt;/em&gt;&lt;/l...</p>
+                <p>Monte Carlo Dropout
+
+
+
+  
+    MC Dropout(Monte Carlo Dropout) : 드롭아웃의 확률적 성질을 변분추론 관점에서 해석하여 사후 확률 분포를 근사하는 모수 방법론으로서, 평가 과정에서도 드롭아웃을 유지하고 여러 번 샘플링한 결과값에 평균을 내어 최종 결론을 도출함
+
+    
+      Dropout as a ...</p>
               </div>
             </div>
           </a>
         </article>
       
         <article class="col">
-          <a href="/posts/VAE/" class="post-preview card h-100">
+          <a href="/posts/BBB/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -4003,37 +3637,33 @@
 
 <time
   
-  data-ts="1721833200"
+  data-ts="1721660400"
   data-df="ll"
   
 >
-  Jul 25, 2024
+  Jul 23, 2024
 </time>
 
-              <h4 class="pt-0 my-2">Variational AutoEncoder</h4>
+              <h4 class="pt-0 my-2">Bayes by Backprop</h4>
               <div class="text-muted">
-                <p>AutoEncoder
+                <p>Bayes by Backprop
 
 
 
-  오토인코더(AutoEncoder; AE) : 입력 데이터를 압축시켜 저차원 특징 공간으로 축소한 후, 이를 다시 확장하여 원본으로 복원하는 인공신경망 아키텍처
-
-
-How to Modeling
 
 
   
-    Encoder:
+    BBB(Bayes by Backprop) : 변분 추론을 사용하여 신경망의 가중치에 대한 사후 확률 분포를 근사하는 과정에서, 재매개변수화 트릭을 도입함으로써 역전파 알고리즘을 활용한 최적화 학습을 도모한 방법론
 
-\[\begin{aligned}
-  \mathbf{z} = F\left(\mathbf{x} \mi...</p>
+    
+      Weight Uncertainty in Neural Network...</p>
               </div>
             </div>
           </a>
         </article>
       
         <article class="col">
-          <a href="/posts/Bayes_Action/" class="post-preview card h-100">
+          <a href="/posts/SVGD/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -4045,16 +3675,24 @@ How to Modeling
 
 <time
   
-  data-ts="1721487600"
+  data-ts="1721919600"
   data-df="ll"
   
 >
-  Jul 21, 2024
+  Jul 26, 2024
 </time>
 
-              <h4 class="pt-0 my-2">Bayes Action</h4>
+              <h4 class="pt-0 my-2">Stein Variational Gradient Descent</h4>
               <div class="text-muted">
-                <p>Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp; Management, College of Business Administration, Kookmin Univ.</p>
+                <p>SVGD
+
+
+
+  
+    SVGD(Stein Variational Gradient Descent) : Stein Discrepancy 를 활용하여 제안 분포 $W \sim Q$ 를 목표 분포 $W \mid \mathcal{D} \sim P$ 에 근사하는 비모수 방법론(Non-Parametric Method)
+
+    
+      Stein Varia...</p>
               </div>
             </div>
           </a>
@@ -4079,17 +3717,17 @@ How to Modeling
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>Posterior Estimation (1) Monte Carlo Simulation</p>
+      <p>Markov Chain Monte Carlo</p>
     </a>
   
 
   
     <a
-      href="/posts/KSD/"
+      href="/posts/BBB/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>Posterior Estimation (3) Kernelized Stein Discrepancy</p>
+      <p>Bayes by Backprop</p>
     </a>
   
 </nav>
@@ -4215,6 +3853,55 @@ How to Modeling
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -4579,52 +4266,6 @@ How to Modeling
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -4649,395 +4290,6 @@ How to Modeling
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -5472,6 +4724,128 @@ How to Modeling
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -5766,60 +5140,6 @@ How to Modeling
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -5974,7 +5294,179 @@ How to Modeling
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -6011,6 +5503,235 @@ How to Modeling
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -6130,10 +5851,10 @@ How to Modeling
         <a class="post-tag btn btn-outline-primary" href="/tags/ai-application/">AI Application</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
@@ -6151,10 +5872,10 @@ How to Modeling
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/objective-function/">Objective Function</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/microeconomics/">Microeconomics</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
       
     </div>
   </section>
