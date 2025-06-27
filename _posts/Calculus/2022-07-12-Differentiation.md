@@ -2,7 +2,7 @@
 order: 2
 title: Differentiation
 date: 2022-07-12
-categories: [Mathematical Techs, Calculus]
+categories: [MATHEMATICAL TECHS, Calculus]
 tags: [Mathematics]
 math: true
 description: >-

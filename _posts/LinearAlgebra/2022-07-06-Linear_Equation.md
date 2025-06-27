@@ -2,7 +2,7 @@
 order: 3
 title: Linear Equation
 date: 2022-07-06
-categories: [Mathematical Techs, Linear Algebra]
+categories: [MATHEMATICAL TECHS, Linear Algebra]
 tags: [Mathematics]
 math: true
 description: >-

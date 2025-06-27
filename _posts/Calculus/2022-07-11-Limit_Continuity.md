@@ -2,7 +2,7 @@
 order: 1
 title: Limit and Continuity
 date: 2022-07-11
-categories: [Mathematical Techs, Calculus]
+categories: [MATHEMATICAL TECHS, Calculus]
 tags: [Mathematics]
 math: true
 description: >-

@@ -2,7 +2,7 @@
 order: 6
 title: Matrix Decomposition
 date: 2022-07-09
-categories: [Mathematical Techs, Linear Algebra]
+categories: [MATHEMATICAL TECHS, Linear Algebra]
 tags: [Mathematics]
 math: true
 description: >-

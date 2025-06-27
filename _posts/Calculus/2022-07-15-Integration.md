@@ -2,7 +2,7 @@
 order: 5
 title: Integration
 date: 2022-07-15
-categories: [Mathematical Techs, Calculus]
+categories: [MATHEMATICAL TECHS, Calculus]
 tags: [Mathematics]
 math: true
 description: >-

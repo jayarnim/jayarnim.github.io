@@ -2,7 +2,7 @@
 order: 3
 title: Taylor Series
 date: 2022-07-13
-categories: [Mathematical Techs, Calculus]
+categories: [MATHEMATICAL TECHS, Calculus]
 tags: [Mathematics]
 math: true
 description: >-

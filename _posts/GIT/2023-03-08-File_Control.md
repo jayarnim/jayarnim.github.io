@@ -2,7 +2,7 @@
 order: 3
 title: File Control
 date: 2023-03-08
-categories: [AI Dev. Env., GIT]
+categories: [AI DEV. ENV., GIT]
 tags: [Dev. Env., DVCS, GIT]
 math: true
 image:
@@ -99,7 +99,7 @@ git restore <OPTION> <FILE-NAME>
 
 -----
 
-### Reference
+## Reference
 
 - [Git - 간편 안내서](https://rogerdudler.github.io/git-guide/index.ko.html)
 - [누구나 쉽게 이해할 수 있는 Git 입문](https://backlog.com/git-tutorial/kr/)
