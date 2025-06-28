@@ -96,21 +96,6 @@ image:
 
     > 일반적 환경에서 조건화에 의한 확률 변화는 장기적으로 안정화된다(이영의, 2015, p.54). <br> $$\mathbb{E}\left[\theta \mid \mathcal{D}_{n}\right] \to \mathbb{E}\left[\theta \mid \mathcal{D}_{\infty}\right]$$
 
-## Problem of Induction
------
-
-- 귀납의 문제(Problem of Induction)
-
-    > 특정 사례들로부터 보편 결론을 이끌어낼 수 없다.
-
-- 후험 일치성(Posterior Consistency)
-
-    > 확률 계산법을 준수하고 조건화 규칙에 따라 개정이 이루어진다면, 그리고 그러한 개정의 결과가 궁극적으로 참으로 수렴한다는 점이 보증된다면, 베이즈주의 추리에서는 귀납의 문제가 성립될 수 없다(이영의, 2015, p.55).
-
-- 슈바르츠 정리(Schwartz’s Theorem)
-
-    > 관측치 $$X \sim P(\theta)$$, 모수 $$\theta \in \Theta$$, 사전 확률 분포 $$\Pi$$, 참 모수 $$\theta^{*}$$ 에 대하여, $$\theta^{*}$$ 의 근방에 위치한 $$\theta$$ 가 사전 확률 분포에서 양의 질량을 가진다고 하자. 즉, $$\Pi\left(\{\theta : D_{KL}\left[P_{\theta^{*}} \Vert P_{\theta}\right] < \epsilon\}\right) > 0$$ 이다. 이때 사후 확률 분포는 장기적으로 $$\theta^{*}$$ 에 집중된다. 즉, $$\Pi\left(\theta^{*} \mid X_{1}, \cdots, X_{n}\right) \xrightarrow{n \to \infty} 1$$ 이다.
-
 - 조건화 규칙(Rule of Conditionalization)
 
     - 엄밀조건화 규칙(Rule of Strict Conditionalization):
@@ -126,6 +111,21 @@ image:
         \Pi\left(\Theta\right)
         &= Q\left(\mathcal{D}\right) \cdot P\left(\Theta \mid \mathcal{D}\right) + Q\left(\neg\mathcal{D}\right) \cdot p\left(\Theta \mid \neg\mathcal{D}\right)
         \end{aligned}$$
+
+## Problem of Induction
+-----
+
+- 귀납의 문제(Problem of Induction)
+
+    > 특정 사례들로부터 보편 결론을 이끌어낼 수 없다.
+
+- 후험 일치성(Posterior Consistency)
+
+    > 확률 계산법을 준수하고 조건화 규칙에 따라 개정이 이루어진다면, 그리고 그러한 개정의 결과가 궁극적으로 참으로 수렴한다는 점이 보증된다면, 베이즈주의 추리에서는 귀납의 문제가 성립될 수 없다(이영의, 2015, p.55).
+
+- 슈바르츠 정리(Schwartz’s Theorem)
+
+    > 관측치 $$X \sim P(\theta)$$, 모수 $$\theta \in \Theta$$, 사전 확률 분포 $$\Pi$$, 참 모수 $$\theta^{*}$$ 에 대하여, $$\theta^{*}$$ 의 근방에 위치한 $$\theta$$ 가 사전 확률 분포에서 양의 질량을 가진다고 하자. 즉, $$\Pi\left(\{\theta : D_{KL}\left[P_{\theta^{*}} \Vert P_{\theta}\right] < \epsilon\}\right) > 0$$ 이다. 이때 사후 확률 분포는 장기적으로 $$\theta^{*}$$ 에 집중된다. 즉, $$\Pi\left(\theta^{*} \mid X_{1}, \cdots, X_{n}\right) \xrightarrow{n \to \infty} 1$$ 이다.
 
 -----
 

@@ -95,8 +95,8 @@ image:
     P\left(\Theta \mid \mathcal{D} \right)
     \end{aligned}$$
 
-    - 시행의 성질은 관측 가능한 대상이 아니므로 역확률을 직접적으로 구할 수 없음
-    - 베이즈 정리는 역확률을 직접 확률과 신념의 결합으로써 간접적으로 도출함
+    - 시행의 성질에 관한 믿음(Posterior)은 관측 가능한 대상이 아니므로 직접적으로 구할 수 없음
+    - 베이즈 정리는 이 믿음(Posterior)을 직접 확률(Likelihood)과 사전 정보(Prior)의 조합으로써 간접적으로 도출함
 
 - **우도(Likelihood)**:  데이터에 대한 모수의 상대적 적합성으로서, 데이터 생성 과정상의 무작위성으로 인한 우발적 불확실성을 반영함
 
@@ -149,8 +149,8 @@ image:
     &= \int_{0}^{1}{\frac{n!}{X!(n-X)!} \cdot \theta^{X} \cdot (1-\theta)^{n-X}}\text{d}\theta\\
     &= \frac{n!}{X!(n-X)!} \cdot \int_{0}^{1}{\theta^{X} \cdot (1-\theta)^{n-X}}\text{d}\theta\\
     &= \frac{n!}{X!(n-X)!} \cdot \text{B}(X+1,n-X+1)\\
-    &= \frac{n!}{X!(n-X)!} \cdot \frac{\Gamma(X+1)\Gamma(n-X+1)}{\Gamma(n+2)} \quad \because (X+1),(n-X+1) \in \mathbf{R}^{+}\\
-    &= \frac{n!}{X!(n-X)!} \cdot \frac{X!(n-X)!}{(n+1)!} \quad \because (X+1),(n-X+1) \in \mathbf{Z}^{+}\\
+    &= \frac{n!}{X!(n-X)!} \cdot \frac{\Gamma(X+1)\Gamma(n-X+1)}{\Gamma(n+2)} \quad \because (X+1),(n-X+1) \in \mathbb{R}^{+}\\
+    &= \frac{n!}{X!(n-X)!} \cdot \frac{X!(n-X)!}{(n+1)!} \quad \because (X+1),(n-X+1) \in \mathbb{Z}^{+}\\
     &= \frac{1}{n+1}
     \end{aligned}$$
 
