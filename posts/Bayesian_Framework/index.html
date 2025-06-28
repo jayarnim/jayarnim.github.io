@@ -943,7 +943,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1889 words"
+  title="1896 words"
 >
   <em>10 min</em> read</span>
 
@@ -1061,8 +1061,8 @@
   \end{aligned}\]
 
     <ul>
-      <li>시행의 성질은 관측 가능한 대상이 아니므로 역확률을 직접적으로 구할 수 없음</li>
-      <li>베이즈 정리는 역확률을 직접 확률과 신념의 결합으로써 간접적으로 도출함</li>
+      <li>시행의 성질에 관한 믿음(Posterior)은 관측 가능한 대상이 아니므로 직접적으로 구할 수 없음</li>
+      <li>베이즈 정리는 이 믿음(Posterior)을 직접 확률(Likelihood)과 사전 정보(Prior)의 조합으로써 간접적으로 도출함</li>
     </ul>
   </li>
   <li>
@@ -1128,8 +1128,8 @@
   &amp;= \int_{0}^{1}{\frac{n!}{X!(n-X)!} \cdot \theta^{X} \cdot (1-\theta)^{n-X}}\text{d}\theta\\
   &amp;= \frac{n!}{X!(n-X)!} \cdot \int_{0}^{1}{\theta^{X} \cdot (1-\theta)^{n-X}}\text{d}\theta\\
   &amp;= \frac{n!}{X!(n-X)!} \cdot \text{B}(X+1,n-X+1)\\
-  &amp;= \frac{n!}{X!(n-X)!} \cdot \frac{\Gamma(X+1)\Gamma(n-X+1)}{\Gamma(n+2)} \quad \because (X+1),(n-X+1) \in \mathbf{R}^{+}\\
-  &amp;= \frac{n!}{X!(n-X)!} \cdot \frac{X!(n-X)!}{(n+1)!} \quad \because (X+1),(n-X+1) \in \mathbf{Z}^{+}\\
+  &amp;= \frac{n!}{X!(n-X)!} \cdot \frac{\Gamma(X+1)\Gamma(n-X+1)}{\Gamma(n+2)} \quad \because (X+1),(n-X+1) \in \mathbb{R}^{+}\\
+  &amp;= \frac{n!}{X!(n-X)!} \cdot \frac{X!(n-X)!}{(n+1)!} \quad \because (X+1),(n-X+1) \in \mathbb{Z}^{+}\\
   &amp;= \frac{1}{n+1}
   \end{aligned}\]
   </li>
@@ -2490,6 +2490,11 @@
     
     
     
+  
+    
+    
+    
+    
       
         
         
@@ -3575,19 +3580,19 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
@@ -4905,6 +4910,11 @@
     
     
       
+    
+  
+    
+    
+    
     
   
     
