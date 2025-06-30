@@ -32,8 +32,8 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="Bayes by Backprop" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Bayes by Backprop" />
-<meta property="og:description" content="Bayes by Backprop" />
+<meta name="description" content="Blundell, C., Cornebise, J., Kavukcuoglu, K., &amp; Wierstra, D.&lt;/br&gt; (2015, June).&lt;/br&gt; Weight uncertainty in neural network.&lt;/br&gt; In International conference on machine learning (pp. 1613-1622).&lt;/br&gt; PMLR." />
+<meta property="og:description" content="Blundell, C., Cornebise, J., Kavukcuoglu, K., &amp; Wierstra, D.&lt;/br&gt; (2015, June).&lt;/br&gt; Weight uncertainty in neural network.&lt;/br&gt; In International conference on machine learning (pp. 1613-1622).&lt;/br&gt; PMLR." />
 <link rel="canonical" href="https://jayarnim.github.io/posts/BBB/" />
 <meta property="og:url" content="https://jayarnim.github.io/posts/BBB/" />
 <meta property="og:site_name" content="Data Scientist" />
@@ -44,7 +44,7 @@
 <meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg" />
 <meta property="twitter:title" content="Bayes by Backprop" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-23T00:00:00+09:00","datePublished":"2024-07-23T00:00:00+09:00","description":"Bayes by Backprop","headline":"Bayes by Backprop","image":"https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/BBB/"},"url":"https://jayarnim.github.io/posts/BBB/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-23T00:00:00+09:00","datePublished":"2024-07-23T00:00:00+09:00","description":"Blundell, C., Cornebise, J., Kavukcuoglu, K., &amp; Wierstra, D.&lt;/br&gt; (2015, June).&lt;/br&gt; Weight uncertainty in neural network.&lt;/br&gt; In International conference on machine learning (pp. 1613-1622).&lt;/br&gt; PMLR.","headline":"Bayes by Backprop","image":"https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/BBB/"},"url":"https://jayarnim.github.io/posts/BBB/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -684,6 +684,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -714,6 +725,8 @@
 <article class="px-1">
   <header>
     <h1 data-toc-skip>Bayes by Backprop</h1>
+    
+      <p class="post-desc fw-light mb-4">Blundell, C., Cornebise, J., Kavukcuoglu, K., & Wierstra, D.</br> (2015, June).</br> <a href="https://proceedings.mlr.press/v37/blundell15">Weight uncertainty in neural network.</a></br> In International conference on machine learning (pp. 1613-1622).</br> PMLR.</p>
     
 
     <div class="post-meta text-muted">
@@ -794,9 +807,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="181 words"
+  title="435 words"
 >
-  <em>1 min</em> read</span>
+  <em>2 min</em> read</span>
 
         </div>
       </div>
@@ -807,27 +820,97 @@
     <h2 id="bayes-by-backprop"><span class="me-2">Bayes by Backprop</span><a href="#bayes-by-backprop" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
+<ul>
+  <li>
+    <p><strong>문제 의식</strong></p>
+
+    <blockquote>
+      <p>인공신경망 알고리즘은 파라미터 수가 매우 많아 과적합 문제에서 자유롭지 못하나 단일 최적값만 학습하여 지나치게 확신하는 예측을 수행함. 학습 조기 종료, 배치 정규화, 레이어 정규화, 드롭아웃 등 과적합 방지 기법들은 모형이 산출하는 결과에 대한 정규화 기법으로서 모형(의사결정 과정) 자체에 대한 정규화 기법이 아님. 즉, 이 기법들은 과적합 문제의 핵심인 과신을 해결하지 못함.</p>
+    </blockquote>
+
+    <ul>
+      <li><strong>과적합(Overfitting)</strong>: 모형의 복잡도가 데이터 셋이 제공하는 정보량보다 심화되어 발생하는 현상</li>
+      <li><strong>과신(Overconfidence)</strong>: 정보가 부족한 상황에서 단일 가설을 확신하여 예측하는 현상</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">BBB</code>(<code class="language-plaintext highlighter-rouge">B</code>ayes <code class="language-plaintext highlighter-rouge">b</code>y <code class="language-plaintext highlighter-rouge">B</code>ackprop)</strong>: 인공신경망의 가중치에 불확실성을 반영하여 데이터에 대한 설명력을 확보하는 동시에(Likelihood) 사전 정보(Prior)를 활용하여 모형의 복잡도를 제어함으로써(Kullback–Leibler divergence) 일반화 성능을 향상시키는 학습 방법론</p>
+
+    <ul>
+      <li><strong>How to Approximate</strong>: Variational Inference</li>
+      <li><strong>Objective Function</strong>: <code class="language-plaintext highlighter-rouge">E</code>vidence <code class="language-plaintext highlighter-rouge">L</code>ower <code class="language-plaintext highlighter-rouge">Bo</code>und</li>
+      <li><strong>How to Sample from Approx.</strong>: Reparameterization Trick</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="how-to-modeling"><span class="me-2">How to Modeling</span><a href="#how-to-modeling" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
 <p><a href="/_post_refer_img/BayesianModeling/02-04-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/02-04-01.png" alt="01" width="100%" loading="lazy"></a></p>
 
 <ul>
   <li>
-    <p><strong>BBB(<code class="language-plaintext highlighter-rouge">B</code>ayes <code class="language-plaintext highlighter-rouge">b</code>y <code class="language-plaintext highlighter-rouge">B</code>ackprop)</strong> : 변분 추론을 사용하여 신경망의 가중치에 대한 사후 확률 분포를 근사하는 과정에서, 재매개변수화 트릭을 도입함으로써 역전파 알고리즘을 활용한 최적화 학습을 도모한 방법론</p>
+    <p><strong>Approx.</strong></p>
 
     <ul>
-      <li><a href="https://proceedings.mlr.press/v37/blundell15">Weight Uncertainty in Neural Networks(2015)</a></li>
+      <li>
+        <p>Multivariate Gaussian Dist.(or Mean-Field Guassian Dist.):</p>
+
+\[\begin{aligned}
+  q(w)
+  &amp;= \mathcal{N}(\mu, \text{diag}(\sigma^{2}))
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>Trainable Parameters:</p>
+
+\[\begin{aligned}
+  \Theta_{\text{approx.}}
+  &amp;= (\mu, \rho)\\
+  \sigma
+  &amp;= \log{\left[1 + \exp(\rho)\right]}
+  \end{aligned}\]
+      </li>
     </ul>
   </li>
   <li>
-    <p><strong>재매개변수화 트릭(Reparameterization Trick)</strong> : 샘플링을 미분 가능한 함수로 변형하는 방법</p>
+    <p><strong>Prior</strong></p>
 
-\[w \sim \mathcal{N}(\mu,\sigma^{2}) \quad \rightarrow \quad w = \mu + \sigma \cdot \epsilon\]
+    <ul>
+      <li>
+        <p><strong>Gaussian</strong>: L2 Normalization</p>
+
+\[\begin{aligned}
+  Q(w)
+  &amp;=\mathcal{N}(0,\sigma^{2})
+  \end{aligned}\]
+      </li>
+      <li>
+        <p><strong>Scale Mixture of Gaussian</strong>: Approx. Sparse, Heavy-tail Dist.</p>
+
+\[\begin{aligned}
+  P(w)
+  &amp;=\pi \cdot \mathcal{N}(0,\sigma_{1}^{2}) + (1-\pi) \cdot \mathcal{N}(0,\sigma_{2}^{2})
+  \end{aligned}\]
+      </li>
+    </ul>
   </li>
   <li>
-    <p><strong>후방 템퍼링(Posterior Tempering)</strong> : 데이터에 과적합되는 것을 방지하도록 우도 항목의 영향력을 할인하는 방법</p>
+    <p><strong>Reparameterization Trick</strong> is a technique that transforms the <code class="language-plaintext highlighter-rouge">sampling process</code> from an approximate distribution into a <code class="language-plaintext highlighter-rouge">differentiable function</code>:</p>
+
+\[w \sim \mathcal{N}(\mu,\sigma^{2}) \quad \rightarrow \quad w = \mu + \sigma \cdot \epsilon\]
+
+    <ul>
+      <li>$\epsilon \sim \mathcal{N}(0,1)$</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Variational Inference</strong>:</p>
 
 \[\begin{aligned}
   \text{ELBO}
-  &amp;= \frac{1}{T} \cdot \mathbb{E}_{W \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] - D_{KL}\big[Q(W) \parallel P(W)\big]
+  &amp;= \mathbb{E}_{W \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] - KL[Q(W) \parallel P(W)]
   \end{aligned}\]
   </li>
 </ul>
@@ -1443,65 +1526,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1511,161 +1535,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1764,188 +1633,6 @@
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2356,6 +2043,133 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2420,6 +2234,56 @@
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2893,6 +2757,257 @@
     
     
     
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     
@@ -3458,6 +3573,18 @@
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -3485,6 +3612,34 @@
 
 <time
   
+  data-ts="1721833200"
+  data-df="ll"
+  
+>
+  Jul 25, 2024
+</time>
+
+              <h4 class="pt-0 my-2">Monte Carlo Dropout</h4>
+              <div class="text-muted">
+                <p>Gal, Y., &amp; Ghahramani, Z.&lt;/br&gt; (2016, June).&lt;/br&gt; &lt;a href=&quot;https://doi.org/10.48550/arXiv.1506.02142&quot;&gt;Dropout as a bayesian approximation: Representing model uncertainty in deep learning.&lt;/a&gt;&lt;/br&gt; ...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/RFF_GP/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
   data-ts="1721746800"
   data-df="ll"
   
@@ -3492,19 +3647,14 @@
   Jul 24, 2024
 </time>
 
-              <h4 class="pt-0 my-2">Monte Carlo Dropout</h4>
+              <h4 class="pt-0 my-2">Random Fourier Features Gaussian Process</h4>
               <div class="text-muted">
-                <p>Monte Carlo Dropout
-
-
+                <p>GP
 
 
 
   
-    MC Dropout(Monte Carlo Dropout) : 드롭아웃의 확률적 성질을 변분추론 관점에서 해석하여 사후 확률 분포를 근사하는 모수 방법론으로서, 평가 과정에서도 드롭아웃을 유지하고 여러 번 샘플링한 결과값에 평균을 내어 최종 결론을 도출함
-
-    
-      Dropout as ...</p>
+    가우시안 프로세스(Gaussian Process): 순차 입력 $x_{1},x_{2},\cdots \in \ell^{2}$ 에 대한 출력 $f(x_{1}),f(x_{2}),\cdots \in \ell^{2}$ 이 입력 공간 $\ell^{2}$ 전체에 대하여 확률 분포를 가지는 확률 과정으로서, 함수 자체를 확률변수로 취하는 함수...</p>
               </div>
             </div>
           </a>
@@ -3547,42 +3697,6 @@
           </a>
         </article>
       
-        <article class="col">
-          <a href="/posts/SVGD/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1721919600"
-  data-df="ll"
-  
->
-  Jul 26, 2024
-</time>
-
-              <h4 class="pt-0 my-2">Stein Variational Gradient Descent</h4>
-              <div class="text-muted">
-                <p>SVGD
-
-
-
-  
-    SVGD(Stein Variational Gradient Descent) : Stein Discrepancy 를 활용하여 제안 분포 $W \sim Q$ 를 목표 분포 $W \mid \mathcal{D} \sim P$ 에 근사하는 비모수 방법론(Non-Parametric Method)
-
-    
-      Stein Varia...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
     </nav>
   </aside>
   <!-- #related-posts -->
@@ -3608,11 +3722,11 @@
 
   
     <a
-      href="/posts/MC_Dropout/"
+      href="/posts/RFF_GP/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>Monte Carlo Dropout</p>
+      <p>Random Fourier Features Gaussian Process</p>
     </a>
   
 </nav>
@@ -4107,65 +4221,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -4175,161 +4230,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -4428,188 +4328,6 @@
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -5020,6 +4738,133 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -5084,6 +4929,56 @@
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -5557,6 +5452,257 @@
     
     
     
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     

@@ -30,22 +30,25 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="Epistemology" />
+<meta property="og:title" content="Random Fourier Features Gaussian Process" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="A minimal, responsive and feature-rich Jekyll theme for technical writing." />
-<meta property="og:description" content="A minimal, responsive and feature-rich Jekyll theme for technical writing." />
-<link rel="canonical" href="https://jayarnim.github.io/tags/epistemology/" />
-<meta property="og:url" content="https://jayarnim.github.io/tags/epistemology/" />
+<meta name="description" content="GP" />
+<meta property="og:description" content="GP" />
+<link rel="canonical" href="https://jayarnim.github.io/posts/RFF_GP/" />
+<meta property="og:url" content="https://jayarnim.github.io/posts/RFF_GP/" />
 <meta property="og:site_name" content="Data Scientist" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Epistemology" />
+<meta property="og:image" content="https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-07-24T00:00:00+09:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg" />
+<meta property="twitter:title" content="Random Fourier Features Gaussian Process" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"A minimal, responsive and feature-rich Jekyll theme for technical writing.","headline":"Epistemology","url":"https://jayarnim.github.io/tags/epistemology/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-24T00:00:00+09:00","datePublished":"2024-07-24T00:00:00+09:00","description":"GP","headline":"Random Fourier Features Gaussian Process","image":"https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/RFF_GP/"},"url":"https://jayarnim.github.io/posts/RFF_GP/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Epistemology | Data Scientist
+  <title>Random Fourier Features Gaussian Process | Data Scientist
   </title>
 
   <!--
@@ -109,9 +112,16 @@
   <!-- 3rd-party Dependencies -->
 
   
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.27.20/dist/tocbot.min.css">
   
 
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.min.css">
+  
+
+  
+    <!-- Image Popup -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css">
   
 
   <!-- JavaScript -->
@@ -402,14 +412,10 @@
           
         
           
-            <span>
-              <a href="/tags/">Tags</a>
-            </span>
-          
         
           
             
-              <span>Epistemology</span>
+              <span>Random Fourier Features Gaussian Process</span>
             
 
           
@@ -423,7 +429,7 @@
     </button>
 
     <div id="topbar-title">
-      Tag
+      Post
     </div>
 
     <button type="button" id="search-trigger" class="btn btn-link">
@@ -449,27 +455,233 @@
         <div class="row flex-grow-1">
           <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
             
-              
+              <!-- Refactor the HTML structure -->
+
+
+
+<!--
+  In order to allow a wide table to scroll horizontally,
+  we suround the markdown table with `<div class="table-wrapper">` and `</div>`
+-->
+
+
+
+<!--
+  Fixed kramdown code highlight rendering:
+  https://github.com/penibelst/jekyll-compress-html/issues/101
+  https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901
+-->
+
+
+
+<!-- Change the icon of checkbox -->
+
+
+
+<!-- Handle images -->
+
+
+
+
+  
+  
+
+  
+    
+      
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+
+  
+
+
+<!-- Add header for code snippets -->
+
+
+
+<!-- Create heading anchors -->
+
+
+
+
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+
+
+
+<!-- return -->
+
 
 
 
 <article class="px-1">
-  
+  <header>
+    <h1 data-toc-skip>Random Fourier Features Gaussian Process</h1>
     
 
-
-
-<div id="page-tag">
-  <h1 class="ps-lg-2">
-    <i class="fa fa-tag fa-fw text-muted"></i>
-    Epistemology
-    <span class="lead text-muted ps-2">3</span>
-  </h1>
-  <ul class="content ps-0">
-    
-      <li class="d-flex justify-content-between px-md-3">
-        <a href="/posts/Bayesian_Framework/">Bayesian Framework</a>
-        <span class="dash flex-grow-1"></span>
+    <div class="post-meta text-muted">
+      <!-- published date -->
+      <span>
+        Posted
         <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
@@ -480,70 +692,574 @@
 
 <time
   
-    class="text-muted small text-nowrap"
-  
-  data-ts="1721142000"
+  data-ts="1721746800"
   data-df="ll"
   
->
-  Jul 17, 2024
-</time>
-
-      </li>
-    
-      <li class="d-flex justify-content-between px-md-3">
-        <a href="/posts/Justification/">Justification of Bayesianism</a>
-        <span class="dash flex-grow-1"></span>
-        <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-    class="text-muted small text-nowrap"
-  
-  data-ts="1721055600"
-  data-df="ll"
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Jul 16, 2024
+  Jul 24, 2024
 </time>
 
-      </li>
-    
-      <li class="d-flex justify-content-between px-md-3">
-        <a href="/posts/Bayesianism/">Bayesianism</a>
-        <span class="dash flex-grow-1"></span>
-        <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
+      </span>
+
+      <!-- lastmod date -->
+      
+
+      
+        
+        
+        
+
+        
+
+        <div class="mt-3 mb-3">
+          <a href="/_post_refer_img/BayesianModeling/Thumbnail.jpeg" class="popup img-link preview-img shimmer"><img src="/_post_refer_img/BayesianModeling/Thumbnail.jpeg"  alt="Preview Image" width="1200" height="630"  loading="lazy"></a></div>
+      
+
+      <div class="d-flex justify-content-between">
+        <!-- author(s) -->
+        <span>
+          
+
+          By
+
+          <em>
+            
+              <a href="https://github.com/jayarnim">jayarnim</a>
+            
+          </em>
+        </span>
+
+        <div>
+          <!-- pageviews -->
+          
+
+          <!-- read time -->
+          <!-- Calculate the post's reading time, and display the word count in tooltip -->
+
+
+
+<!-- words per minute -->
 
 
 
 
-<time
-  
-    class="text-muted small text-nowrap"
-  
-  data-ts="1720969200"
-  data-df="ll"
-  
+
+
+
+
+
+
+<!-- return element -->
+<span
+  class="readtime"
+  data-bs-toggle="tooltip"
+  data-bs-placement="bottom"
+  title="1319 words"
 >
-  Jul 15, 2024
-</time>
+  <em>7 min</em> read</span>
 
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="content">
+    <h2 id="gp"><span class="me-2">GP</span><a href="#gp" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><strong>가우시안 프로세스(<code class="language-plaintext highlighter-rouge">G</code>aussian <code class="language-plaintext highlighter-rouge">P</code>rocess)</strong>: 순차 입력 $x_{1},x_{2},\cdots \in \ell^{2}$ 에 대한 출력 $f(x_{1}),f(x_{2}),\cdots \in \ell^{2}$ 이 입력 공간 $\ell^{2}$ 전체에 대하여 확률 분포를 가지는 확률 과정으로서, 함수 자체를 확률변수로 취하는 함수 분포</p>
+
+\[\begin{aligned}
+  f(\cdot) \sim \mathcal{GP}(\mu(\cdot), \mathcal{K}(\cdot, \cdot))
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>$f(x) \sim \mathcal{N}(\mu(x),\mathcal{K}(x,x))$: 입력값 $x$ 에 대한 출력값</p>
+
+\[\begin{aligned}
+  f(x) \in \ell^{2}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>$\mathbf{f} \sim \mathcal{N}(\mu,\Sigma)$: 입력값 $x_{1},x_{2},\cdots$ 에 대한 출력값 $f(x_{1}),f(x_{2}),\cdots$ 벡터</p>
+
+\[\begin{aligned}
+  \mathbf{f}
+  := \begin{bmatrix}
+  f(x_{1})\\
+  f(x_{2})\\
+  \vdots
+  \end{bmatrix}
+  \in \ell^{2}
+  \end{aligned}\]
+
+    <ul>
+      <li>
+        <p>$\mu$: 입력값 $x_{1},x_{2},\cdots$ 에 대한 출력값 $f(x_{1}),f(x_{2}),\cdots$ 의 평균 벡터</p>
+
+\[\begin{aligned}
+  \mu
+  =\begin{bmatrix}
+  \mu(x_{1}) \\
+  \mu(x_{2}) \\
+  \vdots
+  \end{bmatrix}
+  \end{aligned}\]
       </li>
+      <li>
+        <p>$\Sigma$: 입력값 $x_{1},x_{2},\cdots$ 에 대한 출력값 $f(x_{1}),f(x_{2}),\cdots$ 의 공분산 행렬</p>
+
+\[\begin{aligned}
+  \Sigma
+  &amp;=\begin{bmatrix}
+  \mathcal{K}(x_{1},x_{1}) &amp; \mathcal{K}(x_{1},x_{2}) &amp; \cdots \\
+  \mathcal{K}(x_{2},x_{1}) &amp; \mathcal{K}(x_{2},x_{2}) &amp; \cdots \\
+  \vdots &amp; \vdots &amp; \ddots
+  \end{bmatrix}
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>$f(\cdot) \sim \mathcal{GP}(\mu(\cdot), \mathcal{K}(\cdot, \cdot))$: $\forall x$ 에 대하여 $f(\forall x)$ 를 정의하는 규칙</p>
+
+\[\begin{aligned}
+  f(\cdot) \in \mathcal{H}_{\mathcal{K}}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h2 id="rkhs"><span class="me-2">RKHS</span><a href="#rkhs" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><strong>RKHS(<code class="language-plaintext highlighter-rouge">R</code>eproducing <code class="language-plaintext highlighter-rouge">K</code>ernel <code class="language-plaintext highlighter-rouge">H</code>ilbert <code class="language-plaintext highlighter-rouge">S</code>pace)</strong> : 특정한 재생 커널(Reproducing Kernel)에 의해 정의된 힐베르트 공간으로서, 이 함수 공간에서 모든 함수는 커널 함수의 선형 조합으로 표현됨</p>
+
+\[\begin{aligned}
+  f(x)
+  &amp;= \sum_{i=1}^{n}{\alpha_{i} \cdot \mathcal{K}(x, x_{i})}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>힐베르트 공간(Hilbert Space)</strong> : 유클리드 공간을 일반화한 개념으로서, 내적과 거리가 정의된 완비 공간</p>
+
+\[\begin{aligned}
+  \langle f, g \rangle _{\mathcal{H}}:=\sum_{i=1}^{n}\sum_{j=1}^{m}{\alpha_{i}\beta_{j}\mathcal{K}(x_{i}, x_{j})}, \quad \Vert f \Vert _{\mathcal{H}} := \sqrt{\langle f, f \rangle _{\mathcal{H}}}
+  \end{aligned}\]
+
+    <ul>
+      <li>$f(x)=\sum_{i=1}^{n}{\alpha_{i} \cdot \mathcal{K}(x, x_{i})}$</li>
+      <li>$g(x)=\sum_{j=1}^{m}{\beta_{j} \cdot \mathcal{K}(x, x_{j})}$</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>재생(Reproducing)</strong> : 모든 함수 $f(x)$ 가 커널 함수의 선형 조합으로 표현됨에 따라 $f(x)$ 를 직접 계산하지 않고도 커널 함수를 통해 함수 값을 재생할 수 있는 성질</p>
+
+\[\begin{aligned}
+  f(x)
+  = \langle f, \mathcal{K}(\cdot, x) \rangle _{\mathcal{H}}
+  = \left\langle \sum_{i=1}^{n}{\alpha_{i} \cdot \mathcal{K}(\cdot, x_{i})}, \mathcal{K}(\cdot, x) \right\rangle _{\mathcal{H}}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h2 id="rff"><span class="me-2">RFF</span><a href="#rff" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">R</code>andom <code class="language-plaintext highlighter-rouge">F</code>ourier <code class="language-plaintext highlighter-rouge">F</code>eatures</strong>:</p>
+
+    <blockquote>
+      <p>임의의 조건을 만족하는 커널은 푸리에 변환을 통해 어떤 확률 밀도 함수의 기대값으로 표현 가능하다. 그리고 이 커널에 의해 정의되는 무한 차원의 함수 공간 $RKHS$ 는 해당 커널의 스펙트럼 밀도 $p(w)$ 로부터 샘플링된 $w$ 에 대하여 정의되는 유한 개 무작위 기저 함수 $\phi_{W \sim P}(x) \in RKHS$ 들의 선형 결합(혹은 내적)의 기대값으로써 근사될 수 있다.</p>
+    </blockquote>
+
+\[\begin{aligned}
+  \mathcal{K}(x,x^{\prime})
+  &amp;= \left&lt;\mathcal{K}(\cdot, x), \mathcal{K}(\cdot, x^{\prime})\right&gt;_{\mathcal{H}}\\
+  &amp;\approx \left&lt;\phi(x), \phi(x^{\prime})\right&gt;_{\mathbb{R}^{K}}\\
+  &amp;= \mathbb{E}_{W \sim P}\left[\phi_{w}(x) \cdot \phi_{w}(x^{\prime})\right]
+  \end{aligned}\]
+
+    <ul>
+      <li>$\phi(x) = \sqrt{2/K} \cdot \begin{bmatrix}\cos{(w_{1}^{T}x+b_{1})} &amp; \cos{(w_{2}^{T}x+b_{2})} &amp; \cdots &amp; \cos{(w_{K}^{T}x+b_{K})}\end{bmatrix}$</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>푸리에 변환(fourier transform)</strong>: 임의의 조건을 만족하는 함수는 주기 함수의 기대값으로 표현될 수 있음</p>
+
+\[\begin{aligned}
+  f(x)
+  &amp;= \int_{\mathbb{R}^{K}}{\exp{\left[i \cdot w^{T}x\right]} \cdot p(w)}\text{d}w
+  \end{aligned}\]
+
+    <ul>
+      <li>$f(x)$:
+        <ul>
+          <li>$f \in L^{1}(\mathbb{R}^d)$: 적분 가능 함수</li>
+          <li>$f \in L^{2}(\mathbb{R}^d)$: 제곱 적분 가능 함수</li>
+        </ul>
+      </li>
+      <li>
+        <p>$p(w)$: 확률 밀도 함수로서 함수 $f(x)$ 의 스펙트럼 밀도(Spectrum Density)</p>
+      </li>
+      <li>
+        <p>$\exp{[i \cdot w^{T}x]}$: 복소 지수 함수(complex exponential function)</p>
+
+        <ul>
+          <li>$i$: 허수</li>
+          <li>$\theta= w^{T}x$: 운동 주기에서 입력값의 위치</li>
+          <li>$w$: 주파수로서 운동의 방향 및 속도</li>
+          <li>$x$: 입력값</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>보흐너 정리(Bochner’s theorem)</strong>: 임의의 조건을 만족하는 커널 $\mathcal{K}: \mathbb{R}^{d} \times \mathbb{R}^{d} \rightarrow \mathbb{R}$ 은 어떤 확률 밀도 함수 $p(w)$ 의 푸리에 쌍임</p>
+
+\[\begin{aligned}
+  \mathcal{K}(x,x^{\prime})
+  &amp;= \int_{\mathbb{R}^{K}}{\exp{\left[i \cdot w^{T}(x-x^{\prime})\right]} \cdot p(w)}\text{d}w
+  \end{aligned}\]
+
+    <ul>
+      <li>
+        <p>연속성(continuous):</p>
+
+\[\begin{aligned}
+  \Vert x - a \Vert &amp;&lt; \delta\\
+  \Vert x^{\prime} - b \Vert &amp;&lt; \delta
+  \end{aligned} \quad
+  \Rightarrow \quad
+  \vert \mathcal{K}(x,x^{\prime}) - \mathcal{K}(a,b) \vert &lt; \epsilon
+  \quad \text{for} \quad 
+  \begin{aligned}
+  \forall \epsilon &amp;&gt; 0\\
+  \exists \delta &amp;&gt; 0
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>이동 불변성(shift-invariant):</p>
+
+\[\begin{aligned}
+  \mathcal{K}(x,x^{\prime})
+  &amp;=\mathcal{K}(x-x^{\prime})
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>양의 정부호성(positive definite):</p>
+
+\[\sum_{i=1}^{n}{\sum_{j=1}^{n}{c_{i} \cdot c_{j} \cdot \mathcal{K}(x_{i},x_{j})}}&gt;0 \quad \text{for} \quad
+  \begin{aligned}
+  \forall n &amp;\in \mathbb{N}\\
+  \forall x_{1},x_{2},\cdots,x_{n} &amp;\in \mathbb{R}^{d}\\
+  \forall \mathbf{c} &amp;\in \mathbb{R}^{n} \setminus \{\mathbb{0}\}
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>오일러 공식(Euler’s formula)</strong>: 복소 지수 함수는 주기 함수(사인과 코사인)의 조합으로 분해될 수 있음</p>
+
+\[\begin{aligned}
+  \exp{[i \cdot \theta]}
+  &amp;=\cos{\theta} + i \cdot \sin{\theta}
+  \end{aligned}\]
+
+    <ul>
+      <li>
+        <p>$\because$ fourier transform:</p>
+
+\[\begin{aligned}
+  \mathcal{K}(x-x^{\prime})
+  &amp;= \mathbb{E}_{W \sim P}[\exp(i \cdot w^{T}(x-x^{\prime}))]
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>segmentation:</p>
+
+\[\begin{aligned}
+  \exp[i \cdot w^{T}(x-x^{\prime})]
+  &amp;= \exp[i \cdot w^{T}x] \cdot \exp[-i \cdot w^{T}x^{\prime}]\\
+  &amp;= \big[\cos{(w^{T}x)}+i\sin{(w^{T}x)}\big]\cdot\big[\cos{(w^{T}x^{\prime})}-i\sin{(w^{T}x^{\prime})}\big]\\
+  &amp;= \underbrace{\cos{(w^{T}x)} \cdot \cos{(w^{T}x^{\prime})} + \sin{(w^{T}x)} \cdot \sin{(w^{T}x^{\prime})}}_{\text{real part}} - i(\cdots)
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>only take the real part:</p>
+
+\[\begin{aligned}
+  \exp[i \cdot w^{T}(x-x^{\prime})]
+  &amp;\approx \cos{w^{T}(x-x^{\prime})}
+  \end{aligned}\]
+
+        <ul>
+          <li>$\because \cos{(a-b)} = \cos{a} \cdot \cos{b} + \sin{a} \cdot \sin{b}$</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>무작위 퓨리에 기저 함수(<code class="language-plaintext highlighter-rouge">R</code>andom <code class="language-plaintext highlighter-rouge">F</code>ourier <code class="language-plaintext highlighter-rouge">F</code>eatures)</strong>: 유한 차원의 특징 공간을 정의하는 기저 함수</p>
+
+\[\begin{aligned}
+  \phi(x)
+  &amp;= \sqrt{2}\cos{(w^{T}x + b)} \quad \text{for} \quad b \sim \text{Uniform}(0,2\pi)
+  \end{aligned}\]
+
+    <ul>
+      <li>
+        <p>assumption:</p>
+
+\[\begin{aligned}
+  \frac{1}{2}\cos{w^{T}(x-x^{\prime})}
+  &amp;=\mathbb{E}_{b}[\cos{(w^{T}x + b)} \cdot \cos{(w^{T}x^{\prime} + b)}]
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>expression expansion:</p>
+
+\[\begin{aligned}
+  \cos{(w^{T}x + b)} \cdot \cos{(w^{T}x^{\prime} + b)}
+  &amp;=\frac{1}{2}\left[\cos{w^{T}(x-x^{\prime})} + \cos{(w^{T}(x+x^{\prime})+2b)}\right]
+  \end{aligned}\]
+
+        <ul>
+          <li>$\because \cos{a}\cdot\cos{b} = \displaystyle\frac{1}{2}[\cos{(a-b)} + \cos{(a+b)}]$</li>
+        </ul>
+      </li>
+      <li>
+        <p>expected value:</p>
+
+\[\begin{aligned}
+  &amp;\mathbb{E}_{b}\left[\cos{(w^{T}x + b)} \cdot \cos{(w^{T}x^{\prime} + b)}\right]\\
+  &amp;= \frac{1}{2}\Big(\cos{w^{T}(x-x^{\prime})} + \mathbb{E}_{b}[\cos{(w^{T}(x+x^{\prime})+2b)}]\Big)\\
+  &amp;= \frac{1}{2}\cos{w^{T}(x-x^{\prime})}
+  \end{aligned}\]
+
+        <ul>
+          <li>$\because \int_{0}^{2\pi}{\cos{(2b + \cdots)}}\text{d}b=0$</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Therefore</strong>:</p>
+
+\[\begin{aligned}
+  \mathcal{K}(x,x^{\prime})
+  &amp;\approx \mathbb{E}_{W \sim P}\left[\exp{i \cdot w^{T}(x-x^{\prime})}\right]\\
+  &amp;\approx \mathbb{E}_{W \sim P}\left[\cos{w^{T}(x-x^{\prime})}\right]\\
+  &amp;\approx \mathbb{E}_{W \sim P}\Big(\mathbb{E}_{b \sim \text{Uniform}(0,2\pi)}\left[\left&lt;\phi_{w,b}(x), \phi_{w,b}(x^{\prime})\right&gt;\right]\Big)
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h2 id="rff-gp"><span class="me-2">RFF-GP</span><a href="#rff-gp" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><strong>RFF-GP(<code class="language-plaintext highlighter-rouge">R</code>andom <code class="language-plaintext highlighter-rouge">F</code>ourier <code class="language-plaintext highlighter-rouge">F</code>eatres <code class="language-plaintext highlighter-rouge">G</code>aussian <code class="language-plaintext highlighter-rouge">P</code>rocess)</strong>: 커널 함수 $\mathcal{K}(\cdot,\cdot)$ 에 대하여 정의되는 무한 차원의 재생 커널 힐베르트 공간 \(f \in \mathcal{H}_{\mathcal{K}}\) 을 무작위 푸리에 기저 함수(Random Fourier Features) $\phi(\cdot)$ 에 대하여 정의되는 유한 차원 선형 함수 공간 \(f \in \mathcal{H}_{RFF} \subset \mathcal{H}_{\mathcal{K}}\) 으로 근사함으로써(Subspace Approximation), 가우시안 프로세스 \(f(\cdot) \sim \mathcal{GP}(\mu(\cdot),\mathcal{K}(\cdot,\cdot))\) 를 선형 회귀 모형 \(\phi(\cdot)^{T}\theta \sim \mathcal{GP}(0,\left&lt;\phi(\cdot),\phi(\cdot)\right&gt;)\) 의 형태로 근사하는 방법론</p>
+
+\[\begin{aligned}
+  f(x) \mid \theta
+  &amp;\sim \mathcal{N}(0,\left&lt;\phi(x),\phi(x^{\prime})\right&gt;)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>RFF Summary:</p>
+
+\[\begin{aligned}
+  \mathcal{K}(x,x^{\prime})
+  \approx \phi(x)^{T}\phi(x^{\prime})
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>original $f(\cdot)$ be approximated linear combination of basis function:</p>
+
+\[\begin{aligned}
+  f(x)
+  &amp;= \sum_{i=1}^{n}{\alpha_{i} \cdot \mathcal{K}(x,x_{i})}\\
+  &amp;\approx \sum_{i=1}^{n}{\alpha_{i} \cdot \phi(x)^{T}\phi(x_{i})}\\
+  &amp;= \phi(x)^{T}\underbrace{\sum_{i=1}^{n}{\alpha_{i}\phi(x_{i})}}_{=:\theta}
+  \end{aligned}\]
+
+    <ul>
+      <li>$\phi(x)$ is chosen randomly, but fixed once drawn</li>
+      <li>to give probability to $f(x)$, $\theta$ must be set as a probabilistic variable</li>
+    </ul>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Prior</code> of $f(x)$:</p>
+
+\[\begin{aligned}
+  \theta \sim \mathcal{N}(0,\mathbf{I})
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Posterior</code> of $f(x) \mid \theta$:</p>
+
+\[\begin{aligned}
+  f(x) \mid \theta
+  &amp;\sim \mathcal{N}(0,\left&lt;\phi(x),\phi(x^{\prime})\right&gt;)
+  \end{aligned}\]
+
+    <ul>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">Mean</code> of $f(x) \mid \theta$:</p>
+
+\[\begin{aligned}
+  \mathbb{E}[f(x)]
+  &amp;=\mathbb{E}[\phi(x)^{T}\theta]\\
+  &amp;=\phi(x)^{T}\mathbb{E}[\theta]\\
+  &amp;=0
+  \end{aligned}\]
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">Covariance</code> of $f(x) \mid \theta$:</p>
+
+\[\begin{aligned}
+  \mathbb{E}[f(x)],\mathbb{E}[f(x^{\prime})]
+  &amp;=0\\
+  \\
+  \mathbb{E}[f(x) \cdot f(x^{\prime})]
+  &amp;=\mathbb{E}[\phi(x)^{T}\theta\theta^{T}\phi(x^{\prime})]\\
+  &amp;=\phi(x)^{T}\mathbb{E}[\theta\theta^{T}]\phi(x^{\prime})\\
+  &amp;=\phi(x)^{T}\mathbf{I}\phi(x^{\prime}) \quad \because \Sigma=\mathbb{E}[(\theta-\mu)(\theta-\mu)^{T}]\\
+  &amp;=\left&lt;\phi(x),\phi(x^{\prime})\right&gt;\\
+  \\
+  \therefore \text{Cov}[f(x), f(x^{\prime})]
+  &amp;= \mathbb{E}[f(x) \cdot f(x^{\prime})]-\mathbb{E}[f(x)]\cdot\mathbb{E}[f(x^{\prime})]\\
+  &amp;= \left&lt;\phi(x),\phi(x^{\prime})\right&gt;\\
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+</ul>
+
+  </div>
+
+  <div class="post-tail-wrapper text-muted">
+    <!-- categories -->
     
-  </ul>
+      <div class="post-meta mb-3">
+        <i class="far fa-folder-open fa-fw me-1"></i>
+        
+          <a href="/categories/bayes/">BAYES</a>,
+          <a href="/categories/2-posterior-approx/">2.posterior approx.</a>
+      </div>
+    
+
+    <!-- tags -->
+    
+      <div class="post-tags">
+        <i class="fa fa-tags fa-fw me-1"></i>
+        
+          <a
+            href="/tags/bayesian/"
+            class="post-tag no-text-decoration"
+          >Bayesian</a>
+        
+          <a
+            href="/tags/objective-function/"
+            class="post-tag no-text-decoration"
+          >Objective Function</a>
+        
+          <a
+            href="/tags/variational-inference/"
+            class="post-tag no-text-decoration"
+          >Variational Inference</a>
+        
+          <a
+            href="/tags/gaussian-process/"
+            class="post-tag no-text-decoration"
+          >Gaussian Process</a>
+        
+          <a
+            href="/tags/fourier/"
+            class="post-tag no-text-decoration"
+          >Fourier</a>
+        
+      </div>
+    
+
+    <div
+      class="
+        post-tail-bottom
+        d-flex justify-content-between align-items-center mt-5 pb-2
+      "
+    >
+      <div class="license-wrapper">
+        
+          
+
+          This post is licensed under 
+        <a href="https://creativecommons.org/licenses/by/4.0/">
+          CC BY 4.0
+        </a>
+         by the author.
+        
+      </div>
+
+      <!-- Post sharing snippet -->
+
+<div class="share-wrapper d-flex align-items-center">
+  <span class="share-label text-muted">Share</span>
+  <span class="share-icons">
+    
+    
+    
+
+    
+
+      
+
+      <a href="https://twitter.com/intent/tweet?text=Random%20Fourier%20Features%20Gaussian%20Process%20-%20Data%20Scientist&url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FRFF_GP%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+        <i class="fa-fw fa-brands fa-square-x-twitter"></i>
+      </a>
+    
+
+      
+
+      <a href="https://www.facebook.com/sharer/sharer.php?title=Random%20Fourier%20Features%20Gaussian%20Process%20-%20Data%20Scientist&u=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FRFF_GP%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+        <i class="fa-fw fab fa-facebook-square"></i>
+      </a>
+    
+
+      
+
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FRFF_GP%2F&text=Random%20Fourier%20Features%20Gaussian%20Process%20-%20Data%20Scientist" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+        <i class="fa-fw fab fa-telegram"></i>
+      </a>
+    
+
+    <button
+      id="copy-link"
+      aria-label="Copy link"
+      class="btn small"
+      data-bs-toggle="tooltip"
+      data-bs-placement="top"
+      title="Copy link"
+      data-title-succeed="Link copied successfully!"
+    >
+      <i class="fa-fw fas fa-link pe-none fs-6"></i>
+    </button>
+  </span>
 </div>
 
-  
+    </div>
+    <!-- .post-tail-bottom -->
+  </div>
+  <!-- div.post-tail-wrapper -->
 </article>
+
 
             
           </main>
@@ -2748,12 +3464,512 @@
             </div>
 
             
+              
+              
+
+
+
+  <section id="toc-wrapper" class="d-none ps-0 pe-4">
+    <h2 class="panel-heading ps-3 mb-2">Contents</h2>
+    <nav id="toc"></nav>
+  </section>
+
+
+            
           </aside>
         </div>
 
         <div class="row">
           <!-- tail -->
           <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
+            
+              
+              <!-- Recommend the other 3 posts according to the tags and categories of the current post. -->
+
+<!-- The total size of related posts -->
+
+
+<!-- An random integer that bigger than 0 -->
+
+
+<!-- Equals to TAG_SCORE / {max_categories_hierarchy} -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  <aside id="related-posts" aria-labelledby="related-label">
+    <h3 class="mb-4" id="related-label">Further Reading</h3>
+    <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
+      
+        <article class="col">
+          <a href="/posts/MC_Dropout/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1721833200"
+  data-df="ll"
+  
+>
+  Jul 25, 2024
+</time>
+
+              <h4 class="pt-0 my-2">Monte Carlo Dropout</h4>
+              <div class="text-muted">
+                <p>Gal, Y., &amp; Ghahramani, Z.&lt;/br&gt; (2016, June).&lt;/br&gt; &lt;a href=&quot;https://doi.org/10.48550/arXiv.1506.02142&quot;&gt;Dropout as a bayesian approximation: Representing model uncertainty in deep learning.&lt;/a&gt;&lt;/br&gt; ...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/BBB/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1721660400"
+  data-df="ll"
+  
+>
+  Jul 23, 2024
+</time>
+
+              <h4 class="pt-0 my-2">Bayes by Backprop</h4>
+              <div class="text-muted">
+                <p>Blundell, C., Cornebise, J., Kavukcuoglu, K., &amp; Wierstra, D.&lt;/br&gt; (2015, June).&lt;/br&gt; &lt;a href=&quot;https://proceedings.mlr.press/v37/blundell15&quot;&gt;Weight uncertainty in neural network.&lt;/a&gt;&lt;/br&gt; In Interna...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/VI/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1721574000"
+  data-df="ll"
+  
+>
+  Jul 22, 2024
+</time>
+
+              <h4 class="pt-0 my-2">Variational Inference</h4>
+              <div class="text-muted">
+                <p>Information Theory
+
+
+
+  
+    정보이론(Information Theory): 신호에 존재하는 정보의 양을 측정하는 이론으로서, 특정 확률분포의 특성을 알아내거나, 두 확률분포 간 유사성을 정량화하는 데 사용함
+  
+  Shannon’s Information Theory Principles
+    
+      자주 발생하지 않는 사...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+    </nav>
+  </aside>
+  <!-- #related-posts -->
+
+
+            
+              
+              <!-- Navigation buttons at the bottom of the post. -->
+
+<nav class="post-navigation d-flex justify-content-between" aria-label="Post Navigation">
+  
+  
+
+  
+    <a
+      href="/posts/BBB/"
+      class="btn btn-outline-primary"
+      aria-label="Older"
+    >
+      <p>Bayes by Backprop</p>
+    </a>
+  
+
+  
+    <a
+      href="/posts/MC_Dropout/"
+      class="btn btn-outline-primary"
+      aria-label="Newer"
+    >
+      <p>Monte Carlo Dropout</p>
+    </a>
+  
+</nav>
+
+            
+              
+              <!-- The comments switcher -->
+
+
             
 
             <!-- The Footer -->
@@ -4989,6 +6205,13 @@
 <!-- layout specified -->
 
 
+  
+
+  
+    <!-- image lazy-loading & popup & clipboard -->
+    
+  
+
 
 
 
@@ -5038,9 +6261,37 @@
 
   
 
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
 
 
-  <script src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/dayjs@1.11.11/dayjs.min.js,npm/dayjs@1.11.11/locale/en.min.js,npm/dayjs@1.11.11/plugin/relativeTime.min.js,npm/dayjs@1.11.11/plugin/localizedFormat.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.11/dayjs.min.js,npm/dayjs@1.11.11/locale/en.min.js,npm/dayjs@1.11.11/plugin/relativeTime.min.js,npm/dayjs@1.11.11/plugin/localizedFormat.min.js,npm/tocbot@4.27.20/dist/tocbot.min.js"></script>
 
 
 
@@ -5048,11 +6299,20 @@
 
 
 
-<script src="/assets/js/dist/misc.min.js"></script>
+<script src="/assets/js/dist/post.min.js"></script>
 
+
+  <!-- MathJax -->
+  <script src="/assets/js/data/mathjax.js"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
 
 
 <!-- Pageviews -->
+
+  
+
+  
 
 
 

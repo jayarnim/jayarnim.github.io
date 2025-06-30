@@ -30,7 +30,7 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="Monte-Carlo Simulation" />
+<meta property="og:title" content="Monte Carlo Simulation" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp; Management, College of Business Administration, Kookmin Univ." />
 <meta property="og:description" content="Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp; Management, College of Business Administration, Kookmin Univ." />
@@ -42,13 +42,13 @@
 <meta property="article:published_time" content="2024-07-20T00:00:00+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg" />
-<meta property="twitter:title" content="Monte-Carlo Simulation" />
+<meta property="twitter:title" content="Monte Carlo Simulation" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-20T00:00:00+09:00","datePublished":"2024-07-20T00:00:00+09:00","description":"Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp; Management, College of Business Administration, Kookmin Univ.","headline":"Monte-Carlo Simulation","image":"https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/MC/"},"url":"https://jayarnim.github.io/posts/MC/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-20T00:00:00+09:00","datePublished":"2024-07-20T00:00:00+09:00","description":"Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp; Management, College of Business Administration, Kookmin Univ.","headline":"Monte Carlo Simulation","image":"https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/MC/"},"url":"https://jayarnim.github.io/posts/MC/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Monte-Carlo Simulation | Data Scientist
+  <title>Monte Carlo Simulation | Data Scientist
   </title>
 
   <!--
@@ -415,7 +415,7 @@
         
           
             
-              <span>Monte-Carlo Simulation</span>
+              <span>Monte Carlo Simulation</span>
             
 
           
@@ -806,7 +806,7 @@
 
 <article class="px-1">
   <header>
-    <h1 data-toc-skip>Monte-Carlo Simulation</h1>
+    <h1 data-toc-skip>Monte Carlo Simulation</h1>
     
       <p class="post-desc fw-light mb-4">Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data & Management, College of Business Administration, Kookmin Univ.</p>
     
@@ -889,9 +889,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="584 words"
+  title="433 words"
 >
-  <em>3 min</em> read</span>
+  <em>2 min</em> read</span>
 
         </div>
       </div>
@@ -899,7 +899,7 @@
   </header>
 
   <div class="content">
-    <h2 id="monte-carlo-simulation"><span class="me-2">Monte-Carlo Simulation</span><a href="#monte-carlo-simulation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="monte-carlo-simulation"><span class="me-2">Monte Carlo Simulation</span><a href="#monte-carlo-simulation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
@@ -960,42 +960,31 @@
   <li>
     <p><strong>기각 샘플링(Rejection Sampling)</strong> : 제안 분포로부터 추출한 관측치를 기각하는 과정을 반복하여 제안 분포를 목표 분포와 유사한 형태로 만드는 방법</p>
   </li>
-  <li><strong>절차</strong>
-    <ul>
-      <li>제안 분포 $q(\psi)$ 로부터 파라미터 $\psi$ 샘플링</li>
-      <li>
-        <p>목표 분포 $p(\theta \mid \mathcal{D})$, 제안 분포 $q(\psi)$, 스케일링 팩터 $M$ 에 대하여, 다음 조건을 만족하지 않으면 $\psi$ 를 샘플로 채택하지 않음</p>
+  <li>
+    <p>Target Dist.:</p>
 
-\[u \le \displaystyle\frac{p(\psi \mid \mathcal{D})}{M \cdot q(\psi)} \quad \text{s.t.} \quad u \sim \text{Uniform}(0,1)\]
-      </li>
+\[\begin{aligned}
+  p(\theta \mid \mathcal{D}) \propto p(\mathcal{D} \mid \theta) \cdot p(\theta)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Proposed Dist.:</p>
+
+\[\begin{aligned}
+  q(\theta)
+  \end{aligned}\]
+
+    <ul>
+      <li>$q(\theta)$ must be similar in location and distribution to $p(\theta \mid \mathcal{D})$</li>
+      <li>$p(\theta \mid \mathcal{D}) \le M \cdot q(\theta) \quad \text{for} \quad \forall \theta$</li>
     </ul>
   </li>
   <li>
-    <p><strong>목표 분포(Target Dist.)</strong>: 파라미터 $\theta$ 의 사후 확률 분포</p>
+    <p>Rejection Rule:</p>
 
-\[p(\theta \mid \mathcal{D}) \propto p(\mathcal{D} \mid \theta) \cdot p(\theta)\]
-
-    <ul>
-      <li>$\theta$ : 파라미터</li>
-      <li>$p(\mathcal{D} \mid \theta)$ : 파라미터 $\theta$ 의 우도 함수</li>
-      <li>$p(\theta)$ : 파라미터 $\theta$ 의 사전 확률 분포</li>
-    </ul>
-  </li>
-  <li>
-    <p>제안 분포(Proposal Dist.):</p>
-
-\[q(\psi)\]
-
-    <ul>
-      <li>$\psi$ : 파라미터로서 고려되는 샘플</li>
-      <li>$q(\psi)$ 는 $p(\psi \mid \mathcal{D})$ 와 위치 및 분포가 비슷해야 함</li>
-      <li>상수 $M$ 에 대하여, $p(\psi \mid \mathcal{D}) \le M \cdot q(\psi)$ 를 만족해야 함</li>
-    </ul>
-  </li>
-  <li>
-    <p>거절 확률(Rejection Prob.):</p>
-
-\[\frac{p(\psi \mid \mathcal{D})}{M \cdot q(\psi)} \propto \frac{p(\mathcal{D} \mid \psi) \cdot p(\psi)}{M \cdot q(\psi)}\]
+\[\begin{aligned}
+  \text{Accept} \quad \phi \quad \text{if} \quad u \le \frac{p(\phi \mid \mathcal{D})}{M \cdot q(\phi)} \quad \text{where} \quad u \sim \text{Uniform}(0,1)
+  \end{aligned}\]
   </li>
 </ul>
 
@@ -1066,21 +1055,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Monte-Carlo%20Simulation%20-%20Data%20Scientist&url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FMC%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=Monte%20Carlo%20Simulation%20-%20Data%20Scientist&url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FMC%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Monte-Carlo%20Simulation%20-%20Data%20Scientist&u=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FMC%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=Monte%20Carlo%20Simulation%20-%20Data%20Scientist&u=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FMC%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FMC%2F&text=Monte-Carlo%20Simulation%20-%20Data%20Scientist" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FMC%2F&text=Monte%20Carlo%20Simulation%20-%20Data%20Scientist" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -1610,65 +1599,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1678,161 +1608,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1931,188 +1706,6 @@
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2523,6 +2116,133 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2587,6 +2307,56 @@
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -3060,6 +2830,257 @@
     
     
     
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     
@@ -3589,6 +3610,18 @@
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -3644,24 +3677,16 @@
 
 <time
   
-  data-ts="1721919600"
+  data-ts="1722006000"
   data-df="ll"
   
 >
-  Jul 26, 2024
+  Jul 27, 2024
 </time>
 
               <h4 class="pt-0 my-2">Stein Variational Gradient Descent</h4>
               <div class="text-muted">
-                <p>SVGD
-
-
-
-  
-    SVGD(Stein Variational Gradient Descent) : Stein Discrepancy 를 활용하여 제안 분포 $W \sim Q$ 를 목표 분포 $W \mid \mathcal{D} \sim P$ 에 근사하는 비모수 방법론(Non-Parametric Method)
-
-    
-      Stein Varia...</p>
+                <p>Liu, Q., &amp; Wang, D.&lt;/br&gt; (2016).&lt;/br&gt; &lt;a href=&quot;https://doi.org/10.48550/arXiv.1608.04471&quot;&gt;Stein variational gradient descent: A general purpose bayesian inference algorithm.&lt;/a&gt;&lt;/br&gt; Advances in ne...</p>
               </div>
             </div>
           </a>
@@ -3680,11 +3705,11 @@
 
 <time
   
-  data-ts="1721833200"
+  data-ts="1721919600"
   data-df="ll"
   
 >
-  Jul 25, 2024
+  Jul 26, 2024
 </time>
 
               <h4 class="pt-0 my-2">Stein's Method</h4>
@@ -4229,65 +4254,6 @@ Stein Operator
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -4297,161 +4263,6 @@ Stein Operator
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -4550,188 +4361,6 @@ Stein Operator
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -5142,6 +4771,133 @@ Stein Operator
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -5206,6 +4962,56 @@ Stein Operator
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -5679,6 +5485,257 @@ Stein Operator
     
     
     
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     

@@ -32,19 +32,19 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="Monte Carlo Dropout" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Monte Carlo Dropout" />
-<meta property="og:description" content="Monte Carlo Dropout" />
+<meta name="description" content="Gal, Y., &amp; Ghahramani, Z.&lt;/br&gt; (2016, June).&lt;/br&gt; Dropout as a bayesian approximation: Representing model uncertainty in deep learning.&lt;/br&gt; In international conference on machine learning (pp. 1050-1059).&lt;/br&gt; PMLR." />
+<meta property="og:description" content="Gal, Y., &amp; Ghahramani, Z.&lt;/br&gt; (2016, June).&lt;/br&gt; Dropout as a bayesian approximation: Representing model uncertainty in deep learning.&lt;/br&gt; In international conference on machine learning (pp. 1050-1059).&lt;/br&gt; PMLR." />
 <link rel="canonical" href="https://jayarnim.github.io/posts/MC_Dropout/" />
 <meta property="og:url" content="https://jayarnim.github.io/posts/MC_Dropout/" />
 <meta property="og:site_name" content="Data Scientist" />
 <meta property="og:image" content="https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-07-24T00:00:00+09:00" />
+<meta property="article:published_time" content="2024-07-25T00:00:00+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg" />
 <meta property="twitter:title" content="Monte Carlo Dropout" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-24T00:00:00+09:00","datePublished":"2024-07-24T00:00:00+09:00","description":"Monte Carlo Dropout","headline":"Monte Carlo Dropout","image":"https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/MC_Dropout/"},"url":"https://jayarnim.github.io/posts/MC_Dropout/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-25T00:00:00+09:00","datePublished":"2024-07-25T00:00:00+09:00","description":"Gal, Y., &amp; Ghahramani, Z.&lt;/br&gt; (2016, June).&lt;/br&gt; Dropout as a bayesian approximation: Representing model uncertainty in deep learning.&lt;/br&gt; In international conference on machine learning (pp. 1050-1059).&lt;/br&gt; PMLR.","headline":"Monte Carlo Dropout","image":"https://jayarnim.github.io/_post_refer_img/BayesianModeling/Thumbnail.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/MC_Dropout/"},"url":"https://jayarnim.github.io/posts/MC_Dropout/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -684,6 +684,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -715,6 +726,8 @@
   <header>
     <h1 data-toc-skip>Monte Carlo Dropout</h1>
     
+      <p class="post-desc fw-light mb-4">Gal, Y., & Ghahramani, Z.</br> (2016, June).</br> <a href="https://doi.org/10.48550/arXiv.1506.02142">Dropout as a bayesian approximation: Representing model uncertainty in deep learning.</a></br> In international conference on machine learning (pp. 1050-1059).</br> PMLR.</p>
+    
 
     <div class="post-meta text-muted">
       <!-- published date -->
@@ -730,13 +743,13 @@
 
 <time
   
-  data-ts="1721746800"
+  data-ts="1721833200"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Jul 24, 2024
+  Jul 25, 2024
 </time>
 
       </span>
@@ -794,7 +807,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="260 words"
+  title="252 words"
 >
   <em>1 min</em> read</span>
 
@@ -807,16 +820,16 @@
     <h2 id="monte-carlo-dropout"><span class="me-2">Monte Carlo Dropout</span><a href="#monte-carlo-dropout" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<p><a href="/_post_refer_img/BayesianModeling/02-05-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/02-05-01.png" alt="01" width="100%" loading="lazy"></a></p>
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">MC Dropout</code>(<code class="language-plaintext highlighter-rouge">M</code>onte <code class="language-plaintext highlighter-rouge">C</code>arlo Dropout)</strong> : 드롭아웃의 확률적 성질을 변분 추론 관점에서 해석하여 사후 확률 분포를 근사하는 모수 방법론으로서, 평가 과정에서도 드롭아웃을 유지하고 여러 번 샘플링한 결과값에 평균을 내어 최종 결론을 도출함</li>
+</ul>
+
+<h2 id="how-to-interpret"><span class="me-2">How to Interpret</span><a href="#how-to-interpret" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<p><a href="/_post_refer_img/BayesianModeling/02-06-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/02-06-01.png" alt="01" width="100%" loading="lazy"></a></p>
 
 <ul>
-  <li>
-    <p><strong>MC Dropout(<code class="language-plaintext highlighter-rouge">M</code>onte <code class="language-plaintext highlighter-rouge">C</code>arlo Dropout)</strong> : 드롭아웃의 확률적 성질을 변분추론 관점에서 해석하여 사후 확률 분포를 근사하는 모수 방법론으로서, 평가 과정에서도 드롭아웃을 유지하고 여러 번 샘플링한 결과값에 평균을 내어 최종 결론을 도출함</p>
-
-    <ul>
-      <li><a href="https://doi.org/10.48550/arXiv.1506.02142">Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning(2016)</a></li>
-    </ul>
-  </li>
   <li>
     <p><strong>Original ELBO</strong></p>
 
@@ -1511,65 +1524,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1579,161 +1533,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1832,188 +1631,6 @@
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2424,6 +2041,133 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2488,6 +2232,56 @@
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2961,6 +2755,257 @@
     
     
     
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     
@@ -3429,6 +3474,18 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
   
 
@@ -3541,6 +3598,39 @@
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
+          <a href="/posts/RFF_GP/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1721746800"
+  data-df="ll"
+  
+>
+  Jul 24, 2024
+</time>
+
+              <h4 class="pt-0 my-2">Random Fourier Features Gaussian Process</h4>
+              <div class="text-muted">
+                <p>GP
+
+
+
+  
+    가우시안 프로세스(Gaussian Process): 순차 입력 $x_{1},x_{2},\cdots \in \ell^{2}$ 에 대한 출력 $f(x_{1}),f(x_{2}),\cdots \in \ell^{2}$ 이 입력 공간 $\ell^{2}$ 전체에 대하여 확률 분포를 가지는 확률 과정으로서, 함수 자체를 확률변수로 취하는 함수...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
           <a href="/posts/BBB/" class="post-preview card h-100">
             <div class="card-body">
               <!--
@@ -3562,17 +3652,7 @@
 
               <h4 class="pt-0 my-2">Bayes by Backprop</h4>
               <div class="text-muted">
-                <p>Bayes by Backprop
-
-
-
-
-
-  
-    BBB(Bayes by Backprop) : 변분 추론을 사용하여 신경망의 가중치에 대한 사후 확률 분포를 근사하는 과정에서, 재매개변수화 트릭을 도입함으로써 역전파 알고리즘을 활용한 최적화 학습을 도모한 방법론
-
-    
-      Weight Uncertainty in Neural Network...</p>
+                <p>Blundell, C., Cornebise, J., Kavukcuoglu, K., &amp; Wierstra, D.&lt;/br&gt; (2015, June).&lt;/br&gt; &lt;a href=&quot;https://proceedings.mlr.press/v37/blundell15&quot;&gt;Weight uncertainty in neural network.&lt;/a&gt;&lt;/br&gt; In Interna...</p>
               </div>
             </div>
           </a>
@@ -3615,42 +3695,6 @@
           </a>
         </article>
       
-        <article class="col">
-          <a href="/posts/SVGD/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1721919600"
-  data-df="ll"
-  
->
-  Jul 26, 2024
-</time>
-
-              <h4 class="pt-0 my-2">Stein Variational Gradient Descent</h4>
-              <div class="text-muted">
-                <p>SVGD
-
-
-
-  
-    SVGD(Stein Variational Gradient Descent) : Stein Discrepancy 를 활용하여 제안 분포 $W \sim Q$ 를 목표 분포 $W \mid \mathcal{D} \sim P$ 에 근사하는 비모수 방법론(Non-Parametric Method)
-
-    
-      Stein Varia...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
     </nav>
   </aside>
   <!-- #related-posts -->
@@ -3666,11 +3710,11 @@
 
   
     <a
-      href="/posts/BBB/"
+      href="/posts/RFF_GP/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>Bayes by Backprop</p>
+      <p>Random Fourier Features Gaussian Process</p>
     </a>
   
 
@@ -4175,65 +4219,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -4243,161 +4228,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -4496,188 +4326,6 @@
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -5088,6 +4736,133 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -5152,6 +4927,56 @@
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -5625,6 +5450,257 @@
     
     
     
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     
