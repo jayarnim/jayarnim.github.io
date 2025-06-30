@@ -1,7 +1,7 @@
 ---
 order: 5
 title: Monte Carlo Dropout
-date: 2024-07-24
+date: 2024-07-25
 categories: [BAYES, 2.posterior approx.]
 tags: [Bayesian, Objective Function, Variational Inference]
 math: true

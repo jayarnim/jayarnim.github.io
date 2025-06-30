@@ -1,7 +1,7 @@
 ---
 order: 3
 title: Bayesian Regression
-date: 2024-07-30
+date: 2024-07-31
 categories: [BAYES, 3.bayes applications]
 tags: [Bayesian, Regression]
 math: true

@@ -1,7 +1,7 @@
 ---
 order: 3
 title: Naive Bayes
-date: 2024-07-29
+date: 2024-07-30
 categories: [BAYES, 3.bayes applications]
 tags: [Bayesian, Classification]
 math: true

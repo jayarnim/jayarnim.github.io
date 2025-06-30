@@ -1,7 +1,7 @@
 ---
 order: 1
 title: Bayesian A/B Test
-date: 2024-07-27
+date: 2024-07-28
 categories: [BAYES, 3.bayes applications]
 tags: [Bayesian, A/B Test]
 math: true
