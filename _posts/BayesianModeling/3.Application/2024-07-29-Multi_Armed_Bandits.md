@@ -1,7 +1,7 @@
 ---
 order: 2
 title: Multi Armed Bandits
-date: 2024-07-28
+date: 2024-07-29
 categories: [BAYES, 3.bayes applications]
 tags: [Bayesian, Multi Armed Bandits]
 math: true

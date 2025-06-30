@@ -1,10 +1,16 @@
 ---
-order: 5
+order: 6
 title: Monte Carlo Dropout
-date: 2024-07-24
+date: 2024-07-25
 categories: [BAYES, 2.posterior approx.]
 tags: [Bayesian, Objective Function, Variational Inference]
 math: true
+description: >-
+    Gal, Y., & Ghahramani, Z.</br>
+    (2016, June).</br>
+    <a href="https://doi.org/10.48550/arXiv.1506.02142">Dropout as a bayesian approximation: Representing model uncertainty in deep learning.</a></br>
+    In international conference on machine learning (pp. 1050-1059).</br>
+    PMLR.
 image:
     path: /_post_refer_img/BayesianModeling/Thumbnail.jpeg
 ---
@@ -12,11 +18,12 @@ image:
 ## Monte Carlo Dropout
 -----
 
-![01](/_post_refer_img/BayesianModeling/02-05-01.png){: width="100%"}
+- **`MC Dropout`(`M`onte `C`arlo Dropout)** : 드롭아웃의 확률적 성질을 변분 추론 관점에서 해석하여 사후 확률 분포를 근사하는 모수 방법론으로서, 평가 과정에서도 드롭아웃을 유지하고 여러 번 샘플링한 결과값에 평균을 내어 최종 결론을 도출함
 
-- **MC Dropout(`M`onte `C`arlo Dropout)** : 드롭아웃의 확률적 성질을 변분추론 관점에서 해석하여 사후 확률 분포를 근사하는 모수 방법론으로서, 평가 과정에서도 드롭아웃을 유지하고 여러 번 샘플링한 결과값에 평균을 내어 최종 결론을 도출함
+## How to Interpret
+-----
 
-    - [Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning(2016)](https://doi.org/10.48550/arXiv.1506.02142)
+![01](/_post_refer_img/BayesianModeling/02-06-01.png){: width="100%"}
 
 - **Original ELBO**
 
