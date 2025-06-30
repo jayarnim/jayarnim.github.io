@@ -1,18 +1,18 @@
 ---
 order: 3
 title: Bayesian Regression
-date: 2024-07-31
+date: 2024-07-30
 categories: [BAYES, 3.bayes applications]
 tags: [Bayesian, Regression]
 math: true
 description: >-
     Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data & Management, College of Business Administration, Kookmin Univ.
 image:
-    path: /_post_refer_img/BayesianModeling/Thumbnail.jpeg
+    path: /_post_refer_img/BayesianModeling/3.Application/Thumbnail.jpg
 ---
 
 <div style="text-align: center;">
-    <img src="/_post_refer_img/BayesianModeling/03-04-01.png" alt="01" width="100%">
+    <img src="/_post_refer_img/BayesianModeling/3.Application/04-01.png" alt="01" width="100%">
     <p><em>Bayesian Regression Model</em></p>
 </div>
 

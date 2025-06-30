@@ -8,7 +8,7 @@ math: true
 description: >-
     Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data & Management, College of Business Administration, Kookmin Univ.
 image:
-    path: /_post_refer_img/BayesianModeling/Thumbnail.jpeg
+    path: /_post_refer_img/BayesianModeling/1.Basic/Thumbnail.jpeg
 ---
 
 ## Causal Inference
@@ -43,7 +43,7 @@ image:
 ## Bayes' Billiard Table Analogy
 -----
 
-![01](/_post_refer_img/BayesianModeling/01-03-01.png){: width="100%"}
+![01](/_post_refer_img/BayesianModeling/1.Basic/03-01.png){: width="100%"}
 
 > 당구대 $ABCD$ 를 가정하자. 공 $\mathcal{W}, \mathcal{O}$ 가 그 위에 굴려지면 어떤 하나의 동일한 부분에 정지할 동일한 확률을 가진다. $\mathcal{W}$ 으로 선분 $OS$ 의 위치가 결정된다. 그 우측 또는 좌측에 $\mathcal{O}$ 이 정지하는가에 따라서 사건 $Z$ 의 발생 또는 실패가 결정된다. $\mathcal{O}$ 를 연속하여 $n$ 회 던진 결과 $p$ 회만큼 우측에 정지했음이 관찰되었다. 이때 $AD$ 와 $OS$ 사이의 미지의 거리 $\theta$ 가 두 가지 값 $\alpha, \beta$ 사잇값을 취할 확률은?
 
@@ -124,7 +124,7 @@ image:
 
 > 동전을 던졌을 때 앞면이 나올 확률을 $\theta$ 라고 하자. $\theta$ 에 대한 정보가 아무것도 없다고 가정하자. 즉, $\theta$ 는 0과 1 사이의 무작위수일 것이라고 믿어지고 있다. 동전을 두 번 던졌는데 두 번 다 앞면이 나왔다. 그렇다면 $\theta$ 에 대한 믿음은 어떻게 변화할까?
 
-![02](/_post_refer_img/BayesianModeling/01-03-02.png){: width="100%"}
+![02](/_post_refer_img/BayesianModeling/1.Basic/03-02.png){: width="100%"}
 
 
 - Prior Prob. Dist.:

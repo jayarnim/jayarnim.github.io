@@ -1,7 +1,7 @@
 ---
-order: 6
+order: 5
 title: Monte Carlo Dropout
-date: 2024-07-25
+date: 2024-07-24
 categories: [BAYES, 2.posterior approx.]
 tags: [Bayesian, Objective Function, Variational Inference]
 math: true
@@ -12,7 +12,7 @@ description: >-
     In international conference on machine learning (pp. 1050-1059).</br>
     PMLR.
 image:
-    path: /_post_refer_img/BayesianModeling/Thumbnail.jpeg
+    path: /_post_refer_img/BayesianModeling/2.Posterior/Thumbnail.jpg
 ---
 
 ## Monte Carlo Dropout
@@ -23,7 +23,7 @@ image:
 ## How to Interpret
 -----
 
-![01](/_post_refer_img/BayesianModeling/02-06-01.png){: width="100%"}
+![01](/_post_refer_img/BayesianModeling/2.Posterior/05-01.png){: width="100%"}
 
 - **Original ELBO**
 
