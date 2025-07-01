@@ -11,7 +11,7 @@ description: >-
     <a href="https://doi.org/10.1145/3285029">Deep learning based recommender system: A survey and new perspectives.</a></br>
     ACM computing surveys (CSUR), 52(1), 1-38.
 image:
-    path: /_post_refer_img/RecommenderSystem/Thumbnail.jpg
+    path: /_post_refer_img/RecommenderSystem/2.MLP/Thumbnail.jpg
 ---
 
 ## MLP
@@ -26,7 +26,7 @@ image:
 
 - **ID Embedding**: Embedding user and item identifiers into a low-dimensional vector space
 
-    ![01](/_post_refer_img/RecommenderSystem/02-01-01.png){: width="100%"}
+    ![01](/_post_refer_img/RecommenderSystem/2.MLP/01-01.png){: width="100%"}
 
 - [`NCF`](https://doi.org/10.1145/3038912.3052569): ID Embedding based Latent Factor Model\\
 (Linear and Non-Linear Matching Function Ensemble)
@@ -39,7 +39,7 @@ image:
 
 - **History Embedding**: Generate each user and item expressions based on past interaction history
 
-    ![02](/_post_refer_img/RecommenderSystem/02-01-02.png){: width="100%"}
+    ![02](/_post_refer_img/RecommenderSystem/2.MLP/01-02.png){: width="100%"}
 
     - by aggregating the raw representations of one entity with which the another entity interacted
     - by reducing the dimensionality of the user-item interaction matrix and its transpose
@@ -69,7 +69,7 @@ image:
 
 - **Dual Embedding**: Use both ID Embedding and History Embedding
 
-    ![03](/_post_refer_img/RecommenderSystem/02-01-03.png){: width="100%"}
+    ![03](/_post_refer_img/RecommenderSystem/2.MLP/01-03.png){: width="100%"}
 
 - [`DELF`](https://doi.org/10.24963/ijcai.2018/462): Dual Embedding based Latent Factor Model\\
 (Ensemble with separate ID embedding and history embedding)
@@ -109,7 +109,7 @@ image:
 ## AutoEncoder
 -----
 
-![04](/_post_refer_img/RecommenderSystem/02-01-04.png){: width="100%"}
+![04](/_post_refer_img/RecommenderSystem/2.MLP/01-04.png){: width="100%"}
 
 - **Merit**
     - Restore the user-item interaction matrix

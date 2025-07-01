@@ -7,5 +7,5 @@ tags: [Paper Review, AI Application, Recommender System, Collaborative Filtering
 math: true
 description: >-
 image:
-    path: /_post_refer_img/RecommenderSystem/Thumbnail.jpg
+    path: /_post_refer_img/RecommenderSystem/4.OCCF/Thumbnail.jpg
 ---

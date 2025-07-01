@@ -10,13 +10,13 @@ description: >-
     (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. <br>
     (2) "Recommender System (2024-2)" by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-    path: /_post_refer_img/RecommenderSystem/Thumbnail.jpg
+    path: /_post_refer_img/RecommenderSystem/1.Basic/Thumbnail.jpg
 ---
 
 ## What? RecSys
 -----
 
-![03](/_post_refer_img/RecommenderSystem/01-01-03.jpeg){: width="100%"}
+![03](/_post_refer_img/RecommenderSystem/1.Basic/01-03.jpeg){: width="100%"}
 
 - **추천시스템(Recommender System)**: 정보과부하 문제(Information Overload Problem)를 해결하기 위한 **개인화 정보 필터링 서비스(Personalized Information Filtering Service)** 로서, 사용자에게 적합한 아이템을 제안함으로써 개인화된 경험을 제공하는 기술
 
@@ -46,13 +46,13 @@ image:
 
     > Show me more of the same what I've liked!
 
-    ![01](/_post_refer_img/RecommenderSystem/01-01-01.png){: width="100%"}
+    ![01](/_post_refer_img/RecommenderSystem/1.Basic/01-01.png){: width="100%"}
 
 - **협업 필터링 기법(`C`ollaborative `F`iltering Method; CF)**: 타깃 사용자의 구매 기록을 바탕으로 유사한 사용자 혹은 아이템을 탐색하여 추천하는 방법
 
     > Tell me what's popular among my peers!
 
-    ![02](/_post_refer_img/RecommenderSystem/01-01-02.png){: width="100%"}
+    ![02](/_post_refer_img/RecommenderSystem/1.Basic/01-02.png){: width="100%"}
 
 - **하이브리드 기법(Hybrid Method)**: 협업 필터링 기법과 내용 기반 필터링 기법을 결합하는 방법
 

@@ -1,5 +1,5 @@
 ---
-order: 11
+order: 1
 title: Latent Factor Models with Uncertainty
 date: 2024-03-27
 categories: [AI Application, Recommender System]

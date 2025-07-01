@@ -10,7 +10,7 @@ description: >-
     (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. <br>
     (2) "Recommender System (2024-2)" by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-    path: /_post_refer_img/RecommenderSystem/Thumbnail.jpg
+    path: /_post_refer_img/RecommenderSystem/2.MLP/Thumbnail.jpg
 ---
 
 ## SLIM
@@ -133,7 +133,7 @@ image:
 
 ### How to Modeling
 
-![01](/_post_refer_img/RecommenderSystem/02-09-01.png){: width="100%"}
+![01](/_post_refer_img/RecommenderSystem/2.MLP/09-01.png){: width="100%"}
 
 - ID Embedding:
 
