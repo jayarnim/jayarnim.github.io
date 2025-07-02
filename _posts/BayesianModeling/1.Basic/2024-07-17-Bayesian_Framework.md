@@ -165,14 +165,6 @@ image:
     &\sim \text{Beta}(X+1,n-X+1)
     \end{aligned}$$
 
-    - $\text{Beta}(\alpha,\beta)$ : 베타분포
-
-        $$
-        f(x)
-        = \frac{x^{\alpha-1}(1-x)^{\beta-1}}{\text{B}(\alpha,\beta)}
-        \sim \text{Beta}(\alpha,\beta)
-        $$
-
 ### Annotation
 
 - $\text{B}(\alpha,\beta)$ : 베타 함수
