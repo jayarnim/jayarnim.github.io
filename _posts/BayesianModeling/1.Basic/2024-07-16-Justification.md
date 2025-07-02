@@ -105,9 +105,9 @@ image:
 
         - $\mathcal{F}_{n}$: $n$ 번째 시점까지 보유하고 있는 모든 정보를 나타내는 시그마 필드
 
-- 조건화 규칙(Rule of Conditionalization)
+- **조건화 규칙(Rule of Conditionalization)**: 인식적 불확실성 하에서의 합리적인 정보 갱신 원칙으로서, $n$ 시점에서 새로운 증거에 의해 형성된 사후 신념을 $n+1$ 시점에서의 사전 정보로서 수용하는 규칙
 
-    - 엄밀조건화 규칙(Rule of Strict Conditionalization):
+    - 엄밀 조건화 규칙(Rule of Strict Conditionalization):
 
         $$\begin{aligned}
         \Pi\left(\Theta\right)
@@ -120,6 +120,8 @@ image:
         \Pi\left(\Theta\right)
         &= Q\left(\mathcal{D}\right) \cdot P\left(\Theta \mid \mathcal{D}\right) + Q\left(\neg\mathcal{D}\right) \cdot p\left(\Theta \mid \neg\mathcal{D}\right)
         \end{aligned}$$
+
+        - $Q\left(\mathcal{D}\right)$: 새로운 증거에 대한 인지 수준
 
 ## Problem of Induction
 -----
