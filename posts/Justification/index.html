@@ -801,7 +801,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="2019 words"
+  title="2108 words"
 >
   <em>11 min</em> read</span>
 
@@ -953,6 +953,21 @@
     <blockquote>
       <p>일반적 환경에서 조건화에 의한 확률 변화는 장기적으로 안정화된다(이영의, 2015, p.54). <br /> \(\mathbb{E}\left[\theta \mid \mathcal{D}_{n}\right] \to \mathbb{E}\left[\theta \mid \mathcal{D}_{\infty}\right]\)</p>
     </blockquote>
+
+    <ul>
+      <li>
+        <p><strong>마틴게일(Martingale)</strong>: 현재까지의 모든 정보를 알고 있을 때(\(\mathcal{F}_{n}\)), 다음 단계에서 확률변수 \(X_{n+1}\) 의 조건부 기대값 \(\mathbb{E}\left[X_{n+1} \mid \mathcal{F}_{n}\right]\) 이 현재 값 \(X_{n}\) 과 같은 확률 과정</p>
+
+\[\begin{aligned}
+  \mathbb{E}\left[X_{n+1} \mid \mathcal{F}_{n}\right]
+  &amp;= X_{n}
+  \end{aligned}\]
+
+        <ul>
+          <li>$\mathcal{F}_{n}$: $n$ 번째 시점까지 보유하고 있는 모든 정보를 나타내는 시그마 필드</li>
+        </ul>
+      </li>
+    </ul>
   </li>
   <li>
     <p>조건화 규칙(Rule of Conditionalization)</p>
