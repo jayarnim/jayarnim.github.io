@@ -119,6 +119,26 @@ image:
 
     > 베이지안에서는 모수에 대하여 주장함에 있어 현재 주어진 정보, 가령 사전 정보, 데이터 관측 결과 등을 기반으로 함. 따라서 현재까지 관찰된 데이터가 실현될 가능성은 모수에 대한 주장의 증거(Evidence)임.
 
+- **사후 예측 분포(Posterior Predictive Distribution)**: 관측 데이터 $\mathcal{D}$ 를 바탕으로 도출된, 미관측 데이터 $(x^{*}, y^{*})$ 가 취할 예측값에 대한 확률 분포
+
+    $$\begin{aligned}
+    p(y^{*} \mid x^{*}; \mathcal{D})
+    &= \int{p(y^{*} \mid x^{*}, \theta) \cdot p(\theta \mid \mathcal{D})}\text{d}\theta
+    \end{aligned}$$
+
+    - $$p(y^{*} \mid x^{*}, \theta)$$: 관측 데이터 $$(x^{*}, y^{*})$$ 에 대한 우도
+    - $$p(\theta \mid \mathcal{D})$$: 관측 데이터 $$\mathcal{D}$$ 로부터 도출된 모수 $$\theta$$ 에 대한 사후 확률 분포이자, 신규 관측치 $$(x^{*}, y^{*})$$ 관측 전 모수 $\theta$ 에 대한 사전 확률 분포
+
+- **사전 예측 분포(Prior Predictive Distribution)**: 어떠한 데이터도 관측하기 전에 사전 정보만을 바탕으로 도출된 미관측 데이터 $$(x^{*}, y^{*})$$ 가 취할 예측값에 대한 확률 분포
+
+    $$\begin{aligned}
+    p(y^{*} \mid x^{*})
+    &= \int{p(y^{*} \mid x^{*}, \theta) \cdot p(\theta)}\text{d}\theta
+    \end{aligned}$$
+
+    - $$p(y^{*} \mid x^{*}, \theta)$$: 신규 관측치 $$(x^{*}, y^{*})$$ 에 대한 우도
+    - $$p(\theta)$$: 신규 관측치 $$(x^{*}, y^{*})$$ 관측 전 모수 $$\theta$$ 에 대한 사전 확률 분포
+
 ## `[example]` 동전 던지기
 -----
 
