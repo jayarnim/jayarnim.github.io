@@ -695,6 +695,50 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -807,9 +851,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="252 words"
+  title="593 words"
 >
-  <em>1 min</em> read</span>
+  <em>3 min</em> read</span>
 
         </div>
       </div>
@@ -820,14 +864,232 @@
     <h2 id="monte-carlo-dropout"><span class="me-2">Monte Carlo Dropout</span><a href="#monte-carlo-dropout" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
+<p><a href="/_post_refer_img/BayesianModeling/2.Posterior/05-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/2.Posterior/05-01.png" alt="01" width="100%" loading="lazy"></a></p>
+
 <ul>
   <li><strong><code class="language-plaintext highlighter-rouge">MC Dropout</code>(<code class="language-plaintext highlighter-rouge">M</code>onte <code class="language-plaintext highlighter-rouge">C</code>arlo Dropout)</strong> : 드롭아웃의 확률적 성질을 변분 추론 관점에서 해석하여 사후 확률 분포를 근사하는 모수 방법론으로서, 평가 과정에서도 드롭아웃을 유지하고 여러 번 샘플링한 결과값에 평균을 내어 최종 결론을 도출함</li>
+</ul>
+
+<h2 id="rff-gp"><span class="me-2">RFF-GP</span><a href="#rff-gp" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p>Original Gaussian Process:</p>
+
+\[\begin{aligned}
+  f(x) \sim \mathcal{N}(\mu(x), \mathcal{K}(x,x))
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">R</code>andom <code class="language-plaintext highlighter-rouge">F</code>ourier <code class="language-plaintext highlighter-rouge">F</code>eatures:</p>
+
+\[\begin{aligned}
+  \mathcal{K}(x,x^{\prime})
+  &amp;\approx \phi(x)^{T}\phi(x^{\prime})
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>$\phi(x)$:</p>
+
+\[\begin{gathered}
+  \phi(x)
+  = \sqrt{\frac{2}{N}}\begin{bmatrix}
+  \phi_{1}(x)\\
+  \phi_{2}(x)\\
+  \vdots\\
+  \phi_{N}(x)
+  \end{bmatrix},\quad
+  \phi_{i}(x)
+  = \cos{(w_{i}^{T}x + b_{i})}
+  \end{gathered}\]
+  </li>
+  <li>
+    <p>$f(x)$ be approximated linear combination:</p>
+
+\[\begin{aligned}
+  f(x)
+  &amp;= \sum_{i=1}^{n}{\alpha_{i} \cdot \mathcal{K}(x,x_{i})}\\
+  &amp;\approx \sum_{i=1}^{n}{\alpha_{i} \cdot \phi(x)^{T}\phi(x_{i})}\\
+  &amp;= \phi(x)^{T} \cdot \underbrace{\sum_{i=1}^{n}{\alpha_{i} \cdot \phi(x_{i})}}_{=:\Theta}
+  \end{aligned}\]
+
+    <ul>
+      <li>$\phi(x)$ is chosen randomly, but fixed once drawn</li>
+      <li>to give probability to $f(x)$, $\theta$ must be set as a probabilistic variable</li>
+    </ul>
+  </li>
+  <li>
+    <p>prior of $f(x)$:</p>
+
+\[\begin{aligned}
+  \Theta \sim \mathcal{N}(\mathbf{0}, \mathbf{I})
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>posterior of $f(x)$:</p>
+
+\[\begin{aligned}
+  f(x) \mid \Theta \sim \mathcal{N}(\mathbf{0}, \phi(x)^{T}\phi(x^{\prime}))
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h2 id="perceptron"><span class="me-2">Perceptron</span><a href="#perceptron" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p>output vector of $k$-th layer:</p>
+
+\[\begin{aligned}
+  \phi^{(k)}(x)
+  = \begin{bmatrix}
+  \phi_{1}^{(k)}(x)\\
+  \phi_{2}^{(k)}(x)\\
+  \vdots\\
+  \phi_{N_{k}}^{(k)}(x)\\
+  \end{bmatrix}, \quad
+  \phi_{i}(x)
+  = \sigma(w_{i}^{T}x + b_{i})
+  \end{aligned}\]
+
+    <ul>
+      <li>$k=1,2,\cdots,K$: 레이어 인덱스</li>
+      <li>$i=1,2,\cdots,N_{k}$: $k$ 번째 레이어의 노드 인덱스</li>
+      <li>$j=1,2,\cdots,N_{k+1}$: $k+1$ 번째 레이어의 노드 인덱스</li>
+    </ul>
+  </li>
+  <li>
+    <p>the weight vector of the $j$-th node @ $k+1$-th layer:</p>
+
+\[\begin{aligned}
+  \Theta_{j}^{(k+1)}
+  = \begin{bmatrix}
+  \theta_{j,1}^{(k+1)}\\
+  \theta_{j,2}^{(k+1)}\\
+  \vdots\\
+  \theta_{j,N_{k}}^{(k+1)}\\
+  \end{bmatrix}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>net-input of the $j$-th node @ $k+1$-th layer:</p>
+
+\[\begin{aligned}
+  f_{j}^{(k+1)}(x)
+  = \phi^{(k)}(x)^{T}\Theta_{j}^{(k+1)}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h2 id="dropout"><span class="me-2">Dropout</span><a href="#dropout" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p>dropout mask:</p>
+
+\[\begin{aligned}
+  z_{i}^{(k)} \sim \mathrm{Bernoulli}(p)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>net-input with dropout applied:</p>
+
+\[\begin{aligned}
+  f_{j}^{(k+1)}(x)
+  = \left[\mathbf{z}^{(k)} \odot \phi^{(k)}(x)\right]^{T}\Theta_{j}^{(k+1)}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>it is equivalent to:</p>
+
+\[\begin{aligned}
+  f_{j}^{(k+1)}(x)
+  = \phi^{(k)}(x)^{T}\left[\mathbf{z}^{(k)} \odot \Theta_{j}^{(k+1)}\right]
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>approx. dist.:</p>
+
+\[\begin{aligned}
+  q(w)
+  &amp;= \prod_{k=1}^{K}\prod_{j=1}^{N_{k+1}}\prod_{i=1}^{N_{k}}{p(z_{i}^{(k)})} \quad \text{for} \quad w=z\cdot\theta
+  \end{aligned}\]
+  </li>
 </ul>
 
 <h2 id="how-to-interpret"><span class="me-2">How to Interpret</span><a href="#how-to-interpret" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<p><a href="/_post_refer_img/BayesianModeling/2.Posterior/05-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/2.Posterior/05-01.png" alt="01" width="100%" loading="lazy"></a></p>
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">R</code>andom <code class="language-plaintext highlighter-rouge">F</code>ourier <code class="language-plaintext highlighter-rouge">F</code>eatures <code class="language-plaintext highlighter-rouge">G</code>aussian <code class="language-plaintext highlighter-rouge">P</code>rocess:</p>
+
+\[\begin{gathered}
+  f(x)
+  = \phi (x)^{T}\Theta\\
+  \phi(x)
+  = \sqrt{\frac{2}{K}}\begin{bmatrix}
+  \phi_{1}(x)\\
+  \phi_{2}(x)\\
+  \vdots\\
+  \phi_{K}(x)
+  \end{bmatrix},\quad
+  \Theta
+  = \begin{bmatrix}
+  \theta_{1}\\
+  \theta_{2}\\
+  \vdots\\
+  \theta_{K}
+  \end{bmatrix}
+  \end{gathered}\]
+
+    <ul>
+      <li>
+        <p>$f(x) = \phi (x)^{T}\Theta$: 입력값 $x$ 에 대한 출력값</p>
+
+\[\begin{aligned}
+  f(x) \mid \Theta 
+  &amp;\sim \mathcal{N}(0, \left&lt;\phi(x),\phi(x^{\prime})\right&gt;)
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>$\phi(x)$: 무작위 푸리에 기저 함수 출력값 벡터</p>
+
+\[\begin{aligned}
+  \phi(x)
+  &amp;= \sqrt{\frac{2}{K}}
+  \begin{bmatrix}
+  \phi_{1}(x)\\
+  \phi_{2}(x)\\
+  \vdots\\
+  \phi_{K}(x)
+  \end{bmatrix}
+  \end{aligned}\]
+
+        <ul>
+          <li>$\phi_{k}(x)=\cos{(w_{k}^{T}x + b_{k})}$: 무작위 푸리에 기저 함수 출력값</li>
+        </ul>
+      </li>
+      <li>
+        <p>$\Theta \sim \mathcal{N}(\mathbf{0}, \mathbf{I})$: $f(x)$ 의 사전 확률 분포</p>
+
+\[\Theta
+  = \begin{bmatrix}
+  \theta_{1}\\
+  \theta_{2}\\
+  \vdots\\
+  \theta_{K}
+  \end{bmatrix}\]
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="how-to-interpret-1"><span class="me-2">How to Interpret</span><a href="#how-to-interpret-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
 
 <ul>
   <li>

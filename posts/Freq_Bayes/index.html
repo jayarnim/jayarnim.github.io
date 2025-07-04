@@ -747,9 +747,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1222 words"
+  title="1448 words"
 >
-  <em>6 min</em> read</span>
+  <em>8 min</em> read</span>
 
         </div>
       </div>
@@ -757,7 +757,7 @@
   </header>
 
   <div class="content">
-    <h2 id="frequentist-vs-bayesianism"><span class="me-2">Frequentist vs. Bayesianism</span><a href="#frequentist-vs-bayesianism" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="probability"><span class="me-2">Probability</span><a href="#probability" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
@@ -810,7 +810,7 @@
       <li><strong>우발적 불확실성(Aleatoric Uncertainty)</strong>: 시스템이 본질적으로 확률적이기에 발생하는 불확실성
         <ul>
           <li>표본 추출의 우발성(Frequentist)</li>
-          <li>데이터 생성 과정상의 무작위성(Bayesianism)</li>
+          <li>데이터 생성 과정 상의 무작위성(Bayesianism)</li>
         </ul>
       </li>
       <li><strong>인식적 불확실성(Epistemic Uncertainty)</strong>: 연구자가 충분한 정보를 확보하지 못했기에 발생하는 불확실성
@@ -824,55 +824,39 @@
       </li>
     </ul>
   </li>
-  <li>
-    <p><strong>확률(Probability)</strong>: 불확실성을 정량적으로 표현하는 도구</p>
+  <li><strong>확률(Probability)</strong>: 불확실성을 정량적으로 표현하는 도구
+    <ul>
+      <li>
+        <p><strong>빈도주의(Frequentist)</strong>: 확률의 빈도적 해석</p>
 
-    <div class="table-wrapper"><table>
-      <thead>
-        <tr>
-          <th> </th>
-          <th>빈도주의</th>
-          <th>베이즈주의</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>관점</td>
-          <td>실증론</td>
-          <td>인식론</td>
-        </tr>
-        <tr>
-          <td>목표</td>
-          <td>모수의 정체</td>
-          <td>모수 인지 수준</td>
-        </tr>
-        <tr>
-          <td>원천</td>
-          <td>모수 추정 과정</td>
-          <td>모수에 대한 무지</td>
-        </tr>
-        <tr>
-          <td>불확실성</td>
-          <td>우발적 불확실성</td>
-          <td>인식적 불확실성</td>
-        </tr>
-        <tr>
-          <td>준거 집합</td>
-          <td>다수 사건 결과</td>
-          <td>단일 사건 진술</td>
-        </tr>
-        <tr>
-          <td>확률 해석</td>
-          <td>상대 빈도</td>
-          <td>신념도</td>
-        </tr>
-        <tr>
-          <td>표현</td>
-          <td>신뢰 구간과 신뢰 수준</td>
-          <td>사후 확률 분포</td>
-        </tr>
-      </tbody>
-    </table></div>
+        <blockquote>
+          <p><em>반복 실험 결과, $0.5$ 의 비율로 동전을 던지면 앞면이 나왔다.</em></p>
+        </blockquote>
+
+        <ul>
+          <li><strong>목표</strong>: <code class="language-plaintext highlighter-rouge">실증론(Positivism)</code>적 관점에서 <code class="language-plaintext highlighter-rouge">모수의 정체</code>를 규명하는 것</li>
+          <li><strong>준거 집합(Reference Set)</strong>: 무한 반복 실험 결과들의 집합</li>
+          <li><strong>확률 해석(Probability Interpretation)</strong>: 사건이 발생하는 장기 상대 빈도</li>
+          <li><strong>불확실성(Uncertainty)</strong>: 모수 추정 과정 상의 불확실성으로서 표본 추출의 우발성</li>
+          <li><strong>표현</strong>: 신뢰구간(모수를 포함하는 구간)과 신뢰수준(반복 실험에서 모수를 포함하는 상대 빈도)</li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>베이즈주의(Bayesianism)</strong>: 확률의 주관적 해석</p>
+
+        <blockquote>
+          <p><em>동전을 던지면 앞면이 나온다는 진술을 $0.5$ 수준으로 신뢰할 수 있다.</em></p>
+        </blockquote>
+
+        <ul>
+          <li><strong>목표</strong>: <code class="language-plaintext highlighter-rouge">인식론(Epistemology)</code>적 관점에서 <code class="language-plaintext highlighter-rouge">모수에 대한 인지 수준</code>을 향상시키는 것</li>
+          <li><strong>준거 집합(Reference Set)</strong>: 단일 사건에 대한 진술 집합</li>
+          <li><strong>확률 해석(Probability Interpretation)</strong>: 사건이 발생할 것이라는 진술의 신념도</li>
+          <li><strong>불확실성(Uncertainty)</strong>: 모수 자체의 불확실성으로서 인식적 제약으로 인한 모수에 대한 무지</li>
+          <li><strong>표현</strong>: 사후 확률 분포(모수에 대한 진술과 그 신념도의 집합)</li>
+        </ul>
+      </li>
+    </ul>
   </li>
 </ul>
 

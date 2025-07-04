@@ -756,7 +756,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1321 words"
+  title="1320 words"
 >
   <em>7 min</em> read</span>
 
@@ -771,7 +771,11 @@
 
 <ul>
   <li>
-    <p><strong>가우시안 프로세스(<code class="language-plaintext highlighter-rouge">G</code>aussian <code class="language-plaintext highlighter-rouge">P</code>rocess)</strong>: 순차 입력 $x_{1},x_{2},\cdots \in \ell^{2}$ 에 대한 출력 $f(x_{1}),f(x_{2}),\cdots \in \ell^{2}$ 이 입력 공간 $\ell^{2}$ 전체에 대하여 확률 분포를 가지는 확률 과정으로서, 함수 자체를 확률변수로 취하는 함수 분포</p>
+    <p><strong>가우시안 프로세스(<code class="language-plaintext highlighter-rouge">G</code>aussian <code class="language-plaintext highlighter-rouge">P</code>rocess)</strong>:</p>
+
+    <blockquote>
+      <p>순차 입력 $x_{1},x_{2},\cdots \in \ell^{2}$ 에 대한 출력 $f(x_{1}),f(x_{2}),\cdots \in \ell^{2}$ 이 입력 공간 $\ell^{2}$ 전체에 대하여 확률 분포를 가지는 확률 과정으로서, 함수 자체를 확률변수로 취하는 함수 분포</p>
+    </blockquote>
 
 \[\begin{aligned}
   f(\cdot) \sim \mathcal{GP}(\mu(\cdot), \mathcal{K}(\cdot, \cdot))
@@ -838,7 +842,7 @@
 
 <ul>
   <li>
-    <p><strong>RKHS(<code class="language-plaintext highlighter-rouge">R</code>eproducing <code class="language-plaintext highlighter-rouge">K</code>ernel <code class="language-plaintext highlighter-rouge">H</code>ilbert <code class="language-plaintext highlighter-rouge">S</code>pace)</strong> : 특정한 재생 커널(Reproducing Kernel)에 의해 정의된 힐베르트 공간으로서, 이 함수 공간에서 모든 함수는 커널 함수의 선형 조합으로 표현됨</p>
+    <p><strong>RKHS(<code class="language-plaintext highlighter-rouge">R</code>eproducing <code class="language-plaintext highlighter-rouge">K</code>ernel <code class="language-plaintext highlighter-rouge">H</code>ilbert <code class="language-plaintext highlighter-rouge">S</code>pace)</strong>: 특정한 재생 커널(Reproducing Kernel)에 의해 정의된 힐베르트 공간으로서, 이 함수 공간에서 모든 함수는 커널 함수의 선형 조합으로 표현됨</p>
 
 \[\begin{aligned}
   f(x)
@@ -1066,7 +1070,11 @@
 
 <ul>
   <li>
-    <p><strong>RFF-GP(<code class="language-plaintext highlighter-rouge">R</code>andom <code class="language-plaintext highlighter-rouge">F</code>ourier <code class="language-plaintext highlighter-rouge">F</code>eatres <code class="language-plaintext highlighter-rouge">G</code>aussian <code class="language-plaintext highlighter-rouge">P</code>rocess)</strong>: 커널 함수 $\mathcal{K}(\cdot,\cdot)$ 에 대하여 정의되는 무한 차원의 재생 커널 힐베르트 공간 \(f \in \mathcal{H}_{\mathcal{K}}\) 을 무작위 푸리에 기저 함수(Random Fourier Features) $\phi(\cdot)$ 에 대하여 정의되는 유한 차원 선형 함수 공간 \(f \in \mathcal{H}_{RFF} \subset \mathcal{H}_{\mathcal{K}}\) 으로 근사함으로써(Subspace Approximation), 가우시안 프로세스 \(f(\cdot) \sim \mathcal{GP}(\mu(\cdot),\mathcal{K}(\cdot,\cdot))\) 를 선형 회귀 모형 \(\phi(\cdot)^{T}\theta \sim \mathcal{GP}(0,\left&lt;\phi(\cdot),\phi(\cdot)\right&gt;)\) 의 형태로 근사하는 방법론</p>
+    <p><strong>RFF-GP(<code class="language-plaintext highlighter-rouge">R</code>andom <code class="language-plaintext highlighter-rouge">F</code>ourier <code class="language-plaintext highlighter-rouge">F</code>eatres <code class="language-plaintext highlighter-rouge">G</code>aussian <code class="language-plaintext highlighter-rouge">P</code>rocess)</strong>:</p>
+
+    <blockquote>
+      <p>커널 함수 $\mathcal{K}(\cdot,\cdot)$ 에 대하여 정의되는 무한 차원의 재생 커널 힐베르트 공간 \(f \in \mathcal{H}_{\mathcal{K}}\) 을 무작위 푸리에 기저 함수(Random Fourier Features) $\phi(\cdot)$ 에 대하여 정의되는 유한 차원 선형 함수 공간 \(f \in \mathcal{H}_{RFF} \subset \mathcal{H}_{\mathcal{K}}\) 으로 근사함으로써(Subspace Approximation), 가우시안 프로세스 \(f(\cdot) \sim \mathcal{GP}(\mu(\cdot),\mathcal{K}(\cdot,\cdot))\) 를 선형 회귀 모형 \(\phi(\cdot)^{T}\theta \sim \mathcal{GP}(0,\left&lt;\phi(\cdot),\phi(\cdot)\right&gt;)\) 의 형태로 근사하는 방법론</p>
+    </blockquote>
 
 \[\begin{aligned}
   f(x) \mid \theta
