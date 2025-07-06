@@ -778,11 +778,11 @@
     </blockquote>
 
 \[\begin{aligned}
-  f(\cdot) \sim \mathcal{GP}(\mu(\cdot), \mathcal{K}(\cdot, \cdot))
+  f(\cdot) \sim \mathcal{GP}(\mu(\cdot), K(\cdot, \cdot))
   \end{aligned}\]
   </li>
   <li>
-    <p>$f(x) \sim \mathcal{N}(\mu(x),\mathcal{K}(x,x))$: 입력값 $x$ 에 대한 출력값</p>
+    <p>$f(x) \sim \mathcal{N}(\mu(x),K(x,x))$: 입력값 $x$ 에 대한 출력값</p>
 
 \[\begin{aligned}
   f(x) \in \ell^{2}
@@ -820,8 +820,8 @@
 \[\begin{aligned}
   \Sigma
   &amp;=\begin{bmatrix}
-  \mathcal{K}(x_{1},x_{1}) &amp; \mathcal{K}(x_{1},x_{2}) &amp; \cdots \\
-  \mathcal{K}(x_{2},x_{1}) &amp; \mathcal{K}(x_{2},x_{2}) &amp; \cdots \\
+  K(x_{1},x_{1}) &amp; K(x_{1},x_{2}) &amp; \cdots \\
+  K(x_{2},x_{1}) &amp; K(x_{2},x_{2}) &amp; \cdots \\
   \vdots &amp; \vdots &amp; \ddots
   \end{bmatrix}
   \end{aligned}\]
@@ -829,10 +829,10 @@
     </ul>
   </li>
   <li>
-    <p>$f(\cdot) \sim \mathcal{GP}(\mu(\cdot), \mathcal{K}(\cdot, \cdot))$: $\forall x$ 에 대하여 $f(\forall x)$ 를 정의하는 규칙</p>
+    <p>$f(\cdot) \sim \mathcal{GP}(\mu(\cdot), K(\cdot, \cdot))$: $\forall x$ 에 대하여 $f(\forall x)$ 를 정의하는 규칙</p>
 
 \[\begin{aligned}
-  f(\cdot) \in \mathcal{H}_{\mathcal{K}}
+  f(\cdot) \in \mathcal{H}_{K}
   \end{aligned}\]
   </li>
 </ul>
@@ -846,19 +846,19 @@
 
 \[\begin{aligned}
   f(x)
-  &amp;= \sum_{i=1}^{n}{\alpha_{i} \cdot \mathcal{K}(x, x_{i})}
+  &amp;= \sum_{i=1}^{n}{\alpha_{i} \cdot K(x, x_{i})}
   \end{aligned}\]
   </li>
   <li>
     <p><strong>힐베르트 공간(Hilbert Space)</strong> : 유클리드 공간을 일반화한 개념으로서, 내적과 거리가 정의된 완비 공간</p>
 
 \[\begin{aligned}
-  \langle f, g \rangle _{\mathcal{H}}:=\sum_{i=1}^{n}\sum_{j=1}^{m}{\alpha_{i}\beta_{j}\mathcal{K}(x_{i}, x_{j})}, \quad \Vert f \Vert _{\mathcal{H}} := \sqrt{\langle f, f \rangle _{\mathcal{H}}}
+  \langle f, g \rangle _{\mathcal{H}}:=\sum_{i=1}^{n}\sum_{j=1}^{m}{\alpha_{i}\beta_{j}K(x_{i}, x_{j})}, \quad \Vert f \Vert _{\mathcal{H}} := \sqrt{\langle f, f \rangle _{\mathcal{H}}}
   \end{aligned}\]
 
     <ul>
-      <li>$f(x)=\sum_{i=1}^{n}{\alpha_{i} \cdot \mathcal{K}(x, x_{i})}$</li>
-      <li>$g(x)=\sum_{j=1}^{m}{\beta_{j} \cdot \mathcal{K}(x, x_{j})}$</li>
+      <li>$f(x)=\sum_{i=1}^{n}{\alpha_{i} \cdot K(x, x_{i})}$</li>
+      <li>$g(x)=\sum_{j=1}^{m}{\beta_{j} \cdot K(x, x_{j})}$</li>
     </ul>
   </li>
   <li>
@@ -866,8 +866,8 @@
 
 \[\begin{aligned}
   f(x)
-  = \langle f, \mathcal{K}(\cdot, x) \rangle _{\mathcal{H}}
-  = \left\langle \sum_{i=1}^{n}{\alpha_{i} \cdot \mathcal{K}(\cdot, x_{i})}, \mathcal{K}(\cdot, x) \right\rangle _{\mathcal{H}}
+  = \langle f, K(\cdot, x) \rangle _{\mathcal{H}}
+  = \left\langle \sum_{i=1}^{n}{\alpha_{i} \cdot K(\cdot, x_{i})}, K(\cdot, x) \right\rangle _{\mathcal{H}}
   \end{aligned}\]
   </li>
 </ul>
@@ -884,8 +884,8 @@
     </blockquote>
 
 \[\begin{aligned}
-  \mathcal{K}(x,x^{\prime})
-  &amp;= \left&lt;\mathcal{K}(\cdot, x), \mathcal{K}(\cdot, x^{\prime})\right&gt;_{\mathcal{H}}\\
+  K(x,x^{\prime})
+  &amp;= \left&lt;K(\cdot, x), K(\cdot, x^{\prime})\right&gt;_{\mathcal{H}}\\
   &amp;\approx \left&lt;\phi(x), \phi(x^{\prime})\right&gt;_{\mathbb{R}^{K}}\\
   &amp;= \mathbb{E}_{W \sim P}\left[\phi_{w}(x) \cdot \phi_{w}(x^{\prime})\right]
   \end{aligned}\]
@@ -925,10 +925,10 @@
     </ul>
   </li>
   <li>
-    <p><strong>보흐너 정리(Bochner’s theorem)</strong>: 임의의 조건을 만족하는 커널 $\mathcal{K}: \mathbb{R}^{d} \times \mathbb{R}^{d} \rightarrow \mathbb{R}$ 은 어떤 확률 밀도 함수 $p(w)$ 의 푸리에 쌍임</p>
+    <p><strong>보흐너 정리(Bochner’s theorem)</strong>: 임의의 조건을 만족하는 커널 $K: \mathbb{R}^{d} \times \mathbb{R}^{d} \rightarrow \mathbb{R}$ 은 어떤 확률 밀도 함수 $p(w)$ 의 푸리에 쌍임</p>
 
 \[\begin{aligned}
-  \mathcal{K}(x,x^{\prime})
+  K(x,x^{\prime})
   &amp;= \int_{\mathbb{R}^{K}}{\exp{\left[i \cdot w^{T}(x-x^{\prime})\right]} \cdot p(w)}\text{d}w
   \end{aligned}\]
 
@@ -941,7 +941,7 @@
   \Vert x^{\prime} - b \Vert &amp;&lt; \delta
   \end{aligned} \quad
   \Rightarrow \quad
-  \vert \mathcal{K}(x,x^{\prime}) - \mathcal{K}(a,b) \vert &lt; \epsilon
+  \vert K(x,x^{\prime}) - K(a,b) \vert &lt; \epsilon
   \quad \text{for} \quad 
   \begin{aligned}
   \forall \epsilon &amp;&gt; 0\\
@@ -952,14 +952,14 @@
         <p>이동 불변성(shift-invariant):</p>
 
 \[\begin{aligned}
-  \mathcal{K}(x,x^{\prime})
-  &amp;=\mathcal{K}(x-x^{\prime})
+  K(x,x^{\prime})
+  &amp;=K(x-x^{\prime})
   \end{aligned}\]
       </li>
       <li>
         <p>양의 정부호성(positive definite):</p>
 
-\[\sum_{i=1}^{n}{\sum_{j=1}^{n}{c_{i} \cdot c_{j} \cdot \mathcal{K}(x_{i},x_{j})}}&gt;0 \quad \text{for} \quad
+\[\sum_{i=1}^{n}{\sum_{j=1}^{n}{c_{i} \cdot c_{j} \cdot K(x_{i},x_{j})}}&gt;0 \quad \text{for} \quad
   \begin{aligned}
   \forall n &amp;\in \mathbb{N}\\
   \forall x_{1},x_{2},\cdots,x_{n} &amp;\in \mathbb{R}^{d}\\
@@ -981,7 +981,7 @@
         <p>$\because$ fourier transform:</p>
 
 \[\begin{aligned}
-  \mathcal{K}(x-x^{\prime})
+  K(x-x^{\prime})
   &amp;= \mathbb{E}_{W \sim P}[\exp(i \cdot w^{T}(x-x^{\prime}))]
   \end{aligned}\]
       </li>
@@ -1057,7 +1057,7 @@
     <p><strong>Therefore</strong>:</p>
 
 \[\begin{aligned}
-  \mathcal{K}(x,x^{\prime})
+  K(x,x^{\prime})
   &amp;\approx \mathbb{E}_{W \sim P}\left[\exp{i \cdot w^{T}(x-x^{\prime})}\right]\\
   &amp;\approx \mathbb{E}_{W \sim P}\left[\cos{w^{T}(x-x^{\prime})}\right]\\
   &amp;\approx \mathbb{E}_{W \sim P}\Big(\mathbb{E}_{b \sim \text{Uniform}(0,2\pi)}\left[\left&lt;\phi_{w,b}(x), \phi_{w,b}(x^{\prime})\right&gt;\right]\Big)
@@ -1073,7 +1073,7 @@
     <p><strong>RFF-GP(<code class="language-plaintext highlighter-rouge">R</code>andom <code class="language-plaintext highlighter-rouge">F</code>ourier <code class="language-plaintext highlighter-rouge">F</code>eatres <code class="language-plaintext highlighter-rouge">G</code>aussian <code class="language-plaintext highlighter-rouge">P</code>rocess)</strong>:</p>
 
     <blockquote>
-      <p>커널 함수 $\mathcal{K}(\cdot,\cdot)$ 에 대하여 정의되는 무한 차원의 재생 커널 힐베르트 공간 \(f \in \mathcal{H}_{\mathcal{K}}\) 을 무작위 푸리에 기저 함수(Random Fourier Features) $\phi(\cdot)$ 에 대하여 정의되는 유한 차원 선형 함수 공간 \(f \in \mathcal{H}_{RFF} \subset \mathcal{H}_{\mathcal{K}}\) 으로 근사함으로써(Subspace Approximation), 가우시안 프로세스 \(f(\cdot) \sim \mathcal{GP}(\mu(\cdot),\mathcal{K}(\cdot,\cdot))\) 를 선형 회귀 모형 \(\phi(\cdot)^{T}\theta \sim \mathcal{GP}(0,\left&lt;\phi(\cdot),\phi(\cdot)\right&gt;)\) 의 형태로 근사하는 방법론</p>
+      <p>커널 함수 $K(\cdot,\cdot)$ 에 대하여 정의되는 무한 차원의 재생 커널 힐베르트 공간 \(f \in \mathcal{H}_{K}\) 을 무작위 푸리에 기저 함수(Random Fourier Features) $\phi(\cdot)$ 에 대하여 정의되는 유한 차원 선형 함수 공간 \(f \in \mathcal{H}_{RFF} \subset \mathcal{H}_{K}\) 으로 근사함으로써(Subspace Approximation), 가우시안 프로세스 \(f(\cdot) \sim \mathcal{GP}(\mu(\cdot),K(\cdot,\cdot))\) 를 선형 회귀 모형 \(\phi(\cdot)^{T}\theta \sim \mathcal{GP}(0,\left&lt;\phi(\cdot),\phi(\cdot)\right&gt;)\) 의 형태로 근사하는 방법론</p>
     </blockquote>
 
 \[\begin{aligned}
@@ -1085,7 +1085,7 @@
     <p>RFF Summary:</p>
 
 \[\begin{aligned}
-  \mathcal{K}(x,x^{\prime})
+  K(x,x^{\prime})
   \approx \phi(x)^{T}\phi(x^{\prime})
   \end{aligned}\]
   </li>
@@ -1094,7 +1094,7 @@
 
 \[\begin{aligned}
   f(x)
-  &amp;= \sum_{i=1}^{n}{\alpha_{i} \cdot \mathcal{K}(x,x_{i})}\\
+  &amp;= \sum_{i=1}^{n}{\alpha_{i} \cdot K(x,x_{i})}\\
   &amp;\approx \sum_{i=1}^{n}{\alpha_{i} \cdot \phi(x)^{T}\phi(x_{i})}\\
   &amp;= \phi(x)^{T}\underbrace{\sum_{i=1}^{n}{\alpha_{i}\phi(x_{i})}}_{=:\theta}
   \end{aligned}\]
@@ -3875,15 +3875,18 @@
 
               <h4 class="pt-0 my-2">Gaussian Process</h4>
               <div class="text-muted">
-                <p>Stochastic Process
+                <p>Measure
 
+
+Measure
 
 
   
-    확률적 과정(Stochastic Process)
+    시그마 대수(Sigma-Field): 전체 집합 $\Omega$ 의 멱집합 $\mathcal{F} \subseteq 2^{\Omega}$ 으로서, $\Omega$ 의 부분집합 $A \subseteq \Omega$ 들의 집합
 
     
-      어떤 시점 혹은 위치 지표 $t$ 에 대하여 확률변수들의 집합 \(\{X_{t} \mid t \in T\}\) 이 주어졌을 때 이를 확률적 과정이라고 한다. 즉, 확률적 과정은 시간 또는 공간을 따라 변화하는 확률변수들의 집합으로서...</p>
+      $\Omega \in \mathcal{F}$
+      $A...</p>
               </div>
             </div>
           </a>
