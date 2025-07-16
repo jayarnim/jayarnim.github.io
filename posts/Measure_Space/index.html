@@ -30,22 +30,25 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="Linear Algebra" />
+<meta property="og:title" content="Space (2) Measure Space" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="A minimal, responsive and feature-rich Jekyll theme for technical writing." />
-<meta property="og:description" content="A minimal, responsive and feature-rich Jekyll theme for technical writing." />
-<link rel="canonical" href="https://jayarnim.github.io/categories/linear-algebra/" />
-<meta property="og:url" content="https://jayarnim.github.io/categories/linear-algebra/" />
+<meta name="description" content="Space" />
+<meta property="og:description" content="Space" />
+<link rel="canonical" href="https://jayarnim.github.io/posts/Measure_Space/" />
+<meta property="og:url" content="https://jayarnim.github.io/posts/Measure_Space/" />
 <meta property="og:site_name" content="Data Scientist" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Linear Algebra" />
+<meta property="og:image" content="https://jayarnim.github.io/_post_refer_img/MathematicalTechs/3.etc/Thumbnail.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-07-27T00:00:00+09:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/MathematicalTechs/3.etc/Thumbnail.jpg" />
+<meta property="twitter:title" content="Space (2) Measure Space" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"A minimal, responsive and feature-rich Jekyll theme for technical writing.","headline":"Linear Algebra","url":"https://jayarnim.github.io/categories/linear-algebra/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-27T00:00:00+09:00","datePublished":"2024-07-27T00:00:00+09:00","description":"Space","headline":"Space (2) Measure Space","image":"https://jayarnim.github.io/_post_refer_img/MathematicalTechs/3.etc/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/Measure_Space/"},"url":"https://jayarnim.github.io/posts/Measure_Space/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Linear Algebra | Data Scientist
+  <title>Space (2) Measure Space | Data Scientist
   </title>
 
   <!--
@@ -109,9 +112,16 @@
   <!-- 3rd-party Dependencies -->
 
   
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.27.20/dist/tocbot.min.css">
   
 
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.min.css">
+  
+
+  
+    <!-- Image Popup -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css">
   
 
   <!-- JavaScript -->
@@ -402,14 +412,10 @@
           
         
           
-            <span>
-              <a href="/categories/">Categories</a>
-            </span>
-          
         
           
             
-              <span>Linear Algebra</span>
+              <span>Space (2) Measure Space</span>
             
 
           
@@ -423,7 +429,7 @@
     </button>
 
     <div id="topbar-title">
-      Category
+      Post
     </div>
 
     <button type="button" id="search-trigger" class="btn btn-link">
@@ -449,30 +455,222 @@
         <div class="row flex-grow-1">
           <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
             
-              
+              <!-- Refactor the HTML structure -->
+
+
+
+<!--
+  In order to allow a wide table to scroll horizontally,
+  we suround the markdown table with `<div class="table-wrapper">` and `</div>`
+-->
+
+
+
+<!--
+  Fixed kramdown code highlight rendering:
+  https://github.com/penibelst/jekyll-compress-html/issues/101
+  https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901
+-->
+
+
+
+<!-- Change the icon of checkbox -->
+
+
+
+<!-- Handle images -->
+
+
+
+
+  
+  
+
+  
+    
+      
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+
+  
+
+
+<!-- Add header for code snippets -->
+
+
+
+<!-- Create heading anchors -->
+
+
+
+
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+
+
+
+<!-- return -->
+
 
 
 
 <article class="px-1">
-  
+  <header>
+    <h1 data-toc-skip>Space (2) Measure Space</h1>
     
 
-
-
-<div id="page-category">
-  <h1 class="ps-lg-2">
-    <i class="far fa-folder-open fa-fw text-muted"></i>
-    Linear Algebra
-    <span class="lead text-muted ps-2">6</span>
-  </h1>
-
-  <ul class="content ps-0">
-    
-    
-    
-      <li class="d-flex justify-content-between px-md-3">
-        <a href="/posts/Vector/">Vector</a>
-        <span class="dash flex-grow-1"></span>
+    <div class="post-meta text-muted">
+      <!-- published date -->
+      <span>
+        Posted
         <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
@@ -483,142 +681,377 @@
 
 <time
   
-    class="text-muted small text-nowrap"
-  
-  data-ts="1656860400"
+  data-ts="1722006000"
   data-df="ll"
   
->
-  Jul  4, 2022
-</time>
-
-      </li>
-    
-      <li class="d-flex justify-content-between px-md-3">
-        <a href="/posts/Matrix/">Matrix</a>
-        <span class="dash flex-grow-1"></span>
-        <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-    class="text-muted small text-nowrap"
-  
-  data-ts="1656946800"
-  data-df="ll"
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Jul  5, 2022
+  Jul 27, 2024
 </time>
 
-      </li>
-    
-      <li class="d-flex justify-content-between px-md-3">
-        <a href="/posts/Linear_Equation/">Linear Equation</a>
-        <span class="dash flex-grow-1"></span>
-        <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
+      </span>
+
+      <!-- lastmod date -->
+      
+
+      
+        
+        
+        
+
+        
+
+        <div class="mt-3 mb-3">
+          <a href="/_post_refer_img/MathematicalTechs/3.etc/Thumbnail.jpg" class="popup img-link preview-img shimmer"><img src="/_post_refer_img/MathematicalTechs/3.etc/Thumbnail.jpg"  alt="Preview Image" width="1200" height="630"  loading="lazy"></a></div>
+      
+
+      <div class="d-flex justify-content-between">
+        <!-- author(s) -->
+        <span>
+          
+
+          By
+
+          <em>
+            
+              <a href="https://github.com/jayarnim">jayarnim</a>
+            
+          </em>
+        </span>
+
+        <div>
+          <!-- pageviews -->
+          
+
+          <!-- read time -->
+          <!-- Calculate the post's reading time, and display the word count in tooltip -->
+
+
+
+<!-- words per minute -->
 
 
 
 
-<time
-  
-    class="text-muted small text-nowrap"
-  
-  data-ts="1657033200"
-  data-df="ll"
-  
+
+
+
+
+
+
+<!-- return element -->
+<span
+  class="readtime"
+  data-bs-toggle="tooltip"
+  data-bs-placement="bottom"
+  title="1219 words"
 >
-  Jul  6, 2022
-</time>
+  <em>6 min</em> read</span>
 
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="content">
+    <h2 id="space"><span class="me-2">Space</span><a href="#space" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li><strong>공간(Space)</strong>: 어떤 종류의 수학적 대상을 모은 집합에 대하여, 그 집합 위에 고유의 연산 법칙을 제공하는 연산 구조가 부여되어 그 구조적 성질을 정의하고, 이로부터 유도 가능한 각종 성질들을 논의할 수 있는 수학적 시스템
+    <ul>
+      <li><strong>위상 공간(Topological Space)</strong>: 어떤 종류의 수학적 대상에 <code class="language-plaintext highlighter-rouge">열림</code>을, 그 대상을 다루는 연산자에 <code class="language-plaintext highlighter-rouge">연속성</code>을 부여하기 위한 연산 구조</li>
+      <li><strong>측도 공간(Measure Space)</strong>: 어떤 종류의 수학적 대상에 <code class="language-plaintext highlighter-rouge">크기</code>의 <code class="language-plaintext highlighter-rouge">측정 가능성</code>을 부여하기 위한 연산 구조</li>
+    </ul>
+  </li>
+  <li><strong>연산자(Operator)</strong>: 어떠한 구조가 부여된 공간 내부 대상의 성질이나 관계 등을 수학적으로 다루는 행위자
+    <ul>
+      <li><strong>연산 법칙(Operation Law)</strong>: 연산이 작동하는 방식과 규칙을 규정하는 공리
+        <ul>
+          <li><strong>공리(Axiom)</strong>: 그 구조를 정의하기 위하여 기초적으로 받아들이는 명제</li>
+        </ul>
       </li>
-    
-      <li class="d-flex justify-content-between px-md-3">
-        <a href="/posts/Linear_Transformation/">Linear Transformation</a>
-        <span class="dash flex-grow-1"></span>
-        <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-    class="text-muted small text-nowrap"
-  
-  data-ts="1657119600"
-  data-df="ll"
-  
->
-  Jul  7, 2022
-</time>
-
+      <li>
+        <p><strong>연산 구조(Structure)</strong>: 연산이 작동하는 방식이 공리적으로 고정된 시스템</p>
       </li>
-    
-      <li class="d-flex justify-content-between px-md-3">
-        <a href="/posts/Eigen/">Eigen</a>
-        <span class="dash flex-grow-1"></span>
-        <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
+      <li><strong>구조적 성질(Structural Property)</strong>: 구조로 인하여 필연적으로 성립되는 전제적 성질</li>
+    </ul>
+  </li>
+</ul>
 
+<h2 id="measure-space"><span class="me-2">Measure Space</span><a href="#measure-space" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
 
+<ul>
+  <li>
+    <p><strong>측도 공간(Measure Space)</strong>: 원시 집합(underlying set) $\Omega$ 위에 정의된 시그마 대수(sigma-algebra)에 수치적 <code class="language-plaintext highlighter-rouge">크기</code> 개념을 부여하는 공간</p>
 
+\[\begin{aligned}
+  (\Omega, \mathcal{F}, \mu)
+  \end{aligned}\]
 
-<time
-  
-    class="text-muted small text-nowrap"
-  
-  data-ts="1657206000"
-  data-df="ll"
-  
->
-  Jul  8, 2022
-</time>
+    <ul>
+      <li>
+        <p><strong>시그마 대수(Sigma-Algebra)</strong>: 원시 집합(underlying set) $\Omega$ 의 멱집합(power set) $\mathcal{F} \subseteq 2^{\Omega}$ 으로서, $\Omega$ 의 부분집합 $A \subseteq \Omega$ 들의 집합</p>
 
+\[\begin{aligned}
+  \mathcal{F} \subseteq 2^{\Omega}
+  \end{aligned}\]
+
+        <ul>
+          <li>$\Omega \in \mathcal{F}$</li>
+          <li>$A \in \mathcal{F} \Rightarrow A^{C} \in \mathcal{F}$</li>
+          <li>$A_{1}, A_{2}, \cdots \in \mathcal{F} \Rightarrow \bigcup_{i=1}^{\infty}{A_{i}} \in \mathcal{F}$</li>
+        </ul>
       </li>
-    
-      <li class="d-flex justify-content-between px-md-3">
-        <a href="/posts/Matrix_Decomposition/">Matrix Decomposition</a>
-        <span class="dash flex-grow-1"></span>
-        <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
+      <li>
+        <p><strong>측도(Measure)</strong>: 측정 단위로서 시그마 대수 $\forall A \in \mathcal{F}$ 에 대하여 비음수성, 영집합, 가산 가법성을 만족하는 함수</p>
 
+\[\begin{aligned}
+  \mu : \mathcal{F} \rightarrow [0,\infty]
+  \end{aligned}\]
 
-
-
-<time
-  
-    class="text-muted small text-nowrap"
-  
-  data-ts="1657292400"
-  data-df="ll"
-  
->
-  Jul  9, 2022
-</time>
-
+        <ul>
+          <li>비음수성(Non-Negativity): $\mu(A) \ge 0$</li>
+          <li>영집합(Null Empty Set): $\mu(\emptyset) = 0$</li>
+          <li>가산 가법성(Countable Additivity): $A_{i} \in \mathcal{F}, A_{i} \cap A_{j \ne i} = \emptyset \Rightarrow \mu\left(\bigcup_{i=1}^{\infty}{A_{i}}\right) = \sum_{i=1}^{\infty}{\mu(A_{i})}$</li>
+        </ul>
       </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>푸시포워드 측도 공간(Pushforward Measure Space)</strong>: 시그마 대수 간의 구조를 보존하는 사상 함수 $X$ 를 통해 원래의 측도 공간 $(\Omega, \mathcal{F}, \mu)$ 으로부터 유도된 새로운 측도 공간 $(\mathcal{X}, \mathcal{B}, \mu_{X})$</p>
+
+\[\begin{aligned}
+  (\Omega, \mathcal{F}, \mu) \rightarrow (\mathcal{X}, \mathcal{B}, \mu_{X})
+  \end{aligned}\]
+
+    <ul>
+      <li>
+        <p><strong>사상 함수(Mapping Function)</strong>: 실험 공간(Sampling Space) $\omega \in \Omega$ 을 관측 공간(Observation Space) 혹은 이미지 공간(Image Space) $x \in \mathcal{X}$ 에 대응시키는 함수</p>
+
+\[\begin{aligned}
+  X: \Omega \rightarrow \mathcal{X}
+  \end{aligned}\]
+      </li>
+      <li>
+        <p><strong>보렐 시그마 대수(Borel Sigma-Algebra)</strong>: 이미지 공간(Image Space) $\mathcal{X}$ 위 열린 구간 $(a,b)$ 들로 생성되는 최소의 시그마 대수</p>
+
+\[\begin{aligned}
+  \mathcal{B}(\mathcal{X})
+  := \sigma(\{(a,b) \subset \mathcal{X}\})
+  \end{aligned}\]
+
+        <ul>
+          <li>$\forall B \in \mathcal{B}(\mathcal{X}) \Rightarrow X^{-1}(B) \in \mathcal{F}(\Omega)$</li>
+          <li>$\mu_{X}(B):=\mu(X^{-1}(B))$</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>L-p 공간(Lebesgue p-integrable space)</strong>: 절대값을 $p$ 제곱한 후 르베그 적분(Lebesgue integral)한 값이 유한한 함수들로 구성된 공간</p>
+
+\[\begin{aligned}
+  L^{p}(\mathcal{X}, \mu) := \left\{f:\mathcal{X} \to \mathbb{R} \mid \int_{\mathcal{X}}{\vert f(x) \vert^{p} \text{d} \mu(x)} &lt; \infty \right\}
+  \end{aligned}\]
+
+    <ul>
+      <li>
+        <p><strong>르베그 측도(Lebesgue Measure)</strong>: 실수 공간 $\mathbb{R}^{N}$ 위에서 각종 개념의 직관적 크기를 정의한 측도</p>
+
+\[\begin{aligned}
+  \text{d}\mu(x) := \text{d}x, \quad \forall x \in \mathbb{R}^{N}
+  \end{aligned}\]
+      </li>
+      <li>
+        <p><strong>르베그 적분(Lebesgue Integral)</strong>: 사상 함수 $X: \Omega \to \mathcal{X}$ 를 통해 실수 공간 $\mathcal{X}$ 위에 정의된 보렐 시그마 대수 $\forall B \in \mathcal{B}$ 에 대하여 정의되는 르베그 측도 $x \in B$ 를 기준으로 함수 $f: \mathcal{X} \to \mathbb{R}$ 값의 누적 크기를 계산하는 도구로서, 원시 집합 $\Omega$ 에 크기를 부여하고자 하는 <code class="language-plaintext highlighter-rouge">개념</code>을 <code class="language-plaintext highlighter-rouge">함수</code>로 전환하는 장치</p>
+
+\[\begin{aligned}
+  \underbrace{M(f)}_{\text{area}}
+  &amp;:=\int_{x \in B}{\overbrace{f(x)}^{\text{height}}}\underbrace{\text{d}x}_{\text{width}}
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>밀도(Density)</strong>: 원 측도(Measure)의 기준 측도(Reference Measure) 기준 어떠한 개념의 단위당 크기</p>
+
+    <blockquote>
+      <p><strong>밀도 존재 정리(Randon-Nickodym Theorem)</strong> <br /> 두 측도 $\nu, \mu$ 가 주어졌을 때, $\nu$ 가 $\mu$ 에 대하여 절대 연속(absolute continuity)이면($\nu \ll \mu$) $\forall A \in \mathcal{F}$ 에 대하여 $\nu(A) = \int_{A}{f\text{d}\mu}$ 을 만족하는 $f: \Omega \to [0,\infty]$ 가 존재한다. 이때 함수 $f:=\text{d}\nu / \text{d} \mu$ 를 $\mu$ 에 대한 $\nu$ 의 밀도 함수라고 한다. 또한 측도 $\mu$ 를 원 측도 $\nu$ 의 기준 측도(Reference Measure)라고 한다.</p>
+    </blockquote>
+
+\[\begin{aligned}
+  \nu(x \in B)
+  = \int_{x \in B}{\text{d}\nu(x)}
+  = \int_{x \in B}{\frac{\text{d}\nu(x)}{\text{d}\mu(x)}}\text{d}\mu(x)
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h2 id="probability-space"><span class="me-2">Probability Space</span><a href="#probability-space" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><strong>확률 공간(Probability Space)</strong>: 결과(outcome) $\omega$ 의 전체 집합 $\Omega$ 위에 정의된 사건(event) $\omega \in A$ 의 집합 $A \in \mathcal{F} \subseteq 2^{\Omega}$ 에 대하여 확률을 부여하는 공간</p>
+
+\[\begin{aligned}
+  (\Omega, \mathcal{F}, P)
+  \end{aligned}\]
+
+    <ul>
+      <li>
+        <p><strong>확률 변수(Random Variable)</strong>: 결과 $\omega \in \Omega$ 를 실수 공간 $x \in \mathcal{X}$ 에 대응시키는 사상 함수</p>
+
+\[\begin{aligned}
+  X: \Omega \rightarrow \mathcal{X}
+  \end{aligned}\]
+      </li>
+      <li>
+        <p><strong>확률 측도(Probability Measure)</strong>: $P_{X}(\mathcal{X})=1$ 인 특수한 측도</p>
+
+\[\begin{aligned}
+  P_{X} : \mathcal{B}(\mathcal{X}) \rightarrow [0,1]
+  \end{aligned}\]
+      </li>
+      <li>
+        <p><strong>확률 밀도(Probability Density)</strong>: 확률 측도 $P_{X}$ 의 기준 측도 $x$ 단위당 확률의 상대량</p>
+
+\[\begin{aligned}
+  P_{X}(x \in B)
+  = \int_{x \in B}{p(x)}\text{d}x
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">example</code> Gaussian Prob. Dist.</strong></p>
+    <ul>
+      <li>
+        <p>Random Variable:</p>
+
+\[\begin{aligned}
+  X: \Omega \rightarrow \mathbb{R}
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>Probability Measure:</p>
+
+\[\begin{aligned}
+  P_{X}
+  &amp;= \mathcal{N}(\mu, \sigma^{2})
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>Probability Density Function:</p>
+
+\[\begin{aligned}
+  p(x)
+  &amp;= \frac{1}{\sqrt{2 \pi \sigma^{2}}}\exp\left[-\frac{(x-\mu)^{2}}{2 \sigma^{2}}\right]
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+</ul>
+
+  </div>
+
+  <div class="post-tail-wrapper text-muted">
+    <!-- categories -->
     
-  </ul>
+      <div class="post-meta mb-3">
+        <i class="far fa-folder-open fa-fw me-1"></i>
+        
+          <a href="/categories/mathematical-techs/">MATHEMATICAL TECHS</a>,
+          <a href="/categories/3-etc/">3.etc</a>
+      </div>
+    
+
+    <!-- tags -->
+    
+      <div class="post-tags">
+        <i class="fa fa-tags fa-fw me-1"></i>
+        
+          <a
+            href="/tags/mathematics/"
+            class="post-tag no-text-decoration"
+          >Mathematics</a>
+        
+      </div>
+    
+
+    <div
+      class="
+        post-tail-bottom
+        d-flex justify-content-between align-items-center mt-5 pb-2
+      "
+    >
+      <div class="license-wrapper">
+        
+          
+
+          This post is licensed under 
+        <a href="https://creativecommons.org/licenses/by/4.0/">
+          CC BY 4.0
+        </a>
+         by the author.
+        
+      </div>
+
+      <!-- Post sharing snippet -->
+
+<div class="share-wrapper d-flex align-items-center">
+  <span class="share-label text-muted">Share</span>
+  <span class="share-icons">
+    
+    
+    
+
+    
+
+      
+
+      <a href="https://twitter.com/intent/tweet?text=Space%20(2)%20Measure%20Space%20-%20Data%20Scientist&url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FMeasure_Space%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+        <i class="fa-fw fa-brands fa-square-x-twitter"></i>
+      </a>
+    
+
+      
+
+      <a href="https://www.facebook.com/sharer/sharer.php?title=Space%20(2)%20Measure%20Space%20-%20Data%20Scientist&u=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FMeasure_Space%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+        <i class="fa-fw fab fa-facebook-square"></i>
+      </a>
+    
+
+      
+
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FMeasure_Space%2F&text=Space%20(2)%20Measure%20Space%20-%20Data%20Scientist" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+        <i class="fa-fw fab fa-telegram"></i>
+      </a>
+    
+
+    <button
+      id="copy-link"
+      aria-label="Copy link"
+      class="btn small"
+      data-bs-toggle="tooltip"
+      data-bs-placement="top"
+      title="Copy link"
+      data-title-succeed="Link copied successfully!"
+    >
+      <i class="fa-fw fas fa-link pe-none fs-6"></i>
+    </button>
+  </span>
 </div>
 
-  
+    </div>
+    <!-- .post-tail-bottom -->
+  </div>
+  <!-- div.post-tail-wrapper -->
 </article>
+
 
             
           </main>
@@ -2072,51 +2505,6 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
@@ -2315,6 +2703,53 @@
     
     
     
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     
@@ -2803,10 +3238,10 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/nlp/">NLP</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/nlp/">NLP</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/objective-function/">Objective Function</a>
@@ -2821,12 +3256,341 @@
             </div>
 
             
+              
+              
+
+
+
+  <section id="toc-wrapper" class="d-none ps-0 pe-4">
+    <h2 class="panel-heading ps-3 mb-2">Contents</h2>
+    <nav id="toc"></nav>
+  </section>
+
+
+            
           </aside>
         </div>
 
         <div class="row">
           <!-- tail -->
           <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
+            
+              
+              <!-- Recommend the other 3 posts according to the tags and categories of the current post. -->
+
+<!-- The total size of related posts -->
+
+
+<!-- An random integer that bigger than 0 -->
+
+
+<!-- Equals to TAG_SCORE / {max_categories_hierarchy} -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+  <aside id="related-posts" aria-labelledby="related-label">
+    <h3 class="mb-4" id="related-label">Further Reading</h3>
+    <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
+      
+        <article class="col">
+          <a href="/posts/Topological_Space/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1721919600"
+  data-df="ll"
+  
+>
+  Jul 26, 2024
+</time>
+
+              <h4 class="pt-0 my-2">Space (1) Topological Space</h4>
+              <div class="text-muted">
+                <p>Space
+
+
+
+  공간(Space): 어떤 종류의 수학적 대상을 모은 집합에 대하여, 그 집합 위에 고유의 연산 법칙을 제공하는 연산 구조가 부여되어 그 구조적 성질을 정의하고, 이로부터 유도 가능한 각종 성질들을 논의할 수 있는 수학적 시스템
+    
+      위상 공간(Topological Space): 어떤 종류의 수학적 대상에 열림을, 그 ...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/Partial_Derivative/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1657724400"
+  data-df="ll"
+  
+>
+  Jul 14, 2022
+</time>
+
+              <h4 class="pt-0 my-2">Partial Derivative</h4>
+              <div class="text-muted">
+                <p>Based on the lecture “Mathematics for Artificial Intelligence (2022-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp; Management, College of Business Administration, Kookmin Univ.</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/Taylor_Series/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1657638000"
+  data-df="ll"
+  
+>
+  Jul 13, 2022
+</time>
+
+              <h4 class="pt-0 my-2">Taylor Series</h4>
+              <div class="text-muted">
+                <p>Based on the lecture “Mathematics for Artificial Intelligence (2022-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp; Management, College of Business Administration, Kookmin Univ.</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+    </nav>
+  </aside>
+  <!-- #related-posts -->
+
+
+            
+              
+              <!-- Navigation buttons at the bottom of the post. -->
+
+<nav class="post-navigation d-flex justify-content-between" aria-label="Post Navigation">
+  
+  
+
+  
+    <a
+      href="/posts/Topological_Space/"
+      class="btn btn-outline-primary"
+      aria-label="Older"
+    >
+      <p>Space (1) Topological Space</p>
+    </a>
+  
+
+  
+    <a
+      href="/posts/Stein/"
+      class="btn btn-outline-primary"
+      aria-label="Newer"
+    >
+      <p>Stein's Method</p>
+    </a>
+  
+</nav>
+
+            
+              
+              <!-- The comments switcher -->
+
+
             
 
             <!-- The Footer -->
@@ -4260,51 +5024,6 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
@@ -4503,6 +5222,53 @@
     
     
     
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     
@@ -4991,10 +5757,10 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/nlp/">NLP</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/nlp/">NLP</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/objective-function/">Objective Function</a>
@@ -5060,6 +5826,13 @@
 <!-- layout specified -->
 
 
+  
+
+  
+    <!-- image lazy-loading & popup & clipboard -->
+    
+  
+
 
 
 
@@ -5109,9 +5882,37 @@
 
   
 
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
 
 
-  <script src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/dayjs@1.11.11/dayjs.min.js,npm/dayjs@1.11.11/locale/en.min.js,npm/dayjs@1.11.11/plugin/relativeTime.min.js,npm/dayjs@1.11.11/plugin/localizedFormat.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.11/dayjs.min.js,npm/dayjs@1.11.11/locale/en.min.js,npm/dayjs@1.11.11/plugin/relativeTime.min.js,npm/dayjs@1.11.11/plugin/localizedFormat.min.js,npm/tocbot@4.27.20/dist/tocbot.min.js"></script>
 
 
 
@@ -5119,11 +5920,20 @@
 
 
 
-<script src="/assets/js/dist/misc.min.js"></script>
+<script src="/assets/js/dist/post.min.js"></script>
 
+
+  <!-- MathJax -->
+  <script src="/assets/js/data/mathjax.js"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
 
 
 <!-- Pageviews -->
+
+  
+
+  
 
 
 

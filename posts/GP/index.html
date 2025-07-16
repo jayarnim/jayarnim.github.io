@@ -32,19 +32,19 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="Gaussian Process" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Measure" />
-<meta property="og:description" content="Measure" />
+<meta name="description" content="Non-Parametric Density Estimation" />
+<meta property="og:description" content="Non-Parametric Density Estimation" />
 <link rel="canonical" href="https://jayarnim.github.io/posts/GP/" />
 <meta property="og:url" content="https://jayarnim.github.io/posts/GP/" />
 <meta property="og:site_name" content="Data Scientist" />
 <meta property="og:image" content="https://jayarnim.github.io/_post_refer_img/BayesianModeling/3.Application/Thumbnail.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-08-01T00:00:00+09:00" />
+<meta property="article:published_time" content="2024-08-03T00:00:00+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/BayesianModeling/3.Application/Thumbnail.jpg" />
 <meta property="twitter:title" content="Gaussian Process" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-08-01T00:00:00+09:00","datePublished":"2024-08-01T00:00:00+09:00","description":"Measure","headline":"Gaussian Process","image":"https://jayarnim.github.io/_post_refer_img/BayesianModeling/3.Application/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/GP/"},"url":"https://jayarnim.github.io/posts/GP/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-08-03T00:00:00+09:00","datePublished":"2024-08-03T00:00:00+09:00","description":"Non-Parametric Density Estimation","headline":"Gaussian Process","image":"https://jayarnim.github.io/_post_refer_img/BayesianModeling/3.Application/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/GP/"},"url":"https://jayarnim.github.io/posts/GP/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -919,17 +919,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -945,28 +934,6 @@
       
         
         
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
       
 
       
@@ -1085,13 +1052,13 @@
 
 <time
   
-  data-ts="1722438000"
+  data-ts="1722610800"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Aug  1, 2024
+  Aug  3, 2024
 </time>
 
       </span>
@@ -1149,9 +1116,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="2116 words"
+  title="1854 words"
 >
-  <em>11 min</em> read</span>
+  <em>10 min</em> read</span>
 
         </div>
       </div>
@@ -1159,169 +1126,7 @@
   </header>
 
   <div class="content">
-    <h2 id="measure"><span class="me-2">Measure</span><a href="#measure" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<h3 id="measure-1"><span class="me-2">Measure</span><a href="#measure-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li>
-    <p><strong>시그마 대수(Sigma-Field)</strong>: 전체 집합 $\Omega$ 의 멱집합 $\mathcal{F} \subseteq 2^{\Omega}$ 으로서, $\Omega$ 의 부분집합 $A \subseteq \Omega$ 들의 집합</p>
-
-    <ul>
-      <li>$\Omega \in \mathcal{F}$</li>
-      <li>$A \in \mathcal{F} \Rightarrow A^{C} \in \mathcal{F}$</li>
-      <li>$A_{1}, A_{2}, \cdots \in \mathcal{F} \Rightarrow \bigcup_{i=1}^{\infty}{A_{i}} \in \mathcal{F}$</li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>측도(Measure)</strong>: 시그마 대수 $\mathcal{F}$ 위에 크기, 길이, 부피 등의 개념을 일반화한 함수로서, $\mathcal{F}$ 의 각 원소 $A$ 에 비음수 실수 값을 부여하는 함수</p>
-
-\[\begin{aligned}
-  \mu : \mathcal{F} \rightarrow [0,\infty)
-  \end{aligned}\]
-
-    <ul>
-      <li>비음수성(Non-Negativity): $\mu(A) \ge 0 \quad \text{for} \quad \forall A \in \mathcal{F}$</li>
-      <li>영집합(Null Empty Set): $\mu(\emptyset) = 0$</li>
-      <li>가산 가법성(Countable Additivity): $A_{i} \in \mathcal{F}, A_{i} \cap A_{j \ne i} = \emptyset \Rightarrow \mu\left(\bigcup_{i=1}^{\infty}{A_{i}}\right) = \sum_{i=1}^{\infty}{\mu(A_{i})}$</li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>확률 측도(Probability Measure)</strong>: 전체 집합 $\Omega$ 의 측도 값이 $1$ 인 특수한 측도</p>
-
-\[\begin{aligned}
-  P: \mathcal{F} \rightarrow [0,1]
-  \end{aligned}\]
-
-    <ul>
-      <li>정규화(Normalization): $P_{X}(\Omega)=1$</li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>확률 변수(Random Variable)</strong>: 원시 결과 $\omega \in \Omega$ 를 특정 공간 $\mathcal{X}$ 에 대응시키는 함수</p>
-
-\[\begin{aligned}
-  X: \Omega \rightarrow \mathcal{X}
-  \end{aligned}\]
-
-    <ul>
-      <li>$\omega \in \Omega$: 원시 결과(elementary outcome)로서, 사건이 일어나기 이전의 근원적인 결과</li>
-      <li>$A \subseteq \Omega$: 사건(event)으로서, 여러 원시 결과들의 집합</li>
-      <li>$x=X(\omega)$: 확률 변수 $X$ 의 실현값</li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>확률 밀도(Probability Density)</strong>: 기준 측도(Reference Measure)에 대한 확률의 상대량</p>
-
-\[\begin{aligned}
- P_{X}(A)
- = P(X \in A)
- = \int_{A}{x \cdot p(x)}\text{d}x
- \end{aligned}\]
-
-    <ul>
-      <li><strong>기준 측도(Reference Measure, $\text{d}x$)</strong>: 확률변수의 정의역 위에 정의된 확률 측정 단위</li>
-      <li><strong>확률 밀도 함수(Probability Density Function, $p(x)$)</strong>: 확률 측도 $P$ 가 기준 측도 $\text{d}x$ 에 대하여 가지는 밀도 함수</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="example"><span class="me-2">Example</span><a href="#example" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li><strong><code class="language-plaintext highlighter-rouge">example</code> Gaussian Prob. Dist.</strong>
-    <ul>
-      <li>
-        <p>Random Variable:</p>
-
-\[\begin{aligned}
-  X: \Omega \rightarrow \mathbb{R}
-  \end{aligned}\]
-      </li>
-      <li>
-        <p>Probability Measure:</p>
-
-\[\begin{aligned}
-  P_{X}
-  &amp;= \mathcal{N}(\mu, \sigma^{2})
-  \end{aligned}\]
-      </li>
-      <li>
-        <p>Probability Density Function:</p>
-
-\[\begin{aligned}
-  p(x)
-  &amp;= \frac{1}{\sqrt{2 \pi \sigma^{2}}}\exp\left[-\frac{(x-\mu)^{2}}{2 \sigma^{2}}\right]
-  \end{aligned}\]
-      </li>
-    </ul>
-  </li>
-  <li><strong><code class="language-plaintext highlighter-rouge">example</code> Multi-variate Gaussian Prob. Dist.</strong>
-    <ul>
-      <li>
-        <p>Random Variable:</p>
-
-\[\begin{aligned}
-  X: \Omega \rightarrow \mathbb{R}^{D}
-  \end{aligned}\]
-      </li>
-      <li>
-        <p>Probability Measure:</p>
-
-\[\begin{aligned}
-  P_{X}
-  &amp;= \mathcal{N}(\mu, \Sigma)
-  \end{aligned}\]
-      </li>
-      <li>
-        <p>Probability Density Function:</p>
-
-\[\begin{aligned}
-  p(\mathbf{x})
-  &amp;=\frac{1}{\sqrt{(2\pi)^{d} \vert \Sigma \vert}}\exp\left[-\frac{1}{2}(\mathbf{x}-\mu)^{T}\Sigma^{-1}(\mathbf{x}-\mu)\right]
-  \end{aligned}\]
-      </li>
-    </ul>
-  </li>
-  <li><strong><code class="language-plaintext highlighter-rouge">example</code> Gaussian Process</strong>
-    <ul>
-      <li>
-        <p>Random Variable:</p>
-
-\[\begin{aligned}
-  F: \Omega \rightarrow \mathfrak{F}
-  \end{aligned}\]
-      </li>
-      <li>
-        <p>Probability Measure:</p>
-
-\[\begin{aligned}
-  P_{F}
-  &amp;= \mathcal{GP}(m(X), K(X,X^{\prime}))
-  \end{aligned}\]
-      </li>
-      <li>
-        <p>Marginal Distribution over function values:</p>
-
-\[\begin{aligned}
-  \mathbf{f}
-  &amp;= \begin{bmatrix}f_{1} &amp; f_{2} &amp; \cdots &amp; f_{N}\end{bmatrix}^{T} \sim \mathcal{N}(\mu,\Sigma)
-  \end{aligned}\]
-      </li>
-      <li>
-        <p>Probability Density Function over $\mathbf{f}$:</p>
-
-\[\begin{aligned}
-  p(\mathbf{f})
-  &amp;=\frac{1}{\sqrt{(2\pi)^{N} \vert \Sigma \vert}}\exp\left[-\frac{1}{2}(\mathbf{f}-\mu)^{T}\Sigma^{-1}(\mathbf{f}-\mu)\right]
-  \end{aligned}\]
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="non-parametric-density-estimation"><span class="me-2">Non-Parametric Density Estimation</span><a href="#non-parametric-density-estimation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="non-parametric-density-estimation"><span class="me-2">Non-Parametric Density Estimation</span><a href="#non-parametric-density-estimation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <h3 id="non-parametric-method"><span class="me-2">Non-Parametric Method</span><a href="#non-parametric-method" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
@@ -1637,14 +1442,21 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
 
 <ul>
   <li>
-    <p>prior:</p>
+    <p><strong>함수 분포(Function Distribution)</strong></p>
+
+    <blockquote>
+      <p>각 지점 $x_{1},x_{2},\cdots,x_{N}$ 에서 정의되는 확률변수 $f_{1},f_{2},\cdots,f_{N}$ 들로 구성된 벡터 $\mathbf{f}$ 가 다변량 가우시안 분포 $\mathcal{N}(\mu,\Sigma)$ 를 따른다는 것은, 각 지점을 설명변수, 각 지점에서 정의되는 확률변수를 종속변수로 취하는 함수 $F(X)$ 를 하나의 확률변수로 취하는 것으로 이해될 수 있다. 즉, 모수 추정에서는 함수를 구성하는 유한 차원 모수에 대한 불확실성을 사후 확률 분포로써 모델링했다면, 가우시안 프로세스는 함수 자체를 무한 차원 모수로 간주하고, 조건화 규칙에 따라 이 함수의 사후 확률 분포를 갱신함으로써 함수 공간 전체에 대한 불확실성을 모델링한다.</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>prior is gaussian process:</p>
 
 \[\begin{aligned}
   f(\cdot) \sim \mathcal{GP}(m(\cdot), K(\cdot,\cdot))
   \end{aligned}\]
   </li>
   <li>
-    <p>likelihood:</p>
+    <p>likelihood is gaussian dist.:</p>
 
 \[\begin{gathered}
   \mathbf{y}
@@ -3289,51 +3101,6 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
@@ -3532,6 +3299,53 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
     
     
     
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     
@@ -4020,10 +3834,10 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
         <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/nlp/">NLP</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/nlp/">NLP</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/objective-function/">Objective Function</a>
@@ -4401,11 +4215,11 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
 
 <time
   
-  data-ts="1722610800"
+  data-ts="1722783600"
   data-df="ll"
   
 >
-  Aug  3, 2024
+  Aug  5, 2024
 </time>
 
               <h4 class="pt-0 my-2">Random Fourier Features Gaussian Process</h4>
@@ -4437,11 +4251,11 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
 
 <time
   
-  data-ts="1722524400"
+  data-ts="1722697200"
   data-df="ll"
   
 >
-  Aug  2, 2024
+  Aug  4, 2024
 </time>
 
               <h4 class="pt-0 my-2">Sparse Gaussian Process</h4>
@@ -4470,11 +4284,11 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
 
 <time
   
-  data-ts="1722006000"
+  data-ts="1722178800"
   data-df="ll"
   
 >
-  Jul 27, 2024
+  Jul 29, 2024
 </time>
 
               <h4 class="pt-0 my-2">Stein Variational Gradient Descent</h4>
@@ -4500,11 +4314,11 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
 
   
     <a
-      href="/posts/BPR/"
+      href="/posts/Bayesian_Regression/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>BPR</p>
+      <p>Bayesian Regression</p>
     </a>
   
 
@@ -5957,51 +5771,6 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
@@ -6200,6 +5969,53 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
     
     
     
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
     
   
     
@@ -6688,10 +6504,10 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
         <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/nlp/">NLP</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/nlp/">NLP</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/objective-function/">Objective Function</a>
