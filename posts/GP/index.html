@@ -1116,7 +1116,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1854 words"
+  title="1836 words"
 >
   <em>10 min</em> read</span>
 
@@ -1386,39 +1386,39 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
       <tbody>
         <tr>
           <td>Linear</td>
-          <td>\(K\left(X,X^{\prime}\right) = X \cdot X^{\prime}\)</td>
+          <td>\(X \cdot X^{\prime}\)</td>
         </tr>
         <tr>
           <td>Polynomial</td>
-          <td>\(K\left(X,X^{\prime}\right) = \left(X \cdot X^{\prime} + \beta\right)^{d}\)</td>
+          <td>\(\left(X \cdot X^{\prime} + \beta\right)^{d}\)</td>
         </tr>
         <tr>
           <td>RBF</td>
-          <td>\(K\left(X,X^{\prime}\right) = \exp{\left[-\displaystyle\frac{\Vert X-X^{\prime} \Vert^{2}}{2\ell^{2}}\right]}\)</td>
+          <td>\(\exp{\left[-\displaystyle\frac{\Vert X-X^{\prime} \Vert^{2}}{2\ell^{2}}\right]}\)</td>
         </tr>
         <tr>
           <td>Sigmoid</td>
-          <td>\(K\left(X,X^{\prime}\right) = \text{tanh}\left(\alpha \cdot X \cdot X^{\prime} + \beta\right)\)</td>
+          <td>\(\text{tanh}\left(\alpha \cdot X \cdot X^{\prime} + \beta\right)\)</td>
         </tr>
         <tr>
           <td>Laplacian</td>
-          <td>\(K\left(X,X^{\prime}\right) = \exp{\left[-\gamma \Vert X-X^{\prime} \Vert_{1}\right]}\)</td>
+          <td>\(\exp{\left[-\gamma \Vert X-X^{\prime} \Vert_{1}\right]}\)</td>
         </tr>
         <tr>
           <td>Exponential</td>
-          <td>\(K\left(X,X^{\prime}\right) = \exp{\left[-\gamma \Vert X-X^{\prime} \Vert_{2}\right]}\)</td>
+          <td>\(\exp{\left[-\gamma \Vert X-X^{\prime} \Vert_{2}\right]}\)</td>
         </tr>
         <tr>
           <td>Matern</td>
-          <td>\(K\left(X,X^{\prime}\right) = \displaystyle\frac{2^{1-\nu}}{\Gamma\left(\nu\right)} \cdot \left(\displaystyle\frac{\sqrt{2\nu} \Vert X-X^{\prime} \Vert}{\ell}\right)^{\nu} \cdot K_{\nu}\left(\displaystyle\frac{\sqrt{2\nu} \Vert X-X^{\prime} \Vert}{\ell}\right)\)</td>
+          <td>\(\displaystyle\frac{2^{1-\nu}}{\Gamma\left(\nu\right)} \cdot \left(\displaystyle\frac{\sqrt{2\nu} \Vert X-X^{\prime} \Vert}{\ell}\right)^{\nu} \cdot K_{\nu}\left(\displaystyle\frac{\sqrt{2\nu} \Vert X-X^{\prime} \Vert}{\ell}\right)\)</td>
         </tr>
         <tr>
           <td>Periodic</td>
-          <td>\(K\left(X,X^{\prime}\right) = \exp\left[-2 \sin^2\left( \displaystyle\frac{\pi \vert X-X^{\prime} \vert}{p} \right) \Bigg/ \ell^2 \right]\)</td>
+          <td>\(\exp\left[-2 \sin^2\left( \displaystyle\frac{\pi \vert X-X^{\prime} \vert}{p} \right) \Bigg/ \ell^2 \right]\)</td>
         </tr>
         <tr>
           <td>Rational Quadratic</td>
-          <td>\(K\left(X,X^{\prime}\right) = \left( 1 + \displaystyle\frac{\vert X-X^{\prime} \vert^2}{2 \alpha \ell^2} \right)^{-\alpha}\)</td>
+          <td>\(\left( 1 + \displaystyle\frac{\vert X-X^{\prime} \vert^2}{2 \alpha \ell^2} \right)^{-\alpha}\)</td>
         </tr>
       </tbody>
     </table></div>
