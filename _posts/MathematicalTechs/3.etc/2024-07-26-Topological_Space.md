@@ -193,10 +193,10 @@ image:
 
     | Name | Function |
     |---|---|
-    | Linear | $$K\left(X,X^{\prime}\right) = X \cdot X^{\prime}$$ |
-    | Polynomial | $$K\left(X,X^{\prime}\right) = \left(X \cdot X^{\prime} + \beta\right)^{d}$$ |
-    | RBF | $$K\left(X,X^{\prime}\right) = \exp{\left[-\displaystyle\frac{\Vert X-X^{\prime} \Vert^{2}}{2\ell^{2}}\right]}$$ |
-    | Matern | $$K\left(X,X^{\prime}\right) = \displaystyle\frac{2^{1-\nu}}{\Gamma\left(\nu\right)} \cdot \left(\displaystyle\frac{\sqrt{2\nu} \Vert X-X^{\prime} \Vert}{\ell}\right)^{\nu} \cdot K_{\nu}\left(\displaystyle\frac{\sqrt{2\nu} \Vert X-X^{\prime} \Vert}{\ell}\right)$$ |
+    | Linear | $$X \cdot X^{\prime}$$ |
+    | Polynomial | $$\left(X \cdot X^{\prime} + \beta\right)^{d}$$ |
+    | RBF | $$\exp{\left[-\displaystyle\frac{\Vert X-X^{\prime} \Vert^{2}}{2\ell^{2}}\right]}$$ |
+    | Matern | $$\displaystyle\frac{2^{1-\nu}}{\Gamma\left(\nu\right)} \cdot \left(\displaystyle\frac{\sqrt{2\nu} \Vert X-X^{\prime} \Vert}{\ell}\right)^{\nu} \cdot K_{\nu}\left(\displaystyle\frac{\sqrt{2\nu} \Vert X-X^{\prime} \Vert}{\ell}\right)$$ |
 
     - 대칭성(Symmetry):
 
@@ -249,7 +249,7 @@ image:
         \end{aligned}$$
  
     - therefore:
-    
+
         $$\begin{aligned}
         \delta_{X}(f)
         = f(x)
