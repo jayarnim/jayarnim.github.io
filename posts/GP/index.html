@@ -1116,9 +1116,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1836 words"
+  title="1568 words"
 >
-  <em>10 min</em> read</span>
+  <em>8 min</em> read</span>
 
         </div>
       </div>
@@ -1356,21 +1356,21 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
     <p><strong>확률 과정(Stochastic Process)</strong></p>
 
     <blockquote>
-      <p>어떤 시점 혹은 위치 지표 $t$ 에 대하여 확률 변수들의 집합 \(\{X_{t} \mid t \in T\}\) 이 주어졌을 때 이를 확률 과정이라고 한다. 즉, 확률 과정은 인덱스를 따라 변화하는 확률변수들의 집합으로서, 특정 인덱스에서 확률변수가 결정된다.</p>
+      <p>어떤 시점 혹은 위치 지표 $t$ 에 대하여 확률 변수들의 집합 \(\{X_{t} \mid t \in T\}\) 이 주어졌을 때 이를 확률 과정이라고 한다. 즉, 확률 과정은 인덱스를 따라 변화하는 확률변수들의 집합으로서, 각 인덱스 \(t \in T\) 에 대응되는 확률변수 \(X_{t}\) 가 주어져, 인덱스 집합 \(T\) 위에서 확률변수의 집합이 구성되는 구조이다.</p>
     </blockquote>
   </li>
   <li>
-    <p><strong>가우시안 프로세스(<code class="language-plaintext highlighter-rouge">G</code>aussian <code class="language-plaintext highlighter-rouge">P</code>rocess; GP)</strong> : 입력 공간 $\mathcal{X}$ 의 각 지점 $x_{1}, x_{2}, \cdots$ 에서 정의되는 확률변수 $f_{i} = f(x_{i})$ 에 대하여, 유한 개의 집합으로 구성된 벡터 $\mathbf{f} = \begin{bmatrix} f_{1} &amp; f_{2} &amp; \cdots &amp; f_{N} \end{bmatrix}$ 가 항상 다변량 가우시안 분포를 이루는 비모수 확률 과정</p>
+    <p><strong>가우시안 프로세스(<code class="language-plaintext highlighter-rouge">G</code>aussian <code class="language-plaintext highlighter-rouge">P</code>rocess; GP)</strong> : 입력 공간 $\mathcal{X}$ 의 각 지점 $x_{1}, x_{2}, \cdots, x_{N}$ 에서 정의되는 확률변수 $f_{1}, f_{2}, \cdots, f_{N}$ 에 대하여, 유한 개의 집합으로 구성된 벡터 $\mathbf{f} = \begin{bmatrix} f_{1} &amp; f_{2} &amp; \cdots &amp; f_{N} \end{bmatrix}$ 가 항상 다변량 가우시안 분포를 이루는 비모수 확률 과정</p>
 
     <p><a href="/_post_refer_img/BayesianModeling/3.Application/05-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/3.Application/05-04.png" alt="04" width="100%" loading="lazy"></a></p>
 
 \[\begin{aligned}
-  F(X) \sim \mathcal{GP}\left(m(X), K(X, X^{\prime})\right)
+  \mathbf{f} \sim \mathcal{N}\left(m(x), K(x, x^{\prime})\right)
   \end{aligned}\]
 
     <ul>
-      <li>\(m(\cdot)\) : 평균 함수(Mean Function)</li>
-      <li>\(K(\cdot, \cdot)\) : 공분산 함수(Covariance Function)</li>
+      <li>\(m(x)\) : 평균 함수(Mean Function)</li>
+      <li>\(K(x, x^{\prime})\) : 공분산 함수(Covariance Function)</li>
     </ul>
   </li>
   <li>
@@ -1397,10 +1397,6 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
           <td>\(\exp{\left[-\displaystyle\frac{\Vert X-X^{\prime} \Vert^{2}}{2\ell^{2}}\right]}\)</td>
         </tr>
         <tr>
-          <td>Sigmoid</td>
-          <td>\(\text{tanh}\left(\alpha \cdot X \cdot X^{\prime} + \beta\right)\)</td>
-        </tr>
-        <tr>
           <td>Laplacian</td>
           <td>\(\exp{\left[-\gamma \Vert X-X^{\prime} \Vert_{1}\right]}\)</td>
         </tr>
@@ -1414,7 +1410,7 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
         </tr>
         <tr>
           <td>Periodic</td>
-          <td>\(\exp\left[-2 \sin^2\left( \displaystyle\frac{\pi \vert X-X^{\prime} \vert}{p} \right) \Bigg/ \ell^2 \right]\)</td>
+          <td>\(\exp\left[\displaystyle\frac{-2\sin^2\left(\pi \cdot \vert X-X^{\prime} \vert/p\right)}{\ell^2}\right]\)</td>
         </tr>
         <tr>
           <td>Rational Quadratic</td>
@@ -1445,7 +1441,7 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
     <p><strong>함수 분포(Function Distribution)</strong></p>
 
     <blockquote>
-      <p>각 지점 $x_{1},x_{2},\cdots,x_{N}$ 에서 정의되는 확률변수 $f_{1},f_{2},\cdots,f_{N}$ 들로 구성된 벡터 $\mathbf{f}$ 가 다변량 가우시안 분포 $\mathcal{N}(\mu,\Sigma)$ 를 따른다는 것은, 각 지점을 설명변수, 각 지점에서 정의되는 확률변수를 종속변수로 취하는 함수 $F(X)$ 를 하나의 확률변수로 취하는 것으로 이해될 수 있다. 즉, 모수 추정에서는 함수를 구성하는 유한 차원 모수에 대한 불확실성을 사후 확률 분포로써 모델링했다면, 가우시안 프로세스는 함수 자체를 무한 차원 모수로 간주하고, 조건화 규칙에 따라 이 함수의 사후 확률 분포를 갱신함으로써 함수 공간 전체에 대한 불확실성을 모델링한다.</p>
+      <p>각 지점에서 정의되는 확률변수들로 구성된 벡터 $\mathbf{f}$ 가 다변량 가우시안 분포 $\mathcal{N}(\mu,\Sigma)$ 를 따른다는 것은, 각 지점 $x_{1},x_{2},\cdots,x_{N}$ 을 설명변수, 각 지점에서 정의되는 확률변수 $f_{1},f_{2},\cdots,f_{N}$ 들을 종속변수로 취하는 함수 $f(x)$ 를 하나의 확률변수로 간주하는 것으로 이해될 수 있다.</p>
     </blockquote>
   </li>
   <li>
@@ -1462,7 +1458,7 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
   \mathbf{y}
   = f(\mathbf{X}) + \epsilon, \quad \epsilon \sim \mathcal{N}\left(\mathbf{0}, \sigma_{N}^{2}\mathbf{I}\right)\\
   \Updownarrow\\
-  \mathbf{y} \mid f(\mathbf{X})
+  \mathbf{y} \mid \mathbf{X}, f(\cdot)
   \sim \mathcal{N}\left(f(\mathbf{X}), \sigma_{N}^{2}\mathbf{I}\right)
   \end{gathered}\]
   </li>
@@ -1471,7 +1467,7 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
 
 \[\begin{aligned}
   p(\mathbf{y} \mid \mathbf{X})
-  &amp;= \int_{\mathbb{R}^{N}}{p(\mathbf{y} \mid f(\mathbf{X})) \cdot p(f(\mathbf{X}))}\text{d}f(\mathbf{X})
+  &amp;= \int{p(\mathbf{y} \mid \mathbf{X}, f(\cdot)) \cdot p(f(\cdot))}\text{d}f(\cdot)
   \end{aligned}\]
   </li>
   <li>
@@ -1479,7 +1475,7 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
 
 \[\begin{aligned}
   p(f(\cdot) \mid \mathcal{D})
-  &amp;= \frac{p(\mathbf{y} \mid f(\mathbf{X})) \cdot p(f(\cdot))}{p(\mathbf{y} \mid \mathbf{X})}
+  &amp;= \frac{p(\mathbf{y} \mid \mathbf{X}, f(\cdot)) \cdot p(f(\cdot))}{p(\mathbf{y} \mid \mathbf{X})}
   \end{aligned}\]
   </li>
 </ul>
@@ -1487,13 +1483,6 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
 <h3 id="posterior-predictive-dist"><span class="me-2">Posterior Predictive Dist.</span><a href="#posterior-predictive-dist" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
-  <li>
-    <p><strong>Definition</strong></p>
-
-    <blockquote>
-      <p><strong>함수 분포(Function Distribution)</strong> <br /> 가우시안 프로세스는 각 입력값에 대한 관측치를 개별적인 확률변수로 간주하고 이를 무한 차원으로 확장함으로써 다변량 가우시안 분포의 개념을 함수 공간으로 확장함. 즉, 함수(설명변수와 반응변수 간 관계식)를 선험적으로 정의하지 않고 데이터를 통해 전체 함수 형태를 확률적으로 예측한다는 점에서, 가우시안 프로세스는 함수 자체를 하나의 확률변수로써 다루고, 이를 비모수 추정한다고 볼 수 있음.</p>
-    </blockquote>
-  </li>
   <li>
     <p><strong>MVN(<code class="language-plaintext highlighter-rouge">M</code>ulti-<code class="language-plaintext highlighter-rouge">V</code>ariate <code class="language-plaintext highlighter-rouge">N</code>ormal Distribution)</strong> : 기존 데이터와 신규 데이터를 하나의 결합 가우시안 분포로 표현할 수 있음</p>
 
@@ -1509,7 +1498,7 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
     </ul>
   </li>
   <li>
-    <p><strong>Posterior Predictive Dist.</strong> : 신규 데이터 예측값은 조건부 분포로 도출할 수 있음</p>
+    <p><strong>Posterior Predictive Dist.</strong> : 신규 데이터 예측값을 조건부 분포로 도출할 수 있음</p>
 
 \[\begin{aligned}
   f(\mathbf{x}_{*}) \mid \mathbf{x}_{*}, \mathcal{D}
