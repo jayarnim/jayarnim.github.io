@@ -1116,7 +1116,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1568 words"
+  title="1569 words"
 >
   <em>8 min</em> read</span>
 
@@ -1365,12 +1365,12 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
     <p><a href="/_post_refer_img/BayesianModeling/3.Application/05-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/3.Application/05-04.png" alt="04" width="100%" loading="lazy"></a></p>
 
 \[\begin{aligned}
-  \mathbf{f} \sim \mathcal{N}\left(m(x), K(x, x^{\prime})\right)
+  \mathbf{f} \sim \mathcal{N}\left(m(\mathbf{X}), K(\mathbf{X}, \mathbf{X}^{\prime})\right)
   \end{aligned}\]
 
     <ul>
-      <li>\(m(x)\) : 평균 함수(Mean Function)</li>
-      <li>\(K(x, x^{\prime})\) : 공분산 함수(Covariance Function)</li>
+      <li>\(m(\mathbf{X})\) : 평균 함수(Mean Function)</li>
+      <li>\(K(\mathbf{X}, \mathbf{X}^{\prime})\) : 공분산 함수(Covariance Function)</li>
     </ul>
   </li>
   <li>
@@ -1434,6 +1434,52 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
   </li>
 </ul>
 
+<h3 id="posterior-predictive-dist"><span class="me-2">Posterior Predictive Dist.</span><a href="#posterior-predictive-dist" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p><strong>MVN(<code class="language-plaintext highlighter-rouge">M</code>ulti-<code class="language-plaintext highlighter-rouge">V</code>ariate <code class="language-plaintext highlighter-rouge">N</code>ormal Distribution)</strong> : 기존 데이터와 신규 데이터를 하나의 결합 가우시안 분포로 표현할 수 있음</p>
+
+\[\begin{aligned}
+  \begin{bmatrix}\mathbf{y} \\ f(\mathbf{x}_{*})\end{bmatrix}
+  \sim \mathcal{N} \left(\begin{bmatrix}m(\mathbf{X}) \\ m(\mathbf{x}_{*})\end{bmatrix},\begin{bmatrix}K(\mathbf{X},\mathbf{X}^{\prime}) + \sigma^{2}_{N}\mathbf{I} &amp; K(\mathbf{X},\mathbf{x}_{*}) \\ K(\mathbf{x}_{*},\mathbf{X}) &amp; K(\mathbf{x}_{*}, \mathbf{x}_{*})\end{bmatrix}\right)
+  \end{aligned}\]
+
+    <ul>
+      <li>\(K(\mathbf{X},\mathbf{X}^{\prime}) \in \mathbb{R}^{N \times N}\): 관측 데이터의 공분산 행렬</li>
+      <li>\(K(\mathbf{X},\mathbf{x}_{*}) \in \mathbb{R}^{N \times 1}\): 관측 데이터와 신규 데이터 간 공분산 벡터</li>
+      <li>\(K(\mathbf{x}_{*}, \mathbf{x}_{*}) \in \mathbb{R}\): 신규 데이터의 분산</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Posterior Predictive Dist.</strong> : 신규 데이터 예측값을 조건부 분포로 도출할 수 있음</p>
+
+\[\begin{aligned}
+  f(\mathbf{x}_{*}) \mid \mathbf{x}_{*}, \mathbf{y}, \mathbf{X}
+  &amp;\sim \mathcal{N}(\mu_{*}, \sigma_{*}^{2})
+  \end{aligned}\]
+
+    <ul>
+      <li>
+        <p>Posterior Mean:</p>
+
+\[\begin{aligned}
+  \mu_{*}
+  &amp;= K(\mathbf{x}_{*},\mathbf{X})\left[K(\mathbf{X},\mathbf{X}^{\prime}) + \sigma_{N}^{2}\mathbf{I}\right]^{-1}\mathbf{y}
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>Posterior Var.:</p>
+
+\[\begin{aligned}
+  \sigma_{*}^{2}
+  &amp;= K(\mathbf{x}_{*},\mathbf{x}_{*}) - K(\mathbf{x}_{*},\mathbf{X})\left[K(\mathbf{X},\mathbf{X}^{\prime}) + \sigma_{N}^{2}\mathbf{I}\right]^{-1}K(\mathbf{X},\mathbf{x}_{*})
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+</ul>
+
 <h3 id="bayesian-framework"><span class="me-2">Bayesian Framework</span><a href="#bayesian-framework" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
@@ -1477,52 +1523,6 @@ Z_{2} \mid Z_{1} \sim \mathcal{N}\left(\mu_{2} + \Sigma_{21}\Sigma_{11}^{-1}(Z_{
   p(f(\cdot) \mid \mathcal{D})
   &amp;= \frac{p(\mathbf{y} \mid \mathbf{X}, f(\cdot)) \cdot p(f(\cdot))}{p(\mathbf{y} \mid \mathbf{X})}
   \end{aligned}\]
-  </li>
-</ul>
-
-<h3 id="posterior-predictive-dist"><span class="me-2">Posterior Predictive Dist.</span><a href="#posterior-predictive-dist" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li>
-    <p><strong>MVN(<code class="language-plaintext highlighter-rouge">M</code>ulti-<code class="language-plaintext highlighter-rouge">V</code>ariate <code class="language-plaintext highlighter-rouge">N</code>ormal Distribution)</strong> : 기존 데이터와 신규 데이터를 하나의 결합 가우시안 분포로 표현할 수 있음</p>
-
-\[\begin{aligned}
-  \begin{bmatrix}\mathbf{y} \\ f(\mathbf{x}_{*})\end{bmatrix}
-  \sim \mathcal{N} \left(\begin{bmatrix}m(\mathbf{X}) \\ m(\mathbf{x}_{*})\end{bmatrix},\begin{bmatrix}K(\mathbf{X},\mathbf{X}^{\prime}) + \sigma^{2}_{N}\mathbf{I} &amp; K(\mathbf{X},\mathbf{x}_{*}) \\ K(\mathbf{x}_{*},\mathbf{X}) &amp; K(\mathbf{x}_{*}, \mathbf{x}_{*})\end{bmatrix}\right)
-  \end{aligned}\]
-
-    <ul>
-      <li>\(K(\mathbf{X},\mathbf{X}^{\prime}) \in \mathbb{R}^{N \times N}\): 관측 데이터의 공분산 행렬</li>
-      <li>\(K(\mathbf{X},\mathbf{x}_{*}) \in \mathbb{R}^{N \times 1}\): 관측 데이터와 신규 데이터 간 공분산 벡터</li>
-      <li>\(K(\mathbf{x}_{*}, \mathbf{x}_{*}) \in \mathbb{R}\): 신규 데이터의 분산</li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>Posterior Predictive Dist.</strong> : 신규 데이터 예측값을 조건부 분포로 도출할 수 있음</p>
-
-\[\begin{aligned}
-  f(\mathbf{x}_{*}) \mid \mathbf{x}_{*}, \mathcal{D}
-  &amp;\sim \mathcal{N}(\mu_{*}, \sigma_{*}^{2})
-  \end{aligned}\]
-
-    <ul>
-      <li>
-        <p>Posterior Mean:</p>
-
-\[\begin{aligned}
-  \mu_{*}
-  &amp;= K(\mathbf{x}_{*},\mathbf{X})\left[K(\mathbf{X},\mathbf{X}^{\prime}) + \sigma_{N}^{2}\mathbf{I}\right]^{-1}\mathbf{y}
-  \end{aligned}\]
-      </li>
-      <li>
-        <p>Posterior Var.:</p>
-
-\[\begin{aligned}
-  \sigma_{*}^{2}
-  &amp;= K(\mathbf{x}_{*},\mathbf{x}_{*}) - K(\mathbf{x}_{*},\mathbf{X})\left[K(\mathbf{X},\mathbf{X}^{\prime}) + \sigma_{N}^{2}\mathbf{I}\right]^{-1}K(\mathbf{X},\mathbf{x}_{*})
-  \end{aligned}\]
-      </li>
-    </ul>
   </li>
 </ul>
 
