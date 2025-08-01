@@ -58,9 +58,9 @@ image:
 
 - $u=1,2,\cdots,M$: user idx
 - $i=1,2,\cdots,N$: item idx
-- $\overrightarrow{\mathbf{u}}_{u} \in \mathbb{R}^{K}$: user latent factor vector
-- $\overrightarrow{\mathbf{v}}_{i} \in \mathbb{R}^{K}$: item latent factor vector
-- $\overrightarrow{\mathbf{z}}_{u,i} \in \mathbb{R}^{K}$: predictive vector of user $u$ and item $i$
+- $\mathbf{u}_{u} \in \mathbb{R}^{K}$: user latent factor vector
+- $\mathbf{v}_{i} \in \mathbb{R}^{K}$: item latent factor vector
+- $\mathbf{z}_{u,i} \in \mathbb{R}^{K}$: predictive vector of user $u$ and item $i$
 - $\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$
 
 ## How to Modeling
@@ -72,7 +72,7 @@ image:
 
     $$\begin{aligned}
     \hat{y}_{u,i}
-    &= \sigma(\overrightarrow{\mathbf{w}} \cdot [\overrightarrow{\mathbf{z}}_{u,i}^{\text{(GMF)}} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{\text{(NCF)}}])
+    &= \sigma(\mathbf{w} \cdot [\mathbf{z}_{u,i}^{\text{(GMF)}} \oplus \mathbf{z}_{u,i}^{\text{(NCF)}}])
     \end{aligned}$$
 
 ### GMF
@@ -82,24 +82,24 @@ image:
 - ID Embedding:
 
     $$\begin{aligned}
-    \overrightarrow{\mathbf{u}}_{u}
+    \mathbf{u}_{u}
     &= \text{Emb}(u)\\
-    \overrightarrow{\mathbf{v}}_{i}
+    \mathbf{v}_{i}
     &= \text{Emb}(i)
     \end{aligned}$$
 
 - Predictive Vector of user $u$ and item $i$:
 
     $$\begin{aligned}
-    \overrightarrow{\mathbf{z}}_{u,i}
-    &= \overrightarrow{\mathbf{u}}_{u} \odot \overrightarrow{\mathbf{v}}_{i}
+    \mathbf{z}_{u,i}
+    &= \mathbf{u}_{u} \odot \mathbf{v}_{i}
     \end{aligned}$$
 
 - If use `GMF` as a single prediction module:
 
     $$\begin{aligned}
     \hat{y}_{u,i}
-    &= \sigma(\overrightarrow{\mathbf{w}} \cdot \overrightarrow{\mathbf{z}}_{u,i})
+    &= \sigma(\mathbf{w} \cdot \mathbf{z}_{u,i})
     \end{aligned}$$
 
 ### NCF
@@ -109,24 +109,24 @@ image:
 - ID Embedding:
 
     $$\begin{aligned}
-    \overrightarrow{\mathbf{u}}_{u}
+    \mathbf{u}_{u}
     &= \text{Emb}(u)\\
-    \overrightarrow{\mathbf{v}}_{i}
+    \mathbf{v}_{i}
     &= \text{Emb}(i)
     \end{aligned}$$
 
 - Predictive Vector of user $u$ and item $i$:
 
     $$\begin{aligned}
-    \overrightarrow{\mathbf{z}}_{u,i}
-    &= \text{MLP}_{\text{ReLU}}(\overrightarrow{\mathbf{u}}_{u} \oplus \overrightarrow{\mathbf{v}}_{i})
+    \mathbf{z}_{u,i}
+    &= \text{MLP}_{\text{ReLU}}(\mathbf{u}_{u} \oplus \mathbf{v}_{i})
     \end{aligned}$$
 
 - If use `NCF` as a single prediction module:
 
     $$\begin{aligned}
     \hat{y}_{u,i}
-    &= \sigma(\overrightarrow{\mathbf{w}} \cdot \overrightarrow{\mathbf{z}}_{u,i})
+    &= \sigma(\mathbf{w} \cdot \mathbf{z}_{u,i})
     \end{aligned}$$
 
 -----

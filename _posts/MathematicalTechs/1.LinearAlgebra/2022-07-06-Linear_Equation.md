@@ -14,232 +14,114 @@ image:
 ## Linear Equation
 -----
 
-### 선형방정식
-
-- **정의** : 최고차 항의 차수가 $1$ 을 넘지 않는 다항방정식으로서 $1$ 차 방정식
+- **선형방정식(Linear Equation)**: 최고차항의 차수가 $1$ 을 넘지 않는 다항방정식으로서 $1$ 차 방정식
 
     $$\begin{aligned}
-    & a_1x_1 + a_2x_2 + \cdots + a_nx_n
-    = b
-    \end{aligned}$$
-    
-- **선형방정식을 벡터로 표현하면 다음과 같음**
-
-    $$\begin{aligned}
-    \begin{pmatrix}a_1&a_2&\cdots&a_n\end{pmatrix}
-
-    \begin{pmatrix}x_1\\x_2\\ \vdots\\ x_n \end{pmatrix}
-    = b
+    a_{1}x_{1} + a_{2}x_{2} + \cdots + a_{P}x_{P}
+    &= b
     \end{aligned}$$
 
-- **이때 벡터 $\overrightarrow{a}$ 는 방정식의 계수들을 나열하고 있음**
+- **선형연립방정식(Linear Simultaneous Equation)**: 둘 이상의 선형방정식의 집합
 
-    $$\begin{aligned}
-    \overrightarrow{a}^T \overrightarrow{x}
-    = b
-    \end{aligned}$$
-
-### 선형연립반정식
-
-- **정의** : 둘 이상의 선형방정식의 집합
-
-    $$\begin{aligned}
+    $$\begin{gathered}
     \begin{matrix}
-    a_{11}x_1 & + & a_{12}x_2 & + & \cdots & + & a_{1n}x_n & = & b_1 \\
-    a_{21}x_1 & + & a_{22}x_2 & + & \cdots & + & a_{2n}x_n & = & b_2 \\
+    a_{1,1}x_{1} & + & a_{1,2}x_{2} & + & \cdots & + & a_{1,P}x_{P} & = & b_1 \\
+    a_{2,1}x_{1} & + & a_{2,2}x_{2} & + & \cdots & + & a_{2,P}x_{P} & = & b_{2} \\
     \vdots & + & \vdots & + & \ddots & + & \vdots & = & \vdots \\
-    a_{m1}x_1 & + & a_{m2}x_2 & + & \cdots & + & a_{mn}x_n & = & b_m
+    a_{N,1}x_{1} & + & a_{N,2}x_{2} & + & \cdots & + & a_{N,P}x_{P} & = & b_{P}
     \end{matrix}
-    \end{aligned}$$
+    \end{gathered}$$
 
-- **선형연립방정식을 행렬로 표현하면 다음과 같음**
-
-    $$\begin{aligned}
-    \begin{pmatrix}
-    a_{11}&a_{12}&\cdots&a_{1n}\\
-    a_{21}&a_{22}&\cdots&a_{2n}\\
-    \vdots&\vdots&\ddots&\vdots\\
-    a_{m1}&a_{m2}&\cdots&a_{mn}
-    \end{pmatrix}
-
-    \begin{pmatrix}x_1\\x_2\\\vdots\\ x_n \end{pmatrix}    
-    &= \begin{pmatrix}b_1\\ b_2\\ \vdots\\ b_m \end{pmatrix}
-    \end{aligned}$$
-
-### 첨가 행렬
-
-- **정의** : 선형연립방정식 계수들의 집합으로서 벡터 $\overrightarrow{x}$ 를 선형변환하는 행렬
-
-    $$\begin{aligned}
-    A \overrightarrow{x}
-    &= \overrightarrow{b}
-    \end{aligned}$$
-
-- 첨가 행렬 $A$ 의 열벡터 $\overrightarrow{a_1}, \overrightarrow{a_2}, \cdots, \overrightarrow{a_n}$ 을 구분하여 표현할 수 있음
-
-    $$\begin{aligned}
-    \overrightarrow{a_1} x_1 + \overrightarrow{a_2} x_2 + \cdots + \overrightarrow{a_n} x_n
-    &= \overrightarrow{b}
-    \end{aligned}$$
-
-## 선형방정식의 갯수와 미지수의 갯수가 같은 경우
+## Coefficient Matrix
 -----
 
-### 첨가 행렬의 역행렬과 방정식의 해
+- Vector representation of Linear Equation:
 
-$$\begin{aligned}
-\begin{pmatrix} a_{11}&a_{12}\\ a_{21}&a_{22} \end{pmatrix}
-\begin{pmatrix} x_1\\ x_2 \end{pmatrix}
-=
-\begin{pmatrix} b_1\\ b_2 \end{pmatrix}
-\Leftrightarrow A \overrightarrow{x} = \overrightarrow{b}
-\end{aligned}$$
+    $$\begin{gathered}
+    \mathbf{A}\mathbf{x}=\mathbf{b}
+    \\
+    \Updownarrow\\
+    \begin{bmatrix}
+    a_{1,1}&a_{1,2}&\cdots&a_{1,P}\\
+    a_{2,1}&a_{2,2}&\cdots&a_{2,P}\\
+    \vdots&\vdots&\ddots&\vdots\\
+    a_{N,1}&a_{N,2}&\cdots&a_{N,P}
+    \end{bmatrix}
+    \begin{bmatrix}
+    x_{1}\\
+    x_{2}\\
+    \vdots\\
+    x_{P}
+    \end{bmatrix}    
+    = \begin{bmatrix}
+    b_{1}\\
+    b_{2}\\
+    \vdots\\
+    b_{P}
+    \end{bmatrix}
+    \end{gathered}$$
 
-- **크기가 $n \times n$ 인 첨가 행렬 $A$ 에 대하여 그 역행렬 $A^{-1}$ 이 존재할 조건**
+    - $\mathbf{A}$: 계수 행렬
+    - $\mathbf{x}$: 미지수 벡터 혹은 해 벡터
+    - $\mathbf{b}$: 상수 벡터
 
-    - $Rank(A_n)=n$
-    - $det(A) \ne 0$
-    - $A$ 의 열벡터 $\overrightarrow{a_1}, \overrightarrow{a_2}, \cdots, \overrightarrow{a_n}$ 를 $span$ 하여 $n$ 차원 공간을 구성할 수 없음
-    - $A$ 의 열벡터 $\overrightarrow{a_1}, \overrightarrow{a_2}, \cdots, \overrightarrow{a_n}$ 는 모두 선형 독립임
+- **계수 행렬(Coefficient Matrix)**: 선형연립방정식 계수들의 집합으로서 벡터 $\mathbf{x}$ 를 선형변환하는 행렬
 
-- **첨가 행렬 $A$ 에 대하여 그 역행렬이 존재하면 단 하나의 해가 존재함**
+    $$\begin{aligned}
+    \mathbf{A}
+    &=\begin{bmatrix}
+    a_{1,1}&a_{1,2}&\cdots&a_{1,P}\\
+    a_{2,1}&a_{2,2}&\cdots&a_{2,P}\\
+    \vdots&\vdots&\ddots&\vdots\\
+    a_{N,1}&a_{N,2}&\cdots&a_{N,P}
+    \end{bmatrix}
+    \end{aligned}$$
+
+- 계수 행렬 $$\mathbf{A}$$ 은 $$\mathbf{e}_{1},\mathbf{e}_{2},\cdots,\mathbf{e}_{P}$$ 를 기저로 사용하는 좌표계에서 $$\mathbf{a}_{1},\mathbf{a}_{2},\cdots,\mathbf{a}_{P}$$ 를 기저로 사용하는 좌표계로 벡터 $$\mathbf{x}$$ 를 선형변환함:
+
+    $$\begin{aligned}
+    \mathbf{x}
+    &=\begin{bmatrix}1 \\ 0 \\ \vdots \\ 0\end{bmatrix} x_{1} + \begin{bmatrix}0 \\ 1 \\ \vdots \\ 0\end{bmatrix} x_{2} + \cdots + \begin{bmatrix}0 \\ 0 \\ \vdots \\ 1\end{bmatrix} x_{P}
+
+    \\
+    \mathbf{A}\mathbf{x}
+    &= \begin{bmatrix}a_{1,1} \\ a_{2,1} \\ \vdots \\ a_{N,1}\end{bmatrix} x_{1} + \begin{bmatrix}a_{1,2} \\ a_{2,2} \\ \vdots \\ a_{N,2}\end{bmatrix} x_{2} + \cdots + \begin{bmatrix}a_{1,P} \\ a_{2,P} \\ \vdots \\ a_{N,P}\end{bmatrix} x_{P}
+    \end{aligned}$$
+
+## Solution of the Equation
+-----
+
+- **정해(uniquely determined)**: 선형연립방정식의 계수 행렬 $$\mathbf{A} \in \mathbb{R}^{N \times N}$$ 에 대하여 그 역행렬이 존재하면 단 하나의 해가 존재함
 
     ![01](/_post_refer_img/MathematicalTechs/1.LinearAlgebra/03-01.jpg){: width="100%"}
 
-- **첨가 행렬 $A$ 에 대하여 그 역행렬이 존재하지 않으면 불능이거나 부정임**
-    - **불능(Underdetermined)** : 해를 구할 수 없음
+    $$\begin{aligned}
+    \exists \mathbf{A}^{-1} \Leftrightarrow \forall \mathbf{b} \in \mathbb{R}^{P}, \exists ! \mathbf{x} \in \mathbb{R}^{P} : \mathbf{A}\mathbf{x}=\mathbf{b}
+    \end{aligned}$$
 
-        ![02](/_post_refer_img/MathematicalTechs/1.LinearAlgebra/03-02.jpg){: width="100%"}
+    - $\mathrm{rank}(\mathbf{A})=P$
+    - $\mathrm{det}(\mathbf{A}) \ne 0$
+    - $\sum_{i=1}^{P}{\alpha_{i}\mathbf{a}_{i}} \ne 0, \quad \forall \alpha \ne 0$
+    - $\mathrm{span}(S)=\mathbb{R}^{P}, \quad S=\{\mathbf{a}_{1},\cdots,\mathbf{a}_{P}\}$
 
-    - **부정(Inconsistent, Impossible)** : 해가 무수히 많아 하나로 정할 수 없음
+- **불능(inconsistent)**: 해를 구할 수 없는 상태로서, 계수 행렬 $$\mathbf{A}=\begin{bmatrix}\mathbf{a}_{1} & \mathbf{a}_{2} & \cdots & \mathbf{a}_{P}\end{bmatrix}^{T}$$ 가 선형 종속이고, 동시에 $$\mathbf{b}$$ 가 선형 독립인 경우
 
-        ![03](/_post_refer_img/MathematicalTechs/1.LinearAlgebra/03-03.jpg){: width="100%"}
+    ![02](/_post_refer_img/MathematicalTechs/1.LinearAlgebra/03-02.jpg){: width="100%"}
 
-### 해가 하나 존재하는 경우의 기하학적 이해
+    $$\begin{gathered}
+    \mathrm{rank}(\mathbf{A})<P
+    \ \text{and} \
+    \mathbf{b} \notin \mathrm{span}(\{\mathbf{a}_{1},\cdots,\mathbf{a}_{P}\})
+    \Rightarrow \nexists \mathbf{x} \in \mathbb{R}^{P}:\mathbf{A}\mathbf{x}=\mathbf{b}
+    \end{gathered}$$
 
-![04](/_post_refer_img/MathematicalTechs/1.LinearAlgebra/03-04.jpeg){: width="100%"}
+- **부정(indeterminate)**: 해가 무수히 많아 하나로 정할 수 없는 상태로서, 계수 행렬 $$\mathbf{A}=\begin{bmatrix}\mathbf{a}_{1} & \mathbf{a}_{2} & \cdots & \mathbf{a}_{P}\end{bmatrix}^{T}$$ 가 선형 종속이고, 동시에 $$\mathbf{b}$$ 도 선형 종속인 경우
 
-$$
-\begin{pmatrix} 7&2\\ -7&5 \end{pmatrix}
-\begin{pmatrix} x_1\\ x_2 \end{pmatrix}
-=
-\begin{pmatrix} -5\\ 12 \end{pmatrix}
-\Leftrightarrow
-\overrightarrow{a_1}x_1 + \overrightarrow{a_2}x_2
-= \overrightarrow{b}
-$$
+    ![03](/_post_refer_img/MathematicalTechs/1.LinearAlgebra/03-03.jpg){: width="100%"}
 
-$$
-\overrightarrow{a_1}
-= \begin{pmatrix} 7\\ -7 \end{pmatrix},
-\overrightarrow{a_2}
-= \begin{pmatrix} 2\\ 5 \end{pmatrix},
-\overrightarrow{b}
-= \begin{pmatrix} -5\\ 12 \end{pmatrix}
-$$
-
-- **$\overrightarrow{a_1}, \overrightarrow{a_2}$ 를 $span$ 하여 $2$ 차원 평면을 구성할 수 있음**
-    - $\overrightarrow{a_1}$ 와 $\overrightarrow{a_2}$ 는 선형 독립임
-
-- **$\overrightarrow{a_1}, \overrightarrow{a_2}$ 가 $span$ 하여 구성할 수 있는 $2$ 차원 평면에 $\overrightarrow{b}$ 가 포함됨**
-
-- **$\overrightarrow{a_1}, \overrightarrow{a_2}$ 를 선형결합하여 $\overrightarrow{b}$ 를 만들 수 있음**
-    - $\overrightarrow{b}$ 는 $\overrightarrow{a_1}, \overrightarrow{a_2}$ 에 대하여 선형 종속임
-
-### 해를 구할 수 없는 경우의 이해
-
-![05](/_post_refer_img/MathematicalTechs/1.LinearAlgebra/03-05.jpg){: width="100%"}
-
-$$
-\begin{pmatrix} 5&5\\ 5&5 \end{pmatrix}
-\begin{pmatrix} x_1\\ x_2 \end{pmatrix}
-=
-\begin{pmatrix} 10\\ 20 \end{pmatrix}
-\Leftrightarrow
-\overrightarrow{a_1}x_1 + \overrightarrow{a_2}x_2
-= \overrightarrow{b}
-$$
-
-$$
-\overrightarrow{a_1}
-= \begin{pmatrix} 5\\ 5 \end{pmatrix},
-\overrightarrow{a_2}
-= \begin{pmatrix} 5\\ 5 \end{pmatrix},
-\overrightarrow{b}
-= \begin{pmatrix} 10\\ 20 \end{pmatrix}
-$$
-
-- **$\overrightarrow{a_1}, \overrightarrow{a_2}$ 를 $span$ 하여 $2$ 차원 평면을 구성할 수 없음**
-    - $\overrightarrow{a_1}$ 와 $\overrightarrow{a_2}$ 는 선형 종속임
-
-- **$\overrightarrow{a_1}, \overrightarrow{a_2}$ 가 $span$ 하여 구성할 수 있는 $1$ 차원 직선에 $\overrightarrow{b}$ 가 포함되지 않음**
-
-- **$\overrightarrow{a_1}, \overrightarrow{a_2}$ 를 선형결합하여 $\overrightarrow{b}$ 를 만들 수 없음**
-    - $\overrightarrow{b}$ 는 $\overrightarrow{a_1}, \overrightarrow{a_2}$ 에 대하여 선형 독립임
-
-### 해가 무수히 많은 경우의 이해
-
-![06](/_post_refer_img/MathematicalTechs/1.LinearAlgebra/03-06.jpg){: width="100%"}
-
-$$
-\begin{pmatrix}1&1\\2&2\end{pmatrix}
-\begin{pmatrix}x_1\\x_2\end{pmatrix}
-=
-\begin{pmatrix}10\\20\end{pmatrix}
-\Leftrightarrow
-\overrightarrow{a_1}x_1 + \overrightarrow{a_2}x_2
-= \overrightarrow{b}
-$$
-
-$$
-\overrightarrow{a_1}
-= \begin{pmatrix}1\\2\end{pmatrix},
-\overrightarrow{a_2}
-= \begin{pmatrix}1\\2\end{pmatrix},
-\overrightarrow{b}
-= \begin{pmatrix}10\\20\end{pmatrix}
-$$
-
-- **$\overrightarrow{a_1}, \overrightarrow{a_2}$ 를 $span$ 하여 $2$ 차원 평면을 구성할 수 없음**
-    - $\overrightarrow{a_1}$ 와 $\overrightarrow{a_2}$ 는 선형 종속임
-
-- **$\overrightarrow{a_1}, \overrightarrow{a_2}$ 가 $span$ 하여 구성할 수 있는 $1$ 차원 직선에 $\overrightarrow{b}$ 가 포함됨**
-
-- **$\overrightarrow{a_1}, \overrightarrow{a_2}$ 를 선형결합하여 $\overrightarrow{b}$ 를 만들 수 있음**
-    - $\overrightarrow{b}$ 는 $\overrightarrow{a_1}, \overrightarrow{a_2}$ 에 대하여 선형 종속임
-
-## 선형방정식의 갯수와 미지수의 갯수가 다른 경우
------
-
-### 선형방정식의 갯수보다 미지수의 갯수가 더 많은 경우
-
-![07](/_post_refer_img/MathematicalTechs/1.LinearAlgebra/03-07.jpg){: width="100%"}
-
-$$
-\begin{pmatrix}1&2&3\\1&5&1\end{pmatrix}
-\begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix}
-=
-\begin{pmatrix}2\\1\end{pmatrix}
-\Leftrightarrow
-A\overrightarrow{x}
-= \overrightarrow{b}
-$$
-
-- 하나의 방정식을 만족하는 벡터 $\overrightarrow{x}$ 는 $3$ 차원 공간의 $2$ 차원 평면을 구성함
-- 두 방정식을 동시에 만족하는 벡터 $\overrightarrow{x}$ 는 두 평면이 교차하는 $1$ 차원 직선의 모든 점임
-
-### 미지수의 갯수보다 선형방정식의 갯수가 더 많은 경우
-
-![08](/_post_refer_img/MathematicalTechs/1.LinearAlgebra/03-08.jpg){: width="100%"}
-
-$$
-\begin{pmatrix}0&1\\-2&1\\2&1\\ \end{pmatrix}
-\begin{pmatrix}x_1\\x_2\end{pmatrix}
-=\begin{pmatrix}-1\\-4\\8\end{pmatrix}
-\Leftrightarrow
-A\overrightarrow{x}
-= \overrightarrow{b}
-$$
-
-- 하나의 방정식을 만족하는 벡터 $\overrightarrow{x}$ 는 $2$ 차원 평면의 $1$ 차원 직선을 구성함
-- 세 방정식을 동시에 만족하는 벡터 $\overrightarrow{x}$ 는 존재하지 않음
+    $$\begin{gathered}
+    \mathrm{rank}(\mathbf{A})<P
+    \ \text{and} \
+    \mathbf{b} \in \mathrm{span}(\{\mathbf{a}_{1},\cdots,\mathbf{a}_{P}\})
+    \Rightarrow \exists^{\infty} \mathbf{x} \in \mathbb{R}^{P}:\mathbf{A}\mathbf{x}=\mathbf{b}
+    \end{gathered}$$

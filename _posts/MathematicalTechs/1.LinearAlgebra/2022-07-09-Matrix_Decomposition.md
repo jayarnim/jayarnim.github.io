@@ -14,123 +14,106 @@ image:
 ## Matrix Decomposition
 -----
 
-- **정의** : 하나의 행렬을 특정한 구조를 가진 다른 행렬의 합과 곱으로 나타내는 작업
+- **행렬 분해(Matrix Decomposition)**: 고차원 행렬을 특정한 구조를 가진 저차원 행렬들의 합과 곱으로 근사하는 기법
+    - **스펙트럼 분해(Spectral Decomposition)**: 대칭행렬에 대한 분해
+    
+    $$\begin{aligned}
+    \mathbf{A} \approx \mathbf{P}\Lambda\mathbf{P}^{T}, \quad \mathbf{A}=\mathbf{A}^{T}
+    \end{aligned}$$
+    
+    - **특이값 분해(`S`ingular `V`alue `D`ecomposition)**: 비대칭 행렬에 대한 분해
 
-- **종류**
-    - **스펙트럼 분해(Spectral Decomposition)** : 대칭행렬에 대한 분해
-    - **특이값 분해(Singular Value Decomposition; SVD)** : 비대칭행렬에 대한 분해
+    $$\begin{aligned}
+    \mathbf{A} \approx \mathbf{U}\Sigma\mathbf{V}^{T}
+    \end{aligned}$$
 
 ## Spectral Decomposition
 -----
 
-- **대칭행렬 $A_{n \times n}$** 와 그 고유값 $ \vert \lambda_{1} \vert \ge \vert \lambda_{2} \vert \ge \cdots \ge \vert \lambda_{n} \vert$, 고유벡터 $\overrightarrow{v_{1}},\overrightarrow{v_{2}},\cdots,\overrightarrow{v_{n}}$ 에 대하여, 직교행렬 $P$ 와 대각행렬 $\Lambda$ 를 다음과 같이 정의하자
+- 대칭행렬 $$\mathbf{A} \in \mathbb{R}^{N \times N}$$ 에 대하여, 그 차원이 $$N \times N$$  이라면 $$N$$ 개의 고유벡터 $$\mathbf{v}_{i}$$ 와 고유값 $$\lambda_{i}$$ 이 존재함
 
-    $$\begin{aligned}
-    P
-    &= \begin{bmatrix} \overrightarrow{v_{1}} & \overrightarrow{v_{2}} & \cdots & \overrightarrow{v_{n}} \end{bmatrix} \\
-    \Lambda
-    &= diag(\lambda_1, \lambda_2, \cdots, \lambda_n)
-    \end{aligned}$$
+$$\begin{aligned}
+\mathbf{A}\mathbf{v}_{i}=\lambda_{i}\mathbf{v}_{i},\quad i=1,2,\cdots,N
+\end{aligned}$$
 
-- $A_{n \times n}$ 를 다음과 같이 분해하는 작업을 스펙트럼 분해라고 정의함
+- 대칭행렬 $$\mathbf{A} \in \mathbb{R}^{N \times N}$$ 의 고유벡터들은 모두 직교함
 
-    $$\begin{aligned}
-    A
-    &= P \Lambda P^{T} \\
-    &= \lambda_1 \overrightarrow{v_{1}} \overrightarrow{v_{1}^T} + \lambda_2 \overrightarrow{v_{2}} \overrightarrow{v_{2}^T} + \cdots + \lambda_n \overrightarrow{v_{n}} \overrightarrow{v_{n}^T} \\
-    &= \displaystyle\sum_{i=1}^{n}\lambda_i \overrightarrow{v_{i}} \overrightarrow{v_{i}^T}
-    \end{aligned}$$
+$$\begin{aligned}
+\mathbf{v}_{1} \perp \mathbf{v}_{2} \perp \cdots \perp \mathbf{v}_{N}
+\end{aligned}$$
+
+- 따라서 대칭행렬 $$\mathbf{A}$$ 는 항상 직교 대각화(orthogonal diagonalization) 가능함
+
+$$\begin{aligned}
+\mathbf{P}^{T}\mathbf{A}\mathbf{P}
+&=\Lambda, \quad \mathbf{P}^{T}=\mathbf{P}^{-1}
+\end{aligned}$$
+
+- 이로부터 대칭행렬 $$\mathbf{A}$$ 를 대각화 행렬 $$\mathbf{P}=\begin{bmatrix}\mathbf{v}_{1} & \mathbf{v}_{2} & \cdots & \mathbf{v}_{N}\end{bmatrix}$$ 와 고유값 대각 행렬 $$\Lambda=\mathrm{diag}(\lambda_{1},\lambda_{2},\cdots,\lambda_{N})$$ 의 곱으로 근사할 수 있음
+
+$$\begin{aligned}
+\mathbf{P}^{T}\mathbf{A}\mathbf{P}
+&=\Lambda\\
+(\mathbf{P}\mathbf{P}^{T})\mathbf{A}(\mathbf{P}\mathbf{P}^{T})
+&=\mathbf{P}\Lambda\mathbf{P}^{T}\\
+\mathbf{I}\mathbf{A}\mathbf{I}
+&=\mathbf{P}\Lambda\mathbf{P}^{T},\quad (\because \mathbf{P}^{T}=\mathbf{P}^{-1})\\
+\therefore \mathbf{A}
+&= \mathbf{P}\Lambda\mathbf{P}^{T}
+\end{aligned}$$
 
 ## Singular Value Decomposition
 -----
 
-### SVD
-
-- 비대칭행렬 $A_{m \times n}$ 에 대하여 다음과 같이 분해하는 작업을 특이값 분해라고 정의함
-
-    $$\begin{aligned}
-    A_{m \times n}
-    =
-    \begin{cases}
-    U_{n \times m} D_{m \times m} (V_{n \times m})^T\;&if\;m \le n \\
-    U_{m \times n} D_{n \times n} (V_{n \times n})^T\;&if\;n \le m \\
-    \end{cases}
-    \end{aligned}$$
-
-- 행렬 $U$ 는 행렬 $AA^{T}(=(A^{T}A)^T)$ 의 고유벡터 $\overrightarrow{u}$ 의 집합임
-
-    $$\begin{aligned}
-    U &= \begin{bmatrix} \overrightarrow{u_1}&\overrightarrow{u_2}&\cdots&\overrightarrow{u_k} \end{bmatrix}\\
-    k &= \min (m, n)\\
-    &= rank(A)\\
-    \overrightarrow{u_i} 
-    &\in \{\overrightarrow{u}\,|\,AA^{T}\overrightarrow{u} = \lambda \overrightarrow{u}\}
-    \end{aligned}$$
-
-- 행렬 $V$ 는 행렬 $A^{T}A(=(AA^{T})^T)$ 의 고유벡터 $\overrightarrow{v}$ 의 집합임
-
-    $$\begin{aligned}
-    U
-    &= \begin{bmatrix} \overrightarrow{v_1}&\overrightarrow{v_2}&\cdots&\overrightarrow{v_k} \end{bmatrix}\\
-    k
-    &= \min (m, n)\\
-    &= rank(A)\\
-    \overrightarrow{v_i}
-    &\in \{\overrightarrow{v}\,|\,A^{T}A\overrightarrow{v} = \lambda \overrightarrow{v}\}
-    \end{aligned}$$
-
-- 행렬 $D$ 는 행렬 $AA^{T}$ 혹은 그 전치행렬 $A^{T}A$ 의 고유값의 제곱근 $\sqrt{\lambda_1} \ge \sqrt{\lambda_2} \ge \cdots \ge \sqrt{\lambda_k} > 0$ 을 대각원소로 가지는 대각행렬임
-
-    $$\begin{aligned}
-    D
-    &= diag(\sqrt{\lambda_1}, \sqrt{\lambda_2}, \cdots, \sqrt{\lambda_k}) \\
-    &= \begin{pmatrix}
-    \sqrt{\lambda_1} & 0 & \cdots & 0 \\
-    0 & \sqrt{\lambda_2} & \cdots & 0 \\
-    \vdots & \vdots & \ddots & \vdots \\
-    0 & 0 & \cdots & \sqrt{\lambda_k}
-    \end{pmatrix} \\
-    k
-    &= \min (m, n)\\
-    &= rank(A)
-    \end{aligned}$$
-
-### Singular Value & Vector
-
-- **특이값(Singular Value)** : 대각행렬 $D$ 의 대각원소로서, 행렬 $AA^{T}$ 혹은 그 전치행렬 $A^{T}A$ 의 고유값의 제곱근
+- 비대칭행렬 $$\mathbf{A} \in \mathbb{R}^{M \times N}$$ 에 대하여 다음을 정의하자
 
     $$
-    \sqrt{\lambda_1} \ge \sqrt{\lambda_2} \ge \cdots \ge \sqrt{\lambda_k} > 0
+    \begin{aligned}
+    \mathbf{P}
+    &= \mathbf{A}\mathbf{A}^{T} \in \mathbb{R}^{M \times M}\\
+    \mathbf{Q}
+    &= \mathbf{A}^{T}\mathbf{A} \in \mathbb{R}^{N \times N}
+    \end{aligned}$$
+
+- 왼쪽 특이벡터 행렬 $$\mathbf{U}$$ 과 오른쪽 특이벡터 행렬 $$\mathbf{V}$$ 을 각각 다음과 같이 구성하자
+
+    $$\begin{aligned}
+    \mathbf{U}
+    &= \begin{bmatrix}\mathbf{u}_{1} & \mathbf{u}_{2} & \cdots & \mathbf{u}_{K}\end{bmatrix}\\
+    \mathbf{V}
+    &= \begin{bmatrix}\mathbf{v}_{1} & \mathbf{v}_{2} & \cdots & \mathbf{v}_{K}\end{bmatrix}
+    \end{aligned}, \quad
+    K=\mathrm{rank}(\mathbf{A})
     $$
 
-- **왼쪽 특이벡터(Left Singular Vector)** : 행렬 $U$ 의 열벡터로서 행렬 $AA^{T}$ 의 고유벡터
+    - $$\mathbf{u}$$: 왼쪽 특이벡터(Left Singular Vector)
+
+        $$
+        \forall \mathbf{u}:\mathbf{P}\mathbf{u}=\lambda\mathbf{u}
+        $$
+
+    - $$\mathbf{v}$$: 오른쪽 특이벡터(Right Singular Vector)
+
+        $$
+        \forall \mathbf{v}:\mathbf{Q}\mathbf{v}=\lambda\mathbf{v}
+        $$
+
+- $$\mathbf{P}$$ 와 $$\mathbf{Q}$$ 는 전치 관계이므로 그 고유값이 동일하며, 이때 고유값 $$\lambda_{i}$$ 의 제곱근을 특이값(Singular Value)이라 함
 
     $$\begin{aligned}
-    \overrightarrow{u_i} 
-    &\in \{\overrightarrow{u}\,|\,AA^{T}\overrightarrow{u} = \lambda \overrightarrow{u}\},\\
-    k
-    &= \min (m, n)\\
-    &= rank(A)
+    \sqrt{\lambda_{i}}
     \end{aligned}$$
 
-- **오른쪽 특이벡터(Right Singular Vector)** : 행렬 $V$ 의 열벡터로서 행렬 $AA^{T}$ 의 전치행렬 $A^{T}A$ 의 고유벡터
+- 특이값 대각 행렬 $$\Sigma$$ 는 특이값 $$\sqrt{\lambda_{i}}$$ 을 대각 원소로 가지는 대각행렬임
 
     $$\begin{aligned}
-    \overrightarrow{v_i}
-    &\in \{\overrightarrow{v}\,|\,A^{T}A\overrightarrow{v} = \lambda \overrightarrow{v}\},\\
-    k
-    &= \min (m, n)\\
-    &= rank(A)
+    \Sigma
+    &= \mathrm{diag}(\sqrt{\lambda_{1}},\sqrt{\lambda_{2}},\cdots,\sqrt{\lambda_{K}})
     \end{aligned}$$
 
-- **특이값 분해의 전개**
+- 비대칭행렬 $$\mathbf{A} \in \mathbb{R}^{M \times N}$$ 은 다음과 같이 근사될 수 있음
 
     $$\begin{aligned}
-    A_{m \times n}
-    &=
-    \begin{cases}
-    U_{n \times m} D_{m \times m} (V_{n \times m})^T\;if\;m \le n \\
-    U_{m \times n} D_{n \times n} (V_{n \times n})^T\;if\;n \le m \\
-    \end{cases} \\
-    &= \displaystyle\sum_{i=1}^{\min (m,n)} \sqrt{\lambda_i} u_i v_i^T
+    \mathbf{A}
+    &\approx \mathbf{U}\Sigma\mathbf{V}^{T}
     \end{aligned}$$

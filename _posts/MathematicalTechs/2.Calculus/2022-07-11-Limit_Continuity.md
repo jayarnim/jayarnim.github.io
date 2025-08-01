@@ -11,110 +11,87 @@ image:
   path: /_post_refer_img/MathematicalTechs/2.Calculus/Thumbnail.jpg
 ---
 
-## 극한
+## Limit & Continuity
 -----
 
-- **극한(Limiting)**
+- **극한(Limit)**: 함수 $f:X \to Y$ 에 대하여 $x \ne a$ 이면서 $x$ 가 $a$ 에 한없이 가까워질 때 $y$ 가 일정한 값 $z$ 에 가까워지는 경우, $y$ 가 $x \to a$ 일 때 $z$ 에 수렴한다(Converge)고 하고, $L$ 을 $x \to a$ 에서 $f$ 의 극한(Limit)이라고 함
 
     $$\begin{aligned}
-    y&=f(x) \\
-    \displaystyle\lim_{x  \rightarrow a}y&=L
+    \lim_{x  \to a}{f(x)}=z
+    \Rightarrow
+    \underbrace{\lim_{x  \to a-0}{f(x)}}_{\text{left-hand limit}}
+    =\underbrace{\lim_{x  \to a+0}{f(x)}}_{\text{right-hand limit}}
+    =z
     \end{aligned}$$
 
-    - 설명변수 $x \in X$ 에 대한 반응변수 $y \in Y$ 의 함수 $f:\,X\rightarrow Y$ 에 대하여
-    - $x \ne a$ 이면서 $x$ 가 $a$ 에 한없이 가까워질 때 $y$ 가 일정한 값 $L$ 에 가까워지는 경우
-    - $y$ 는 $x  \rightarrow a$ 일 때 $L$ 에 **수렴한다(Converge)** 라고 정의함
-    - 또한 $L$ 를 $x  \rightarrow a$ 인 경우 $y$ 의 **극한(Limiting)** 이라고 정의함
+    - $\lim_{x  \to a}{\alpha f(x)}=\alpha \lim_{x  \to a}{f(x)}$
+    - $\lim_{x  \to a}{[f(x)+g(x)]}=\lim_{x  \to a}{f(x)}+\lim_{x  \to a}{g(x)}$
+    - $\lim_{x  \to a}{[f(x)g(x)]}=\lim_{x  \to a}{f(x)}\lim_{x  \to a}{g(x)}$
+    - $\lim_{x  \to a}{[f(x)/g(x)]}=\lim_{x  \to a}{f(x)}/\lim_{x  \to a}{g(x)} \quad (\text{s.t.}\ \lim_{x  \to a}{g(x)} \ne 0)$
 
-- **좌극한과 우극한**
+- **연속(Continuity)**: 함수 $f:X \to Y$ 에 대하여 $f$ 가 $x=a$ 에서 함수값 $y=f(x)$ 과 극한값 $z=\lim_{x \to a}{f(x)}$ 이 모두 존재하고 $y=z$ 일 때 $f$ 는 $x=a$ 에서 연속임
 
-    $$
-    \displaystyle\lim_{x  \rightarrow a}f(x)=L \Rightarrow \displaystyle\lim_{x  \rightarrow a-0}f(x)=\displaystyle\lim_{x  \rightarrow a+0}f(x)=L
-    $$
+$$\begin{aligned}
+f(a)=\lim_{x \to a}{f(x)}
+\end{aligned}$$
 
-    - 설명변수 $x \in X$ 에 대한 반응변수 $y \in Y$ 의 함수 $f:\,X\rightarrow Y$ 에 대하여
-    - $f$ 가 값 $a$ 에서 극한이 존재하면
-    - 그 좌극한 $x  \rightarrow a-0$ 과 우극한 $x  \rightarrow a+0$ 이 존재하고, 그 값이 서로 같음
+- **연속 함수(Continuous Function)**: 함수 $f:X \to Y$ 가 정의역 $a \in \mathcal{X}$ 전체에서 연속이면 $f$ 는 연속 함수임
 
-- **성질**
-    - $\displaystyle\lim_{x  \rightarrow a}f(x), \displaystyle\lim_{x  \rightarrow a}g(x)$ 가 존재하는 경우 다음이 성립함
+$$\begin{aligned}
+f(a)=\lim_{x \to a}{f(x)}, \quad \forall a \in \mathcal{X}
+\end{aligned}$$
 
-        - $\displaystyle\lim_{x  \rightarrow a}\alpha f(x)=\alpha\displaystyle\lim_{x  \rightarrow a}f(x)$
-        - $\displaystyle\lim_{x  \rightarrow a}(f(x)+g(x))=\displaystyle\lim_{x  \rightarrow a}f(x)+\displaystyle\lim_{x  \rightarrow a}g(x)$
-        - $\displaystyle\lim_{x  \rightarrow a}(f(x) \times g(x))=\displaystyle\lim_{x  \rightarrow a}g(x) \times \displaystyle\lim_{x  \rightarrow a}f(x)$
-        - $\displaystyle\lim_{x  \rightarrow a}\frac{f(x)}{g(x)}=\frac{\displaystyle\lim_{x  \rightarrow a}f(x)}{\displaystyle\lim_{x  \rightarrow a}g(x)}\;(s.t.\displaystyle\lim_{x  \rightarrow a}g(x) \ne 0)$
-
-## 연속
+## Natural Logarithm
 -----
 
-- **연속성(Continuity)**
+![02](/_post_refer_img/MathematicalTechs/2.Calculus/02-02.svg){: width="100%"}
 
-    $$
-    f(a)=\displaystyle\lim_{x  \rightarrow a}f(x)
-    $$
-
-    - 설명변수 $x \in X$ 에 대한 반응변수 $y \in Y$ 의 함수 $f:\,X\rightarrow Y$ 에 대하여
-    - $f$ 가 $x=a$ 에서 함수값과 극한값이 모두 존재하고 그 값이 같을 때
-    - $y=f(x)$ 는 $x=a$ 에서 연속이라고 정의함
-
-- **연속함수(Continuous Function)**
-
-    $$
-    f(a)=\displaystyle\lim_{x  \rightarrow a}f(x), \; a \in X=R
-    $$
-
-    - 설명변수 $x \in X$ 에 대한 반응변수 $y \in Y$ 의 함수 $f:\,X\rightarrow Y$ 에 대하여
-    - 정의역 $X$ 를 모든 실수 $R$ 라고 정의하자
-    - $f$ 가 정의역에 대하여 연속이면 $f$ 를 연속함수라고 정의함
-
-## 자연로그의 밑
------
-
-- **자연로그의 밑 $e$ 의 정의**
+- **자연로그(Natural Logarithm)**: 함수 $$g(x)=1/x$$ 의 면적(정적분)에 관한 함수
 
     $$\begin{aligned}
-    e&=\displaystyle\lim_{n \rightarrow \infty}(1+\frac{1}{n})^n\\
-    &=2.71818\cdots,\;n \in R
+    f(x)
+    =\ln{x}
+    =\int_{t=1}^{t=x}{\frac{1}{t}\text{d}t}
     \end{aligned}$$
 
-- **자연로그의 정의**
+- **상수 $e$**: 자연로그 값이 $1$ 일 때의 $x$ 값
 
-    $$
-    \ln x=\log_e x=a \Leftrightarrow x=e^a
-    $$
+    $$\begin{aligned}
+    e
+    = \lim_{n \to \infty}{\left(1 + \frac{1}{n}\right)^{n}}
+    = 2.71828\cdots, \quad n \in \mathbb{R}
+    \end{aligned}$$
 
-- **예시**
-    - $f(x)=\displaystyle\lim_{x\rightarrow 0}(1+3x)^{\frac{1}{x}}$
+- `example` $\lim_{x \to 0}{(1+3x)^{1/x}}$
+
+    $$\begin{aligned}
+    \lim_{x \to 0}{(1+3x)^{n}}
+    &= \lim_{x \to 0}{\left(1+\frac{3}{n}\right)^{n}}\\
+    &= \lim_{x \to 0}{\left(1+\frac{3}{n/3}\right)^{n/3 \times 3}}\\
+    &= e^{3}
+    \end{aligned}$$
+
+- **연속 복리(Continuous Compounding)**: 가장 짧은 시간 간격으로 취하는 복리
+
+    - 원금 $a$ 를 연이율 $r$ 로 $n$ 년간 복리예금 시 원리금
 
         $$\begin{aligned}
-        n=\frac{1}{x} \Rightarrow 
-        f(x)
-        &=\displaystyle\lim_{n\rightarrow \infty}(1+\frac{3}{n})^n\\
-        &=\displaystyle\lim_{n\rightarrow \infty}(1+\frac{3}{\frac{1}{3}n})^{3 \times \frac{1}{3}n}\\
-        &=e^3
+        S
+        &= a(1+r)^{n}
         \end{aligned}$$
 
-- **연속복리와 $e$**
-    - **복리의 이해**
-        - 원금 $a$ 를 연이율 $r$ 로 $n$ 년간 복리예금 시 원리금 $S$ 를 다음과 같이 정의함
+    - $n$ 년간 이자를 $k$ 번 계산하는 경우 원리금
 
-            $$
-            S=a(1+r)^n
-            $$
-    
-    - **연속복리** : 가장 짧은 시간 간격으로 취하는 복리
-        - 원금 $a$ 를 연이율 $r$ 로 $n$ 년간 복리예금한다고 하자
-        - $n$ 년간 $m$ 번 이자를 계산하는 경우 원리금 $S$ 를 다음과 같이 정의함
+        $$\begin{aligned}
+        S
+        &= a\left[\left(1+r/k\right)^{k}\right]^{n}
+        \end{aligned}$$
 
-            $$
-            S=a[(1+\frac{r}{m})^m]^n
-            $$
-        
-        - $m$ 이 무한대로 발산한다고 했을 때 원리금 $S$ 를 다음과 같이 정의함
+    - $k \to \infty$ 일 때 원리금
 
-            $$\begin{aligned}
-            \lim_{m \rightarrow \infty} S
-            &=\lim_{m \rightarrow \infty} a[(1+\frac{r}{m})^m]^n \\
-            &=\lim_{m \rightarrow \infty} a[(1+\frac{1}{\frac{1}{r}m})^{r \times \frac{1}{r}m}]^{n} \\
-            &=a\times e^{r \times n}
-            \end{aligned}$$
+        $$\begin{aligned}
+        \lim_{k \to \infty}{S}
+        &= \lim_{k \to \infty}{a\left[\left(1+r/k\right)^{k}\right]^{n}}\\
+        &= \lim_{k \to \infty}{a\left[\left(1+\frac{1}{k/r}\right)^{k/r \times r}\right]^{n}}\\
+        &= a \times e^{r \times n}
+        \end{aligned}$$
