@@ -1,7 +1,7 @@
 ---
-order: 2
+order: 1
 title: Probability
-date: 2024-07-02
+date: 2025-01-30
 categories: [STATISTICAL TECHS, 0.distribution]
 tags: [Statistics]
 math: true
@@ -11,7 +11,7 @@ description: >-
     (2) "Statistical Models and Application (2024-1)" by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ. <br>
     (3) “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data & Management, College of Business Administration, Kookmin Univ.
 image:
-  path: /_post_refer_img/StatisticalTechs/1.Statistics/Thumbnail.png
+  path: /_post_refer_img/StatisticalTechs/0.Distribution/Thumbnail.jpg
 ---
 
 ## Probability

@@ -1,9 +1,9 @@
 ---
-order: 4
-title: Chi-Squared Distribution and Variations
-date: 2025-02-04
+order: 5
+title: Bernoulli Distribution and Variations
+date: 2025-02-03
 categories: [STATISTICAL TECHS, 0.distribution]
-tags: [Distribution, Variance, Chi-Squared Dist., Wishart Dist.]
+tags: [Distribution, Discrete Variable, Bernoulli Dist., Binomial Dist., Multinomial Dist.]
 math: true
 description: >-
     Based on the following lectures <br>
@@ -14,8 +14,14 @@ image:
     path: /_post_refer_img/StatisticalTechs/0.Distribution/Thumbnail.jpg
 ---
 
-## Chi-Squared Dist.
+## Bernoulli Dist.
 -----
 
-## Wishart Dist.
+## Categorical Dist.
+-----
+
+## Binomial Dist.
+-----
+
+## Multinomial Dist.
 -----
