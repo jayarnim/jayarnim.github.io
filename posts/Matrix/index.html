@@ -646,39 +646,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -791,9 +758,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1648 words"
+  title="868 words"
 >
-  <em>9 min</em> read</span>
+  <em>4 min</em> read</span>
 
         </div>
       </div>
@@ -801,189 +768,148 @@
   </header>
 
   <div class="content">
-    <h2 id="what-matrix"><span class="me-2">What? Matrix</span><a href="#what-matrix" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="matrix"><span class="me-2">Matrix</span><a href="#matrix" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-\[\begin{aligned}
-A_{n\times p}&amp;=\begin{pmatrix}
-a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1p}\\
-a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2p}\\
-\vdots&amp;\vdots&amp;\cdots&amp;\vdots\\
-a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{np}
-\end{pmatrix}\\
-&amp;=(a_{ij})\in R^{n\times p}, \\
-i&amp;=1, 2, \cdots, n,\\
-j&amp;=1, 2, \cdots, p
-\end{aligned}\]
-
 <ul>
-  <li><strong>행렬(Matrix)</strong>
+  <li>
+    <p><strong>행렬(Matrix)</strong>:</p>
+
+\[\begin{aligned}
+  \mathbf{X}
+  &amp;=\begin{bmatrix}
+  x_{1,1}&amp;x_{1,2}&amp;\cdots&amp;x_{1,P}\\
+  x_{2,1}&amp;x_{2,2}&amp;\cdots&amp;x_{2,P}\\
+  \vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+  x_{N,1}&amp;x_{N,2}&amp;\cdots&amp;x_{N,P}
+  \end{bmatrix}
+  \end{aligned}\]
+
     <ul>
-      <li>행(row)과 열(column)로 구분된 직사각 모양의 배열</li>
-      <li>행벡터 혹은 열벡터의 집합</li>
+      <li>
+        <p>행(row)과 열(column)로 구분된 직사각 모양의 배열</p>
+
+\[\mathbf{X}
+  = [x_{i,j}] \in \mathbb{R}^{N \times P}, \quad
+  \begin{aligned}
+  i&amp;=1,2,\cdots,N\\
+  j&amp;=1,2,\cdots,P
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>벡터들의 집합:</p>
+
+\[\begin{aligned}
+  \mathbf{X}
+  &amp;=\begin{bmatrix}
+  \mathbf{x}_{1}&amp;\mathbf{x}_{2}&amp;\cdots &amp; \mathbf{x}_{P}
+  \end{bmatrix},\quad \forall \mathbf{x} \in \mathbb{R}^{N}
+  \end{aligned}\]
+      </li>
     </ul>
   </li>
-  <li><strong>표기법</strong>
+  <li>
+    <p><strong>계수(Rank)</strong> : 임의의 행렬을 구성하는 벡터 중 선형 독립인 벡터의 갯수</p>
+
+\[\begin{aligned}
+  \mathrm{rank}(\mathbf{X}) \le \min{(N,P)}, \quad \mathbf{X} \in \mathbb{R}^{N \times P}
+  \end{aligned}\]
+
     <ul>
-      <li>행렬(Matrix) : $A$</li>
-      <li>벡터(Vector) : $\overrightarrow{a}$</li>
-      <li>스칼라(Scala) : $\alpha, \beta, \gamma, \cdots$</li>
-      <li>원소(Element) : $a_{ij}$</li>
-    </ul>
-  </li>
-  <li><strong>크기(Size)</strong>
-    <ul>
-      <li><strong>길이(Length; $n$)</strong> : 행벡터의 갯수, 관측치의 갯수</li>
-      <li><strong>차원(Dimention; $p$)</strong> : 열벡터의 갯수, 특징의 갯수</li>
-      <li><strong>크기(Size; $n \times p$)</strong> : 행렬의 크기</li>
+      <li><strong>Full-Rank</strong>: 어떤 행렬에 대하여 그 계수가 될 수 있는 가장 큰 값</li>
+      <li>정방행렬 \(\mathbf{X} \in \mathbb{R}^{N \times N}\) 의 계수가 <code class="language-plaintext highlighter-rouge">Full-Rank</code> 인 경우, 그 구성 벡터 \(\mathbf{x}_{1},\mathbf{x}_{2},\cdots,\mathbf{x}_{N}\) 는 모두 선형 독립임</li>
+      <li>정방행렬 \(\mathbf{X} \in \mathbb{R}^{N \times N}\) 의 계수가 <code class="language-plaintext highlighter-rouge">Full-Rank</code> 인 경우, 그 구성 벡터들의 집합 \(S=\{\mathbf{x}_{1},\mathbf{x}_{2},\cdots,\mathbf{x}_{N}\}\) 에 대하여 \(\mathrm{span}(S)=\mathbb{R}^{N}\) 임</li>
+      <li>정방행렬 \(\mathbf{X}\) 의 계수가 <code class="language-plaintext highlighter-rouge">Full-Rank</code> 인 경우, 그 역행렬 \(\mathbf{X}^{-1}\) 이 존재함</li>
+      <li>정방행렬 \(\mathbf{X} \in \mathbb{R}^{N \times N}\) 의 계수가 <code class="language-plaintext highlighter-rouge">Full-Rank</code> 인 경우, 그 행렬식 \(\mathrm{det}(\mathbf{X}) \ne 0\) 임</li>
     </ul>
   </li>
 </ul>
 
-<h2 id="특수한-행렬"><span class="me-2">특수한 행렬</span><a href="#특수한-행렬" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="special-matrices"><span class="me-2">Special Matrices</span><a href="#special-matrices" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
   <li>
-    <p><strong>정방행렬(Square Matrix)</strong> : 행벡터의 갯수와 열벡터의 갯수가 동일한 행렬</p>
+    <p><strong>정방행렬(Square Matrix)</strong>: 행과 열의 갯수가 동일한 행렬</p>
 
 \[\begin{aligned}
-  A_{n}&amp;=\begin{pmatrix}
-  a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
-  a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\
-  \vdots&amp;\vdots&amp;\cdots&amp;\vdots\\
-  a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}
-  \end{pmatrix}\\
-  &amp;=(a_{ij})\in R^{n\times n}, \\
-  i&amp;=1, 2, \cdots, n,\\
-  j&amp;=1, 2, \cdots, n
+  \mathbf{X}
+  \in \mathbb{R}^{N \times N}
   \end{aligned}\]
   </li>
   <li>
-    <p><strong>영행렬(Zero-Matrix)</strong> : 그 원소가 모두 0인 행렬</p>
+    <p><strong>영행렬(Zero-Matrix)</strong>: 원소가 모두 $0$ 인 행렬</p>
 
-\[0=\begin{pmatrix}
+\[\begin{aligned}
+  \mathbf{0}
+  &amp;=\begin{bmatrix}
   0&amp;0&amp;0\\
   0&amp;0&amp;0\\
   0&amp;0&amp;0
-  \end{pmatrix}\]
-
-    <ul>
-      <li>
-        <p>덧셈에 대한 항등원</p>
-
-\[A + 0 = A\]
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>항등행렬(Identify Matrix; $I_n$)</strong> : 대각항 원소는 모두 1이고, 비대각항 원소는 모두 0인 정방행렬</p>
-
-\[I_3=\begin{pmatrix}
-  1&amp;0&amp;0\\
-  0&amp;1&amp;0\\
-  0&amp;0&amp;1
-  \end{pmatrix}\]
-
-    <ul>
-      <li>
-        <p>내적에 대한 항등원</p>
-
-\[A\cdot I = I \cdot A = A\]
-      </li>
-      <li>
-        <p>각 차원에 대하여 그 단위벡터들의 모임</p>
-
-\[\begin{aligned}
-  I_n&amp;=
-  \begin{bmatrix}\overrightarrow{e_1}&amp;\overrightarrow{e_2}&amp;\overrightarrow{e_3}&amp;\cdots&amp;\overrightarrow{e_n}\end{bmatrix}\\
-  &amp;=
-  \begin{bmatrix}
-  \overrightarrow{e_1}\\
-  \overrightarrow{e_2}\\
-  \overrightarrow{e_3}\\
-  \vdots\\
-  \overrightarrow{e_n}
   \end{bmatrix}
   \end{aligned}\]
-      </li>
-    </ul>
   </li>
   <li>
-    <p><strong>대각행렬(Diagonal Matrix; $\text{diag}$)</strong> : 대각항을 제외한 모든 원소가 0인 정방행렬</p>
+    <p><strong>항등행렬(Identify Matrix)</strong>: 대각항 원소는 모두 $1$ 이고, 비대각항 원소는 모두 $0$ 인 정방행렬로서, 각 차원에 대하여 그 단위 벡터들의 모임</p>
 
-\[\text{diag}(1, 2, 3)=\begin{pmatrix}
+\[\begin{aligned}
+  \mathbf{I}_{N}
+  &amp;=\begin{bmatrix}
+  1&amp;0&amp;\cdots&amp;0\\
+  0&amp;1&amp;\cdots&amp;0\\
+  \vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+  0&amp;0&amp;\cdots&amp;1
+  \end{bmatrix}
+  =\begin{bmatrix}
+  \mathbf{e}_{1}&amp; \mathbf{e}_{2}&amp; \cdots&amp; \mathbf{e}_{N}
+  \end{bmatrix}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>대각행렬(Diagonal Matrix)</strong>: 대각항을 제외한 모든 원소가 $0$ 인 정방행렬</p>
+
+\[\begin{aligned}
+  \mathrm{diag}(1, 2, 3)
+  &amp;=\begin{bmatrix}
   1&amp;0&amp;0\\
   0&amp;2&amp;0\\
   0&amp;0&amp;3
-  \end{pmatrix}\]
+  \end{bmatrix}
+  \end{aligned}\]
   </li>
   <li>
-    <p><strong>삼각행렬(Triangular Matrix)</strong> : 대각항을 기준으로 그 아래 혹은 위에 위치한 원소가 모두 0인 정방행렬</p>
+    <p><strong>삼각행렬(Triangular Matrix)</strong>: 대각항을 기준으로 그 아래 혹은 위에 위치한 원소가 모두 0인 정방행렬</p>
 
-\[\begin{pmatrix}
+\[\begin{aligned}
+  \begin{bmatrix}
   1&amp;4&amp;5\\
   0&amp;2&amp;6\\
   0&amp;0&amp;3
-  \end{pmatrix},
-  \begin{pmatrix}
+  \end{bmatrix},
+  \quad
+  \begin{bmatrix}
   1&amp;0&amp;0\\
   4&amp;2&amp;0\\
   5&amp;6&amp;3
-  \end{pmatrix}\]
+  \end{bmatrix}
+  \end{aligned}\]
   </li>
   <li>
-    <p><strong>대칭행렬(Symmetric Matrix)</strong> : 그 전치행렬이 자기 자신이 되는 정방행렬</p>
+    <p><strong>대칭행렬(Symmetric Matrix)</strong>: 그 전치행렬이 자기 자신이 되는 정방행렬</p>
 
 \[\begin{aligned}
-  A^T&amp;=A\\
-  a_{ij}&amp;=a_{ji}
+  \mathbf{X}^{T}
+  &amp;=\mathbf{X}
   \end{aligned}\]
-
-\[\begin{pmatrix}
-  1&amp;3&amp;0\\
-  3&amp;2&amp;1\\
-  0&amp;1&amp;-1
-  \end{pmatrix}^T=
-  \begin{pmatrix}
-  1&amp;3&amp;0\\
-  3&amp;2&amp;1\\
-  0&amp;1&amp;-1
-  \end{pmatrix}\]
-
-    <ul>
-      <li>
-        <p>대칭행렬이 가역성을 가지면 그 역행렬 또한 대칭행렬임</p>
-
-\[\begin{aligned}
-  if\;A^T&amp;=A,\\
-  A^{-1}A&amp;=I\\
-  (A^{-1}A)^T&amp;=I \, (\because I^T=I)\\
-  A^T(A^{-1})^T&amp;=I\\
-  A(A^{-1})^T&amp;=I\\
-  A^{-1}A(A^{-1})^T&amp;=A^{-1}I\\
-  \therefore (A^{-1})^T&amp;=A^{-1}
-  \end{aligned}\]
-      </li>
-    </ul>
   </li>
   <li>
-    <p><strong>직교행렬(Orthogonal Matrix)</strong> : 모든 행벡터 혹은 열벡터가 직교정규벡터로 구성된 행렬</p>
+    <p><strong>직교행렬(Orthogonal Matrix)</strong>: 모든 행벡터 혹은 열벡터가 직교정규벡터로 구성된 행렬</p>
 
-\[\overrightarrow{a_{1}}\perp\overrightarrow{a_{2}}\perp\cdots\perp\overrightarrow{a_{n}},\]
-
-\[A=
-  \begin{bmatrix}
-  \overrightarrow{a_1}&amp;\overrightarrow{a_2}&amp;\cdots&amp;\overrightarrow{a_n}
-  \end{bmatrix}\]
-
-    <ul>
-      <li>
-        <p>직교행렬의 역행렬은 그 전치행렬임</p>
-
-\[A^TA=AA^T=I\]
-      </li>
-    </ul>
+\[\begin{aligned}
+  \mathbf{x}_{1}\perp\cdots\perp\mathbf{x}_{n},
+  \quad
+  \mathbf{x}_{i} = \mathbf{X}_{:,i}
+  \end{aligned}\]
   </li>
 </ul>
 
@@ -991,102 +917,60 @@ j&amp;=1, 2, \cdots, p
 <hr />
 
 <ul>
-  <li><strong>덧셈과 뺄셈</strong>
-    <ul>
-      <li>
-        <p>크기가 $n\times p$ 로 동일한 행렬 $A, B$ 의 덧셈 혹은 뺄셈을 대응 원소의 합 혹은 차로 정의함</p>
+  <li>
+    <p><strong>전치(Transpose)</strong>: 행렬의 전치는 그 행과 열의 위치를 바꾸는 연산으로 정의함</p>
 
 \[\begin{aligned}
-  A_{n \times p}&amp;=\begin{bmatrix}a_{ij}\end{bmatrix},\\
-  B_{n \times p}&amp;=\begin{bmatrix}b_{ij}\end{bmatrix}\\
-  A+B&amp;=\begin{bmatrix}a_{ij}+b_{ij}\end{bmatrix},\\
-  i&amp;=1, 2, 3, \cdots, n, \\
-  j&amp;=1, 2, 3, \cdots, p
+  [x_{i,j}]^{T}
+  &amp;= [x_{j,i}]
   \end{aligned}\]
-      </li>
+
+    <ul>
+      <li>$\alpha^T=\alpha$</li>
+      <li>$(\mathbf{A}+\mathbf{B})^{T}=\mathbf{A}^{T}+\mathbf{B}^{T}$</li>
+      <li>$(\mathbf{AB})^{T}=\mathbf{B}^{T}\mathbf{A}^{T}$</li>
     </ul>
   </li>
-  <li><strong>스칼라-행렬 곱셈</strong>
-    <ul>
-      <li>
-        <p>스칼라와 행렬의 곱셈을 행렬의 모든 원소에 대한 스칼라 곱으로 정의함</p>
+  <li>
+    <p><strong>덧셈과 뺄셈</strong>: 크기가 $N \times P$ 로 동일한 두 행렬의 덧셈과 뺄셈을 대응 원소의 합과 차로 정의함</p>
 
 \[\begin{aligned}
-  \alpha &amp;\in R, \\
-  A_{n \times p}&amp;=\begin{bmatrix}a_{ij}\end{bmatrix} \\
-  \alpha A_{n \times p}&amp;=\begin{bmatrix}\alpha \times a_{ij}\end{bmatrix},\\
-  i&amp;=1, 2, 3, \cdots, n, \\
-  j&amp;=1, 2, 3, \cdots, p
+  \mathbf{X}+\mathbf{Y}
+  &amp;= [x_{i,j} + y_{i,j}]
   \end{aligned}\]
-      </li>
+
+    <ul>
+      <li>$\mathbf{X} \pm \mathbf{0} = \mathbf{X}$</li>
     </ul>
   </li>
-  <li><strong>전치(Transpose)</strong>
-    <ul>
-      <li>
-        <p>행렬의 전치는 그 행과 열의 위치를 바꾸는 연산으로 정의함</p>
+  <li>
+    <p><strong>스칼라-행렬 곱셈</strong>: 스칼라와 행렬의 곱셈을 행렬의 모든 원소에 대한 스칼라 곱으로 정의함</p>
 
 \[\begin{aligned}
-  A_{n \times p}&amp;=\begin{bmatrix}a_{ij}\end{bmatrix} \\
-  (A_{n \times p})^T&amp;=\begin{bmatrix}a_{ji}\end{bmatrix} \\
-  &amp;=A_{p \times n}, \\
-  i&amp;=1, 2, 3, \cdots, n, \\
-  j&amp;=1, 2, 3, \cdots, p
+  \alpha \cdot \mathbf{X}
+  &amp;= [\alpha \times x_{i,j}]
   \end{aligned}\]
-      </li>
-      <li>
-        <p><strong>성질</strong></p>
-        <ul>
-          <li>$\alpha^T=\alpha$</li>
-          <li>$(A+B)^T=A^T+B^T$</li>
-          <li>$(\alpha A)^T=\alpha(A^T)$</li>
-          <li>$(AB)^T=B^TA^T$</li>
-        </ul>
-      </li>
-    </ul>
   </li>
-  <li><strong>대각합(Trace; $\text{tr}$)</strong>
-    <ul>
-      <li>
-        <p>정방행렬 $A_n$ 의 대각합은 그 대각항의 총합으로 정의함</p>
-
-\[\text{tr}(A_n)=\sum_{i=1}^{n}a_{ii}\]
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="matrix-multiplication"><span class="me-2">Matrix Multiplication</span><a href="#matrix-multiplication" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<ul>
-  <li><strong>적합성 조건(Conformability Condition)</strong>
-    <ul>
-      <li>전항의 차원(열벡터 갯수)과 후항의 길이(행벡터 갯수)가 동일함</li>
-    </ul>
-  </li>
-  <li><strong>행렬 곱셈</strong>
-    <ul>
-      <li>
-        <p>적합성 조건을 만족하는 행렬 $A_{n \times p},B_{p \times m}\(을 곱한 값\)C_{n \times m}$$ 를 다음과 같이 정의함</p>
+  <li>
+    <p><strong>행렬 곱셈</strong>: 적합성 조건(Conformability Condition)을 만족하는 행렬 \(\mathbf{X} \in \mathbb{R}^{M \times P}, \mathbf{Y} \in \mathbb{R}^{P \times N}\) 을 곱한 결과 \(\mathbf{XY} \in \mathbb{R}^{M \times N}\) 는 전항의 \(i=1,2,\cdots,M\) 번째 행벡터와 후항의 \(j=1,2,\cdots,N\) 번째 열벡터 간 내적의 집합임</p>
 
 \[\begin{aligned}
-  C_{n \times m}&amp;=\begin{bmatrix}c_{il}\end{bmatrix}\\
-  c_{il}&amp;=\sum_{j=1}^{p}(a_{ij}\times b_{jl}), \\
-  i&amp;=1, 2, 3, \cdots, n, \\
-  j&amp;=1, 2, 3, \cdots, p, \\
-  l&amp;=1, 2, 3, \cdots, m
+  \mathbf{X}^{T}
+  &amp;=\begin{bmatrix}\mathbf{x}_{1}&amp;\mathbf{x}_{2}&amp;\cdots&amp;\mathbf{x}_{M}\end{bmatrix},\quad \mathbf{x}_{i} \in \mathbb{R}^{P}\\
+  \mathbf{Y}
+  &amp;=\begin{bmatrix}\mathbf{y}_{1}&amp;\mathbf{y}_{2}&amp;\cdots&amp;\mathbf{y}_{N}\end{bmatrix},\quad \mathbf{y}_{j} \in \mathbb{R}^{P}\\
+  \mathbf{XY}
+  &amp;=\begin{bmatrix}
+  \left&lt;\mathbf{x}_{1},\mathbf{y}_{1}\right&gt; &amp; \left&lt;\mathbf{x}_{1},\mathbf{y}_{2}\right&gt; &amp; \cdots &amp; \left&lt;\mathbf{x}_{1},\mathbf{y}_{N}\right&gt;\\
+  \left&lt;\mathbf{x}_{2},\mathbf{y}_{1}\right&gt; &amp; \left&lt;\mathbf{x}_{2},\mathbf{y}_{2}\right&gt; &amp; \cdots &amp; \left&lt;\mathbf{x}_{2},\mathbf{y}_{N}\right&gt;\\
+  \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+  \left&lt;\mathbf{x}_{M},\mathbf{y}_{1}\right&gt; &amp; \left&lt;\mathbf{x}_{M},\mathbf{y}_{2}\right&gt; &amp; \cdots &amp; \left&lt;\mathbf{x}_{M},\mathbf{y}_{N}\right&gt;\\
+  \end{bmatrix}
   \end{aligned}\]
 
-        <ul>
-          <li>즉, 전항의 $i$ 번째 행벡터와 후항의 $i$ 번째 열벡터 간 내적의 집합임</li>
-        </ul>
-      </li>
-      <li>
-        <p>교환법칙이 성립하지 않음</p>
-
-\[A_{n \times p}B_{p \times m} \ne B_{p \times m}A_{n \times p}\]
-      </li>
+    <ul>
+      <li>$\mathbf{XY} \ne \mathbf{YX}$</li>
+      <li>$\mathbf{X}\mathbf{I} = \mathbf{X}$</li>
     </ul>
   </li>
 </ul>
@@ -1095,131 +979,37 @@ j&amp;=1, 2, \cdots, p
 <hr />
 
 <ul>
-  <li><strong>역행렬(Inverse Matrix)</strong>
-    <ul>
-      <li>
-        <p>정방행렬 $A_n, B_n$ 에 대하여 다음을 만족하는 경우 양자는 서로 역행렬 관계에 있음</p>
-
-\[AB=BA=I \Rightarrow A^{-1}=B\,and\,B^{-1}=A\]
-      </li>
-    </ul>
-  </li>
-  <li><strong>성질</strong>
-    <ul>
-      <li>$I^{-1}=I$</li>
-      <li>$A_n=diag\begin{bmatrix}a_{ii}\end{bmatrix},\;i=1,2,3,\cdots,n \ \Rightarrow A^{-1}=diag\begin{bmatrix}\frac{1}{a_{ii}}\end{bmatrix}$</li>
-      <li>$A=\begin{bmatrix}\overrightarrow{a_1}&amp;\overrightarrow{a_2}&amp;\cdots&amp;\overrightarrow{a_n}\end{bmatrix},\;\overrightarrow{a_{1}}\perp\overrightarrow{a_{2}}\perp\cdots\perp\overrightarrow{a_{n}} \ \Rightarrow A^{-1}=A^T$</li>
-      <li>$(\alpha A)^{-1}=\alpha^{-1}A^{-1}$</li>
-      <li>$(A^{T})^{-1}=(A^{-1})^T$</li>
-      <li>$(AB)^{-1}=B^{-1}A^{-1}$</li>
-    </ul>
-  </li>
-  <li><strong>가역성</strong>
-    <ul>
-      <li><strong>가역성(Inverible)</strong> : 그 역을 계산할 수 있는 성질
-        <ul>
-          <li><strong>정칙행렬(Non-Singular Matrix)</strong> : 가역성을 가지는 행렬</li>
-          <li><strong>특이행렬(Singular Matrix)</strong> : 가역성을 가지지 않는 행렬</li>
-        </ul>
-      </li>
-      <li><strong>가역성을 가질 조건</strong>
-        <ul>
-          <li>$\text{det}(A_n) \ne 0$</li>
-          <li>$\text{rank}(A_n)=n$</li>
-          <li>행렬 $A_n$ 를 구성하는 모든 벡터는 선형 독립임</li>
-          <li>행렬 $A_n$ 를 구성하는 모든 벡터를 $span$ 하여 $n$ 차원 공간을 구성할 수 있음</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li><strong>계산 방법</strong>
-    <ul>
-      <li>
-        <p>$2\times 2$ 정방행렬에 한하여 그 역행렬을 다음과 같이 구할 수 있음</p>
+  <li>
+    <p><strong>역행렬(Inverse Matrix)</strong>: 정방행렬 $\mathbf{X},\mathbf{Y} \in \mathbb{R}^{N \times N}$ 에 대하여 다음을 만족하는 경우, 양자는 서로 역행렬 관계에 있음</p>
 
 \[\begin{aligned}
-  &amp;A_2=
-  \begin{pmatrix}
-  a&amp;b\\
-  c&amp;d
-  \end{pmatrix},\;ad-bc \ne 0 \\
-  &amp;\Rightarrow A_{2}^{-1}=\frac{1}{ad-bc}\begin{pmatrix}
-  d&amp;-b\\
-  -c&amp;a
-  \end{pmatrix}
+  \mathbf{X}\mathbf{Y}
+  =\mathbf{Y}\mathbf{X}
+  =\mathbf{I}
   \end{aligned}\]
-      </li>
-      <li>
-        <p>$3\times 3$ 이상의 정방행렬에 대하여 그 역행렬은 <strong>가우스-조르단 소거법(Gaussian Elimination)</strong>으로 구함</p>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="determinant"><span class="me-2">Determinant</span><a href="#determinant" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<ul>
-  <li>
-    <p><strong>행렬식(Determinant; $\text{det}$)</strong></p>
-
-\[\text{det}(A_n)\; or\; |A|\]
-
-    <ul>
-      <li>정방행렬 $A_n$ 를 실수에 대응시키는 함수</li>
-      <li>기하학적으로 봤을 때, 정방행렬 $A_n$ 를 구성하는 열벡터에 의해 결정되는 평행사변형의 부피를 의미함</li>
-    </ul>
-  </li>
-  <li><strong>해석</strong>
-    <ul>
-      <li>$n \times n$ 정방행렬에 대하여 그 행렬식이 $0$ 이 아닌 경우 그 역행렬이 존재함</li>
-      <li>$n \times n$ 정방행렬에 대하여 그 행렬식이 $0$ 이 아닌 경우 그 계수는 $n$ 임</li>
-      <li>$n \times n$ 정방행렬에 대하여 그 행렬식이 $0$ 이 아닌 경우 이를 구성하는 구성하는 모든 벡터는 선형 독립임</li>
-      <li>$n \times n$ 정방행렬에 대하여 그 행렬식이 $0$ 이 아닌 경우 이를 구성하는 구성하는 모든 벡터를 $span$ 하여 $n$ 차원 공간을 구성할 수 있음</li>
-    </ul>
-  </li>
-  <li><strong>성질</strong>
-    <ul>
-      <li>$\text{det}(\alpha)=\alpha$</li>
-      <li>$\text{det}(I)=1$</li>
-      <li>$\text{det}(A)=det(A^T)$</li>
-      <li>$\text{det}(A^{-1})=\text{det}(A)^{-1}$</li>
-      <li>$\text{det}(AB)=\text{det}(A) \times \text{det}(B)$</li>
-      <li>$\text{det}(\alpha \times A_n)=\alpha^n \times \text{det}(A_n)$</li>
-      <li>$\begin{vmatrix} \cdots &amp; \overrightarrow{a_i} \cdots \overrightarrow{a_j} \end{vmatrix}=-\begin{vmatrix} \cdots &amp; \overrightarrow{a_j} \cdots \overrightarrow{a_i} \end{vmatrix}$</li>
-      <li>$\begin{vmatrix}\alpha \times a &amp; \alpha \times b \ c &amp; d\end{vmatrix} = \alpha \times \begin{vmatrix}a&amp;b\ c&amp;d\end{vmatrix}$</li>
-    </ul>
-  </li>
-  <li><strong>계산 방법</strong>
-    <ul>
-      <li>$\text{det}(A_2)=a_{11}a_{22}-a_{12}a_{21}$</li>
-      <li>삼각행렬에 대하여 그 행렬식은 대각항 원소들의 곱으로 구할 수 있음</li>
-      <li>$3\times 3$ 이상의 정방행렬에 대하여 그 행렬식은 <strong>가우스-조르단 소거법(Gaussian Elimination)</strong>으로 구함</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="rank"><span class="me-2">Rank</span><a href="#rank" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<ul>
-  <li>
-    <p><strong>계수(Rank)</strong> : 임의의 행렬을 구성하는 벡터 중 선형 독립인 벡터의 갯수</p>
-
-\[\text{rank}(A)\]
   </li>
   <li>
-    <p><strong>Full-Rank</strong> : 크기가 $n \times p$ 인 모든 행렬에 대하여 그 계수가 될 수 있는 가장 큰 값</p>
+    <p><strong>가역성(Inverible)</strong>: 그 역을 계산할 수 있는 성질</p>
 
-\[\text{rank}(A_{n \times p})=\min{(n,p)}\]
+\[\begin{aligned}
+  \exists \mathbf{X}^{-1} \quad \text{such that} \quad \mathrm{rank}(\mathbf{X}_{N \times N}) = N
+  \end{aligned}\]
+
+    <ul>
+      <li><strong>정칙행렬(Non-Singular Matrix)</strong>: 가역성을 가지는 행렬</li>
+      <li><strong>특이행렬(Singular Matrix)</strong>: 가역성을 갖지 않는 행렬</li>
+    </ul>
   </li>
   <li>
-    <p><strong>해석</strong></p>
+    <p>연산 규칙:</p>
     <ul>
-      <li>$n \times n$ 정방행렬에 대하여 그 계수가 $Full-Rank$ 인 경우 그 역행렬이 존재함</li>
-      <li>$n \times n$ 정방행렬에 대하여 그 계수가 $Full-Rank$ 인 경우 그 행렬식은 $0$ 이 아님</li>
-      <li>$n \times n$ 정방행렬에 대하여 그 계수가 $Full-Rank$ 인 경우 이를 구성하는 구성하는 모든 벡터는 선형 독립임</li>
-      <li>$n \times n$ 정방행렬에 대하여 그 계수가 $Full-Rank$ 인 경우 이를 구성하는 구성하는 모든 벡터를 $span$ 하여 $n$ 차원 공간을 구성할 수 있음</li>
+      <li>$\mathbf{I}^{-1}=\mathbf{I}$</li>
+      <li>$(\alpha\mathbf{X})^{-1}=\alpha^{-1}\mathbf{X}^{-1}$</li>
+      <li>$(\mathbf{X}^{T})^{-1}=(\mathbf{X}^{-1})^{T}$</li>
+      <li>$(\mathbf{XY})^{-1}=\mathbf{Y}^{-1}\mathbf{X}^{-1}$</li>
+      <li>$\mathrm{diag}(a_{i})^{-1}=\mathrm{diag}(1/a_{i})$</li>
+      <li>\(\mathbf{x}_{1}\perp\cdots\perp\mathbf{x}_{n} \Rightarrow \mathbf{X}^{-1}=\mathbf{X}^{T}\) \(\quad\)</li>
+      <li>$\mathbf{X}^{T}=\mathbf{X} \Rightarrow (\mathbf{X}^{-1})^{T}=\mathbf{X}^{-1}$</li>
     </ul>
   </li>
 </ul>
@@ -1350,35 +1140,35 @@ j&amp;=1, 2, \cdots, p
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Hierarchical_Clustering/">Hierarchical Clustering</a>
+          <a href="/posts/Markov_Chain/">Markov Chain</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/LDA/">Linear Discriminant Analysis</a>
+          <a href="/posts/Cox_Process/">Cox Process</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/PCA/">Principal Component Analysis</a>
+          <a href="/posts/CRP/">Chinese Restaurant Process</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/BAM/">Bayesian Attention Modules</a>
+          <a href="/posts/IBP/">Indian Buffet Process</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/CLiMF/">CLiMF</a>
+          <a href="/posts/GP_RFFGP/">GP (3) Random Fourier Features Gaussian Process</a>
         </li>
       
     </ul>
@@ -1451,11 +1241,6 @@ j&amp;=1, 2, \cdots, p
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -1760,779 +1545,6 @@ j&amp;=1, 2, \cdots, p
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -3017,87 +2029,6 @@ j&amp;=1, 2, \cdots, p
     
     
     
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3462,6 +2393,10 @@ j&amp;=1, 2, \cdots, p
     
     
     
+      
+        
+        
+
   
     
     
@@ -3472,6 +2407,1547 @@ j&amp;=1, 2, \cdots, p
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -3494,16 +3970,13 @@ j&amp;=1, 2, \cdots, p
         <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
@@ -3512,10 +3985,13 @@ j&amp;=1, 2, \cdots, p
         <a class="post-tag btn btn-outline-primary" href="/tags/nlp/">NLP</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/objective-function/">Objective Function</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/a-b-test/">A/B Test</a>
       
     </div>
   </section>
@@ -3584,6 +4060,18 @@ j&amp;=1, 2, \cdots, p
 
   
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -3964,11 +4452,6 @@ j&amp;=1, 2, \cdots, p
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -4273,779 +4756,6 @@ j&amp;=1, 2, \cdots, p
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
   
     
     
@@ -5530,87 +5240,6 @@ j&amp;=1, 2, \cdots, p
     
     
     
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -5975,6 +5604,10 @@ j&amp;=1, 2, \cdots, p
     
     
     
+      
+        
+        
+
   
     
     
@@ -5985,6 +5618,1547 @@ j&amp;=1, 2, \cdots, p
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -6007,16 +7181,13 @@ j&amp;=1, 2, \cdots, p
         <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
@@ -6025,10 +7196,13 @@ j&amp;=1, 2, \cdots, p
         <a class="post-tag btn btn-outline-primary" href="/tags/nlp/">NLP</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/objective-function/">Objective Function</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/economics/">Economics</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/a-b-test/">A/B Test</a>
       
     </div>
   </section>
