@@ -1,7 +1,7 @@
 ---
 order: 2
 title: Space (2) Measure Space
-date: 2024-07-27
+date: 2025-02-04
 categories: [MATHEMATICAL TECHS, 3.etc]
 tags: [Mathematics]
 math: true
