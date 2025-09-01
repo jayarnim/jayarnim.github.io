@@ -1,12 +1,12 @@
 ---
 order: 8
 title: Markov Chain
-date: 2025-07-08
-categories: [STATISTICAL TECHS, 4.stochastic process]
+date: 2025-08-08
+categories: [BAYES, 4.stochastic process]
 tags: [Stochastic Process, Time Series, Markov Chain, Hidden Markov Model]
 math: true
 image:
-    path: /_post_refer_img/StatisticalTechs/4.StochasticProcess/Thumbnail.jpg
+    path: /_post_refer_img/BayesianModeling/4.StochasticProcess/Thumbnail.jpg
 ---
 
 ## Markov Chain

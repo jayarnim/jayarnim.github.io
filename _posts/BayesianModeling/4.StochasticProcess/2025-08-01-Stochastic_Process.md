@@ -1,12 +1,12 @@
 ---
 order: 1
 title: Stochastic Process
-date: 2025-07-01
-categories: [STATISTICAL TECHS, 4.stochastic process]
+date: 2025-08-01
+categories: [BAYES, 4.stochastic process]
 tags: [Bayesian, Stochastic Process, Time Series]
 math: true
 image:
-    path: /_post_refer_img/StatisticalTechs/4.StochasticProcess/Thumbnail.jpg
+    path: /_post_refer_img/BayesianModeling/4.StochasticProcess/Thumbnail.jpg
 ---
 
 - **확률 과정(Stochastic Process)**

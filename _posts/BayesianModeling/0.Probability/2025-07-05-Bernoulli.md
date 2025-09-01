@@ -1,9 +1,9 @@
 ---
-order: 8
-title: Exponential Distribution and Variations
-date: 2025-02-06
-categories: [STATISTICAL TECHS, 0.distribution]
-tags: [Distribution, Survival Analysis, Exponential Dist., Gamma Dist., Weibull Dist.]
+order: 5
+title: Bernoulli Distribution and Variations
+date: 2025-07-05
+categories: [BAYES, 0.probability]
+tags: [Distribution, Discrete Variable, Bernoulli Dist., Binomial Dist., Multinomial Dist.]
 math: true
 description: >-
     Based on the following lectures <br>
@@ -11,14 +11,17 @@ description: >-
     (2) "Statistical Models and Application (2024-1)" by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ. <br>
     (3) “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data & Management, College of Business Administration, Kookmin Univ.
 image:
-    path: /_post_refer_img/StatisticalTechs/0.Distribution/Thumbnail.jpg
+    path: /_post_refer_img/BayesianModeling/0.Probability/Thumbnail.jpg
 ---
 
-## Exponential Dist.
+## Bernoulli Dist.
 -----
 
-## Gamma Dist.
+## Categorical Dist.
 -----
 
-## Weibull Dist.
+## Binomial Dist.
+-----
+
+## Multinomial Dist.
 -----
