@@ -4,7 +4,7 @@
   <id>https://jayarnim.github.io/</id>
   <title>Data Scientist</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-09-02T03:57:32+09:00</updated>
+  <updated>2025-09-02T04:28:19+09:00</updated>
   <author>
     <name>jayarnim</name>
     <uri>https://jayarnim.github.io/</uri>
@@ -22,9 +22,9 @@
   <entry>
     <title>Markov Chain</title>
     <link href="https://jayarnim.github.io/posts/Markov_Chain/" rel="alternate" type="text/html" title="Markov Chain" />
-    <published>2025-07-08T00:00:00+09:00</published>
+    <published>2025-08-08T00:00:00+09:00</published>
   
-    <updated>2025-07-08T00:00:00+09:00</updated>
+    <updated>2025-08-08T00:00:00+09:00</updated>
   
     <id>https://jayarnim.github.io/posts/Markov_Chain/</id>
     <content src="https://jayarnim.github.io/posts/Markov_Chain/" />
@@ -34,7 +34,7 @@
 
   
     
-    <category term="STATISTICAL TECHS" />
+    <category term="BAYES" />
     
     <category term="4.stochastic process" />
     
@@ -64,9 +64,9 @@
   <entry>
     <title>Cox Process</title>
     <link href="https://jayarnim.github.io/posts/Cox_Process/" rel="alternate" type="text/html" title="Cox Process" />
-    <published>2025-07-07T00:00:00+09:00</published>
+    <published>2025-08-07T00:00:00+09:00</published>
   
-    <updated>2025-07-07T00:00:00+09:00</updated>
+    <updated>2025-08-07T00:00:00+09:00</updated>
   
     <id>https://jayarnim.github.io/posts/Cox_Process/</id>
     <content src="https://jayarnim.github.io/posts/Cox_Process/" />
@@ -76,7 +76,7 @@
 
   
     
-    <category term="STATISTICAL TECHS" />
+    <category term="BAYES" />
     
     <category term="4.stochastic process" />
     
@@ -96,9 +96,9 @@ Cox Process</summary>
   <entry>
     <title>Chinese Restaurant Process</title>
     <link href="https://jayarnim.github.io/posts/CRP/" rel="alternate" type="text/html" title="Chinese Restaurant Process" />
-    <published>2025-07-06T00:00:00+09:00</published>
+    <published>2025-08-06T00:00:00+09:00</published>
   
-    <updated>2025-07-06T00:00:00+09:00</updated>
+    <updated>2025-08-06T00:00:00+09:00</updated>
   
     <id>https://jayarnim.github.io/posts/CRP/</id>
     <content src="https://jayarnim.github.io/posts/CRP/" />
@@ -108,7 +108,7 @@ Cox Process</summary>
 
   
     
-    <category term="STATISTICAL TECHS" />
+    <category term="BAYES" />
     
     <category term="4.stochastic process" />
     
@@ -125,9 +125,9 @@ Chinese Restaurant Process</summary>
   <entry>
     <title>Indian Buffet Process</title>
     <link href="https://jayarnim.github.io/posts/IBP/" rel="alternate" type="text/html" title="Indian Buffet Process" />
-    <published>2025-07-05T00:00:00+09:00</published>
+    <published>2025-08-05T00:00:00+09:00</published>
   
-    <updated>2025-07-05T00:00:00+09:00</updated>
+    <updated>2025-08-05T00:00:00+09:00</updated>
   
     <id>https://jayarnim.github.io/posts/IBP/</id>
     <content src="https://jayarnim.github.io/posts/IBP/" />
@@ -137,7 +137,7 @@ Chinese Restaurant Process</summary>
 
   
     
-    <category term="STATISTICAL TECHS" />
+    <category term="BAYES" />
     
     <category term="4.stochastic process" />
     
@@ -157,9 +157,9 @@ Indian Buffet Process</summary>
   <entry>
     <title>GP (3) Random Fourier Features Gaussian Process</title>
     <link href="https://jayarnim.github.io/posts/GP_RFFGP/" rel="alternate" type="text/html" title="GP (3) Random Fourier Features Gaussian Process" />
-    <published>2025-07-04T00:00:00+09:00</published>
+    <published>2025-08-04T00:00:00+09:00</published>
   
-    <updated>2025-07-04T00:00:00+09:00</updated>
+    <updated>2025-08-04T00:00:00+09:00</updated>
   
     <id>https://jayarnim.github.io/posts/GP_RFFGP/</id>
     <content src="https://jayarnim.github.io/posts/GP_RFFGP/" />
@@ -169,7 +169,7 @@ Indian Buffet Process</summary>
 
   
     
-    <category term="STATISTICAL TECHS" />
+    <category term="BAYES" />
     
     <category term="4.stochastic process" />
     
