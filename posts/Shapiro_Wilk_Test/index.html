@@ -603,6 +603,28 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -715,7 +737,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="541 words"
+  title="583 words"
 >
   <em>3 min</em> read</span>
 
@@ -730,86 +752,41 @@
 
 <ul>
   <li>
-    <p><strong>정규성 검정(Shapiro-Wilk Test)</strong>:</p>
+    <p><strong>정규성 검정(Shapiro-Wilk Test)</strong>: 표본 순위와 표준정규분포에서 기대되는 순위 값의 선형 결합을 비교함으로써 표본이 정규 분포를 따르는지 여부를 검정하는 방법</p>
   </li>
-  <li><strong>귀무가설과 대립가설 설정</strong>
+  <li>귀무가설과 대립가설 설정:
     <ul>
       <li>$H_{0}:\quad X \sim N(\mu, \sigma^2)$</li>
       <li>$H_{1}:\quad X \not\sim N(\mu, \sigma^2)$</li>
     </ul>
   </li>
   <li>
-    <p><strong>검정통계량 도출</strong></p>
-
-\[W=\frac{\left(\sum_{i=1}^{n} \alpha_{i} X_{i}\right)^2}{\sum_{i=1}^{n}\left(X_{i} - \overline{X}\right)^2}\]
-
-    <ul>
-      <li>
-        <p>$\overrightarrow{X}$ : 표본의 관측치 $X_{i}$ 를 크기에 따라 오름차순 정렬한 순위 통계량 벡터</p>
+    <p>검정통계량 정의:</p>
 
 \[\begin{aligned}
-  \overrightarrow{X}
-  =\begin{pmatrix} X_{1}&amp;X_{2}&amp;\cdots&amp;X_{n} \end{pmatrix}^{T}
+  W
+  &amp;= \frac{\left(\sum_{i=1}^{n} \beta_{i} X_{i}\right)^2}{\sum_{i=1}^{n}\left(X_{i} - \overline{X}\right)^2}
   \end{aligned}\]
-
-        <ul>
-          <li>$\overline{X}=\displaystyle\frac{1}{n}\sum_{i=1}^{n}{X_{i}}$ : 표본평균</li>
-        </ul>
-      </li>
-      <li>
-        <p>$\overrightarrow{\alpha}$ : 순위 통계량 벡터 $\overrightarrow{X}$ 의 계수 벡터</p>
-
-\[\overrightarrow{\alpha}=\displaystyle\frac{\overrightarrow{m}^{T}\mathbb{V}^{-1}}{\Vert \mathbb{V}^{-1}\overrightarrow{m} \Vert}\]
-
-        <ul>
-          <li>
-            <p>$\overrightarrow{m}$ : 기대 순위 통계량 벡터</p>
-
-\[\overrightarrow{m}=\begin{pmatrix} E\left[X_{1}\right]&amp;E\left[X_{2}\right]&amp;\cdots&amp;E\left[X_{n} \right]\end{pmatrix}^{T}\]
-          </li>
-          <li>
-            <p>$\mathbb{V}$ : 기대 순위 통계량의 공분산 행렬</p>
-
-\[\mathbb{V}_{i,j}=\text{Cov}\Big[E\left[X_{i}\right],E\left[X_{j}\right]\Big]\]
-          </li>
-          <li>$\overrightarrow{m}^{T}\mathbb{V}^{-1}$ : $\mathbb{V}^{-1}$ 에 의해 선형 변환되어 상호 독립된 기대 순위 통계량 벡터</li>
-          <li>$\Vert \mathbb{V}^{-1}\overrightarrow{m} \Vert$ : 정규화 항</li>
-        </ul>
-      </li>
-    </ul>
   </li>
-  <li><strong>표본 $Y \sim N(0,1)$ 를 활용한 경험적 분포 생성</strong>
-    <ol>
-      <li>
-        <p>표준정규분포로부터 $n$ 개의 관측치로 구성된 표본을 반복적으로 생성</p>
+  <li>
+    <p>귀무가설 하 검정통계량의 분포 생성:</p>
 
 \[\begin{aligned}
- \overrightarrow{Y}^{(k)}
- =\begin{pmatrix} Y_{1}^{(k)}&amp;Y_{2}^{(k)}&amp;\cdots&amp;Y_{k}^{(k)} \end{pmatrix}^{T} \quad \text{for}\; Y^{(k)}_{i} \sim N(0,1)
- \end{aligned}\]
-      </li>
-      <li>
-        <p>각 표본에 대하여 검정통계량 도출</p>
-
-\[W^{(k)}=\frac{\left(\sum_{i=1}^{k} \alpha_{i} Y_{i}\right)^2}{\sum_{i=1}^{k}\left(Y_{i} - \overline{Y}\right)^2}\]
-      </li>
-      <li>
-        <p>$n$ 의 크기에 따른 $W$ 의 경험적 분포 도출</p>
-
-\[f_{W}:n \rightarrow W\]
-      </li>
-      <li>
-        <p>$W$ 의 경험적 분포에서 특정 $w$ 값보다 작거나 같은 값을 가질 확률 도출</p>
+  W_{N} \sim f_{W_{N}}(W)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>표본의 검정통계량 $W_{\mathrm{obs}}$ 의 $\mathrm{p-value}$ 도출:</p>
 
 \[\begin{aligned}
- \text{p-value}
- &amp;=F_{W}(w)\\
- &amp;=P(W \le w)
- \end{aligned}\]
-      </li>
-    </ol>
+  \mathrm{p-value}
+  = F_{W_{N}}(W_{\mathrm{obs}})
+  = P(W \le W_{\mathrm{obs}})
+  \end{aligned}\]
   </li>
-  <li><strong>표본 $X$ 에 대한 검정통계량 $W$ 의 $\text{p-value}$ 와 유의수준 $\alpha$ 비교</strong>
+  <li>
+    <p>유의수준 $\alpha$ 하 결론:</p>
+
     <ul>
       <li>
         <p>$F_{W}(W) \le \alpha$ : $X \not\sim N(\mu, \sigma^2)$</p>
@@ -828,6 +805,92 @@
     </ul>
   </li>
 </ul>
+
+<h2 id="test-statistic"><span class="me-2">Test Statistic</span><a href="#test-statistic" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+\[\begin{aligned}
+W
+&amp;= \frac{\left(\sum_{i=1}^{n} \beta_{i} X_{i}\right)^2}{\sum_{i=1}^{n}\left(X_{i} - \overline{X}\right)^2}
+\end{aligned}\]
+
+<ul>
+  <li>
+    <p>$\mathbf{X}$ : 표본의 관측치 $X_{i}$ 를 크기에 따라 오름차순 정렬한 순위 통계량 벡터</p>
+
+\[\begin{aligned}
+  \mathbf{X}
+  &amp;= \begin{pmatrix}
+  X_{1}&amp;X_{2}&amp;\cdots&amp;X_{n}
+  \end{pmatrix}^{T}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>$\overline{X}$ : 표본평균</p>
+
+\[\begin{aligned}
+  \overline{X}
+  &amp;=\frac{1}{n}\sum_{i=1}^{n}{X_{i}}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>$\mathbf{b}$ : 순위 통계량 벡터 $\mathbf{X}$ 의 계수 벡터</p>
+
+\[\begin{aligned}
+  \mathbf{b}
+  &amp;=\frac{\mathbf{m}^{T}\mathbb{V}^{-1}}{\Vert \mathbb{V}^{-1}\mathbf{m} \Vert}
+  \end{aligned}\]
+
+    <ul>
+      <li>
+        <p>$\mathbf{m}$ : 기대 순위 통계량 벡터</p>
+
+\[\begin{aligned}
+  \mathbf{m}
+  &amp;=\begin{pmatrix}
+  \mathbb{E}\left[X_{1}\right]&amp;\mathbb{E}\left[X_{2}\right]&amp;\cdots&amp;\mathbb{E}\left[X_{n} \right]
+  \end{pmatrix}^{T}
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>$\mathbb{V}$ : 기대 순위 통계량의 공분산 행렬</p>
+
+\[\begin{aligned}
+  \mathbb{V}_{i,j}=\mathrm{Cov}\Big(\mathbb{E}\left[X_{i}\right],\mathbb{E}\left[X_{j}\right]\Big)
+  \end{aligned}\]
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="generate-dist-of-test-stats"><span class="me-2">Generate Dist. of Test Stats</span><a href="#generate-dist-of-test-stats" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ol>
+  <li>
+    <p>표준정규분포로부터 $n$ 개의 관측치로 구성된 표본을 반복적으로 생성</p>
+
+\[\begin{aligned}
+ \mathbf{Y}^{(k)}
+ &amp;= \begin{pmatrix} Y_{1}^{(k)}&amp;Y_{2}^{(k)}&amp;\cdots&amp;Y_{n}^{(k)} \end{pmatrix}^{T} \quad \text{for} \quad Y^{(k)}_{i} \sim N(0,1)
+ \end{aligned}\]
+  </li>
+  <li>
+    <p>표본 $\mathbf{Y}^{(1)},\mathbf{Y}^{(2)},\cdots$ 에 대하여 검정통계량 도출</p>
+
+\[\begin{aligned}
+ W^{(k)}
+ &amp;=\frac{\left(\sum_{i=1}^{k} \beta_{i} Y_{i}\right)^2}{\sum_{i=1}^{k}\left(Y_{i} - \overline{Y}\right)^2}
+ \end{aligned}\]
+  </li>
+  <li>
+    <p>$n$ 의 크기에 따른 $W$ 의 경험적 분포 도출</p>
+
+\[\begin{aligned}
+ W_{N} \sim f_{W_{N}}(W)
+ \end{aligned}\]
+  </li>
+</ol>
 
   </div>
 
