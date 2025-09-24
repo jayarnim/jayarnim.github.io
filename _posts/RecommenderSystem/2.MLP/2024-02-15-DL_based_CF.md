@@ -123,13 +123,13 @@ image:
 - **Merit**
     - Modeling interdimensional high-level interactions between users and items
 
-- [`ConvNCF`](https://doi.org/10.48550/arXiv.1808.03912): Modeling interdimensional high-level interactions
+- [`ConvNCF`](https://doi.org/10.48550/arXiv.1808.03912): Using CNN as Matching Function
     - He, X., Du, X., Wang, X., Tian, F., Tang, J., & Chua, T. S.\\
     (2018).\\
     Outer product-based neural collaborative filtering.\\
     arXiv preprint arXiv:1808.03912.
 
-- [`COMET`](https://doi.org/10.1145/3588576): Modeling interdimensional high-level interactions
+- [`COMET`](https://doi.org/10.1145/3588576): Using CNN as Aggregating Histories
     - Lin, Z., Feng, L., Guo, X., Zhang, Y., Yin, R., Kwoh, C. K., & Xu, C.\\
     (2023).\\
     Comet: Convolutional dimension interaction for collaborative filtering.\\
