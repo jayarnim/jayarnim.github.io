@@ -638,77 +638,6 @@
     <!-- combine -->
     
   
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
-    
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- create the image wrapper -->
-        
-
-        
-        
-      
-    
-
-    <!-- combine -->
-    
-  
 
   
 
@@ -767,65 +696,6 @@
 
       
     
-
-    
-  
-
-  
-  
-
-  
-    
-    
-
-    
-      
-        
-        
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
       
 
       
@@ -876,6 +746,11 @@
     
 
     
+  
+
+  
+  
+
   
 
   
@@ -976,9 +851,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1005 words"
+  title="586 words"
 >
-  <em>5 min</em> read</span>
+  <em>3 min</em> read</span>
 
         </div>
       </div>
@@ -1003,151 +878,6 @@
       <li>사용자의 행동 패턴이나 아이템의 구매 패턴을 반영한 표현을 도출함</li>
       <li>사용자와 아이템을 상호간에 의존하여 표현하므로 고유 정보를 보존하기 어려움</li>
     </ul>
-  </li>
-</ul>
-
-<h2 id="delf"><span class="me-2">DELF</span><a href="#delf" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<ul>
-  <li><strong>문제 의식</strong>: 아이디 임베딩(ID Embedding)과 히스토리 임베딩(History Embedding)의 상호 보완적 관계
-    <ul>
-      <li>아이디 임베딩은 고유 정보를 보존한 표현을 생성하는 데 강점</li>
-      <li>히스토리 임베딩은 맥락 정보를 반영한 표현을 생성하는 데 강점</li>
-    </ul>
-  </li>
-  <li><strong><a href="https://doi.org/10.24963/ijcai.2018/462"><code class="language-plaintext highlighter-rouge">DELF</code></a>(<code class="language-plaintext highlighter-rouge">D</code>ual <code class="language-plaintext highlighter-rouge">E</code>mbedding based Deep <code class="language-plaintext highlighter-rouge">L</code>atent <code class="language-plaintext highlighter-rouge">F</code>actor Model)</strong>: 사용자와 아이템의 아이디 임베딩과 히스토리 임베딩을 조합하여 다양한 매칭 함수를 병렬 학습하는 모형
-    <ul>
-      <li>Cheng, W., Shen, Y., Zhu, Y., &amp; Huang, L.<br />
-  (2018, July).<br />
-  DELF: A dual-embedding based deep latent factor model for recommendation.<br />
-  In IJCAI (Vol. 18, pp. 3329-3335).</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="notation"><span class="me-2">Notation</span><a href="#notation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li>$u=1,2,\cdots,M$: user idx</li>
-  <li>$i=1,2,\cdots,N$: item idx</li>
-  <li>$\mathbf{R} \in \mathbb{R}^{M \times N}$: user-item interaction matrix</li>
-  <li>$\overrightarrow{\mathbf{p}}_{u} \in \mathbb{R}^{K}$: user ID embedding vector</li>
-  <li>$\overrightarrow{\mathbf{q}}_{i} \in \mathbb{R}^{K}$: item ID embedding vector</li>
-  <li>$\overrightarrow{\mathbf{m}}_{u} \in \mathbb{R}^{K}$: user history embedding vector</li>
-  <li>$\overrightarrow{\mathbf{n}}_{i} \in \mathbb{R}^{K}$: item history embedding vector</li>
-  <li>$\overrightarrow{\mathbf{z}}_{u,i}$: predictive vector of user $u$ and item $i$</li>
-  <li>$\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$</li>
-</ul>
-
-<h3 id="how-to-modeling"><span class="me-2">How to Modeling</span><a href="#how-to-modeling" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p><a href="/_post_refer_img/RecommenderSystem/2.MLP/04-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/2.MLP/04-01.png" alt="01" width="100%" loading="lazy"></a></p>
-
-<ul>
-  <li>
-    <p>ID Embedding:</p>
-
-\[\begin{aligned}
-  \overrightarrow{\mathbf{p}}_{u}
-  &amp;=\text{Emb}(u)\\
-  \overrightarrow{\mathbf{q}}_{i}
-  &amp;=\text{Emb}(i)
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>History Embedding:</p>
-
-\[\begin{aligned}
-  \overrightarrow{\mathbf{m}}_{u}
-  &amp;=\text{ATTN}(\overrightarrow{\mathbf{h}}^{\text{(user)}}, \mathbf{H}[\forall j \in \mathcal{R}_{u}^{+} \setminus \{i\},:], \mathbf{Y}[\forall j \in \mathcal{R}_{u}^{+} \setminus \{i\},:])\\
-  \overrightarrow{\mathbf{n}}_{i}
-  &amp;=\text{ATTN}(\overrightarrow{\mathbf{h}}^{\text{(item)}}, \mathbf{H}[\forall v \in \mathcal{R}_{i}^{+} \setminus \{u\},:], \mathbf{X}[\forall v \in \mathcal{R}_{i}^{+} \setminus \{u\},:])
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>Pairwise Neural Interaction Layers:</p>
-
-\[\begin{aligned}
-  \overrightarrow{\mathbf{z}}_{u,i}^{(1)}
-  &amp;= \text{MLP}_{\text{ReLU}}(\overrightarrow{\mathbf{p}}_{u} \oplus \overrightarrow{\mathbf{q}}_{i})\\
-  \overrightarrow{\mathbf{z}}_{u,i}^{(2)}
-  &amp;= \text{MLP}_{\text{ReLU}}(\overrightarrow{\mathbf{m}}_{u} \oplus \overrightarrow{\mathbf{n}}_{i})\\
-  \overrightarrow{\mathbf{z}}_{u,i}^{(3)}
-  &amp;= \text{MLP}_{\text{ReLU}}(\overrightarrow{\mathbf{p}}_{u} \oplus \overrightarrow{\mathbf{n}}_{i})\\
-  \overrightarrow{\mathbf{z}}_{u,i}^{(4)}
-  &amp;= \text{MLP}_{\text{ReLU}}(\overrightarrow{\mathbf{m}}_{u} \oplus \overrightarrow{\mathbf{q}}_{i})
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>Predict interaction probability of user $u$ and item $i$:</p>
-
-\[\begin{aligned}
-  \hat{y}_{u,i}
-  &amp;= \sigma(\overrightarrow{\mathbf{w}} \cdot [\overrightarrow{\mathbf{z}}_{u,i}^{(1)} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{(2)} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{(3)} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{(4)}] + \overrightarrow{\mathbf{b}})
-  \end{aligned}\]
-  </li>
-</ul>
-
-<h3 id="how-to-attention"><span class="me-2">How to Attention</span><a href="#how-to-attention" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li>
-    <p>Another ID Embedding:</p>
-
-\[\begin{aligned}
-  \overrightarrow{\mathbf{x}}_{v}
-  &amp;=\text{Emb}(v)\\
-  \overrightarrow{\mathbf{y}}_{j}
-  &amp;=\text{Emb}(j)
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>Query Vector is Global Context Vector:</p>
-
-\[\begin{aligned}
-  \overrightarrow{\mathbf{h}}^{\text{(user)}},
-  \quad
-  \overrightarrow{\mathbf{h}}^{\text{(item)}}
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>Key Vector is Generated by:</p>
-
-\[\begin{aligned}
-  \overrightarrow{\mathbf{h}}_{v}
-  &amp;= \text{tanh}(\mathbf{W} \cdot \overrightarrow{\mathbf{x}}_{v} + \overrightarrow{\mathbf{b}})\\
-  \overrightarrow{\mathbf{h}}_{j}
-  &amp;= \text{tanh}(\mathbf{W} \cdot \overrightarrow{\mathbf{y}}_{j} + \overrightarrow{\mathbf{b}})
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>History Embedding Vector is Generated by:</p>
-
-\[\begin{aligned}
-  \overrightarrow{\mathbf{m}}_{u}
-  &amp;= \sum_{j \in \mathcal{R}_{u}^{+} \setminus \{i\}}{\alpha_{j} \cdot \overrightarrow{\mathbf{y}}_{j}}\\
-  \overrightarrow{\mathbf{n}}_{i}
-  &amp;= \sum_{v \in \mathcal{R}_{i}^{+} \setminus \{u\}}{\alpha_{v} \cdot \overrightarrow{\mathbf{x}}_{v}}\\
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>Attention Weight is Calculated by Softmax:</p>
-
-\[\begin{aligned}
-  \alpha_{j}
-  &amp;= \frac{\exp{f(\overrightarrow{\mathbf{h}}^{\text{(user)}},\overrightarrow{\mathbf{h}}_{j})}}{\sum_{j \in \mathcal{R}_{u}^{+} \setminus \{i\}}{\exp{f(\overrightarrow{\mathbf{h}}^{\text{(user)}},\overrightarrow{\mathbf{h}}_{j})}}}\\
-  \alpha_{v}
-  &amp;= \frac{\exp{f(\overrightarrow{\mathbf{h}}^{\text{(item)}},\overrightarrow{\mathbf{h}}_{v})}}{\sum_{v \in \mathcal{R}_{i}^{+} \setminus \{u\}}{\exp{f(\overrightarrow{\mathbf{h}}^{\text{(item)}},\overrightarrow{\mathbf{h}}_{v})}}}
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>Attention Score Function is Dot Product:</p>
-
-\[\begin{aligned}
-  f(q,k)
-  &amp;= q \cdot k
-  \end{aligned}\]
   </li>
 </ul>
 
@@ -1178,7 +908,8 @@
   </li>
 </ul>
 
-<h3 id="notation-1"><span class="me-2">Notation</span><a href="#notation-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h2 id="notation"><span class="me-2">Notation</span><a href="#notation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
 
 <ul>
   <li>$u=1,2,\cdots,M$: user idx</li>
@@ -1194,9 +925,10 @@
   <li>$\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$</li>
 </ul>
 
-<h3 id="how-to-modeling-1"><span class="me-2">How to Modeling</span><a href="#how-to-modeling-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h2 id="how-to-modeling"><span class="me-2">How to Modeling</span><a href="#how-to-modeling" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
 
-<p><a href="/_post_refer_img/RecommenderSystem/2.MLP/04-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/2.MLP/04-02.png" alt="02" width="100%" loading="lazy"></a></p>
+<p><a href="/_post_refer_img/RecommenderSystem/2.MLP/04-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/2.MLP/04-01.png" alt="01" width="100%" loading="lazy"></a></p>
 
 <ul>
   <li>
@@ -1209,7 +941,7 @@
   </li>
 </ul>
 
-<h4 id="dgmf"><span class="me-2">DGMF</span><a href="#dgmf" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+<h3 id="dgmf"><span class="me-2">DGMF</span><a href="#dgmf" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
@@ -1267,7 +999,7 @@
   </li>
 </ul>
 
-<h4 id="dmlp"><span class="me-2">DMLP</span><a href="#dmlp" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+<h3 id="dmlp"><span class="me-2">DMLP</span><a href="#dmlp" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
@@ -1540,6 +1272,8 @@
     
     
     
+      
+    
   
     
     
@@ -2820,6 +2554,8 @@
     
     
     
+    
+      
     
   
     
@@ -4750,18 +4486,6 @@
 
   
 
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
 
 
 
@@ -4789,11 +4513,11 @@
 
 <time
   
-  data-ts="1716303600"
+  data-ts="1715094000"
   data-df="ll"
   
 >
-  May 22, 2024
+  May  8, 2024
 </time>
 
               <h4 class="pt-0 my-2">Latent Factor Model with Attention Mechanism</h4>
@@ -4817,11 +4541,11 @@
 
 <time
   
-  data-ts="1715094000"
+  data-ts="1713884400"
   data-df="ll"
   
 >
-  May  8, 2024
+  Apr 24, 2024
 </time>
 
               <h4 class="pt-0 my-2">Latent Factor Models with CNN</h4>
@@ -4845,11 +4569,11 @@
 
 <time
   
-  data-ts="1713884400"
+  data-ts="1712674800"
   data-df="ll"
   
 >
-  Apr 24, 2024
+  Apr 10, 2024
 </time>
 
               <h4 class="pt-0 my-2">Distance Embedding based Latent Factor Model</h4>
@@ -4885,11 +4609,11 @@
 
   
     <a
-      href="/posts/Semi_Dual_Embedding/"
+      href="/posts/Dist_Embedding/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>Semi-Dual Embedding based Latent Factor Model</p>
+      <p>Distance Embedding based Latent Factor Model</p>
     </a>
   
 </nav>
@@ -4985,6 +4709,8 @@
     
     
     
+      
+    
   
     
     
@@ -6265,6 +5991,8 @@
     
     
     
+    
+      
     
   
     

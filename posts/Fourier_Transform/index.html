@@ -746,7 +746,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="736 words"
+  title="741 words"
 >
   <em>4 min</em> read</span>
 
@@ -765,26 +765,25 @@
   </li>
   <li>
     <p><strong>정변환(transform)</strong>: 시간 영역의 비주기 신호를 주파수 영역의 스펙트럼 밀도로 변환</p>
+
+\[\begin{aligned}
+  \mathcal{F}(X)
+  &amp;= \mathcal{X}(\omega)\\
+  &amp;= \left&lt;X(u),\phi_{\omega}(u)\right&gt;\\
+  &amp;= \int_{-\infty}^{\infty}{X(u)\phi_{\omega}^{*}(u)\mathrm{d}u}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>역변환(inverse transform)</strong>: 주파수 영역의 스펙트럼 밀도를 시간 영역의 비주기 신호로 복원</p>
+
+\[\begin{aligned}
+  \mathcal{F}^{-1}(X)
+  &amp;= X(u)\\
+  &amp;= \frac{1}{2\pi}\left&lt;\mathcal{X}(\omega),\phi_{u}^{*}(\omega)\right&gt;\\
+  &amp;= \frac{1}{2\pi}\int_{-\infty}^{\infty}{\mathcal{X}(\omega)\phi_{u}(\omega)\mathrm{d}\omega}
+  \end{aligned}\]
   </li>
 </ul>
-
-\[\begin{aligned}
-\mathcal{F}(X)
-&amp;= \mathcal{X}(\omega)\\
-&amp;= \left&lt;X(u),\phi_{\omega}(u)\right&gt;\\
-&amp;= \int_{-\infty}^{\infty}{X(u)\phi_{\omega}^{*}(u)\mathrm{d}u}
-\end{aligned}\]
-
-<ul>
-  <li><strong>역변환(inverse transform)</strong>: 주파수 영역의 스펙트럼 밀도를 시간 영역의 비주기 신호로 복원</li>
-</ul>
-
-\[\begin{aligned}
-\mathcal{F}^{-1}(X)
-&amp;= X(u)\\
-&amp;= \frac{1}{2\pi}\left&lt;\mathcal{X}(\omega),\phi_{\omega}^{*}(u)\right&gt;\\
-&amp;= \frac{1}{2\pi}\int_{-\infty}^{\infty}{\mathcal{X}(\omega)\phi_{\omega}(u)\mathrm{d}\omega}
-\end{aligned}\]
 
 <h2 id="discrete-frequency-lines"><span class="me-2">Discrete Frequency Lines</span><a href="#discrete-frequency-lines" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
@@ -894,7 +893,8 @@
   S_{T}(t)
   &amp;= \sum_{k}{a_{k}\phi_{\omega_{k}}(t)}\\
   &amp;= \frac{1}{T}\sum_{k}{\mathcal{X}_{T}(\omega_{k})\phi_{\omega_{k}}(t)}\\
-  &amp;= \frac{1}{2\pi}\sum_{k}{\mathcal{X}_{T}(\omega_{k})\phi_{\omega_{k}}(t)\Delta \omega} \quad (\because \Delta \omega = \omega_{0} = \frac{2\pi}{T})
+  &amp;= \frac{1}{T}\sum_{k}{\mathcal{X}_{T}(\omega_{k})\phi_{t}(\omega_{k})} \quad (\because \phi_{\omega_{k}}(t)=\phi_{t}(\omega_{k})=\exp{i\omega_{k}t})\\
+  &amp;= \frac{1}{2\pi}\sum_{k}{\mathcal{X}_{T}(\omega_{k})\phi_{t}(\omega_{k})\Delta \omega} \quad (\because \Delta \omega = \omega_{0} = \frac{2\pi}{T})
   \end{aligned}\]
   </li>
   <li>
@@ -927,10 +927,10 @@
 \[\begin{aligned}
   X(t)
   &amp;\approx \lim_{\Delta \omega \to 0}{S_{T}(t)}\\
-  &amp;= \lim_{\Delta \omega \to 0}{\frac{1}{2\pi}\sum_{k}{\mathcal{X}_{T}(\omega_{k})\phi_{\omega_{k}}(t)\Delta \omega}}\\
-  &amp;= \frac{1}{2\pi}\lim_{\Delta \omega \to 0}{\sum_{k}{\mathcal{X}_{T}(\omega_{k})\phi_{\omega_{k}}(t)\Delta \omega}}\\
-  &amp;= \frac{1}{2\pi}\int_{-\infty}^{\infty}{\mathcal{X}(\omega)\phi_{\omega}(t)\mathrm{d}\omega}\\
-  &amp;= \frac{1}{2\pi}\left&lt;\mathcal{X}(\omega),\phi_{\omega}(t)\right&gt;
+  &amp;= \lim_{\Delta \omega \to 0}{\frac{1}{2\pi}\sum_{k}{\mathcal{X}_{T}(\omega_{k})\phi_{t}(\omega_{k})\Delta \omega}}\\
+  &amp;= \frac{1}{2\pi}\lim_{\Delta \omega \to 0}{\sum_{k}{\mathcal{X}_{T}(\omega_{k})\phi_{t}(\omega_{k})\Delta \omega}}\\
+  &amp;= \frac{1}{2\pi}\int_{-\infty}^{\infty}{\mathcal{X}(\omega)\phi_{t}(\omega)\mathrm{d}\omega}\\
+  &amp;= \frac{1}{2\pi}\left&lt;\mathcal{X}(\omega),\phi_{t}(\omega)\right&gt;
   \end{aligned}\]
   </li>
 </ul>
@@ -1137,6 +1137,8 @@
     
     
     
+      
+    
   
     
     
@@ -2417,6 +2419,8 @@
     
     
     
+    
+      
     
   
     
@@ -4327,11 +4331,11 @@
 
   
     <a
-      href="/posts/Probability/"
+      href="/posts/RFF/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>Probability</p>
+      <p>Rff</p>
     </a>
   
 </nav>
@@ -4427,6 +4431,8 @@
     
     
     
+      
+    
   
     
     
@@ -5707,6 +5713,8 @@
     
     
     
+    
+      
     
   
     

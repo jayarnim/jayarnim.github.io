@@ -30,25 +30,23 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="Semi-Dual Embedding based Latent Factor Model" />
+<meta property="og:title" content="Rff" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Based on the following lectures (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. (2) “Recommender System (2024-2)” by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ." />
-<meta property="og:description" content="Based on the following lectures (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. (2) “Recommender System (2024-2)” by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ." />
-<link rel="canonical" href="https://jayarnim.github.io/posts/Semi_Dual_Embedding/" />
-<meta property="og:url" content="https://jayarnim.github.io/posts/Semi_Dual_Embedding/" />
+<meta name="description" content="Plancherel Theroem" />
+<meta property="og:description" content="Plancherel Theroem" />
+<link rel="canonical" href="https://jayarnim.github.io/posts/RFF/" />
+<meta property="og:url" content="https://jayarnim.github.io/posts/RFF/" />
 <meta property="og:site_name" content="Data Scientist" />
-<meta property="og:image" content="https://jayarnim.github.io/_post_refer_img/RecommenderSystem/2.MLP/Thumbnail.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-04-10T00:00:00+09:00" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/RecommenderSystem/2.MLP/Thumbnail.jpg" />
-<meta property="twitter:title" content="Semi-Dual Embedding based Latent Factor Model" />
+<meta property="article:published_time" content="2025-02-07T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Rff" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-04-10T00:00:00+09:00","datePublished":"2024-04-10T00:00:00+09:00","description":"Based on the following lectures (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. (2) “Recommender System (2024-2)” by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ.","headline":"Semi-Dual Embedding based Latent Factor Model","image":"https://jayarnim.github.io/_post_refer_img/RecommenderSystem/2.MLP/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/Semi_Dual_Embedding/"},"url":"https://jayarnim.github.io/posts/Semi_Dual_Embedding/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-02-07T00:00:00+09:00","datePublished":"2025-02-07T00:00:00+09:00","description":"Plancherel Theroem","headline":"Rff","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/RFF/"},"url":"https://jayarnim.github.io/posts/RFF/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Semi-Dual Embedding based Latent Factor Model | Data Scientist
+  <title>Rff | Data Scientist
   </title>
 
   <!--
@@ -405,7 +403,7 @@
         
           
             
-              <span>Semi-Dual Embedding based Latent Factor Model</span>
+              <span>Rff</span>
             
 
           
@@ -472,174 +470,6 @@
 
 
 
-
-  
-  
-
-  
-    
-      
-      
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
-    
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- create the image wrapper -->
-        
-
-        
-        
-      
-    
-
-    <!-- combine -->
-    
-  
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
-    
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- create the image wrapper -->
-        
-
-        
-        
-      
-    
-
-    <!-- combine -->
-    
-  
-
-  
 
 
 <!-- Add header for code snippets -->
@@ -715,38 +545,6 @@
   
 
   
-    
-    
-
-    
-      
-        
-        
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-
-    
-  
 
   
   
@@ -768,9 +566,7 @@
 
 <article class="px-1">
   <header>
-    <h1 data-toc-skip>Semi-Dual Embedding based Latent Factor Model</h1>
-    
-      <p class="post-desc fw-light mb-4">Based on the following lectures <br> (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. <br> (2) "Recommender System (2024-2)" by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ.</p>
+    <h1 data-toc-skip>Rff</h1>
     
 
     <div class="post-meta text-muted">
@@ -787,13 +583,13 @@
 
 <time
   
-  data-ts="1712674800"
+  data-ts="1738854000"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Apr 10, 2024
+  Feb  7, 2025
 </time>
 
       </span>
@@ -801,15 +597,6 @@
       <!-- lastmod date -->
       
 
-      
-        
-        
-        
-
-        
-
-        <div class="mt-3 mb-3">
-          <a href="/_post_refer_img/RecommenderSystem/2.MLP/Thumbnail.jpg" class="popup img-link preview-img shimmer"><img src="/_post_refer_img/RecommenderSystem/2.MLP/Thumbnail.jpg"  alt="Preview Image" width="1200" height="630"  loading="lazy"></a></div>
       
 
       <div class="d-flex justify-content-between">
@@ -851,9 +638,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="496 words"
+  title="1153 words"
 >
-  <em>2 min</em> read</span>
+  <em>6 min</em> read</span>
 
         </div>
       </div>
@@ -861,173 +648,295 @@
   </header>
 
   <div class="content">
-    <h2 id="drnet"><span class="me-2">DRNet</span><a href="#drnet" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="plancherel-theroem"><span class="me-2">Plancherel Theroem</span><a href="#plancherel-theroem" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
-  <li><strong>문제 의식</strong>
+  <li>
+    <p><strong>플랑쉐렐 정리(Plancherel Theroem)</strong></p>
+
+    <blockquote>
+      <p>푸리에 변환은 $L^{2}(\mathbb{R}^{d})$ 함수 공간에서 내적과 노름을 보존한다.</p>
+    </blockquote>
+
+\[\begin{aligned}
+  \left&lt;f,g\right&gt;_{L^{2}(\mathbb{R}^{d})}
+  &amp;= \frac{1}{(2\pi)^{d}}\left&lt;\hat{f},\hat{g}\right&gt;_{L^{2}(\mathbb{R}^{d})}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>$L^{2}(\mathbb{R}^{d})$ 공간:</p>
+
+\[\begin{aligned}
+  L^{2}(\mathbb{R}^{d})
+  := \left\{f:\mathbb{R}^{d}\to\mathbb{C} \mid \int_{-\mathbb{R}^{d}}{\vert f(x) \vert^{2}\mathrm{d}x}&lt;\infty\right\}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>$f,g \in L^{1}\cap L^{2}$ 의 내적:</p>
+
+\[\begin{aligned}
+  \left&lt;f,g\right&gt;_{\mathbb{R}^{d}}
+  &amp;=\int_{\mathbb{R}^{d}}{f(x)g^{*}(x)\mathrm{d}x}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>$g$ 의 푸리에 역변환:</p>
+
+\[\begin{aligned}
+  g(x)
+  &amp;= \frac{1}{2\pi}\int_{\mathbb{R}^{2}}{\hat{g}(\omega)\exp{\left[i\omega^{T}x\right]}\mathrm{d}\omega}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>내적에 대입:</p>
+
+\[\begin{aligned}
+  \int_{\mathbb{R}^{d}}{f(x)g^{*}(x)\mathrm{d}x}
+  &amp;= \int_{\mathbb{R}^{2}}{f(x)\left(\frac{1}{(2\pi)^{d}}\int_{\mathbb{R}^{d}}{\hat{g}^{*}(\omega)\exp{\left[-i\omega^{T}x\right]}\mathrm{d}\omega}\right)\mathrm{d}x}\\
+  &amp;= \frac{1}{(2\pi)^{d}}\int_{\mathbb{R}^{d}}{\left(\int_{\mathbb{R}^{d}}{f(x)\exp{\left[-i\omega^{T}x\right]}\mathrm{d}x}\right)\hat{g}^{*}(\omega)\mathrm{d}\omega}\\
+  &amp;= \frac{1}{(2\pi)^{d}}\int_{\mathbb{R}^{d}}{\hat{f}(\omega)\hat{g}^{*}(\omega)\mathrm{d}\omega}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>$L^{1}\cap L^{2}$ 가 $L^{2}$ 안에서 조밀(dense)하므로 $\forall f_{n} \in L^{2}$ 를 $\exists f \in L^{1}\cap L^{2}$ 로 근사할 수 있음</p>
+
+\[\begin{aligned}
+  \Vert f_{n}-f \Vert_{L^{2}} &lt; \epsilon 
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>따라서 푸리에 변환은 $L^{2}(\mathbb{R}^{d})$ 함수 공간에서 내적과 노름을 보존함</p>
+
+\[\begin{aligned}
+  \left&lt;f,g\right&gt;_{L^{2}(\mathbb{R}^{d})}
+  &amp;= \frac{1}{(2\pi)^{d}}\left&lt;\hat{f},\hat{g}\right&gt;_{L^{2}(\mathbb{R}^{d})}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h2 id="convolution-theorem"><span class="me-2">Convolution Theorem</span><a href="#convolution-theorem" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p>합성곱(Convolution) 정의:</p>
+
+\[\begin{aligned}
+  f \circ g(x)
+  := \int_{\mathbb{R}^{d}}{f(x-y)g(y)\mathrm{d}y}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>푸리에 변환:</p>
+
+\[\begin{aligned}
+  \widehat{(f \circ g)}(\omega)
+  &amp;= \int_{\mathbb{R}^{d}}{f \circ g(x) \phi_{\omega}^{*}(x)\mathrm{d}x}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>합성곱 정의 대입:</p>
+
+\[\begin{aligned}
+  \int_{\mathbb{R}^{d}}{f \circ g(x) \phi_{\omega}^{*}(x)\mathrm{d}x}
+  &amp;= \int_{\mathbb{R}^{d}}{\left(\int_{\mathbb{R}^{d}}{f(x-y)g(y)\mathrm{d}y}\right) \phi_{\omega}^{*}(x)\mathrm{d}x}\\
+  &amp;= \int_{\mathbb{R}^{d}}{g(y)\left(\int_{\mathbb{R}^{d}}{f(x-y)\phi_{\omega}^{*}(x)\mathrm{d}x}\right)\mathrm{d}y}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>$u=x-y$ 변수 치환:</p>
+
+\[\begin{aligned}
+  \int_{\mathbb{R}^{d}}{g(y)\left(\int_{\mathbb{R}^{d}}{f(x-y)\phi_{\omega}^{*}(x)\mathrm{d}x}\right)\mathrm{d}y}
+  &amp;= \int_{\mathbb{R}^{d}}{g(y)\left(\int_{\mathbb{R}^{d}}{f(u)\phi_{\omega}^{*}(u+y)\mathrm{d}u}\right)\mathrm{d}y}\\
+  &amp;= \int_{\mathbb{R}^{d}}{g(y)\left(\int_{\mathbb{R}^{d}}{f(u)\phi_{\omega}^{*}(u)\phi_{\omega}^{*}(y)\mathrm{d}u}\right)\mathrm{d}y}\\
+  &amp;= \int_{\mathbb{R}^{d}}{g(y)\phi_{\omega}^{*}(y)\left(\int_{\mathbb{R}^{d}}{f(u)\phi_{\omega}^{*}(u)\mathrm{d}u}\right)\mathrm{d}y}\\
+  &amp;= \hat{f}(\omega)\int_{\mathbb{R}^{d}}{g(y)\phi_{\omega}^{*}(y)\mathrm{d}y}\\
+  &amp;= \hat{f}(\omega)\hat{g}(\omega)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>따라서:</p>
+
+\[\begin{aligned}
+  \widehat{(f \circ g)}(\omega)
+  &amp;= \hat{f}(\omega)\hat{g}(\omega)
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h2 id="dirac-delta-dist-application"><span class="me-2">Dirac Delta Dist. Application</span><a href="#dirac-delta-dist-application" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><strong>분포(Distribution)</strong>: 고전적인 함수 개념으로는 정의하기 어려운 객체를 다루기 위하여 고안된 함수 개념의 확장으로서, 점마다 함수 값이 존재하지 않기에 단독으로는 값을 도출할 수 없고, 오직 테스트 함수 $\psi$ 와의 상호작용(적분)을 통해서만 값이 결정됨</p>
+
     <ul>
-      <li>기존 협업 필터링이 모델링하는 관계 유형
-        <ul>
-          <li><strong>잠재요인 모형(Latent Factor Model)</strong>: 사용자-아이템 관계 모델링, 개인화 추천 성능 우수 (ex. <code class="language-plaintext highlighter-rouge">NCF</code>)</li>
-          <li><strong>아이템 기반 협업 필터링(User Free Model)</strong>: 아이템-아이템 관계 모델링, 데이터 희소성 강건 (ex. <code class="language-plaintext highlighter-rouge">SLIM</code>, <code class="language-plaintext highlighter-rouge">FISM</code>)</li>
-        </ul>
+      <li>
+        <p><strong>디랙 델타 분포(Dirac Delta Distribution)</strong>: 모든 질량이 한 점에 몰린 점질량분포(Degenerate Distribution)로서, 테스트 함수 $\psi$ 에 대하여 $0$ 에서의 값을 샘플링하는 연산자로서 기능함</p>
+
+\[\begin{aligned}
+  \left&lt;\delta, \psi\right&gt;
+  := \int_{-\infty}^{\infty}{\delta(x)\psi(x)\mathrm{d}x}
+  = \psi(0)
+  \end{aligned}\]
       </li>
-      <li>어텐션 기반 히스토리 아이템 집계 방식 (ex. <code class="language-plaintext highlighter-rouge">NAIS</code>)
-        <ul>
-          <li>사용자가 과거에 더 선호한 아이템일수록 새로운 아이템 선택에 더 큰 영향력을 행사함</li>
-          <li>사용자의 선호 정도에 기반하여 집중도를 차등 부여하여 집계할 필요가 있음</li>
-        </ul>
+    </ul>
+  </li>
+  <li>
+    <p>디랙 델타 분포의 변형:</p>
+
+\[\begin{aligned}
+  \int_{-\infty}^{\infty}{\delta(\omega-\gamma)\phi_{t}(\omega)\mathrm{d}\omega}
+  &amp;= \phi_{t}(\gamma)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>테스트 함수 $\varphi$ 정의:</p>
+
+\[\begin{aligned}
+  \varphi(\omega)
+  := \frac{1}{2\pi}\int_{-\infty}^{\infty}{\exp{i(\omega - \gamma)t}\mathrm{d}t}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>복소 지수 함수와 내적:</p>
+
+\[\begin{aligned}
+  \left&lt;\varphi,\phi^{*}\right&gt;
+  &amp;= \int_{-\infty}^{\infty}{\varphi(\omega)\phi_{t}(\omega)\mathrm{d}\omega}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>$\varphi$ 정의 대입:</p>
+
+\[\begin{aligned}
+  \int_{-\infty}^{\infty}{\varphi(\omega)\phi_{t}(\omega)\mathrm{d}\omega}
+  &amp;= \int_{-\infty}^{\infty}{\phi_{t}(\omega)\left(\frac{1}{2\pi}\int_{-\infty}^{\infty}{\exp{i(\omega - \gamma)t}\mathrm{d}t}\right)\mathrm{d}\omega}\\
+  &amp;= \frac{1}{2\pi}\int_{-\infty}^{\infty}{\left(\int_{-\infty}^{\infty}{\phi_{t}(\omega)\exp{\left[i \omega t\right]}\mathrm{d}\omega}\right)\exp{\left[-i \gamma t\right]}\mathrm{d}t}\\
+  &amp;= \int_{-\infty}^{\infty}{\left(\frac{1}{2\pi}\int_{-\infty}^{\infty}{\phi_{t}(\omega)\phi_{t}(\omega)\mathrm{d}\omega}\right)\phi_{\gamma}^{*}(t)\mathrm{d}t}\\
+  &amp;= \int_{-\infty}^{\infty}{\hat{\phi}(t)\phi_{\gamma}^{*}(t)\mathrm{d}t}\\
+  &amp;= \phi_{t}(\gamma)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>따라서 분포의 의미에서 복소 지수 함수의 내적 연산은 다음이 성립함:</p>
+
+\[\begin{aligned}
+  \left&lt;\phi_{\omega},\phi_{\gamma}\right&gt;
+  = \int_{-\infty}^{\infty}{\exp{i(\omega - \gamma)t}\mathrm{d}t}
+  = 2\pi\delta(\omega-\gamma)
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h2 id="bochners-theorem"><span class="me-2">Bochner’s Theorem</span><a href="#bochners-theorem" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><strong>보흐너의 정리(Bochner’s theorem)</strong></p>
+
+    <blockquote>
+      <p>연속이고 시프트 불변이며 양의 정부호를 만족하는 커널 행렬 $\mathbf{K}$ 을 생성하는 커널 함수 $k: \mathbb{R}^{d}\times\mathbb{R}^{d}\to\mathbb{C}$ 는 어떤 양의 유한 보렐 측도 $\mu$ 의 푸리에 역변환이다.</p>
+    </blockquote>
+
+    <ul>
+      <li>
+        <p><strong>이차 형식(Quadratic Form)</strong>: 행렬 $\mathbf{A}$ 에 대하여 정의된 스칼라 함수로서, 인자 $\mathbf{x}$ 에 대하여 동일한 성분들 간의 일차 상호작용(self interaction)과 서로 다른 성분들 간의 이차 상호작용(pair interaction)에 대하여 $\mathbf{A}$ 가 규정한 가중치를 부여하여 값을 산출하는 형식</p>
+
+\[\begin{aligned}
+  Q_{A}(\mathbf{x})
+  &amp;= \mathbf{x}^{T}\mathbf{A}\mathbf{x}\\
+  &amp;= \underbrace{\sum_{i}{A_{i,i}x_{i}^{2}}}_{\text{weighted self-interaction}} + \underbrace{\sum_{j \ne i}{A_{i,j}x_{i}x_{j}}}_{\text{weighted pair-interaction}}
+  \end{aligned}\]
+      </li>
+      <li>
+        <p><strong>양의 정부호 행렬(Positive Definite Matrix)</strong>: 임의의 벡터에 대하여 자기 자신와의 일차, 이차 상호작용의 총합이 양수가 되도록 보장하는 행렬</p>
+
+\[\begin{aligned}
+  \mathbf{A}:=Q_{A}(\mathbf{x}) &gt; 0 \quad \mathrm{for} \quad \forall \mathbf{x} \ne 0
+  \end{aligned}\]
+      </li>
+      <li>
+        <p><strong>시프트 불변(Shift-Invariant)</strong>:</p>
       </li>
     </ul>
   </li>
-  <li><strong><a href="https://doi.org/10.1109/ACCESS.2020.3002102"><code class="language-plaintext highlighter-rouge">DRNet</code></a>(<code class="language-plaintext highlighter-rouge">D</code>ual <code class="language-plaintext highlighter-rouge">R</code>elation <code class="language-plaintext highlighter-rouge">Net</code>-work)</strong> : 사용자-아이템 매칭 함수와 아이템-아이템 매칭 함수를 병렬 학습하는 모형
-    <ul>
-      <li>Ji, D., Xiang, Z., &amp; Li, Y.<br />
-  (2020).<br />
-  Dual relations network for collaborative filtering.<br />
-  IEEE Access, 8, 109747-109757.</li>
-    </ul>
-  </li>
-  <li><strong>Components</strong>
-    <ul>
-      <li><strong>Affection Network</strong>: Modeling User-Item Relation</li>
-      <li><strong>Association Network</strong>: Modeling Item-Item Relation</li>
-      <li><strong>Dual-Relation Network</strong>: Affection Network &amp; Association Network Combination</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="notation"><span class="me-2">Notation</span><a href="#notation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<ul>
-  <li>$u=1,2,\cdots,M$: user idx</li>
-  <li>$i=1,2,\cdots,N$: item idx</li>
-  <li>$\mathbf{Y} \in \mathbb{R}^{M \times N}$: user-item interaction matrix</li>
-  <li>$\overrightarrow{\mathbf{u}}_{u} \in \mathbb{R}^{K}$: user id embedding vector @ affection network</li>
-  <li>$\overrightarrow{\mathbf{v}}_{i} \in \mathbb{R}^{K}$: item id embedding vector @ affection network</li>
-  <li>$\overrightarrow{\mathbf{p}}_{i} \in \mathbb{R}^{K}$: target item id embedding vector @ association network</li>
-  <li>$\overrightarrow{\mathbf{q}}_{j} \in \mathbb{R}^{K}$: history item id embedding vector @ association network</li>
-  <li>$\overrightarrow{\mathbf{z}}_{u,i}$: predictive vector of user $u$ and item $i$</li>
-  <li>$\hat{y}_{u,i}$: interaction probability of user $u$ and item $i$</li>
-</ul>
-
-<h2 id="how-to-modeling"><span class="me-2">How to Modeling</span><a href="#how-to-modeling" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<p><a href="/_post_refer_img/RecommenderSystem/2.MLP/05-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/RecommenderSystem/2.MLP/05-01.png" alt="01" width="100%" loading="lazy"></a></p>
-
-<ul>
   <li>
-    <p>Dual-Relation Network:</p>
+    <p>테스트 함수 $\varphi \in \mathcal{S}(\mathbb{R}^{d})$ 를 가정하자:</p>
 
 \[\begin{aligned}
-  \hat{y}_{u,i}
-  &amp;= \sigma\left(\overrightarrow{\mathbf{w}} \cdot [\overrightarrow{\mathbf{z}}_{u,i}^{\text{(AFFECT)}} \oplus \overrightarrow{\mathbf{z}}_{u,i}^{\text{(ASSO)}}]\right)
-  \end{aligned}\]
-  </li>
-</ul>
-
-<h3 id="affection-network"><span class="me-2">Affection Network</span><a href="#affection-network" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li>
-    <p>ID Embedding:</p>
-
-\[\begin{aligned}
-  \overrightarrow{\mathbf{u}}_{u}
-  &amp;= \text{Emb}(u)\\
-  \overrightarrow{\mathbf{v}}_{i}
-  &amp;= \text{Emb}(i)
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>Predictive Vector of user $u$ and item $i$:</p>
-
-\[\begin{aligned}
-  \overrightarrow{\mathbf{z}}_{u,i}
-  &amp;= \text{MLP}_{\text{ReLU}}(\overrightarrow{\mathbf{u}}_{u} \odot \overrightarrow{\mathbf{v}}_{i})
-  \end{aligned}\]
-  </li>
-</ul>
-
-<h3 id="association-network"><span class="me-2">Association Network</span><a href="#association-network" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li>
-    <p>ID Embedding:</p>
-
-\[\begin{aligned}
-  \overrightarrow{\mathbf{p}}_{i}
-  &amp;= \text{Emb}(i)\\
-  \overrightarrow{\mathbf{q}}_{j}
-  &amp;= \text{Emb}(j)
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>Global Item Vector of User $u$:</p>
-
-\[\begin{aligned}
-  \overrightarrow{\mathbf{x}}_{u}
-  &amp;= \text{ATTN}(\overrightarrow{\mathbf{h}},\text{Affection}(u,\forall j \in \mathcal{R}_{u}^{+} \setminus \{i\}), \mathbf{Q}[\forall j \in \mathcal{R}_{u}^{+} \setminus \{i\},:])
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>Predictive Vector of user $u$ and item $i$:</p>
-
-\[\begin{aligned}
-  \overrightarrow{\mathbf{z}}_{u,i}
-  &amp;= \text{MLP}_{\text{ReLU}}(\overrightarrow{\mathbf{x}}_{u} \odot \overrightarrow{\mathbf{p}}_{i})
-  \end{aligned}\]
-  </li>
-</ul>
-
-<h2 id="how-to-attention"><span class="me-2">How to Attention</span><a href="#how-to-attention" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<ul>
-  <li>
-    <p>Query Vector is Global Context Vector:</p>
-
-\[\begin{aligned}
-  \overrightarrow{\mathbf{h}}
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>Key Vector is Generated by Affection Network:</p>
-
-\[\begin{aligned}
-  \overrightarrow{\mathbf{z}}_{u,i}^{\text{(AFFECT)}}
-  &amp;= \text{MLP}_{\text{ReLU}}(\overrightarrow{\mathbf{u}}_{u} \odot \overrightarrow{\mathbf{v}}_{i})
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>Global Item Vector of User $u$ is Generated by:</p>
-
-\[\begin{aligned}
-  \overrightarrow{\mathbf{x}}_{u}
-  &amp;= \sum_{j \in \mathcal{R}_{u}^{+} \setminus \{i\}}{\alpha_{u,j} \cdot \overrightarrow{\mathbf{q}}_{j}}
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>Attention Weight is Calculated by Smoothed Softmax:</p>
-
-\[\begin{aligned}
-  \alpha_{u,j}
-  &amp;= \frac{\exp{f(\overrightarrow{\mathbf{h}},\overrightarrow{\mathbf{z}}_{u,j}^{\text{(AFFECT)}})}}{\left[\sum_{j \in \mathcal{R}_{u}^{+} \setminus \{i\}}{\exp{f(\overrightarrow{\mathbf{h}},\overrightarrow{\mathbf{z}}_{u,j}^{\text{(AFFECT)}})}}\right]^{\beta}}
+  \mathcal{S}(\mathbb{R}^{d})
+  := \left\{\varphi: \mathbb{R}^{d} \to \mathbb{C} \mid \varphi\in C^{\infty},\sup_{x \in \mathbb{R}^{d}}{\vert x^{\alpha}\partial^{\beta} \varphi(x)\vert} &lt; \infty,\forall \alpha,\beta \in \mathbb{N}^{d}\right\}
   \end{aligned}\]
 
     <ul>
-      <li>$0 &lt; \beta \le 1$: Smoothing Factor</li>
+      <li>$\mathcal{S}(\mathbb{R}^{d})$: 슈바르츠 공간(Schwartz Space)</li>
+      <li>$C^{\infty}$: 무한히 미분 가능한 연속함수</li>
+      <li>$x^{\alpha}$: $\alpha$ 차 다항식 벡터</li>
+      <li>$\partial^{\beta}$: $\beta$ 차 도함수</li>
     </ul>
   </li>
   <li>
-    <p>Attention Score Function is Dot Product:</p>
+    <p>이차 형식의 일반화:</p>
 
 \[\begin{aligned}
-  f(q,k)
-  &amp;= q \cdot k
+  Q(\varphi)
+  &amp;= \int_{\mathbb{R}^{d}}{\int_{\mathbb{R}^{d}}{k(x,y)\varphi(x)\varphi^{*}(y)\mathrm{d}x\mathrm{d}y}}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>합성곱 정의:</p>
+
+\[\begin{aligned}
+  (\varphi^{*} \circ k)(x)
+  &amp;:=\int_{\mathbb{R}^{d}}{\varphi^{*}(y)k(x-y)\mathrm{d}y}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>이차 형식에 대입:</p>
+
+\[\begin{aligned}
+  Q(\varphi)
+  &amp;= \left&lt;\varphi(x),(\varphi^{*} \circ k)(x)\right&gt;\\
+  &amp;= \frac{1}{(2\pi)^{d}}\left&lt;\hat{\varphi}(\omega),\widehat{(\varphi^{*} \circ k)}(\omega)\right&gt; \quad \because \text{Plancherel Theroem}\\
+  &amp;= \frac{1}{(2\pi)^{d}}\left&lt;\hat{\varphi}(\omega),\widehat{\varphi^{*}}(\omega) \cdot \hat{k}(\omega)\right&gt; \quad \because \text{Convolution Theorem}\\
+  &amp;= \frac{1}{(2\pi)^{d}}\int_{\mathbb{R}^{d}}{\hat{\varphi}(\omega)\widehat{\varphi^{*}}(\omega) \hat{k}(\omega)\mathrm{d}\omega}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>푸리에 연산자는 슈바르츠 공간 위에서 자기동형(Isomorphism)이므로 양의 선형 범함수를 $\psi$ 에 대하여 재정의할 수 있음:</p>
+
+\[\begin{aligned}
+  P(\psi)
+  &amp;:= \int_{\mathbb{R}^{d}}{\psi(\omega)\mathrm{d}\mu(\omega)}\\
+  \psi(\omega)
+  &amp;:=\hat{\varphi}(\omega)\widehat{\varphi^{*}}(\omega) \in \mathcal{S}(\mathbb{R}^{d})\\
+  \mathrm{d}\mu(\omega)
+  &amp;:= \frac{1}{(2\pi)^{d}}\hat{k}(\omega)\mathrm{d}\omega
+  \end{aligned}
+  \quad \because \mathcal{F}: \mathcal{S}(\mathbb{R}^{d}) \to \mathcal{S}(\mathbb{R}^{d})\]
+  </li>
+  <li>
+    <p>리즈-마르코프-카쿠타니 표현 정리(Riesz–Markov–Kakutani Representation Theorem):</p>
+
+    <blockquote>
+      <p>국소 콤팩트 하우스도르코프 공간 $X$ 위에 정의된 연속함수 중 그 정의역 $x \in X$ 이 무한대로 발산하면 값이 $0$ 으로 수렴하는 함수들의 공간을 $f \in C_{0}(X)$ 이라고 하자. 이 공간 위에 정의된 양의 선형 범함수 $\forall L:C_{0}(X)\to\mathbb{C}$ 는 적분으로 표현할 수 있으며, 이에 대응하는 양의 보렐 측도 $\mu(x)$ 는 유일하게 존재한다.</p>
+    </blockquote>
+
+\[\begin{aligned}
+  \exists ! \mu(x) \quad
+  \mathrm{s.t.} \quad L(f)=\int_{x \in X}{f(x)\mathrm{d}\mu(x)} \quad \forall f \in C_{0}(X)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>리즈-마르코프-카쿠타니 표현 정리에 의하여 양의 보렐 측도 $\mu(\omega)$ 의 존재가 강제됨:</p>
+
+\[\begin{aligned}
+  \exists ! \mu(\omega) \quad \mathrm{s.t.} \quad P(\hat{\varphi}) \ge 0
   \end{aligned}\]
   </li>
 </ul>
@@ -1037,45 +946,8 @@
   <div class="post-tail-wrapper text-muted">
     <!-- categories -->
     
-      <div class="post-meta mb-3">
-        <i class="far fa-folder-open fa-fw me-1"></i>
-        
-          <a href="/categories/recommender-system/">RECOMMENDER SYSTEM</a>,
-          <a href="/categories/2-mlp-based-collaborative-filtering/">2.mlp based collaborative filtering</a>
-      </div>
-    
 
     <!-- tags -->
-    
-      <div class="post-tags">
-        <i class="fa fa-tags fa-fw me-1"></i>
-        
-          <a
-            href="/tags/ai-application/"
-            class="post-tag no-text-decoration"
-          >AI Application</a>
-        
-          <a
-            href="/tags/recommender-system/"
-            class="post-tag no-text-decoration"
-          >Recommender System</a>
-        
-          <a
-            href="/tags/collaborative-filtering/"
-            class="post-tag no-text-decoration"
-          >Collaborative Filtering</a>
-        
-          <a
-            href="/tags/mlp/"
-            class="post-tag no-text-decoration"
-          >MLP</a>
-        
-          <a
-            href="/tags/attention-mechanism/"
-            class="post-tag no-text-decoration"
-          >Attention Mechanism</a>
-        
-      </div>
     
 
     <div
@@ -1109,21 +981,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Semi-Dual%20Embedding%20based%20Latent%20Factor%20Model%20-%20Data%20Scientist&url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FSemi_Dual_Embedding%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=Rff%20-%20Data%20Scientist&url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FRFF%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Semi-Dual%20Embedding%20based%20Latent%20Factor%20Model%20-%20Data%20Scientist&u=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FSemi_Dual_Embedding%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=Rff%20-%20Data%20Scientist&u=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FRFF%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FSemi_Dual_Embedding%2F&text=Semi-Dual%20Embedding%20based%20Latent%20Factor%20Model%20-%20Data%20Scientist" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FRFF%2F&text=Rff%20-%20Data%20Scientist" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -1254,6 +1126,8 @@
     
     
     
+      
+    
   
     
     
@@ -2534,6 +2408,8 @@
     
     
     
+    
+      
     
   
     
@@ -4112,483 +3988,15 @@
 
 
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-
-
-
-
-
-
-
-
-
-  <aside id="related-posts" aria-labelledby="related-label">
-    <h3 class="mb-4" id="related-label">Further Reading</h3>
-    <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
-      
-        <article class="col">
-          <a href="/posts/User_Free_Models/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1717513200"
-  data-df="ll"
-  
->
-  Jun  5, 2024
-</time>
-
-              <h4 class="pt-0 my-2">User Free Models</h4>
-              <div class="text-muted">
-                <p>Based on the following lectures &lt;br&gt; (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. &lt;br&gt; (2) &quot;Recommender System ...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/LFM_ATTN/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1716303600"
-  data-df="ll"
-  
->
-  May 22, 2024
-</time>
-
-              <h4 class="pt-0 my-2">Latent Factor Model with Attention Mechanism</h4>
-              <div class="text-muted">
-                <p>Based on the following lectures &lt;br&gt; (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. &lt;br&gt; (2) &quot;Recommender System ...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/LFM_CNN/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1715094000"
-  data-df="ll"
-  
->
-  May  8, 2024
-</time>
-
-              <h4 class="pt-0 my-2">Latent Factor Models with CNN</h4>
-              <div class="text-muted">
-                <p>Based on the following lectures &lt;br&gt; (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. &lt;br&gt; (2) &quot;Recommender System ...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-    </nav>
-  </aside>
-  <!-- #related-posts -->
 
 
             
@@ -4601,21 +4009,21 @@
 
   
     <a
-      href="/posts/Dual_Embedding/"
+      href="/posts/Fourier_Transform/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>Dual Embedding based Latent Factor Models</p>
+      <p>Fourier Analysis (2) Fourier Transform</p>
     </a>
   
 
   
     <a
-      href="/posts/Dist_Embedding/"
+      href="/posts/Probability/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>Distance Embedding based Latent Factor Model</p>
+      <p>Probability</p>
     </a>
   
 </nav>
@@ -4711,6 +4119,8 @@
     
     
     
+      
+    
   
     
     
@@ -5991,6 +5401,8 @@
     
     
     
+    
+      
     
   
     
@@ -7672,11 +7084,6 @@
 
 <script src="/assets/js/dist/post.min.js"></script>
 
-
-  <!-- MathJax -->
-  <script src="/assets/js/data/mathjax.js"></script>
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
 
 
 <!-- Pageviews -->
