@@ -1,7 +1,7 @@
 ---
-order: 9
+order: 8
 title: User Free Models
-date: 2024-06-05
+date: 2024-05-22
 categories: [RECOMMENDER SYSTEM, 2.mlp based collaborative filtering]
 tags: [AI Application, Recommender System, Collaborative Filtering, MLP, Attention Mechanism]
 math: true
@@ -133,7 +133,7 @@ image:
 
 ### How to Modeling
 
-![01](/_post_refer_img/RecommenderSystem/2.MLP/09-01.png){: width="100%"}
+![01](/_post_refer_img/RecommenderSystem/2.MLP/08-01.png){: width="100%"}
 
 - ID Embedding:
 

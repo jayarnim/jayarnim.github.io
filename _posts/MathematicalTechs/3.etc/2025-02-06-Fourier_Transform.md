@@ -16,21 +16,21 @@ image:
 
 - **정변환(transform)**: 시간 영역의 비주기 신호를 주파수 영역의 스펙트럼 밀도로 변환
 
-$$\begin{aligned}
-\mathcal{F}(X)
-&= \mathcal{X}(\omega)\\
-&= \left<X(u),\phi_{\omega}(u)\right>\\
-&= \int_{-\infty}^{\infty}{X(u)\phi_{\omega}^{*}(u)\mathrm{d}u}
-\end{aligned}$$
+    $$\begin{aligned}
+    \mathcal{F}(X)
+    &= \mathcal{X}(\omega)\\
+    &= \left<X(u),\phi_{\omega}(u)\right>\\
+    &= \int_{-\infty}^{\infty}{X(u)\phi_{\omega}^{*}(u)\mathrm{d}u}
+    \end{aligned}$$
 
 - **역변환(inverse transform)**: 주파수 영역의 스펙트럼 밀도를 시간 영역의 비주기 신호로 복원
 
-$$\begin{aligned}
-\mathcal{F}^{-1}(X)
-&= X(u)\\
-&= \frac{1}{2\pi}\left<\mathcal{X}(\omega),\phi_{\omega}^{*}(u)\right>\\
-&= \frac{1}{2\pi}\int_{-\infty}^{\infty}{\mathcal{X}(\omega)\phi_{\omega}(u)\mathrm{d}\omega}
-\end{aligned}$$
+    $$\begin{aligned}
+    \mathcal{F}^{-1}(X)
+    &= X(u)\\
+    &= \frac{1}{2\pi}\left<\mathcal{X}(\omega),\phi_{u}^{*}(\omega)\right>\\
+    &= \frac{1}{2\pi}\int_{-\infty}^{\infty}{\mathcal{X}(\omega)\phi_{u}(\omega)\mathrm{d}\omega}
+    \end{aligned}$$
 
 ## Discrete Frequency Lines
 -----
@@ -123,7 +123,8 @@ $$\begin{aligned}
     S_{T}(t)
     &= \sum_{k}{a_{k}\phi_{\omega_{k}}(t)}\\
     &= \frac{1}{T}\sum_{k}{\mathcal{X}_{T}(\omega_{k})\phi_{\omega_{k}}(t)}\\
-    &= \frac{1}{2\pi}\sum_{k}{\mathcal{X}_{T}(\omega_{k})\phi_{\omega_{k}}(t)\Delta \omega} \quad (\because \Delta \omega = \omega_{0} = \frac{2\pi}{T})
+    &= \frac{1}{T}\sum_{k}{\mathcal{X}_{T}(\omega_{k})\phi_{t}(\omega_{k})} \quad (\because \phi_{\omega_{k}}(t)=\phi_{t}(\omega_{k})=\exp{i\omega_{k}t})\\
+    &= \frac{1}{2\pi}\sum_{k}{\mathcal{X}_{T}(\omega_{k})\phi_{t}(\omega_{k})\Delta \omega} \quad (\because \Delta \omega = \omega_{0} = \frac{2\pi}{T})
     \end{aligned}$$
 
 - 주기 함수 $S_{T}(t)$ 는 비주기 신호 $X(t)$ 를 주기 $T$ 만큼 평행이동한 복제 신호 $X(t-nT)$ 의 합이고, 주기 $T \to \infty$ 라면 관찰 가능한 범위에서($t$ 가 유한한 범위일 때) $X(t-nT)$ 의 기여가 사라지므로 $X(t)$ 에 근사하게 됨:
@@ -148,8 +149,8 @@ $$\begin{aligned}
     $$\begin{aligned}
     X(t)
     &\approx \lim_{\Delta \omega \to 0}{S_{T}(t)}\\
-    &= \lim_{\Delta \omega \to 0}{\frac{1}{2\pi}\sum_{k}{\mathcal{X}_{T}(\omega_{k})\phi_{\omega_{k}}(t)\Delta \omega}}\\
-    &= \frac{1}{2\pi}\lim_{\Delta \omega \to 0}{\sum_{k}{\mathcal{X}_{T}(\omega_{k})\phi_{\omega_{k}}(t)\Delta \omega}}\\
-    &= \frac{1}{2\pi}\int_{-\infty}^{\infty}{\mathcal{X}(\omega)\phi_{\omega}(t)\mathrm{d}\omega}\\
-    &= \frac{1}{2\pi}\left<\mathcal{X}(\omega),\phi_{\omega}(t)\right>
+    &= \lim_{\Delta \omega \to 0}{\frac{1}{2\pi}\sum_{k}{\mathcal{X}_{T}(\omega_{k})\phi_{t}(\omega_{k})\Delta \omega}}\\
+    &= \frac{1}{2\pi}\lim_{\Delta \omega \to 0}{\sum_{k}{\mathcal{X}_{T}(\omega_{k})\phi_{t}(\omega_{k})\Delta \omega}}\\
+    &= \frac{1}{2\pi}\int_{-\infty}^{\infty}{\mathcal{X}(\omega)\phi_{t}(\omega)\mathrm{d}\omega}\\
+    &= \frac{1}{2\pi}\left<\mathcal{X}(\omega),\phi_{t}(\omega)\right>
     \end{aligned}$$

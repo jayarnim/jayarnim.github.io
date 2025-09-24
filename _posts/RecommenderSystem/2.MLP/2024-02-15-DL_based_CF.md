@@ -71,29 +71,12 @@ image:
 
     ![03](/_post_refer_img/RecommenderSystem/2.MLP/01-03.png){: width="100%"}
 
-- [`DELF`](https://doi.org/10.24963/ijcai.2018/462): Dual Embedding based Latent Factor Model\\
-(Ensemble with separate ID embedding and history embedding)
-    - Cheng, W., Shen, Y., Zhu, Y., & Huang, L.\\
-    (2018, July).\\
-    DELF: A dual-embedding based deep latent factor model for recommendation.\\
-    In IJCAI (Vol. 18, pp. 3329-3335).
-
 - [`DNCF`](https://doi.org/10.48550/arXiv.2102.02549): Dual Embedding based Latent Factor Model\\
 (Ensemble combining ID embedding and history embedding)
     - He, G., Zhao, D., & Ding, L.\\
     (2021).\\
     Dual-embedding based neural collaborative filtering for recommender systems.\\
     arXiv preprint arXiv:2102.02549.
-
-### Semi-Dual Embedding
-
-- **Semi-Dual Embedding**: Apply dual embedding to only one side of the user or item
-
-- [`DRNet`](https://doi.org/10.1109/ACCESS.2020.3002102): User Dual Embedding
-    - Ji, D., Xiang, Z., & Li, Y.\\
-    (2020).\\
-    Dual relations network for collaborative filtering.\\
-    IEEE Access, 8, 109747-109757.
 
 ### Distance Embedding
 
@@ -157,9 +140,22 @@ image:
 
 - **Merit**
     - Select important information and remove noise
+    - Aggregate histories
 
 - [`DACR`](https://doi.org/10.3390/app122010594): History Embedding based Latent Factor Model Assist.
     - Cui, C., Qin, J., & Ren, Q.\\
     (2022).\\
     Deep collaborative recommendation algorithm based on attention mechanism.\\
     Applied Sciences, 12(20), 10594.
+
+- [`DRNet`](https://doi.org/10.1109/ACCESS.2020.3002102): Aggregate user's histories
+    - Ji, D., Xiang, Z., & Li, Y.\\
+    (2020).\\
+    Dual relations network for collaborative filtering.\\
+    IEEE Access, 8, 109747-109757.
+
+- [`DELF`](https://doi.org/10.24963/ijcai.2018/462): Aggregate user and item's histories
+    - Cheng, W., Shen, Y., Zhu, Y., & Huang, L.\\
+    (2018, July).\\
+    DELF: A dual-embedding based deep latent factor model for recommendation.\\
+    In IJCAI (Vol. 18, pp. 3329-3335).

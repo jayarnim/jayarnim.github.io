@@ -1,7 +1,7 @@
 ---
-order: 6
+order: 5
 title: Distance Embedding based Latent Factor Model
-date: 2024-04-24
+date: 2024-04-10
 categories: [RECOMMENDER SYSTEM, 2.mlp based collaborative filtering]
 tags: [AI Application, Recommender System, Collaborative Filtering, Latent Factor Model, MLP]
 math: true
@@ -73,7 +73,7 @@ image:
 ## How to Modeling
 -----
 
-![01](/_post_refer_img/RecommenderSystem/2.MLP/06-01.png){: width="100%"}
+![01](/_post_refer_img/RecommenderSystem/2.MLP/05-01.png){: width="100%"}
 
 - `DDFL` is `MeFL` & `MaFL` Ensemble:
 
@@ -93,7 +93,7 @@ image:
 
 ### MeFL
 
-![02](/_post_refer_img/RecommenderSystem/2.MLP/06-02.png){: width="100%"}
+![02](/_post_refer_img/RecommenderSystem/2.MLP/05-02.png){: width="100%"}
 
 - Conversion Transformation:
 
@@ -147,7 +147,7 @@ image:
 
 ### MaFL
 
-![03](/_post_refer_img/RecommenderSystem/2.MLP/06-03.png){: width="100%"}
+![03](/_post_refer_img/RecommenderSystem/2.MLP/05-03.png){: width="100%"}
 
 - History Embedding:
 
