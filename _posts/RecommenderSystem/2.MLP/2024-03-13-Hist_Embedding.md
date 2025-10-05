@@ -1,6 +1,6 @@
 ---
 order: 3
-title: History Embedding based Latent Factor Models
+title: History Embedding based Latent Factor Model
 date: 2024-03-13
 categories: [RECOMMENDER SYSTEM, 2.mlp based collaborative filtering]
 tags: [AI Application, Recommender System, Collaborative Filtering, Latent Factor Model, MLP]

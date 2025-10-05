@@ -1,6 +1,6 @@
 ---
 order: 4
-title: Dual Embedding based Latent Factor Models
+title: Dual Embedding based Latent Factor Model
 date: 2024-03-27
 categories: [RECOMMENDER SYSTEM, 2.mlp based collaborative filtering]
 tags: [AI Application, Recommender System, Collaborative Filtering, Latent Factor Model, MLP]
