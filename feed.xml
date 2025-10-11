@@ -4,7 +4,7 @@
   <id>https://jayarnim.github.io/</id>
   <title>Data Scientist</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-10-11T14:24:12+09:00</updated>
+  <updated>2025-10-11T14:26:47+09:00</updated>
   <author>
     <name>jayarnim</name>
     <uri>https://jayarnim.github.io/</uri>
@@ -17,49 +17,6 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
-
-  
-  <entry>
-    <title>Rff</title>
-    <link href="https://jayarnim.github.io/posts/RFF/" rel="alternate" type="text/html" title="Rff" />
-    <published>2025-02-07T00:00:00+09:00</published>
-  
-    <updated>2025-02-07T00:00:00+09:00</updated>
-  
-    <id>https://jayarnim.github.io/posts/RFF/</id>
-    <content src="https://jayarnim.github.io/posts/RFF/" />
-    <author>
-      <name>jayarnim</name>
-    </author>
-
-  
-    
-  
-
-  <summary>Plancherel Theroem
-
-
-
-  
-    플랑쉐렐 정리(Plancherel Theroem)
-
-    
-      푸리에 변환은 $L^{2}(\mathbb{R}^{d})$ 함수 공간에서 내적과 노름을 보존한다.
-    
-
-\[\begin{aligned}
-  \left&amp;amp;lt;f,g\right&amp;amp;gt;_{L^{2}(\mathbb{R}^{d})}
-  &amp;amp;amp;= \frac{1}{(2\pi)^{d}}\left&amp;amp;lt;\hat{f},\hat{g}\right&amp;amp;gt;_{L^{2}(\mathbb{R}^{d})}
-  \end{aligned}\]
-  
-  
-    $L^{2}(\mathbb{R}^{d})$ 공간:
-
-\[\begin{aligned}
-  L^{2}(\mathbb{R}^{d})
-  := \left\{f:...</summary>
-
-  </entry>
 
   
   <entry>
@@ -222,6 +179,32 @@
   연산자(Operator): 어떠한 구조가 부여된 공간 내부 대상의 성질이나 관계 등을 수학적으로 다루는 행위자
     
       연산 법칙(Operation ...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Hierarchical Clustering</title>
+    <link href="https://jayarnim.github.io/posts/Hierarchical_Clustering/" rel="alternate" type="text/html" title="Hierarchical Clustering" />
+    <published>2025-01-09T00:00:00+09:00</published>
+  
+    <updated>2025-01-09T00:00:00+09:00</updated>
+  
+    <id>https://jayarnim.github.io/posts/Hierarchical_Clustering/</id>
+    <content src="https://jayarnim.github.io/posts/Hierarchical_Clustering/" />
+    <author>
+      <name>jayarnim</name>
+    </author>
+
+  
+    
+    <category term="STATISTICAL TECHS" />
+    
+    <category term="3.multivariate statistical analysis" />
+    
+  
+
+  <summary>Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</summary>
 
   </entry>
 
