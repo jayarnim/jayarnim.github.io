@@ -4,7 +4,7 @@
   <id>https://jayarnim.github.io/</id>
   <title>Data Scientist</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-10-05T23:42:53+09:00</updated>
+  <updated>2025-10-11T14:24:12+09:00</updated>
   <author>
     <name>jayarnim</name>
     <uri>https://jayarnim.github.io/</uri>
@@ -20,180 +20,208 @@
 
   
   <entry>
-    <title>Markov Chain</title>
-    <link href="https://jayarnim.github.io/posts/Markov_Chain/" rel="alternate" type="text/html" title="Markov Chain" />
-    <published>2025-08-08T00:00:00+09:00</published>
+    <title>Rff</title>
+    <link href="https://jayarnim.github.io/posts/RFF/" rel="alternate" type="text/html" title="Rff" />
+    <published>2025-02-07T00:00:00+09:00</published>
   
-    <updated>2025-08-08T00:00:00+09:00</updated>
+    <updated>2025-02-07T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/Markov_Chain/</id>
-    <content src="https://jayarnim.github.io/posts/Markov_Chain/" />
+    <id>https://jayarnim.github.io/posts/RFF/</id>
+    <content src="https://jayarnim.github.io/posts/RFF/" />
     <author>
       <name>jayarnim</name>
     </author>
 
   
     
-    <category term="BAYES" />
-    
-    <category term="4.stochastic process" />
-    
   
 
-  <summary>Markov Chain
+  <summary>Plancherel Theroem
 
 
 
   
-    마르코프 체인(Markov Chain) : 어떤 시스템에 대하여 해당 시스템이 상태 공간 $S$ 에서 이산적인 시점($t=0,1,2,\cdots$)에서만 상태 전이가 발생한다고 했을 때, 이 시스템이 마르코프 성질을 만족한다면, 이 시스템은 마르코프 체인이라고 볼 수 있음
+    플랑쉐렐 정리(Plancherel Theroem)
+
+    
+      푸리에 변환은 $L^{2}(\mathbb{R}^{d})$ 함수 공간에서 내적과 노름을 보존한다.
+    
+
+\[\begin{aligned}
+  \left&amp;amp;lt;f,g\right&amp;amp;gt;_{L^{2}(\mathbb{R}^{d})}
+  &amp;amp;amp;= \frac{1}{(2\pi)^{d}}\left&amp;amp;lt;\hat{f},\hat{g}\right&amp;amp;gt;_{L^{2}(\mathbb{R}^{d})}
+  \end{aligned}\]
+  
+  
+    $L^{2}(\mathbb{R}^{d})$ 공간:
+
+\[\begin{aligned}
+  L^{2}(\mathbb{R}^{d})
+  := \left\{f:...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Fourier Analysis (2) Fourier Transform</title>
+    <link href="https://jayarnim.github.io/posts/Fourier_Transform/" rel="alternate" type="text/html" title="Fourier Analysis (2) Fourier Transform" />
+    <published>2025-02-06T00:00:00+09:00</published>
+  
+    <updated>2025-02-06T00:00:00+09:00</updated>
+  
+    <id>https://jayarnim.github.io/posts/Fourier_Transform/</id>
+    <content src="https://jayarnim.github.io/posts/Fourier_Transform/" />
+    <author>
+      <name>jayarnim</name>
+    </author>
+
+  
+    
+    <category term="MATHEMATICAL TECHS" />
+    
+    <category term="3.etc" />
+    
+  
+
+  <summary>Fourier Transform
+
+
+
+  
+    푸리에 변환(Fourier Transform): 푸리에 급수를 활용하여 시간 영역 $t \in T$ 에서 정의된 비주기 신호 함수 $X(t)$ 를 주파수 영역 $\omega \in \Omega$ 의 스펙트럼 밀도 함수 $\mathcal{X}(\omega)$ 로 재정의하는 기법
+  
+  
+    정변환(transform): 시간 영역의 비주기 신호를 주파수 영역의 스펙트럼 밀도로 변환
+
+\[\begin{aligned}
+  \mathcal{F}(X)
+  &amp;amp;amp;= \mathcal{X}(\omega)\\
+  &amp;amp;amp;= \left&amp;amp;lt;X(u),\phi_{\omega}(u)\right&amp;amp;gt;\\
+  &amp;amp;amp;= \int_{-\infty}^{\infty}{X...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Fourier Analysis (1) Fourier Series</title>
+    <link href="https://jayarnim.github.io/posts/Fourier_Series/" rel="alternate" type="text/html" title="Fourier Analysis (1) Fourier Series" />
+    <published>2025-02-05T00:00:00+09:00</published>
+  
+    <updated>2025-02-05T00:00:00+09:00</updated>
+  
+    <id>https://jayarnim.github.io/posts/Fourier_Series/</id>
+    <content src="https://jayarnim.github.io/posts/Fourier_Series/" />
+    <author>
+      <name>jayarnim</name>
+    </author>
+
+  
+    
+    <category term="MATHEMATICAL TECHS" />
+    
+    <category term="3.etc" />
+    
+  
+
+  <summary>Euler’s Formula
+
+
+
+  
+    오일러 공식(Euler’s Formula): 복소 지수 함수와 삼각함수의 관계를 나타내는 공식
 
     
       
-        마르코프 성질 : 미래의 상태가 현재 상태에만 의존하며 과거의 상태는 고려하지 않는 성질
+        복소 지수 함수의 테일러 급수:
 
 \[\begin{aligned}
-  P(X_{n+1}=j \mid X_{n}=i,X_{n-1}=i_{n-1},\cdots,X_{0}=i_{0}) = P(X_{n+1}=j \mid X_{n}=i)
+  \exp{i\theta}
+  = \sum_{n=0}^{\infty}{\frac{(i\theta)^{n}}{n!}}
+  = \sum_{k=0}^{\infty}{\frac{(i\theta)^{2k}}{(2k)!}} + \sum_{k=0}^{\infty}{\frac{(i\theta)^{2k+1}}{(2k+1)!}}
   \end{aligned}\]
-
-        
-          $X...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Cox Process</title>
-    <link href="https://jayarnim.github.io/posts/Cox_Process/" rel="alternate" type="text/html" title="Cox Process" />
-    <published>2025-08-07T00:00:00+09:00</published>
-  
-    <updated>2025-08-07T00:00:00+09:00</updated>
-  
-    <id>https://jayarnim.github.io/posts/Cox_Process/</id>
-    <content src="https://jayarnim.github.io/posts/Cox_Process/" />
-    <author>
-      <name>jayarnim</name>
-    </author>
-
-  
-    
-    <category term="BAYES" />
-    
-    <category term="4.stochastic process" />
-    
-  
-
-  <summary>Poisson Process
-
-
-Gamma Process
-
-
-Cox Process</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Chinese Restaurant Process</title>
-    <link href="https://jayarnim.github.io/posts/CRP/" rel="alternate" type="text/html" title="Chinese Restaurant Process" />
-    <published>2025-08-06T00:00:00+09:00</published>
-  
-    <updated>2025-08-06T00:00:00+09:00</updated>
-  
-    <id>https://jayarnim.github.io/posts/CRP/</id>
-    <content src="https://jayarnim.github.io/posts/CRP/" />
-    <author>
-      <name>jayarnim</name>
-    </author>
-
-  
-    
-    <category term="BAYES" />
-    
-    <category term="4.stochastic process" />
-    
-  
-
-  <summary>Dirichlet Process
-
-
-Chinese Restaurant Process</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Indian Buffet Process</title>
-    <link href="https://jayarnim.github.io/posts/IBP/" rel="alternate" type="text/html" title="Indian Buffet Process" />
-    <published>2025-08-05T00:00:00+09:00</published>
-  
-    <updated>2025-08-05T00:00:00+09:00</updated>
-  
-    <id>https://jayarnim.github.io/posts/IBP/</id>
-    <content src="https://jayarnim.github.io/posts/IBP/" />
-    <author>
-      <name>jayarnim</name>
-    </author>
-
-  
-    
-    <category term="BAYES" />
-    
-    <category term="4.stochastic process" />
-    
-  
-
-  <summary>Bernoulli Process
-
-
-Beta Process
-
-
-Indian Buffet Process</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>GP (3) Random Fourier Features Gaussian Process</title>
-    <link href="https://jayarnim.github.io/posts/GP_RFFGP/" rel="alternate" type="text/html" title="GP (3) Random Fourier Features Gaussian Process" />
-    <published>2025-08-04T00:00:00+09:00</published>
-  
-    <updated>2025-08-04T00:00:00+09:00</updated>
-  
-    <id>https://jayarnim.github.io/posts/GP_RFFGP/</id>
-    <content src="https://jayarnim.github.io/posts/GP_RFFGP/" />
-    <author>
-      <name>jayarnim</name>
-    </author>
-
-  
-    
-    <category term="BAYES" />
-    
-    <category term="4.stochastic process" />
-    
-  
-
-  <summary>GP
-
-
-
-  
-    가우시안 프로세스(Gaussian Process):
-
-    
-      순차 입력 $x_{1},x_{2},\cdots \in \ell^{2}$ 에 대한 출력 $f(x_{1}),f(x_{2}),\cdots \in \ell^{2}$ 이 입력 공간 $\ell^{2}$ 전체에 대하여 확률 분포를 가지는 확률 과정으로서, 함수 자체를 확률변수로 취하는 함수 분포
-    
+      
+      
+        $n=2k$:
 
 \[\begin{aligned}
-  f(\cdot) \sim \mathcal{GP}(\mu(\cdot), K(\cdot, \cdot))
-  \end{aligned}\]
-  
-  
-    $f(x) \sim \mathcal{N}(\mu(x),K(x,x))$: 입력값 $x$ 에 대한 출력값
+  (i\theta)^{2k}
+...</summary>
 
-\[\begin{aligned...</summary>
+  </entry>
+
+  
+  <entry>
+    <title>Space (2) Measure Space</title>
+    <link href="https://jayarnim.github.io/posts/Measure_Space/" rel="alternate" type="text/html" title="Space (2) Measure Space" />
+    <published>2025-02-04T00:00:00+09:00</published>
+  
+    <updated>2025-02-04T00:00:00+09:00</updated>
+  
+    <id>https://jayarnim.github.io/posts/Measure_Space/</id>
+    <content src="https://jayarnim.github.io/posts/Measure_Space/" />
+    <author>
+      <name>jayarnim</name>
+    </author>
+
+  
+    
+    <category term="MATHEMATICAL TECHS" />
+    
+    <category term="3.etc" />
+    
+  
+
+  <summary>Space
+
+
+
+  공간(Space): 어떤 종류의 수학적 대상을 모은 집합에 대하여, 그 집합 위에 고유의 연산 법칙을 제공하는 연산 구조가 부여되어 그 구조적 성질을 정의하고, 이로부터 유도 가능한 각종 성질들을 논의할 수 있는 수학적 시스템
+    
+      위상 공간(Topological Space): 어떤 종류의 수학적 대상에 열림을, 그 대상을 다루는 연산자에 연속성을 부여하기 위한 연산 구조
+      측도 공간(Measure Space): 어떤 종류의 수학적 대상에 크기의 측정 가능성을 부여하기 위한 연산 구조
+    
+  
+  연산자(Operator): 어떠한 구조가 부여된 공간 내부 대상의 성질이나 관계 등을 수학적으로 다루는 행위자
+    
+      연산 법칙(Operation ...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Space (1) Topological Space</title>
+    <link href="https://jayarnim.github.io/posts/Topological_Space/" rel="alternate" type="text/html" title="Space (1) Topological Space" />
+    <published>2025-02-03T00:00:00+09:00</published>
+  
+    <updated>2025-02-03T00:00:00+09:00</updated>
+  
+    <id>https://jayarnim.github.io/posts/Topological_Space/</id>
+    <content src="https://jayarnim.github.io/posts/Topological_Space/" />
+    <author>
+      <name>jayarnim</name>
+    </author>
+
+  
+    
+    <category term="MATHEMATICAL TECHS" />
+    
+    <category term="3.etc" />
+    
+  
+
+  <summary>Space
+
+
+
+  공간(Space): 어떤 종류의 수학적 대상을 모은 집합에 대하여, 그 집합 위에 고유의 연산 법칙을 제공하는 연산 구조가 부여되어 그 구조적 성질을 정의하고, 이로부터 유도 가능한 각종 성질들을 논의할 수 있는 수학적 시스템
+    
+      위상 공간(Topological Space): 어떤 종류의 수학적 대상에 열림을, 그 대상을 다루는 연산자에 연속성을 부여하기 위한 연산 구조
+      측도 공간(Measure Space): 어떤 종류의 수학적 대상에 크기의 측정 가능성을 부여하기 위한 연산 구조
+    
+  
+  연산자(Operator): 어떠한 구조가 부여된 공간 내부 대상의 성질이나 관계 등을 수학적으로 다루는 행위자
+    
+      연산 법칙(Operation ...</summary>
 
   </entry>
 
