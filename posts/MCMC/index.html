@@ -1062,6 +1062,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -1174,9 +1185,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="620 words"
+  title="840 words"
 >
-  <em>3 min</em> read</span>
+  <em>4 min</em> read</span>
 
         </div>
       </div>
@@ -1304,6 +1315,74 @@
     <p><strong>선행 구간(Burn-in Period)</strong> : 수렴 상태에 도달하기 전, 초기값 $x^{(t=0)}$ 의 영향력을 최소화하기 위해 일부 반복을 무시하는 구간</p>
 
     <p><a href="/_post_refer_img/BayesianModeling/2.Posterior/02-06.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/2.Posterior/02-06.png" alt="06" width="100%" loading="lazy"></a></p>
+  </li>
+</ul>
+
+<h2 id="pymc-summary-indicator"><span class="me-2">PyMC Summary Indicator</span><a href="#pymc-summary-indicator" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><strong>Posterior Mean</strong>: 사후 평균 추정치</p>
+
+\[\hat{\mu}=\frac{1}{N}\sum_{i=1}^{N}{\theta_{i}}\]
+  </li>
+  <li>
+    <p><strong>Posterior Standard Deviation</strong>: 사후 평균 추정치의 표준편차</p>
+
+\[\hat{\sigma}=\sqrt{\frac{1}{N-1}\sum_{i=1}^{N}{(\theta_{i}-\hat{\mu})^{2}}}\]
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">M</code>onte <code class="language-plaintext highlighter-rouge">C</code>arlo <code class="language-plaintext highlighter-rouge">S</code>tandard <code class="language-plaintext highlighter-rouge">E</code>rror</strong>: 사후 평균 추정치의 몬테카를로 표준오차</p>
+
+\[\mathrm{MCSE}_{\mathrm{mean}}
+  =\sqrt{\mathrm{Var}(\hat{\mu})}\approx \frac{\hat{\sigma}}{\sqrt{\mathrm{ESS}}}\]
+
+    <ul>
+      <li><strong>Mean</strong>: 사후 분포의 중심 위치 추정 불확실성으로서 중심 위치 추정의 안정성</li>
+      <li><strong>Std</strong>: 사후 분포의 폭 추정 불확실성으로서 신뢰구간 추정의 정확성</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">E</code>ffective <code class="language-plaintext highlighter-rouge">S</code>ample <code class="language-plaintext highlighter-rouge">S</code>ize</strong>: 샘플 간 자기상관을 보정한 독립 샘플 수</p>
+
+\[\mathrm{ESS}=\frac{MN}{1+2\sum_{t=1}^{\infty}{\rho_{t}}}\]
+
+    <ul>
+      <li><strong>Bulk</strong>: 중심부에서의 표본 독립성으로서 사후 분포의 중심 위치 통계량의 신뢰도</li>
+      <li><strong>Tail</strong>: 꼬리부에서의 표본 독립성으로서 신뢰구간 경계의 신뢰도</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Gelman–Rubin Statistic (Potential Scale Reduction Factor)</strong>: 체인 간 수렴성 평가 지표</p>
+
+\[\hat{R}=\sqrt{\frac{B}{W}}\]
+
+    <ul>
+      <li>
+        <p>Definition:</p>
+
+\[\begin{aligned}
+  \bar{\theta}^{(k)}:=\frac{1}{N}\sum_{i=1}^{N}{\theta_{i}^{(k)}}, \quad 
+  \bar{\theta}:=\frac{1}{M}\sum_{k=1}^{M}{\bar{\theta}_{k}}
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>Between-chain variance:</p>
+
+\[\begin{aligned}
+  B=\frac{N}{M-1}\sum_{k=1}^{M}{(\bar{\theta}^{(k)} - \bar{\theta})^{2}}
+  \end{aligned}\]
+      </li>
+      <li>
+        <p>Within-chain variance:</p>
+
+\[\begin{aligned}
+  W&amp;=\frac{1}{M}\sum_{k=1}^{M}{s_{k}^{2}}\\
+  s_{k}^{2}&amp;=\frac{1}{N-1}\sum_{i=1}^{N}{(\theta_{i}^{(k)}-\bar{\theta}^{(k)})^{2}}
+  \end{aligned}\]
+      </li>
+    </ul>
   </li>
 </ul>
 
