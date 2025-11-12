@@ -4,7 +4,7 @@
   <id>https://jayarnim.github.io/</id>
   <title>Data Scientist</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-11-08T00:39:24+09:00</updated>
+  <updated>2025-11-13T03:38:08+09:00</updated>
   <author>
     <name>jayarnim</name>
     <uri>https://jayarnim.github.io/</uri>
@@ -20,165 +20,136 @@
 
   
   <entry>
-    <title>Fourier Analysis (2) Fourier Transform</title>
-    <link href="https://jayarnim.github.io/posts/Fourier_Transform/" rel="alternate" type="text/html" title="Fourier Analysis (2) Fourier Transform" />
-    <published>2025-02-06T00:00:00+09:00</published>
+    <title>Fourier Analysis</title>
+    <link href="https://jayarnim.github.io/posts/Fourier/" rel="alternate" type="text/html" title="Fourier Analysis" />
+    <published>2025-08-05T00:00:00+09:00</published>
   
-    <updated>2025-02-06T00:00:00+09:00</updated>
+    <updated>2025-08-05T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/Fourier_Transform/</id>
-    <content src="https://jayarnim.github.io/posts/Fourier_Transform/" />
+    <id>https://jayarnim.github.io/posts/Fourier/</id>
+    <content src="https://jayarnim.github.io/posts/Fourier/" />
     <author>
       <name>jayarnim</name>
     </author>
 
   
     
-    <category term="MATHEMATICAL TECHS" />
+    <category term="BAYES" />
     
-    <category term="3.etc" />
-    
-  
-
-  <summary>Fourier Transform
-
-
-
-  
-    푸리에 변환(Fourier Transform): 푸리에 급수를 활용하여 시간 영역 $t \in T$ 에서 정의된 비주기 신호 함수 $X(t)$ 를 주파수 영역 $\omega \in \Omega$ 의 스펙트럼 밀도 함수 $\mathcal{X}(\omega)$ 로 재정의하는 기법
-  
-  
-    정변환(transform): 시간 영역의 비주기 신호를 주파수 영역의 스펙트럼 밀도로 변환
-
-\[\begin{aligned}
-  \mathcal{F}(X)
-  &amp;amp;amp;= \mathcal{X}(\omega)\\
-  &amp;amp;amp;= \left&amp;amp;lt;X(u),\phi_{\omega}(u)\right&amp;amp;gt;\\
-  &amp;amp;amp;= \int_{-\infty}^{\infty}{X...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Fourier Analysis (1) Fourier Series</title>
-    <link href="https://jayarnim.github.io/posts/Fourier_Series/" rel="alternate" type="text/html" title="Fourier Analysis (1) Fourier Series" />
-    <published>2025-02-05T00:00:00+09:00</published>
-  
-    <updated>2025-02-05T00:00:00+09:00</updated>
-  
-    <id>https://jayarnim.github.io/posts/Fourier_Series/</id>
-    <content src="https://jayarnim.github.io/posts/Fourier_Series/" />
-    <author>
-      <name>jayarnim</name>
-    </author>
-
-  
-    
-    <category term="MATHEMATICAL TECHS" />
-    
-    <category term="3.etc" />
+    <category term="4.stochastic process" />
     
   
 
-  <summary>Euler’s Formula
-
+  <summary>Euler’s formula
 
 
   
-    오일러 공식(Euler’s Formula): 복소 지수 함수와 삼각함수의 관계를 나타내는 공식
-
-    
-      
-        복소 지수 함수의 테일러 급수:
+    Euler’s formula is a formula that shows that the Taylor series of a complex exponential function can be expressed as a trigonometric function.
 
 \[\begin{aligned}
   \exp{i\theta}
-  = \sum_{n=0}^{\infty}{\frac{(i\theta)^{n}}{n!}}
-  = \sum_{k=0}^{\infty}{\frac{(i\theta)^{2k}}{(2k)!}} + \sum_{k=0}^{\infty}{\frac{(i\theta)^{2k+1}}{(2k+1)!}}
-  \end{aligned}\]
-      
-      
-        $n=2k$:
-
-\[\begin{aligned}
-  (i\theta)^{2k}
-...</summary>
+  &amp;amp;amp;=\sum_{n=0}^{\infty}{\frac{(i\theta)^{n}}{n!}}\\
+  &amp;amp;amp;=\sum_{k=0}^{\infty}{\frac{(i\theta)^{2k}}{(2k)!}}+\sum_{k=0}^{\infty}{\frac{(i\theta)^{2k+1}}{(2k+1)!}}\\
+  &amp;amp;amp;=\sum_{k=0}^{\inf...</summary>
 
   </entry>
 
   
   <entry>
-    <title>Space (2) Measure Space</title>
-    <link href="https://jayarnim.github.io/posts/Measure_Space/" rel="alternate" type="text/html" title="Space (2) Measure Space" />
-    <published>2025-02-04T00:00:00+09:00</published>
+    <title>GP (2) Sparse Gaussian Process</title>
+    <link href="https://jayarnim.github.io/posts/GP_SGP/" rel="alternate" type="text/html" title="GP (2) Sparse Gaussian Process" />
+    <published>2025-08-04T00:00:00+09:00</published>
   
-    <updated>2025-02-04T00:00:00+09:00</updated>
+    <updated>2025-08-04T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/Measure_Space/</id>
-    <content src="https://jayarnim.github.io/posts/Measure_Space/" />
+    <id>https://jayarnim.github.io/posts/GP_SGP/</id>
+    <content src="https://jayarnim.github.io/posts/GP_SGP/" />
     <author>
       <name>jayarnim</name>
     </author>
 
   
     
-    <category term="MATHEMATICAL TECHS" />
+    <category term="BAYES" />
     
-    <category term="3.etc" />
-    
-  
-
-  <summary>Space
-
-
-
-  공간(Space): 어떤 종류의 수학적 대상을 모은 집합에 대하여, 그 집합 위에 고유의 연산 법칙을 제공하는 연산 구조가 부여되어 그 구조적 성질을 정의하고, 이로부터 유도 가능한 각종 성질들을 논의할 수 있는 수학적 시스템
-    
-      위상 공간(Topological Space): 어떤 종류의 수학적 대상에 열림을, 그 대상을 다루는 연산자에 연속성을 부여하기 위한 연산 구조
-      측도 공간(Measure Space): 어떤 종류의 수학적 대상에 크기의 측정 가능성을 부여하기 위한 연산 구조
+    <category term="4.stochastic process" />
     
   
-  연산자(Operator): 어떠한 구조가 부여된 공간 내부 대상의 성질이나 관계 등을 수학적으로 다루는 행위자
+
+  <summary>sparse gaussian process
+
+
+  sparse gaussian process is a technique that achieves the following two advantages by introducing $M$ inducing points that can represent all $N\to\infty$ observations:
     
-      연산 법칙(Operation ...</summary>
+      infinite-dimensional function space is projected onto a low-dimensional induction point space, thereby ensuring computational efficiency.
+      uncertainty is restricted to the low-dimensiona...</summary>
 
   </entry>
 
   
   <entry>
-    <title>Space (1) Topological Space</title>
-    <link href="https://jayarnim.github.io/posts/Topological_Space/" rel="alternate" type="text/html" title="Space (1) Topological Space" />
-    <published>2025-02-03T00:00:00+09:00</published>
+    <title>GP (1) Gaussian Process</title>
+    <link href="https://jayarnim.github.io/posts/GP_GP/" rel="alternate" type="text/html" title="GP (1) Gaussian Process" />
+    <published>2025-08-03T00:00:00+09:00</published>
   
-    <updated>2025-02-03T00:00:00+09:00</updated>
+    <updated>2025-08-03T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/Topological_Space/</id>
-    <content src="https://jayarnim.github.io/posts/Topological_Space/" />
+    <id>https://jayarnim.github.io/posts/GP_GP/</id>
+    <content src="https://jayarnim.github.io/posts/GP_GP/" />
     <author>
       <name>jayarnim</name>
     </author>
 
   
     
-    <category term="MATHEMATICAL TECHS" />
+    <category term="BAYES" />
     
-    <category term="3.etc" />
+    <category term="4.stochastic process" />
+    
+  
+
+  <summary>gaussian process
+
+
+  
+    gaussian process is a nonparametric stochastic process that uses the mean and covariance structure of function values as prior information to infer the function distribution, assuming that the function values defined for an arbitrary input set jointly follow a multivariate normal distribution.
+  
+  
+    function definition:
+
+\[y_{i}=f(X_{i})+\epsilon_{i}, \quad \epsilo...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>RKHS</title>
+    <link href="https://jayarnim.github.io/posts/RKHS/" rel="alternate" type="text/html" title="RKHS" />
+    <published>2025-08-02T00:00:00+09:00</published>
+  
+    <updated>2025-08-02T00:00:00+09:00</updated>
+  
+    <id>https://jayarnim.github.io/posts/RKHS/</id>
+    <content src="https://jayarnim.github.io/posts/RKHS/" />
+    <author>
+      <name>jayarnim</name>
+    </author>
+
+  
+    
+    <category term="BAYES" />
+    
+    <category term="4.stochastic process" />
     
   
 
-  <summary>Space
+  <summary>evaluation operator
 
 
-
-  공간(Space): 어떤 종류의 수학적 대상을 모은 집합에 대하여, 그 집합 위에 고유의 연산 법칙을 제공하는 연산 구조가 부여되어 그 구조적 성질을 정의하고, 이로부터 유도 가능한 각종 성질들을 논의할 수 있는 수학적 시스템
-    
-      위상 공간(Topological Space): 어떤 종류의 수학적 대상에 열림을, 그 대상을 다루는 연산자에 연속성을 부여하기 위한 연산 구조
-      측도 공간(Measure Space): 어떤 종류의 수학적 대상에 크기의 측정 가능성을 부여하기 위한 연산 구조
-    
   
-  연산자(Operator): 어떠한 구조가 부여된 공간 내부 대상의 성질이나 관계 등을 수학적으로 다루는 행위자
-    
-      연산 법칙(Operation ...</summary>
+    (in the space where the inner product is defined) the evaluation operation is the inverse operation of the inner product, which recovers the intrinsic properties of an object from a distorted representation mapped to a basis direction of a specific space. this is performed by taking the inner product with the dual basis of the mapped basis.
+
+\[\delta(\cdot):=\langle...</summary>
 
   </entry>
 

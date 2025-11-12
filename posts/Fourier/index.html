@@ -30,25 +30,25 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="Space (2) Measure Space" />
+<meta property="og:title" content="Fourier Analysis" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Space" />
-<meta property="og:description" content="Space" />
-<link rel="canonical" href="https://jayarnim.github.io/posts/Measure_Space/" />
-<meta property="og:url" content="https://jayarnim.github.io/posts/Measure_Space/" />
+<meta name="description" content="Euler’s formula" />
+<meta property="og:description" content="Euler’s formula" />
+<link rel="canonical" href="https://jayarnim.github.io/posts/Fourier/" />
+<meta property="og:url" content="https://jayarnim.github.io/posts/Fourier/" />
 <meta property="og:site_name" content="Data Scientist" />
-<meta property="og:image" content="https://jayarnim.github.io/_post_refer_img/MathematicalTechs/3.etc/Thumbnail.jpg" />
+<meta property="og:image" content="https://jayarnim.github.io/_post_refer_img/BayesianModeling/4.StochasticProcess/Thumbnail.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-02-04T00:00:00+09:00" />
+<meta property="article:published_time" content="2025-08-05T00:00:00+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/MathematicalTechs/3.etc/Thumbnail.jpg" />
-<meta property="twitter:title" content="Space (2) Measure Space" />
+<meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/BayesianModeling/4.StochasticProcess/Thumbnail.jpg" />
+<meta property="twitter:title" content="Fourier Analysis" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-02-04T00:00:00+09:00","datePublished":"2025-02-04T00:00:00+09:00","description":"Space","headline":"Space (2) Measure Space","image":"https://jayarnim.github.io/_post_refer_img/MathematicalTechs/3.etc/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/Measure_Space/"},"url":"https://jayarnim.github.io/posts/Measure_Space/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-08-05T00:00:00+09:00","datePublished":"2025-08-05T00:00:00+09:00","description":"Euler’s formula","headline":"Fourier Analysis","image":"https://jayarnim.github.io/_post_refer_img/BayesianModeling/4.StochasticProcess/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/Fourier/"},"url":"https://jayarnim.github.io/posts/Fourier/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Space (2) Measure Space | Data Scientist
+  <title>Fourier Analysis | Data Scientist
   </title>
 
   <!--
@@ -405,7 +405,7 @@
         
           
             
-              <span>Space (2) Measure Space</span>
+              <span>Fourier Analysis</span>
             
 
           
@@ -625,6 +625,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -654,7 +665,7 @@
 
 <article class="px-1">
   <header>
-    <h1 data-toc-skip>Space (2) Measure Space</h1>
+    <h1 data-toc-skip>Fourier Analysis</h1>
     
 
     <div class="post-meta text-muted">
@@ -671,13 +682,13 @@
 
 <time
   
-  data-ts="1738594800"
+  data-ts="1754319600"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Feb  4, 2025
+  Aug  5, 2025
 </time>
 
       </span>
@@ -693,7 +704,7 @@
         
 
         <div class="mt-3 mb-3">
-          <a href="/_post_refer_img/MathematicalTechs/3.etc/Thumbnail.jpg" class="popup img-link preview-img shimmer"><img src="/_post_refer_img/MathematicalTechs/3.etc/Thumbnail.jpg"  alt="Preview Image" width="1200" height="630"  loading="lazy"></a></div>
+          <a href="/_post_refer_img/BayesianModeling/4.StochasticProcess/Thumbnail.jpg" class="popup img-link preview-img shimmer"><img src="/_post_refer_img/BayesianModeling/4.StochasticProcess/Thumbnail.jpg"  alt="Preview Image" width="1200" height="630"  loading="lazy"></a></div>
       
 
       <div class="d-flex justify-content-between">
@@ -735,9 +746,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1219 words"
+  title="630 words"
 >
-  <em>6 min</em> read</span>
+  <em>3 min</em> read</span>
 
         </div>
       </div>
@@ -745,204 +756,182 @@
   </header>
 
   <div class="content">
-    <h2 id="space"><span class="me-2">Space</span><a href="#space" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<ul>
-  <li><strong>공간(Space)</strong>: 어떤 종류의 수학적 대상을 모은 집합에 대하여, 그 집합 위에 고유의 연산 법칙을 제공하는 연산 구조가 부여되어 그 구조적 성질을 정의하고, 이로부터 유도 가능한 각종 성질들을 논의할 수 있는 수학적 시스템
-    <ul>
-      <li><strong>위상 공간(Topological Space)</strong>: 어떤 종류의 수학적 대상에 <code class="language-plaintext highlighter-rouge">열림</code>을, 그 대상을 다루는 연산자에 <code class="language-plaintext highlighter-rouge">연속성</code>을 부여하기 위한 연산 구조</li>
-      <li><strong>측도 공간(Measure Space)</strong>: 어떤 종류의 수학적 대상에 <code class="language-plaintext highlighter-rouge">크기</code>의 <code class="language-plaintext highlighter-rouge">측정 가능성</code>을 부여하기 위한 연산 구조</li>
-    </ul>
-  </li>
-  <li><strong>연산자(Operator)</strong>: 어떠한 구조가 부여된 공간 내부 대상의 성질이나 관계 등을 수학적으로 다루는 행위자
-    <ul>
-      <li><strong>연산 법칙(Operation Law)</strong>: 연산이 작동하는 방식과 규칙을 규정하는 공리
-        <ul>
-          <li><strong>공리(Axiom)</strong>: 그 구조를 정의하기 위하여 기초적으로 받아들이는 명제</li>
-        </ul>
-      </li>
-      <li>
-        <p><strong>연산 구조(Structure)</strong>: 연산이 작동하는 방식이 공리적으로 고정된 시스템</p>
-      </li>
-      <li><strong>구조적 성질(Structural Property)</strong>: 구조로 인하여 필연적으로 성립되는 전제적 성질</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="measure-space"><span class="me-2">Measure Space</span><a href="#measure-space" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
+    <h2 id="eulers-formula"><span class="me-2">Euler’s formula</span><a href="#eulers-formula" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <ul>
   <li>
-    <p><strong>측도 공간(Measure Space)</strong>: 원시 집합(underlying set) $\Omega$ 위에 정의된 시그마 대수(sigma-algebra)에 수치적 <code class="language-plaintext highlighter-rouge">크기</code> 개념을 부여하는 공간</p>
+    <p><strong>Euler’s formula</strong> is a formula that shows that the Taylor series of a complex exponential function can be expressed as a trigonometric function.</p>
 
 \[\begin{aligned}
-  (\Omega, \mathcal{F}, \mu)
+  \exp{i\theta}
+  &amp;=\sum_{n=0}^{\infty}{\frac{(i\theta)^{n}}{n!}}\\
+  &amp;=\sum_{k=0}^{\infty}{\frac{(i\theta)^{2k}}{(2k)!}}+\sum_{k=0}^{\infty}{\frac{(i\theta)^{2k+1}}{(2k+1)!}}\\
+  &amp;=\sum_{k=0}^{\infty}{\frac{(-1)^{k}\theta^{2k}}{(2k)!}}+\sum_{k=0}^{\infty}{\frac{\left(i(-1)^{k}\theta\right)^{2k+1}}{(2k+1)!}}\\
+  &amp;=\cos{\theta}+i\sin{\theta}
   \end{aligned}\]
-
-    <ul>
-      <li>
-        <p><strong>시그마 대수(Sigma-Algebra)</strong>: 원시 집합(underlying set) $\Omega$ 의 멱집합(power set) $\mathcal{F} \subseteq 2^{\Omega}$ 으로서, $\Omega$ 의 부분집합 $A \subseteq \Omega$ 들의 집합</p>
-
-\[\begin{aligned}
-  \mathcal{F} \subseteq 2^{\Omega}
-  \end{aligned}\]
-
-        <ul>
-          <li>$\Omega \in \mathcal{F}$</li>
-          <li>$A \in \mathcal{F} \Rightarrow A^{C} \in \mathcal{F}$</li>
-          <li>$A_{1}, A_{2}, \cdots \in \mathcal{F} \Rightarrow \bigcup_{i=1}^{\infty}{A_{i}} \in \mathcal{F}$</li>
-        </ul>
-      </li>
-      <li>
-        <p><strong>측도(Measure)</strong>: 측정 단위로서 시그마 대수 $\forall A \in \mathcal{F}$ 에 대하여 비음수성, 영집합, 가산 가법성을 만족하는 함수</p>
-
-\[\begin{aligned}
-  \mu : \mathcal{F} \rightarrow [0,\infty]
-  \end{aligned}\]
-
-        <ul>
-          <li>비음수성(Non-Negativity): $\mu(A) \ge 0$</li>
-          <li>영집합(Null Empty Set): $\mu(\emptyset) = 0$</li>
-          <li>가산 가법성(Countable Additivity): $A_{i} \in \mathcal{F}, A_{i} \cap A_{j \ne i} = \emptyset \Rightarrow \mu\left(\bigcup_{i=1}^{\infty}{A_{i}}\right) = \sum_{i=1}^{\infty}{\mu(A_{i})}$</li>
-        </ul>
-      </li>
-    </ul>
   </li>
   <li>
-    <p><strong>푸시포워드 측도 공간(Pushforward Measure Space)</strong>: 시그마 대수 간의 구조를 보존하는 사상 함수 $X$ 를 통해 원래의 측도 공간 $(\Omega, \mathcal{F}, \mu)$ 으로부터 유도된 새로운 측도 공간 $(\mathcal{X}, \mathcal{B}, \mu_{X})$</p>
+    <p><strong>complex plane</strong> is a coordinate plane that expresses <strong>complex numbers</strong> \(Z=x+i \cdot y\) <strong>as vectors on the vector space</strong> \(\mathbb{R}^{2}:=\mathrm{span}\left\{\mathbf{e}_{X},\mathbf{e}_{Y}\right\}\), which consists of the <strong>real axis basis</strong> \(\mathbf{e}_{X}=\begin{bmatrix}1\\0\end{bmatrix}\) and the <strong>imaginary axis basis</strong> \(\mathbf{e}_{Y}=\begin{bmatrix}0\\1\end{bmatrix}\).</p>
 
-\[\begin{aligned}
-  (\Omega, \mathcal{F}, \mu) \rightarrow (\mathcal{X}, \mathcal{B}, \mu_{X})
-  \end{aligned}\]
-
-    <ul>
-      <li>
-        <p><strong>사상 함수(Mapping Function)</strong>: 실험 공간(Sampling Space) $\omega \in \Omega$ 을 관측 공간(Observation Space) 혹은 이미지 공간(Image Space) $x \in \mathcal{X}$ 에 대응시키는 함수</p>
-
-\[\begin{aligned}
-  X: \Omega \rightarrow \mathcal{X}
-  \end{aligned}\]
-      </li>
-      <li>
-        <p><strong>보렐 시그마 대수(Borel Sigma-Algebra)</strong>: 이미지 공간(Image Space) $\mathcal{X}$ 위 열린 구간 $(a,b)$ 들로 생성되는 최소의 시그마 대수</p>
-
-\[\begin{aligned}
-  \mathcal{B}(\mathcal{X})
-  := \sigma(\{(a,b) \subset \mathcal{X}\})
-  \end{aligned}\]
-
-        <ul>
-          <li>$\forall B \in \mathcal{B}(\mathcal{X}) \Rightarrow X^{-1}(B) \in \mathcal{F}(\Omega)$</li>
-          <li>$\mu_{X}(B):=\mu(X^{-1}(B))$</li>
-        </ul>
-      </li>
-    </ul>
+\[\mathbf{v}_{Z}:=\mathbf{e}_{X}x+\mathbf{e}_{Y}y \in \mathbb{R}^{2}\]
   </li>
   <li>
-    <p><strong>L-p 공간(Lebesgue p-integrable space)</strong>: 절대값을 $p$ 제곱한 후 르베그 적분(Lebesgue integral)한 값이 유한한 함수들로 구성된 공간</p>
+    <p><strong>rotation transformation</strong> is a linear transformation that rotates a vector on a coordinate plane <strong>counterclockwise by $\theta$ around the $X$ axis</strong>.</p>
 
-\[\begin{aligned}
-  L^{p}(\mathcal{X}, \mu) := \left\{f:\mathcal{X} \to \mathbb{R} \mid \int_{\mathcal{X}}{\vert f(x) \vert^{p} \text{d} \mu(x)} &lt; \infty \right\}
-  \end{aligned}\]
-
-    <ul>
-      <li>
-        <p><strong>르베그 측도(Lebesgue Measure)</strong>: 실수 공간 $\mathbb{R}^{N}$ 위에서 각종 개념의 직관적 크기를 정의한 측도</p>
-
-\[\begin{aligned}
-  \text{d}\mu(x) := \text{d}x, \quad \forall x \in \mathbb{R}^{N}
-  \end{aligned}\]
-      </li>
-      <li>
-        <p><strong>르베그 적분(Lebesgue Integral)</strong>: 사상 함수 $X: \Omega \to \mathcal{X}$ 를 통해 실수 공간 $\mathcal{X}$ 위에 정의된 보렐 시그마 대수 $\forall B \in \mathcal{B}$ 에 대하여 정의되는 르베그 측도 $x \in B$ 를 기준으로 함수 $f: \mathcal{X} \to \mathbb{R}$ 값의 누적 크기를 계산하는 도구로서, 원시 집합 $\Omega$ 에 크기를 부여하고자 하는 <code class="language-plaintext highlighter-rouge">개념</code>을 <code class="language-plaintext highlighter-rouge">함수</code>로 전환하는 장치</p>
-
-\[\begin{aligned}
-  \underbrace{M(f)}_{\text{area}}
-  &amp;:=\int_{x \in B}{\overbrace{f(x)}^{\text{height}}}\underbrace{\text{d}x}_{\text{width}}
-  \end{aligned}\]
-      </li>
-    </ul>
+\[R:=\begin{bmatrix}
+  \cos{\theta}&amp;-\sin{\theta}\\
+  \sin{\theta}&amp;\cos{\theta}
+  \end{bmatrix}\]
   </li>
   <li>
-    <p><strong>밀도(Density)</strong>: 원 측도(Measure)의 기준 측도(Reference Measure) 기준 어떠한 개념의 단위당 크기</p>
-
-    <blockquote>
-      <p><strong>밀도 존재 정리(Randon-Nickodym Theorem)</strong> <br /> 두 측도 $\nu, \mu$ 가 주어졌을 때, $\nu$ 가 $\mu$ 에 대하여 절대 연속(absolute continuity)이면($\nu \ll \mu$) $\forall A \in \mathcal{F}$ 에 대하여 $\nu(A) = \int_{A}{f\text{d}\mu}$ 을 만족하는 $f: \Omega \to [0,\infty]$ 가 존재한다. 이때 함수 $f:=\text{d}\nu / \text{d} \mu$ 를 $\mu$ 에 대한 $\nu$ 의 밀도 함수라고 한다. 또한 측도 $\mu$ 를 원 측도 $\nu$ 의 기준 측도(Reference Measure)라고 한다.</p>
-    </blockquote>
+    <p>Therefore, Euler’s formula suggests that the <strong>complex exponential function</strong> $\exp{i\theta}$ rotates the complex number $Z$ by $\theta$ in the complex plane <strong>counterclockwise around the real axis</strong>.</p>
 
 \[\begin{aligned}
-  \nu(x \in B)
-  = \int_{x \in B}{\text{d}\nu(x)}
-  = \int_{x \in B}{\frac{\text{d}\nu(x)}{\text{d}\mu(x)}}\text{d}\mu(x)
+  R\left(\mathbf{e}_{X};\theta\right)
+  &amp;=1\cdot\begin{bmatrix}\cos{\theta}\\\sin{\theta}\end{bmatrix} + 0\cdot\begin{bmatrix}-\sin{\theta}\\\cos{\theta}\end{bmatrix}\\
+  &amp;\leftrightarrow \cos{\theta}+i\sin{\theta}
   \end{aligned}\]
   </li>
 </ul>
 
-<h2 id="probability-space"><span class="me-2">Probability Space</span><a href="#probability-space" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
+<h2 id="fourier-series"><span class="me-2">Fourier series</span><a href="#fourier-series" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <ul>
   <li>
-    <p><strong>확률 공간(Probability Space)</strong>: 결과(outcome) $\omega$ 의 전체 집합 $\Omega$ 위에 정의된 사건(event) $\omega \in A$ 의 집합 $A \in \mathcal{F} \subseteq 2^{\Omega}$ 에 대하여 확률을 부여하는 공간</p>
+    <p><strong>Fourier series</strong> is a technique for mapping a <strong>periodic signal</strong> $X_{T}(t)$, whose pattern repeats with a period of $T$ defined in the time domain, to a <strong>frequency domain composed of discrete sinusoid</strong> $\phi_{k}(t)$ by approximating it as a linear combination of discrete sinusoid.</p>
+
+\[X_{T}(t)\approx\sum_{k=-\infty}^{\infty}{a_{k}\phi_{k}(t)}\]
+  </li>
+  <li>
+    <p><strong>sinusoid</strong> is a unit vector that <strong>rotates at a unique speed in the complex plane</strong>, and corresponds to the <strong>basis vector</strong> of a vector space.</p>
 
 \[\begin{aligned}
-  (\Omega, \mathcal{F}, P)
+  \phi_{k}(t)
+  :=\exp{i\omega_{k}t}
+  =\cos{\omega_{k}t}+i\sin{\omega_{k}t}
   \end{aligned}\]
-
+  </li>
+  <li><strong>frequency</strong> is the <strong>unique rotational speed of a sinusoid</strong>, which corresponds to the <strong>direction of the basis vector</strong> in vector space.
     <ul>
-      <li>
-        <p><strong>확률 변수(Random Variable)</strong>: 결과 $\omega \in \Omega$ 를 실수 공간 $x \in \mathcal{X}$ 에 대응시키는 사상 함수</p>
-
-\[\begin{aligned}
-  X: \Omega \rightarrow \mathcal{X}
-  \end{aligned}\]
-      </li>
-      <li>
-        <p><strong>확률 측도(Probability Measure)</strong>: $P_{X}(\mathcal{X})=1$ 인 특수한 측도</p>
-
-\[\begin{aligned}
-  P_{X} : \mathcal{B}(\mathcal{X}) \rightarrow [0,1]
-  \end{aligned}\]
-      </li>
-      <li>
-        <p><strong>확률 밀도(Probability Density)</strong>: 확률 측도 $P_{X}$ 의 기준 측도 $x$ 단위당 확률의 상대량</p>
-
-\[\begin{aligned}
-  P_{X}(x \in B)
-  = \int_{x \in B}{p(x)}\text{d}x
-  \end{aligned}\]
-      </li>
+      <li>$\nu_{0}=1/T$(Hz): The number of vibrations per second as the <strong>fundamental frequency</strong></li>
+      <li>$\omega_{0}=\nu_{0}\cdot 2\pi$(rad/s): Angular velocity in revolutions per second as the <strong>fundamental angular frequency</strong></li>
+      <li>$\nu_{k}=k\cdot\nu_{0},\omega_{k}=k\cdot\omega_{0}$: Integer multiple of the fundamental frequency as the <strong>harmonic</strong></li>
     </ul>
   </li>
   <li>
-    <p><strong><code class="language-plaintext highlighter-rouge">example</code> Gaussian Prob. Dist.</strong></p>
-    <ul>
-      <li>
-        <p>Random Variable:</p>
+    <p>Sinusoids that share a period $T$ are <strong>orthogonal to each other</strong>.</p>
 
 \[\begin{aligned}
-  X: \Omega \rightarrow \mathbb{R}
+  \langle\phi_{m}(t),\phi_{n}(t)\rangle
+  &amp;=\begin{cases}
+  T\quad &amp;(m = n)\\
+  0\quad &amp;(m \ne n)
+  \end{cases}
   \end{aligned}\]
-      </li>
-      <li>
-        <p>Probability Measure:</p>
+  </li>
+  <li>
+    <p><strong>Fourier coefficients</strong> represent the <strong>average amplitude of a sinusoids</strong> per unit time, i.e., the <strong>frequency components</strong>. In vector space, they correspond to the <strong>magnitude (coordinate value)</strong> of the result of an evaluation operation in the basis direction.</p>
 
 \[\begin{aligned}
-  P_{X}
-  &amp;= \mathcal{N}(\mu, \sigma^{2})
+  \delta_{n}\left[X_{T}(t)\right]
+  &amp;=\langle X_{T}(t),\phi_{n}(t)\rangle\\
+  &amp;\approx \left\langle \sum_{k=-\infty}^{\infty}{a_{k}\phi_{k}(t)},\phi_{n}(t) \right\rangle\\
+  &amp;=\sum_{k=-\infty}^{\infty}{a_{k}\left\langle\phi_{k}(t),\phi_{n}(t)\right\rangle}\\
+  &amp;=a_{n}T + \sum_{k \ne n}{a_{k} \cdot 0}\\
+  &amp;=a_{n}T
   \end{aligned}\]
-      </li>
-      <li>
-        <p>Probability Density Function:</p>
+  </li>
+</ul>
+
+<h2 id="fourier-transform"><span class="me-2">Fourier transform</span><a href="#fourier-transform" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<ul>
+  <li>
+    <p>Fourier series maps a <strong>periodic signal</strong> into <strong>frequency components</strong> in a <strong>countable infinite-dimensional space</strong> consisting of <strong>discrete basis</strong>.</p>
 
 \[\begin{aligned}
-  p(x)
-  &amp;= \frac{1}{\sqrt{2 \pi \sigma^{2}}}\exp\left[-\frac{(x-\mu)^{2}}{2 \sigma^{2}}\right]
+  X_{T}(t) \mapsto \left\{a_{k}\mid k\in\mathbb{Z}\right\} \in \mathrm{span}\left\{\phi_{k}(t)=\exp{ik\omega_{0}t}\mid k\in\mathbb{Z}\right\}
   \end{aligned}\]
-      </li>
-    </ul>
+  </li>
+  <li>
+    <p><strong>Non-periodic signal</strong> can be viewed as a periodic signal with $T\to\infty$, which results in the <strong>generalization of the discrete harmonic</strong> ${k\omega_{0}\mid k\in\mathbb{Z}}$ into the <strong>continuous harmonic</strong> $\omega \in \mathbb{R}$.</p>
+
+\[T \to \infty \Leftrightarrow \Delta\omega\to 0 \quad (\because\omega_{0}=2\pi/T)\]
+  </li>
+  <li>
+    <p>$a_{k}T$, <strong>total amplitude per period of a discrete sinusoids</strong>, generalizes to the $\mathcal{X}(\omega)$, <strong>amplitude of a continuous sinusoids</strong>, as the period diverges to infinity ($T\to\infty$) and the fundamental converges to $0$ ($\Delta\omega\to 0$).</p>
+
+\[\begin{aligned}
+  \mathcal{X}(\omega)
+  &amp;= \lim_{\Delta\omega\to 0}{a_{k}T}\\
+  &amp;= \lim_{\Delta\omega\to 0}{\left\langle X_{T}(t),\phi_{k}(t)\right\rangle}\\
+  &amp;= \left\langle \lim_{\Delta\omega\to 0}{X_{T}(t)},\lim_{\Delta\omega\to 0}{\phi_{k}(t)}\right\rangle\\
+  &amp;= \left\langle X(t),\phi(t)\right\rangle
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>In short, the <strong>Fourier transform</strong> is a generalization of the Fourier series, which maps a <strong>non-periodic signal</strong> into a spectrum on a <strong>non-countable infinite-dimensional space</strong> consisting of a <strong>continuous basis</strong>.</p>
+
+\[\begin{aligned}
+  X(t) \mapsto \mathcal{X}(\omega) \in \mathrm{span}\left\{\phi(t;\omega)=\exp{i \omega t}\mid\omega\in\mathbb{R}\right\}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h2 id="inverse-fourier-transform"><span class="me-2">Inverse Fourier transform</span><a href="#inverse-fourier-transform" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<ul>
+  <li>
+    <p><strong>Inverse Fourier transform</strong> is an operation that <strong>reduces the spectrum $\mathcal{X}(\omega)$ to an aperiodic signal $X(t)$</strong>, and is performed as an <strong>inner product with the dual basis</strong>.</p>
+
+\[\langle\cdot,\phi^{*}(t)\rangle_{\omega}: \mathcal{X}(\omega) \mapsto X(t)\]
+  </li>
+  <li>
+    <p>The <strong>dual basis of an orthonormal basis</strong> is simplified to a basis whose inner product with the original basis is $1$.</p>
+
+\[\langle\phi_{k}(t),\phi_{k}^{*}(t)\rangle=1\]
+  </li>
+  <li>
+    <p>$m=n$:</p>
+
+\[\begin{aligned}
+  \langle\phi_{m}(t),\phi_{n}(t)\rangle
+  &amp;=\int_{t \in T}{\exp{i(m-n)\omega_{0}t}\mathrm{d}t}\\
+  &amp;=\int_{t \in T}{1\mathrm{d}t}\\
+  &amp;=T
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>$m \ne n$:</p>
+
+\[\begin{aligned}
+  \langle\phi_{m}(t),\phi_{n}(t)\rangle
+  &amp;=\int_{t \in T}{\exp{i(m-n)\omega_{0}t}\mathrm{d}t}\\
+  &amp;=\frac{1}{i(m-n)\omega_{0}}\left(\exp{i(m-n)\omega_{0}T}-1\right)\\
+  &amp;=0\\
+  \because\exp{i(m-n)\omega_{0}T}
+  &amp;=\underbrace{\cos{(m-n)2\pi}}_{=1}+i\underbrace{\sin{(m-n)2\pi}}_{=0}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Therefore, the <strong>dual basis of a discrete basis</strong> is defined as follows:</p>
+
+\[\phi_{k}^{*}(t)=\frac{1}{T}\exp{-ik\omega_{0}t}\]
+  </li>
+  <li>
+    <p>When extending the dual basis of a discrete basis to a continuous domain, the <strong>normalization constant</strong> is replaced by $1/T \to 1/2\pi$.</p>
+
+\[\begin{aligned}
+  \frac{1}{T}\sum_{k}{(\cdot)}
+  =\frac{1}{2\pi}\sum_{k}{(\cdot)\Delta\omega}
+  \xrightarrow{\Delta\omega\to 0}
+  \frac{1}{2\pi}\int{(\cdot)\mathrm{d}\omega}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Therefore, the <strong>dual basis of a continuous basis</strong> is defined as follows:</p>
+
+\[\phi^{*}(t)=\frac{1}{2\pi}\exp{-i\omega t}\]
   </li>
 </ul>
 
@@ -954,8 +943,8 @@
       <div class="post-meta mb-3">
         <i class="far fa-folder-open fa-fw me-1"></i>
         
-          <a href="/categories/mathematical-techs/">MATHEMATICAL TECHS</a>,
-          <a href="/categories/3-etc/">3.etc</a>
+          <a href="/categories/bayes/">BAYES</a>,
+          <a href="/categories/4-stochastic-process/">4.stochastic process</a>
       </div>
     
 
@@ -965,9 +954,44 @@
         <i class="fa fa-tags fa-fw me-1"></i>
         
           <a
-            href="/tags/mathematics/"
+            href="/tags/bayesian/"
             class="post-tag no-text-decoration"
-          >Mathematics</a>
+          >Bayesian</a>
+        
+          <a
+            href="/tags/deep-learning/"
+            class="post-tag no-text-decoration"
+          >Deep Learning</a>
+        
+          <a
+            href="/tags/stochastic-process/"
+            class="post-tag no-text-decoration"
+          >Stochastic Process</a>
+        
+          <a
+            href="/tags/time-series/"
+            class="post-tag no-text-decoration"
+          >Time Series</a>
+        
+          <a
+            href="/tags/nonparametric-estimation/"
+            class="post-tag no-text-decoration"
+          >Nonparametric Estimation</a>
+        
+          <a
+            href="/tags/gaussian-process/"
+            class="post-tag no-text-decoration"
+          >Gaussian Process</a>
+        
+          <a
+            href="/tags/multi-variate-gaussian-dist/"
+            class="post-tag no-text-decoration"
+          >Multi-Variate Gaussian Dist.</a>
+        
+          <a
+            href="/tags/fourier/"
+            class="post-tag no-text-decoration"
+          >Fourier</a>
         
       </div>
     
@@ -1003,21 +1027,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Space%20(2)%20Measure%20Space%20-%20Data%20Scientist&url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FMeasure_Space%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=Fourier%20Analysis%20-%20Data%20Scientist&url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FFourier%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Space%20(2)%20Measure%20Space%20-%20Data%20Scientist&u=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FMeasure_Space%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=Fourier%20Analysis%20-%20Data%20Scientist&u=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FFourier%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FMeasure_Space%2F&text=Space%20(2)%20Measure%20Space%20-%20Data%20Scientist" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FFourier%2F&text=Fourier%20Analysis%20-%20Data%20Scientist" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -1072,28 +1096,28 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Fourier_Transform/">Fourier Analysis (2) Fourier Transform</a>
+          <a href="/posts/Fourier/">Fourier Analysis</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Fourier_Series/">Fourier Analysis (1) Fourier Series</a>
+          <a href="/posts/GP_SGP/">GP (2) Sparse Gaussian Process</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Measure_Space/">Space (2) Measure Space</a>
+          <a href="/posts/GP_GP/">GP (1) Gaussian Process</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Topological_Space/">Space (1) Topological Space</a>
+          <a href="/posts/RKHS/">RKHS</a>
         </li>
       
         
@@ -1173,420 +1197,6 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
@@ -1820,296 +1430,6 @@
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2620,10 +1940,787 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2991,10 +3088,10 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/ai-application/">AI Application</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
@@ -3003,10 +3100,10 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/nlp/">NLP</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/nlp/">NLP</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
@@ -3227,31 +3324,199 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
 
 
 
@@ -3267,7 +3532,7 @@
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
-          <a href="/posts/Fourier_Transform/" class="post-preview card h-100">
+          <a href="/posts/GP_SGP/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -3279,31 +3544,27 @@
 
 <time
   
-  data-ts="1738767600"
+  data-ts="1754233200"
   data-df="ll"
   
 >
-  Feb  6, 2025
+  Aug  4, 2025
 </time>
 
-              <h4 class="pt-0 my-2">Fourier Analysis (2) Fourier Transform</h4>
+              <h4 class="pt-0 my-2">GP (2) Sparse Gaussian Process</h4>
               <div class="text-muted">
-                <p>Fourier Transform
+                <p>sparse gaussian process
 
 
-
-  
-    푸리에 변환(Fourier Transform): 푸리에 급수를 활용하여 시간 영역 $t \in T$ 에서 정의된 비주기 신호 함수 $X(t)$ 를 주파수 영역 $\omega \in \Omega$ 의 스펙트럼 밀도 함수 $\mathcal{X}(\omega)$ 로 재정의하는 기법
-  
-  
-    정변환(...</p>
+  sparse gaussian process is a technique that achieves the following two advantages by introducing $M$ inducing points that can represent all $N\to\infty$ observations:
+  ...</p>
               </div>
             </div>
           </a>
         </article>
       
         <article class="col">
-          <a href="/posts/Fourier_Series/" class="post-preview card h-100">
+          <a href="/posts/GP_GP/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -3315,36 +3576,27 @@
 
 <time
   
-  data-ts="1738681200"
+  data-ts="1754146800"
   data-df="ll"
   
 >
-  Feb  5, 2025
+  Aug  3, 2025
 </time>
 
-              <h4 class="pt-0 my-2">Fourier Analysis (1) Fourier Series</h4>
+              <h4 class="pt-0 my-2">GP (1) Gaussian Process</h4>
               <div class="text-muted">
-                <p>Euler’s Formula
-
+                <p>gaussian process
 
 
   
-    오일러 공식(Euler’s Formula): 복소 지수 함수와 삼각함수의 관계를 나타내는 공식
-
-    
-      
-        복소 지수 함수의 테일러 급수:
-
-\[\begin{aligned}
-  \exp{i\theta}
-  = \sum_{n=0}^{\infty}{\frac{(i\theta)^{n}}...</p>
+    gaussian process is a nonparametric stochastic process that uses the mean and covariance structure of function values as prior information to infer the function distributi...</p>
               </div>
             </div>
           </a>
         </article>
       
         <article class="col">
-          <a href="/posts/Topological_Space/" class="post-preview card h-100">
+          <a href="/posts/RKHS/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -3356,22 +3608,20 @@
 
 <time
   
-  data-ts="1738508400"
+  data-ts="1754060400"
   data-df="ll"
   
 >
-  Feb  3, 2025
+  Aug  2, 2025
 </time>
 
-              <h4 class="pt-0 my-2">Space (1) Topological Space</h4>
+              <h4 class="pt-0 my-2">RKHS</h4>
               <div class="text-muted">
-                <p>Space
+                <p>evaluation operator
 
 
-
-  공간(Space): 어떤 종류의 수학적 대상을 모은 집합에 대하여, 그 집합 위에 고유의 연산 법칙을 제공하는 연산 구조가 부여되어 그 구조적 성질을 정의하고, 이로부터 유도 가능한 각종 성질들을 논의할 수 있는 수학적 시스템
-    
-      위상 공간(Topological Space): 어떤 종류의 수학적 대상에 열림을, 그 ...</p>
+  
+    (in the space where the inner product is defined) the evaluation operation is the inverse operation of the inner product, which recovers the intrinsic properties of an ...</p>
               </div>
             </div>
           </a>
@@ -3392,22 +3642,18 @@
 
   
     <a
-      href="/posts/Topological_Space/"
+      href="/posts/GP_SGP/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>Space (1) Topological Space</p>
+      <p>GP (2) Sparse Gaussian Process</p>
     </a>
   
 
   
-    <a
-      href="/posts/Fourier_Series/"
-      class="btn btn-outline-primary"
-      aria-label="Newer"
-    >
-      <p>Fourier Analysis (1) Fourier Series</p>
-    </a>
+    <div class="btn btn-outline-primary disabled" aria-label="Newer">
+      <p>-</p>
+    </div>
   
 </nav>
 
@@ -3527,420 +3773,6 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
@@ -4174,296 +4006,6 @@
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -4974,10 +4516,787 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -5345,10 +5664,10 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/ai-application/">AI Application</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/bayesian/">Bayesian</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/statistics/">Statistics</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/recommender-system/">Recommender System</a>
@@ -5357,10 +5676,10 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">Collaborative Filtering</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/nlp/">NLP</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/nlp/">NLP</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/mathematics/">Mathematics</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
