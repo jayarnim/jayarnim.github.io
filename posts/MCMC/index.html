@@ -1185,7 +1185,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="840 words"
+  title="810 words"
 >
   <em>4 min</em> read</span>
 
@@ -1198,15 +1198,32 @@
     <h2 id="markov-chain-monte-carlo"><span class="me-2">Markov Chain Monte Carlo</span><a href="#markov-chain-monte-carlo" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<p><a href="/_post_refer_img/BayesianModeling/2.Posterior/02-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/2.Posterior/02-01.png" alt="01" width="100%" loading="lazy"></a></p>
-
 <ul>
   <li>
-    <p><strong>마르코프 체인 몬테 카를로(<code class="language-plaintext highlighter-rouge">M</code>arkov <code class="language-plaintext highlighter-rouge">C</code>hain <code class="language-plaintext highlighter-rouge">M</code>onte <code class="language-plaintext highlighter-rouge">C</code>arlo)</strong> : 이전 단계에서 추출한 표본을 기반으로 다음 단계의 표본을 순차로 추출하는 방법으로서, 차원이 높아질수록 표본 분포가 목표 분포로 수렴하는 속도가 지연되는 문제를 완화하나, 자기상관 문제에서 자유롭지 못하고 역전파 학습이 불가능함</p>
+    <p><strong>마르코프 체인 몬테 카를로(<code class="language-plaintext highlighter-rouge">M</code>arkov <code class="language-plaintext highlighter-rouge">C</code>hain <code class="language-plaintext highlighter-rouge">M</code>onte <code class="language-plaintext highlighter-rouge">C</code>arlo)</strong> : 이전 단계에서 추출한 표본을 기반으로 다음 단계의 표본을 순차로 추출하여 사후 분포에 근사하는 방법</p>
 
+    <p><a href="/_post_refer_img/BayesianModeling/2.Posterior/02-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/2.Posterior/02-01.png" alt="01" width="100%" loading="lazy"></a></p>
+  </li>
+  <li><strong>Random-walk based MCMC</strong>
     <ul>
-      <li>Metropolis Hastings Method</li>
-      <li>Gibbs Sampling</li>
+      <li>Metropolis algorithm</li>
+      <li><strong>Metropolis–Hastings</strong></li>
+      <li>Random-Walk Metropolis</li>
+      <li>Independence sampler</li>
+    </ul>
+  </li>
+  <li><strong>Gibbs Sampling based MCMC</strong>
+    <ul>
+      <li>Full Gibbs sampler</li>
+      <li>Blocked Gibbs</li>
+      <li>Collapsed Gibbs</li>
+    </ul>
+  </li>
+  <li><strong>Gradient based MCMC</strong>
+    <ul>
+      <li>Hamiltonian Monte Carlo</li>
+      <li>No-U-Turn Sampler</li>
+      <li>Riemannian Manifold HMC</li>
     </ul>
   </li>
 </ul>
@@ -3925,6 +3942,18 @@
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -3968,34 +3997,6 @@
         </article>
       
         <article class="col">
-          <a href="/posts/BBB/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1722351600"
-  data-df="ll"
-  
->
-  Jul 31, 2024
-</time>
-
-              <h4 class="pt-0 my-2">Bayes by Backprop</h4>
-              <div class="text-muted">
-                <p>Blundell, C., Cornebise, J., Kavukcuoglu, K., &amp; Wierstra, D.&lt;/br&gt; (2015, June).&lt;/br&gt; &lt;a href=&quot;https://proceedings.mlr.press/v37/blundell15&quot;&gt;Weight uncertainty in neural network.&lt;/a&gt;&lt;/br&gt; In Interna...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
           <a href="/posts/VI/" class="post-preview card h-100">
             <div class="card-body">
               <!--
@@ -4027,6 +4028,34 @@
   Shannon’s Information Theory Principles
     
       자주 발생하지 않는 사...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/BPR/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1724770800"
+  data-df="ll"
+  
+>
+  Aug 28, 2024
+</time>
+
+              <h4 class="pt-0 my-2">BPR</h4>
+              <div class="text-muted">
+                <p>&lt;ul type=&quot;square&quot;&gt; &lt;li&gt;&lt;strong&gt;Title&lt;/strong&gt;: &lt;a href=&quot;https://dl.acm.org/doi/10.5555/1795114.1795167&quot;&gt;&lt;code&gt;BPR: Bayesian Personalized Ranking from Implicit Feedback&lt;/code&gt;&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;strong&gt;P...</p>
               </div>
             </div>
           </a>

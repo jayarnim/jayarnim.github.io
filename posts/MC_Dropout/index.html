@@ -30,25 +30,25 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="Monte Carlo Simulation" />
+<meta property="og:title" content="BNNs (2) Monte Carlo Dropout" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp; Management, College of Business Administration, Kookmin Univ." />
-<meta property="og:description" content="Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp; Management, College of Business Administration, Kookmin Univ." />
-<link rel="canonical" href="https://jayarnim.github.io/posts/MC/" />
-<meta property="og:url" content="https://jayarnim.github.io/posts/MC/" />
+<meta name="description" content="Gal, Y., &amp; Ghahramani, Z.&lt;/br&gt; (2016, June).&lt;/br&gt; Dropout as a bayesian approximation: Representing model uncertainty in deep learning.&lt;/br&gt; In international conference on machine learning (pp. 1050-1059).&lt;/br&gt; PMLR." />
+<meta property="og:description" content="Gal, Y., &amp; Ghahramani, Z.&lt;/br&gt; (2016, June).&lt;/br&gt; Dropout as a bayesian approximation: Representing model uncertainty in deep learning.&lt;/br&gt; In international conference on machine learning (pp. 1050-1059).&lt;/br&gt; PMLR." />
+<link rel="canonical" href="https://jayarnim.github.io/posts/MC_Dropout/" />
+<meta property="og:url" content="https://jayarnim.github.io/posts/MC_Dropout/" />
 <meta property="og:site_name" content="Data Scientist" />
 <meta property="og:image" content="https://jayarnim.github.io/_post_refer_img/BayesianModeling/2.Posterior/Thumbnail.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-07-28T00:00:00+09:00" />
+<meta property="article:published_time" content="2024-08-07T00:00:00+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/BayesianModeling/2.Posterior/Thumbnail.jpg" />
-<meta property="twitter:title" content="Monte Carlo Simulation" />
+<meta property="twitter:title" content="BNNs (2) Monte Carlo Dropout" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-28T00:00:00+09:00","datePublished":"2024-07-28T00:00:00+09:00","description":"Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp; Management, College of Business Administration, Kookmin Univ.","headline":"Monte Carlo Simulation","image":"https://jayarnim.github.io/_post_refer_img/BayesianModeling/2.Posterior/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/MC/"},"url":"https://jayarnim.github.io/posts/MC/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-08-07T00:00:00+09:00","datePublished":"2024-08-07T00:00:00+09:00","description":"Gal, Y., &amp; Ghahramani, Z.&lt;/br&gt; (2016, June).&lt;/br&gt; Dropout as a bayesian approximation: Representing model uncertainty in deep learning.&lt;/br&gt; In international conference on machine learning (pp. 1050-1059).&lt;/br&gt; PMLR.","headline":"BNNs (2) Monte Carlo Dropout","image":"https://jayarnim.github.io/_post_refer_img/BayesianModeling/2.Posterior/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/MC_Dropout/"},"url":"https://jayarnim.github.io/posts/MC_Dropout/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Monte Carlo Simulation | Data Scientist
+  <title>BNNs (2) Monte Carlo Dropout | Data Scientist
   </title>
 
   <!--
@@ -405,7 +405,7 @@
         
           
             
-              <span>Monte Carlo Simulation</span>
+              <span>BNNs (2) Monte Carlo Dropout</span>
             
 
           
@@ -638,77 +638,6 @@
     <!-- combine -->
     
   
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
-    
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- create the image wrapper -->
-        
-
-        
-        
-      
-    
-
-    <!-- combine -->
-    
-  
 
   
 
@@ -767,6 +696,39 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -774,6 +736,49 @@
   
   
 
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
   
 
   
@@ -796,9 +801,9 @@
 
 <article class="px-1">
   <header>
-    <h1 data-toc-skip>Monte Carlo Simulation</h1>
+    <h1 data-toc-skip>BNNs (2) Monte Carlo Dropout</h1>
     
-      <p class="post-desc fw-light mb-4">Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data & Management, College of Business Administration, Kookmin Univ.</p>
+      <p class="post-desc fw-light mb-4">Gal, Y., & Ghahramani, Z.</br> (2016, June).</br> <a href="https://doi.org/10.48550/arXiv.1506.02142">Dropout as a bayesian approximation: Representing model uncertainty in deep learning.</a></br> In international conference on machine learning (pp. 1050-1059).</br> PMLR.</p>
     
 
     <div class="post-meta text-muted">
@@ -815,13 +820,13 @@
 
 <time
   
-  data-ts="1722092400"
+  data-ts="1722956400"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Jul 28, 2024
+  Aug  7, 2024
 </time>
 
       </span>
@@ -879,9 +884,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="433 words"
+  title="1273 words"
 >
-  <em>2 min</em> read</span>
+  <em>7 min</em> read</span>
 
         </div>
       </div>
@@ -889,91 +894,400 @@
   </header>
 
   <div class="content">
-    <h2 id="monte-carlo-simulation"><span class="me-2">Monte Carlo Simulation</span><a href="#monte-carlo-simulation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="monte-carlo-dropout"><span class="me-2">Monte Carlo Dropout</span><a href="#monte-carlo-dropout" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
-  <li><strong>몬테-카를로 시뮬레이션(Monte-Carlo Simulation)</strong>: 복잡한 시스템이나 수학적 문제의 결과를 예측하기 위해 확률적 샘플링을 사용하는 방법</li>
-</ul>
-
-<h2 id="example-pi"><span class="me-2"><code class="language-plaintext highlighter-rouge">example</code> $\Pi$</span><a href="#example-pi" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<blockquote>
-  <p>한 변의 길이가 2인 정사각형 내부에 점을 무작위로 찍었을 때, 그 점이 정사각형에 내접하는 원의 내부에 위치할 확률 실험을 전개하여, 원주율 $\pi$ 를 추론하시오.</p>
-</blockquote>
-
-<ul>
-  <li>좌표평면 상에서 주어진 조건을 만족하는 원:
+  <li><strong>불확실성(Uncertainty)</strong>: 어떠한 사건에 대하여 확신할 수 없는 상태
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">정의</code> \(C = \{ (x, y) \mid x^2 + y^2 = r^2 \}\)</li>
-      <li><code class="language-plaintext highlighter-rouge">면적</code> $\pi r^2 = \pi \quad (\because 2r=2)$</li>
-    </ul>
-  </li>
-  <li>좌표평면 상에서 주어진 조건을 만족하는 정사각형:
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">정의</code> \(R = \{ (x, y) \mid -1 \le x \le 1, -1 \le y \le 1\}\)</li>
-      <li><code class="language-plaintext highlighter-rouge">면적</code> $(2r)^2=4$</li>
+      <li>
+        <p><strong>우발적 불확실성(Aleatoric Uncertainty)</strong>: 관측치에 내재된 잡음 혹은 무작위성으로 인해 발생하는 불확실성</p>
+      </li>
+      <li>
+        <p><strong>인식적 불확실성(Epistemic Uncertainty)</strong>: 정보 부족으로 인해 발생하는 불확실성</p>
+        <ul>
+          <li><strong>모형의 불확실성(Model Uncertainty)</strong>: 관측치 부족, 모형 가정 부적합 등으로 인하여 모형이 메커니즘을 제대로 모사하지 못하는 문제</li>
+          <li><strong>표현의 불확실성(Latent Uncertainty)</strong>: 다대일 대응 구조로 인하여 치역만으로 정의역을 유일하게 식별할 수 없는 구조적 비식별성 문제</li>
+          <li><strong>메커니즘의 불확실성(Mechanistic Uncertainty)</strong>: 모형이 모사하고자 하는 실제 메커니즘이 확정적으로 규명될 수 없는 문제</li>
+        </ul>
+      </li>
     </ul>
   </li>
   <li>
-    <p>정사각형 내부에 점을 무작위로 찍었을 때, 점이 원 내부에 위치할 가능성:</p>
-
-\[\begin{aligned}
-  P((x,y) \in C)
-  &amp;=\frac{N_{circle}}{N}
-  =\displaystyle\frac{\pi r^2}{(2r)^2}
-  \end{aligned}\]
+    <p><strong>문제 의식</strong></p>
 
     <ul>
-      <li>$N$ : 실행 횟수</li>
-      <li>$N_{circle}$ : 성공 횟수(원 내부에 위치한 횟수)</li>
+      <li>
+        <p><strong>모형의 불확실성(Model Uncertainty)</strong>:</p>
+
+        <blockquote>
+          <p>인공신경망 알고리즘은 파라미터 수가 매우 많아 <strong>과적합 문제(Overfitting)</strong> 에서 자유롭지 못함. 여기서 과적합이란, 모형의 복잡도가 데이터 셋이 제공하는 정보량보다 심화되어 발생하는 현상임. 이는 정보가 부족한 상황에서 단일 가설을 확신하여 예측하는 <strong>과신의 문제(Overconfidence)</strong> 에서 비롯함.</p>
+        </blockquote>
+      </li>
+      <li>
+        <p><strong>계산 복잡도(Computational Cost)</strong>:</p>
+
+        <blockquote>
+          <p>과신의 문제를 직접 다루는 베이즈 추론을 신경망에 적용하는 경우 계산 복잡도 문제에서 자유로울 수 없음. 가령 Bayes by Backprop 의 경우 <strong>파라미터마다 평균과 분산을 각각 계산해야 하므로</strong> 추론해야 하는 파라미터 수가 결정론적 신경망의 두 배가 됨.</p>
+        </blockquote>
+      </li>
     </ul>
   </li>
   <li>
-    <p>몬테-카를로 시뮬레이션을 통한 $\pi$ 추론값 도출:</p>
+    <p><strong><code class="language-plaintext highlighter-rouge">MC Dropout</code>(<code class="language-plaintext highlighter-rouge">M</code>onte-<code class="language-plaintext highlighter-rouge">C</code>arlo Dropout)</strong>: 드롭아웃이 적용된 인공신경망의 가우시안 프로세스의 유한 차원 근사임을 증명하여 결정론적 신경망과 동일한 비용으로 불확실성 모델링이 가능함을 확인함</p>
 
-    <p><a href="/_post_refer_img/BayesianModeling/2.Posterior/01-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/2.Posterior/01-01.png" alt="01" width="100%" loading="lazy"></a></p>
-
-    <ul>
-      <li>실행 횟수(num)가 증가할수록 $\pi$ 의 추론값이 $3.141592\cdots$ 에 근접해감</li>
-    </ul>
+    <p><a href="/_post_refer_img/BayesianModeling/3.Application/08-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/3.Application/08-01.png" alt="01" width="100%" loading="lazy"></a></p>
   </li>
 </ul>
 
-<h2 id="rejection-sampling"><span class="me-2">Rejection Sampling</span><a href="#rejection-sampling" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="1-layer-nn-analysis"><span class="me-2">1 layer nn analysis</span><a href="#1-layer-nn-analysis" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
-
-<p><a href="/_post_refer_img/BayesianModeling/2.Posterior/01-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/BayesianModeling/2.Posterior/01-02.png" alt="02" width="100%" loading="lazy"></a></p>
 
 <ul>
   <li>
-    <p><strong>기각 샘플링(Rejection Sampling)</strong> : 제안 분포로부터 추출한 관측치를 기각하는 과정을 반복하여 제안 분포를 목표 분포와 유사한 형태로 만드는 방법</p>
-  </li>
-  <li>
-    <p>Target Dist.:</p>
+    <p>1 layer nn:</p>
 
 \[\begin{aligned}
-  p(\theta \mid \mathcal{D}) \propto p(\mathcal{D} \mid \theta) \cdot p(\theta)
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>Proposed Dist.:</p>
-
-\[\begin{aligned}
-  q(\theta)
+  f(x)
+  &amp;:=\frac{1}{\sqrt{N}}\sum_{i=1}^{N}{w_{i}\sigma(v_{i}x)}
   \end{aligned}\]
 
     <ul>
-      <li>$q(\theta)$ must be similar in location and distribution to $p(\theta \mid \mathcal{D})$</li>
-      <li>$p(\theta \mid \mathcal{D}) \le M \cdot q(\theta) \quad \text{for} \quad \forall \theta$</li>
+      <li>$v_{i}$: input -&gt; hidden weight</li>
+      <li>$\sigma$: activation function</li>
+      <li>$w_{i}$: hidden -&gt; output weight</li>
+      <li>$N$: num of node unit</li>
     </ul>
   </li>
   <li>
-    <p>Rejection Rule:</p>
+    <p>therefore 1 layer nn can be considered as an element on the function space consisting of a basis function, $\phi_{i}(x):=\sigma(v_{i}x)$.</p>
 
 \[\begin{aligned}
-  \text{Accept} \quad \phi \quad \text{if} \quad u \le \frac{p(\phi \mid \mathcal{D})}{M \cdot q(\phi)} \quad \text{where} \quad u \sim \text{Uniform}(0,1)
+  f(\cdot)\in\mathcal{F}:=\mathrm{span}\{\phi_{1}(\cdot),\phi_{2}(\cdot),\cdots,\phi_{N}(\cdot)\}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>apply dropout mask $m_{i}$ to weight $w_{i}$:</p>
+
+\[\begin{aligned}
+  \beta_{i}
+  &amp;=w_{i} \cdot m_{i} \quad
+  m_{i}\sim\mathrm{Bernoulli}(p)\\
+  &amp;=\begin{cases}w_{i},\quad &amp;p\\0,\quad &amp;1-p\end{cases}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>since the function value $f(x)$ is a sum of random features $\beta_{i}\phi_{i}(x)$, $\beta_{i}\phi_{i}(x)$, it becomes a random variable.</p>
+
+\[\begin{aligned}
+  \therefore f(x)
+  &amp;=\frac{1}{\sqrt{N}}\sum_{i=1}^{N}{\beta_{i}\phi_{i}(x)}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h2 id="lindeberg-feller-clt"><span class="me-2">Lindeberg-Feller CLT</span><a href="#lindeberg-feller-clt" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p>Lindeberg-Feller CLT:</p>
+
+    <blockquote>
+      <p><strong>합계 변수 $f:=\sum_{i=1}^{N}{X_{i}}$ 에 대하여</strong> (1) 개별 변수 $X_{i}$ 가 상호 독립이고($X_{i}\perp X_{j}$), (2) 개별 변수 $X_{i}$ 의 분산이 유한하며($\mathrm{Var}\left[X_{i}\right]&lt;\infty$), (3) 합계 변수 $f$ 의 분산이 유한하다면($\mathrm{Var}\left[f\right]&lt;\infty$), <strong>합계 변수 $f$ 의 분포는 $N\to\infty$ 일 때 $X_{i}$ 의 분포와 상관없이 가우시안 분포에 근사한다($f\sim\mathcal{N}$)</strong>.</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>independence condition:</p>
+
+\[\beta_{i}\phi_{i}(x) \perp \beta_{j}\phi_{j}(x)\]
+
+    <ul>
+      <li>$v_{i}\perp v_{j}$ (input weight)</li>
+      <li>$w_{i}\perp w_{j}$ (output weight)</li>
+      <li>$m_{i}\perp m_{j}$ (dropout weight)</li>
+    </ul>
+  </li>
+  <li>
+    <p>finiteness of individual variance:</p>
+
+\[\begin{aligned}
+  \mathrm{Var}\left[\frac{1}{\sqrt{N}}\beta_{i}\phi_{i}(x)\right]
+  &amp;= \frac{1}{N}\phi_{i}^{2}(x)\cdot w_{i}^{2}\cdot p(1-p) &lt; \infty
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>finite convergence of total variance:</p>
+
+\[\begin{aligned}
+  \lim_{N\to\infty}{\mathrm{Var}\left[f(x)\right]}
+  &amp;=\lim_{N\to\infty}{\frac{1}{N}\sum_{i=1}^{N}{\phi_{i}^{2}(x)\cdot w_{i}^{2}\cdot p(1-p)}} &lt; \infty
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>conclusion:</p>
+
+\[\begin{aligned}
+  f(x) \overset{N\to\infty}{\sim} \mathcal{N}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h2 id="gaussian-process"><span class="me-2">gaussian process</span><a href="#gaussian-process" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p>gaussian process:</p>
+
+    <blockquote>
+      <p>임의의 입력 집합 $x_{1},x_{2},\cdots,x_{N}$ 위에 정의된 함수 $f(\cdot)$ 의 함수값 $f(x)$ 이 다변량 가우시안 분포 $\mathcal{N}(M(X),K_{XX})$ 를 따른다고 하자. 함수 $f(\cdot)$ 는 평균 함수 $m(\cdot)$ 와 공분산 함수 $k(\cdot,\cdot)$ 으로 정의되는 함수 분포 $\mathcal{GP}(m(\cdot),k(\cdot,\cdot))$ 를 따르는 확률변수가 된다. 이때 분포 파라미터 $m(\cdot)$, $k(\cdot,\cdot)$ 는 사전 정보에 의해 정의되며, 관측 데이터가 주어질 경우 베이즈 갱신 규칙에 따라 사후 분포로 갱신된다.</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>mean:</p>
+
+\[\begin{aligned}
+  \mathbb{E}\left[f(x)\right]
+  &amp;=\frac{1}{\sqrt{N}}\sum_{i=1}^{N}{w_{i}p\phi_{i}(x)}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>covariance:</p>
+
+\[\begin{aligned}
+  \mathrm{Cov}\left[f(x),f(x^{\prime})\right]
+  &amp;=\frac{1}{N}\sum_{i=1}^{N}{w_{i}^{2}p(1-p)\phi_{i}(x)\phi_{i}(x^{\prime})}\\
+  &amp;=\sum_{i=1}^{N}{\underbrace{\frac{1}{N}w_{i}^{2}p(1-p)}_{=:\lambda_{i}}\phi_{i}(x)\phi_{i}(x^{\prime})}\\
+  &amp;=k(x,x^{\prime})\quad\because\text{Mercer's theorem}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>as a result, <strong>1 layer nn $f(\cdot)$ to which dropout is applied</strong> becomes a random variable of the function dist.</p>
+
+\[\begin{aligned}
+  f(\cdot)\sim\mathcal{GP}(m(\cdot),k(\cdot,\cdot))
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>1 layer nn $f(\cdot)$</strong> becomes an <strong>element within the function space</strong> $\mathcal{F}$:</p>
+
+\[\begin{aligned}
+  f(\cdot)\in\mathcal{F}
+  :=\mathrm{span}\left\{\phi_{1}(\cdot),\phi_{2}(\cdot),\cdots,\phi_{N}(\cdot)\right\}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h2 id="elbo"><span class="me-2">ELBO</span><a href="#elbo" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p>original ELBO:</p>
+
+\[\begin{aligned}
+  \mathrm{ELBO}
+  = \mathbb{E}_{f \sim Q}\left[\log{P(\mathcal{D} \mid f)}\right] - D_{KL}\left[Q(f) \parallel P(f)\right]
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>proxy variable of $f(x)$:</p>
+
+    <blockquote>
+      <p>\(f(x)\) 는 비선형 함수이기 때문에 확률 분포를 정의하기 어렵다. 다만, 입력 집합 \(\{x_{i}\}_{i=1}^{M}\) 에 대한 함수값 벡터 \(\mathbf{f}_{X}:=\{f(x_{i})\}_{i=1}^{M}\) 의 분포는 \(\beta\) 의 분포 \(p(\beta)\) 를 선형 변환 \(T_{X}:=1/\sqrt{N}\{\phi_{j}(x_{i})\}_{i,j=1}^{M,N}\) 을 통해 보낸(pushforward) 분포로 표현될 수 있다. 따라서 \(f(x)\) 에 확률성을 부여하는 가중치 \(\beta\) 를 \(f(x)\) 의 대리변수로서 정의한다.</p>
+    </blockquote>
+
+\[\begin{aligned}
+  \mathbf{f}_{X}=\frac{1}{\sqrt{N}}\Phi_{X}^{T}\beta=T_{X}(\beta)
+  \quad\Rightarrow\quad
+  p(\mathbf{f}_{X})=(T_{X})_{\#}p(\beta)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>approx.:</p>
+
+\[\begin{aligned}
+  Q(\beta)
+  =\mathrm{Bernoulli}(p;W,0)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>prior:</p>
+
+\[\begin{aligned}
+  P(\beta)
+  =\mathcal{N}\left(0, \sigma^{2}\mathbf{I}\right)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>KL Divergence:</p>
+
+\[\begin{aligned}
+  D_{KL}\left[Q\parallel P\right]
+  &amp;=p\log{\frac{p}{P(W)}}+(1-p)\log{\frac{1-p}{P(0)}}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>because prior is gaussian dist.:</p>
+
+\[\begin{aligned}
+  P(W)
+  &amp;=\frac{1}{\sqrt{2\pi}\sigma}\exp{-\frac{1}{2\sigma^{2}}\Vert W\Vert^{2}}\\
+  P(0)
+  &amp;=\frac{1}{\sqrt{2\pi}\sigma}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>therefore:</p>
+
+\[\begin{aligned}
+  \therefore D_{KL}\left[Q\parallel P\right]
+  &amp;=\underbrace{p\log{p}+(1-p)\log{(1-p)}}_{\text{entropy}} + \underbrace{\frac{1}{2}\log{2\pi\sigma^{2}}}_{\text{const.}} + \frac{p}{2\sigma^{2}}\Vert W\Vert^{2}\\
+  &amp;\approx\frac{p}{2\sigma^{2}}\Vert W\Vert^{2}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>final objective function:</p>
+
+\[\begin{aligned}
+  \mathrm{ELBO}
+  = \mathbb{E}_{W \sim Q}\left[\log{P(\mathcal{D} \mid W)}\right] - \Lambda_{W}\Vert W\Vert^{2}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h2 id="calculation"><span class="me-2">calculation</span><a href="#calculation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p>seperation:</p>
+
+\[\begin{aligned}
+  f(x)
+  &amp;=\frac{1}{\sqrt{N}}\sum_{i=1}^{N}{\beta_{i}\phi_{i}(x)}\\
+  &amp;=\frac{1}{\sqrt{N}}\sum_{i=1}^{N}{\mathbb{E}\left[\beta_{i}\phi_{i}(x)\right]+\left(\beta_{i}\phi_{i}(x)-\mathbb{E}\left[\beta_{i}\phi_{i}(x)\right]\right)}\\
+  &amp;=\underbrace{\frac{1}{\sqrt{N}}\sum_{i=1}^{N}{\mathbb{E}\left[\beta_{i}\phi_{i}(x)\right]}}_{\text{deterministic mean}}+\underbrace{\frac{1}{\sqrt{N}}\sum_{i=1}^{N}{\beta_{i}\phi_{i}(x)-\mathbb{E}\left[\beta_{i}\phi_{i}(x)\right]}}_{\text{stochastic variance}}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h3 id="mean"><span class="me-2">mean</span><a href="#mean" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p>mean of $\beta_{i}$:</p>
+
+\[\begin{aligned}
+  \mathbb{E}\left[\beta_{i}\right]
+  &amp;=\mathbb{E}\left[w_{i} \cdot m_{i}\right]\\
+  &amp;=w_{i} \cdot \mathbb{E}\left[m_{i}\right]\\
+  &amp;=w_{i}\cdot p\\
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>mean of $\beta_{i}\phi_{i}(x)$:</p>
+
+\[\begin{aligned}
+  \mathbb{E}\left[\beta_{i}\phi_{i}(x)\right]
+  &amp;=\mathbb{E}\left[\beta_{i}\phi_{i}(x)\right]\\
+  &amp;=\mathbb{E}\left[\beta_{i}\right]\cdot\phi_{i}(x)\quad\because\text{$\phi_{i}(x)$ is deterministic}\\
+  &amp;=w_{i}p\cdot\phi_{i}(x)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>mean of $f(x)$:</p>
+
+\[\begin{aligned}
+  \mathbb{E}\left[f(x)\right]
+  &amp;=\frac{1}{\sqrt{N}}\sum_{i=1}^{N}{\mathbb{E}\left[\beta_{i}\phi_{i}(x)\right]}\\
+  &amp;=\frac{1}{\sqrt{N}}\sum_{i=1}^{N}{w_{i}p\phi_{i}(x)}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h3 id="variance"><span class="me-2">variance</span><a href="#variance" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p>variance of $\beta_{i}$:</p>
+
+\[\begin{aligned}
+  \mathbb{E}\left[\beta_{i}\right]
+  &amp;=\mathbb{E}\left[w_{i} \cdot m_{i}\right]\\
+  &amp;=w_{i} \cdot \mathbb{E}\left[m_{i}\right]\\
+  &amp;=w_{i}\cdot p\\
+  \\
+  \mathbb{E}\left[\beta_{i}^{2}\right]
+  &amp;=\mathbb{E}\left[w_{i}^{2} \cdot m_{i}^{2}\right]\\
+  &amp;=w_{i}^{2}\cdot\mathbb{E}\left[m_{i}^{2}\right]\\
+  &amp;=w_{i}^{2}\cdot\mathbb{E}\left[m_{i}\right]\quad\because m_{i}^{2}=m_{i}\\
+  &amp;=w_{i}^{2}\cdot p\\
+  \\
+  \therefore\mathrm{Var}\left[\beta_{i}\right]
+  &amp;=\mathbb{E}\left[\beta_{i}^{2}\right]-\left(\mathbb{E}\left[\beta_{i}\right]\right)^{2}\\
+  &amp;=w_{i}^{2}\cdot p - \left(w_{i}\cdot p\right)^{2}\\
+  &amp;=w_{i}^{2}\cdot p(1-p)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>variance of $\beta_{i}\phi_{i}(x)$:</p>
+
+\[\begin{aligned}
+  \mathrm{Var}\left[\beta_{i}\phi_{i}(x)\right]
+  &amp;=\mathrm{Var}\left[\beta_{i}\phi_{i}(x)\right]\\
+  &amp;=\phi_{i}^{2}(x)\cdot\mathrm{Var}\left[\beta_{i}\right]\quad\because\text{$\phi_{i}$ is deterministic}\\
+  &amp;=\phi_{i}^{2}(x)\cdot w_{i}^{2}\cdot p(1-p)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>variance of $f(x)$:</p>
+
+\[\begin{aligned}
+  \mathrm{Var}\left[f(x)\right]
+  &amp;=\mathrm{Var}\left[\frac{1}{\sqrt{N}}\sum_{i=1}^{N}{\beta_{i}\phi_{i}(x)-\mathbb{E}\left[\beta_{i}\phi_{i}(x)\right]}\right]\quad\because\text{$\frac{1}{\sqrt{N}}\sum_{i=1}^{N}{\mathbb{E}\left[\beta_{i}\phi_{i}(x)\right]}$ is deterministic}\\
+  &amp;=\mathrm{Var}\left[\frac{1}{\sqrt{N}}\sum_{i=1}^{N}{\beta_{i}\phi_{i}(x)}\right]\quad\because\text{$\mathbb{E}\left[\beta_{i}\phi_{i}(x)\right]$ is constant}\\
+  &amp;=\frac{1}{N}\sum_{i=1}^{N}{\mathrm{Var}\left[\beta_{i}\phi_{i}(x)\right]}\quad\because\beta_{i}\phi_{i}(x)\perp\beta_{j}\phi_{j}(x)\\
+  &amp;=\frac{1}{N}\sum_{i=1}^{N}{\phi_{i}^{2}(x)\cdot w_{i}^{2}\cdot p(1-p)}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h3 id="covariance"><span class="me-2">covariance</span><a href="#covariance" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p>component $\mathbb{E}\left[f(x)f(x^{\prime})\right]$:</p>
+
+\[\begin{aligned}
+  f(x)f(x^{\prime})
+  &amp;=\left(\frac{1}{\sqrt{N}}\sum_{i=1}^{N}{\beta_{i}\phi_{i}(x)}\right)\left(\frac{1}{\sqrt{N}}\sum_{j=1}^{N}{\beta_{j}\phi_{j}(x^{\prime})}\right)\\
+  &amp;=\frac{1}{N}\sum_{i=1}^{N}\sum_{j=1}^{N}{\beta_{i}\beta_{j}\phi_{i}(x)\phi_{j}(x^{\prime})}\\
+  \therefore\mathbb{E}\left[f(x)f(x^{\prime})\right]
+  &amp;=\frac{1}{N}\sum_{i=1}^{N}\sum_{j=1}^{N}{\mathbb{E}\left[\beta_{i}\beta_{j}\right]\phi_{i}(x)\phi_{j}(x^{\prime})}\\
+  &amp;=\frac{1}{N}\sum_{i=j}{\mathbb{E}\left[\beta_{i}^{2}\right]\phi_{i}(x)\phi_{i}(x^{\prime})}+\frac{1}{N}\sum_{i\ne j}{\mathbb{E}\left[\beta_{i}\right]\mathbb{E}\left[\beta_{j}\right]\phi_{i}(x)\phi_{j}(x^{\prime})}\quad\mathrm{s.t.}\quad\beta_{i}\perp\beta_{j}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>component $\mathbb{E}\left[f(x)\right]\mathbb{E}\left[f(x^{\prime})\right]$:</p>
+
+\[\begin{aligned}
+  \mathbb{E}\left[f(x)\right]\mathbb{E}\left[f(x^{\prime})\right]
+  &amp;=\left(\frac{1}{\sqrt{N}}{\sum_{i=1}^{N}{\mathbb{E}\left[\beta_{i}\right]\phi_{i}(x)}}\right)\left(
+  \frac{1}{\sqrt{N}}{\sum_{j=1}^{N}{\mathbb{E}\left[\beta_{j}\right]\phi_{j}(x^{\prime})}}\right)\\
+  &amp;=\frac{1}{N}\sum_{i=j}{\mathbb{E}\left[\beta_{i}\right]^{2}\phi_{i}(x)\phi_{i}(x^{\prime})}+\frac{1}{N}\sum_{i\ne j}{\mathbb{E}\left[\beta_{i}\right]\mathbb{E}\left[\beta_{j}\right]\phi_{i}(x)\phi_{j}(x^{\prime})}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>covariance of $f(x),f(x^{\prime})$:</p>
+
+\[\begin{aligned}
+  \mathrm{Cov}\left[f(x),f(x^{\prime})\right]
+  &amp;=\mathbb{E}\left[f(x)f(x^{\prime})\right]-\mathbb{E}\left[f(x)\right]\mathbb{E}\left[f(x^{\prime})\right]\\
+  &amp;=\frac{1}{N}\sum_{i=1}^{N}{\left(\mathbb{E}\left[\beta_{i}^{2}\right]-\mathbb{E}\left[\beta_{i}\right]^{2}\right)\phi_{i}(x)\phi_{i}(x^{\prime})}\\
+  &amp;=\frac{1}{N}\sum_{i=1}^{N}{\mathrm{Var}\left[\beta_{i}\right]\phi_{i}(x)\phi_{i}(x^{\prime})}\\
+  &amp;=\frac{1}{N}\sum_{i=1}^{N}{w_{i}^{2}p(1-p)\phi_{i}(x)\phi_{i}(x^{\prime})}
   \end{aligned}\]
   </li>
 </ul>
@@ -987,7 +1301,7 @@
         <i class="far fa-folder-open fa-fw me-1"></i>
         
           <a href="/categories/bayes/">BAYES</a>,
-          <a href="/categories/2-posterior-approx/">2.posterior approx.</a>
+          <a href="/categories/3-bayes-applications/">3.bayes applications</a>
       </div>
     
 
@@ -1002,14 +1316,14 @@
           >Bayesian</a>
         
           <a
-            href="/tags/monte-carlo-simulation/"
+            href="/tags/deep-learning/"
             class="post-tag no-text-decoration"
-          >Monte Carlo Simulation</a>
+          >Deep Learning</a>
         
           <a
-            href="/tags/rejection-sampling/"
+            href="/tags/variational-inference/"
             class="post-tag no-text-decoration"
-          >Rejection Sampling</a>
+          >Variational Inference</a>
         
       </div>
     
@@ -1045,21 +1359,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Monte%20Carlo%20Simulation%20-%20Data%20Scientist&url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FMC%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=BNNs%20(2)%20Monte%20Carlo%20Dropout%20-%20Data%20Scientist&url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FMC_Dropout%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Monte%20Carlo%20Simulation%20-%20Data%20Scientist&u=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FMC%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=BNNs%20(2)%20Monte%20Carlo%20Dropout%20-%20Data%20Scientist&u=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FMC_Dropout%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FMC%2F&text=Monte%20Carlo%20Simulation%20-%20Data%20Scientist" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2FMC_Dropout%2F&text=BNNs%20(2)%20Monte%20Carlo%20Dropout%20-%20Data%20Scientist" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -3330,127 +3644,163 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
@@ -3526,7 +3876,7 @@
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
-          <a href="/posts/MCMC/" class="post-preview card h-100">
+          <a href="/posts/BAM/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -3538,23 +3888,23 @@
 
 <time
   
-  data-ts="1722178800"
+  data-ts="1726671600"
   data-df="ll"
   
 >
-  Jul 29, 2024
+  Sep 19, 2024
 </time>
 
-              <h4 class="pt-0 my-2">Markov Chain Monte Carlo</h4>
+              <h4 class="pt-0 my-2">Bayesian Attention Modules</h4>
               <div class="text-muted">
-                <p>Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data &amp; Management, College of Business Administration, Kookmin Univ.</p>
+                <p>Fan, X., Zhang, S., Chen, B., &amp; Zhou, M.&lt;br&gt; (2020).&lt;br&gt; &lt;a href=&quot; https://doi.org/10.48550/arXiv.2010.10604&quot;&gt;Bayesian attention modules.&lt;/a&gt;&lt;br&gt; Advances in Neural Information Processing Systems, ...</p>
               </div>
             </div>
           </a>
         </article>
       
         <article class="col">
-          <a href="/posts/VI/" class="post-preview card h-100">
+          <a href="/posts/BBB/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -3566,32 +3916,23 @@
 
 <time
   
-  data-ts="1722265200"
+  data-ts="1722870000"
   data-df="ll"
   
 >
-  Jul 30, 2024
+  Aug  6, 2024
 </time>
 
-              <h4 class="pt-0 my-2">Variational Inference</h4>
+              <h4 class="pt-0 my-2">BNNs (1) Bayes by Backprop</h4>
               <div class="text-muted">
-                <p>Information Theory
-
-
-
-  
-    정보이론(Information Theory): 신호에 존재하는 정보의 양을 측정하는 이론으로서, 특정 확률분포의 특성을 알아내거나, 두 확률분포 간 유사성을 정량화하는 데 사용함
-  
-  Shannon’s Information Theory Principles
-    
-      자주 발생하지 않는 사...</p>
+                <p>Blundell, C., Cornebise, J., Kavukcuoglu, K., &amp; Wierstra, D.&lt;/br&gt; (2015, June).&lt;/br&gt; &lt;a href=&quot;https://proceedings.mlr.press/v37/blundell15&quot;&gt;Weight uncertainty in neural network.&lt;/a&gt;&lt;/br&gt; In Interna...</p>
               </div>
             </div>
           </a>
         </article>
       
         <article class="col">
-          <a href="/posts/BPR/" class="post-preview card h-100">
+          <a href="/posts/VAE/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -3603,16 +3944,16 @@
 
 <time
   
-  data-ts="1724770800"
+  data-ts="1724425200"
   data-df="ll"
   
 >
-  Aug 28, 2024
+  Aug 24, 2024
 </time>
 
-              <h4 class="pt-0 my-2">BPR</h4>
+              <h4 class="pt-0 my-2">Variational AutoEncoder</h4>
               <div class="text-muted">
-                <p>&lt;ul type=&quot;square&quot;&gt; &lt;li&gt;&lt;strong&gt;Title&lt;/strong&gt;: &lt;a href=&quot;https://dl.acm.org/doi/10.5555/1795114.1795167&quot;&gt;&lt;code&gt;BPR: Bayesian Personalized Ranking from Implicit Feedback&lt;/code&gt;&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;strong&gt;P...</p>
+                <p>Based on the lecture “Vision AI (2024-1)” by Prof. Jong Hyuk Park, Dept. of Data Science, The Grad. School, Kookmin Univ.</p>
               </div>
             </div>
           </a>
@@ -3633,21 +3974,21 @@
 
   
     <a
-      href="/posts/Bayes_Action/"
+      href="/posts/BBB/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>Bayes Action</p>
+      <p>BNNs (1) Bayes by Backprop</p>
     </a>
   
 
   
     <a
-      href="/posts/MCMC/"
+      href="/posts/Regular-Expression/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>Markov Chain Monte Carlo</p>
+      <p>Regular Expression</p>
     </a>
   
 </nav>

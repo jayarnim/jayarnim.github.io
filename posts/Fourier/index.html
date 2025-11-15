@@ -644,6 +644,60 @@
   
 
   
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
 
   
   
@@ -746,9 +800,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="630 words"
+  title="944 words"
 >
-  <em>3 min</em> read</span>
+  <em>5 min</em> read</span>
 
         </div>
       </div>
@@ -845,6 +899,8 @@
 
 <h2 id="fourier-transform"><span class="me-2">Fourier transform</span><a href="#fourier-transform" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
+<h3 id="fourier-transform-1"><span class="me-2">Fourier transform</span><a href="#fourier-transform-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
 <ul>
   <li>
     <p>Fourier series maps a <strong>periodic signal</strong> into <strong>frequency components</strong> in a <strong>countable infinite-dimensional space</strong> consisting of <strong>discrete basis</strong>.</p>
@@ -878,7 +934,7 @@
   </li>
 </ul>
 
-<h2 id="inverse-fourier-transform"><span class="me-2">Inverse Fourier transform</span><a href="#inverse-fourier-transform" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="inverse-fourier-transform"><span class="me-2">Inverse Fourier transform</span><a href="#inverse-fourier-transform" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>
@@ -932,6 +988,113 @@
     <p>Therefore, the <strong>dual basis of a continuous basis</strong> is defined as follows:</p>
 
 \[\phi^{*}(t)=\frac{1}{2\pi}\exp{-i\omega t}\]
+  </li>
+</ul>
+
+<h2 id="random-fourier-feature"><span class="me-2">Random Fourier Feature</span><a href="#random-fourier-feature" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<h3 id="random-fourier-feature-1"><span class="me-2">Random Fourier Feature</span><a href="#random-fourier-feature-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p><strong>Bochner’s theorem</strong> states that a shift-invariant, continuous, and positive definite kernel function can be expressed as a <strong>Fourier transform</strong> whose <strong>spectrum is a probability function of continuous frequency $\omega$</strong>.</p>
+
+\[\begin{aligned}
+  k(x-x^{\prime})
+  &amp;=\int_{\mathbb{R}^{d}}{\phi(x-x^{\prime})p(\omega)\mathrm{d}\omega}\\
+  &amp;=\int_{\mathbb{R}^{d}}{\phi(x)\phi^{*}(x^{\prime})p(\omega)\mathrm{d}\omega}\\
+  &amp;=\left\langle\Phi(x),\Phi(x^{\prime})\right\rangle_{p(\omega)}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>This indicates that the kernel function can be expressed as an <strong>infinite-dimensional inner product of continuous sinusoids</strong>.</p>
+
+\[\begin{aligned}
+  \Phi(x)
+  =\begin{bmatrix}\exp{i\omega_{1}x}\cdot \sqrt{p(\omega_{1})}\\\exp{i\omega_{2}x}\cdot \sqrt{p(\omega_{2})}\\\vdots\\\exp{i\omega_{\infty}x}\cdot \sqrt{p(\omega_{\infty})}\end{bmatrix},
+  \quad \Phi^{*}(x^{\prime})
+  =\begin{bmatrix}\exp{-i\omega_{1}x^{\prime}}\cdot \sqrt{p(\omega_{1})}\\\exp{-i\omega_{2}x^{\prime}}\cdot \sqrt{p(\omega_{2})}\\\vdots\\\exp{-i\omega_{\infty}x^{\prime}}\cdot \sqrt{p(\omega_{\infty})}\end{bmatrix}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>Random Fourier Features</strong> is a technique that <strong>replaces the infinite-dimensional complex inner product with a finite-dimensional real inner product</strong> through Monte Carlo approximation in the Fourier transform of a kernel function.</p>
+
+\[\begin{aligned}
+  \int_{\mathbb{R}^{d}}{\phi(x)\phi^{*}(x^{\prime})p(\omega)\mathrm{d}\omega}
+  &amp;\approx \frac{1}{\sqrt{M}}\sum_{m=1}^{M}{\psi_{m}(x)\psi^{*}_{m}(x^{\prime})}, \quad \omega_{m} \sim p(\omega)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Continuous sinusoid of infinite dimension $\phi(x)$ is approximated by a discrete sinusoid of finite dimension $\psi_{m}(x)$ with <strong>frequency $\omega_{m}$ sampled from the spectral density $p(\omega)$</strong>.</p>
+
+\[\begin{gathered}
+  \phi(x)=\exp{i\omega x}\cdot\sqrt{p(\omega)}, \quad \omega \in \mathbb{R}\\
+  \Downarrow\\
+  \psi_{m}(x)=\frac{1}{\sqrt{M}}\exp{i\omega_{m}x}, \quad \omega_{m} \sim p(\omega)
+  \end{gathered}\]
+  </li>
+  <li>
+    <p>Accordingly, the infinite-dimensional inner product of continuous sinusoids, $\phi(x)$, is <strong>approximated by the finite-dimensional inner product of discrete sinusoids, $\psi(x)$</strong>.</p>
+
+\[\begin{aligned}
+  \Psi_{M}(x)
+  =\frac{1}{\sqrt{M}}\begin{bmatrix}\exp{i\omega_{1}x}\\\exp{i\omega_{2}x}\\\vdots\\\exp{i\omega_{M}x}\end{bmatrix},
+  \quad \Psi^{*}_{M}(x^{\prime})
+  =\frac{1}{\sqrt{M}}\begin{bmatrix}\exp{-i\omega_{1}x}\\\exp{-i\omega_{2}x}\\\vdots\\\exp{-i\omega_{M}x}\end{bmatrix}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h3 id="sinusoids-simplification"><span class="me-2">sinusoids simplification</span><a href="#sinusoids-simplification" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p>The integral of a sinusoid $\phi(x)$ on a symmetric interval can be simplified as follows:</p>
+
+\[\begin{aligned}
+  \int_{-\infty}^{\infty}{\phi(x)\mathrm{d}\omega}
+  &amp;=\int_{-\infty}^{\infty}{\cos{\omega x}\mathrm{d}\omega} + \underbrace{\int_{-\infty}^{\infty}{i\sin{\omega x}\mathrm{d}\omega}}_{=0}\\
+  &amp;= \int_{-\infty}^{\infty}{\cos{\omega x}\mathrm{d}\omega}
+  \quad \because \begin{cases}\cos{-x}=\cos{x}\\\sin{-x}=-\sin{x}\end{cases}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Trigonometric Identity:</p>
+
+\[2\cos{A}\cos{B}=\cos{(A-B)}+\cos{(A+B)}\]
+  </li>
+  <li>
+    <p>Application:</p>
+
+\[\begin{aligned}
+  2\cos(\omega_{m} x + b_{m})\cos(\omega_{m} x^{\prime} + b_{m})
+  &amp;=\cos(\omega_{m}(x-x^{\prime}))+\cos(\omega_{m}(x+x^{\prime})+2b_{m})
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Since the expected value of the <strong>cosine function</strong> in the interval $[0,2\pi)$ is $0$:</p>
+
+\[\begin{aligned}
+  2\mathbb{E}_{b}\left[\cos(\omega x + b)\cos(\omega x^{\prime} + b)\right]
+  &amp;=\mathbb{E}_{b}\left[\cos(\omega(x-x^{\prime}))\right]+\mathbb{E}_{b}\left[\cos(\omega(x+x^{\prime})+2b)\right]\\
+  &amp;=\cos(\omega(x-x^{\prime})) \quad \mathrm{s.t.} \quad b_{m}\sim\mathrm{Uniform}(0,2\pi]
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Finally, the continuous complex sinusoid $\phi(x)$ of infinite dimension can be simplified into the <strong>discrete real sinusoid $\psi_{m}(x)$ of finite dimension</strong>.</p>
+
+\[\begin{aligned}
+  \psi_{m}(x)
+  &amp;=\sqrt{\frac{2}{M}}\cos(\omega_{m}x+b_{m}), \quad \mathrm{for} \quad \begin{cases}\omega_{m} &amp;\sim p(\omega)\\b_{m}&amp;\sim\mathrm{Uniform}(0,2\pi]\end{cases}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>Accordingly, the infinite-dimensional complex inner product of continuous sinusoids is simplified to the <strong>finite-dimensional real inner product of discrete sinusoids</strong>.</p>
+
+\[\begin{aligned}
+  \Psi_{M}(x)
+  &amp;=\sqrt{\frac{2}{M}}\begin{bmatrix}\cos{(\omega_{1}x+b_{1})}\\\cos{(\omega_{2}x+b_{2})}\\\vdots\\\cos{(\omega_{M}x+b_{M})}\end{bmatrix}, \quad \mathrm{for} \quad \begin{cases}\omega_{m} &amp;\sim p(\omega)\\b_{m}&amp;\sim\mathrm{Uniform}(0,2\pi]\end{cases}
+  \end{aligned}\]
   </li>
 </ul>
 
@@ -3164,6 +3327,18 @@
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
