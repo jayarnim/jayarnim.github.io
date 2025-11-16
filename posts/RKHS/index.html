@@ -767,7 +767,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="512 words"
+  title="514 words"
 >
   <em>2 min</em> read</span>
 
@@ -778,6 +778,7 @@
 
   <div class="content">
     <h2 id="evaluation-operator"><span class="me-2">evaluation operator</span><a href="#evaluation-operator" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
 
 <ul>
   <li>
@@ -839,6 +840,7 @@
 </ul>
 
 <h2 id="dual-space"><span class="me-2">dual space</span><a href="#dual-space" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
 
 <ul>
   <li>
@@ -882,9 +884,11 @@
   <li>
     <p>Since the original basis and the dual basis can be completely restored as linear combinations of each other, they span the <strong>same linear space</strong>.</p>
 
-\[\mathcal{S} \subseteq \mathcal{S}^{*} \quad \mathrm{and} \quad \mathcal{S}^{*} \subseteq \mathcal{S}\\
+\[\begin{gathered}
+  \mathcal{S} \subseteq \mathcal{S}^{*} \quad \mathrm{and} \quad \mathcal{S}^{*} \subseteq \mathcal{S}\\
   \Downarrow\\
-  \mathcal{S}=\mathcal{S}^{*}\]
+  \mathcal{S}=\mathcal{S}^{*}
+  \end{gathered}\]
   </li>
   <li>
     <p>therefore, the elements of the original space <strong>can be expressed as a dual basis</strong>.</p>
@@ -894,6 +898,7 @@
 </ul>
 
 <h2 id="rkhs"><span class="me-2">RKHS</span><a href="#rkhs" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
 
 <ul>
   <li>
@@ -1084,6 +1089,13 @@
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/GP_RFFGP/">GP (3) Random Fourier Features Gaussian Process</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/Fourier/">Fourier Analysis</a>
         </li>
       
@@ -1106,13 +1118,6 @@
         
         <li class="text-truncate lh-lg">
           <a href="/posts/RKHS/">RKHS</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/Hierarchical_Clustering/">Hierarchical Clustering</a>
         </li>
       
     </ul>
@@ -1160,6 +1165,8 @@
     
     
     
+      
+    
   
     
     
@@ -3048,15 +3055,102 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
     
     
       
-        
-        
-
+    
   
     
     
@@ -3097,10 +3191,10 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/design-of-experiments/">Design of Experiments</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/a-b-test/">A/B Test</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/design-of-experiments/">Design of Experiments</a>
       
     </div>
   </section>
@@ -3493,6 +3587,18 @@
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -3506,6 +3612,38 @@
   <aside id="related-posts" aria-labelledby="related-label">
     <h3 class="mb-4" id="related-label">Further Reading</h3>
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
+      
+        <article class="col">
+          <a href="/posts/GP_RFFGP/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1754406000"
+  data-df="ll"
+  
+>
+  Aug  6, 2025
+</time>
+
+              <h4 class="pt-0 my-2">GP (3) Random Fourier Features Gaussian Process</h4>
+              <div class="text-muted">
+                <p>Random Fourier Feature Gaussian Process
+
+
+  
+    Random Fourier Feature Gaussian Process is a technique for approximating an infinite-dimensional function space based on kernel functions to a finit...</p>
+              </div>
+            </div>
+          </a>
+        </article>
       
         <article class="col">
           <a href="/posts/Fourier/" class="post-preview card h-100">
@@ -3532,11 +3670,12 @@
                 <p>Euler’s formula
 
 
+
   
     Euler’s formula is a formula that shows that the Taylor series of a complex exponential function can be expressed as a trigonometric function.
 
 \[\begin{aligned}
-  \exp{i\t...</p>
+  \exp{i\...</p>
               </div>
             </div>
           </a>
@@ -3567,40 +3706,9 @@
                 <p>sparse gaussian process
 
 
+
   sparse gaussian process is a technique that achieves the following two advantages by introducing $M$ inducing points that can represent all $N\to\infty$ observations:
-  ...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/GP_GP/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1754146800"
-  data-df="ll"
-  
->
-  Aug  3, 2025
-</time>
-
-              <h4 class="pt-0 my-2">GP (1) Gaussian Process</h4>
-              <div class="text-muted">
-                <p>gaussian process
-
-
-  
-    gaussian process is a nonparametric stochastic process that uses the mean and covariance structure of function values as prior information to infer the function distributi...</p>
+ ...</p>
               </div>
             </div>
           </a>
@@ -3731,6 +3839,8 @@
     
     
     
+      
+    
   
     
     
@@ -5619,15 +5729,102 @@
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
     
     
       
-        
-        
-
+    
   
     
     
@@ -5668,10 +5865,10 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">Machine Learning</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/design-of-experiments/">Design of Experiments</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/deep-learning/">Deep Learning</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/a-b-test/">A/B Test</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/design-of-experiments/">Design of Experiments</a>
       
     </div>
   </section>

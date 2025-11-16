@@ -4,7 +4,7 @@
   <id>https://jayarnim.github.io/</id>
   <title>Data Scientist</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-11-16T03:38:27+09:00</updated>
+  <updated>2025-11-17T03:26:42+09:00</updated>
   <author>
     <name>jayarnim</name>
     <uri>https://jayarnim.github.io/</uri>
@@ -17,6 +17,47 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>GP (3) Random Fourier Features Gaussian Process</title>
+    <link href="https://jayarnim.github.io/posts/GP_RFFGP/" rel="alternate" type="text/html" title="GP (3) Random Fourier Features Gaussian Process" />
+    <published>2025-08-06T00:00:00+09:00</published>
+  
+    <updated>2025-08-06T00:00:00+09:00</updated>
+  
+    <id>https://jayarnim.github.io/posts/GP_RFFGP/</id>
+    <content src="https://jayarnim.github.io/posts/GP_RFFGP/" />
+    <author>
+      <name>jayarnim</name>
+    </author>
+
+  
+    
+    <category term="BAYES" />
+    
+    <category term="4.stochastic process" />
+    
+  
+
+  <summary>Random Fourier Feature Gaussian Process
+
+
+  
+    Random Fourier Feature Gaussian Process is a technique for approximating an infinite-dimensional function space based on kernel functions to a finite-dimensional function space based on real sinusoids.
+  
+  
+    nonparametric function:
+
+\[f(x)=\sum_{i=1}^{\infty}{\beta_{i}k(x,x_{i})}\]
+  
+  
+    nonparametric function space:
+
+\[\mathcal{F}
+  =\ma...</summary>
+
+  </entry>
 
   
   <entry>
@@ -43,6 +84,7 @@
   <summary>Euler’s formula
 
 
+
   
     Euler’s formula is a formula that shows that the Taylor series of a complex exponential function can be expressed as a trigonometric function.
 
@@ -50,7 +92,7 @@
   \exp{i\theta}
   &amp;amp;amp;=\sum_{n=0}^{\infty}{\frac{(i\theta)^{n}}{n!}}\\
   &amp;amp;amp;=\sum_{k=0}^{\infty}{\frac{(i\theta)^{2k}}{(2k)!}}+\sum_{k=0}^{\infty}{\frac{(i\theta)^{2k+1}}{(2k+1)!}}\\
-  &amp;amp;amp;=\sum_{k=0}^{\inf...</summary>
+  &amp;amp;amp;=\sum_{k=0}^{\in...</summary>
 
   </entry>
 
@@ -79,10 +121,11 @@
   <summary>sparse gaussian process
 
 
+
   sparse gaussian process is a technique that achieves the following two advantages by introducing $M$ inducing points that can represent all $N\to\infty$ observations:
     
       infinite-dimensional function space is projected onto a low-dimensional induction point space, thereby ensuring computational efficiency.
-      uncertainty is restricted to the low-dimensiona...</summary>
+      uncertainty is restricted to the low-dimension...</summary>
 
   </entry>
 
@@ -111,13 +154,14 @@
   <summary>gaussian process
 
 
+
   
     gaussian process is a nonparametric stochastic process that uses the mean and covariance structure of function values as prior information to infer the function distribution, assuming that the function values defined for an arbitrary input set jointly follow a multivariate normal distribution.
   
   
     function definition:
 
-\[y_{i}=f(X_{i})+\epsilon_{i}, \quad \epsilo...</summary>
+\[y_{i}=f(X_{i})+\epsilon_{i}, \quad \epsil...</summary>
 
   </entry>
 
@@ -146,36 +190,11 @@
   <summary>evaluation operator
 
 
+
   
     (in the space where the inner product is defined) the evaluation operation is the inverse operation of the inner product, which recovers the intrinsic properties of an object from a distorted representation mapped to a basis direction of a specific space. this is performed by taking the inner product with the dual basis of the mapped basis.
 
-\[\delta(\cdot):=\langle...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Hierarchical Clustering</title>
-    <link href="https://jayarnim.github.io/posts/Hierarchical_Clustering/" rel="alternate" type="text/html" title="Hierarchical Clustering" />
-    <published>2025-01-09T00:00:00+09:00</published>
-  
-    <updated>2025-01-09T00:00:00+09:00</updated>
-  
-    <id>https://jayarnim.github.io/posts/Hierarchical_Clustering/</id>
-    <content src="https://jayarnim.github.io/posts/Hierarchical_Clustering/" />
-    <author>
-      <name>jayarnim</name>
-    </author>
-
-  
-    
-    <category term="STATISTICAL TECHS" />
-    
-    <category term="3.multivariate statistical analysis" />
-    
-  
-
-  <summary>Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.</summary>
+\[\delta(\cdot):=\langl...</summary>
 
   </entry>
 
