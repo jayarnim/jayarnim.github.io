@@ -4,7 +4,7 @@
   <id>https://jayarnim.github.io/</id>
   <title>Data Scientist</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-11-17T03:26:42+09:00</updated>
+  <updated>2025-11-20T03:38:30+09:00</updated>
   <author>
     <name>jayarnim</name>
     <uri>https://jayarnim.github.io/</uri>
@@ -17,6 +17,44 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Hidden Markov Model</title>
+    <link href="https://jayarnim.github.io/posts/HMM/" rel="alternate" type="text/html" title="Hidden Markov Model" />
+    <published>2025-08-07T00:00:00+09:00</published>
+  
+    <updated>2025-08-07T00:00:00+09:00</updated>
+  
+    <id>https://jayarnim.github.io/posts/HMM/</id>
+    <content src="https://jayarnim.github.io/posts/HMM/" />
+    <author>
+      <name>jayarnim</name>
+    </author>
+
+  
+    
+    <category term="BAYES" />
+    
+    <category term="4.stochastic process" />
+    
+  
+
+  <summary>Markov Chain
+
+
+
+  
+    The Markov Property is a property in which past information is concentrated in the current state, so that the future state is independent of the past state conditionally on the current state.
+
+\[\begin{gathered}
+  X(t+1)\perp X(0),X(1),\cdots,X(t-1)\mid X(t)
+  \end{gathered}\]
+  
+  
+    For a random variable sequence \(\{X(t):t\in T\}\) defined on a discrete time space \(...</summary>
+
+  </entry>
 
   
   <entry>
@@ -162,39 +200,6 @@
     function definition:
 
 \[y_{i}=f(X_{i})+\epsilon_{i}, \quad \epsil...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>RKHS</title>
-    <link href="https://jayarnim.github.io/posts/RKHS/" rel="alternate" type="text/html" title="RKHS" />
-    <published>2025-08-02T00:00:00+09:00</published>
-  
-    <updated>2025-08-02T00:00:00+09:00</updated>
-  
-    <id>https://jayarnim.github.io/posts/RKHS/</id>
-    <content src="https://jayarnim.github.io/posts/RKHS/" />
-    <author>
-      <name>jayarnim</name>
-    </author>
-
-  
-    
-    <category term="BAYES" />
-    
-    <category term="4.stochastic process" />
-    
-  
-
-  <summary>evaluation operator
-
-
-
-  
-    (in the space where the inner product is defined) the evaluation operation is the inverse operation of the inner product, which recovers the intrinsic properties of an object from a distorted representation mapped to a basis direction of a specific space. this is performed by taking the inner product with the dual basis of the mapped basis.
-
-\[\delta(\cdot):=\langl...</summary>
 
   </entry>
 
