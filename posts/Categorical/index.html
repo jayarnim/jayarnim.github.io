@@ -737,7 +737,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="392 words"
+  title="382 words"
 >
   <em>2 min</em> read</span>
 
@@ -865,22 +865,13 @@
   &amp;=p_{\mathrm{H}}(\mathrm{H})\mathrm{\partial}\mathrm{H}\\
   \therefore p_{\Pi}(\Pi)
   &amp;=p_{\mathrm{H}}\left(\sum_{k=1}^{K-1}{\log{\frac{\pi_{k}}{\pi_{K}}}}\right)\left\vert\frac{\mathrm{\partial}\mathrm{H}}{\mathrm{\partial}\Pi}\right\vert\\
-  \\
-  \sum_{k=1}^{K-1}{\eta_{k}}
-  &amp;=\sum_{k=1}^{K-1}{\log{\frac{\pi_{k}}{\pi_{K}}}}\\
-  &amp;=\sum_{k=1}^{K-1}{\left(\log{\pi_{k}}-\log{\pi_{K}}\right)}\\
-  &amp;=\sum_{k=1}^{K-1}{\log{\pi_{k}}}-(K-1)\log{\pi_{K}}\\
-  \log{\left(1+\sum_{k=1}^{K-1}{\exp{\eta_{k}}}\right)}
-  &amp;=-\log{\pi_{K}}\\
-  \left\vert\frac{\mathrm{\partial}\mathrm{H}}{\mathrm{\partial}\Pi}\right\vert
-  &amp;=\frac{1}{\prod_{k=1}^{K}{\pi_{k}}}\\
-  \\
-  \therefore p_{\Pi}(\Pi)
   &amp;\propto\exp{\left[\alpha\cdot\sum_{k=1}^{K-1}{\eta_{k}}-\beta\cdot \log{\left(1+\sum_{k=1}^{K-1}{\exp{\eta_{k}}}\right)}\right]}\cdot\left\vert\frac{\mathrm{\partial}\mathrm{H}}{\mathrm{\partial}\Pi}\right\vert\\
-  &amp;=\exp{\left[\alpha\cdot\sum_{k=1}^{K-1}{\log{\pi_{k}}}-\alpha\cdot(K-1)\log{\pi_{K}}+\beta\cdot\log{\pi_{K}}\right]}\cdot\frac{1}{\prod_{k=1}^{K}{\pi_{k}}}\\
-  &amp;=\left(\prod_{k=1}^{K-1}{\pi_{k}^{\alpha}}\right)\cdot\pi_{K}^{\beta-\alpha(K-1)}\cdot\frac{1}{\prod_{k=1}^{K-1}{\pi_{k}}}\cdot\frac{1}{\pi_{K}}\\
+  &amp;=\exp{\left[\alpha\cdot\sum_{k=1}^{K-1}{\log{\pi_{k}}}-\alpha(K-1)\log{\pi_{K}}+\beta\log{\pi_{K}}\right]}\cdot\frac{1}{\prod_{k=1}^{K}{\pi_{k}}}\\
+  &amp;=\exp{\left[\alpha\cdot\sum_{k=1}^{K-1}{\log{\pi_{k}}}\right]}\exp{\left[\beta\log{\pi_{K}}-\alpha(K-1)\log{\pi_{K}}\right]}\cdot\frac{1}{\prod_{k=1}^{K}{\pi_{k}}}\\
+  &amp;=\left(\prod_{k=1}^{K-1}{\pi_{k}^{\alpha}}\right)\cdot\pi_{K}^{\beta-\alpha(K-1)}\cdot\frac{1}{\prod_{k=1}^{K}{\pi_{k}}}\\
   &amp;=\left(\prod_{k=1}^{K-1}{\pi_{k}^{\alpha-1}}\right)\cdot\pi_{K}^{\beta-\alpha(K-1)-1}\\
-  &amp;=\prod_{k=1}^{K}{\pi_{k}^{\alpha_{k}-1}},\quad\mathrm{for}\quad\alpha_{k}
+  &amp;=\prod_{k=1}^{K}{\pi_{k}^{\alpha_{k}-1}}
+  \quad\mathrm{for}\quad\alpha_{k}
   =\begin{cases}
   \alpha,\quad &amp;k\ne K\\
   \beta-\alpha(K-1),\quad &amp;k=K\\
