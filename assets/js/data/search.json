@@ -106,8 +106,8 @@
     "title": "Beta and Extension",
     "url": "/posts/Beta/",
     "categories": "BAYES, 0.probability",
-    "tags": "Distribution, Continuous Variable, Success Probability, Beta Dist., Uniform Dist., Dirichlet Dist.",
-    "date": "2025-07-10 00:00:00 +0900",
+    "tags": "Statistics, Uncertainty, Probability, Distribution, Bayesian, Continuous Variable, Success Probability, Beta Dist., Uniform Dist., Dirichlet Dist.",
+    "date": "2025-07-11 00:00:00 +0900",
     
 
 
@@ -123,8 +123,8 @@
     "title": "Chi-Squared and Extension",
     "url": "/posts/Chi/",
     "categories": "BAYES, 0.probability",
-    "tags": "Distribution, Continuous Variable, Variance, Chi-Squared Dist., Wishart Dist.",
-    "date": "2025-07-09 00:00:00 +0900",
+    "tags": "Statistics, Uncertainty, Probability, Distribution, Bayesian, Continuous Variable, Variance, Chi-Squared Dist., Wishart Dist.",
+    "date": "2025-07-10 00:00:00 +0900",
     
 
 
@@ -140,8 +140,8 @@
     "title": "Exponential and Extension",
     "url": "/posts/Exponential/",
     "categories": "BAYES, 0.probability",
-    "tags": "Statistics, Continuous Variable, Survival Analysis, Exponential Dist., Gamma Dist.",
-    "date": "2025-07-08 00:00:00 +0900",
+    "tags": "Statistics, Uncertainty, Probability, Distribution, Bayesian, Continuous Variable, Survival Analysis, Exponential Dist., Gamma Dist.",
+    "date": "2025-07-09 00:00:00 +0900",
     
 
 
@@ -157,8 +157,8 @@
     "title": "Categorical and Extension",
     "url": "/posts/Categorical/",
     "categories": "BAYES, 0.probability",
-    "tags": "Distribution, Discrete Variable, Categorical Dist., Multinomial Dist.",
-    "date": "2025-07-07 00:00:00 +0900",
+    "tags": "Statistics, Uncertainty, Probability, Distribution, Bayesian, Discrete Variable, Categorical Dist., Multinomial Dist.",
+    "date": "2025-07-08 00:00:00 +0900",
     
 
 
@@ -174,8 +174,8 @@
     "title": "Bernoulli and Extension",
     "url": "/posts/Bernoulli/",
     "categories": "BAYES, 0.probability",
-    "tags": "Distribution, Discrete Variable, Bernoulli Dist., Binomial Dist.",
-    "date": "2025-07-06 00:00:00 +0900",
+    "tags": "Statistics, Uncertainty, Probability, Distribution, Bayesian, Discrete Variable, Bernoulli Dist., Binomial Dist.",
+    "date": "2025-07-07 00:00:00 +0900",
     
 
 
@@ -191,8 +191,8 @@
     "title": "Poisson",
     "url": "/posts/Poisson/",
     "categories": "BAYES, 0.probability",
-    "tags": "Distribution, Discrete Variable, Count Data Analysis, Poisson Dist.",
-    "date": "2025-07-05 00:00:00 +0900",
+    "tags": "Statistics, Uncertainty, Probability, Distribution, Bayesian, Discrete Variable, Count Data Analysis, Poisson Dist.",
+    "date": "2025-07-06 00:00:00 +0900",
     
 
 
@@ -208,8 +208,8 @@
     "title": "Multi-Variate Gaussian",
     "url": "/posts/MVN/",
     "categories": "BAYES, 0.probability",
-    "tags": "Distribution, Continuous Variable, Multi-Variate Gaussian Dist., Multi-Variate Normal Dist.",
-    "date": "2025-07-04 00:00:00 +0900",
+    "tags": "Statistics, Uncertainty, Probability, Distribution, Bayesian, Continuous Variable, Multi-Variate Gaussian Dist., Multi-Variate Normal Dist.",
+    "date": "2025-07-05 00:00:00 +0900",
     
 
 
@@ -225,8 +225,8 @@
     "title": "Gaussian",
     "url": "/posts/Gaussian/",
     "categories": "BAYES, 0.probability",
-    "tags": "Distribution, Continuous Variable, Gaussian Dist., Normal Dist.",
-    "date": "2025-07-03 00:00:00 +0900",
+    "tags": "Statistics, Uncertainty, Probability, Distribution, Bayesian, Continuous Variable, Gaussian Dist., Normal Dist.",
+    "date": "2025-07-04 00:00:00 +0900",
     
 
 
@@ -236,6 +236,40 @@
     
     "snippet": "definition      가우시안 분포(Gaussian Distribution): 독립적인 무작위 충격들이 누적되어 나타나는 연속 실수값을 나타내는 분포\\[X\\sim\\mathcal{N}(\\mu,\\sigma^{2})\\]          $\\mu$: 평균 위치로서 위치 파라미터      $\\sigma^{2}$: 분산으로서 스케일 파라미터        ...",
     "content": "definition      가우시안 분포(Gaussian Distribution): 독립적인 무작위 충격들이 누적되어 나타나는 연속 실수값을 나타내는 분포\\[X\\sim\\mathcal{N}(\\mu,\\sigma^{2})\\]          $\\mu$: 평균 위치로서 위치 파라미터      $\\sigma^{2}$: 분산으로서 스케일 파라미터            probability density function:\\[p(x\\mid\\mu,\\sigma^{2})  =\\frac{1}{\\sqrt{2\\pi\\sigma^{2}}}\\exp{\\left[-\\frac{(x-\\mu)^{2}}{2\\sigma^{2}}\\right]}\\]        moment generating function:\\[\\begin{aligned}  M_{X}(t)  &amp;=\\mathbb{E}_{p(x)}\\left[\\exp{tX}\\right]\\\\  &amp;=\\int_{-\\infty}^{\\infty}{\\exp{tx}\\cdot\\frac{1}{\\sqrt{2\\pi\\sigma^{2}}}\\exp{\\left[-\\frac{(x-\\mu)^{2}}{2\\sigma^{2}}\\right]}\\mathrm{d}x}\\\\  &amp;=\\frac{1}{\\sqrt{2\\pi\\sigma^{2}}}\\int_{-\\infty}^{\\infty}{\\exp{\\left[tx-\\frac{(x-\\mu)^{2}}{2\\sigma^{2}}\\right]}\\mathrm{d}x}\\\\  \\\\  tx-\\frac{(x-\\mu)^{2}}{2\\sigma^{2}}  &amp;=-\\frac{1}{2\\sigma^{2}}x^{2}+\\left(\\frac{\\mu}{\\sigma^{2}}+t\\right)x-\\frac{\\mu^{2}}{2\\sigma^{2}}\\\\  &amp;=-\\frac{\\left[x-(\\mu+\\sigma^{2}+t)\\right]^{2}}{2\\sigma^{2}}+\\mu t+\\frac{\\sigma^{2}t^{2}}{2}\\\\  &amp;=-\\frac{\\left(x-\\mu^{\\prime}\\right)^{2}}{2\\sigma^{2}}+\\mu t+\\frac{\\sigma^{2}t^{2}}{2}\\\\  \\\\  \\therefore M_{X}(t)  &amp;=\\frac{1}{\\sqrt{2\\pi\\sigma^{2}}}\\int_{-\\infty}^{\\infty}{\\exp{\\left[\\mu t+\\frac{\\sigma^{2}t^{2}}{2}\\right]}\\cdot\\exp{\\left[-\\frac{(x-\\mu^{\\prime})^{2}}{2\\sigma^{2}}\\right]}\\mathrm{d}x}\\\\  &amp;=\\exp{\\left[\\mu t+\\frac{\\sigma^{2}t^{2}}{2}\\right]}\\cdot\\underbrace{\\frac{1}{\\sqrt{2\\pi\\sigma^{2}}}\\int_{-\\infty}^{\\infty}{\\exp{\\left[-\\frac{(x-\\mu^{\\prime})^{2}}{2\\sigma^{2}}\\right]}\\mathrm{d}x}}_{=1}\\\\  &amp;=\\exp{\\left[\\mu t+\\frac{\\sigma^{2}t^{2}}{2}\\right]}  \\end{aligned}\\]          $\\mathbb{E}\\left[X\\right]=(\\mathrm{d}/\\mathrm{d}t)M_{X}(t)\\vert_{t=0}=\\mu$      $\\mathbb{E}\\left[X^{2}\\right]=(\\mathrm{d}^{2}/\\mathrm{d}t^{2})M_{X}(t)\\vert_{t=0}=\\mu^{2}+\\sigma^{2}$      $\\mathrm{Var}\\left[X\\right]=\\mathbb{E}\\left[X^{2}\\right]-\\mathbb{E}\\left[X\\right]^{2}=\\sigma^{2}$            canonical form ($\\tau=1/\\sigma^{2}$):\\[\\begin{aligned}  p(x)  &amp;=\\frac{1}{\\sqrt{2\\pi\\sigma^{2}}}\\exp{\\left[-\\frac{(x-\\mu)^{2}}{2\\sigma^{2}}\\right]}\\\\  &amp;=\\sqrt{\\frac{\\tau}{2\\pi}}\\exp{\\left[-\\frac{\\tau}{2}(x-\\mu)^{2}\\right]}\\\\  &amp;=\\frac{1}{\\sqrt{2\\pi}}\\exp{\\left[\\begin{pmatrix}-(1/2)\\tau\\\\\\mu\\tau\\end{pmatrix}^{T}\\begin{pmatrix}x^{2}\\\\x\\end{pmatrix}-\\frac{1}{2}(\\mu^{2}\\tau-\\log{\\tau})\\right]}  \\end{aligned}\\]          $T(x)=x^{2},x$      $\\eta(\\theta)=-(1/2)\\tau,\\mu\\tau$      $A(\\eta)=(1/2)(\\mu^{2}\\tau-\\log{\\tau})$      $h(x)=1/\\sqrt{2\\pi}$      conjugate prior      gaussian model:\\[X\\mid\\tau\\sim\\mathcal{N}(0,\\tau^{-1})\\]        canonical form:\\[\\begin{aligned}  p(x\\mid\\tau)  &amp;=\\sqrt{\\frac{\\tau}{2\\pi}}\\exp{\\left[-\\frac{\\tau}{2}x^{2}\\right]}\\\\  &amp;=\\frac{1}{\\sqrt{2\\pi}}\\exp{\\left[-\\frac{1}{2}\\tau x^{2}-\\left(-\\frac{1}{2}\\log{\\tau}\\right)\\right]}  \\end{aligned}\\]          $T(x)=x^{2}$      $\\eta(\\theta)=-(1/2)\\tau$      $A(\\eta)=-(1/2)\\log{\\tau}$      $h(x)=1/\\sqrt{2\\pi}$            prior of $\\eta$:\\[\\begin{aligned}  p(\\eta)  &amp;\\propto \\exp\\left[\\alpha\\cdot\\eta(\\theta)-\\beta\\cdot A(\\eta)\\right]\\\\  &amp;=\\exp{\\left[\\alpha\\cdot\\eta-\\beta\\cdot\\left(-\\frac{1}{2}\\log{[-2\\eta]}\\right)\\right]}\\\\  &amp;=(-2\\eta)^{\\beta/2}\\cdot\\exp{\\alpha\\eta}  \\end{aligned}\\]        change of variables $\\eta\\to\\tau$:\\[\\begin{aligned}  p_{\\tau}(\\tau)\\mathrm{d}\\tau  &amp;=p_{\\eta}(\\eta)\\mathrm{d}\\eta\\\\  \\therefore p_{\\tau}(\\tau)  &amp;=p_{\\eta}\\left(-\\frac{1}{2}\\tau\\right)\\left\\vert\\frac{\\mathrm{d}\\eta}{\\mathrm{d}\\tau}\\right\\vert\\\\  &amp;=(\\tau)^{\\beta/2}\\cdot\\exp{\\left[-\\frac{\\alpha}{2}\\tau\\right]}\\cdot\\frac{1}{2}\\\\  &amp;=\\frac{1}{2}\\tau^{(\\beta/2 + 1)-1}\\exp{\\left[-\\frac{\\alpha}{2}\\tau\\right]}\\\\  &amp;\\approx\\mathrm{Gamma}\\left(\\frac{\\beta}{2}+1,\\frac{\\alpha}{2}\\right)  \\end{aligned}\\]        Therefore, the precision of the Gaussian distribution $1/\\sigma^{2}$, the reciprocal of the variance, follows a gamma distribution. Here, each parameter of the gamma distribution represents (1) the number of virtual samples and (2) the precision scale.\\[1/\\sigma^{2}\\sim\\mathrm{Gamma}(\\alpha,\\beta)\\]  sample variance distribution      gaussian model:\\[\\begin{aligned}  X\\sim\\mathcal{N}\\left(\\mu,\\sigma^{2}\\right),\\quad\\text{$\\mu$ is known}  \\end{aligned}\\]        jeffreys prior of $\\sigma^{2}$:\\[\\begin{aligned}  p\\left(\\sigma^{2}\\right)\\propto \\frac{1}{\\sigma^{2}}  \\end{aligned}\\]        likelihood of $\\sigma^{2}$:\\[\\begin{aligned}  p\\left(x_{1},\\cdots,x_{k}\\mid\\sigma^{2}\\right)  &amp;=\\prod_{i=1}^{k}{p(x_{i}\\mid\\sigma^{2})}\\quad(\\because x_{i}\\perp x_{j})\\\\  &amp;=\\prod_{i=1}^{k}{\\frac{1}{\\sqrt{2\\pi\\sigma^{2}}}\\exp{\\left[-\\frac{(x_{i}-\\mu)^{2}}{2\\sigma^{2}}\\right]}}\\\\  &amp;=\\prod_{i=1}^{k}{\\frac{1}{\\sqrt{2\\pi\\sigma^{2}}}}\\cdot\\prod_{i=1}^{k}{\\exp{\\left[-\\frac{(x_{i}-\\mu)^{2}}{2\\sigma^{2}}\\right]}}\\\\  \\\\  \\prod_{i=1}^{k}{\\frac{1}{\\sqrt{2\\pi\\sigma^{2}}}}  &amp;=\\left(2\\pi\\sigma^{2}\\right)^{-k/2}\\\\  &amp;=(2\\pi)^{-k/2}\\cdot(\\sigma^{2})^{-k/2}\\\\  \\prod_{i=1}^{k}{\\exp{\\left[-\\frac{(x_{i}-\\mu)^{2}}{2\\sigma^{2}}\\right]}}  &amp;=\\exp{\\left[\\sum_{i=1}^{k}{-\\frac{(x_{i}-\\mu)^{2}}{2\\sigma^{2}}}\\right]}\\\\  &amp;=\\exp{\\left[-\\frac{1}{2\\sigma^{2}}\\sum_{i=1}^{k}{(x_{i}-\\mu)^{2}}\\right]}\\\\  &amp;=\\exp{\\left[-\\frac{1}{2}\\cdot\\frac{\\nu S^{2}}{\\sigma^{2}}\\right]}\\\\  \\\\  \\therefore p\\left(x_{1},\\cdots,x_{k}\\mid\\sigma^{2}\\right)  &amp;=(2\\pi)^{-k/2}\\cdot(\\sigma^{2})^{-k/2}\\cdot\\exp{\\left[-\\frac{\\nu}{2\\sigma^{2}}\\cdot S^{2}\\right]}\\\\  &amp;\\propto\\left(\\sigma^{2}\\right)^{-k/2}\\cdot\\exp{\\left[-\\frac{1}{2}\\cdot\\frac{\\nu S^{2}}{\\sigma^{2}}\\right]}  \\end{aligned}\\]        posterior of $\\sigma^{2}$:\\[\\begin{aligned}  p\\left(\\sigma^{2}\\mid x_{1},\\cdots,x_{k}\\right)  &amp;\\propto p\\left(x_{1},\\cdots,x_{k}\\mid\\sigma^{2}\\right)p\\left(\\sigma^{2}\\right)\\\\  &amp;\\propto\\left(\\sigma^{2}\\right)^{-k/2}\\cdot\\exp{\\left[-\\frac{1}{2}\\cdot\\frac{\\nu S^{2}}{\\sigma^{2}}\\right]}\\cdot\\frac{1}{\\sigma^{2}}  \\end{aligned}\\]        change of variables:\\[\\begin{gathered}  z:=\\frac{\\nu S^{2}}{\\sigma^{2}}  \\end{gathered}\\]        posterior of $z$:\\[\\begin{aligned}  \\quad p_{z}(z)\\mathrm{d}z  &amp;=p_{\\sigma^{2}}\\left(\\sigma^{2}\\right)\\mathrm{d}\\sigma^{2}\\\\  \\therefore p_{z}(z\\mid x_{1},\\cdots,x_{k})  &amp;\\propto p_{\\sigma^{2}}\\left(\\frac{\\nu S^{2}}{z}\\right)\\cdot\\frac{\\nu S^{2}}{z^{2}}\\\\  &amp;\\propto(\\nu S^{2}/z)^{-k/2}\\cdot\\exp{\\left[-\\frac{\\nu S^{2}}{2\\nu S^{2}/z}\\right]}\\cdot\\frac{1}{\\nu S^{2}/z}\\cdot\\frac{\\nu S^{2}}{z^{2}}\\\\  &amp;=\\left(\\nu S^{2}\\right)^{-k/2}\\cdot z^{k/2-1}\\cdot\\exp{\\left[-\\frac{1}{2}z\\right]}\\\\  &amp;\\approx z^{k/2-1}\\cdot\\exp{\\left[-\\frac{1}{2}z\\right]}\\\\  &amp;\\approx \\chi^{2}(k)  \\end{aligned}\\]        therefore, sample variance of gaussian distribution, $S^{2}$, follows a chi-square distribution.\\[\\begin{aligned}  z=\\frac{\\nu S^{2}}{\\sigma^{2}}=\\sum_{i=1}^{k}{\\left(\\frac{x_{i}-\\mu}{\\sigma}\\right)^{2}}  \\sim\\chi^{2}(k)  \\end{aligned}\\]  student’s t      gaussian random variable:\\[X_{i}\\sim\\mathcal{N}(\\mu,\\sigma^{2})\\]        standardization:\\[Z=\\frac{\\overline{X}-\\mu}{\\sigma/\\sqrt{n}}\\sim\\mathcal{N}(0,1)\\]        If the population variance $\\sigma^{2}$ is unknown, the sample variance $S^{2}$ can be used:\\[S^{2}=\\frac{1}{\\nu}\\sum_{i=1}^{n}{\\left(X_{i}-\\overline{X}\\right)^{2}}\\]        chi-squared dist.:\\[\\begin{aligned}  U\\sim\\chi^{2}(\\nu)  \\end{aligned}\\]        chi-squared variable can be represented by $S^{2}$:\\[\\begin{aligned}  U  &amp;=\\sum_{i=1}^{n}{\\left(\\frac{X_{i}-\\overline{X}}{\\sigma}\\right)^{2}}\\\\  &amp;=\\frac{1}{\\sigma^{2}}\\cdot\\nu S^{2}  \\end{aligned}\\]        as a result, when the population variance is unknown, the test statistic can be replaced by the ratio of the chi-square random variable to the standard normal random variable:\\[\\begin{aligned}  \\frac{\\overline{X}-\\mu}{S/\\sqrt{n}}  &amp;=\\underbrace{\\frac{\\overline{X}-\\mu}{\\sigma/\\sqrt{n}}}_{=:Z}\\cdot\\frac{\\sigma}{S}\\\\  &amp;=Z\\cdot\\frac{1}{\\sqrt{S^{2}/\\sigma^{2}}}\\\\  &amp;=\\frac{Z}{\\sqrt{U/\\nu}}\\quad\\left(\\because\\frac{S^{2}}{\\sigma^{2}}=\\frac{U}{\\nu}\\right)  \\end{aligned}\\]        the ratio of the chi-square random variable to the standard normal random variable is defined as the Student’s t random variable:\\[T=\\frac{Z}{\\sqrt{U/\\nu}}\\sim t(\\nu),\\quad Z \\perp U\\]  "
+  },
+  
+  {
+    "title": "Exponential Family",
+    "url": "/posts/Exp_Family/",
+    "categories": "BAYES, 0.probability",
+    "tags": "Statistics, Uncertainty, Probability, Distribution, Bayesian, Parameter, Exponential Family, Conjugate",
+    "date": "2025-07-03 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "parameter  파라미터(Parameter): 특정 구조로 가정된 분포 모형의 구체적 형태를 조정하는 변수                  위치 파라미터(Location Parameter): 분포의 중심 위치를 조정하는 파라미터\\[X\\mapsto X+\\theta\\]                    척도 파라미터(Scale Parameter): 분포...",
+    "content": "parameter  파라미터(Parameter): 특정 구조로 가정된 분포 모형의 구체적 형태를 조정하는 변수                  위치 파라미터(Location Parameter): 분포의 중심 위치를 조정하는 파라미터\\[X\\mapsto X+\\theta\\]                    척도 파라미터(Scale Parameter): 분포의 폭을 조정하는 파라미터\\[X\\mapsto \\theta\\cdot X\\]                    형상 파라미터(Shape Parameter): 왜도, 첨도 등 분포의 모양을 조정하는 파라미터\\[X\\mapsto g(X;\\theta)\\]              Parameteric Distribution Families          location family      scale family      shape family      location-scale family      location-scale-shape family      mixture family      exponential family      conjugate family      non-exponential family      exponential family      지수족(Exponential Family): 확률 분포 함수를 지수 함수로 변환하였을 때, 충분통계량 $T(x)$ 과 자연매개변수 $\\eta(\\theta)$ 가 선형 결합으로 표현되고, 정규화 항 $A(\\eta)$ 과 기저 측도 $h(x)$ 가 분리된 하나의 구조로 표현될 수 있는 확률분포들의 모임\\[\\begin{aligned}  P_{X}(B)  &amp;=\\int_{x\\in B}{f(x)\\mathrm{d}\\mu(x)}\\\\  &amp;=\\int_{x\\in B}{\\exp{\\left[\\eta(\\theta)^{T}T(x)-A(\\eta)\\right]}\\mathrm{d}\\nu(x)}  \\end{aligned}\\]        정규 형식(canonical form):\\[f(x\\mid\\theta)  =h(x)\\exp{\\left[\\eta(\\theta)^{T}T(x)-A(\\eta)\\right]}\\]          $f(x\\mid\\theta)$: probability distribution function      $T(x)$: sufficient statistics      $\\eta(\\theta)$: natural parameter      $h(x)$: base measure            충분통계량(Sufficient Statistics): 관측 데이터 $x\\in X$ 로부터 모수 $\\theta$ 추정에 필요한 정보를 충분히 요약하는(정보 손실 없이 요약하는) 함수\\[f(\\theta\\mid x)=f(\\theta\\mid T(x))\\]        자연매개변수(Natural Parameter): 확률분포의 로그 우도 $\\log{p(x)}$ 가 충분통계량 $T(x)$ 에 대하여 선형 형식으로 표현되도록 만드는 파라미터 변환, 혹은 그 표현\\[\\eta=g(\\theta)\\]        기저 측도(Base Measure): 파라미터 $\\theta$ 에 대하여 독립인 항\\[\\mathrm{d}\\nu(x):=h(x)\\mathrm{d}\\mu(x)\\]                  common representation of measures in exponential normal form:\\[\\begin{aligned}  \\int_{x\\in X}{f(x)\\underbrace{\\mathrm{d}\\mu(x)}_{\\text{refer. measure}}}  &amp;=\\int_{x\\in X}{\\exp{\\left[\\eta(\\theta)^{T}T(x)-A(\\eta)\\right]}\\underbrace{h(x)\\mathrm{d}\\mu(x)}_{\\text{base measure}}}  \\end{aligned}\\]                    support set (domain) of the probability measure:\\[\\begin{gathered}  f(x)&gt;0\\Leftrightarrow h(x)&gt;0\\quad(\\because\\exp{(\\cdot)}&gt;0)\\\\  \\therefore\\mathrm{supp}(f):=\\{x\\mid h(x)&gt;0\\}  \\end{gathered}\\]                  정규화 항(Normalizer): 충분통계량과 자연매개변수의 선형 결합이 확률 분포의 요건을 갖출 수 있도록($P(\\Omega)=1$) 정규화하는 항\\[\\begin{aligned}  \\exp{A(\\eta)}  &amp;=\\int_{x\\in X}{\\exp{\\left[\\eta(\\theta)^{T}T(x)\\right]}\\mathrm{d}\\nu(x)}  \\end{aligned}\\]                  parameter space:\\[\\begin{gathered}  \\frac{\\eta(\\theta)^{T}T(x)}{A(\\theta)}=1\\\\  \\therefore\\Theta:=\\left\\{\\theta\\mid A(\\theta)&lt;\\infty\\right\\}  \\end{gathered}\\]                    moment generating structure:\\[\\begin{aligned}  \\exp{A(\\eta)}  &amp;=\\mathbb{E}_{\\nu}\\left[\\exp{\\eta(\\theta)^{T}T(X)}\\right]\\\\  &amp;=\\sum_{k=0}^{\\infty}{\\frac{\\eta^{k}(\\theta)}{k!}\\mathbb{E}_{\\nu}\\left[T^{k}(X)\\right]}\\\\  \\\\  \\therefore\\nabla_{\\eta}^{k}A(\\eta)  &amp;=\\mathbb{E}_{\\nu}\\left[T^{k}(X)\\right]  \\end{aligned}\\]            bayes rule      prior:\\[p(\\eta)\\propto\\exp{\\left[\\alpha\\eta(\\theta)-\\beta A(\\eta)\\right]}\\]        likelihood:\\[\\begin{aligned}  p(x_{1},\\cdots,x_{n}\\mid\\eta)  &amp;=\\prod_{i=1}^{n}{h(x_{i})\\exp{\\left[\\eta(\\theta)^{T}T(x_{i})-A(\\eta)\\right]}}\\quad(\\because x_{i}\\perp x_{j})\\\\  &amp;=\\prod_{i=1}^{n}{h(x_{i})}\\cdot\\exp{\\left[\\eta(\\theta)\\sum_{i=1}^{n}{T(x_{i})}-nA(\\eta)\\right]}  \\end{aligned}\\]        posterior:\\[\\begin{aligned}  p(\\eta\\mid x_{1},\\cdots,x_{n})  &amp;\\propto p(x_{1},\\cdots,x_{n}\\mid\\eta)\\cdot p(\\eta)\\\\  &amp;\\propto \\prod_{i=1}^{n}{h(x_{i})}\\cdot\\exp{\\left[\\eta(\\theta)\\sum_{i=1}^{n}{T(x_{i})}-nA(\\eta)\\right]}\\cdot\\exp{\\left[\\alpha\\eta(\\theta)-\\beta A(\\eta)\\right]}\\\\  &amp;=\\prod_{i=1}^{n}{h(x_{i})}\\cdot\\exp{\\left[\\left(\\alpha+\\sum_{i=1}^{n}{T(x_{i})}\\right)\\eta(\\theta)-(\\beta+n)A(\\eta)\\right]}\\\\  \\\\  \\alpha^{\\prime}  &amp;:=\\alpha+\\sum_{i=1}^{n}{T(x_{i})}\\\\  \\beta^{\\prime}  &amp;:=\\beta+n\\\\  \\\\  \\therefore p(\\eta\\mid x_{1},\\cdots,x_{n})  &amp;\\propto \\prod_{i=1}^{n}{h(x_{i})}\\cdot\\exp{\\left[\\alpha^{\\prime}\\eta(\\theta)-\\beta^{\\prime}A(\\eta)\\right]}  \\end{aligned}\\]  "
+  },
+  
+  {
+    "title": "Probability Distribution",
+    "url": "/posts/Prob_Dist/",
+    "categories": "BAYES, 0.probability",
+    "tags": "Statistics, Uncertainty, Probability, Distribution, Bayesian, Measure, Moment",
+    "date": "2025-07-02 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "measure space      가측 공간(Measureable Space): 어떠한 크기를 측정할 수 있는 집합이 정의된 공간\\[(\\Omega,\\mathcal{F})\\]          $\\Omega$: 기저 집합      $\\mathcal{F}$: 기저 집합의 시그마 대수로서 어떠한 크기를 측정할 수 있는 부분집합들의 모임             ...",
+    "content": "measure space      가측 공간(Measureable Space): 어떠한 크기를 측정할 수 있는 집합이 정의된 공간\\[(\\Omega,\\mathcal{F})\\]          $\\Omega$: 기저 집합      $\\mathcal{F}$: 기저 집합의 시그마 대수로서 어떠한 크기를 측정할 수 있는 부분집합들의 모임                  $A\\subseteq\\Omega\\in\\mathcal{F}$          $A\\in\\mathcal{F}\\Rightarrow A^{C}\\in\\mathcal{F}$          $A_{1},A_{2},\\cdots\\in\\mathcal{F}\\Rightarrow\\bigcup_{i}{A_{i}}\\in\\mathcal{F}$                          보렐 공간(Borel Space): 가측 공간의 특수한 경우로서 기저 집합을 실수 공간으로 가지는 공간\\[(\\mathbb{R},\\mathcal{B})\\quad\\mathrm{for}\\quad\\mathcal{B}(\\mathbb{R}):=\\sigma\\left(\\left\\{(-\\infty,x]\\mid x\\in\\mathbb{R}\\right\\}\\right)\\]        측도 공간(Measure Space): 가측 공간 $(\\Omega,\\mathcal{F})$ 에 대하여 측도 함수 $\\mu$ 가 정의된 공간\\[(\\Omega,\\mathcal{F},\\mu)\\]  probability distribution      확률 공간(Probability Space): 표본 공간 위에 정의된 가측 공간에 대하여 확률의 크기를 부여하는 측도 함수 $P$ 가 정의된 공간\\[\\begin{aligned}  (\\Omega,\\mathcal{F},P)  \\end{aligned}\\]                  $\\Omega$: 표본 공간(Sample Space)으로서 무작위 실험으로 발생 가능한 결과들의 집합 (ex. 동전을 두 번 던지는 실험 결과)\\[\\Omega=\\{HH,TT,HT,TH\\}\\]                    $\\mathcal{F}$: 사건(Event)으로서 표본 공간의 시그마 대수 (ex. 앞면이 한 번 이상 나오는 사건)\\[\\{HH,HT,TH\\}\\subset\\sigma(\\Omega)\\]                    $P$: 확률 측도(Probability Measure)로서 사건에 확률을 부여하는 측도\\[P:\\mathcal{F}\\to[0,1]\\quad\\mathrm{s.t.}\\quad P(\\Omega)=1\\]                  확률 변수(Random Variable): 표본 공간 위에 정의된 가측 공간을 보렐 공간으로 사상하는 함수\\[X:(\\Omega,\\mathcal{F})\\to(\\mathbb{R},\\mathcal{B})\\]        확률 분포(Probability Distribution): 확률 공간 $(\\Omega,\\mathcal{F},P)$ 위에 정의된 확률 변수 $X$ 가 유도하는 푸시포워드 측도(push-forward measure)\\[\\begin{gathered}  P_{X}=P\\circ X^{-1}:\\mathcal{B}\\to[0,1]  \\end{gathered}\\]        푸시포워드 확률 공간(Push-forward Probability Space): 확률 변수 $X$ 에 의하여 유도된 새로운 확률 공간\\[(\\Omega,\\mathcal{F},P)\\xrightarrow{X}(\\mathbb{R},\\mathcal{B},P_{X})\\]  functions      Integral representation of probability distribution:\\[P_{X}(B)=\\int_{x\\in B}{f(x)\\mathrm{d}\\mu(x)}\\]    기준 측도(Reference Measure): 보렐 공간 $(\\mathbb{R},\\mathcal{B})$ 의 원소들에 대하여 그 기본 단위를 제공하는 측도                  연속 확률 분포(Continuous Distribtution): 르베그 측도(Lebesgue Measure)\\[\\begin{gathered}  \\mu(x):=x,\\quad\\mathrm{d}\\mu(x)=\\mathrm{d}x\\\\  \\Downarrow\\\\  P_{X}(B)=\\int_{x\\in B}{f(x)\\mathrm{d}x}  \\end{gathered}\\]                    이산 확률 분포(Discrete Distribution): 카운팅 측도(Counting Measure)\\[\\begin{gathered}  \\mu(x):=\\#x,\\quad\\mathrm{d}\\mu(x)=1\\\\  \\Downarrow\\\\  P_{X}(B)=\\sum_{x\\in B}{f(x)}  \\end{gathered}\\]                  누적 분포 함수(Cumulative Distribution Function): 확률 변수 $X$ 가 특정 값 $t$ 이하일 확률을 나타내는 함수\\[F(t):=P_{X}(X\\le t)=\\int_{x\\le t}{f(x)\\mathrm{d}\\mu(x)}\\]        확률 분포 함수(Probability Distribution Function): 확률 변수가 특정 값을 가질 확률을 나타내는 함수로서, 기저 단위당 확률의 크기를 부여하는 함수\\[f(x):=\\frac{\\mathrm{d}F}{\\mathrm{d}\\mu}(x)\\]  moment      적률(moment): 확률 분포의 모양을 수치로 요약하는 값                  비중심 적률:\\[\\mathbb{E}\\left[X^{k}\\right]  :=\\int{x^{k}\\mathrm{d}P_{X}(x)}  =\\int{x^{k}f(x)\\mathrm{d}\\mu(x)}\\]                    중심 적률:\\[\\mathbb{E}\\left[\\left(X-\\mathbb{E}[X]\\right)^{k}\\right]  :=\\int{(x-\\mu)^{k}\\mathrm{d}P_{X}(x)}  =\\int{(x-\\mu)^{k}f(x)\\mathrm{d}\\mu(x)}\\]                  기대값(Expected Value): 1차 비중심 적률로서 분포의 위치를 나타냄\\[\\mathbb{E}\\left[X\\right]  =\\int{xf(x)\\mathrm{d}\\mu(x)}\\]          $\\mathbb{E}[\\alpha]=\\alpha$      $\\mathbb{E}[\\alpha X]=\\alpha\\mathbb{E}[X]$      $\\mathbb{E}[\\alpha X \\pm \\beta Y]=\\alpha\\mathbb{E}[X]\\pm\\beta\\mathbb{E}[Y]$      $\\mathbb{E}[XY]=\\mathbb{E}[X]\\mathbb{E}[Y]\\quad(\\mathrm{s.t.}\\;X\\perp Y)$            분산(Variance): 2차 중심 적률로서 분포의 폭을 나타냄\\[\\mathrm{Var}\\left[X\\right]  =\\mathbb{E}\\left[\\left(X-\\mu\\right)^{2}\\right]  =\\int{(x-\\mu)^{2}f(x)\\mathrm{d}\\mu(x)}\\]          $\\mathrm{Var}[\\alpha]=0$      $\\mathrm{Var}[\\alpha X]=\\alpha^{2}\\mathrm{Var}[X]$      $\\mathrm{Var}[\\alpha+X]=\\mathrm{Var}[X]$      $\\mathrm{Var}[\\alpha X\\pm\\beta Y]=\\alpha^{2}\\mathrm{Var}[X]+\\beta^{2}\\mathrm{Var}[Y]\\pm2\\alpha\\beta\\mathrm{Cov}[X,Y]$            왜도(Skewness): 표준화된 3차 중심 적률로서 분포의 좌우 비대칭성을 나타냄\\[\\mathrm{Skew}\\left[X\\right]  =\\frac{1}{\\sigma^{3}}\\cdot\\mathbb{E}\\left[\\left(X-\\mu\\right)^{3}\\right]  =\\frac{1}{\\sigma^{3}}\\int{\\left(x-\\mu\\right)^{3}f(x)\\mathrm{d}\\mu(x)}\\]        첨도(Kurtosis): 표준화된 4차 중심 적률로서 분포 중심의 뾰족한 정도나 꼬리의 두터운 정도 등을 나타냄\\[\\mathrm{Kurt}\\left[X\\right]  =\\frac{1}{\\sigma^{4}}\\cdot\\mathbb{E}\\left[\\left(X-\\mu\\right)^{4}\\right]  =\\frac{1}{\\sigma^{4}}\\int{\\left(x-\\mu\\right)^{4}f(x)\\mathrm{d}\\mu(x)}\\]  MGF      적률 생성 함수(Moment Generating Function): 확률 측도 \\(P_{X}\\) 의 라플라스 변환으로서, \\(P_{X}\\) 의 표현 공간을 확률 도메인(probability domain) \\((\\mathbb{R},\\mathcal{B})\\) 에서 라플라스 도메인(laplace domain) \\(\\{t\\in\\mathbb{R}\\mid\\mathbb{E}[\\exp{tX}]&lt;\\infty\\}\\) 으로 사상하는 함수\\[\\begin{aligned}  M_{X}(t)  =\\mathbb{E}\\left[\\exp{tX}\\right]  =\\int{\\exp{tx}\\cdot f(x)\\mathrm{d}\\mu(x)}  \\end{aligned}\\]        Taylor Series of the moment generating function:\\[\\begin{aligned}  \\exp{tX}  &amp;\\approx\\sum_{k=0}^{\\infty}{\\frac{(tX)^{k}}{k!}}\\\\  \\\\  \\therefore M_{X}(t)  &amp;=\\mathbb{E}\\left[\\exp{tX}\\right]\\\\  &amp;\\approx\\mathbb{E}\\left[\\sum_{k=0}^{\\infty}{\\frac{(tX)^{k}}{k!}}\\right]\\\\  &amp;=\\sum_{k=0}^{\\infty}{\\frac{t^{k}}{k!}\\mathbb{E}\\left[X^{k}\\right]}  \\end{aligned}\\]        $k$-th order derivatives:\\[\\begin{aligned}  \\frac{\\mathrm{d}^{k}}{\\mathrm{d}t^{k}}M_{X}(t)  &amp;=\\sum_{n=k}^{\\infty}{\\frac{t^{n-k}}{(n-k)!}\\mathbb{E}\\left[X^{n}\\right]}  \\end{aligned}\\]        the $k$-th derivative evaluated at $t=0$ is $k$-th moment:\\[\\begin{aligned}  \\frac{\\mathrm{d}^{k}}{\\mathrm{d}t^{k}}M_{X}(t)\\vert_{t=0}  &amp;=\\sum_{n=k}^{\\infty}{\\frac{0^{n-k}}{(n-k)!}\\mathbb{E}\\left[X^{n}\\right]}\\\\  &amp;=\\frac{0^{k-k}}{(k-k)!}\\mathbb{E}\\left[X^{k}\\right]+\\underbrace{\\frac{0^{k+1-k}}{(k+1-k)!}\\mathbb{E}\\left[X^{k+1}\\right]+\\frac{0^{k+2-k}}{(k+2-k)!}\\mathbb{E}\\left[X^{k+2}\\right]+\\cdots}_{=0}\\\\  &amp;=\\mathbb{E}\\left[X^{k}\\right]  \\end{aligned}\\]  "
   },
   
   {
