@@ -429,7 +429,7 @@
     "title": "Topic Model",
     "url": "/posts/topic_model/",
     "categories": "4.MODALITY, 1.netural language processing",
-    "tags": "modality, nlp, topic model",
+    "tags": "modality, nlp, topic model, matrix decomposition, latent factor, dirichlet distribution",
     "date": "2024-08-18 00:00:00 +0900",
     
 
@@ -1024,7 +1024,7 @@
     "title": "Test of Independence",
     "url": "/posts/test_of_independence/",
     "categories": "2.STATISTICAL TECHS, 2.statistics",
-    "tags": "statistics, design of experiments, a/b test, chi-squared Test, test of independence, chi-squared distribution",
+    "tags": "statistics, design of experiments, a/b test, chi-squared test, test of independence, chi-squared distribution",
     "date": "2024-07-13 00:00:00 +0900",
     
 
@@ -1041,7 +1041,7 @@
     "title": "Goodness of Fit Test",
     "url": "/posts/goodness_of_fit/",
     "categories": "2.STATISTICAL TECHS, 2.statistics",
-    "tags": "statistics, design of experiments, a/b test, chi-squared Test, goodness-of-fit test, chi-squared distribution",
+    "tags": "statistics, design of experiments, a/b test, chi-squared test, goodness-of-fit test, chi-squared distribution",
     "date": "2024-07-12 00:00:00 +0900",
     
 
@@ -1092,7 +1092,7 @@
     "title": "Levene’s Test",
     "url": "/posts/levene_test/",
     "categories": "2.STATISTICAL TECHS, 2.statistics",
-    "tags": "statistics, design of experiments, a/b test, f-test, equal-variance test, levene’s Test, f distribution",
+    "tags": "statistics, design of experiments, a/b test, f-test, equal-variance test, levene’s test, f distribution",
     "date": "2024-07-09 00:00:00 +0900",
     
 
@@ -1160,7 +1160,7 @@
     "title": "Hypothesis Testing",
     "url": "/posts/hypothesis_testing/",
     "categories": "2.STATISTICAL TECHS, 2.statistics",
-    "tags": "statistics, estimation, z test, t test",
+    "tags": "statistics, estimation, z-test, t-test",
     "date": "2024-07-05 00:00:00 +0900",
     
 
@@ -1177,7 +1177,7 @@
     "title": "Estimation",
     "url": "/posts/estimation/",
     "categories": "2.STATISTICAL TECHS, 2.statistics",
-    "tags": "statistics, estimation, z test, t test",
+    "tags": "statistics, estimation, z-test, t-test",
     "date": "2024-07-04 00:00:00 +0900",
     
 
@@ -1432,7 +1432,7 @@
     "title": "Collaborative Filtering",
     "url": "/posts/cf/",
     "categories": "6.RECOMMENDER SYSTEM, 1.recsys basic",
-    "tags": "ai Application, recommender system, collaborative filtering, latent factor model, matrix factorization",
+    "tags": "ai application, recommender system, collaborative filtering, latent factor model, matrix factorization",
     "date": "2024-02-01 00:00:00 +0900",
     
 
@@ -1483,7 +1483,7 @@
     "title": "Convolutional Neural Networks",
     "url": "/posts/cnn/",
     "categories": "3.MACHINE LEARNING TECHS, 4.neural networks",
-    "tags": "Deep Learning, CNN, CV",
+    "tags": "machine learning, deep learning, neural networks, cnn, cv",
     "date": "2024-01-23 00:00:00 +0900",
     
 
