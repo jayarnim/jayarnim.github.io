@@ -2,9 +2,9 @@
   
   {
     "title": "Hidden Markov Model",
-    "url": "/posts/HMM/",
-    "categories": "BAYES, 4.stochastic process",
-    "tags": "Stochastic Process, Time Series, Markov Chain, Hidden Markov Model, EM Algorithm, MLE",
+    "url": "/posts/hmm/",
+    "categories": "5.BAYES, 4.stochastic process",
+    "tags": "stochastic process, time series, markov chain, hidden markov model, em algorithm, mle",
     "date": "2025-08-07 00:00:00 +0900",
     
 
@@ -19,9 +19,9 @@
   
   {
     "title": "GP (3) Random Fourier Features Gaussian Process",
-    "url": "/posts/GP_RFFGP/",
-    "categories": "BAYES, 4.stochastic process",
-    "tags": "Bayesian, Stochastic Process, Time Series, Nonparametric Estimation, Gaussian Process, Multi-Variate Gaussian Dist., Fourier",
+    "url": "/posts/gp_rffgp/",
+    "categories": "5.BAYES, 4.stochastic process",
+    "tags": "bayesian, stochastic process, time series, nonparametric estimation, gaussian process, multivariate Gaussian distribution, multivariate normal distribution, fourier analysis, numerical data analysis",
     "date": "2025-08-06 00:00:00 +0900",
     
 
@@ -36,9 +36,9 @@
   
   {
     "title": "Fourier Analysis",
-    "url": "/posts/Fourier/",
-    "categories": "BAYES, 4.stochastic process",
-    "tags": "Bayesian, Deep Learning, Stochastic Process, Time Series, Nonparametric Estimation, Gaussian Process, Multi-Variate Gaussian Dist., Fourier",
+    "url": "/posts/fourier/",
+    "categories": "5.BAYES, 4.stochastic process",
+    "tags": "bayesian, stochastic process, time series, nonparametric estimation, gaussian process, multivariate Gaussian distribution, multivariate normal distribution, fourier analysis, numerical data analysis",
     "date": "2025-08-05 00:00:00 +0900",
     
 
@@ -53,9 +53,9 @@
   
   {
     "title": "GP (2) Sparse Gaussian Process",
-    "url": "/posts/GP_SGP/",
-    "categories": "BAYES, 4.stochastic process",
-    "tags": "Bayesian, Deep Learning, Stochastic Process, Time Series, Nonparametric Estimation, Gaussian Process, Multi-Variate Gaussian Dist.",
+    "url": "/posts/gp_sgp/",
+    "categories": "5.BAYES, 4.stochastic process",
+    "tags": "bayesian, stochastic process, time series, nonparametric estimation, gaussian process, multivariate Gaussian distribution, multivariate normal distribution, numerical data analysis",
     "date": "2025-08-04 00:00:00 +0900",
     
 
@@ -70,9 +70,9 @@
   
   {
     "title": "GP (1) Gaussian Process",
-    "url": "/posts/GP_GP/",
-    "categories": "BAYES, 4.stochastic process",
-    "tags": "Bayesian, Stochastic Process, Time Series, Nonparametric Estimation, Gaussian Process, Multi-Variate Gaussian Dist.",
+    "url": "/posts/gp_gp/",
+    "categories": "5.BAYES, 4.stochastic process",
+    "tags": "bayesian, stochastic process, time series, nonparametric estimation, gaussian process, multivariate Gaussian distribution, multivariate normal distribution, numerical data analysis",
     "date": "2025-08-03 00:00:00 +0900",
     
 
@@ -87,9 +87,9 @@
   
   {
     "title": "RKHS",
-    "url": "/posts/RKHS/",
-    "categories": "BAYES, 4.stochastic process",
-    "tags": "Bayesian, Stochastic Process, Time Series, Nonparametric Estimation, Gaussian Process, Multi-Variate Gaussian Dist.",
+    "url": "/posts/rkhs/",
+    "categories": "5.BAYES, 4.stochastic process",
+    "tags": "bayesian, stochastic process, time series, nonparametric estimation, gaussian process, multivariate Gaussian distribution, multivariate normal distribution, numerical data analysis",
     "date": "2025-08-02 00:00:00 +0900",
     
 
@@ -104,9 +104,9 @@
   
   {
     "title": "Beta and Extension",
-    "url": "/posts/Beta/",
-    "categories": "BAYES, 0.probability",
-    "tags": "Statistics, Uncertainty, Probability, Distribution, Bayesian, Continuous Variable, Success Probability, Beta Dist., Uniform Dist., Dirichlet Dist.",
+    "url": "/posts/beta/",
+    "categories": "2.STATISTICAL TECHS, 1.probability",
+    "tags": "statistics, uncertainty, probability, random variable, probability distribution, continuous random variable, proportion analysis, beta distribution, dirichlet distribution",
     "date": "2025-07-11 00:00:00 +0900",
     
 
@@ -121,9 +121,9 @@
   
   {
     "title": "Chi-Squared and Extension",
-    "url": "/posts/Chi/",
-    "categories": "BAYES, 0.probability",
-    "tags": "Statistics, Uncertainty, Probability, Distribution, Bayesian, Continuous Variable, Variance, Chi-Squared Dist., Wishart Dist.",
+    "url": "/posts/chi/",
+    "categories": "2.STATISTICAL TECHS, 1.probability",
+    "tags": "statistics, uncertainty, probability, random variable, probability distribution, continuous random variable, variance analysis, chi-squared distribution, wishart distribution",
     "date": "2025-07-10 00:00:00 +0900",
     
 
@@ -138,9 +138,9 @@
   
   {
     "title": "Exponential and Extension",
-    "url": "/posts/Exponential/",
-    "categories": "BAYES, 0.probability",
-    "tags": "Statistics, Uncertainty, Probability, Distribution, Bayesian, Continuous Variable, Survival Analysis, Exponential Dist., Gamma Dist.",
+    "url": "/posts/exponential/",
+    "categories": "2.STATISTICAL TECHS, 1.probability",
+    "tags": "statistics, uncertainty, probability, random variable, probability distribution, continuous random variable, survival analysis, exponential distribution, gamma distribution",
     "date": "2025-07-09 00:00:00 +0900",
     
 
@@ -155,9 +155,9 @@
   
   {
     "title": "Categorical and Extension",
-    "url": "/posts/Categorical/",
-    "categories": "BAYES, 0.probability",
-    "tags": "Statistics, Uncertainty, Probability, Distribution, Bayesian, Discrete Variable, Categorical Dist., Multinomial Dist.",
+    "url": "/posts/categorical/",
+    "categories": "2.STATISTICAL TECHS, 1.probability",
+    "tags": "statistics, uncertainty, probability, random variable, probability distribution, discrete random variable, categorical data analysis, categorical distribution, multinomial distribution",
     "date": "2025-07-08 00:00:00 +0900",
     
 
@@ -172,9 +172,9 @@
   
   {
     "title": "Bernoulli and Extension",
-    "url": "/posts/Bernoulli/",
-    "categories": "BAYES, 0.probability",
-    "tags": "Statistics, Uncertainty, Probability, Distribution, Bayesian, Discrete Variable, Bernoulli Dist., Binomial Dist.",
+    "url": "/posts/bernoulli/",
+    "categories": "2.STATISTICAL TECHS, 1.probability",
+    "tags": "statistics, uncertainty, probability, random variable, probability distribution, discrete random variable, categorical data analysis, bernoulli distribution, binomial distribution",
     "date": "2025-07-07 00:00:00 +0900",
     
 
@@ -189,9 +189,9 @@
   
   {
     "title": "Poisson",
-    "url": "/posts/Poisson/",
-    "categories": "BAYES, 0.probability",
-    "tags": "Statistics, Uncertainty, Probability, Distribution, Bayesian, Discrete Variable, Count Data Analysis, Poisson Dist.",
+    "url": "/posts/poisson/",
+    "categories": "2.STATISTICAL TECHS, 1.probability",
+    "tags": "statistics, uncertainty, probability, random variable, probability distribution, discrete random variable, count data analysis, poisson distribution",
     "date": "2025-07-06 00:00:00 +0900",
     
 
@@ -206,9 +206,9 @@
   
   {
     "title": "Multi-Variate Gaussian",
-    "url": "/posts/MVN/",
-    "categories": "BAYES, 0.probability",
-    "tags": "Statistics, Uncertainty, Probability, Distribution, Bayesian, Continuous Variable, Multi-Variate Gaussian Dist., Multi-Variate Normal Dist.",
+    "url": "/posts/mvn/",
+    "categories": "2.STATISTICAL TECHS, 1.probability",
+    "tags": "statistics, uncertainty, probability, random variable, probability distribution, continuous random variable, numerical data analysis, multivariate gaussian distribution, multivariate normal distribution",
     "date": "2025-07-05 00:00:00 +0900",
     
 
@@ -223,9 +223,9 @@
   
   {
     "title": "Gaussian",
-    "url": "/posts/Gaussian/",
-    "categories": "BAYES, 0.probability",
-    "tags": "Statistics, Uncertainty, Probability, Distribution, Bayesian, Continuous Variable, Gaussian Dist., Normal Dist.",
+    "url": "/posts/gaussian/",
+    "categories": "2.STATISTICAL TECHS, 1.probability",
+    "tags": "statistics, uncertainty, probability, random variable, probability distribution, continuous random variable, numerical data analysis, gaussian distribution, normal distribution, student’s t-distribution",
     "date": "2025-07-04 00:00:00 +0900",
     
 
@@ -240,9 +240,9 @@
   
   {
     "title": "Exponential Family",
-    "url": "/posts/Exp_Family/",
-    "categories": "BAYES, 0.probability",
-    "tags": "Statistics, Uncertainty, Probability, Distribution, Bayesian, Parameter, Exponential Family, Conjugate",
+    "url": "/posts/exp_family/",
+    "categories": "2.STATISTICAL TECHS, 1.probability",
+    "tags": "statistics, uncertainty, probability, random variable, probability distribution, measure, parameter, exponential family, conjugate",
     "date": "2025-07-03 00:00:00 +0900",
     
 
@@ -257,9 +257,9 @@
   
   {
     "title": "Probability Distribution",
-    "url": "/posts/Prob_Dist/",
-    "categories": "BAYES, 0.probability",
-    "tags": "Statistics, Uncertainty, Probability, Distribution, Bayesian, Measure, Moment",
+    "url": "/posts/prob_dist/",
+    "categories": "2.STATISTICAL TECHS, 1.probability",
+    "tags": "statistics, uncertainty, probability, random variable, distribution, measure, moment",
     "date": "2025-07-02 00:00:00 +0900",
     
 
@@ -273,11 +273,11 @@
   },
   
   {
-    "title": "Hierarchical Clustering",
-    "url": "/posts/Hierarchical_Clustering/",
-    "categories": "STATISTICAL TECHS, 3.multivariate statistical analysis",
-    "tags": "Statistics, Clustering",
-    "date": "2025-01-09 00:00:00 +0900",
+    "title": "Uncertainty and Probability",
+    "url": "/posts/probability/",
+    "categories": "2.STATISTICAL TECHS, 1.probability",
+    "tags": "statistics, uncertainty, probability, distribution",
+    "date": "2025-07-01 00:00:00 +0900",
     
 
 
@@ -285,49 +285,15 @@
 
 
     
-    "snippet": "Hierarchical Clustering      계층적 군집화(Hierarchical Clustering): 계층적 트리모형을 활용하여 개별 개체들을 유사한 개체/군집과 계층적으로 통합하거나, 표본을 유의미하게 구분되는 지점에서 계층적으로 분할해가는 알고리즘        덴드로그램(Dendrogram): 결합 혹은 분할하는 순서를 나타내는 계층적 ...",
-    "content": "Hierarchical Clustering      계층적 군집화(Hierarchical Clustering): 계층적 트리모형을 활용하여 개별 개체들을 유사한 개체/군집과 계층적으로 통합하거나, 표본을 유의미하게 구분되는 지점에서 계층적으로 분할해가는 알고리즘        덴드로그램(Dendrogram): 결합 혹은 분할하는 순서를 나타내는 계층적 트리모형            종류              상향식 군집화(Agglomerative Clustering) : 개별 개체들을 유사한 개체/군집과 계층적으로 통합해가는 방식      하향식 군집화(Divisive Clustering) : 표본을 유의미하게 구분되는 지점마다 계층적으로 분할해가는 방식      How to Agglomerative Clustering      모든 개체를 개별 군집으로서 정의함\\[C_{i} = \\{\\overrightarrow{x}_{i}\\} \\quad \\text{for} \\quad i=1,2,\\cdots, n\\]        군집 간 거리 행렬을 계산함\\[\\mathbf{D}_{i,j}=d(C_{i},C_{j})\\]        가장 가까운 두 개의 군집을 하나의 군집으로 통합함\\[\\begin{aligned} C_{k}&amp;=\\hat{C}_{i} \\cup \\hat{C}_{j}\\\\ \\hat{C}_{i},\\hat{C}_{j}&amp;=\\text{arg} \\min_{C_{i},C_{j}}{d(C_{i},C_{j})} \\end{aligned}\\]        군집 간 거리 행렬을 갱신함\\[\\mathbf{D}_{N} = \\mathbf{D}_{N-1} \\quad \\text{Recalculate} \\quad d(C_{i^{\\forall} \\ne k},C_{k})\\]        모든 개체가 하나의 군집으로 통합될 때까지 ③, ④의 과정을 반복함  How to Calculate Distance      Single Linkage(Minimum Distance) : 각 군집에 속한 개체들 사이 거리 최소값\\[\\begin{aligned}  d(\\mathbf{A},\\mathbf{B})  &amp;= \\min_{\\overrightarrow{a} \\in \\mathbf{A},\\overrightarrow{b} \\in \\mathbf{B}}{d(\\overrightarrow{a},\\overrightarrow{b})}  \\end{aligned}\\]        Complete Linkage(Maximum Distance) : 각 군집에 속한 개체들 사이 거리 최대값\\[\\begin{aligned}  d(\\mathbf{A},\\mathbf{B})  &amp;= \\max_{\\overrightarrow{a} \\in \\mathbf{A},\\overrightarrow{b} \\in \\mathbf{B}}{d(\\overrightarrow{a},\\overrightarrow{b})}  \\end{aligned}\\]        Average Linkage(Mean Distance) : 각 군집에 속한 개체들 사이 거리 평균\\[\\begin{aligned}  d(\\mathbf{A},\\mathbf{B})  &amp;= \\sum_{\\overrightarrow{a} \\in \\mathbf{A}}\\sum_{\\overrightarrow{b} \\in \\mathbf{B}}{d(\\overrightarrow{a},\\overrightarrow{b})}  \\end{aligned}\\]        Centroid Linkage(Distance Between Centroids) : 각 군집 중심 간 거리\\[\\begin{aligned}  d(\\mathbf{A},\\mathbf{B})  &amp;= d(\\overrightarrow{\\mu}_{A},\\overrightarrow{\\mu}_{B})\\\\  \\overrightarrow{\\mu}_{A}  &amp;= \\frac{1}{\\vert\\mathbf{A}\\vert}\\sum_{\\overrightarrow{a} \\in \\mathbf{A}}{\\overrightarrow{a}}\\\\  \\overrightarrow{\\mu}_{B}  &amp;= \\frac{1}{\\vert\\mathbf{B}\\vert}\\sum_{\\overrightarrow{b} \\in \\mathbf{B}}{\\overrightarrow{b}}  \\end{aligned}\\]        Ward’s Method : 병합 후 SSE와 병합 전 개별 군집의 SSE의 합의 차\\[\\begin{aligned}  d(\\mathbf{A},\\mathbf{B})  &amp;= \\sum_{\\overrightarrow{c} \\in \\mathbf{C}}{d(\\overrightarrow{c},\\overrightarrow{\\mu}_{C})} - \\Big[\\sum_{\\overrightarrow{a} \\in \\mathbf{A}}{d(\\overrightarrow{a},\\overrightarrow{\\mu}_{A})} + \\sum_{\\overrightarrow{b} \\in \\mathbf{B}}{d(\\overrightarrow{b},\\overrightarrow{\\mu}_{B})}\\Big]\\\\  \\mathbf{C}  &amp;= \\mathbf{A} \\cup \\mathbf{B}  \\end{aligned}\\]  Sourse  https://towardsdatascience.com/hierarchical-clustering-explained-e59b13846da8  https://harshsharma1091996.medium.com/hierarchical-clustering-996745fe656b"
-  },
-  
-  {
-    "title": "Linear Discriminant Analysis",
-    "url": "/posts/LDA/",
-    "categories": "STATISTICAL TECHS, 3.multivariate statistical analysis",
-    "tags": "Statistics, Feature Engineering",
-    "date": "2025-01-06 00:00:00 +0900",
-    
-
-
-
-
-
-    
-    "snippet": "PrerequisiteProjection      벡터 $\\overrightarrow{a}$ 를 벡터 $\\overrightarrow{b}$ 에 정사영했을 때, 정사영 벡터 $\\text{proj}_{\\overrightarrow{b}}(\\overrightarrow{a})$ 는 다음과 같음\\[\\begin{aligned}  \\cos{90^{\\circ}}  &...",
-    "content": "PrerequisiteProjection      벡터 $\\overrightarrow{a}$ 를 벡터 $\\overrightarrow{b}$ 에 정사영했을 때, 정사영 벡터 $\\text{proj}_{\\overrightarrow{b}}(\\overrightarrow{a})$ 는 다음과 같음\\[\\begin{aligned}  \\cos{90^{\\circ}}  &amp;= \\frac{(\\overrightarrow{a}-p\\overrightarrow{b})^{T}\\overrightarrow{b}}{\\Vert \\overrightarrow{a}\\Vert \\cdot \\Vert\\overrightarrow{b}\\Vert}\\\\  &amp;= 0\\\\  \\therefore \\text{proj}_{\\overrightarrow{b}}(\\overrightarrow{a})  &amp;= p\\overrightarrow{b}\\\\  &amp;= \\left(\\frac{\\overrightarrow{a}^{T}\\overrightarrow{b}}{\\Vert\\overrightarrow{b}\\Vert^{2}}\\right)\\overrightarrow{b}  \\end{aligned}\\]          $p=\\displaystyle\\frac{\\overrightarrow{a}^{T}\\overrightarrow{b}}{\\Vert\\overrightarrow{b}\\Vert^{2}}$ : 정사영 벡터의 크기      $\\overrightarrow{b}$ : 정사영 벡터의 방향      Covariance Matrix      공분산(Covariance) : 두 확률변수의 선형관계를 나타내는 지표로서, 두 확률변수의 편차(관측치와 평균 사이 거리)를 곱한 값의 평균\\[\\sigma_{XY} = \\frac{1}{N}\\sum_{i=1}^{N}(X_{i}-\\mu_X)(Y_{i}-\\mu_Y)\\]        공분산행렬(Covariance Matrix) : $n$ 개 변수들 간 공분산을 나열한 $n \\times n$ 정방행렬\\[\\Sigma=  \\begin{matrix}  &amp; \\overrightarrow{A} &amp; \\overrightarrow{B} &amp; \\overrightarrow{C} \\\\  \\overrightarrow{A} &amp; \\sigma_{A}^2 &amp; \\sigma_{AB} &amp; \\sigma_{AC} \\\\  \\overrightarrow{B} &amp; \\sigma_{BA} &amp; \\sigma_{B}^2 &amp; \\sigma_{BC} \\\\  \\overrightarrow{C} &amp; \\sigma_{CA} &amp; \\sigma_{CB} &amp; \\sigma_{C}^2  \\end{matrix}\\]  Linear Transformation      행렬 $\\mathbf{X}$ 을 통한 선형변환은 어떤 좌표를 \\(\\begin{pmatrix}1\\\\0\\end{pmatrix},\\begin{pmatrix}0\\\\1\\end{pmatrix}\\) 를 기저로 사용하는 2차원 좌표계에서 \\(\\overrightarrow{x}_{1},\\overrightarrow{x}_{2}\\) 를 기저로 사용하는 2차원 좌표계로 변환하는 것을 의미함\\[\\begin{aligned}  \\mathbf{X}  &amp;= \\begin{pmatrix} 1&amp;3\\\\-2&amp;0 \\end{pmatrix}\\\\  &amp;= \\begin{pmatrix} \\overrightarrow{x}_{1}&amp;\\overrightarrow{x}_{2} \\end{pmatrix}  \\end{aligned}\\]        벡터 $\\overrightarrow{v}$ 는 \\(\\begin{pmatrix}1\\\\0\\end{pmatrix},\\begin{pmatrix}0\\\\1\\end{pmatrix}\\) 를 기저로 사용하는 2차원 좌표계의 좌표 $(-1,2)$ 를 나타냄\\[\\begin{aligned}  \\overrightarrow{v}  &amp;= \\begin{pmatrix} 1\\\\-2 \\end{pmatrix}\\\\  &amp;= -1\\begin{pmatrix}1\\\\0\\end{pmatrix} + 2\\begin{pmatrix}0\\\\1\\end{pmatrix}\\\\  \\end{aligned}\\]        $\\mathbf{X}$ 를 통한 선형 변환 결과 \\(\\overrightarrow{v}\\) 는 \\(\\overrightarrow{x}_{1},\\overrightarrow{x}_{2}\\) 를 기저로 사용하는 2차원 좌표계의 좌표 $(-1,2)$ 로 변환되었음\\[\\begin{aligned}  \\mathbf{X}\\cdot\\overrightarrow{v}  &amp;= \\begin{pmatrix} 1&amp;3\\\\-2&amp;0 \\end{pmatrix} \\cdot \\begin{pmatrix} 1\\\\-2 \\end{pmatrix}\\\\  &amp;= \\begin{pmatrix}-5\\\\2\\end{pmatrix}\\\\  &amp;= -1\\overrightarrow{x}_{1} + 2\\overrightarrow{x}_{2}  \\end{aligned}\\]  Eigen-Vector      고유벡터(Eigen-Vector; $\\overrightarrow{v}$) : 정방행렬 $A_n$ 으로 선형변환했을 때, 그 방향은 변하지 않고 단지 크기만 변하는 $\\overrightarrow{0}$ 이 아닌 벡터\\[\\begin{aligned}  \\begin{pmatrix}  a_{11}&amp;a_{12}&amp;\\cdots&amp;a_{1n}\\\\  a_{21}&amp;a_{22}&amp;\\cdots&amp;a_{1n}\\\\  \\vdots&amp;\\vdots&amp;\\ddots&amp;\\vdots\\\\  a_{n1}&amp;a_{n2}&amp;\\cdots&amp;a_{nn}  \\end{pmatrix}  \\begin{pmatrix}  v_{1} \\\\ v_{2} \\\\ \\vdots \\\\ v_{n}  \\end{pmatrix}  =  \\lambda  \\begin{pmatrix}  v_{1} \\\\ v_{2} \\\\ \\vdots \\\\ v_{n}  \\end{pmatrix}  \\Leftrightarrow  A_{n \\times n} \\overrightarrow{v}   = \\lambda \\overrightarrow{v}  \\end{aligned}\\]        고유값(Eigen-Value; $\\lambda$) : 고유벡터의 선형변환 전 크기 대비 선형변환 후 크기의 비율  Linear Discriminant Analysis      선형 판별 분석(Linear Discriminant Analysis; LDA) : 고차원 데이터에 대하여, 주어진 클래스를 가장 잘 구분할 수 있는 새로운 저차원 직교 좌표(선형 판별 함수)를 찾는 기법            방법 : 클래스 간 분산은 최대화하는 동시에 클래스 내 관측치 간 분산은 최소화하는 성분들을 추출함\\[\\hat{\\overrightarrow{w}}  =\\text{arg} \\max_{\\overrightarrow{w}}{\\frac{\\Sigma^{2}}{\\sigma_{1}^{2}+\\sigma_{2}^{2}}}  \\quad \\text{s.t.} \\quad  \\overrightarrow{w}^{T}\\overrightarrow{w}=1\\]          $\\Sigma^{2}$ : 정사영 후 클래스 간 분산      $\\sigma_{i}^{2}$ : 정사영 후 $i$ 번째 클래스 내 관측치 간 분산      How to Extract      정사영 후 범주 간 분산 $\\Sigma^{2}$\\[\\begin{aligned}  \\Sigma^{2}  &amp;= (\\overrightarrow{\\mu}_{1}-\\overrightarrow{\\mu}_{2})(\\overrightarrow{\\mu}_{1}-\\overrightarrow{\\mu}_{2})^{T}\\\\  &amp;= (\\overrightarrow{w}^{T}\\overrightarrow{m}_{1}-\\overrightarrow{w}^{T}\\overrightarrow{m}_{2})(\\overrightarrow{w}^{T}\\overrightarrow{m}_{1}-\\overrightarrow{w}^{T}\\overrightarrow{m}_{2})^{T}\\quad(\\because \\overrightarrow{\\mu}_{i}=\\overrightarrow{w}^{T}\\overrightarrow{m}_{i})\\\\  &amp;= \\overrightarrow{w}^{T}(\\overrightarrow{m}_{1}-\\overrightarrow{m}_{2})(\\overrightarrow{m}_{1}-\\overrightarrow{m}_{2})^{T}\\overrightarrow{w}\\\\  &amp;= \\overrightarrow{w}^{T}\\mathbf{S}_{B}\\overrightarrow{w}  \\end{aligned}\\]          \\(\\overrightarrow{m}_{i}\\) : \\(i\\) 번째 범주 \\(C_{i}\\) 의 중심점 벡터      \\(\\overrightarrow{\\mu}_{i}=\\text{proj}_{\\overrightarrow{w}}(\\overrightarrow{m}_{i})\\) : \\(\\overrightarrow{m}_{i}\\) 의 정사영 벡터      \\(\\mathbf{S}_{B}\\) : 범주 \\(C_{i},C_{j}\\) 간 편차      \\(\\Sigma\\) : 정사영 후 범주 \\(C_{i},C_{j}\\) 간 편차            정사영 후 범주 내 분산 $\\sigma_{i}^{2}$\\[\\begin{aligned}  \\sigma_{i}^{2}  &amp;= \\sum_{j=1}^{ \\vert C_{i} \\vert }{(\\overrightarrow{y}_{j}-\\overrightarrow{\\mu}_{i})(\\overrightarrow{y}_{j}-\\overrightarrow{\\mu}_{i})^{T}}\\quad(\\overrightarrow{x}_{j} \\in C_{i})\\\\  &amp;= \\sum_{j=1}^{ \\vert C_{i} \\vert }{(\\overrightarrow{w}^{T}\\overrightarrow{x}_{j}-\\overrightarrow{w}^{T}\\overrightarrow{m}_{i})(\\overrightarrow{w}^{T}\\overrightarrow{x}_{j}-\\overrightarrow{w}^{T}\\overrightarrow{m}_{i})^{T}}\\quad(\\because \\overrightarrow{y}_{j}=\\overrightarrow{w}^{T}\\overrightarrow{x}_{j})\\\\  &amp;= \\overrightarrow{w}^{T}\\left[\\sum_{j=1}^{ \\vert C_{i} \\vert }{(\\overrightarrow{x}_{j}-\\overrightarrow{m}_{i})(\\overrightarrow{x}_{j}-\\overrightarrow{m}_{i})^{T}}\\right]\\overrightarrow{w}\\\\  &amp;= \\overrightarrow{w}^{T}\\mathbf{S}_{i}\\overrightarrow{w}  \\end{aligned}\\]          \\(\\overrightarrow{x}_{j} \\in C_{i}\\) : \\(i\\) 번째 범주 \\(C_{i}\\) 의 \\(j\\) 번째 관측치 벡터      \\(\\overrightarrow{y}_{j}=\\text{proj}_{\\overrightarrow{w}}(\\overrightarrow{x}_{j})\\) : \\(\\overrightarrow{x}_{j}\\) 의 정사영 벡터      \\(S_{i}\\) : \\(i\\) 번째 범주 \\(C_{i}\\) 의 범주 내 관측치 간 편차      \\(\\sigma_{i}\\) : 정사영 후 \\(i\\) 번째 범주 \\(C_{i}\\) 의 범주 내 관측치 간 편차            목적 함수 재정의\\[\\begin{aligned}  \\hat{\\overrightarrow{w}}  =\\text{arg} \\max_{\\overrightarrow{w}}{\\frac{\\overrightarrow{w}^{T}\\mathbf{S}_{B}\\overrightarrow{w}}{\\overrightarrow{w}^{T}(\\mathbf{S}_{1}+\\mathbf{S}_{2})\\overrightarrow{w}}}  \\quad \\text{s.t.} \\quad   \\overrightarrow{w}^{T}\\overrightarrow{w}=1  \\end{aligned}\\]        라그랑주 승수법을 통한 최적화 문제 풀이\\[\\begin{aligned}  L(\\overrightarrow{w},\\lambda)  &amp;= \\frac{\\overrightarrow{w}^{T}\\mathbf{S}_{B}\\overrightarrow{w}}{\\overrightarrow{w}^{T}(\\mathbf{S}_{1}+\\mathbf{S}_{2})\\overrightarrow{w}}-\\lambda(\\overrightarrow{w}^{T}\\overrightarrow{w}-1)\\\\  \\frac{\\partial L(\\overrightarrow{w},\\lambda)}{\\partial \\overrightarrow{w}}  &amp;= 0\\\\  \\therefore \\left[\\mathbf{S}_{B}^{-1}(\\mathbf{S}_{1}+\\mathbf{S}_{2})-\\lambda\\mathbf{I}\\right]\\hat{\\overrightarrow{w}}  &amp;=0  \\end{aligned}\\]  "
-  },
-  
-  {
-    "title": "Principal Component Analysis",
-    "url": "/posts/PCA/",
-    "categories": "STATISTICAL TECHS, 3.multivariate statistical analysis",
-    "tags": "Statistics, Feature Engineering",
-    "date": "2025-01-05 00:00:00 +0900",
-    
-
-
-
-
-
-    
-    "snippet": "PrerequisiteProjection      벡터 $\\overrightarrow{a}$ 를 벡터 $\\overrightarrow{b}$ 에 정사영했을 때, 정사영 벡터 $\\text{proj}_{\\overrightarrow{b}}(\\overrightarrow{a})$ 는 다음과 같음\\[\\begin{aligned}  \\cos{90^{\\circ}}  &...",
-    "content": "PrerequisiteProjection      벡터 $\\overrightarrow{a}$ 를 벡터 $\\overrightarrow{b}$ 에 정사영했을 때, 정사영 벡터 $\\text{proj}_{\\overrightarrow{b}}(\\overrightarrow{a})$ 는 다음과 같음\\[\\begin{aligned}  \\cos{90^{\\circ}}  &amp;= \\frac{(\\overrightarrow{a}-p\\overrightarrow{b})^{T}\\overrightarrow{b}}{\\Vert \\overrightarrow{a}\\Vert \\cdot \\Vert\\overrightarrow{b}\\Vert}\\\\  &amp;= 0\\\\  \\therefore \\text{proj}_{\\overrightarrow{b}}(\\overrightarrow{a})  &amp;= p\\overrightarrow{b}\\\\  &amp;= \\left(\\frac{\\overrightarrow{a}^{T}\\overrightarrow{b}}{\\Vert\\overrightarrow{b}\\Vert^{2}}\\right)\\overrightarrow{b}  \\end{aligned}\\]          $p=\\displaystyle\\frac{\\overrightarrow{a}^{T}\\overrightarrow{b}}{\\Vert\\overrightarrow{b}\\Vert^{2}}$ : 정사영 벡터의 크기      $\\overrightarrow{b}$ : 정사영 벡터의 방향      Covariance Matrix      공분산(Covariance) : 두 확률변수의 선형관계를 나타내는 지표로서, 두 확률변수의 편차(관측치와 평균 사이 거리)를 곱한 값의 평균\\[\\sigma_{XY} = \\frac{1}{N}\\sum_{i=1}^{N}(X_{i}-\\mu_X)(Y_{i}-\\mu_Y)\\]        공분산행렬(Covariance Matrix) : $n$ 개 변수들 간 공분산을 나열한 $n \\times n$ 정방행렬\\[\\Sigma=  \\begin{matrix}  &amp; \\overrightarrow{A} &amp; \\overrightarrow{B} &amp; \\overrightarrow{C} \\\\  \\overrightarrow{A} &amp; \\sigma_{A}^2 &amp; \\sigma_{AB} &amp; \\sigma_{AC} \\\\  \\overrightarrow{B} &amp; \\sigma_{BA} &amp; \\sigma_{B}^2 &amp; \\sigma_{BC} \\\\  \\overrightarrow{C} &amp; \\sigma_{CA} &amp; \\sigma_{CB} &amp; \\sigma_{C}^2  \\end{matrix}\\]  Linear Transformation      행렬 $\\mathbf{X}$ 을 통한 선형변환은 어떤 좌표를 \\(\\begin{pmatrix}1\\\\0\\end{pmatrix},\\begin{pmatrix}0\\\\1\\end{pmatrix}\\) 를 기저로 사용하는 2차원 좌표계에서 \\(\\overrightarrow{x}_{1},\\overrightarrow{x}_{2}\\) 를 기저로 사용하는 2차원 좌표계로 변환하는 것을 의미함\\[\\begin{aligned}  \\mathbf{X}  &amp;= \\begin{pmatrix} 1&amp;3\\\\-2&amp;0 \\end{pmatrix}\\\\  &amp;= \\begin{pmatrix} \\overrightarrow{x}_{1}&amp;\\overrightarrow{x}_{2} \\end{pmatrix}  \\end{aligned}\\]        벡터 $\\overrightarrow{v}$ 는 \\(\\begin{pmatrix}1\\\\0\\end{pmatrix},\\begin{pmatrix}0\\\\1\\end{pmatrix}\\) 를 기저로 사용하는 2차원 좌표계의 좌표 $(-1,2)$ 를 나타냄\\[\\begin{aligned}  \\overrightarrow{v}  &amp;= \\begin{pmatrix} 1\\\\-2 \\end{pmatrix}\\\\  &amp;= -1\\begin{pmatrix}1\\\\0\\end{pmatrix} + 2\\begin{pmatrix}0\\\\1\\end{pmatrix}\\\\  \\end{aligned}\\]        $\\mathbf{X}$ 를 통한 선형 변환 결과 \\(\\overrightarrow{v}\\) 는 \\(\\overrightarrow{x}_{1},\\overrightarrow{x}_{2}\\) 를 기저로 사용하는 2차원 좌표계의 좌표 $(-1,2)$ 로 변환되었음\\[\\begin{aligned}  \\mathbf{X}\\cdot\\overrightarrow{v}  &amp;= \\begin{pmatrix} 1&amp;3\\\\-2&amp;0 \\end{pmatrix} \\cdot \\begin{pmatrix} 1\\\\-2 \\end{pmatrix}\\\\  &amp;= \\begin{pmatrix}-5\\\\2\\end{pmatrix}\\\\  &amp;= -1\\overrightarrow{x}_{1} + 2\\overrightarrow{x}_{2}  \\end{aligned}\\]  Eigen-Vector      고유벡터(Eigen-Vector; $\\overrightarrow{v}$) : 정방행렬 $A_n$ 으로 선형변환했을 때, 그 방향은 변하지 않고 단지 크기만 변하는 $\\overrightarrow{0}$ 이 아닌 벡터\\[\\begin{aligned}  \\begin{pmatrix}  a_{11}&amp;a_{12}&amp;\\cdots&amp;a_{1n}\\\\  a_{21}&amp;a_{22}&amp;\\cdots&amp;a_{1n}\\\\  \\vdots&amp;\\vdots&amp;\\ddots&amp;\\vdots\\\\  a_{n1}&amp;a_{n2}&amp;\\cdots&amp;a_{nn}  \\end{pmatrix}  \\begin{pmatrix}  v_{1} \\\\ v_{2} \\\\ \\vdots \\\\ v_{n}  \\end{pmatrix}  =  \\lambda  \\begin{pmatrix}  v_{1} \\\\ v_{2} \\\\ \\vdots \\\\ v_{n}  \\end{pmatrix}  \\Leftrightarrow  A_{n \\times n} \\overrightarrow{v}   = \\lambda \\overrightarrow{v}  \\end{aligned}\\]        고유값(Eigen-Value; $\\lambda$) : 고유벡터의 선형변환 전 크기 대비 선형변환 후 크기의 비율  Principal Component Analysis      주성분 분석(Principal Component Analysis; PCA) : 고차원 데이터에 대하여, X의 방향적 분포를 가장 잘 설명하는 새로운 저차원 직교 좌표를 학습하는 기법              주성분(Principal Component; PC) : 새로운 저차원 직교 좌표            방법 : 관측치 간 상대적 특성을 잘 보존하는 성분들을 추출함              $\\text{component}$ : 주성분 벡터 $\\overrightarrow{w}$      $\\text{datapoint}$ : 관측치 벡터 $\\overrightarrow{x}\\in \\mathbf{X}$      $\\text{projected data}$ : 주성분 벡터에 대한 관측치 벡터의 정사영 벡터 $\\text{proj}_{\\overrightarrow{w}}(\\overrightarrow{x})$      $D_{1}$ : 관측치 벡터에 대하여 보존하는 정보로서 분산      $D_{2}$ : 관측치 벡터에 대하여 유실하는 정보      $D_{3}$ : 관측치 벡터의 본래 정보      How to Extract      관측치 행렬 $X_{N \\times P}$ 를 단위벡터 $\\overrightarrow{w}$ 에 정사영한다고 하자\\[\\begin{aligned}  proj_{\\overrightarrow{w}}(\\mathbf{X})  &amp;= \\frac{&lt;\\mathbf{X},\\overrightarrow{w}&gt;}{\\Vert w \\Vert ^2}\\cdot\\overrightarrow{w}\\\\  &amp;= (\\overrightarrow{w}^{T}\\mathbf{X})\\cdot\\overrightarrow{w} \\quad (\\because \\Vert w \\Vert=1)  \\end{aligned}\\]          $\\overrightarrow{w}$ : 정사영 벡터의 방향      $\\overrightarrow{w}^{T}\\mathbf{X}$ : 정사영 벡터의 크기            $\\overrightarrow{w}$ 에 정사영된 관측치들의 분산 $\\mathbf{V}$ 은 다음과 같음\\[\\begin{aligned}  \\mathbf{V}  &amp;= \\frac{1}{n}(\\overrightarrow{w}^{T}\\mathbf{X})(\\overrightarrow{w}^{T}\\mathbf{X})^{T}\\\\  &amp;= \\frac{1}{n}(\\overrightarrow{w}^{T}\\mathbf{X}\\mathbf{X}^{T}\\overrightarrow{w})\\\\  &amp;= \\overrightarrow{w}^{T}\\Sigma\\overrightarrow{w}  \\end{aligned}\\]          $\\Sigma=\\displaystyle\\frac{1}{n}\\mathbf{X}\\mathbf{X}^{T}$ : 관측치 행렬 $X$ 의 공분산 행렬            $\\mathbf{V}$ 을 최대화하는 $\\overrightarrow{w}$ 를 채택한다고 하자\\[\\hat{\\overrightarrow{w}}  = \\text{arg} \\max_{\\overrightarrow{w}}{\\overrightarrow{w}^{T}\\Sigma\\overrightarrow{w}}  \\quad \\text{s.t.} \\quad  \\overrightarrow{w}^{T}\\overrightarrow{w}=1\\]        라그랑주 승수법에 기초하여 $\\hat{\\overrightarrow{w}}$ 도출\\[\\begin{aligned}  L(\\overrightarrow{w},\\lambda)  &amp;= \\overrightarrow{w}^{T}\\Sigma\\overrightarrow{w}-\\lambda(\\overrightarrow{w}^{T}\\overrightarrow{w}-1)\\\\  \\frac{\\partial L(\\overrightarrow{w},\\lambda)}{\\overrightarrow{w}}  &amp;= 0\\\\  \\therefore (\\Sigma-\\lambda\\mathbf{I})\\hat{\\overrightarrow{w}}  &amp;=0  \\end{aligned}\\]        $\\mathbf{V}$ 를 최대화하는 주성분 $\\overrightarrow{w}$ 은 $\\mathbf{X}$ 의 공분산 행렬 $\\Sigma$ 의 고유벡터임\\[\\begin{aligned}  \\Sigma  &amp;= \\mathbb{V}\\mathbb{\\Lambda}\\mathbb{V}^{-1},\\\\  \\mathbb{V}  &amp;= \\begin{pmatrix}\\overrightarrow{w}_{1}&amp;\\overrightarrow{w}_{2}&amp;\\cdots&amp;\\overrightarrow{w}_{p}\\end{pmatrix}\\\\  \\mathbb{\\Lambda}  &amp;= \\text{diag}(\\lambda_{1},\\lambda_{2},\\cdots,\\lambda_{p})  \\end{aligned}\\]  Explanatory Power      주성분 벡터의 고유값 : 관측치 행렬 $\\mathbf{X}$ 에 대하여 주성분 벡터에 대한 정사영 벡터 간 분산\\[\\begin{aligned}  \\mathbf{V}  &amp;= \\frac{1}{n}(\\overrightarrow{w}^{T}\\mathbf{X})(\\overrightarrow{w}^{T}\\mathbf{X})^{T}\\\\  &amp;= \\frac{1}{n}\\overrightarrow{w}^{T}\\mathbf{X}\\mathbf{X}^{T}\\overrightarrow{w}\\\\  &amp;= \\overrightarrow{w}^{T}\\Sigma\\overrightarrow{w}\\\\  &amp;= \\hat{\\overrightarrow{w}}^{T}\\lambda\\hat{\\overrightarrow{w}} \\quad (\\because \\Sigma\\hat{\\overrightarrow{w}}-\\lambda\\hat{\\overrightarrow{w}}=0)\\\\  &amp;= \\lambda \\quad (\\because \\overrightarrow{w}^{T}\\overrightarrow{w}=1)  \\end{aligned}\\]        주성분 벡터의 설명력 : 관측치 행렬 $\\mathbf{X}_{N \\times P}$ 에 대하여 생성 가능한 $P$ 개의 주성분 벡터 고유값 합계 대비 해당 주성분 벡터 고유값 비율\\[\\frac{\\lambda_{k}}{\\sum_{i=1}^{p}{\\lambda_{i}}}\\]  Sourse  http://alexhwilliams.info/itsneuronalblog/2016/03/27/pca/"
+    "snippet": "uncertainty  불확실성(Uncertainty): 어떠한 사건의 결과에 대하여 사전에 확신할 수 없는 상태          우발적 불확실성(Aleatoric Uncertainty): 관측치에 내재된 잡음 혹은 무작위성으로 인해 발생하는 불확실성        인식적 불확실성(Epistemic Uncertainty): 정보 불완전성으로 인하여 발생...",
+    "content": "uncertainty  불확실성(Uncertainty): 어떠한 사건의 결과에 대하여 사전에 확신할 수 없는 상태          우발적 불확실성(Aleatoric Uncertainty): 관측치에 내재된 잡음 혹은 무작위성으로 인해 발생하는 불확실성        인식적 불확실성(Epistemic Uncertainty): 정보 불완전성으로 인하여 발생하는 불확실성          정보 불완전성(Data Uncertainty): 관측 데이터가 불완전하거나(Incomplete), 불충분하거나(Insufficient), 왜곡된(Distorted) 상황      파라미터 불확실성(Parameter Uncertainty): 주어진 모형 안에서 최적 파라미터를 유일하게 식별할 수 없는 문제      구조적 불확실성(Structural Uncertainty): 데이터 생성 메커니즘을 기술하는 함수 구조를 확신할 수 없어 특정 모형을 가정할 수 없는 문제      표현의 불확실성(Latent Representation Uncertainty): 잠재공간의 비식별성으로 인해 치역(관측값)만으로 정의역(잠재요인)을 유일하게 결정하여 표현할 수 없는 문제        존재론적 불확실성(Ontic Uncertainty): 모형이 모사하고자 하는 실제 메커니즘이 본질적으로 불확실하여 정보가 증가하더라도 제거될 수 없는 불확실성probability  확률실험(Random Experiment) : 사건의 불확실성을 가진 프로세스                  표본공간(Sample Space) : 확률실험에서 발생 가능한 모든 결과의 집합 (e.g. 동전 던지기)\\[\\Omega=\\{H,T\\}\\]                    사건(Event) : 표본공간의 부분집합으로서 발생 가능한 결과의 일부 (e.g. 동전을 한 번 던졌을 때 앞면이 나오는 사건)\\[A=\\{H\\}\\in\\mathcal{F}\\]                    확률(Probability): 사건의 불확실성을 정량화하기 위한 도구로서, 표본공간 $\\Omega$ 위에 정의된 시그마대수 $\\mathcal{F}:=\\sigma(\\Omega)$ 에 대하여 그 원소 $A$, 즉 사건이 발생할 상대적 가능성\\[P(A)\\quad\\text{s.t.}\\quad 0 \\le P(A) \\le 1\\]              확률의 고전적 접근법 : 확률실험의 대칭성(Symmetric Nature)을 이용하여 각 결과가 발생할 가능성을 논리적으로 추론하는 방법          어떤 확률실험이 발생 가능성이 동일한(Equally Likely) $n$ 개의 결과를 가질 때, 단순 사건이 발생할 확률은 $1/n$ 임      $n$ 개의 결과 중 $n_A$ 개 결과를 취하는 복합 사건이 발생할 확률은 $n_{A}/n$ 임        확률의 경험적 접근법 : 반복 실험 결과를 근거로 확률을 부여하는 방법으로서 빈도적 접근법          어떤 확률실험을 $n$ 번 반복했을 때, 어떤 결과가 $k \\le n$ 번 발생했다면 그 결과가 발생할 확률은 $k/n$ 임      실험 횟수가 매우 크고, 모든 실험이 동일한 환경에서 이루어졌을 때 정당성을 가짐        확률의 주관적 접근법 : 고전적 접근법, 경험적 접근법에 의해 확률을 부여하는 것이 불가능한 경우 개인적인 판단에 의해 확률을 부여하는 방법axioms and laws  확률의 공리(Axioms of Probability):                  비음성 공리(non-negativity):\\[P(A) \\ge 0\\]                    정규화 공리(normalization):\\[P(\\Omega)=1\\]                    가산성 공리(countable additivity / σ-additivity):\\[A_i \\cap A_j=\\emptyset\\Rightarrow P\\left(\\bigcup_{i=1}^{n}{A_{i}}\\right)=\\sum_{i=1}^{n}{A_{i}}\\]              확률 법칙(Laws of Probability):                  여집합 법칙(complement rule):\\[P(A^{C})=1-P(A)\\]                    단조성 법칙(monotonicity):\\[A\\subseteq B\\Rightarrow P(A)\\le P(B)\\]                    차집합 법칙:\\[P(B\\setminus A)=P(B)-P(A\\cap B)\\]                    포함-배제 법칙(inclusion–exclusion):\\[P(A\\cup B)=P(A)+P(B)-P(A\\cap B)\\]                    유한 가법성 법칙(finite additivity):\\[A\\cap B=\\emptyset\\Rightarrow P(A\\cup B)=P(A)+P(B)\\]                    증가열의 연속성 법칙(continuity of increasing sequence):\\[A_{1}\\subseteq A_{2}\\subseteq\\cdots,\\quad\\bigcup_{n=1}^{\\infty}{A_{n}}=A\\Rightarrow\\lim_{n\\to\\infty}{P(A_{n})}=P(A)\\]                    감소열의 연속성 법칙(continuity of decreasing sequence):\\[A_{1}\\supseteq A_{2}\\supseteq\\cdots,\\quad\\bigcap_{n=1}^{\\infty}{A_{n}}=A\\Rightarrow\\lim_{n\\to\\infty}{P(A_{n})}=P(A)\\]                    전체 확률 법칙(total probability):\\[P(A)=\\sum_{i}{P(A\\mid B_{i})P(B_{i})}\\]                    베이즈 법칙(bayes):\\[P(A\\mid B)=\\frac{P(B\\mid A)P(A)}{P(B)}\\]            statistical independence      결합 확률(Joint Probability): 확률 변수 $A, B$ 에 대하여 그 실현값 $A_i \\in A$ 와 $B_j \\in B$ 가 동시에 발생할 확률\\[P(A_i \\cap B_j)\\]        결합확률표: 상호배타적이고(\\(X_{i}\\cap X_{j}=\\emptyset\\)) 집단전체적인(\\(\\bigcup_{i}{X_{i}}=\\Omega\\)) 사건들에 대한 확률 변수 \\(A,B\\) 에 대하여 사건 \\(A_{i},B_{j}\\) 가 동시에 발생할 결합 확률을 요약한 표                                       $B_1$          $B_2$          $\\cdots$          $B_m$          $\\sum_{j=1}^{m}P(A_i \\cap B_j)$                                      $A_1$          $P(A_1 \\cap B_1)$          $P(A_1 \\cap B_2)$          $\\cdots$          $P(A_1 \\cap B_m)$          $P(A_1)$                          $A_2$          $P(A_2 \\cap B_1)$          $P(A_2 \\cap B_2)$          $\\cdots$          $P(A_2 \\cap B_m)$          $P(A_2)$                          $\\vdots$          $\\vdots$          $\\vdots$          $\\ddots$          $\\vdots$          $\\vdots$                          $A_n$          $P(A_n \\cap B_1)$          $P(A_n \\cap B_2)$          $\\cdots$          $P(A_n \\cap B_m)$          $P(A_n)$                          $\\sum_{i=1}^{n}P(A_i \\cap B_j)$          $P(B_1)$          $P(B_2)$          $\\cdots$          $P(B_m)$          $1$                          조건부 확률(Conditional Probability): 사건 $B$ 가 발생했을 때 사건 $A$ 가 발생할 확률\\[P(A\\mid B)=\\frac{P(A\\cap B)}{P(B)}\\]        통계적 독립성(Statistical Independence): 한 사건의 발생 여부가 다른 사건이 발생할 가능성에 아무런 영향을 끼치지 못하는 경우 혹은 한 사건에 관한 정보가 다른 사건에 관한 정보를 추가적으로 제공하지 못하는 경우\\[P(A\\mid B)=P(A)\\Rightarrow A\\perp B\\]  "
   },
   
   {
     "title": "Bayesian Attention Modules",
-    "url": "/posts/BAM/",
-    "categories": "BAYES, 3.bayes applications",
-    "tags": "Bayesian, Deep Learning, Attention Mechanism, Variational Inference",
+    "url": "/posts/bam/",
+    "categories": "5.BAYES, 3.bayes applications",
+    "tags": "bayesian, deep Learning, attention mechanism, latent factor, variational inference",
     "date": "2024-09-19 00:00:00 +0900",
     
 
@@ -342,9 +308,9 @@
   
   {
     "title": "CLiMF",
-    "url": "/posts/CLiMF/",
-    "categories": "RECOMMENDER SYSTEM, 4.one class collaborative filtering",
-    "tags": "Paper Review, AI Application, Recommender System, Collaborative Filtering, Implicit Feedback, OCCF, Ranking Prediction, Objective Function, Listwise Learning, MRR",
+    "url": "/posts/climf/",
+    "categories": "6.RECOMMENDER SYSTEM, 4.one class collaborative filtering",
+    "tags": "ai application, recommender system, collaborative filtering, implicit feedback, occf, byaesian, ranking prediction, objective function, listwise learning, mrr",
     "date": "2024-09-05 00:00:00 +0900",
     
 
@@ -359,9 +325,9 @@
   
   {
     "title": "BPR",
-    "url": "/posts/BPR/",
-    "categories": "RECOMMENDER SYSTEM, 4.one class collaborative filtering",
-    "tags": "Paper Review, AI Application, Recommender System, Collaborative Filtering, Implicit Feedback, OCCF, Ranking Prediction, Objective Function, Pairewise Learning, AUC, Bayesian",
+    "url": "/posts/bpr/",
+    "categories": "6.RECOMMENDER SYSTEM, 4.one class collaborative filtering",
+    "tags": "ai application, recommender system, collaborative filtering, implicit feedback, occf, byaesian, ranking prediction, objective function, pairwise learning, auc",
     "date": "2024-08-28 00:00:00 +0900",
     
 
@@ -376,9 +342,9 @@
   
   {
     "title": "GPT",
-    "url": "/posts/GPT/",
-    "categories": "DATA MINING TECHS, 3.generative modeling",
-    "tags": "AI Application, NLP, Generative Model, Attention Mechanism",
+    "url": "/posts/gpt/",
+    "categories": "4.MODALITY, 1.netural language processing",
+    "tags": "modality, nlp, generative model, gpt, attention mechanism",
     "date": "2024-08-23 00:00:00 +0900",
     
 
@@ -393,9 +359,9 @@
   
   {
     "title": "BERT",
-    "url": "/posts/BERT/",
-    "categories": "DATA MINING TECHS, 3.generative modeling",
-    "tags": "AI Application, NLP, Language Model, Attention Mechanism",
+    "url": "/posts/bert/",
+    "categories": "4.MODALITY, 1.netural language processing",
+    "tags": "modality, nlp, language model, bert, attention mechanism",
     "date": "2024-08-22 00:00:00 +0900",
     
 
@@ -410,9 +376,9 @@
   
   {
     "title": "Transformer",
-    "url": "/posts/Transformer/",
-    "categories": "DATA MINING TECHS, 3.generative modeling",
-    "tags": "AI Application, NLP, Machine Translation, Attention Mechanism",
+    "url": "/posts/transformer/",
+    "categories": "4.MODALITY, 1.netural language processing",
+    "tags": "modality, nlp, machine translation, transformer, attention mechanism",
     "date": "2024-08-21 00:00:00 +0900",
     
 
@@ -427,9 +393,9 @@
   
   {
     "title": "Attention Mechanism",
-    "url": "/posts/ATTN/",
-    "categories": "DATA MINING TECHS, 3.generative modeling",
-    "tags": "AI Application, NLP, Machine Translation, Attention Mechanism",
+    "url": "/posts/attn/",
+    "categories": "4.MODALITY, 1.netural language processing",
+    "tags": "modality, nlp, machine translation, rnn, attention mechanism",
     "date": "2024-08-20 00:00:00 +0900",
     
 
@@ -444,9 +410,9 @@
   
   {
     "title": "SEQ2SEQ",
-    "url": "/posts/SEQ2SEQ/",
-    "categories": "DATA MINING TECHS, 3.generative modeling",
-    "tags": "AI Application, NLP, Machine Translation, Metric",
+    "url": "/posts/seq2seq/",
+    "categories": "4.MODALITY, 1.netural language processing",
+    "tags": "modality, nlp, machine translation, rnn",
     "date": "2024-08-19 00:00:00 +0900",
     
 
@@ -461,9 +427,9 @@
   
   {
     "title": "Topic Model",
-    "url": "/posts/Topic_Model/",
-    "categories": "DATA MINING TECHS, 2.text analytics",
-    "tags": "AI Application, NLP, Topic Model",
+    "url": "/posts/topic_model/",
+    "categories": "4.MODALITY, 1.netural language processing",
+    "tags": "modality, nlp, topic model",
     "date": "2024-08-18 00:00:00 +0900",
     
 
@@ -478,9 +444,9 @@
   
   {
     "title": "Language Model",
-    "url": "/posts/Langauge_Model/",
-    "categories": "DATA MINING TECHS, 2.text analytics",
-    "tags": "AI Application, NLP, Language Model, Metric",
+    "url": "/posts/langauge_model/",
+    "categories": "4.MODALITY, 1.netural language processing",
+    "tags": "modality, nlp, language model",
     "date": "2024-08-17 00:00:00 +0900",
     
 
@@ -495,9 +461,9 @@
   
   {
     "title": "Docs Representation",
-    "url": "/posts/Docs_Representation/",
-    "categories": "DATA MINING TECHS, 2.text analytics",
-    "tags": "AI Application, NLP, Document Representation, Embedding",
+    "url": "/posts/docs_representation/",
+    "categories": "4.MODALITY, 1.netural language processing",
+    "tags": "modality, nlp, document representation, embedding",
     "date": "2024-08-16 00:00:00 +0900",
     
 
@@ -512,9 +478,9 @@
   
   {
     "title": "WORD2VEC Improvements",
-    "url": "/posts/WORD2VEC_Improvements/",
-    "categories": "DATA MINING TECHS, 2.text analytics",
-    "tags": "AI Application, NLP, Word Representation, Embedding",
+    "url": "/posts/word2vec_improvements/",
+    "categories": "4.MODALITY, 1.netural language processing",
+    "tags": "modality, nlp, word representation, embedding",
     "date": "2024-08-15 00:00:00 +0900",
     
 
@@ -529,9 +495,9 @@
   
   {
     "title": "ExpoMF",
-    "url": "/posts/ExpoMF/",
-    "categories": "RECOMMENDER SYSTEM, 4.one class collaborative filtering",
-    "tags": "Paper Review, AI Application, Recommender System, Collaborative Filtering, Latent Factor Model, Implicit Feedback, OCCF, Pointwise Approach, Exposure Probability, Bayesian",
+    "url": "/posts/expomf/",
+    "categories": "6.RECOMMENDER SYSTEM, 4.one class collaborative filtering",
+    "tags": "ai application, recommender system, collaborative filtering, implicit feedback, occf, latent factor, em algorithm, mle",
     "date": "2024-08-14 00:00:00 +0900",
     
 
@@ -546,9 +512,9 @@
   
   {
     "title": "Word Representation",
-    "url": "/posts/Word_Representation/",
-    "categories": "DATA MINING TECHS, 2.text analytics",
-    "tags": "AI Application, NLP, Word Representation, Embedding",
+    "url": "/posts/word_representation/",
+    "categories": "4.MODALITY, 1.netural language processing",
+    "tags": "modality, nlp, word representation, embedding",
     "date": "2024-08-14 00:00:00 +0900",
     
 
@@ -563,9 +529,9 @@
   
   {
     "title": "Text Data Preprocessing",
-    "url": "/posts/Text_Data_Preprocessing/",
-    "categories": "DATA MINING TECHS, 2.text analytics",
-    "tags": "AI Application, NLP",
+    "url": "/posts/text_data_preprocessing/",
+    "categories": "4.MODALITY, 1.netural language processing",
+    "tags": "modality, nlp",
     "date": "2024-08-13 00:00:00 +0900",
     
 
@@ -580,9 +546,9 @@
   
   {
     "title": "Regular Expression",
-    "url": "/posts/Regular-Expression/",
-    "categories": "DATA MINING TECHS, 2.text analytics",
-    "tags": "AI Application, NLP",
+    "url": "/posts/regular-expression/",
+    "categories": "4.MODALITY, 1.netural language processing",
+    "tags": "modality, nlp",
     "date": "2024-08-12 00:00:00 +0900",
     
 
@@ -597,9 +563,9 @@
   
   {
     "title": "Variational AutoEncoder",
-    "url": "/posts/VAE/",
-    "categories": "BAYES, 3.bayes applications",
-    "tags": "Bayesian, Deep Learning, Unsupervised Learning, Feature Engineering, Autoencoder, Latent Factor, Generative Model, CV, Variational Inference",
+    "url": "/posts/vae/",
+    "categories": "5.BAYES, 3.bayes applications",
+    "tags": "bayesian, deep learning, neural networks, variational inference, unsupervised learning, latent factor, feature engineering, autoencoder, generative model, cv",
     "date": "2024-08-09 00:00:00 +0900",
     
 
@@ -614,9 +580,9 @@
   
   {
     "title": "BNNs (2) Monte Carlo Dropout",
-    "url": "/posts/MC_Dropout/",
-    "categories": "BAYES, 3.bayes applications",
-    "tags": "Bayesian, Deep Learning, Variational Inference",
+    "url": "/posts/mc_dropout/",
+    "categories": "5.BAYES, 3.bayes applications",
+    "tags": "bayesian, deep learning, neural networks, variational inference",
     "date": "2024-08-08 00:00:00 +0900",
     
 
@@ -631,9 +597,9 @@
   
   {
     "title": "BNNs (1) Bayes by Backprop",
-    "url": "/posts/BBB/",
-    "categories": "BAYES, 3.bayes applications",
-    "tags": "Bayesian, Deep Learning, Variational Inference",
+    "url": "/posts/bbb/",
+    "categories": "5.BAYES, 3.bayes applications",
+    "tags": "bayesian, deep learning, neural networks, variational inference",
     "date": "2024-08-07 00:00:00 +0900",
     
 
@@ -648,9 +614,9 @@
   
   {
     "title": "Bayesian Regression (2) Subjective Prior",
-    "url": "/posts/Bayesian_Regression_2/",
-    "categories": "BAYES, 3.bayes applications",
-    "tags": "Bayesian, Regression",
+    "url": "/posts/bayesian_regression_2/",
+    "categories": "5.BAYES, 3.bayes applications",
+    "tags": "bayesian, regression analysis, linear regression analysis, numerical data analysis",
     "date": "2024-08-06 00:00:00 +0900",
     
 
@@ -665,9 +631,9 @@
   
   {
     "title": "Bayesian Regression (1) Objective Prior",
-    "url": "/posts/Bayesian_Regression_1/",
-    "categories": "BAYES, 3.bayes applications",
-    "tags": "Bayesian, Regression",
+    "url": "/posts/bayesian_regression_1/",
+    "categories": "5.BAYES, 3.bayes applications",
+    "tags": "bayesian, regression analysis, linear regression analysis, numerical data analysis",
     "date": "2024-08-05 00:00:00 +0900",
     
 
@@ -682,9 +648,9 @@
   
   {
     "title": "Naive Bayes",
-    "url": "/posts/Naive_Bayes/",
-    "categories": "BAYES, 3.bayes applications",
-    "tags": "Bayesian, Classification",
+    "url": "/posts/naive_bayes/",
+    "categories": "5.BAYES, 3.bayes applications",
+    "tags": "bayesian, categorical data analysis",
     "date": "2024-08-04 00:00:00 +0900",
     
 
@@ -699,9 +665,9 @@
   
   {
     "title": "Multi Armed Bandits",
-    "url": "/posts/Multi_Armed_Bandits/",
-    "categories": "BAYES, 3.bayes applications",
-    "tags": "Bayesian, Multi Armed Bandits",
+    "url": "/posts/multi_armed_bandits/",
+    "categories": "5.BAYES, 3.bayes applications",
+    "tags": "bayesian, multi armed bandits",
     "date": "2024-08-03 00:00:00 +0900",
     
 
@@ -716,9 +682,9 @@
   
   {
     "title": "Bayesian DiD",
-    "url": "/posts/Bayesian_DiD/",
-    "categories": "BAYES, 3.bayes applications",
-    "tags": "Bayesian, Design of Experiments, DiD",
+    "url": "/posts/bayesian_did/",
+    "categories": "5.BAYES, 3.bayes applications",
+    "tags": "bayesian, design of experiments, did",
     "date": "2024-08-02 00:00:00 +0900",
     
 
@@ -733,9 +699,9 @@
   
   {
     "title": "Bayesian A/B Test",
-    "url": "/posts/Bayesian_A_B_Test/",
-    "categories": "BAYES, 3.bayes applications",
-    "tags": "Bayesian, Design of Experiments, A/B Test",
+    "url": "/posts/bayesian_ab_test/",
+    "categories": "5.BAYES, 3.bayes applications",
+    "tags": "bayesian, design of experiments, a/b test",
     "date": "2024-08-01 00:00:00 +0900",
     
 
@@ -750,9 +716,9 @@
   
   {
     "title": "One Class Collaborative Filtering",
-    "url": "/posts/OCCF/",
-    "categories": "RECOMMENDER SYSTEM, 4.one class collaborative filtering",
-    "tags": "Paper Review, AI Application, Recommender System, Collaborative Filtering, Implicit Feedback, OCCF",
+    "url": "/posts/occf/",
+    "categories": "6.RECOMMENDER SYSTEM, 4.one class collaborative filtering",
+    "tags": "ai application, recommender system, collaborative filtering, implicit feedback, occf",
     "date": "2024-07-31 00:00:00 +0900",
     
 
@@ -767,9 +733,9 @@
   
   {
     "title": "EM Algorithm",
-    "url": "/posts/EM/",
-    "categories": "BAYES, 2.posterior approx.",
-    "tags": "Bayesian, Objective Function, MLE, EM Algorithm, Latent Factor",
+    "url": "/posts/em/",
+    "categories": "5.BAYES, 2.posterior approx.",
+    "tags": "bayesian, objective function, mle, em algorithm, latent factor",
     "date": "2024-07-31 00:00:00 +0900",
     
 
@@ -784,9 +750,9 @@
   
   {
     "title": "Variational Inference",
-    "url": "/posts/VI/",
-    "categories": "BAYES, 2.posterior approx.",
-    "tags": "Bayesian, Objective Function, Variational Inference",
+    "url": "/posts/vi/",
+    "categories": "5.BAYES, 2.posterior approx.",
+    "tags": "bayesian, objective function, information theory, variational inference",
     "date": "2024-07-30 00:00:00 +0900",
     
 
@@ -801,9 +767,9 @@
   
   {
     "title": "Markov Chain Monte Carlo",
-    "url": "/posts/MCMC/",
-    "categories": "BAYES, 2.posterior approx.",
-    "tags": "Bayesian, Monte Carlo Simulation, Rejection Sampling, Markov Chain, Markov Chain Monte Carlo",
+    "url": "/posts/mcmc/",
+    "categories": "5.BAYES, 2.posterior approx.",
+    "tags": "bayesian, monte carlo simulation, markov chain, markov chain monte carlo, pymc",
     "date": "2024-07-29 00:00:00 +0900",
     
 
@@ -818,9 +784,9 @@
   
   {
     "title": "Monte Carlo Simulation",
-    "url": "/posts/MC/",
-    "categories": "BAYES, 2.posterior approx.",
-    "tags": "Bayesian, Monte Carlo Simulation, Rejection Sampling",
+    "url": "/posts/mc/",
+    "categories": "5.BAYES, 2.posterior approx.",
+    "tags": "bayesian, monte carlo simulation, rejection sampling",
     "date": "2024-07-28 00:00:00 +0900",
     
 
@@ -835,9 +801,9 @@
   
   {
     "title": "Bayes Action",
-    "url": "/posts/Bayes_Action/",
-    "categories": "BAYES, 1.bayes basic",
-    "tags": "Bayesian, Optimization, Objective Function",
+    "url": "/posts/bayes_action/",
+    "categories": "5.BAYES, 1.bayes basic",
+    "tags": "bayesian, optimization, objective function",
     "date": "2024-07-27 00:00:00 +0900",
     
 
@@ -852,9 +818,9 @@
   
   {
     "title": "Prior Determination",
-    "url": "/posts/Prior/",
-    "categories": "BAYES, 1.bayes basic",
-    "tags": "Bayesian",
+    "url": "/posts/prior/",
+    "categories": "5.BAYES, 1.bayes basic",
+    "tags": "bayesian, prior, conjugate",
     "date": "2024-07-26 00:00:00 +0900",
     
 
@@ -869,9 +835,9 @@
   
   {
     "title": "Frequentist vs. Bayesian",
-    "url": "/posts/Freq_Bayes/",
-    "categories": "BAYES, 1.bayes basic",
-    "tags": "Bayesian, Optimization, MLE, Bayes' Theorem",
+    "url": "/posts/freq_bayes/",
+    "categories": "5.BAYES, 1.bayes basic",
+    "tags": "bayesian, optimization, mle, bayes' theorem",
     "date": "2024-07-25 00:00:00 +0900",
     
 
@@ -886,9 +852,9 @@
   
   {
     "title": "Bayesian Framework",
-    "url": "/posts/Bayesian_Framework/",
-    "categories": "BAYES, 1.bayes basic",
-    "tags": "Epistemology, Bayesian, Bayes' Theorem",
+    "url": "/posts/bayesian_framework/",
+    "categories": "5.BAYES, 1.bayes basic",
+    "tags": "epistemology, bayesian, bayes' theorem",
     "date": "2024-07-24 00:00:00 +0900",
     
 
@@ -903,9 +869,9 @@
   
   {
     "title": "Justification of Bayesianism",
-    "url": "/posts/Justification/",
-    "categories": "BAYES, 1.bayes basic",
-    "tags": "Epistemology, Bayesian, Bayes' Theorem",
+    "url": "/posts/justification/",
+    "categories": "5.BAYES, 1.bayes basic",
+    "tags": "epistemology, bayesian, bayes' theorem",
     "date": "2024-07-23 00:00:00 +0900",
     
 
@@ -920,9 +886,9 @@
   
   {
     "title": "Bayesianism",
-    "url": "/posts/Bayesianism/",
-    "categories": "BAYES, 1.bayes basic",
-    "tags": "Epistemology, Bayesian, Bayes' Theorem",
+    "url": "/posts/bayesianism/",
+    "categories": "5.BAYES, 1.bayes basic",
+    "tags": "epistemology, bayesian, bayes' theorem",
     "date": "2024-07-22 00:00:00 +0900",
     
 
@@ -937,9 +903,9 @@
   
   {
     "title": "Logistic Regression Analysis",
-    "url": "/posts/Logistic_Regression_Analysis/",
-    "categories": "STATISTICAL TECHS, 2.regression analysis",
-    "tags": "Statistics, Regression",
+    "url": "/posts/logistic_regression_analysis/",
+    "categories": "2.STATISTICAL TECHS, 3.regression analysis",
+    "tags": "statistics, regression analysis, logistic regression analysis, binary data analysis",
     "date": "2024-07-21 00:00:00 +0900",
     
 
@@ -954,9 +920,9 @@
   
   {
     "title": "Improvement of OLS",
-    "url": "/posts/Improvement_of_OLS/",
-    "categories": "STATISTICAL TECHS, 2.regression analysis",
-    "tags": "Statistics, Regression",
+    "url": "/posts/improvement_of_ols/",
+    "categories": "2.STATISTICAL TECHS, 3.regression analysis",
+    "tags": "statistics, regression analysis, linear regression analysis, numerical data analysis",
     "date": "2024-07-20 00:00:00 +0900",
     
 
@@ -971,9 +937,9 @@
   
   {
     "title": "Variable Issues",
-    "url": "/posts/Variable_Issues/",
-    "categories": "STATISTICAL TECHS, 2.regression analysis",
-    "tags": "Statistics, Regression",
+    "url": "/posts/variable_issues/",
+    "categories": "2.STATISTICAL TECHS, 3.regression analysis",
+    "tags": "statistics, regression analysis, linear regression analysis, numerical data analysis",
     "date": "2024-07-19 00:00:00 +0900",
     
 
@@ -988,9 +954,9 @@
   
   {
     "title": "Regression Diagnostics",
-    "url": "/posts/Regression_Diagnostics/",
-    "categories": "STATISTICAL TECHS, 2.regression analysis",
-    "tags": "Statistics, Regression",
+    "url": "/posts/regression_diagnostics/",
+    "categories": "2.STATISTICAL TECHS, 3.regression analysis",
+    "tags": "statistics, regression analysis, linear regression analysis, numerical data analysis",
     "date": "2024-07-18 00:00:00 +0900",
     
 
@@ -1005,9 +971,9 @@
   
   {
     "title": "Multiple Linear Regression Analysis",
-    "url": "/posts/Multiple_Linear_Regression_Analysis/",
-    "categories": "STATISTICAL TECHS, 2.regression analysis",
-    "tags": "Statistics, Regression, f Test",
+    "url": "/posts/multiple_linear_regression_analysis/",
+    "categories": "2.STATISTICAL TECHS, 3.regression analysis",
+    "tags": "statistics, regression analysis, linear regression analysis, numerical data analysis, f-test",
     "date": "2024-07-17 00:00:00 +0900",
     
 
@@ -1022,9 +988,9 @@
   
   {
     "title": "Regression Coefficient Estimation",
-    "url": "/posts/Regression_Coefficient_Estimation/",
-    "categories": "STATISTICAL TECHS, 2.regression analysis",
-    "tags": "Statistics, Regression, Estimation, OLS",
+    "url": "/posts/regression_coefficient_estimation/",
+    "categories": "2.STATISTICAL TECHS, 3.regression analysis",
+    "tags": "statistics, regression analysis, linear regression analysis, numerical data analysis, estimation, ols",
     "date": "2024-07-16 00:00:00 +0900",
     
 
@@ -1039,9 +1005,9 @@
   
   {
     "title": "Simple Linear Regression Analysis",
-    "url": "/posts/Simple_Linear_Regression_Analysis/",
-    "categories": "STATISTICAL TECHS, 2.regression analysis",
-    "tags": "Statistics, Regression, t Test, Goodness of Fit Test, R2",
+    "url": "/posts/simple_linear_regression_analysis/",
+    "categories": "2.STATISTICAL TECHS, 3.regression analysis",
+    "tags": "statistics, regression analysis, linear regression analysis, numerical data analysis, t-test, goodness of fit test, r2",
     "date": "2024-07-15 00:00:00 +0900",
     
 
@@ -1056,9 +1022,9 @@
   
   {
     "title": "Test of Independence",
-    "url": "/posts/Test_of_Independence/",
-    "categories": "STATISTICAL TECHS, 1.statistics",
-    "tags": "Statistics, Design of Experiments, A/B Test, Chi-Squared Test, Test of Independence, Chi-Squared Dist.",
+    "url": "/posts/test_of_independence/",
+    "categories": "2.STATISTICAL TECHS, 2.statistics",
+    "tags": "statistics, design of experiments, a/b test, chi-squared Test, test of independence, chi-squared distribution",
     "date": "2024-07-13 00:00:00 +0900",
     
 
@@ -1073,9 +1039,9 @@
   
   {
     "title": "Goodness of Fit Test",
-    "url": "/posts/Goodness_of_Fit/",
-    "categories": "STATISTICAL TECHS, 1.statistics",
-    "tags": "Statistics, Design of Experiments, A/B Test, Chi-Squared Test, Goodness-of-Fit Test, Chi-Squared Dist.",
+    "url": "/posts/goodness_of_fit/",
+    "categories": "2.STATISTICAL TECHS, 2.statistics",
+    "tags": "statistics, design of experiments, a/b test, chi-squared Test, goodness-of-fit test, chi-squared distribution",
     "date": "2024-07-12 00:00:00 +0900",
     
 
@@ -1090,9 +1056,9 @@
   
   {
     "title": "Shapiro-Wilk Test",
-    "url": "/posts/Shapiro_Wilk_Test/",
-    "categories": "STATISTICAL TECHS, 1.statistics",
-    "tags": "Statistics, Design of Experiments, A/B Test, t-Test, Two Sample t-Test, Paired Sample t-Test, Student’s t-Dist.",
+    "url": "/posts/shapiro_wilk_test/",
+    "categories": "2.STATISTICAL TECHS, 2.statistics",
+    "tags": "statistics, design of experiments, a/b test, t-test, two sample t-test, paired sample t-test, student’s t-distribution",
     "date": "2024-07-11 00:00:00 +0900",
     
 
@@ -1107,9 +1073,9 @@
   
   {
     "title": "Paired Sample t-Test",
-    "url": "/posts/Paired_Sample_t_Test/",
-    "categories": "STATISTICAL TECHS, 1.statistics",
-    "tags": "Statistics, Design of Experiments, A/B Test, t-Test, Two Sample t-Test, Paired Sample t-Test, Student’s t-Dist.",
+    "url": "/posts/paired_sample_t_test/",
+    "categories": "2.STATISTICAL TECHS, 2.statistics",
+    "tags": "statistics, design of experiments, a/b test, t-test, two sample t-test, paired sample t-test, student’s t-distribution",
     "date": "2024-07-10 00:00:00 +0900",
     
 
@@ -1124,9 +1090,9 @@
   
   {
     "title": "Levene’s Test",
-    "url": "/posts/Levene_Test/",
-    "categories": "STATISTICAL TECHS, 1.statistics",
-    "tags": "Statistics, Design of Experiments, A/B Test, F-Test, Equal-Variance Test, Levene’s Test, F-Dist.",
+    "url": "/posts/levene_test/",
+    "categories": "2.STATISTICAL TECHS, 2.statistics",
+    "tags": "statistics, design of experiments, a/b test, f-test, equal-variance test, levene’s Test, f distribution",
     "date": "2024-07-09 00:00:00 +0900",
     
 
@@ -1141,9 +1107,9 @@
   
   {
     "title": "Student's t-Test",
-    "url": "/posts/Student_t_Test/",
-    "categories": "STATISTICAL TECHS, 1.statistics",
-    "tags": "Statistics, Design of Experiments, A/B Test, t-Test, Two Sample t-Test, Independent Samples t-Test, Student's t-Test, Student’s t-Dist.",
+    "url": "/posts/student_t_test/",
+    "categories": "2.STATISTICAL TECHS, 2.statistics",
+    "tags": "statistics, design of experiments, a/b test, t-test, two sample t-test, independent samples t-test, student’s t-test, student’s t-distribution",
     "date": "2024-07-08 00:00:00 +0900",
     
 
@@ -1158,9 +1124,9 @@
   
   {
     "title": "Welch’s t-Test",
-    "url": "/posts/Welch_t_Test/",
-    "categories": "STATISTICAL TECHS, 1.statistics",
-    "tags": "Statistics, Design of Experiments, A/B Test, t-Test, Two Sample t-Test, Independent Samples t-Test, Welch’s t-Test, Student’s t-Dist.",
+    "url": "/posts/welch_t_test/",
+    "categories": "2.STATISTICAL TECHS, 2.statistics",
+    "tags": "statistics, design of experiments, a/b test, t-test, two sample t-test, independent samples t-test, welch’s t-test, student’s t-distribution",
     "date": "2024-07-07 00:00:00 +0900",
     
 
@@ -1175,9 +1141,9 @@
   
   {
     "title": "A/B Test",
-    "url": "/posts/A_B_Test/",
-    "categories": "STATISTICAL TECHS, 1.statistics",
-    "tags": "Statistics, Design of Experiments, A/B Test",
+    "url": "/posts/ab_test/",
+    "categories": "2.STATISTICAL TECHS, 2.statistics",
+    "tags": "statistics, design of experiments, a/b test",
     "date": "2024-07-06 00:00:00 +0900",
     
 
@@ -1192,9 +1158,9 @@
   
   {
     "title": "Hypothesis Testing",
-    "url": "/posts/Hypothesis_Testing/",
-    "categories": "STATISTICAL TECHS, 1.statistics",
-    "tags": "Statistics, Estimation, z Test, t Test",
+    "url": "/posts/hypothesis_testing/",
+    "categories": "2.STATISTICAL TECHS, 2.statistics",
+    "tags": "statistics, estimation, z test, t test",
     "date": "2024-07-05 00:00:00 +0900",
     
 
@@ -1209,9 +1175,9 @@
   
   {
     "title": "Estimation",
-    "url": "/posts/Estimation/",
-    "categories": "STATISTICAL TECHS, 1.statistics",
-    "tags": "Statistics, Estimation, z Test, t Test",
+    "url": "/posts/estimation/",
+    "categories": "2.STATISTICAL TECHS, 2.statistics",
+    "tags": "statistics, estimation, z test, t test",
     "date": "2024-07-04 00:00:00 +0900",
     
 
@@ -1225,27 +1191,10 @@
   },
   
   {
-    "title": "Sample Dist.",
-    "url": "/posts/Sample_Dist/",
-    "categories": "STATISTICAL TECHS, 1.statistics",
-    "tags": "Statistics",
-    "date": "2024-07-03 00:00:00 +0900",
-    
-
-
-
-
-
-    
-    "snippet": "Sample Analysis  표본 분석(Sample Analysis) : 전체 모집단에서 일부 표본을 추출하여 분석하고, 이를 통해 전체 모집단의 특성(모수)을 추론하는 통계적 방법          표본의 평균 $\\overline{X}$ 이 모집단의 평균 $\\mu$ 를 얼마나 잘 추정하는가      확률변수 $\\overline{X}$ 의 기대값 $\\...",
-    "content": "Sample Analysis  표본 분석(Sample Analysis) : 전체 모집단에서 일부 표본을 추출하여 분석하고, 이를 통해 전체 모집단의 특성(모수)을 추론하는 통계적 방법          표본의 평균 $\\overline{X}$ 이 모집단의 평균 $\\mu$ 를 얼마나 잘 추정하는가      확률변수 $\\overline{X}$ 의 기대값 $\\mathbb{E}\\left[\\overline{X}\\right]$ 은 상수 $\\mu$ 에 가까운가      추정량 $\\overline{X}$ 의 기대값 $\\mathbb{E}\\left[\\overline{X}\\right]$ 과 모수 $\\mu$ 사이에는 얼마나 큰 추정오차가 존재하는가            모수 추정량과 추정치          모수는 그 값이 알려져 있지 않은 고정된 수이다. 이 값을 추정하기 위하여 표본의 통계량을 사용하므로, 통계량은 모수의 추정량이라 할 수 있다. 그런데 모집단에서 어떤 표본을 추출하느냐에 따라 통계량의 실현값이 달라진다. 따라서 모수는 상수(Constant), 통계량은 확률변수(Random Variable) 라고 볼 수 있다.                      추정량(Estimator) : 모수를 추정하는 값으로서 표본의 통계량(Statistics)\\[\\begin{aligned}  \\hat{\\mu}  = \\overline{X}  = \\frac{1}{n}\\sum_{i=1}^{n}{X_{i}}  \\end{aligned}\\]                    추정치(Estimate) : 특정 표본에서 얻어진 추정량의 실현값(Realized Value)\\[\\begin{aligned}  \\hat{\\mu}_{k}  = \\overline{x}_{k}  = \\frac{1}{\\vert \\Omega_{k} \\vert}\\sum_{i \\in \\Omega_{k}}{x_{i}}  \\end{aligned}\\]            Sampling Distribution  표본분포(Sampling Distribution) : 모수 추정량의 확률분포로서 주로 모평균 $\\mu$ 의 추정량 $\\overline{X}$ 의 분포에 관하여 논의함\\[\\begin{aligned}\\overline{X} \\sim \\mathcal{N}(\\mu,\\frac{\\sigma^{2}}{n}) \\quad \\text{s.t.} \\quad n&gt;30\\end{aligned}\\]      표본평균 $\\overline{X}$ 의 기대값:\\[\\begin{aligned}  \\mathbb{E}\\left[\\overline{X}\\right]  &amp;= \\mathbb{E}\\left[\\frac{1}{n}(X_{1}+X_{2}+\\cdots+X_{n})\\right]\\\\  &amp;=\\frac{1}{n}\\left(\\mathbb{E}\\left[X_{1}+X_{2}+\\cdots+X_{n}\\right]\\right)\\\\  &amp;=\\frac{1}{n}\\left(\\mathbb{E}\\left[X_{1}\\right]+\\mathbb{E}\\left[X_{2}\\right]+\\cdots+\\mathbb{E}\\left[X_{n}\\right]\\right)\\\\  &amp;=\\frac{1}{n}\\left(\\mu + \\mu + \\cdots + \\mu \\right)\\\\  &amp;=\\mu  \\end{aligned}\\]        표본평균 $\\overline{X}$ 의 분산:\\[\\begin{aligned}  \\mathrm{Var}\\left[\\overline{X}\\right]  &amp;= \\mathrm{Var}\\left[\\frac{1}{n}(X_{1}+X_{2}+\\cdots+X_{n})\\right]\\\\  &amp;=\\mathrm{Var}\\left[\\frac{1}{n}X_{1}\\right]+\\mathrm{Var}\\left[\\frac{1}{n}X_{2}\\right]+\\cdots+\\mathrm{Var}\\left[\\frac{1}{n}X_{n}\\right]   \\quad \\because \\mathrm{Cov}\\left[\\overline{x}_i, \\overline{x}_j\\right]=0\\\\  &amp;=\\frac{1}{n^2}\\mathrm{Var}\\left[X_{1}\\right]+\\frac{1}{n^2}\\mathrm{Var}\\left[X_{2}\\right]+\\cdots+\\frac{1}{n^2}\\mathrm{Var}\\left[X_{n}\\right]\\\\  &amp;=\\frac{1}{n^2}\\sigma^2 + \\frac{1}{n^2}\\sigma^2 + \\cdots + \\frac{1}{n^2}\\sigma^2\\\\  &amp;=\\frac{1}{n^2}(\\sigma^2 + \\cdots + \\sigma^2)\\\\  &amp;=\\frac{\\sigma^2}{n}  \\end{aligned}\\]        표준오차(Standard Error) : $\\overline{X}$ 의 표준편차\\[\\begin{aligned}  \\mathrm{SE}  =\\sqrt{\\frac{\\sigma^2}{n}}  =\\mathbb{E}\\left[\\vert\\overline{X}-\\mu\\vert\\right]  \\end{aligned}\\]  Central Limit Theorem      큰 수의 법칙(Law of Large Numbers): 표본의 수가 증가할수록, 그 표본의 평균은 모집단의 기댓값에 수렴한다는 법칙          무작위 표본 $X_{1},X_{2},\\cdots,X_{n}$ 이 동일한 분포를 따르고, 그 기대값 $\\mathbb{E}\\left[X_{i}\\right]=\\mu$ 일 때, 표본평균 $\\overline{X}$ 은 모평균 $\\mu$ 에 수렴함    \\[\\begin{aligned}  \\overline{X}_{n}=\\frac{1}{n}\\sum_{i=1}^{n}{X_{i}} \\to \\mu \\quad (n \\to \\infty)  \\end{aligned}\\]        중심극한정리(Central Limit Theorem): 표본의 수가 증가할수록, 그 표본의 평균의 분포가 가우시안 분포에 근사한다는 정리          평균이 $\\mu$ 이고, 분산이 $\\sigma^2$ 인 모집단에서 크기가 $n$ 인 표본을 추출하는 경우 $n$ 이 증가할수록 표본평균 $\\overline{X}$ 의 분포는 가우시안 분포 $\\mathcal{N}(\\mu,\\sigma^{2}/n)$ 에 근사함    \\[\\begin{aligned}  \\overline{X} \\sim \\mathcal{N}(\\mu, \\frac{\\sigma^2}{n}) \\quad \\text{s.t.} \\quad n &gt; 30  \\end{aligned}\\]  "
-  },
-  
-  {
     "title": "Mult-VAE",
-    "url": "/posts/VACF/",
-    "categories": "RECOMMENDER SYSTEM, 3.ae based collaborative filtering",
-    "tags": "Paper Review, AI Application, Recommender System, Collaborative Filtering, Autoencoder, Bayesian",
+    "url": "/posts/vacf/",
+    "categories": "6.RECOMMENDER SYSTEM, 3.ae based collaborative filtering",
+    "tags": "ai application, recommender system, collaborative filtering, autoencoder, bayesian",
     "date": "2024-07-03 00:00:00 +0900",
     
 
@@ -1259,10 +1208,27 @@
   },
   
   {
+    "title": "Sample Dist.",
+    "url": "/posts/sample_dist/",
+    "categories": "2.STATISTICAL TECHS, 2.statistics",
+    "tags": "statistics, sample, sample distribution",
+    "date": "2024-07-03 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "Sample Analysis  표본 분석(Sample Analysis) : 전체 모집단에서 일부 표본을 추출하여 분석하고, 이를 통해 전체 모집단의 특성(모수)을 추론하는 통계적 방법          표본의 평균 $\\overline{X}$ 이 모집단의 평균 $\\mu$ 를 얼마나 잘 추정하는가      확률변수 $\\overline{X}$ 의 기대값 $\\...",
+    "content": "Sample Analysis  표본 분석(Sample Analysis) : 전체 모집단에서 일부 표본을 추출하여 분석하고, 이를 통해 전체 모집단의 특성(모수)을 추론하는 통계적 방법          표본의 평균 $\\overline{X}$ 이 모집단의 평균 $\\mu$ 를 얼마나 잘 추정하는가      확률변수 $\\overline{X}$ 의 기대값 $\\mathbb{E}\\left[\\overline{X}\\right]$ 은 상수 $\\mu$ 에 가까운가      추정량 $\\overline{X}$ 의 기대값 $\\mathbb{E}\\left[\\overline{X}\\right]$ 과 모수 $\\mu$ 사이에는 얼마나 큰 추정오차가 존재하는가            모수 추정량과 추정치          모수는 그 값이 알려져 있지 않은 고정된 수이다. 이 값을 추정하기 위하여 표본의 통계량을 사용하므로, 통계량은 모수의 추정량이라 할 수 있다. 그런데 모집단에서 어떤 표본을 추출하느냐에 따라 통계량의 실현값이 달라진다. 따라서 모수는 상수(Constant), 통계량은 확률변수(Random Variable) 라고 볼 수 있다.                      추정량(Estimator) : 모수를 추정하는 값으로서 표본의 통계량(Statistics)\\[\\begin{aligned}  \\hat{\\mu}  = \\overline{X}  = \\frac{1}{n}\\sum_{i=1}^{n}{X_{i}}  \\end{aligned}\\]                    추정치(Estimate) : 특정 표본에서 얻어진 추정량의 실현값(Realized Value)\\[\\begin{aligned}  \\hat{\\mu}_{k}  = \\overline{x}_{k}  = \\frac{1}{\\vert \\Omega_{k} \\vert}\\sum_{i \\in \\Omega_{k}}{x_{i}}  \\end{aligned}\\]            Sampling Distribution  표본분포(Sampling Distribution) : 모수 추정량의 확률분포로서 주로 모평균 $\\mu$ 의 추정량 $\\overline{X}$ 의 분포에 관하여 논의함\\[\\begin{aligned}\\overline{X} \\sim \\mathcal{N}(\\mu,\\frac{\\sigma^{2}}{n}) \\quad \\text{s.t.} \\quad n&gt;30\\end{aligned}\\]      표본평균 $\\overline{X}$ 의 기대값:\\[\\begin{aligned}  \\mathbb{E}\\left[\\overline{X}\\right]  &amp;= \\mathbb{E}\\left[\\frac{1}{n}(X_{1}+X_{2}+\\cdots+X_{n})\\right]\\\\  &amp;=\\frac{1}{n}\\left(\\mathbb{E}\\left[X_{1}+X_{2}+\\cdots+X_{n}\\right]\\right)\\\\  &amp;=\\frac{1}{n}\\left(\\mathbb{E}\\left[X_{1}\\right]+\\mathbb{E}\\left[X_{2}\\right]+\\cdots+\\mathbb{E}\\left[X_{n}\\right]\\right)\\\\  &amp;=\\frac{1}{n}\\left(\\mu + \\mu + \\cdots + \\mu \\right)\\\\  &amp;=\\mu  \\end{aligned}\\]        표본평균 $\\overline{X}$ 의 분산:\\[\\begin{aligned}  \\mathrm{Var}\\left[\\overline{X}\\right]  &amp;= \\mathrm{Var}\\left[\\frac{1}{n}(X_{1}+X_{2}+\\cdots+X_{n})\\right]\\\\  &amp;=\\mathrm{Var}\\left[\\frac{1}{n}X_{1}\\right]+\\mathrm{Var}\\left[\\frac{1}{n}X_{2}\\right]+\\cdots+\\mathrm{Var}\\left[\\frac{1}{n}X_{n}\\right]   \\quad \\because \\mathrm{Cov}\\left[\\overline{x}_i, \\overline{x}_j\\right]=0\\\\  &amp;=\\frac{1}{n^2}\\mathrm{Var}\\left[X_{1}\\right]+\\frac{1}{n^2}\\mathrm{Var}\\left[X_{2}\\right]+\\cdots+\\frac{1}{n^2}\\mathrm{Var}\\left[X_{n}\\right]\\\\  &amp;=\\frac{1}{n^2}\\sigma^2 + \\frac{1}{n^2}\\sigma^2 + \\cdots + \\frac{1}{n^2}\\sigma^2\\\\  &amp;=\\frac{1}{n^2}(\\sigma^2 + \\cdots + \\sigma^2)\\\\  &amp;=\\frac{\\sigma^2}{n}  \\end{aligned}\\]        표준오차(Standard Error) : $\\overline{X}$ 의 표준편차\\[\\begin{aligned}  \\mathrm{SE}  =\\sqrt{\\frac{\\sigma^2}{n}}  =\\mathbb{E}\\left[\\vert\\overline{X}-\\mu\\vert\\right]  \\end{aligned}\\]  Central Limit Theorem      큰 수의 법칙(Law of Large Numbers): 표본의 수가 증가할수록, 그 표본의 평균은 모집단의 기댓값에 수렴한다는 법칙          무작위 표본 $X_{1},X_{2},\\cdots,X_{n}$ 이 동일한 분포를 따르고, 그 기대값 $\\mathbb{E}\\left[X_{i}\\right]=\\mu$ 일 때, 표본평균 $\\overline{X}$ 은 모평균 $\\mu$ 에 수렴함    \\[\\begin{aligned}  \\overline{X}_{n}=\\frac{1}{n}\\sum_{i=1}^{n}{X_{i}} \\to \\mu \\quad (n \\to \\infty)  \\end{aligned}\\]        중심극한정리(Central Limit Theorem): 표본의 수가 증가할수록, 그 표본의 평균의 분포가 가우시안 분포에 근사한다는 정리          평균이 $\\mu$ 이고, 분산이 $\\sigma^2$ 인 모집단에서 크기가 $n$ 인 표본을 추출하는 경우 $n$ 이 증가할수록 표본평균 $\\overline{X}$ 의 분포는 가우시안 분포 $\\mathcal{N}(\\mu,\\sigma^{2}/n)$ 에 근사함    \\[\\begin{aligned}  \\overline{X} \\sim \\mathcal{N}(\\mu, \\frac{\\sigma^2}{n}) \\quad \\text{s.t.} \\quad n &gt; 30  \\end{aligned}\\]  "
+  },
+  
+  {
     "title": "Random Sample",
-    "url": "/posts/Sample/",
-    "categories": "STATISTICAL TECHS, 1.statistics",
-    "tags": "Statistics",
+    "url": "/posts/sample/",
+    "categories": "2.STATISTICAL TECHS, 2.statistics",
+    "tags": "statistics, sample, parameter",
     "date": "2024-07-02 00:00:00 +0900",
     
 
@@ -1277,9 +1243,9 @@
   
   {
     "title": "What? Statistics",
-    "url": "/posts/Statistics/",
-    "categories": "STATISTICAL TECHS, 1.statistics",
-    "tags": "Statistics",
+    "url": "/posts/statistics/",
+    "categories": "2.STATISTICAL TECHS, 2.statistics",
+    "tags": "statistics",
     "date": "2024-07-01 00:00:00 +0900",
     
 
@@ -1294,9 +1260,9 @@
   
   {
     "title": "CDAE",
-    "url": "/posts/CDAE/",
-    "categories": "RECOMMENDER SYSTEM, 3.ae based collaborative filtering",
-    "tags": "Paper Review, AI Application, Recommender System, Collaborative Filtering, Autoencoder, Bayesian",
+    "url": "/posts/cdae/",
+    "categories": "6.RECOMMENDER SYSTEM, 3.ae based collaborative filtering",
+    "tags": "ai application, recommender system, collaborative filtering, autoencoder",
     "date": "2024-06-19 00:00:00 +0900",
     
 
@@ -1311,9 +1277,9 @@
   
   {
     "title": "AutoRec",
-    "url": "/posts/AutoRec/",
-    "categories": "RECOMMENDER SYSTEM, 3.ae based collaborative filtering",
-    "tags": "Paper Review, AI Application, Recommender System, Collaborative Filtering, Autoencoder, Bayesian",
+    "url": "/posts/autorec/",
+    "categories": "6.RECOMMENDER SYSTEM, 3.ae based collaborative filtering",
+    "tags": "ai application, recommender system, collaborative filtering, autoencoder",
     "date": "2024-06-05 00:00:00 +0900",
     
 
@@ -1328,9 +1294,9 @@
   
   {
     "title": "User Free Models",
-    "url": "/posts/User_Free_Models/",
-    "categories": "RECOMMENDER SYSTEM, 2.mlp based collaborative filtering",
-    "tags": "AI Application, Recommender System, Collaborative Filtering, MLP, Attention Mechanism",
+    "url": "/posts/user_free_models/",
+    "categories": "6.RECOMMENDER SYSTEM, 2.mlp based collaborative filtering",
+    "tags": "ai application, recommender system, collaborative filtering, latent factor model, matrix factorization, attention mechanism",
     "date": "2024-05-22 00:00:00 +0900",
     
 
@@ -1345,9 +1311,9 @@
   
   {
     "title": "Latent Factor Model with Attention Mechanism",
-    "url": "/posts/LFM_ATTN/",
-    "categories": "RECOMMENDER SYSTEM, 2.mlp based collaborative filtering",
-    "tags": "AI Application, Recommender System, Collaborative Filtering, Latent Factor Model, MLP, Attention Mechanism",
+    "url": "/posts/lfm_attn/",
+    "categories": "6.RECOMMENDER SYSTEM, 2.mlp based collaborative filtering",
+    "tags": "ai application, recommender system, collaborative filtering, latent factor model, ncf, neural networks, mlp, attention mechanism",
     "date": "2024-05-08 00:00:00 +0900",
     
 
@@ -1362,9 +1328,9 @@
   
   {
     "title": "Latent Factor Model with CNN",
-    "url": "/posts/LFM_CNN/",
-    "categories": "RECOMMENDER SYSTEM, 2.mlp based collaborative filtering",
-    "tags": "AI Application, Recommender System, Collaborative Filtering, Latent Factor Model, MLP, CNN",
+    "url": "/posts/lfm_cnn/",
+    "categories": "6.RECOMMENDER SYSTEM, 2.mlp based collaborative filtering",
+    "tags": "ai application, recommender system, collaborative filtering, latent factor model, ncf, neural networks, cnn",
     "date": "2024-04-24 00:00:00 +0900",
     
 
@@ -1379,9 +1345,9 @@
   
   {
     "title": "Distance Embedding based Latent Factor Model",
-    "url": "/posts/Dist_Embedding/",
-    "categories": "RECOMMENDER SYSTEM, 2.mlp based collaborative filtering",
-    "tags": "AI Application, Recommender System, Collaborative Filtering, Latent Factor Model, MLP",
+    "url": "/posts/dist_embedding/",
+    "categories": "6.RECOMMENDER SYSTEM, 2.mlp based collaborative filtering",
+    "tags": "ai application, recommender system, collaborative filtering, latent factor model, ncf, neural networks, mlp",
     "date": "2024-04-10 00:00:00 +0900",
     
 
@@ -1396,9 +1362,9 @@
   
   {
     "title": "Dual Embedding based Latent Factor Model",
-    "url": "/posts/Dual_Embedding/",
-    "categories": "RECOMMENDER SYSTEM, 2.mlp based collaborative filtering",
-    "tags": "AI Application, Recommender System, Collaborative Filtering, Latent Factor Model, MLP",
+    "url": "/posts/dual_embedding/",
+    "categories": "6.RECOMMENDER SYSTEM, 2.mlp based collaborative filtering",
+    "tags": "ai application, recommender system, collaborative filtering, latent factor model, ncf, neural networks, mlp",
     "date": "2024-03-27 00:00:00 +0900",
     
 
@@ -1413,9 +1379,9 @@
   
   {
     "title": "History Embedding based Latent Factor Model",
-    "url": "/posts/Hist_Embedding/",
-    "categories": "RECOMMENDER SYSTEM, 2.mlp based collaborative filtering",
-    "tags": "AI Application, Recommender System, Collaborative Filtering, Latent Factor Model, MLP",
+    "url": "/posts/hist_embedding/",
+    "categories": "6.RECOMMENDER SYSTEM, 2.mlp based collaborative filtering",
+    "tags": "ai application, recommender system, collaborative filtering, latent factor model, ncf, neural networks, mlp",
     "date": "2024-03-13 00:00:00 +0900",
     
 
@@ -1430,9 +1396,9 @@
   
   {
     "title": "ID Embedding based Latent Factor Model",
-    "url": "/posts/ID_Embedding/",
-    "categories": "RECOMMENDER SYSTEM, 2.mlp based collaborative filtering",
-    "tags": "AI Application, Recommender System, Collaborative Filtering, Latent Factor Model, MLP",
+    "url": "/posts/id_embedding/",
+    "categories": "6.RECOMMENDER SYSTEM, 2.mlp based collaborative filtering",
+    "tags": "ai application, recommender system, collaborative filtering, latent factor model, ncf, neural networks, mlp",
     "date": "2024-02-29 00:00:00 +0900",
     
 
@@ -1447,9 +1413,9 @@
   
   {
     "title": "Deep Learning based Collaborative Filtering",
-    "url": "/posts/DL_based_CF/",
-    "categories": "RECOMMENDER SYSTEM, 2.mlp based collaborative filtering",
-    "tags": "AI Application, Recommender System, Collaborative Filtering",
+    "url": "/posts/dl_based_cf/",
+    "categories": "6.RECOMMENDER SYSTEM, 2.mlp based collaborative filtering",
+    "tags": "ai application, recommender system, collaborative filtering, ncf, autoencoder",
     "date": "2024-02-15 00:00:00 +0900",
     
 
@@ -1464,9 +1430,9 @@
   
   {
     "title": "Collaborative Filtering",
-    "url": "/posts/CF/",
-    "categories": "RECOMMENDER SYSTEM, 1.recsys basic",
-    "tags": "AI Application, Recommender System, Collaborative Filtering",
+    "url": "/posts/cf/",
+    "categories": "6.RECOMMENDER SYSTEM, 1.recsys basic",
+    "tags": "ai Application, recommender system, collaborative filtering, latent factor model, matrix factorization",
     "date": "2024-02-01 00:00:00 +0900",
     
 
@@ -1480,28 +1446,11 @@
   },
   
   {
-    "title": "What? Recommender System",
-    "url": "/posts/What_RecSys/",
-    "categories": "RECOMMENDER SYSTEM, 1.recsys basic",
-    "tags": "AI Application, Recommender System, Metric",
-    "date": "2024-01-18 00:00:00 +0900",
-    
-
-
-
-
-
-    
-    "snippet": "What? RecSys      추천시스템(Recommender System): 정보과부하 문제(Information Overload Problem)를 해결하기 위한 개인화 정보 필터링 서비스(Personalized Information Filtering Service) 로서, 사용자에게 적합한 아이템을 제안함으로써 개인화된 경험을 제공하는 기술   ...",
-    "content": "What? RecSys      추천시스템(Recommender System): 정보과부하 문제(Information Overload Problem)를 해결하기 위한 개인화 정보 필터링 서비스(Personalized Information Filtering Service) 로서, 사용자에게 적합한 아이템을 제안함으로써 개인화된 경험을 제공하는 기술          정보과부하 문제(Information Overload Problem): 인간이 처리할 수 있는 정보량 이상의 정보가 제공되어 오히려 개인의 정보 학습 및 의사결정이 방해 받는 현상            검색 엔진과 비교                                       Search Engine          Recommender System                                      사용자의 자세          능동성          수동성                          사용자 선호 파악          검색어          알고리즘                          사용자 선호 정보          검색 키워드          사용자 프로파일  아이템 프로파일  사용자 과거 행동                          사용자-아이템 상호작용 데이터(User-Item Interaction Data): 사용자의 아이템에 대한 선호 여부 및 정도를 포함하는 데이터          명시적 선호 데이터(Explicit Rating Data): 제시된 평가 시스템에 따라 직접 표출된 선호도      암시적 선호 데이터(Implicit Rating Data): 행동을 통해 우회로 표출된 선호도                  암시적 선호를 순서적으로 나타내는 경우, 이를 선호보다는 확신으로 해석함                    순서적 선호 데이터(Ordinal Rating Data): 정해진 숫자 또는 연속적인 범위로 표시된 선호도      단항 선호 데이터(Unary Rating Data): 상호작용이 있었다는 사실을 기록한 데이터      Filtering Methods      Most Popular(Best Seller)        내용 기반 필터링 기법(Content-based Filtering Method; CB): 타깃 사용자가 상호작용한 아이템의 콘텐츠를 분석하여 이와 유사한 콘텐츠를 보유하고 있는 아이템을 추천하는 방법          Show me more of the same what I’ve liked!                협업 필터링 기법(Collaborative Filtering Method; CF): 타깃 사용자의 구매 기록을 바탕으로 유사한 사용자 혹은 아이템을 탐색하여 추천하는 방법          Tell me what’s popular among my peers!                하이브리드 기법(Hybrid Method): 협업 필터링 기법과 내용 기반 필터링 기법을 결합하는 방법                                       Content-based Filtering          Collaborative Filtering                                      빅데이터          X          Rating Sparsity Problem                          사용자 의존성          X          Cold Start Problem                          아이템 커스터마이징          X          Grey Sheep Problem                          도메인 지식 필요성          Feature Engineering Problem          X                          도메인 종속성          X          CORS Problem  (Cross-Origin Resource Sharing)                          추천 결과의 참신성          X          Popularity Bias Problem                          추천 결과의 의외성          Trival Recommendation Problem          X                    Goal  추천시스템의 목적: 고객 가치 창출을 통한 기업 이윤 도모          가치 명제(Value Proposition): 고객이 필요로 하는 가치를 창출하기 위한 상품 및 서비스 조합      구매 가치(Purchase Value): 상품 및 서비스를 구매함으로써 고객이 직접적으로 얻게 되는 실용 가치      브랜드 가치(Brand Value): 브랜드에 대한 고객의 주관적/무형적 평가에 기초한, 고객이 특정 브랜드를 소유 및 경험함으로써 누리는 심리적 가치      관계 가치(Relationship Value): 특정 기업에 대한 구매 가치나 브랜드 가치를 넘어서 기업이 고객과 형성하게 되는 관계의 양적, 질적 정도        좋은 추천시스템의 요건          효과적(Effective): 사용자에게 얼마나 잘 맞는 아이템을 제안할 수 있는가      효율적(Efficient): 제안 생성 및 제공 과정에서 컴퓨팅 자원을 얼마나 잘 활용할 수 있는가      설명력(Explainable): 사용자에게 아이템을 제안한 근거나 로직을 설명할 수 있는가      설득력(Persuasive): 사용자가 제안된 아이템을 실제로 구매하거나 사용하도록 유도할 수 있는가        효과적인 추천의 목표          적합성(Relevance): 사용자가 관심 있을 것으로 짐작되는 아이템을 제안함      참신성(Novelty): 사용자가 이전에 관측하지 못했을 것으로 짐작되는 아이템을 제안함      의외성(Serendipity): 사용자가 예상하지 못했을 것으로 짐작되는 아이템을 제안함      다양성(Diversity): 제안된 정보 묶음이 확일적이지 않고 다양한 특성을 가진 정보들로 구성되어 있음      MetricsFocusing on Relevance  Ordinal Rating Prediction          RMSE(Root Mean Squared Error)      MAE(Mean Absolute Error)        Unary Rating Prediction          Recall      Precision      F1-Score        Top-K Rank Prediction          NDCG(Normalized Discounted Cumulative Gain): under the Explicit Ratings      MAP(Mean Average Precision): under the Implicit Ratings      MRR(Mean Reciprocal Rank)      Focusing on Diversity  Variance-based Diversity          Shanon Entropy      Simpson Concentration      Renyi Entropy        Equity-based Diversity          The Gini Coefficient derived from a Lorenz curve      Source  https://www.idownloadblog.com/2016/04/26/youtube-new-homepage-design/  https://towardsdatascience.com/essentials-of-recommendation-engines-content-based-and-collaborative-filtering-31521c964922"
-  },
-  
-  {
     "title": "AutoEncoder",
-    "url": "/posts/AE/",
-    "categories": "DATA MINING TECHS, 1.machine learning",
-    "tags": "Deep Learning, Unsupervised Learning, Feature Engineering, Autoencoder",
-    "date": "2024-01-15 00:00:00 +0900",
+    "url": "/posts/ae/",
+    "categories": "3.MACHINE LEARNING, 4.neural networks",
+    "tags": "machine learning, deep learning, neural networks, unsupervised learning, feature engineering, autoencoder, ffnn, mlp",
+    "date": "2024-01-25 00:00:00 +0900",
     
 
 
@@ -1515,10 +1464,10 @@
   
   {
     "title": "Recurrent Neural Networks",
-    "url": "/posts/RNN/",
-    "categories": "DATA MINING TECHS, 1.machine learning",
-    "tags": "Deep Learning, RNN, NLP, Time Series",
-    "date": "2024-01-14 00:00:00 +0900",
+    "url": "/posts/rnn/",
+    "categories": "3.MACHINE LEARNING, 4.neural networks",
+    "tags": "machine learning, deep learning, neural networks, rnn, time series, nlp",
+    "date": "2024-01-24 00:00:00 +0900",
     
 
 
@@ -1532,10 +1481,10 @@
   
   {
     "title": "Convolutional Neural Networks",
-    "url": "/posts/CNN/",
-    "categories": "DATA MINING TECHS, 1.machine learning",
+    "url": "/posts/cnn/",
+    "categories": "3.MACHINE LEARNING, 4.neural networks",
     "tags": "Deep Learning, CNN, CV",
-    "date": "2024-01-13 00:00:00 +0900",
+    "date": "2024-01-23 00:00:00 +0900",
     
 
 
@@ -1549,10 +1498,10 @@
   
   {
     "title": "Neural Networks",
-    "url": "/posts/NN/",
-    "categories": "DATA MINING TECHS, 1.machine learning",
-    "tags": "Deep Learning, FFNN",
-    "date": "2024-01-12 00:00:00 +0900",
+    "url": "/posts/nn/",
+    "categories": "3.MACHINE LEARNING, 4.neural networks",
+    "tags": "machine learning, deep learning, neural networks, ffnn, mlp",
+    "date": "2024-01-22 00:00:00 +0900",
     
 
 
@@ -1565,11 +1514,28 @@
   },
   
   {
+    "title": "What? Recommender System",
+    "url": "/posts/what_recsys/",
+    "categories": "6.RECOMMENDER SYSTEM, 1.recsys basic",
+    "tags": "ai application, recommender system, metric",
+    "date": "2024-01-18 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "What? RecSys      추천시스템(Recommender System): 정보과부하 문제(Information Overload Problem)를 해결하기 위한 개인화 정보 필터링 서비스(Personalized Information Filtering Service) 로서, 사용자에게 적합한 아이템을 제안함으로써 개인화된 경험을 제공하는 기술   ...",
+    "content": "What? RecSys      추천시스템(Recommender System): 정보과부하 문제(Information Overload Problem)를 해결하기 위한 개인화 정보 필터링 서비스(Personalized Information Filtering Service) 로서, 사용자에게 적합한 아이템을 제안함으로써 개인화된 경험을 제공하는 기술          정보과부하 문제(Information Overload Problem): 인간이 처리할 수 있는 정보량 이상의 정보가 제공되어 오히려 개인의 정보 학습 및 의사결정이 방해 받는 현상            검색 엔진과 비교                                       Search Engine          Recommender System                                      사용자의 자세          능동성          수동성                          사용자 선호 파악          검색어          알고리즘                          사용자 선호 정보          검색 키워드          사용자 프로파일  아이템 프로파일  사용자 과거 행동                          사용자-아이템 상호작용 데이터(User-Item Interaction Data): 사용자의 아이템에 대한 선호 여부 및 정도를 포함하는 데이터          명시적 선호 데이터(Explicit Rating Data): 제시된 평가 시스템에 따라 직접 표출된 선호도      암시적 선호 데이터(Implicit Rating Data): 행동을 통해 우회로 표출된 선호도                  암시적 선호를 순서적으로 나타내는 경우, 이를 선호보다는 확신으로 해석함                    순서적 선호 데이터(Ordinal Rating Data): 정해진 숫자 또는 연속적인 범위로 표시된 선호도      단항 선호 데이터(Unary Rating Data): 상호작용이 있었다는 사실을 기록한 데이터      Filtering Methods      Most Popular(Best Seller)        내용 기반 필터링 기법(Content-based Filtering Method; CB): 타깃 사용자가 상호작용한 아이템의 콘텐츠를 분석하여 이와 유사한 콘텐츠를 보유하고 있는 아이템을 추천하는 방법          Show me more of the same what I’ve liked!                협업 필터링 기법(Collaborative Filtering Method; CF): 타깃 사용자의 구매 기록을 바탕으로 유사한 사용자 혹은 아이템을 탐색하여 추천하는 방법          Tell me what’s popular among my peers!                하이브리드 기법(Hybrid Method): 협업 필터링 기법과 내용 기반 필터링 기법을 결합하는 방법                                       Content-based Filtering          Collaborative Filtering                                      빅데이터          X          Rating Sparsity Problem                          사용자 의존성          X          Cold Start Problem                          아이템 커스터마이징          X          Grey Sheep Problem                          도메인 지식 필요성          Feature Engineering Problem          X                          도메인 종속성          X          CORS Problem  (Cross-Origin Resource Sharing)                          추천 결과의 참신성          X          Popularity Bias Problem                          추천 결과의 의외성          Trival Recommendation Problem          X                    Goal  추천시스템의 목적: 고객 가치 창출을 통한 기업 이윤 도모          가치 명제(Value Proposition): 고객이 필요로 하는 가치를 창출하기 위한 상품 및 서비스 조합      구매 가치(Purchase Value): 상품 및 서비스를 구매함으로써 고객이 직접적으로 얻게 되는 실용 가치      브랜드 가치(Brand Value): 브랜드에 대한 고객의 주관적/무형적 평가에 기초한, 고객이 특정 브랜드를 소유 및 경험함으로써 누리는 심리적 가치      관계 가치(Relationship Value): 특정 기업에 대한 구매 가치나 브랜드 가치를 넘어서 기업이 고객과 형성하게 되는 관계의 양적, 질적 정도        좋은 추천시스템의 요건          효과적(Effective): 사용자에게 얼마나 잘 맞는 아이템을 제안할 수 있는가      효율적(Efficient): 제안 생성 및 제공 과정에서 컴퓨팅 자원을 얼마나 잘 활용할 수 있는가      설명력(Explainable): 사용자에게 아이템을 제안한 근거나 로직을 설명할 수 있는가      설득력(Persuasive): 사용자가 제안된 아이템을 실제로 구매하거나 사용하도록 유도할 수 있는가        효과적인 추천의 목표          적합성(Relevance): 사용자가 관심 있을 것으로 짐작되는 아이템을 제안함      참신성(Novelty): 사용자가 이전에 관측하지 못했을 것으로 짐작되는 아이템을 제안함      의외성(Serendipity): 사용자가 예상하지 못했을 것으로 짐작되는 아이템을 제안함      다양성(Diversity): 제안된 정보 묶음이 확일적이지 않고 다양한 특성을 가진 정보들로 구성되어 있음      MetricsFocusing on Relevance  Ordinal Rating Prediction          RMSE(Root Mean Squared Error)      MAE(Mean Absolute Error)        Unary Rating Prediction          Recall      Precision      F1-Score        Top-K Rank Prediction          NDCG(Normalized Discounted Cumulative Gain): under the Explicit Ratings      MAP(Mean Average Precision): under the Implicit Ratings      MRR(Mean Reciprocal Rank)      Focusing on Diversity  Variance-based Diversity          Shanon Entropy      Simpson Concentration      Renyi Entropy        Equity-based Diversity          The Gini Coefficient derived from a Lorenz curve      Source  https://www.idownloadblog.com/2016/04/26/youtube-new-homepage-design/  https://towardsdatascience.com/essentials-of-recommendation-engines-content-based-and-collaborative-filtering-31521c964922"
+  },
+  
+  {
     "title": "t-SNE",
-    "url": "/posts/t_SNE/",
-    "categories": "DATA MINING TECHS, 1.machine learning",
-    "tags": "Machine Learning, Unsupervised Learning, Feature Engineering",
-    "date": "2024-01-11 00:00:00 +0900",
+    "url": "/posts/tsne/",
+    "categories": "3.MACHINE LEARNING, 3.dimensionality reduction algorithm",
+    "tags": "machine learning, unsupervised learning, feature engineering, dimensionality reduction, information theory, tsne",
+    "date": "2024-01-17 00:00:00 +0900",
     
 
 
@@ -1582,11 +1548,28 @@
   },
   
   {
+    "title": "Principal Component Analysis",
+    "url": "/posts/pca/",
+    "categories": "3.MACHINE LEARNING, 3.dimensionality reduction algorithm",
+    "tags": "machine learning, unsupervised learning, feature engineering, dimensionality reduction, variance, pca, lda",
+    "date": "2024-01-16 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "PrerequisiteProjection      벡터 $\\mathbf{a}$ 를 벡터 $\\mathbf{b}$ 에 정사영했을 때, 정사영 벡터 $\\text{proj}_{\\mathbf{b}}(\\mathbf{a})$ 는 다음과 같음\\[\\begin{aligned}  \\cos{90^{\\circ}}  &amp;= \\frac{(\\mathbf{a}-p\\mathbf...",
+    "content": "PrerequisiteProjection      벡터 $\\mathbf{a}$ 를 벡터 $\\mathbf{b}$ 에 정사영했을 때, 정사영 벡터 $\\text{proj}_{\\mathbf{b}}(\\mathbf{a})$ 는 다음과 같음\\[\\begin{aligned}  \\cos{90^{\\circ}}  &amp;= \\frac{(\\mathbf{a}-p\\mathbf{b})^{T}\\mathbf{b}}{\\Vert \\mathbf{a}\\Vert \\cdot \\Vert\\mathbf{b}\\Vert}\\\\  &amp;= 0\\\\  \\therefore \\text{proj}_{\\mathbf{b}}(\\mathbf{a})  &amp;= p\\mathbf{b}\\\\  &amp;= \\left(\\frac{\\mathbf{a}^{T}\\mathbf{b}}{\\Vert\\mathbf{b}\\Vert^{2}}\\right)\\mathbf{b}  \\end{aligned}\\]          $p=\\displaystyle\\frac{\\mathbf{a}^{T}\\mathbf{b}}{\\Vert\\mathbf{b}\\Vert^{2}}$ : 정사영 벡터의 크기      $\\mathbf{b}$ : 정사영 벡터의 방향      Covariance Matrix      공분산(Covariance) : 두 확률변수의 선형관계를 나타내는 지표로서, 두 확률변수의 편차(관측치와 평균 사이 거리)를 곱한 값의 평균\\[\\sigma_{XY} = \\frac{1}{N}\\sum_{i=1}^{N}(X_{i}-\\mu_X)(Y_{i}-\\mu_Y)\\]        공분산행렬(Covariance Matrix) : $n$ 개 변수들 간 공분산을 나열한 $n \\times n$ 정방행렬\\[\\Sigma=  \\begin{matrix}  &amp; \\mathbf{A} &amp; \\mathbf{B} &amp; \\mathbf{C} \\\\  \\mathbf{A} &amp; \\sigma_{A}^2 &amp; \\sigma_{AB} &amp; \\sigma_{AC} \\\\  \\mathbf{B} &amp; \\sigma_{BA} &amp; \\sigma_{B}^2 &amp; \\sigma_{BC} \\\\  \\mathbf{C} &amp; \\sigma_{CA} &amp; \\sigma_{CB} &amp; \\sigma_{C}^2  \\end{matrix}\\]  Linear Transformation      행렬 $\\mathbf{X}$ 을 통한 선형변환은 어떤 좌표를 \\(\\begin{pmatrix}1\\\\0\\end{pmatrix},\\begin{pmatrix}0\\\\1\\end{pmatrix}\\) 를 기저로 사용하는 2차원 좌표계에서 \\(\\mathbf{x}_{1},\\mathbf{x}_{2}\\) 를 기저로 사용하는 2차원 좌표계로 변환하는 것을 의미함\\[\\begin{aligned}  \\mathbf{X}  &amp;= \\begin{pmatrix} 1&amp;3\\\\-2&amp;0 \\end{pmatrix}\\\\  &amp;= \\begin{pmatrix} \\mathbf{x}_{1}&amp;\\mathbf{x}_{2} \\end{pmatrix}  \\end{aligned}\\]        벡터 $\\mathbf{v}$ 는 \\(\\begin{pmatrix}1\\\\0\\end{pmatrix},\\begin{pmatrix}0\\\\1\\end{pmatrix}\\) 를 기저로 사용하는 2차원 좌표계의 좌표 $(-1,2)$ 를 나타냄\\[\\begin{aligned}  \\mathbf{v}  &amp;= \\begin{pmatrix} 1\\\\-2 \\end{pmatrix}\\\\  &amp;= -1\\begin{pmatrix}1\\\\0\\end{pmatrix} + 2\\begin{pmatrix}0\\\\1\\end{pmatrix}\\\\  \\end{aligned}\\]        $\\mathbf{X}$ 를 통한 선형 변환 결과 \\(\\mathbf{v}\\) 는 \\(\\mathbf{x}_{1},\\mathbf{x}_{2}\\) 를 기저로 사용하는 2차원 좌표계의 좌표 $(-1,2)$ 로 변환되었음\\[\\begin{aligned}  \\mathbf{X}\\cdot\\mathbf{v}  &amp;= \\begin{pmatrix} 1&amp;3\\\\-2&amp;0 \\end{pmatrix} \\cdot \\begin{pmatrix} 1\\\\-2 \\end{pmatrix}\\\\  &amp;= \\begin{pmatrix}-5\\\\2\\end{pmatrix}\\\\  &amp;= -1\\mathbf{x}_{1} + 2\\mathbf{x}_{2}  \\end{aligned}\\]  Eigen-Vector      고유벡터(Eigen-Vector; $\\mathbf{v}$): 정방행렬 $A_n$ 으로 선형변환했을 때, 그 방향은 변하지 않고 단지 크기만 변하는 $\\mathbf{0}$ 이 아닌 벡터\\[\\begin{aligned}  \\begin{pmatrix}  a_{11}&amp;a_{12}&amp;\\cdots&amp;a_{1n}\\\\  a_{21}&amp;a_{22}&amp;\\cdots&amp;a_{1n}\\\\  \\vdots&amp;\\vdots&amp;\\ddots&amp;\\vdots\\\\  a_{n1}&amp;a_{n2}&amp;\\cdots&amp;a_{nn}  \\end{pmatrix}  \\begin{pmatrix}  v_{1} \\\\ v_{2} \\\\ \\vdots \\\\ v_{n}  \\end{pmatrix}  =  \\lambda  \\begin{pmatrix}  v_{1} \\\\ v_{2} \\\\ \\vdots \\\\ v_{n}  \\end{pmatrix}  \\Leftrightarrow  A_{n \\times n} \\mathbf{v}   = \\lambda \\mathbf{v}  \\end{aligned}\\]        고유값(Eigen-Value; $\\lambda$): 고유벡터의 선형변환 전 크기 대비 선형변환 후 크기의 비율  Principal Component Analysis      주성분 분석(Principal Component Analysis; PCA): 고차원 데이터에 대하여, X의 방향적 분포를 가장 잘 설명하는 새로운 저차원 직교 좌표를 학습하는 기법              주성분(Principal Component; PC): 새로운 저차원 직교 좌표            방법: 관측치 간 상대적 특성을 잘 보존하는 성분들을 추출함              $\\text{component}$ : 주성분 벡터 $\\mathbf{w}$      $\\text{datapoint}$ : 관측치 벡터 $\\mathbf{x}\\in \\mathbf{X}$      $\\text{projected data}$ : 주성분 벡터에 대한 관측치 벡터의 정사영 벡터 $\\text{proj}_{\\mathbf{w}}(\\mathbf{x})$      $D_{1}$ : 관측치 벡터에 대하여 보존하는 정보로서 분산      $D_{2}$ : 관측치 벡터에 대하여 유실하는 정보      $D_{3}$ : 관측치 벡터의 본래 정보      How to Extract      관측치 행렬 $X_{N \\times P}$ 를 단위벡터 $\\mathbf{w}$ 에 정사영한다고 하자\\[\\begin{aligned}  proj_{\\mathbf{w}}(\\mathbf{X})  &amp;= \\frac{&lt;\\mathbf{X},\\mathbf{w}&gt;}{\\Vert w \\Vert ^2}\\cdot\\mathbf{w}\\\\  &amp;= (\\mathbf{w}^{T}\\mathbf{X})\\cdot\\mathbf{w} \\quad (\\because \\Vert w \\Vert=1)  \\end{aligned}\\]          $\\mathbf{w}$ : 정사영 벡터의 방향      $\\mathbf{w}^{T}\\mathbf{X}$ : 정사영 벡터의 크기            $\\mathbf{w}$ 에 정사영된 관측치들의 분산 $\\mathbf{V}$ 은 다음과 같음\\[\\begin{aligned}  \\mathbf{V}  &amp;= \\frac{1}{n}(\\mathbf{w}^{T}\\mathbf{X})(\\mathbf{w}^{T}\\mathbf{X})^{T}\\\\  &amp;= \\frac{1}{n}(\\mathbf{w}^{T}\\mathbf{X}\\mathbf{X}^{T}\\mathbf{w})\\\\  &amp;= \\mathbf{w}^{T}\\Sigma\\mathbf{w}  \\end{aligned}\\]          $\\Sigma=\\displaystyle\\frac{1}{n}\\mathbf{X}\\mathbf{X}^{T}$ : 관측치 행렬 $X$ 의 공분산 행렬            $\\mathbf{V}$ 을 최대화하는 $\\mathbf{w}$ 를 채택한다고 하자\\[\\hat{\\mathbf{w}}  = \\text{arg} \\max_{\\mathbf{w}}{\\mathbf{w}^{T}\\Sigma\\mathbf{w}}  \\quad \\text{s.t.} \\quad  \\mathbf{w}^{T}\\mathbf{w}=1\\]        라그랑주 승수법에 기초하여 $\\hat{\\mathbf{w}}$ 도출\\[\\begin{aligned}  L(\\mathbf{w},\\lambda)  &amp;= \\mathbf{w}^{T}\\Sigma\\mathbf{w}-\\lambda(\\mathbf{w}^{T}\\mathbf{w}-1)\\\\  \\frac{\\partial L(\\mathbf{w},\\lambda)}{\\mathbf{w}}  &amp;= 0\\\\  \\therefore (\\Sigma-\\lambda\\mathbf{I})\\hat{\\mathbf{w}}  &amp;=0  \\end{aligned}\\]        $\\mathbf{V}$ 를 최대화하는 주성분 $\\mathbf{w}$ 은 $\\mathbf{X}$ 의 공분산 행렬 $\\Sigma$ 의 고유벡터임\\[\\begin{aligned}  \\Sigma  &amp;= \\mathbb{V}\\mathbb{\\Lambda}\\mathbb{V}^{-1},\\\\  \\mathbb{V}  &amp;= \\begin{pmatrix}\\mathbf{w}_{1}&amp;\\mathbf{w}_{2}&amp;\\cdots&amp;\\mathbf{w}_{p}\\end{pmatrix}\\\\  \\mathbb{\\Lambda}  &amp;= \\text{diag}(\\lambda_{1},\\lambda_{2},\\cdots,\\lambda_{p})  \\end{aligned}\\]  Explanatory Power      주성분 벡터의 고유값: 관측치 행렬 $\\mathbf{X}$ 에 대하여 주성분 벡터에 대한 정사영 벡터 간 분산\\[\\begin{aligned}  \\mathbf{V}  &amp;= \\frac{1}{n}(\\mathbf{w}^{T}\\mathbf{X})(\\mathbf{w}^{T}\\mathbf{X})^{T}\\\\  &amp;= \\frac{1}{n}\\mathbf{w}^{T}\\mathbf{X}\\mathbf{X}^{T}\\mathbf{w}\\\\  &amp;= \\mathbf{w}^{T}\\Sigma\\mathbf{w}\\\\  &amp;= \\hat{\\mathbf{w}}^{T}\\lambda\\hat{\\mathbf{w}} \\quad (\\because \\Sigma\\hat{\\mathbf{w}}-\\lambda\\hat{\\mathbf{w}}=0)\\\\  &amp;= \\lambda \\quad (\\because \\mathbf{w}^{T}\\mathbf{w}=1)  \\end{aligned}\\]        주성분 벡터의 설명력: 관측치 행렬 $\\mathbf{X}_{N \\times P}$ 에 대하여 생성 가능한 $P$ 개의 주성분 벡터 고유값 합계 대비 해당 주성분 벡터 고유값 비율\\[\\frac{\\lambda_{k}}{\\sum_{i=1}^{p}{\\lambda_{i}}}\\]  Linear Discriminant Analysis      선형 판별 분석(Linear Discriminant Analysis; LDA): 고차원 데이터에 대하여, 주어진 클래스를 가장 잘 구분할 수 있는 새로운 저차원 직교 좌표(선형 판별 함수)를 찾는 기법            방법: 클래스 간 분산은 최대화하는 동시에 클래스 내 관측치 간 분산은 최소화하는 성분들을 추출함\\[\\hat{\\mathbf{w}}  =\\text{arg} \\max_{\\mathbf{w}}{\\frac{\\Sigma^{2}}{\\sigma_{1}^{2}+\\sigma_{2}^{2}}}  \\quad \\text{s.t.} \\quad  \\mathbf{w}^{T}\\mathbf{w}=1\\]          $\\Sigma^{2}$ : 정사영 후 클래스 간 분산      $\\sigma_{i}^{2}$ : 정사영 후 $i$ 번째 클래스 내 관측치 간 분산      How to Extract      정사영 후 범주 간 분산 $\\Sigma^{2}$:\\[\\begin{aligned}  \\Sigma^{2}  &amp;= (\\mathbf{\\mu}_{1}-\\mathbf{\\mu}_{2})(\\mathbf{\\mu}_{1}-\\mathbf{\\mu}_{2})^{T}\\\\  &amp;= (\\mathbf{w}^{T}\\mathbf{m}_{1}-\\mathbf{w}^{T}\\mathbf{m}_{2})(\\mathbf{w}^{T}\\mathbf{m}_{1}-\\mathbf{w}^{T}\\mathbf{m}_{2})^{T}\\quad(\\because \\mathbf{\\mu}_{i}=\\mathbf{w}^{T}\\mathbf{m}_{i})\\\\  &amp;= \\mathbf{w}^{T}(\\mathbf{m}_{1}-\\mathbf{m}_{2})(\\mathbf{m}_{1}-\\mathbf{m}_{2})^{T}\\mathbf{w}\\\\  &amp;= \\mathbf{w}^{T}\\mathbf{S}_{B}\\mathbf{w}  \\end{aligned}\\]          \\(\\mathbf{m}_{i}\\) : \\(i\\) 번째 범주 \\(C_{i}\\) 의 중심점 벡터      \\(\\mathbf{\\mu}_{i}=\\text{proj}_{\\mathbf{w}}(\\mathbf{m}_{i})\\) : \\(\\mathbf{m}_{i}\\) 의 정사영 벡터      \\(\\mathbf{S}_{B}\\) : 범주 \\(C_{i},C_{j}\\) 간 편차      \\(\\Sigma\\) : 정사영 후 범주 \\(C_{i},C_{j}\\) 간 편차            정사영 후 범주 내 분산 $\\sigma_{i}^{2}$:\\[\\begin{aligned}  \\sigma_{i}^{2}  &amp;= \\sum_{j=1}^{ \\vert C_{i} \\vert }{(\\mathbf{y}_{j}-\\mathbf{\\mu}_{i})(\\mathbf{y}_{j}-\\mathbf{\\mu}_{i})^{T}}\\quad(\\mathbf{x}_{j} \\in C_{i})\\\\  &amp;= \\sum_{j=1}^{ \\vert C_{i} \\vert }{(\\mathbf{w}^{T}\\mathbf{x}_{j}-\\mathbf{w}^{T}\\mathbf{m}_{i})(\\mathbf{w}^{T}\\mathbf{x}_{j}-\\mathbf{w}^{T}\\mathbf{m}_{i})^{T}}\\quad(\\because \\mathbf{y}_{j}=\\mathbf{w}^{T}\\mathbf{x}_{j})\\\\  &amp;= \\mathbf{w}^{T}\\left[\\sum_{j=1}^{ \\vert C_{i} \\vert }{(\\mathbf{x}_{j}-\\mathbf{m}_{i})(\\mathbf{x}_{j}-\\mathbf{m}_{i})^{T}}\\right]\\mathbf{w}\\\\  &amp;= \\mathbf{w}^{T}\\mathbf{S}_{i}\\mathbf{w}  \\end{aligned}\\]          \\(\\mathbf{x}_{j} \\in C_{i}\\) : \\(i\\) 번째 범주 \\(C_{i}\\) 의 \\(j\\) 번째 관측치 벡터      \\(\\mathbf{y}_{j}=\\text{proj}_{\\mathbf{w}}(\\mathbf{x}_{j})\\) : \\(\\mathbf{x}_{j}\\) 의 정사영 벡터      \\(S_{i}\\) : \\(i\\) 번째 범주 \\(C_{i}\\) 의 범주 내 관측치 간 편차      \\(\\sigma_{i}\\) : 정사영 후 \\(i\\) 번째 범주 \\(C_{i}\\) 의 범주 내 관측치 간 편차            목적 함수 재정의\\[\\begin{aligned}  \\hat{\\mathbf{w}}  =\\text{arg} \\max_{\\mathbf{w}}{\\frac{\\mathbf{w}^{T}\\mathbf{S}_{B}\\mathbf{w}}{\\mathbf{w}^{T}(\\mathbf{S}_{1}+\\mathbf{S}_{2})\\mathbf{w}}}  \\quad \\text{s.t.} \\quad   \\mathbf{w}^{T}\\mathbf{w}=1  \\end{aligned}\\]        라그랑주 승수법을 통한 최적화 문제 풀이\\[\\begin{aligned}  L(\\mathbf{w},\\lambda)  &amp;= \\frac{\\mathbf{w}^{T}\\mathbf{S}_{B}\\mathbf{w}}{\\mathbf{w}^{T}(\\mathbf{S}_{1}+\\mathbf{S}_{2})\\mathbf{w}}-\\lambda(\\mathbf{w}^{T}\\mathbf{w}-1)\\\\  \\frac{\\partial L(\\mathbf{w},\\lambda)}{\\partial \\mathbf{w}}  &amp;= 0\\\\  \\therefore \\left[\\mathbf{S}_{B}^{-1}(\\mathbf{S}_{1}+\\mathbf{S}_{2})-\\lambda\\mathbf{I}\\right]\\hat{\\mathbf{w}}  &amp;=0  \\end{aligned}\\]  Sourse  http://alexhwilliams.info/itsneuronalblog/2016/03/27/pca/"
+  },
+  
+  {
     "title": "Dimensionality Reduction",
-    "url": "/posts/Dimensionality_Reduction/",
-    "categories": "DATA MINING TECHS, 1.machine learning",
-    "tags": "Machine Learning, Unsupervised Learning, Feature Engineering",
-    "date": "2024-01-10 00:00:00 +0900",
+    "url": "/posts/dimensionality_reduction/",
+    "categories": "3.MACHINE LEARNING, 3.dimensionality reduction algorithm",
+    "tags": "machine learning, unsupervised learning, feature engineering, dimensionality reduction",
+    "date": "2024-01-15 00:00:00 +0900",
     
 
 
@@ -1595,15 +1578,32 @@
 
     
     "snippet": "Curse of Dimensionality      차원의 저주(Curse of Dimensionality) : 고차원일수록 관측치 간 거리가 기하급수적으로 멀어짐에 따라 차원별 학습 가능한 관측치가 희소해져서 알고리즘이 제대로 학습하지 못하는 현상            차원 축소의 당위성          Manifold hypothesis      M...",
-    "content": "Curse of Dimensionality      차원의 저주(Curse of Dimensionality) : 고차원일수록 관측치 간 거리가 기하급수적으로 멀어짐에 따라 차원별 학습 가능한 관측치가 희소해져서 알고리즘이 제대로 학습하지 못하는 현상            차원 축소의 당위성          Manifold hypothesis      Many high-dimensional data sets that occur in the real world actually lie along low-dimensional latent manifolds inside that high-dimensional space.          Dimensionality Reduction Methods  차원 선택(Feature Selection) : 유효한 차원을 선별하는 방법                  Filter Approach                    Wrapper Approach                  Forward Selection          Backward Elimination          Stepwise Selection                      차원 추출(Feature Extraction) : 원본의 특징을 보존하는 새로운 차원을 추출하는 방법          $\\text{arg} \\max_{\\mathbf{w}}{\\sigma^{2}}$                  주성분 분석(Principle Component Analysis; PCA)          선형 판별 분석(Linear Discriminant Analysis; LDA)                    $\\text{arg} \\max_{\\mathbf{w}}{\\text{dist}}$                  다차원 척도법(Multi-Dimensional Scaling; MDS)                    Reveal Non-Linear Structure                  t-SNE(t-distributed Stochastic Neighbor Embedding)          LLE(Locally Linear Embedding)          ISOMAP(ISOmetric feature MAPping)                    "
+    "content": "Curse of Dimensionality      차원의 저주(Curse of Dimensionality) : 고차원일수록 관측치 간 거리가 기하급수적으로 멀어짐에 따라 차원별 학습 가능한 관측치가 희소해져서 알고리즘이 제대로 학습하지 못하는 현상            차원 축소의 당위성          Manifold hypothesis      Many high-dimensional data sets that occur in the real world actually lie along low-dimensional latent manifolds inside that high-dimensional space.          Dimensionality Reduction Methods  차원 선택(Feature Selection) : 유효한 차원을 선별하는 방법                  Filter Approach                    Wrapper Approach                  Forward Selection          Backward Elimination          Stepwise Selection                      차원 추출(Feature Extraction) : 원본의 상대적 특징을 보존하는 새로운 차원을 추출하는 방법          $\\text{arg} \\max_{\\mathbf{w}}{\\sigma^{2}}$                  주성분 분석(Principle Component Analysis; PCA)          선형 판별 분석(Linear Discriminant Analysis; LDA)                    $\\text{arg} \\max_{\\mathbf{w}}{\\text{dist}}$                  다차원 척도법(Multi-Dimensional Scaling; MDS)                    Reveal Non-Linear Structure                  t-SNE(t-distributed Stochastic Neighbor Embedding)          LLE(Locally Linear Embedding)          ISOMAP(ISOmetric feature MAPping)                    "
+  },
+  
+  {
+    "title": "Hierarchical Clustering",
+    "url": "/posts/hierarchical_clustering/",
+    "categories": "3.MACHINE LEARNING, 2.clustering algorithm",
+    "tags": "machine learning, unsupervised learning, clustering",
+    "date": "2024-01-11 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "Hierarchical Clustering      계층적 군집화(Hierarchical Clustering): 계층적 트리모형을 활용하여 개별 개체들을 유사한 개체/군집과 계층적으로 통합하거나, 표본을 유의미하게 구분되는 지점에서 계층적으로 분할해가는 알고리즘        덴드로그램(Dendrogram): 결합 혹은 분할하는 순서를 나타내는 계층적 ...",
+    "content": "Hierarchical Clustering      계층적 군집화(Hierarchical Clustering): 계층적 트리모형을 활용하여 개별 개체들을 유사한 개체/군집과 계층적으로 통합하거나, 표본을 유의미하게 구분되는 지점에서 계층적으로 분할해가는 알고리즘        덴드로그램(Dendrogram): 결합 혹은 분할하는 순서를 나타내는 계층적 트리모형            종류              상향식 군집화(Agglomerative Clustering) : 개별 개체들을 유사한 개체/군집과 계층적으로 통합해가는 방식      하향식 군집화(Divisive Clustering) : 표본을 유의미하게 구분되는 지점마다 계층적으로 분할해가는 방식      How to Agglomerative Clustering      모든 개체를 개별 군집으로서 정의함\\[C_{i} = \\{\\overrightarrow{x}_{i}\\} \\quad \\text{for} \\quad i=1,2,\\cdots, n\\]        군집 간 거리 행렬을 계산함\\[\\mathbf{D}_{i,j}=d(C_{i},C_{j})\\]        가장 가까운 두 개의 군집을 하나의 군집으로 통합함\\[\\begin{aligned} C_{k}&amp;=\\hat{C}_{i} \\cup \\hat{C}_{j}\\\\ \\hat{C}_{i},\\hat{C}_{j}&amp;=\\text{arg} \\min_{C_{i},C_{j}}{d(C_{i},C_{j})} \\end{aligned}\\]        군집 간 거리 행렬을 갱신함\\[\\mathbf{D}_{N} = \\mathbf{D}_{N-1} \\quad \\text{Recalculate} \\quad d(C_{i^{\\forall} \\ne k},C_{k})\\]        모든 개체가 하나의 군집으로 통합될 때까지 ③, ④의 과정을 반복함  How to Calculate Distance      Single Linkage(Minimum Distance) : 각 군집에 속한 개체들 사이 거리 최소값\\[\\begin{aligned}  d(\\mathbf{A},\\mathbf{B})  &amp;= \\min_{\\overrightarrow{a} \\in \\mathbf{A},\\overrightarrow{b} \\in \\mathbf{B}}{d(\\overrightarrow{a},\\overrightarrow{b})}  \\end{aligned}\\]        Complete Linkage(Maximum Distance) : 각 군집에 속한 개체들 사이 거리 최대값\\[\\begin{aligned}  d(\\mathbf{A},\\mathbf{B})  &amp;= \\max_{\\overrightarrow{a} \\in \\mathbf{A},\\overrightarrow{b} \\in \\mathbf{B}}{d(\\overrightarrow{a},\\overrightarrow{b})}  \\end{aligned}\\]        Average Linkage(Mean Distance) : 각 군집에 속한 개체들 사이 거리 평균\\[\\begin{aligned}  d(\\mathbf{A},\\mathbf{B})  &amp;= \\sum_{\\overrightarrow{a} \\in \\mathbf{A}}\\sum_{\\overrightarrow{b} \\in \\mathbf{B}}{d(\\overrightarrow{a},\\overrightarrow{b})}  \\end{aligned}\\]        Centroid Linkage(Distance Between Centroids) : 각 군집 중심 간 거리\\[\\begin{aligned}  d(\\mathbf{A},\\mathbf{B})  &amp;= d(\\overrightarrow{\\mu}_{A},\\overrightarrow{\\mu}_{B})\\\\  \\overrightarrow{\\mu}_{A}  &amp;= \\frac{1}{\\vert\\mathbf{A}\\vert}\\sum_{\\overrightarrow{a} \\in \\mathbf{A}}{\\overrightarrow{a}}\\\\  \\overrightarrow{\\mu}_{B}  &amp;= \\frac{1}{\\vert\\mathbf{B}\\vert}\\sum_{\\overrightarrow{b} \\in \\mathbf{B}}{\\overrightarrow{b}}  \\end{aligned}\\]        Ward’s Method : 병합 후 SSE와 병합 전 개별 군집의 SSE의 합의 차\\[\\begin{aligned}  d(\\mathbf{A},\\mathbf{B})  &amp;= \\sum_{\\overrightarrow{c} \\in \\mathbf{C}}{d(\\overrightarrow{c},\\overrightarrow{\\mu}_{C})} - \\Big[\\sum_{\\overrightarrow{a} \\in \\mathbf{A}}{d(\\overrightarrow{a},\\overrightarrow{\\mu}_{A})} + \\sum_{\\overrightarrow{b} \\in \\mathbf{B}}{d(\\overrightarrow{b},\\overrightarrow{\\mu}_{B})}\\Big]\\\\  \\mathbf{C}  &amp;= \\mathbf{A} \\cup \\mathbf{B}  \\end{aligned}\\]  Sourse  https://towardsdatascience.com/hierarchical-clustering-explained-e59b13846da8  https://harshsharma1091996.medium.com/hierarchical-clustering-996745fe656b"
   },
   
   {
     "title": "DBSCAN",
-    "url": "/posts/DBSCAN/",
-    "categories": "DATA MINING TECHS, 1.machine learning",
-    "tags": "Machine Learning, Unsupervised Learning, Clustering",
-    "date": "2024-01-09 00:00:00 +0900",
+    "url": "/posts/dbscan/",
+    "categories": "3.MACHINE LEARNING, 2.clustering algorithm",
+    "tags": "machine learning, unsupervised learning, clustering, density",
+    "date": "2024-01-10 00:00:00 +0900",
     
 
 
@@ -1617,10 +1617,10 @@
   
   {
     "title": "k-Means",
-    "url": "/posts/k_Means/",
-    "categories": "DATA MINING TECHS, 1.machine learning",
-    "tags": "Machine Learning, Unsupervised Learning, Clustering",
-    "date": "2024-01-08 00:00:00 +0900",
+    "url": "/posts/k_means/",
+    "categories": "3.MACHINE LEARNING, 2.clustering algorithm",
+    "tags": "machine learning, unsupervised learning, clustering, distance",
+    "date": "2024-01-09 00:00:00 +0900",
     
 
 
@@ -1634,10 +1634,10 @@
   
   {
     "title": "Clustering",
-    "url": "/posts/Clustering/",
-    "categories": "DATA MINING TECHS, 1.machine learning",
-    "tags": "Machine Learning, Unsupervised Learning, Clustering, Metric",
-    "date": "2024-01-07 00:00:00 +0900",
+    "url": "/posts/clustering/",
+    "categories": "3.MACHINE LEARNING, 2.clustering algorithm",
+    "tags": "machine learning, unsupervised learning, clustering, metric",
+    "date": "2024-01-08 00:00:00 +0900",
     
 
 
@@ -1651,9 +1651,9 @@
   
   {
     "title": "Ensemble",
-    "url": "/posts/Ensemble/",
-    "categories": "DATA MINING TECHS, 1.machine learning",
-    "tags": "Machine Learning, Supervised Learning, Ensemble",
+    "url": "/posts/ensemble/",
+    "categories": "3.MACHINE LEARNING, 1.supervised learning algorithm",
+    "tags": "machine learning, supervised learning, ensemble, categorical data analysis",
     "date": "2024-01-06 00:00:00 +0900",
     
 
@@ -1668,9 +1668,9 @@
   
   {
     "title": "Decision Tree",
-    "url": "/posts/Decision_Tree/",
-    "categories": "DATA MINING TECHS, 1.machine learning",
-    "tags": "Machine Learning, Supervised Learning, Classification",
+    "url": "/posts/decision_tree/",
+    "categories": "3.MACHINE LEARNING, 1.supervised learning algorithm",
+    "tags": "machine learning, supervised learning, gini, entropy, categorical data analysis",
     "date": "2024-01-05 00:00:00 +0900",
     
 
@@ -1685,9 +1685,9 @@
   
   {
     "title": "Support Vector Machine",
-    "url": "/posts/SVM/",
-    "categories": "DATA MINING TECHS, 1.machine learning",
-    "tags": "Machine Learning, Supervised Learning, Classification",
+    "url": "/posts/svm/",
+    "categories": "3.MACHINE LEARNING, 1.supervised learning algorithm",
+    "tags": "machine learning, supervised learning, distance, kernel function, categorical data analysis",
     "date": "2024-01-04 00:00:00 +0900",
     
 
@@ -1702,9 +1702,9 @@
   
   {
     "title": "k-NN",
-    "url": "/posts/k_NN/",
-    "categories": "DATA MINING TECHS, 1.machine learning",
-    "tags": "Machine Learning, Supervised Learning, Classification",
+    "url": "/posts/knn/",
+    "categories": "3.MACHINE LEARNING, 1.supervised learning algorithm",
+    "tags": "machine learning, supervised learning, distance, categorical data analysis",
     "date": "2024-01-03 00:00:00 +0900",
     
 
@@ -1719,9 +1719,9 @@
   
   {
     "title": "Supervised Model Selection",
-    "url": "/posts/Supervised_Model_Selection/",
-    "categories": "DATA MINING TECHS, 1.machine learning",
-    "tags": "Machine Learning, Supervised Learning, Metric, Cross Validation",
+    "url": "/posts/supervised_model_selection/",
+    "categories": "3.MACHINE LEARNING, 1.supervised learning algorithm",
+    "tags": "machine learning, supervised learning, metric, cross validation",
     "date": "2024-01-02 00:00:00 +0900",
     
 
@@ -1736,9 +1736,9 @@
   
   {
     "title": "What? Data Science",
-    "url": "/posts/Data_Science/",
-    "categories": "DATA MINING TECHS, 1.machine learning",
-    "tags": "Machine Learning",
+    "url": "/posts/data_science/",
+    "categories": "3.MACHINE LEARNING, 1.supervised learning algorithm",
+    "tags": "machine learning",
     "date": "2024-01-01 00:00:00 +0900",
     
 
@@ -1753,9 +1753,9 @@
   
   {
     "title": "SubTree",
-    "url": "/posts/SubTree/",
-    "categories": "AI DEV. ENV., GIT",
-    "tags": "Dev. Env., DVCS, GIT",
+    "url": "/posts/subtree/",
+    "categories": "0.AI DEV. ENV., 1.GIT",
+    "tags": "DVCS, GIT",
     "date": "2023-03-12 00:00:00 +0900",
     
 
@@ -1770,9 +1770,9 @@
   
   {
     "title": "Interlock",
-    "url": "/posts/Interlock/",
-    "categories": "AI DEV. ENV., GIT",
-    "tags": "Dev. Env., DVCS, GIT",
+    "url": "/posts/interlock/",
+    "categories": "0.AI DEV. ENV., 1.GIT",
+    "tags": "DVCS, GIT",
     "date": "2023-03-11 00:00:00 +0900",
     
 
@@ -1787,9 +1787,9 @@
   
   {
     "title": "Branch",
-    "url": "/posts/Branch/",
-    "categories": "AI DEV. ENV., GIT",
-    "tags": "Dev. Env., DVCS, GIT",
+    "url": "/posts/branch/",
+    "categories": "0.AI DEV. ENV., 1.GIT",
+    "tags": "DVCS, GIT",
     "date": "2023-03-10 00:00:00 +0900",
     
 
@@ -1804,9 +1804,9 @@
   
   {
     "title": "Commit Control",
-    "url": "/posts/Commit_Control/",
-    "categories": "AI DEV. ENV., GIT",
-    "tags": "Dev. Env., DVCS, GIT",
+    "url": "/posts/commit_control/",
+    "categories": "0.AI DEV. ENV., 1.GIT",
+    "tags": "DVCS, GIT",
     "date": "2023-03-09 00:00:00 +0900",
     
 
@@ -1821,9 +1821,9 @@
   
   {
     "title": "File Control",
-    "url": "/posts/File_Control/",
-    "categories": "AI DEV. ENV., GIT",
-    "tags": "Dev. Env., DVCS, GIT",
+    "url": "/posts/file_control/",
+    "categories": "0.AI DEV. ENV., 1.GIT",
+    "tags": "DVCS, GIT",
     "date": "2023-03-08 00:00:00 +0900",
     
 
@@ -1838,9 +1838,9 @@
   
   {
     "title": "Commit",
-    "url": "/posts/Commit/",
-    "categories": "AI DEV. ENV., GIT",
-    "tags": "Dev. Env., DVCS, GIT",
+    "url": "/posts/commit/",
+    "categories": "0.AI DEV. ENV., 1.GIT",
+    "tags": "DVCS, GIT",
     "date": "2023-03-07 00:00:00 +0900",
     
 
@@ -1855,9 +1855,9 @@
   
   {
     "title": "What? GIT",
-    "url": "/posts/Git/",
-    "categories": "AI DEV. ENV., GIT",
-    "tags": "Dev. Env., DVCS, GIT",
+    "url": "/posts/git/",
+    "categories": "0.AI DEV. ENV., 1.GIT",
+    "tags": "DVCS, GIT",
     "date": "2023-03-06 00:00:00 +0900",
     
 
@@ -1872,9 +1872,9 @@
   
   {
     "title": "Integration",
-    "url": "/posts/Integration/",
-    "categories": "MATHEMATICAL TECHS, 2.calculus",
-    "tags": "Mathematics",
+    "url": "/posts/integration/",
+    "categories": "1.MATHEMATICAL TECHS, 2.calculus",
+    "tags": "mathematics, calculus",
     "date": "2022-07-16 00:00:00 +0900",
     
 
@@ -1889,9 +1889,9 @@
   
   {
     "title": "Lagrange Multipliers",
-    "url": "/posts/Lagrange_Multipliers/",
-    "categories": "MATHEMATICAL TECHS, 2.calculus",
-    "tags": "Mathematics",
+    "url": "/posts/lagrange_multipliers/",
+    "categories": "1.MATHEMATICAL TECHS, 2.calculus",
+    "tags": "mathematics, calculus",
     "date": "2022-07-15 00:00:00 +0900",
     
 
@@ -1906,9 +1906,9 @@
   
   {
     "title": "Partial Derivative",
-    "url": "/posts/Partial_Derivative/",
-    "categories": "MATHEMATICAL TECHS, 2.calculus",
-    "tags": "Mathematics",
+    "url": "/posts/partial_derivative/",
+    "categories": "1.MATHEMATICAL TECHS, 2.calculus",
+    "tags": "mathematics, calculus",
     "date": "2022-07-14 00:00:00 +0900",
     
 
@@ -1923,9 +1923,9 @@
   
   {
     "title": "Taylor Series",
-    "url": "/posts/Taylor_Series/",
-    "categories": "MATHEMATICAL TECHS, 2.calculus",
-    "tags": "Mathematics",
+    "url": "/posts/taylor_series/",
+    "categories": "1.MATHEMATICAL TECHS, 2.calculus",
+    "tags": "mathematics, calculus",
     "date": "2022-07-13 00:00:00 +0900",
     
 
@@ -1940,9 +1940,9 @@
   
   {
     "title": "Differentiation",
-    "url": "/posts/Differentiation/",
-    "categories": "MATHEMATICAL TECHS, 2.calculus",
-    "tags": "Mathematics",
+    "url": "/posts/differentiation/",
+    "categories": "1.MATHEMATICAL TECHS, 2.calculus",
+    "tags": "mathematics, calculus",
     "date": "2022-07-12 00:00:00 +0900",
     
 
@@ -1957,9 +1957,9 @@
   
   {
     "title": "Limit and Continuity",
-    "url": "/posts/Limit_Continuity/",
-    "categories": "MATHEMATICAL TECHS, 2.calculus",
-    "tags": "Mathematics",
+    "url": "/posts/limit_continuity/",
+    "categories": "1.MATHEMATICAL TECHS, 2.calculus",
+    "tags": "mathematics, calculus",
     "date": "2022-07-11 00:00:00 +0900",
     
 
@@ -1974,9 +1974,9 @@
   
   {
     "title": "Matrix Decomposition",
-    "url": "/posts/Matrix_Decomposition/",
-    "categories": "MATHEMATICAL TECHS, 1.linear algebra",
-    "tags": "Mathematics",
+    "url": "/posts/matrix_decomposition/",
+    "categories": "1.MATHEMATICAL TECHS, 1.linear algebra",
+    "tags": "mathematics, linear algebra",
     "date": "2022-07-09 00:00:00 +0900",
     
 
@@ -1991,9 +1991,9 @@
   
   {
     "title": "Eigen",
-    "url": "/posts/Eigen/",
-    "categories": "MATHEMATICAL TECHS, 1.linear algebra",
-    "tags": "Mathematics",
+    "url": "/posts/eigen/",
+    "categories": "1.MATHEMATICAL TECHS, 1.linear algebra",
+    "tags": "mathematics, linear algebra",
     "date": "2022-07-08 00:00:00 +0900",
     
 
@@ -2008,9 +2008,9 @@
   
   {
     "title": "Linear Transformation",
-    "url": "/posts/Linear_Transformation/",
-    "categories": "MATHEMATICAL TECHS, 1.linear algebra",
-    "tags": "Mathematics",
+    "url": "/posts/linear_transformation/",
+    "categories": "1.MATHEMATICAL TECHS, 1.linear algebra",
+    "tags": "mathematics, linear algebra",
     "date": "2022-07-07 00:00:00 +0900",
     
 
@@ -2025,9 +2025,9 @@
   
   {
     "title": "Linear Equation",
-    "url": "/posts/Linear_Equation/",
-    "categories": "MATHEMATICAL TECHS, 1.linear algebra",
-    "tags": "Mathematics",
+    "url": "/posts/linear_equation/",
+    "categories": "1.MATHEMATICAL TECHS, 1.linear algebra",
+    "tags": "mathematics, linear algebra",
     "date": "2022-07-06 00:00:00 +0900",
     
 
@@ -2042,9 +2042,9 @@
   
   {
     "title": "Matrix",
-    "url": "/posts/Matrix/",
-    "categories": "MATHEMATICAL TECHS, 1.linear algebra",
-    "tags": "Mathematics",
+    "url": "/posts/matrix/",
+    "categories": "1.MATHEMATICAL TECHS, 1.linear algebra",
+    "tags": "mathematics, linear algebra",
     "date": "2022-07-05 00:00:00 +0900",
     
 
@@ -2059,9 +2059,9 @@
   
   {
     "title": "Vector",
-    "url": "/posts/Vector/",
-    "categories": "MATHEMATICAL TECHS, 1.linear algebra",
-    "tags": "Mathematics",
+    "url": "/posts/vector/",
+    "categories": "1.MATHEMATICAL TECHS, 1.linear algebra",
+    "tags": "mathematics, linear algebra",
     "date": "2022-07-04 00:00:00 +0900",
     
 
@@ -2076,9 +2076,9 @@
   
   {
     "title": "Welfare Economics (2) Social Choice",
-    "url": "/posts/Welfare_Economics_2/",
-    "categories": "ECONOMICS, 2.microeconomics",
-    "tags": "Economics, Microeconomics, Welfare Economics, Pareto Efficiency, Pareto, Efficiency, Social Welfare, Welfare, Equity, Social Choice",
+    "url": "/posts/welfare_economics_2/",
+    "categories": "7.ECONOMICS, 2.microeconomics",
+    "tags": "economics, microeconomics, welfare economics, pareto efficiency, pareto, efficiency, social welfare, welfare, equity, social choice",
     "date": "2019-07-23 00:00:00 +0900",
     
 
@@ -2093,9 +2093,9 @@
   
   {
     "title": "Welfare Economics (1) Theorems of Welfare Economics",
-    "url": "/posts/Welfare_Economics_1/",
-    "categories": "ECONOMICS, 2.microeconomics",
-    "tags": "Economics, Microeconomics, Welfare Economics",
+    "url": "/posts/welfare_economics_1/",
+    "categories": "7.ECONOMICS, 2.microeconomics",
+    "tags": "economics, microeconomics, welfare Economics",
     "date": "2019-07-22 00:00:00 +0900",
     
 
@@ -2110,9 +2110,9 @@
   
   {
     "title": "Competition Theory",
-    "url": "/posts/Competition_Theory/",
-    "categories": "ECONOMICS, 2.microeconomics",
-    "tags": "Economics, Microeconomics, Equilibrium, Competition Theory, Perfect Competition Theory",
+    "url": "/posts/competition_theory/",
+    "categories": "7.ECONOMICS, 2.microeconomics",
+    "tags": "economics, microeconomics, equilibrium, competition theory, perfect competition theory",
     "date": "2019-07-21 00:00:00 +0900",
     
 
@@ -2127,9 +2127,9 @@
   
   {
     "title": "Producer Theory (3) Joint Production",
-    "url": "/posts/Producer_Theory_3/",
-    "categories": "ECONOMICS, 2.microeconomics",
-    "tags": "Economics, Microeconomics, Optimization, Producer Theory",
+    "url": "/posts/producer_theory_3/",
+    "categories": "7.ECONOMICS, 2.microeconomics",
+    "tags": "economics, microeconomics, optimization, producer theory",
     "date": "2019-07-20 00:00:00 +0900",
     
 
@@ -2144,9 +2144,9 @@
   
   {
     "title": "Producer Theory (2) Profit Maximization",
-    "url": "/posts/Producer_Theory_2/",
-    "categories": "ECONOMICS, 2.microeconomics",
-    "tags": "Economics, Microeconomics, Optimization, Producer Theory",
+    "url": "/posts/producer_theory_2/",
+    "categories": "7.ECONOMICS, 2.microeconomics",
+    "tags": "economics, microeconomics, optimization, producer theory",
     "date": "2019-07-19 00:00:00 +0900",
     
 
@@ -2161,9 +2161,9 @@
   
   {
     "title": "Producer Theory (1) Output Maximization under Cost Constraint",
-    "url": "/posts/Producer_Theory_1/",
-    "categories": "ECONOMICS, 2.microeconomics",
-    "tags": "Economics, Microeconomics, Optimization, Producer Theory",
+    "url": "/posts/producer_theory_1/",
+    "categories": "7.ECONOMICS, 2.microeconomics",
+    "tags": "economics, microeconomics, optimization, producer theory",
     "date": "2019-07-18 00:00:00 +0900",
     
 
@@ -2178,9 +2178,9 @@
   
   {
     "title": "Consumer Theory (2) Demand Response to Changes in Market Demend Determinants",
-    "url": "/posts/Consumer_Theory_2/",
-    "categories": "ECONOMICS, 2.microeconomics",
-    "tags": "Economics, Microeconomics, Optimization, Consumer Theory",
+    "url": "/posts/consumer_theory_2/",
+    "categories": "7.ECONOMICS, 2.microeconomics",
+    "tags": "economics, microeconomics, optimization, consumer theory",
     "date": "2019-07-17 00:00:00 +0900",
     
 
@@ -2195,9 +2195,9 @@
   
   {
     "title": "Consumer Theory (1) Utility Maximization under Budget Constraint",
-    "url": "/posts/Consumer_Theory_1/",
-    "categories": "ECONOMICS, 2.microeconomics",
-    "tags": "Economics, Microeconomics, Optimization, Consumer Theory",
+    "url": "/posts/consumer_theory_1/",
+    "categories": "7.ECONOMICS, 2.microeconomics",
+    "tags": "economics, microeconomics, optimization, consumer theory",
     "date": "2019-07-16 00:00:00 +0900",
     
 
@@ -2212,9 +2212,9 @@
   
   {
     "title": "What? Microeconomics",
-    "url": "/posts/What_Micro/",
-    "categories": "ECONOMICS, 2.microeconomics",
-    "tags": "Economics, Microeconomics, Optimization, Equilibrium",
+    "url": "/posts/what_micro/",
+    "categories": "7.ECONOMICS, 2.microeconomics",
+    "tags": "economics, microeconomics, optimization, equilibrium",
     "date": "2019-07-15 00:00:00 +0900",
     
 

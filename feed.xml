@@ -4,7 +4,7 @@
   <id>https://jayarnim.github.io/</id>
   <title>Data Scientist</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2025-12-04T03:04:17+09:00</updated>
+  <updated>2025-12-06T03:42:10+09:00</updated>
   <author>
     <name>jayarnim</name>
     <uri>https://jayarnim.github.io/</uri>
@@ -21,20 +21,20 @@
   
   <entry>
     <title>Hidden Markov Model</title>
-    <link href="https://jayarnim.github.io/posts/HMM/" rel="alternate" type="text/html" title="Hidden Markov Model" />
+    <link href="https://jayarnim.github.io/posts/hmm/" rel="alternate" type="text/html" title="Hidden Markov Model" />
     <published>2025-08-07T00:00:00+09:00</published>
   
     <updated>2025-08-07T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/HMM/</id>
-    <content src="https://jayarnim.github.io/posts/HMM/" />
+    <id>https://jayarnim.github.io/posts/hmm/</id>
+    <content src="https://jayarnim.github.io/posts/hmm/" />
     <author>
       <name>jayarnim</name>
     </author>
 
   
     
-    <category term="BAYES" />
+    <category term="5.BAYES" />
     
     <category term="4.stochastic process" />
     
@@ -59,20 +59,20 @@
   
   <entry>
     <title>GP (3) Random Fourier Features Gaussian Process</title>
-    <link href="https://jayarnim.github.io/posts/GP_RFFGP/" rel="alternate" type="text/html" title="GP (3) Random Fourier Features Gaussian Process" />
+    <link href="https://jayarnim.github.io/posts/gp_rffgp/" rel="alternate" type="text/html" title="GP (3) Random Fourier Features Gaussian Process" />
     <published>2025-08-06T00:00:00+09:00</published>
   
     <updated>2025-08-06T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/GP_RFFGP/</id>
-    <content src="https://jayarnim.github.io/posts/GP_RFFGP/" />
+    <id>https://jayarnim.github.io/posts/gp_rffgp/</id>
+    <content src="https://jayarnim.github.io/posts/gp_rffgp/" />
     <author>
       <name>jayarnim</name>
     </author>
 
   
     
-    <category term="BAYES" />
+    <category term="5.BAYES" />
     
     <category term="4.stochastic process" />
     
@@ -100,20 +100,20 @@
   
   <entry>
     <title>Fourier Analysis</title>
-    <link href="https://jayarnim.github.io/posts/Fourier/" rel="alternate" type="text/html" title="Fourier Analysis" />
+    <link href="https://jayarnim.github.io/posts/fourier/" rel="alternate" type="text/html" title="Fourier Analysis" />
     <published>2025-08-05T00:00:00+09:00</published>
   
     <updated>2025-08-05T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/Fourier/</id>
-    <content src="https://jayarnim.github.io/posts/Fourier/" />
+    <id>https://jayarnim.github.io/posts/fourier/</id>
+    <content src="https://jayarnim.github.io/posts/fourier/" />
     <author>
       <name>jayarnim</name>
     </author>
 
   
     
-    <category term="BAYES" />
+    <category term="5.BAYES" />
     
     <category term="4.stochastic process" />
     
@@ -137,20 +137,20 @@
   
   <entry>
     <title>GP (2) Sparse Gaussian Process</title>
-    <link href="https://jayarnim.github.io/posts/GP_SGP/" rel="alternate" type="text/html" title="GP (2) Sparse Gaussian Process" />
+    <link href="https://jayarnim.github.io/posts/gp_sgp/" rel="alternate" type="text/html" title="GP (2) Sparse Gaussian Process" />
     <published>2025-08-04T00:00:00+09:00</published>
   
     <updated>2025-08-04T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/GP_SGP/</id>
-    <content src="https://jayarnim.github.io/posts/GP_SGP/" />
+    <id>https://jayarnim.github.io/posts/gp_sgp/</id>
+    <content src="https://jayarnim.github.io/posts/gp_sgp/" />
     <author>
       <name>jayarnim</name>
     </author>
 
   
     
-    <category term="BAYES" />
+    <category term="5.BAYES" />
     
     <category term="4.stochastic process" />
     
@@ -170,20 +170,20 @@
   
   <entry>
     <title>GP (1) Gaussian Process</title>
-    <link href="https://jayarnim.github.io/posts/GP_GP/" rel="alternate" type="text/html" title="GP (1) Gaussian Process" />
+    <link href="https://jayarnim.github.io/posts/gp_gp/" rel="alternate" type="text/html" title="GP (1) Gaussian Process" />
     <published>2025-08-03T00:00:00+09:00</published>
   
     <updated>2025-08-03T00:00:00+09:00</updated>
   
-    <id>https://jayarnim.github.io/posts/GP_GP/</id>
-    <content src="https://jayarnim.github.io/posts/GP_GP/" />
+    <id>https://jayarnim.github.io/posts/gp_gp/</id>
+    <content src="https://jayarnim.github.io/posts/gp_gp/" />
     <author>
       <name>jayarnim</name>
     </author>
 
   
     
-    <category term="BAYES" />
+    <category term="5.BAYES" />
     
     <category term="4.stochastic process" />
     
