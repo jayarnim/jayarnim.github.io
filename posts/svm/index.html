@@ -993,77 +993,6 @@
     <!-- combine -->
     
   
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
-    
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- create the image wrapper -->
-        
-
-        
-        
-      
-    
-
-    <!-- combine -->
-    
-  
 
   
 
@@ -1159,17 +1088,6 @@
       
         
         
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
       
 
       
@@ -1310,9 +1228,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1265 words"
+  title="923 words"
 >
-  <em>7 min</em> read</span>
+  <em>5 min</em> read</span>
 
         </div>
       </div>
@@ -1550,7 +1468,8 @@
   </li>
 </ul>
 
-<h3 id="soft-margin"><span class="me-2">Soft Margin</span><a href="#soft-margin" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h2 id="soft-margin"><span class="me-2">Soft Margin</span><a href="#soft-margin" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
 
 <p><a href="/_post_refer_img/3.ML/1.supervised_learning/04-06.png" class="popup img-link  shimmer"><img src="/_post_refer_img/3.ML/1.supervised_learning/04-06.png" alt="06" width="100%" loading="lazy"></a></p>
 
@@ -1589,98 +1508,6 @@
     <ul>
       <li>$\lambda \ge 0$ : 제약 조건 \(y_{i}\left(\mathbf{w}^{T}\mathbf{x}+b\right) \ge 1-\xi_{i}\) 에 대한 라그랑주 승수</li>
       <li>$\mu \ge 0$ : 제약 조건 $\xi_{i} \ge 0$ 에 대한 라그랑주 승수</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="kernel-trick"><span class="me-2">Kernel Trick</span><a href="#kernel-trick" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<ul>
-  <li>
-    <p><strong>커널 트릭(Kernel Trick)</strong> : 선형으로는 구분하기 어려운 저차원 공간상의 데이터 셋을, 적절한 결정 경계를 찾을 수 있는 고차원 공간으로 매핑하는 기법</p>
-
-    <p><a href="/_post_refer_img/3.ML/1.supervised_learning/04-08.jpeg" class="popup img-link  shimmer"><img src="/_post_refer_img/3.ML/1.supervised_learning/04-08.jpeg" alt="08" width="100%" loading="lazy"></a></p>
-  </li>
-  <li>
-    <p><strong>커널 함수(Kernel Function)</strong></p>
-
-    <div class="table-wrapper"><table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Function</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Linear</td>
-          <td>\(\mathcal{K}\left(X,X^{\prime}\right) = X \cdot X^{\prime}\)</td>
-        </tr>
-        <tr>
-          <td>Polynomial</td>
-          <td>\(\mathcal{K}\left(X,X^{\prime}\right) = \left(X \cdot X^{\prime} + \beta\right)^{d}\)</td>
-        </tr>
-        <tr>
-          <td>RBF</td>
-          <td>\(\mathcal{K}\left(X,X^{\prime}\right) = \exp{\left[-\displaystyle\frac{\Vert X-X^{\prime} \Vert^{2}}{2\ell^{2}}\right]}\)</td>
-        </tr>
-        <tr>
-          <td>Sigmoid</td>
-          <td>\(\mathcal{K}\left(X,X^{\prime}\right) = \text{tanh}\left(\alpha \cdot X \cdot X^{\prime} + \beta\right)\)</td>
-        </tr>
-        <tr>
-          <td>Laplacian</td>
-          <td>\(\mathcal{K}\left(X,X^{\prime}\right) = \exp{\left[-\gamma \Vert X-X^{\prime} \Vert_{1}\right]}\)</td>
-        </tr>
-        <tr>
-          <td>Exponential</td>
-          <td>\(\mathcal{K}\left(X,X^{\prime}\right) = \exp{\left[-\gamma \Vert X-X^{\prime} \Vert_{2}\right]}\)</td>
-        </tr>
-        <tr>
-          <td>Matern</td>
-          <td>\(\mathcal{K}\left(X,X^{\prime}\right) = \displaystyle\frac{2^{1-\nu}}{\Gamma\left(\nu\right)} \cdot \left(\displaystyle\frac{\sqrt{2\nu} \Vert X-X^{\prime} \Vert}{\ell}\right)^{\nu} \cdot K_{\nu}\left(\displaystyle\frac{\sqrt{2\nu} \Vert X-X^{\prime} \Vert}{\ell}\right)\)</td>
-        </tr>
-        <tr>
-          <td>Periodic</td>
-          <td>\(\mathcal{K}\left(X,X^{\prime}\right) = \exp\left[-2 \sin^2\left( \displaystyle\frac{\pi \vert X-X^{\prime} \vert}{p} \right) \Bigg/ \ell^2 \right]\)</td>
-        </tr>
-        <tr>
-          <td>Rational Quadratic</td>
-          <td>\(\mathcal{K}\left(X,X^{\prime}\right) = \left( 1 + \displaystyle\frac{\vert X-X^{\prime} \vert^2}{2 \alpha \ell^2} \right)^{-\alpha}\)</td>
-        </tr>
-      </tbody>
-    </table></div>
-  </li>
-  <li>
-    <p><strong>Mercer’s Theorem</strong></p>
-
-    <blockquote>
-      <p>저차원 공간 $L$ 에서 고차원 공간 $H$ 로 관측치들을 매핑하는 커널함수 $K$ 는 $L$ 에서 표현된 관측치들 간 유클리드 거리와 $H$ 에서 표현된 관측치들 간 유클리드 거리를 보존함</p>
-    </blockquote>
-
-    <ul>
-      <li>
-        <p>임의의 관측치 $X_a, X_b$ 에 대하여, $2$ 차원 공간에서 해당 관측치를 나타내는 벡터 $\mathbf{a}, \mathbf{b}$ 를 다음과 같이 정의하자</p>
-
-\[\begin{aligned}
-  \mathbf{a}
-  = \begin{pmatrix}a_1\\a_2\end{pmatrix},\quad
-  \mathbf{b}
-  = \begin{pmatrix}b_1\\b_2\end{pmatrix}
-  \end{aligned}\]
-      </li>
-      <li>
-        <p>$\mathbf{a}, \mathbf{b}$ 을 $3$ 차원상의 벡터 $\Phi\left(\mathbf{a}\right),\Phi\left(\mathbf{b}\right)$ 로 매핑하는 커널함수 $K\left(\mathbf{a}, \mathbf{b}\right)$ 는 다음의 조건을 만족함</p>
-
-\[\begin{aligned}
-  K\left(\mathbf{a}, \mathbf{b}\right)
-  &amp;= \left(\mathbf{a}^{T} \mathbf{b}\right)^{2} \\
-  &amp;= a_{1}^{2} b_{1}^{2} + 2\left(a_{1} b_{1} a_{2} b_{2}\right) + a_{2}^{2}b_{2}^{2} \\
-  &amp;= \begin{pmatrix}a_{1}^{2}\\ \sqrt{2} a_{1} a_{2}\\ a_{2}^{2}\end{pmatrix} \cdot \begin{pmatrix}b_{1}^{2}\\ \sqrt{2}b_{1} b_{2}\\ b_{2}^{2}\end{pmatrix} \\
-  &amp;= \Phi\left(\mathbf{a}\right) \cdot \Phi\left(\mathbf{b}\right)
-  \end{aligned}\]
-      </li>
     </ul>
   </li>
 </ul>
