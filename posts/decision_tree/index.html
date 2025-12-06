@@ -851,148 +851,6 @@
     <!-- combine -->
     
   
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
-    
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- create the image wrapper -->
-        
-
-        
-        
-      
-    
-
-    <!-- combine -->
-    
-  
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
-    
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- create the image wrapper -->
-        
-
-        
-        
-      
-    
-
-    <!-- combine -->
-    
-  
 
   
 
@@ -1018,17 +876,6 @@
       
         
         
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
       
 
       
@@ -1206,9 +1053,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="922 words"
+  title="854 words"
 >
-  <em>5 min</em> read</span>
+  <em>4 min</em> read</span>
 
         </div>
       </div>
@@ -1366,50 +1213,6 @@
       <li>$\alpha$ : 가지치기 강도</li>
       <li>$L(T)$ : $T$ 의 훈련 관측치에 대한 예측 손실</li>
       <li>$R_{\alpha}(T)$ : 타깃 노드의 비용 복잡도 지수</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="dtr"><span class="me-2">DTR</span><a href="#dtr" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<p><a href="/_post_refer_img/3.ML/1.supervised_learning/05-06.png" class="popup img-link  shimmer"><img src="/_post_refer_img/3.ML/1.supervised_learning/05-06.png" alt="06" width="100%" loading="lazy"></a></p>
-
-<ul>
-  <li>
-    <p><strong>재귀적 분기</strong></p>
-
-\[\begin{aligned}
-  \hat{X}_{i}
-  &amp;= \text{arg} \min_{X_{i}}{\{\mathcal{J}(X_{1},\hat{x}_{1}),\mathcal{J}(X_{2},\hat{x}_{2}),\cdots,\mathcal{J}(X_{n},\hat{x}_{n})\}}\\
-  \hat{x}_{i}
-  &amp;= \text{arg} \min_{x_{i}}{\mathcal{J}(X_{i},x_{i})}\\
-  \mathcal{J}(X_{i},x_{i})
-  &amp;= \frac{m_{\text{Left}}}{m}L_{\text{Left}}+\frac{m_{\text{Right}}}{m}L_{\text{Right}}
-  \end{aligned}\]
-  </li>
-  <li>
-    <p><strong>손실 함수</strong></p>
-
-    <p><a href="/_post_refer_img/3.ML/1.supervised_learning/05-07.png" class="popup img-link  shimmer"><img src="/_post_refer_img/3.ML/1.supervised_learning/05-07.png" alt="07" width="100%" loading="lazy"></a></p>
-
-    <ul>
-      <li>
-        <p><strong>판별 분석</strong> : 불순도(Impurity)를 최소화하도록 분기</p>
-
-\[\begin{aligned}
-  \mathcal{L}_{\text{GINI}}(N_{k})
-  &amp;= 1-\sum_{i=1}^{c}{p_{i}^2}
-  \end{aligned}\]
-      </li>
-      <li>
-        <p><strong>회귀 분석</strong> : 오차(Error)를 최소화하도록 분기</p>
-
-\[\begin{aligned}
-  \mathcal{L}_{\text{MSE}}(N_{k})
-  &amp;= \sum_{i=1}^{m}{(y_{i}-\hat{y}_{i})^2}
-  \end{aligned}\]
-      </li>
     </ul>
   </li>
 </ul>

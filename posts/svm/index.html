@@ -922,77 +922,6 @@
     <!-- combine -->
     
   
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
-    
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- create the image wrapper -->
-        
-
-        
-        
-      
-    
-
-    <!-- combine -->
-    
-  
 
   
 
@@ -1018,17 +947,6 @@
       
         
         
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
       
 
       
@@ -1228,9 +1146,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="923 words"
+  title="823 words"
 >
-  <em>5 min</em> read</span>
+  <em>4 min</em> read</span>
 
         </div>
       </div>
@@ -1508,47 +1426,6 @@
     <ul>
       <li>$\lambda \ge 0$ : 제약 조건 \(y_{i}\left(\mathbf{w}^{T}\mathbf{x}+b\right) \ge 1-\xi_{i}\) 에 대한 라그랑주 승수</li>
       <li>$\mu \ge 0$ : 제약 조건 $\xi_{i} \ge 0$ 에 대한 라그랑주 승수</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="svr"><span class="me-2">SVR</span><a href="#svr" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<ul>
-  <li>
-    <p><strong>Optimization</strong></p>
-
-\[\begin{aligned}
-  \hat{\Theta}
-  =\text{arg} \min{\left[\frac{1}{2} \Vert \mathbf{w} \Vert^{2} + C\sum_{i=1}^{n}{\left(\xi_{i}+\eta_{i}\right)}\right]}
-  \end{aligned}\]
-  </li>
-  <li>
-    <p><strong>Constraint</strong></p>
-
-    <p><a href="/_post_refer_img/3.ML/1.supervised_learning/04-10.png" class="popup img-link  shimmer"><img src="/_post_refer_img/3.ML/1.supervised_learning/04-10.png" alt="10" width="100%" loading="lazy"></a></p>
-
-    <ul>
-      <li>
-        <p><strong>판별 분석</strong> : 마진 범위 이내에 관측치 벡터가 존재하지 않음</p>
-
-\[\begin{aligned}
-  \text{s.t.}\quad
-  &amp;y_{i}\left(\mathbf{w}^{T}\mathbf{x}_{i}+b\right) \ge 1 + \xi_{i}\\
-  &amp;\xi_{i} \ge 0
-  \end{aligned}\]
-      </li>
-      <li>
-        <p><strong>회귀 분석</strong> : 마진 범위 이내에 모든 관측치 벡터가 존재함</p>
-
-\[\begin{aligned}
-  \text{s.t.} \quad
-  &amp; \varepsilon + \xi_{i} + f\left(\mathbf{x}\right) - y_{i} \ge 0,\\
-  &amp; \varepsilon + \eta_{i} - f\left(\mathbf{x}\right) + y_{i} \ge 0,\\
-  &amp; \xi_{i}, \eta_{i} \ge 0
-  \end{aligned}\]
-      </li>
     </ul>
   </li>
 </ul>
