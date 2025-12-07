@@ -780,290 +780,6 @@
     <!-- combine -->
     
   
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
-    
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- create the image wrapper -->
-        
-
-        
-        
-      
-    
-
-    <!-- combine -->
-    
-  
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
-    
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- create the image wrapper -->
-        
-
-        
-        
-      
-    
-
-    <!-- combine -->
-    
-  
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
-    
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- create the image wrapper -->
-        
-
-        
-        
-      
-    
-
-    <!-- combine -->
-    
-  
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
-    
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- create the image wrapper -->
-        
-
-        
-        
-      
-    
-
-    <!-- combine -->
-    
-  
 
   
 
@@ -1122,17 +838,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -1148,61 +853,6 @@
       
         
         
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
       
 
       
@@ -1332,9 +982,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1308 words"
+  title="759 words"
 >
-  <em>7 min</em> read</span>
+  <em>4 min</em> read</span>
 
         </div>
       </div>
@@ -1342,137 +992,14 @@
   </header>
 
   <div class="content">
-    <h2 id="prerequisite"><span class="me-2">Prerequisite</span><a href="#prerequisite" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="principal-component-analysis"><span class="me-2">Principal Component Analysis</span><a href="#principal-component-analysis" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<h3 id="projection"><span class="me-2">Projection</span><a href="#projection" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p><a href="/_post_refer_img/3.ML/3.dimensionality_reduction/02-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/3.ML/3.dimensionality_reduction/02-01.png" alt="01" width="100%" loading="lazy"></a></p>
+<p><a href="/_post_refer_img/3.ML/3.dimensionality_reduction/02-04.jpeg" class="popup img-link  shimmer"><img src="/_post_refer_img/3.ML/3.dimensionality_reduction/02-04.jpeg" alt="04" width="100%" loading="lazy"></a></p>
 
 <ul>
   <li>
-    <p>벡터 $\mathbf{a}$ 를 벡터 $\mathbf{b}$ 에 정사영했을 때, 정사영 벡터 $\text{proj}_{\mathbf{b}}(\mathbf{a})$ 는 다음과 같음</p>
-
-\[\begin{aligned}
-  \cos{90^{\circ}}
-  &amp;= \frac{(\mathbf{a}-p\mathbf{b})^{T}\mathbf{b}}{\Vert \mathbf{a}\Vert \cdot \Vert\mathbf{b}\Vert}\\
-  &amp;= 0\\
-  \therefore \text{proj}_{\mathbf{b}}(\mathbf{a})
-  &amp;= p\mathbf{b}\\
-  &amp;= \left(\frac{\mathbf{a}^{T}\mathbf{b}}{\Vert\mathbf{b}\Vert^{2}}\right)\mathbf{b}
-  \end{aligned}\]
-
-    <ul>
-      <li>$p=\displaystyle\frac{\mathbf{a}^{T}\mathbf{b}}{\Vert\mathbf{b}\Vert^{2}}$ : 정사영 벡터의 크기</li>
-      <li>$\mathbf{b}$ : 정사영 벡터의 방향</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="covariance-matrix"><span class="me-2">Covariance Matrix</span><a href="#covariance-matrix" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li>
-    <p><strong>공분산(Covariance)</strong> : 두 확률변수의 선형관계를 나타내는 지표로서, 두 확률변수의 편차(관측치와 평균 사이 거리)를 곱한 값의 평균</p>
-
-\[\sigma_{XY} = \frac{1}{N}\sum_{i=1}^{N}(X_{i}-\mu_X)(Y_{i}-\mu_Y)\]
-  </li>
-  <li>
-    <p><strong>공분산행렬(Covariance Matrix)</strong> : $n$ 개 변수들 간 공분산을 나열한 $n \times n$ 정방행렬</p>
-
-\[\Sigma=
-  \begin{matrix}
-  &amp; \mathbf{A} &amp; \mathbf{B} &amp; \mathbf{C} \\
-  \mathbf{A} &amp; \sigma_{A}^2 &amp; \sigma_{AB} &amp; \sigma_{AC} \\
-  \mathbf{B} &amp; \sigma_{BA} &amp; \sigma_{B}^2 &amp; \sigma_{BC} \\
-  \mathbf{C} &amp; \sigma_{CA} &amp; \sigma_{CB} &amp; \sigma_{C}^2
-  \end{matrix}\]
-  </li>
-</ul>
-
-<h3 id="linear-transformation"><span class="me-2">Linear Transformation</span><a href="#linear-transformation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p><a href="/_post_refer_img/3.ML/3.dimensionality_reduction/02-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/3.ML/3.dimensionality_reduction/02-02.png" alt="02" width="100%" loading="lazy"></a></p>
-
-<ul>
-  <li>
-    <p>행렬 $\mathbf{X}$ 을 통한 선형변환은 어떤 좌표를 \(\begin{pmatrix}1\\0\end{pmatrix},\begin{pmatrix}0\\1\end{pmatrix}\) 를 기저로 사용하는 2차원 좌표계에서 \(\mathbf{x}_{1},\mathbf{x}_{2}\) 를 기저로 사용하는 2차원 좌표계로 변환하는 것을 의미함</p>
-
-\[\begin{aligned}
-  \mathbf{X}
-  &amp;= \begin{pmatrix} 1&amp;3\\-2&amp;0 \end{pmatrix}\\
-  &amp;= \begin{pmatrix} \mathbf{x}_{1}&amp;\mathbf{x}_{2} \end{pmatrix}
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>벡터 $\mathbf{v}$ 는 \(\begin{pmatrix}1\\0\end{pmatrix},\begin{pmatrix}0\\1\end{pmatrix}\) 를 기저로 사용하는 2차원 좌표계의 좌표 $(-1,2)$ 를 나타냄</p>
-
-\[\begin{aligned}
-  \mathbf{v}
-  &amp;= \begin{pmatrix} 1\\-2 \end{pmatrix}\\
-  &amp;= -1\begin{pmatrix}1\\0\end{pmatrix} + 2\begin{pmatrix}0\\1\end{pmatrix}\\
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>$\mathbf{X}$ 를 통한 선형 변환 결과 \(\mathbf{v}\) 는 \(\mathbf{x}_{1},\mathbf{x}_{2}\) 를 기저로 사용하는 2차원 좌표계의 좌표 $(-1,2)$ 로 변환되었음</p>
-
-\[\begin{aligned}
-  \mathbf{X}\cdot\mathbf{v}
-  &amp;= \begin{pmatrix} 1&amp;3\\-2&amp;0 \end{pmatrix} \cdot \begin{pmatrix} 1\\-2 \end{pmatrix}\\
-  &amp;= \begin{pmatrix}-5\\2\end{pmatrix}\\
-  &amp;= -1\mathbf{x}_{1} + 2\mathbf{x}_{2}
-  \end{aligned}\]
-  </li>
-</ul>
-
-<h3 id="eigen-vector"><span class="me-2">Eigen-Vector</span><a href="#eigen-vector" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p><a href="/_post_refer_img/3.ML/3.dimensionality_reduction/02-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/3.ML/3.dimensionality_reduction/02-03.png" alt="03" width="100%" loading="lazy"></a></p>
-
-<ul>
-  <li>
-    <p><strong>고유벡터(Eigen-Vector; $\mathbf{v}$)</strong>: 정방행렬 $A_n$ 으로 선형변환했을 때, 그 방향은 변하지 않고 단지 크기만 변하는 $\mathbf{0}$ 이 아닌 벡터</p>
-
-\[\begin{aligned}
-  \begin{pmatrix}
-  a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
-  a_{21}&amp;a_{22}&amp;\cdots&amp;a_{1n}\\
-  \vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
-  a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}
-  \end{pmatrix}
-  \begin{pmatrix}
-  v_{1} \\ v_{2} \\ \vdots \\ v_{n}
-  \end{pmatrix}
-  =
-  \lambda
-  \begin{pmatrix}
-  v_{1} \\ v_{2} \\ \vdots \\ v_{n}
-  \end{pmatrix}
-  \Leftrightarrow
-  A_{n \times n} \mathbf{v} 
-  = \lambda \mathbf{v}
-  \end{aligned}\]
-  </li>
-  <li>
-    <p><strong>고유값(Eigen-Value; $\lambda$)</strong>: 고유벡터의 선형변환 전 크기 대비 선형변환 후 크기의 비율</p>
-  </li>
-</ul>
-
-<h2 id="principal-component-analysis"><span class="me-2">Principal Component Analysis</span><a href="#principal-component-analysis" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<ul>
-  <li>
-    <p><strong>주성분 분석(<code class="language-plaintext highlighter-rouge">P</code>rincipal <code class="language-plaintext highlighter-rouge">C</code>omponent <code class="language-plaintext highlighter-rouge">A</code>nalysis; PCA)</strong>: 고차원 데이터에 대하여, X의 방향적 분포를 가장 잘 설명하는 <strong>새로운 저차원 직교 좌표</strong>를 학습하는 기법</p>
-
-    <p><a href="/_post_refer_img/3.ML/3.dimensionality_reduction/02-04.jpeg" class="popup img-link  shimmer"><img src="/_post_refer_img/3.ML/3.dimensionality_reduction/02-04.jpeg" alt="04" width="100%" loading="lazy"></a></p>
-
-    <ul>
-      <li><strong>주성분(Principal Component; PC)</strong>: 새로운 저차원 직교 좌표</li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>방법</strong>: <strong>관측치 간 상대적 특성</strong>을 잘 보존하는 성분들을 추출함</p>
+    <p><strong>주성분 분석(<code class="language-plaintext highlighter-rouge">P</code>rincipal <code class="language-plaintext highlighter-rouge">C</code>omponent <code class="language-plaintext highlighter-rouge">A</code>nalysis)</strong>: 고차원 데이터 $X$ 의 방향적 분포를 가장 잘 설명하는 <strong>새로운 저차원 직교 좌표</strong>를 학습하는 기법</p>
 
     <p><a href="/_post_refer_img/3.ML/3.dimensionality_reduction/02-05.png" class="popup img-link  shimmer"><img src="/_post_refer_img/3.ML/3.dimensionality_reduction/02-05.png" alt="05" width="100%" loading="lazy"></a></p>
 
@@ -1488,8 +1015,6 @@
 </ul>
 
 <h3 id="how-to-extract"><span class="me-2">How to Extract</span><a href="#how-to-extract" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<p><a href="/_post_refer_img/3.ML/3.dimensionality_reduction/02-06.png" class="popup img-link  shimmer"><img src="/_post_refer_img/3.ML/3.dimensionality_reduction/02-06.png" alt="06" width="100%" loading="lazy"></a></p>
 
 <ul>
   <li>
@@ -1552,13 +1077,8 @@
   &amp;= \text{diag}(\lambda_{1},\lambda_{2},\cdots,\lambda_{p})
   \end{aligned}\]
   </li>
-</ul>
-
-<h3 id="explanatory-power"><span class="me-2">Explanatory Power</span><a href="#explanatory-power" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
   <li>
-    <p><strong>주성분 벡터의 고유값</strong>: 관측치 행렬 $\mathbf{X}$ 에 대하여 <strong>주성분 벡터에 대한 정사영 벡터 간 분산</strong></p>
+    <p><strong>주성분 벡터의 고유값</strong>은 관측치 행렬 $\mathbf{X}$ 에 대하여 <strong>주성분 벡터에 대한 정사영 벡터 간 분산</strong>을 나타냄</p>
 
 \[\begin{aligned}
   \mathbf{V}
@@ -1570,7 +1090,7 @@
   \end{aligned}\]
   </li>
   <li>
-    <p><strong>주성분 벡터의 설명력</strong>: 관측치 행렬 $\mathbf{X}_{N \times P}$ 에 대하여 생성 가능한 $P$ 개의 주성분 벡터 고유값 합계 대비 해당 주성분 벡터 고유값 비율</p>
+    <p><strong>주성분 벡터의 설명력</strong>은 관측치 행렬 $\mathbf{X}_{N \times P}$ 에 대하여 생성 가능한 $P$ 개의 주성분 벡터 고유값 합계 대비 해당 주성분 벡터 고유값 비율이 됨</p>
 
 \[\frac{\lambda_{k}}{\sum_{i=1}^{p}{\lambda_{i}}}\]
   </li>
@@ -1579,14 +1099,11 @@
 <h2 id="linear-discriminant-analysis"><span class="me-2">Linear Discriminant Analysis</span><a href="#linear-discriminant-analysis" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
+<p><a href="/_post_refer_img/3.ML/3.dimensionality_reduction/02-07.png" class="popup img-link  shimmer"><img src="/_post_refer_img/3.ML/3.dimensionality_reduction/02-07.png" alt="04" width="100%" loading="lazy"></a></p>
+
 <ul>
   <li>
-    <p><strong>선형 판별 분석(<code class="language-plaintext highlighter-rouge">L</code>inear <code class="language-plaintext highlighter-rouge">D</code>iscriminant <code class="language-plaintext highlighter-rouge">A</code>nalysis; LDA)</strong>: 고차원 데이터에 대하여, <strong>주어진 클래스를 가장 잘 구분할 수 있는</strong> 새로운 저차원 직교 좌표(선형 판별 함수)를 찾는 기법</p>
-
-    <p><a href="/_post_refer_img/3.ML/3.dimensionality_reduction/02-07.png" class="popup img-link  shimmer"><img src="/_post_refer_img/3.ML/3.dimensionality_reduction/02-07.png" alt="04" width="100%" loading="lazy"></a></p>
-  </li>
-  <li>
-    <p><strong>방법</strong>: <strong>클래스 간 분산은 최대화</strong>하는 동시에 <strong>클래스 내 관측치 간 분산은 최소화</strong>하는 성분들을 추출함</p>
+    <p><strong>선형 판별 분석(<code class="language-plaintext highlighter-rouge">L</code>inear <code class="language-plaintext highlighter-rouge">D</code>iscriminant <code class="language-plaintext highlighter-rouge">A</code>nalysis)</strong>: 고차원 데이터에 대하여, <strong>주어진 범주를 가장 잘 구분할 수 있는</strong> 새로운 저차원 직교 좌표(선형 판별 함수)를 찾는 기법</p>
 
 \[\hat{\mathbf{w}}
   =\text{arg} \max_{\mathbf{w}}{\frac{\Sigma^{2}}{\sigma_{1}^{2}+\sigma_{2}^{2}}}
@@ -1640,7 +1157,7 @@
     </ul>
   </li>
   <li>
-    <p><strong>목적 함수 재정의</strong></p>
+    <p>목적 함수 재정의:</p>
 
 \[\begin{aligned}
   \hat{\mathbf{w}}
@@ -1650,7 +1167,7 @@
   \end{aligned}\]
   </li>
   <li>
-    <p><strong>라그랑주 승수법을 통한 최적화 문제 풀이</strong></p>
+    <p>라그랑주 승수법:</p>
 
 \[\begin{aligned}
   L(\mathbf{w},\lambda)
@@ -1669,6 +1186,7 @@
 
 <ul>
   <li>http://alexhwilliams.info/itsneuronalblog/2016/03/27/pca/</li>
+  <li>https://maelfabien.github.io/machinelearning/LDA/</li>
 </ul>
 
   </div>

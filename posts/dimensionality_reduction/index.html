@@ -889,7 +889,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="211 words"
+  title="210 words"
 >
   <em>1 min</em> read</span>
 
@@ -927,7 +927,7 @@
   <li><strong>차원 선택(Feature Selection)</strong> : 유효한 차원을 선별하는 방법
     <ul>
       <li>
-        <p><strong>Filter Approach</strong></p>
+        <p><strong>Filtering Approach</strong></p>
       </li>
       <li>
         <p><strong>Wrapper Approach</strong></p>
@@ -939,17 +939,21 @@
       </li>
     </ul>
   </li>
-  <li><strong>차원 추출(Feature Extraction)</strong> : 원본의 상대적 특징을 보존하는 새로운 차원을 추출하는 방법
+  <li>
+    <p><strong>차원 추출(Feature Extraction)</strong> : 원본의 상대적 특징을 보존하는 새로운 차원을 추출하는 방법</p>
+
+\[X\mapsto Y=f(X)\]
+
     <ul>
       <li>$\text{arg} \max_{\mathbf{w}}{\sigma^{2}}$
         <ul>
-          <li>주성분 분석(<code class="language-plaintext highlighter-rouge">P</code>rinciple <code class="language-plaintext highlighter-rouge">C</code>omponent <code class="language-plaintext highlighter-rouge">A</code>nalysis; PCA)</li>
-          <li>선형 판별 분석(<code class="language-plaintext highlighter-rouge">L</code>inear <code class="language-plaintext highlighter-rouge">D</code>iscriminant <code class="language-plaintext highlighter-rouge">A</code>nalysis; LDA)</li>
+          <li>주성분 분석(<code class="language-plaintext highlighter-rouge">P</code>rinciple <code class="language-plaintext highlighter-rouge">C</code>omponent <code class="language-plaintext highlighter-rouge">A</code>nalysis)</li>
+          <li>선형 판별 분석(<code class="language-plaintext highlighter-rouge">L</code>inear <code class="language-plaintext highlighter-rouge">D</code>iscriminant <code class="language-plaintext highlighter-rouge">A</code>nalysis)</li>
         </ul>
       </li>
       <li>$\text{arg} \max_{\mathbf{w}}{\text{dist}}$
         <ul>
-          <li>다차원 척도법(<code class="language-plaintext highlighter-rouge">M</code>ulti-<code class="language-plaintext highlighter-rouge">D</code>imensional <code class="language-plaintext highlighter-rouge">S</code>caling; MDS)</li>
+          <li>다차원 척도법(<code class="language-plaintext highlighter-rouge">M</code>ulti-<code class="language-plaintext highlighter-rouge">D</code>imensional <code class="language-plaintext highlighter-rouge">S</code>caling)</li>
         </ul>
       </li>
       <li><strong>Reveal Non-Linear Structure</strong>
