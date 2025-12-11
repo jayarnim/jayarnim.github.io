@@ -39,12 +39,12 @@
 <meta property="og:site_name" content="Data Scientist" />
 <meta property="og:image" content="https://jayarnim.github.io/_post_refer_img/2.STATS/3.regression_analysis/Thumbnail.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-07-16T00:00:00+09:00" />
+<meta property="article:published_time" content="2024-07-17T00:00:00+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/2.STATS/3.regression_analysis/Thumbnail.jpg" />
 <meta property="twitter:title" content="Regression Coefficient Estimation" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-16T00:00:00+09:00","datePublished":"2024-07-16T00:00:00+09:00","description":"Based on the following lectures (1) “Statistics (2018-1)” by Prof. Sang Ah Lee, Dept. of Economics, College of Economics &amp; Commerce, Kookmin Univ. (2) “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ. (3) “Statistical Models and Application (2024-1)” by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ.","headline":"Regression Coefficient Estimation","image":"https://jayarnim.github.io/_post_refer_img/2.STATS/3.regression_analysis/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/regression_coefficient_estimation/"},"url":"https://jayarnim.github.io/posts/regression_coefficient_estimation/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-17T00:00:00+09:00","datePublished":"2024-07-17T00:00:00+09:00","description":"Based on the following lectures (1) “Statistics (2018-1)” by Prof. Sang Ah Lee, Dept. of Economics, College of Economics &amp; Commerce, Kookmin Univ. (2) “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ. (3) “Statistical Models and Application (2024-1)” by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ.","headline":"Regression Coefficient Estimation","image":"https://jayarnim.github.io/_post_refer_img/2.STATS/3.regression_analysis/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/regression_coefficient_estimation/"},"url":"https://jayarnim.github.io/posts/regression_coefficient_estimation/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -718,17 +718,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -809,13 +798,13 @@
 
 <time
   
-  data-ts="1721055600"
+  data-ts="1721142000"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Jul 16, 2024
+  Jul 17, 2024
 </time>
 
       </span>
@@ -873,9 +862,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1091 words"
+  title="950 words"
 >
-  <em>6 min</em> read</span>
+  <em>5 min</em> read</span>
 
         </div>
       </div>
@@ -886,7 +875,7 @@
     <h2 id="ordinary-least-squares"><span class="me-2">Ordinary Least Squares</span><a href="#ordinary-least-squares" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<p><a href="/_post_refer_img/2.STATS/3.regression_analysis/02-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/2.STATS/3.regression_analysis/02-01.png" alt="01" width="100%" loading="lazy"></a></p>
+<p><a href="/_post_refer_img/2.STATS/3.regression_analysis/03-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/2.STATS/3.regression_analysis/03-01.png" alt="01" width="100%" loading="lazy"></a></p>
 
 <ul>
   <li>
@@ -968,86 +957,34 @@
   </li>
 </ul>
 
-<h2 id="mle"><span class="me-2">MLE</span><a href="#mle" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<ul>
-  <li>
-    <p><strong>우도(Likelihood)</strong>: 파라미터 $\theta=(\beta_{0},\beta_{1},\sigma^{2})$ 가 주어졌을 때, 관측치 $y$ 가 발생할 확률</p>
-
-\[\begin{gathered}
-  y_{i}
-  = \beta_{0}+\beta_{1}x_{i}+\epsilon, \quad \epsilon \sim \mathcal{N}(0,\sigma^{2})\\
-  \Updownarrow\\
-  y_{i} \sim \mathcal{N}(\beta_{0} + \beta_{1}x_{i},\sigma^{2})
-  \end{gathered}\]
-  </li>
-  <li>
-    <p><strong>최우추정법(<code class="language-plaintext highlighter-rouge">M</code>aximum <code class="language-plaintext highlighter-rouge">L</code>ikelihood <code class="language-plaintext highlighter-rouge">E</code>stimation)</strong>: 우도를 최대화하는 회귀계수를 추정하는 방법</p>
-
-\[\begin{aligned}
-  \hat{\beta}_{MLE}
-  &amp;= \text{arg}\max{\mathcal{L}(\beta_{0},\beta_{1}, \sigma^2)}
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>$\hat{\beta}_{MLE}$ 는 $RSS$ 에 반비례함</p>
-
-\[\begin{aligned}
-  \mathcal{L}(\beta_{0},\beta_{1}, \sigma^2)
-  &amp;= \ln\prod_{i=1}^{n}{\frac{1}{\sqrt{2 \pi \sigma^{2}}}\exp{\left[-\frac{1}{2\sigma^{2}}(y_{i}-\beta_{0}-\beta_{1}x_{i})^{2}\right]}}\\
-  &amp;= \sum_{i=1}^{n}{\left[-\frac{1}{2}\ln{2\pi \sigma^{2}}-\frac{1}{2 \sigma^{2}}(y_{i}-\beta_{0}-\beta_{1}x_{i})^{2}\right]}\\
-  &amp;= -\frac{n}{2}\ln{2 \pi \sigma^{2}}-\frac{1}{2 \sigma^{2}}\underbrace{\sum_{i=1}^{n}{(y_{i}-\beta_{0}-\beta_{1}x_{i})^{2}}}_{=:RSS}
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>따라서 \(\hat{\beta}_{OLS}\) 는 \(\hat{\beta}_{MLE}\) 의 특수한 형태임</p>
-
-\[\begin{aligned}
-  \therefore \text{arg} \max{\mathcal{L}(\beta_{0},\beta_{1}, \sigma^2)}
-  &amp;\propto \text{arg} \min{RSS}
-  \end{aligned}\]
-  </li>
-</ul>
-
 <h2 id="gauss-markov-assumptions"><span class="me-2">Gauss-Markov Assumptions</span><a href="#gauss-markov-assumptions" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
   <li>
-    <p><code class="language-plaintext highlighter-rouge">A.1</code> <strong>반응변수와 설명변수의 선형성 가정</strong></p>
+    <p><code class="language-plaintext highlighter-rouge">A.1</code> 반응변수와 설명변수의 선형성 가정</p>
 
-    <blockquote>
-      <p>The Linear Model is Correctly Specified.</p>
-    </blockquote>
+\[\mathbb{E}\left[Y\mid X\right]=\beta^{T}X\]
   </li>
   <li>
-    <p><code class="language-plaintext highlighter-rouge">A.2</code> <strong>관측치 간 오차항의 자기상관 없음(No Autocorrelation) 가정</strong></p>
+    <p><code class="language-plaintext highlighter-rouge">A.2</code> 오차항의 자기상관 없음(No Autocorrelation) 가정</p>
 
-    <blockquote>
-      <p>$\mathrm{Cov}\left[\varepsilon_i, \varepsilon_j\right]=0$ If $i \ne j$</p>
-    </blockquote>
+\[\mathrm{Cov}\left[\varepsilon_i, \varepsilon_j\mid X\right]=0,\quad i\ne j\]
   </li>
   <li>
-    <p><code class="language-plaintext highlighter-rouge">A.3</code> <strong>오차항의 기대값에 관한 가정</strong></p>
+    <p><code class="language-plaintext highlighter-rouge">A.3</code> 오차항과 설명변수 간 조건부 독립 가정</p>
 
-    <blockquote>
-      <p>$\mathbb{E}\left[\varepsilon_i\right]=0$ For Every $i=1,\cdots,n$</p>
-    </blockquote>
+\[\mathbb{E}\left[\varepsilon_i \mid X\right]=0,\quad \forall i=1,\cdots,n\]
   </li>
   <li>
-    <p><code class="language-plaintext highlighter-rouge">A.4</code> <strong>오차항의 등분산성(Homoskedasticity) 가정</strong></p>
+    <p><code class="language-plaintext highlighter-rouge">A.4</code> 오차항의 등분산성(Homoskedasticity) 가정</p>
 
-    <blockquote>
-      <p>$\mathrm{Var}\left[\varepsilon_i\right]=\sigma^2$ For Every $i=1,\cdots,n$</p>
-    </blockquote>
+\[\mathrm{Var}\left[\varepsilon_i \mid X\right]=\sigma^2,\quad \forall i=1,\cdots,n\]
   </li>
   <li>
-    <p><code class="language-plaintext highlighter-rouge">A.5</code> <strong>설명변수의 비확률성 가정 혹은 설명변수 간 통계적 독립성 가정</strong></p>
+    <p><code class="language-plaintext highlighter-rouge">A.5</code> 설명변수 간 선형 독립(Linear Independence) 가정</p>
 
-    <blockquote>
-      <p>$X_i$ is Non-Random For Every $i=1,\cdots,n$</p>
-    </blockquote>
+\[\mathrm{rank}(X)=p,\quad X\in\mathbb{R}^{n\times p}\]
   </li>
 </ul>
 
@@ -1056,7 +993,7 @@
 
 <ul>
   <li>
-    <p>가중치 $\beta_{1}$ 의 최소자승추정량 $\hat{\beta}_{1}$ 은 $Y$ 의 선형 결합</p>
+    <p>가중치 $\beta_{1}$ 의 최소자승추정량 $\hat{\beta}_{1}$ 은 $Y$ 의 선형 결합임</p>
 
 \[\begin{aligned}
   \hat{\beta}_{1}
@@ -1069,21 +1006,30 @@
   &amp;= \sum_{i=1}^{n}{(x_{i}-\overline{x}) \cdot y_{i}}\\
   \\
   \therefore \hat{\beta}_{1}
-  &amp;= \frac{\sum_{i=1}^{n}{(x_{i}-\overline{x}) \cdot y_{i}}}{\sum_{i=1}^{n}{(x_{i}-\overline{x})^{2}}}\\
-  &amp;= w_{1} \cdot y_{1} + w_{2} \cdot y_{2} + \cdots + w_{n} \cdot y_{n}\\
-  w_{i}
-  &amp;=\frac{(x_{i}-\overline{x})}{\sum_{j=1}^{n}{(x_{j}-\overline{x})^{2}}}
+  &amp;= \sum_{i=1}^{n}{\underbrace{\frac{(x_{i}-\overline{x})}{\sum_{j=1}^{n}{(x_{j}-\overline{x})^{2}}}}_{=:w_{i}}}\cdot y_{i}\\
+  &amp;= w_{1} \cdot y_{1} + w_{2} \cdot y_{2} + \cdots + w_{n} \cdot y_{n}
   \end{aligned}\]
   </li>
   <li>
-    <p>$w_i$ 에 대하여 다음이 성립함</p>
+    <p>$\sum_{i=1}^{n}{w_{i}}=0$</p>
 
-    <ul>
-      <li>
-        <p>$\sum_{i=1}^{n}{w_{i}}=\displaystyle\frac{\sum_{i=1}^{n}{(x_{i}-\overline{x})}}{\sum_{j=1}^{n}{(x_j-\overline{x})^2}}=0$</p>
-      </li>
-      <li>
-        <p>$\sum_{i=1}^{n}{w_{i} \cdot x_{i}}=1$</p>
+\[\begin{aligned}
+  \sum_{i=1}^{n}{w_{i}}
+  &amp;=\sum_{i=1}^{n}{\frac{(x_{i}-\overline{x})}{\sum_{j=1}^{n}{(x_j-\overline{x})^2}}}\\
+  &amp;=\frac{1}{\sum_{j=1}^{n}{(x_j-\overline{x})^2}}\cdot\left(\sum_{i=1}^{n}{(x_{i}-\overline{x})}\right)\\
+  \\
+  \sum_{i=1}^{n}{(x_{i}-\overline{x})}
+  &amp;=\sum_{i=1}^{n}{x_{i}}-n\cdot\overline{x}\\
+  &amp;=n\cdot\overline{x}-n\cdot\overline{x}\\
+  &amp;=0\\
+  \\
+  \therefore \sum_{i=1}^{n}{w_{i}}
+  &amp;=\frac{1}{\sum_{j=1}^{n}{(x_j-\overline{x})^2}}\cdot 0\\
+  &amp;=0
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>$\sum_{i=1}^{n}{w_{i} \cdot x_{i}}=1$</p>
 
 \[\begin{aligned}
   \sum_{i=1}^{n}{w_{i} \cdot x_{i}}
@@ -1101,9 +1047,9 @@
   &amp;= \frac{\sum_{i=1}^{n}{(x_{i}-\overline{x})^{2}}}{\sum_{j=1}^{n}{(x_{j}-\overline{x})^{2}}}\\
   &amp;= 1
   \end{aligned}\]
-      </li>
-      <li>
-        <p>$\sum_{i=1}^{n}{w_{i}^{2}}=\displaystyle\frac{1}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}$</p>
+  </li>
+  <li>
+    <p>$\sum_{i=1}^{n}{w_{i}^{2}}=\displaystyle\frac{1}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}$</p>
 
 \[\begin{aligned}
   \sum_{i=1}^{n}{w_{i}^{2}}
@@ -1112,8 +1058,6 @@
   &amp;= \frac{\sum_{i=1}^{n}{(x_{i}-\overline{x})^{2}}}{\sum_{j=1}^{n}{(x_{j}-\overline{x})^{2}} \cdot \sum_{j=1}^{n}{(x_{j}-\overline{x})^{2}}}\\
   &amp;= \frac{1}{\sum_{j=1}^{n}{(x_{j}-\overline{x})^{2}}}
   \end{aligned}\]
-      </li>
-    </ul>
   </li>
   <li>
     <p>따라서 최소자승추정량 \(\hat{\beta}_{1}\) 과 그 모수 \(\beta_{1}\) 사이에는 다음이 성립함</p>
@@ -1163,9 +1107,16 @@
   &amp;= \mathbb{E}\left[\beta_{1} + \sum_{i=1}^{n}{w_{i} \cdot \varepsilon_{i}}\right]\\
   &amp;= \mathbb{E}\left[\beta_{1}\right] + \mathbb{E}\left[\sum_{i=1}^{n}{w_{i} \cdot \varepsilon_{i}}\right]\\
   &amp;= \beta_{1} + \mathbb{E}\left[\sum_{i=1}^{n}{w_{i} \cdot \varepsilon_{i}}\right]\\
-  &amp;= \beta_{1} + \sum_{i=1}^{n}{\mathbb{E}\left[w_{i} \cdot \varepsilon_{i}\right]}\\
-  &amp;= \beta_{1} + \sum_{i=1}^{n}{\mathbb{E}\left[w_{i}\right] \cdot \mathbb{E}\left[\varepsilon_{i}\right]} \quad \text{s.t.} \quad X \perp \varepsilon\\
-  &amp;= \beta_{1} + \sum_{i=1}^{n}{\mathbb{E}\left[w_{i}\right] \cdot 0} \quad (\because \varepsilon \sim \mathcal{N}(0,\sigma^2))\\
+  &amp;= \beta_{1} + \sum_{i=1}^{n}{\mathbb{E}\left[w_{i} \cdot \varepsilon_{i}\right]}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>$\because\mathbb{E}\left[\varepsilon_i \mid X\right]=0$</p>
+
+\[\begin{aligned}
+  \mathbb{E}\left[\hat{\beta}_{1}\right]
+  &amp;= \beta_{1} + \sum_{i=1}^{n}{\mathbb{E}\left[w_{i}\right] \cdot \mathbb{E}\left[\varepsilon_{i}\right]}\\
+  &amp;= \beta_{1} + \sum_{i=1}^{n}{\mathbb{E}\left[w_{i}\right] \cdot 0}\\
   &amp;= \beta_{1}
   \end{aligned}\]
   </li>
@@ -1194,7 +1145,7 @@
   \end{aligned}\]
   </li>
   <li>
-    <p>$\because \mathrm{Cov}\left[\varepsilon_{i}, \varepsilon_{j}\right]=0$</p>
+    <p>$\because \mathrm{Cov}\left[\varepsilon_{i}, \varepsilon_{j}\mid X\right]=0$</p>
 
 \[\begin{aligned}
   \mathrm{Var}\left[\hat{\beta}_{1}\right]
@@ -5788,31 +5739,19 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
@@ -6130,21 +6069,21 @@
 
   
     <a
-      href="/posts/simple_linear_regression_analysis/"
+      href="/posts/multiple_linear_regression_analysis/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>Simple Linear Regression Analysis</p>
+      <p>Multiple Linear Regression Analysis</p>
     </a>
   
 
   
     <a
-      href="/posts/multiple_linear_regression_analysis/"
+      href="/posts/regression_diagnostics/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>Multiple Linear Regression Analysis</p>
+      <p>Regression Diagnostics</p>
     </a>
   
 </nav>
