@@ -30,25 +30,25 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="Regression Diagnostics" />
+<meta property="og:title" content="Regression Diagnostics (1) Nonlinearity" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="Based on the following lectures (1) “Statistics (2018-1)” by Prof. Sang Ah Lee, Dept. of Economics, College of Economics &amp; Commerce, Kookmin Univ. (2) “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ. (3) “Statistical Models and Application (2024-1)” by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ." />
 <meta property="og:description" content="Based on the following lectures (1) “Statistics (2018-1)” by Prof. Sang Ah Lee, Dept. of Economics, College of Economics &amp; Commerce, Kookmin Univ. (2) “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ. (3) “Statistical Models and Application (2024-1)” by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ." />
-<link rel="canonical" href="https://jayarnim.github.io/posts/regression_diagnostics/" />
-<meta property="og:url" content="https://jayarnim.github.io/posts/regression_diagnostics/" />
+<link rel="canonical" href="https://jayarnim.github.io/posts/regression_diagnostics_1/" />
+<meta property="og:url" content="https://jayarnim.github.io/posts/regression_diagnostics_1/" />
 <meta property="og:site_name" content="Data Scientist" />
 <meta property="og:image" content="https://jayarnim.github.io/_post_refer_img/2.STATS/3.regression_analysis/Thumbnail.jpg" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-07-18T00:00:00+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/2.STATS/3.regression_analysis/Thumbnail.jpg" />
-<meta property="twitter:title" content="Regression Diagnostics" />
+<meta property="twitter:title" content="Regression Diagnostics (1) Nonlinearity" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-18T00:00:00+09:00","datePublished":"2024-07-18T00:00:00+09:00","description":"Based on the following lectures (1) “Statistics (2018-1)” by Prof. Sang Ah Lee, Dept. of Economics, College of Economics &amp; Commerce, Kookmin Univ. (2) “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ. (3) “Statistical Models and Application (2024-1)” by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ.","headline":"Regression Diagnostics","image":"https://jayarnim.github.io/_post_refer_img/2.STATS/3.regression_analysis/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/regression_diagnostics/"},"url":"https://jayarnim.github.io/posts/regression_diagnostics/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-18T00:00:00+09:00","datePublished":"2024-07-18T00:00:00+09:00","description":"Based on the following lectures (1) “Statistics (2018-1)” by Prof. Sang Ah Lee, Dept. of Economics, College of Economics &amp; Commerce, Kookmin Univ. (2) “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ. (3) “Statistical Models and Application (2024-1)” by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ.","headline":"Regression Diagnostics (1) Nonlinearity","image":"https://jayarnim.github.io/_post_refer_img/2.STATS/3.regression_analysis/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/regression_diagnostics_1/"},"url":"https://jayarnim.github.io/posts/regression_diagnostics_1/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Regression Diagnostics | Data Scientist
+  <title>Regression Diagnostics (1) Nonlinearity | Data Scientist
   </title>
 
   <!--
@@ -405,7 +405,7 @@
         
           
             
-              <span>Regression Diagnostics</span>
+              <span>Regression Diagnostics (1) Nonlinearity</span>
             
 
           
@@ -567,6 +567,69 @@
     <!-- combine -->
     
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
 
   
 
@@ -625,28 +688,6 @@
 
       
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
 
     
   
@@ -654,49 +695,6 @@
   
   
 
-  
-    
-    
-
-    
-      
-        
-        
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-
-    
   
 
   
@@ -719,7 +717,7 @@
 
 <article class="px-1">
   <header>
-    <h1 data-toc-skip>Regression Diagnostics</h1>
+    <h1 data-toc-skip>Regression Diagnostics (1) Nonlinearity</h1>
     
       <p class="post-desc fw-light mb-4">Based on the following lectures <br> (1) “Statistics (2018-1)” by Prof. Sang Ah Lee, Dept. of Economics, College of Economics & Commerce, Kookmin Univ. <br> (2) “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ. <br> (3) "Statistical Models and Application (2024-1)" by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ.</p>
     
@@ -802,9 +800,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1378 words"
+  title="648 words"
 >
-  <em>7 min</em> read</span>
+  <em>3 min</em> read</span>
 
         </div>
       </div>
@@ -816,349 +814,147 @@
 <hr />
 
 <ul>
-  <li><strong>회귀 진단(Regression Diagnostics)</strong> : 고전적 선형 회귀 가정이 위배되는지 진단하는 절차
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">A.1</code> 반응변수와 설명변수 간 비선형성 문제(Non-linearity Problem)</li>
-      <li><code class="language-plaintext highlighter-rouge">A.2</code> 오차항 간 상관성 문제(Auto-correlation Problem)</li>
-      <li><code class="language-plaintext highlighter-rouge">A.3</code> 이상치 및 영향점 문제(Outlier &amp; Influential Points Problem)</li>
-      <li><code class="language-plaintext highlighter-rouge">A.4</code> 오차항의 이분산성 문제(Hetero-scedasticity Problem)</li>
-      <li><code class="language-plaintext highlighter-rouge">A.5</code> 설명변수 간 다중공선성 문제(Multi-col-linearity Problem)</li>
-    </ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">A.1</code> <strong>반응변수와 설명변수 간 비선형성 문제(Non-Linearity Problem)</strong>: 반응변수의 조건부 기대값이 설명변수들의 선형 결합 형태가 아님에 따라 계수 벡터의 최소자승추정량이 불편추정량이 될 수 없는 문제</p>
+
+\[\cancel{\exists}\beta\in\mathbb{R}^{P}
+\quad\mathrm{s.t.}\quad
+\mathbb{E}\left[\mathbf{y}\mid\mathbf{X}\right]
+=\mathbf{X}\beta\]
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">A.2</code> <strong>오차항의 이분산성 문제(Hetero-Scedasticity Problem)</strong>: 오차항의 등분산 가정이 위배됨에 따라 계수 벡터의 최소자승추정량이 효율추정량이 될 수 없는 문제</p>
+
+\[\exists i\ne j:\mathrm{Var}\left[\varepsilon_{i}\mid\mathbf{X}\right]\ne\mathrm{Var}\left[\varepsilon_{j}\mid\mathbf{X}\right]\\
+\Updownarrow\\
+\mathrm{Var}\left[\varepsilon\mid\mathbf{X}\right]
+=\mathrm{diag}(\sigma_{1}^{2},\cdots,\sigma_{N}^{2})\ne\sigma^{2}\mathbf{I}\]
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">A.3</code> <strong>오차항의 자기상관 문제(Auto-Correlation Problem)</strong>: 오차항의 자기상관이 존재함에 따라 계수 벡터의 최소자승추정량이 효율추정량이 될 수 없는 문제</p>
+
+\[\exists i\ne j:\mathrm{Cov}\left[\varepsilon_{i},\varepsilon_{j}\mid \mathbf{X}\right]\ne 0
+\quad\Longleftrightarrow\quad
+\mathrm{Var}\left[\varepsilon\mid\mathbf{X}\right]\ne\sigma^{2}\mathbf{I}\]
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">A.5</code> <strong>설명변수 간 다중공선성 문제(Multi-Col-Linearity Problem)</strong>: 설명변수들이 선형 종속됨에 따라 계수 벡터가 유일하게 결정되지 못하는 문제</p>
+
+\[\mathrm{rank}(\mathbf{X})\ne p \quad\mathrm{for}\quad\mathbf{X}\in\mathbb{R}^{N\times P}\]
   </li>
 </ul>
 
-<h2 id="non-linearity-problem"><span class="me-2">Non-linearity Problem</span><a href="#non-linearity-problem" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="non-linearity-problem"><span class="me-2">Non-Linearity Problem</span><a href="#non-linearity-problem" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
+
+<p><a href="https://velog.velcdn.com/images/jayarnim/post/9f708e08-87e6-4aca-bd03-12c81d02fe12/image.png" class="popup img-link  shimmer"><img src="https://velog.velcdn.com/images/jayarnim/post/9f708e08-87e6-4aca-bd03-12c81d02fe12/image.png" alt="" loading="lazy"></a></p>
 
 <ul>
   <li>
-    <p>$Y$ 가 $X$ 의 선형 결합이 아니라고 하자</p>
+    <p>반응변수의 조건부 기대값이 설명변수에 대한 함수라고 하자:</p>
+
+\[\begin{gathered}
+  \mathbb{E}\left[\mathbf{y}\mid\mathbf{X}\right]
+  =f(\mathbf{X})\\
+  \Updownarrow\\
+  \mathbf{y}=f(\mathbf{X})+\varepsilon,\quad\varepsilon\sim\mathcal{N}(0,\sigma^{2})
+  \end{gathered}\]
+  </li>
+  <li>
+    <p>선형 회귀 모형:</p>
 
 \[\begin{aligned}
-  y_i= f(x_i)+\varepsilon_i
+  \hat{\mathbf{y}}
+  &amp;=\mathbf{X}\hat{\beta}
   \end{aligned}\]
   </li>
   <li>
-    <p>최소자승추정량 \(\hat{\beta}_{1}\) 을 다음과 같이 이해할 수 있음</p>
+    <p>조건부 기대값의 모형 편향:</p>
 
 \[\begin{aligned}
-  \hat{\beta}_{1}
-  &amp;= \frac{\sum_{i=1}^{n}{(x_i - \overline{x})(y_i - \overline{y})}}{\sum_{i=1}^{n}{(x_i - \overline{x})^2}}\\
-  &amp;= \frac{\sum_{i=1}^{n}{(x_i - \overline{x})(f(x_i)+\varepsilon_i - \overline{f(x)} - \overline{\varepsilon})}}{\sum_{i=1}^{n}{(x_i - \overline{x})^2}}\\
-  &amp;= \frac{\sum_{i=1}^{n}{(x_i-\overline{x})(f(x_i)-\overline{f(x)})}}{\sum_{i=1}^{n}{(x_i - \overline{x})^2}} + \frac{\sum_{i=1}^{n}{(x_i-\overline{x})(\varepsilon_i-\overline{\varepsilon})}}{\sum_{i=1}^{n}{(x_i - \overline{x})^2}}\\
-  &amp;= \frac{\sum_{i=1}^{n}{(x_i-\overline{x})(f(x_i)-\overline{f(x)})}}{\sum_{i=1}^{n}{(x_i - \overline{x})^2}} + \frac{\sum_{i=1}^{n}{(x_i-\overline{x}) \cdot \varepsilon_i}}{\sum_{i=1}^{n}{(x_i - \overline{x})^2}} - \frac{\sum_{i=1}^{n}{(x_i-\overline{x}) \cdot \overline{\varepsilon}}}{\sum_{i=1}^{n}{(x_i - \overline{x})^2}}\\
-  &amp;= \frac{\sum_{i=1}^{n}{(x_i-\overline{x})(f(x_i)-\overline{f(x)})}}{\sum_{i=1}^{n}{(x_i - \overline{x})^2}} + \sum_{i=1}^{n}{w_i \cdot \varepsilon_i}
+  \mathbb{E}\left[\mathbf{y}\mid\mathbf{X}\right]-\mathbb{E}\left[\hat{\mathbf{y}}\mid\mathbf{X}\right]
+  &amp;=f(\mathbf{X})-\mathbb{E}\left[\mathbf{X}\hat{\beta}\mid\mathbf{X}\right]\\
+  &amp;=f(\mathbf{X})-\mathbf{X}\cdot\mathbb{E}\left[\hat{\beta}\mid\mathbf{X}\right]\\
+  &amp;=f(\mathbf{X})-\mathbf{X}\beta
   \end{aligned}\]
   </li>
   <li>
-    <p>\(\hat{\beta}_{1}\) 의 기대값은 다음과 같음</p>
+    <p>함수 $f$ 가 설명변수의 선형 결합이 아닐 경우 선형 회귀 모형의 적합값은 조건부 기대값의 불편추정량이 될 수 없음:</p>
 
-\[\begin{aligned}
-  \mathbb{E}\left[\hat{\beta}_{1}\right]
-  &amp;= \mathbb{E}\left[\frac{\sum_{i=1}^{n}{(x_i-\overline{x})(f(x_i)-\overline{f(x)})}}{\sum_{i=1}^{n}{(x_i - \overline{x})^2}} + \sum_{i=1}^{n}{w_i \cdot \varepsilon_i}\right]\\
-  &amp;= \mathbb{E}\left[\frac{\sum_{i=1}^{n}{(x_i-\overline{x})(f(x_i)-\overline{f(x)})}}{\sum_{i=1}^{n}{(x_i - \overline{x})^2}}\right] + \mathbb{E}\left[\sum_{i=1}^{n}{w_i \cdot \varepsilon_i}\right]\\
-  &amp;= \mathbb{E}\left[\frac{\sum_{i=1}^{n}{(x_i-\overline{x})(f(x_i)-\overline{f(x)})}}{\sum_{i=1}^{n}{(x_i - \overline{x})^2}}\right] + \sum_{i=1}^{n}{\mathbb{E}\left[w_i\right] \cdot \mathbb{E}\left[\varepsilon_i\right]} \quad \text{s.t.} \quad X \perp \varepsilon\\
-  &amp;= \mathbb{E}\left[\frac{\sum_{i=1}^{n}{(x_i-\overline{x})(f(x_i)-\overline{f(x)})}}{\sum_{i=1}^{n}{(x_i - \overline{x})^2}}\right] + \sum_{i=1}^{n}{\mathbb{E}\left[w_i\right] \cdot 0} \quad (\because \varepsilon \sim N(0,\sigma^2))\\
-  &amp;= \mathbb{E}\left[\frac{\sum_{i=1}^{n}{(x_i-\overline{x})(f(x_i)-\overline{f(x)})}}{\sum_{i=1}^{n}{(x_i - \overline{x})^2}}\right]
-  \end{aligned}\]
+\[f(\mathbf{X})-\mathbf{X}\beta\ne 0\]
   </li>
   <li>
-    <p>따라서 \(\hat{\beta}_{1}\) 은 \(\beta_{1}\) 의 불편추정량이 될 수 없음</p>
+    <p>잔차 $\epsilon$ 의 그래프가 $0$ 을 중심으로 무작위하게 분포하지 않고 체계적인 패턴을 보이는 경우 선형성 가정이 위배되었다고 진단함:</p>
 
 \[\begin{aligned}
-  \mathbb{Bias}\left[\hat{\beta}_{1}\right]
-  &amp;= \mathbb{E}\left[\hat{\beta}_{1}\right] - \beta_1\\
-  &amp;= \mathbb{E}\left[\frac{\sum_{i=1}^{n}{(x_i-\overline{x})(f(x_i)-\overline{f(x)})}}{\sum_{i=1}^{n}{(x_i - \overline{x})^2}}\right] - \beta_1\\
+  \epsilon
+  &amp;=\mathbf{y}-\hat{\mathbf{y}}\\
+  &amp;=f(\mathbf{X})+\varepsilon-\mathbf{X}\hat{\beta}\\
+  \mathbb{E}\left[\epsilon\mid\mathbf{X}\right]
+  &amp;=f(\mathbf{X})-\mathbf{X}\beta\\
   &amp;\ne 0
   \end{aligned}\]
   </li>
 </ul>
 
-<h2 id="auto-correlation-problem"><span class="me-2">Auto-correlation Problem</span><a href="#auto-correlation-problem" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="box-cox-transformation"><span class="me-2">Box-Cox Transformation</span><a href="#box-cox-transformation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <ul>
   <li>
-    <p>최소자승추정량 \(\hat{\beta}_{1}\) 의 분산은 다음과 같음</p>
+    <p>반응변수와 설명변수가 단조(monotone) 관계이나 증감 속도가 왜곡되어(스케일이 뒤틀려서) 비선형성을 띠게 되었다고 가정하자:</p>
 
 \[\begin{aligned}
-  \mathbb{Var}\left[\hat{\beta}_{1}\right]
-  &amp;= \mathbb{Var}\left[\beta_1 + \sum_{i=1}^{n}{w_i \cdot \varepsilon_i}\right]\\
-  &amp;= \mathbb{Var}\left[\sum_{i=1}^{n}{w_i \cdot \varepsilon_i}\right]\\
-  &amp;= \sum_{i=1}^{n}{w_{i}^{2} \cdot \sigma_{i}^{2}} + \sum_{i}\sum_{j \ne i}{w_{i} \cdot w_{j} \cdot \mathbb{Cov}\left[\varepsilon_{i}, \varepsilon_{j}\right]}\\
-  &amp;= \sigma^{2}\sum_{i=1}^{n}{w_{i}^{2}} + \sum_{i}\sum_{j \ne i}{w_{i} \cdot w_{j} \cdot \mathbb{Cov}\left[\varepsilon_{i}, \varepsilon_{j}\right]} \quad (\because \sigma_{i^{\forall}}^{2}=\sigma^{2})
+  \frac{\mathrm{d}}{\mathrm{d}x}f(x)&gt;0,
+  \quad\frac{\mathrm{d}^{2}}{\mathrm{d}x^{2}}f(x)\ne0
   \end{aligned}\]
   </li>
   <li>
-    <p>$\mathbb{Cov}\left[\varepsilon_{i}, \varepsilon_{j}\right] \ne 0$ 이므로 최소분산성을 보장할 수 없음</p>
+    <p>증감 속도를 보정하는 비선형 링크 함수 $h$ 가 존재한다면 그 역함수를 통해 반응변수를 변환함으로써 조건부 기대값의 선형 가정을 만족할 수 있음:</p>
 
-\[\begin{aligned}
-  \sigma^{2}\sum_{i=1}^{n}{w_{i}^{2}} \le \sigma^{2}\sum_{i=1}^{n}{w_{i}^{2}} + \sum_{i}\sum_{j \ne i}{w_{i} \cdot w_{j} \cdot \mathbb{Cov}\left[\varepsilon_{i}, \varepsilon_{j}\right]}
-  \end{aligned}\]
-  </li>
-</ul>
-
-<h3 id="durbin-watson-statistic"><span class="me-2">Durbin-Watson Statistic</span><a href="#durbin-watson-statistic" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li>
-    <p><strong>더빈-왓슨 통계량(Durbin-Watson Statistic)</strong> : 잔차의 1차 자기상관성을 측정하는 지표</p>
-
-\[\begin{aligned}
-  DW
-  &amp;= \frac{\sum_{t=2}^{n}{(\varepsilon_{t}-\varepsilon_{t-1})^{2}}}{\sum_{t=1}^{n}{(\varepsilon_{t})^{2}}}
-  \end{aligned}\]
-
-    <ul>
-      <li>$DW \approx 0$ : 양의 자기상관이 매우 강함</li>
-      <li>$DW \approx 2$ : 자기상관 없음</li>
-      <li>$DW \approx 4$ : 음의 자기상관이 매우 강함</li>
-    </ul>
+\[\begin{gathered}
+  \mathbb{E}\left[\mathbf{y}\mid\mathbf{X}\right]
+  =f(\mathbf{X})
+  =h(\mathbf{X}\beta)\\
+  \Updownarrow\\
+  \mathbb{E}\left[h^{-1}(\mathbf{y})\mid\mathbf{X}\right]
+  =\mathbf{X}\beta
+  \end{gathered}\]
   </li>
   <li>
-    <p>$0\le DW \le 4 \quad (\because -1 \le \rho \le 1)$</p>
+    <p><strong>박스-콕스 변환(Box-Cox Transformation)</strong>: 반응변수에 적용되는 단조 멱변환으로서 조건부 기대값의 스케일 왜곡을 우도 기반으로 교정하여 선형 회귀 가정을 만족시키도록 하는 변수 변환</p>
 
-    <ul>
-      <li>
-        <p>$DW$ 의 분자를 다음과 같이 세분화할 수 있음</p>
-
-\[\begin{aligned}
-  \sum_{t=2}^{n}{(\varepsilon_{t}-\varepsilon_{t-1})^{2}}
-  &amp;= \sum_{t=2}^{n}{\varepsilon_{t}^2} + \sum_{t=2}^{n}{\varepsilon_{t-1}^2} - 2 \cdot \sum_{t=2}^{n}{\varepsilon_{t} \cdot \varepsilon_{t-1}}\\
-  \end{aligned}\]
-      </li>
-      <li>
-        <p>$n$ 이 매우 클 경우 다음이 성립함</p>
-
-\[\begin{aligned}
-  \sum_{t=2}^{n}{\varepsilon_{t}^2}
-  &amp;\approx \sum_{t=2}^{n}{\varepsilon_{t-1}^2}\\
-
-  \therefore \sum_{t=2}^{n}{\varepsilon_{t}^2} + \sum_{t=2}^{n}{\varepsilon_{t-1}^2}
-  &amp;\approx 2 \cdot \sum_{t=2}^{n}{\varepsilon_{t}^2}
-  \end{aligned}\]
-      </li>
-      <li>
-        <p>자기상관계수 $\rho$ 의 정의에 의해 다음이 성립함</p>
-
-\[\begin{aligned}
-  \rho
-  &amp;= \frac{\sum_{t=2}^{n}{(\varepsilon_{t}-\overline{\varepsilon})(\varepsilon_{t-1}-\overline{\varepsilon})}}{\sum_{t=1}^{n}{(\varepsilon_{t}-\overline{\varepsilon})^{2}}}\\
-  &amp;= \frac{\sum_{t=2}^{n}{\varepsilon_{t} \cdot \varepsilon_{t-1}}}{\sum_{t=1}^{n}{(\varepsilon_{t})^{2}}} \quad(\because \varepsilon \sim N(0, \sigma^2))\\
-  \therefore \sum_{t=2}^{n}{\varepsilon_{t} \cdot \varepsilon_{t-1}}
-  &amp;= \rho \cdot \sum_{t=1}^{n}{(\varepsilon_{t})^{2}}
-  \end{aligned}\]
-      </li>
-      <li>
-        <p>따라서 분자를 다음과 같이 이해할 수 있음</p>
-
-\[\begin{aligned}
-  \therefore \sum_{t=2}^{n}{(\varepsilon_{t}-\varepsilon_{t-1})^{2}}
-  &amp;= \sum_{t=2}^{n}{\varepsilon_{t}^2} + \sum_{t=2}^{n}{\varepsilon_{t-1}^2} - 2 \cdot \sum_{t=2}^{n}{\varepsilon_{t} \cdot \varepsilon_{t-1}}\\
-  &amp;\approx 2 \cdot \sum_{t=2}^{n}{\varepsilon_{t}^2} - 2 \cdot \rho \cdot \sum_{t=1}^{n}{\varepsilon_{t}^{2}}\\
-  &amp;\approx 2(1-\rho) \cdot \sum_{t=1}^{n}{\varepsilon_{t}^{2}}
-  \end{aligned}\]
-      </li>
-      <li>
-        <p>따라서 $DW$ 는 $\rho$ 와 다음의 관계가 성립함</p>
-
-\[\begin{aligned}
-  \therefore DW
-  &amp;= \frac{\sum_{t=2}^{n}{(\varepsilon_{t}-\varepsilon_{t-1})^{2}}}{\sum_{t=1}^{n}{(\varepsilon_{t})^{2}}}\\
-  &amp;\approx 2(1-\rho) \cdot \frac{\sum_{t=1}^{n}{\varepsilon_{t}^{2}}}{\sum_{t=1}^{n}{\varepsilon_{t}^{2}}}\\
-  &amp;= 2(1-\rho)
-  \end{aligned}\]
-      </li>
-    </ul>
+\[z
+  =\begin{cases}
+  \left(y^{\lambda}-1\right)/\lambda,\quad&amp;\lambda\ne0\\
+  \log{y},\quad&amp;\lambda=0
+  \end{cases}
+  \quad\mathrm{s.t.}\quad \forall y &gt;0\]
   </li>
-</ul>
-
-<h2 id="hetero-scedasticity-problem"><span class="me-2">Hetero-scedasticity Problem</span><a href="#hetero-scedasticity-problem" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<ul>
   <li>
-    <p>최소자승추정량 \(\hat{\beta}_{1}\) 의 분산은 다음과 같음</p>
+    <p>likelihood function:</p>
 
 \[\begin{aligned}
-  \mathbb{Var}\left[\hat{\beta}_{1}\right]
-  &amp;= \mathbb{Var}\left[\beta_1 + \sum_{i=1}^{n}{w_i \cdot \varepsilon_i}\right]\\
-  &amp;= \mathbb{Var}\left[\sum_{i=1}^{n}{w_i \cdot \varepsilon_i}\right]\\
-  &amp;= \sum_{i=1}^{n}{w_{i}^{2} \cdot \sigma_{i}^{2}} + \sum_{i}\sum_{j \ne i}{w_{i} \cdot w_{j} \cdot \mathbb{Cov}\left[\varepsilon_{i}, \varepsilon_{j}\right]}\\
-  &amp;= \sum_{i=1}^{n}{w_{i}^{2} \cdot \sigma_{i}^{2}} \quad (\because \mathbb{Cov}\left[\varepsilon_{i}, \varepsilon_{j}\right] = 0)
+  p_{y}(\mathbf{y})\mathrm{d}\mathbf{y}
+  &amp;=p_{z}(\mathbf{z})\mathrm{d}\mathbf{z}\\
+  \therefore p_{y}(\mathbf{y})
+  &amp;=p_{z}(\mathbf{z})\left\vert\frac{\mathrm{d}\mathbf{z}}{\mathrm{d}\mathbf{y}}\right\vert\\
+  &amp;=\mathcal{N}(\mathbf{X}\beta,\sigma^{2})\cdot\prod_{i=1}^{N}{y_{i}^{\lambda-1}}
   \end{aligned}\]
   </li>
   <li>
-    <p>$\sigma_{i}^{2} \ne \sigma_{j \ne i}^{2}$ 이므로 최소분산성을 보장할 수 없음</p>
+    <p>log likelihood function:</p>
 
-\[\begin{aligned}
-  \sigma^{2}\cdot\sum_{i=1}^{n}{w_{i}^{2}} \le \sum_{i=1}^{n}{w_{i}^{2} \cdot \sigma_{i}^{2}}
-  \end{aligned}\]
-  </li>
-</ul>
-
-<h3 id="breusch-pagan-test"><span class="me-2">Breusch-Pagan Test</span><a href="#breusch-pagan-test" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li>
-    <p><strong>브레쉬-파건 검정(Breusch-Pagan Test)</strong> : 잔차의 등분산성에 관한 검정</p>
+\[\mathcal{L}(\lambda,\theta)
+  =-\frac{2}{n}\log{2\pi}-\frac{2}{n}\log{\sigma^{2}}-\frac{1}{2\sigma^{2}}\Vert\mathbf{z}-\mathbf{X}\beta\Vert^{2}+(\lambda-1)\sum_{i=1}^{N}{\log{y_{i}}}\]
   </li>
   <li>
-    <p><strong>관심 모수 $\sigma^2$ 의 점 추정량 도출</strong></p>
-
-    <ul>
-      <li>
-        <p>다중선형회귀모형에서 $i$ 번째 관측치의 잔차 $\varepsilon^{(i)}$ 는 다음과 같이 정의됨</p>
+    <p>optimization:</p>
 
 \[\begin{aligned}
-  y^{(i)}
-  &amp;= \hat{\beta}_{0} + \hat{\beta}_{1} \cdot x^{(i)}_{1} + \cdots + \hat{\beta}_{p} \cdot x^{(i)}_{p} + \varepsilon^{(i)}\\
-  \varepsilon^{(i)}
-  &amp;= y^{(i)} - \left(\hat{\beta}_{0} + \hat{\beta}_{1} \cdot x^{(i)}_{1} + \cdots + \hat{\beta}_{p} \cdot x^{(i)}_{k} \right)
+  \hat{\lambda}
+  &amp;=\mathrm{arg}\max_{\lambda}\max_{\theta}{\mathcal{L}(\theta,\lambda)}\quad\mathrm{for}\quad\theta=(\beta,\sigma^{2})
   \end{aligned}\]
-      </li>
-      <li>
-        <p>잔차 자승 $\varepsilon^{2}$ 은 오차 분산 $\sigma^2$ 의 간접적인 추정치임</p>
-
-\[\begin{aligned}
-  \hat{\sigma}^{2}
-  &amp;= \frac{1}{n-(p+1)} \cdot \sum_{i=1}^{n}{(\varepsilon_{i} - \overline{\varepsilon})^{2}}\\
-  &amp;= \frac{1}{n-(p+1)} \cdot \sum_{i=1}^{n}{\varepsilon_{i}^{2}} \quad (\because \varepsilon \sim N(0,\sigma^2))
-  \end{aligned}\]
-      </li>
-    </ul>
-  </li>
-  <li><strong>귀무가설과 대립가설 설정</strong>
-    <ul>
-      <li>$H_0:\quad \sigma_{i}^2 = \sigma_{j\ne i}^2$</li>
-      <li>$H_1:\quad \sigma_{i}^2 \ne \sigma_{j\ne i}^2$</li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>검정통계량 도출</strong></p>
-
-\[BP \sim \chi^{2}(p)\]
-
-    <ul>
-      <li>
-        <p>잔차 자승 $\varepsilon_{i}^{2}$ 에 대한 보조회귀모형 정의</p>
-
-\[\begin{aligned}
-  \varepsilon_{i}^{2}
-  &amp;= \gamma_{0} + \gamma_{1} \cdot x^{(i)}_{1} + \cdots + \gamma_{k} \cdot x^{(i)}_{p} + \epsilon^{(i)}
-  \end{aligned}\]
-      </li>
-      <li>
-        <p>보조회귀모형의 결정계수 $R^2$ 도출</p>
-
-\[\begin{aligned}
-  R^{2}
-  &amp;= 1 - \frac{RSS}{TSS}\\
-  &amp;= 1 - \frac{\sum_{i=1}^{n}{\epsilon_{i}^{2}}}{\sum_{i=1}^{n}{\left(\varepsilon_{i}^{2}-\overline{\varepsilon^{2}}\right)^{2}}}
-  \end{aligned}\]
-      </li>
-      <li>
-        <p>검정통계량 도출</p>
-
-\[BP = n \cdot R^2 \sim \chi^{2}(p)\]
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="multi-col-linearity-problem"><span class="me-2">Multi-col-linearity Problem</span><a href="#multi-col-linearity-problem" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-
-<ul>
-  <li>
-    <p>반응변수 $Y$ 가 설명변수 $X_1, X_2$ 의 선형 결합이라고 하자</p>
-
-\[\begin{aligned}
-  Y = \beta_0 + \beta_1 \cdot X_1 + \beta_2 \cdot X_2 + \varepsilon
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>설명변수 $X_1$ 에 대한 가중치 $\beta_1$ 의 의미</p>
-
-\[\begin{aligned}
-  \beta_1
-  &amp;= \frac{\partial Y}{\partial X_1}
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>설명변수 $X_1$ 에 대한 가중치 $\beta_1$ 의 최소자승추정량 $\hat{\beta}_{1}$</p>
-
-\[\begin{aligned}
-  \hat{\beta}_{1}
-  &amp;= \frac{\sum_{i=1}^{n}{(x^{(i)}_{1}-\overline{x}_{1})(y^{(i)}-\overline{y})}}{\sum_{i=1}^{n}{(x^{(i)}_{1}-\overline{x}_{1})^{2}}} - \frac{\sum_{i=1}^{n}{(x^{(i)}_{1}-\overline{x}_{1})(x^{(i)}_{2}-\overline{x}_{2})}}{\sum_{i=1}^{n}{(x^{(i)}_{1}-\overline{x}_{1})^{2}}} \cdot \hat{\beta}_{2}\\
-  &amp;= \frac{\mathbb{Cov}\left[X_1, Y\right]}{\mathbb{Var}\left[X_1\right]} - \frac{\mathbb{Cov}\left[X_1, X_2\right]}{\mathbb{Var}\left[X_1\right]} \cdot \hat{\beta}_{2}
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>$X_2$ 가 $X_1$ 의 선형 결합으로 표현될 수 있다고 하자</p>
-
-\[\begin{aligned}
-  X_2 = \delta + \alpha \cdot X_1 + \epsilon
-  \end{aligned}\]
-  </li>
-  <li>
-    <p>\(\mathbb{Cov}\left[X_1, X_2\right] \ne 0\) 이므로 \(\hat{\beta}_{1}\) 은 \(\hat{\beta}_{2}\) 를 포함하게 되어 \(Y\) 에 대한 \(X_1\) 만의 순수한 설명력을 의미한다고 해석할 수 없음</p>
-
-\[\begin{aligned}
-  Y
-  &amp;= \beta_0 + \beta_1 \cdot X_1 + \beta_2 \cdot X_2 + \varepsilon\\
-  &amp;= \beta_0 + \beta_1 \cdot X_1 + \beta_2 \cdot \left(\delta + \alpha \cdot X_1\right) + \varepsilon\\
-  &amp;= \left(\beta_0 + \delta \cdot \beta_2 \right) + \left(\beta_1 + \alpha \cdot \beta_2\right) \cdot X_1 + \varepsilon
-  \end{aligned}\]
-  </li>
-</ul>
-
-<h3 id="vif"><span class="me-2">VIF</span><a href="#vif" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul>
-  <li>
-    <p><strong>분산팽창계수(<code class="language-plaintext highlighter-rouge">V</code>ariance <code class="language-plaintext highlighter-rouge">I</code>nflation <code class="language-plaintext highlighter-rouge">F</code>actor; VIF)</strong> : 변동성을 기준으로 다중공선성을 측정하는 지표로서, 통상 10을 초과하는 경우 다중공선성이 높다고 판단함</p>
-
-\[\begin{aligned}
-  VIF_k
-  &amp;= \frac{1}{1-R_{k}^{2}}
-  \end{aligned}\]
-
-    <ul>
-      <li>$VIF_i$ : $i$ 번째 설명변수의 분산팽창계수</li>
-      <li>$R_i^2$ : $i$ 번째 설명변수에 대한 결정계수</li>
-    </ul>
-  </li>
-  <li>
-    <p>$R_k^2$</p>
-
-    <ul>
-      <li>
-        <p>다중선형회귀모형은 다음과 같이 정의됨</p>
-
-\[\begin{aligned}
-  y^{(i)}
-  &amp;= \hat{\beta}_{0} + \hat{\beta}_{1} \cdot x^{(i)}_{1} + \cdots + \hat{\beta}_{k} \cdot x^{(i)}_{p} + \varepsilon^{(i)}
-  \end{aligned}\]
-      </li>
-      <li>
-        <p>$k$ 번째 설명변수에 대한 보조회귀모형 도출</p>
-
-\[\begin{aligned}
-  x_{k}^{(i)}
-  &amp;= \gamma_{0} + \gamma_{1} \cdot x^{(i)}_{1} + \cdots + \gamma_{k-1} \cdot x^{(i)}_{k-1} + \gamma_{k+1} \cdot x^{(i)}_{k+1} + \cdots +\gamma_{p} \cdot x^{(i)}_{p} + \epsilon^{(i)}
-  \end{aligned}\]
-      </li>
-      <li>
-        <p>보조회귀모형의 결정계수 $R_k^2$ 도출</p>
-
-\[\begin{aligned}
-  R_{k}^{2}
-  &amp;= 1 - \frac{RSS_k}{TSS_k}\\
-  &amp;= 1 - \frac{\sum_{i=1}^{n}{\epsilon_{i}^{2}}}{\sum_{i=1}^{n}{\left(x_{k}^{(i)}-\overline{x}_{k}\right)^{2}}}
-  \end{aligned}\]
-      </li>
-    </ul>
   </li>
 </ul>
 
@@ -1234,21 +1030,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Regression%20Diagnostics%20-%20Data%20Scientist&url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2Fregression_diagnostics%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=Regression%20Diagnostics%20(1)%20Nonlinearity%20-%20Data%20Scientist&url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2Fregression_diagnostics_1%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Regression%20Diagnostics%20-%20Data%20Scientist&u=https%3A%2F%2Fjayarnim.github.io%2Fposts%2Fregression_diagnostics%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=Regression%20Diagnostics%20(1)%20Nonlinearity%20-%20Data%20Scientist&u=https%3A%2F%2Fjayarnim.github.io%2Fposts%2Fregression_diagnostics_1%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2Fregression_diagnostics%2F&text=Regression%20Diagnostics%20-%20Data%20Scientist" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fjayarnim.github.io%2Fposts%2Fregression_diagnostics_1%2F&text=Regression%20Diagnostics%20(1)%20Nonlinearity%20-%20Data%20Scientist" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -2527,6 +2323,562 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -3197,562 +3549,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -5392,6 +5188,9 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">machine learning</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/numerical-data-analysis/">numerical data analysis</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/ai-application/">ai application</a>
       
         
@@ -5399,9 +5198,6 @@
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">collaborative filtering</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/numerical-data-analysis/">numerical data analysis</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/neural-networks/">neural networks</a>
@@ -5947,6 +5743,30 @@
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -5962,34 +5782,6 @@
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
-          <a href="/posts/improvement_of_ols/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1721487600"
-  data-df="ll"
-  
->
-  Jul 21, 2024
-</time>
-
-              <h4 class="pt-0 my-2">Improvement of OLS</h4>
-              <div class="text-muted">
-                <p>Based on the following lectures &lt;br&gt; (1) “Statistics (2018-1)” by Prof. Sang Ah Lee, Dept. of Economics, College of Economics &amp; Commerce, Kookmin Univ. &lt;br&gt; (2) “Intro. to Machine Learning (2023-2)...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
           <a href="/posts/interaction_terms/" class="post-preview card h-100">
             <div class="card-body">
               <!--
@@ -6002,11 +5794,11 @@
 
 <time
   
-  data-ts="1721401200"
+  data-ts="1721660400"
   data-df="ll"
   
 >
-  Jul 20, 2024
+  Jul 23, 2024
 </time>
 
               <h4 class="pt-0 my-2">Interaction Terms</h4>
@@ -6030,14 +5822,42 @@
 
 <time
   
-  data-ts="1721314800"
+  data-ts="1721574000"
   data-df="ll"
   
 >
-  Jul 19, 2024
+  Jul 22, 2024
 </time>
 
               <h4 class="pt-0 my-2">Qualitative Predictors</h4>
+              <div class="text-muted">
+                <p>Based on the following lectures &lt;br&gt; (1) “Statistics (2018-1)” by Prof. Sang Ah Lee, Dept. of Economics, College of Economics &amp; Commerce, Kookmin Univ. &lt;br&gt; (2) “Intro. to Machine Learning (2023-2)...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/improvement_of_ols/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1721487600"
+  data-df="ll"
+  
+>
+  Jul 21, 2024
+</time>
+
+              <h4 class="pt-0 my-2">Improvement of OLS</h4>
               <div class="text-muted">
                 <p>Based on the following lectures &lt;br&gt; (1) “Statistics (2018-1)” by Prof. Sang Ah Lee, Dept. of Economics, College of Economics &amp; Commerce, Kookmin Univ. &lt;br&gt; (2) “Intro. to Machine Learning (2023-2)...</p>
               </div>
@@ -6070,11 +5890,11 @@
 
   
     <a
-      href="/posts/qualitative_predictors/"
+      href="/posts/regression_diagnostics_2/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>Qualitative Predictors</p>
+      <p>Regression Diagnostics (2) Error Terms</p>
     </a>
   
 </nav>
@@ -7318,6 +7138,562 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -7988,562 +8364,6 @@
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -10183,6 +10003,9 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/machine-learning/">machine learning</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/numerical-data-analysis/">numerical data analysis</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/ai-application/">ai application</a>
       
         
@@ -10190,9 +10013,6 @@
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/collaborative-filtering/">collaborative filtering</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/numerical-data-analysis/">numerical data analysis</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/neural-networks/">neural networks</a>
