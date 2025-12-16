@@ -585,10 +585,85 @@
   
 
   
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
 
   
   
 
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
   
 
   
@@ -694,9 +769,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="0 words"
+  title="517 words"
 >
-  <em>1 min</em> read</span>
+  <em>2 min</em> read</span>
 
         </div>
       </div>
@@ -704,7 +779,185 @@
   </header>
 
   <div class="content">
-    
+    <h2 id="regression-diagnostics"><span class="me-2">Regression Diagnostics</span><a href="#regression-diagnostics" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">A.1</code> <strong>반응변수와 설명변수 간 비선형성 문제(Non-Linearity Problem)</strong>: 반응변수의 조건부 기대값이 설명변수들의 선형 결합 형태가 아님에 따라 계수 벡터의 최소자승추정량이 불편추정량이 될 수 없는 문제</p>
+
+\[\cancel{\exists}\beta\in\mathbb{R}^{P}
+\quad\mathrm{s.t.}\quad
+\mathbb{E}\left[\mathbf{y}\mid\mathbf{X}\right]
+=\mathbf{X}\beta\]
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">A.2</code> <strong>오차항의 이분산성 문제(Hetero-Scedasticity Problem)</strong>: 오차항의 등분산 가정이 위배됨에 따라 계수 벡터의 최소자승추정량이 효율추정량이 될 수 없는 문제</p>
+
+\[\exists i\ne j:\mathrm{Var}\left[\varepsilon_{i}\mid\mathbf{X}\right]\ne\mathrm{Var}\left[\varepsilon_{j}\mid\mathbf{X}\right]\\
+\Updownarrow\\
+\mathrm{Var}\left[\varepsilon\mid\mathbf{X}\right]
+=\mathrm{diag}(\sigma_{1}^{2},\cdots,\sigma_{N}^{2})\ne\sigma^{2}\mathbf{I}\]
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">A.3</code> <strong>오차항의 자기상관 문제(Auto-Correlation Problem)</strong>: 오차항의 자기상관이 존재함에 따라 계수 벡터의 최소자승추정량이 효율추정량이 될 수 없는 문제</p>
+
+\[\exists i\ne j:\mathrm{Cov}\left[\varepsilon_{i},\varepsilon_{j}\mid \mathbf{X}\right]\ne 0
+\quad\Longleftrightarrow\quad
+\mathrm{Var}\left[\varepsilon\mid\mathbf{X}\right]\ne\sigma^{2}\mathbf{I}\]
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">A.5</code> <strong>설명변수 간 다중공선성 문제(Multi-Col-Linearity Problem)</strong>: 설명변수들이 선형 종속됨에 따라 계수 벡터가 유일하게 결정되지 못하는 문제</p>
+
+\[\mathrm{rank}(\mathbf{X})\ne p \quad\mathrm{for}\quad\mathbf{X}\in\mathbb{R}^{N\times P}\]
+  </li>
+</ul>
+
+<h2 id="normal-equation"><span class="me-2">Normal Equation</span><a href="#normal-equation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p>objective function:</p>
+
+\[\begin{aligned}
+  \mathcal{L}_{GLS}
+  &amp;=\left(\mathbf{y}-\mathbf{X}\beta\right)^{T}\Sigma^{-1}\left(\mathbf{y}-\mathbf{X}\beta\right)\quad\mathrm{for}\quad\varepsilon\mid\mathbf{X}\sim\mathcal{N}(0,\Sigma)\\
+  &amp;=\frac{1}{\sigma^{2}}\left(\mathbf{y}-\mathbf{X}\beta\right)^{T}\left(\mathbf{y}-\mathbf{X}\beta\right)\quad\mathrm{s.t.}\quad\Sigma=\sigma^{2}\mathbf{I}\\
+  &amp;\approx\Vert\mathbf{y}-\mathbf{X}\beta\Vert^{2}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>normal equation:</p>
+
+\[\begin{aligned}
+  \hat{\beta}_{GLS}
+  &amp;=\left(\mathbf{X}^{T}\Sigma^{-1}\mathbf{X}\right)^{-1}\mathbf{X}^{T}\Sigma^{-1}\mathbf{y}\quad\mathrm{for}\quad\varepsilon\mid\mathbf{X}\sim\mathcal{N}(0,\Sigma)\\
+  &amp;=\frac{1}{\sigma^{2}}\left(\frac{1}{\sigma^{2}}\mathbf{X}^{T}\mathbf{X}\right)^{-1}\mathbf{X}^{T}\mathbf{y}\quad\mathrm{s.t.}\quad\Sigma=\sigma^{2}\mathbf{I}\\
+  &amp;=\left(\mathbf{X}^{T}\mathbf{X}\right)^{-1}\mathbf{X}^{T}\mathbf{y}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>therefore GLS is equivalent to OLS under assumptions on the covariance structure of the error term:</p>
+
+\[\begin{aligned}
+  \hat{\beta}_{GLS}
+  &amp;=\left(\mathbf{X}^{T}\Sigma^{-1}\mathbf{X}\right)^{-1}\mathbf{X}^{T}\Sigma^{-1}\mathbf{y}\quad\mathrm{for}\quad\varepsilon\mid\mathbf{X}\sim\mathcal{N}(0,\Sigma)\\
+  &amp;=\left(\mathbf{X}^{T}\mathbf{X}\right)^{-1}\mathbf{X}^{T}\mathbf{y}\quad\mathrm{s.t.}\quad\Sigma=\sigma^{2}\mathbf{I}\\
+  &amp;=\hat{\beta}_{OLS}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h3 id="gls"><span class="me-2">GLS</span><a href="#gls" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p><strong>GLS(<code class="language-plaintext highlighter-rouge">G</code>eneralized <code class="language-plaintext highlighter-rouge">L</code>east <code class="language-plaintext highlighter-rouge">S</code>quares)</strong>: 오차항의 마할라노비스 거리의 자승, 즉 정밀도 행렬로써 가중된 오차항의 자승을 최소화하는 계수 벡터의 해</p>
+
+\[\begin{aligned}
+  \hat{\beta}
+  &amp;=\mathrm{arg}\min_{\beta}{\left(\mathbf{y}-\mathbf{X}\beta\right)^{T}\Sigma^{-1}\left(\mathbf{y}-\mathbf{X}\beta\right)}\\
+  &amp;=\left(\mathbf{X}^{T}\Sigma^{-1}\mathbf{X}\right)^{-1}\mathbf{X}^{T}\Sigma^{-1}\mathbf{y}\quad\mathrm{s.t.}\quad\varepsilon\sim\mathcal{N}(0,\Sigma)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>conditional expectation:</p>
+
+\[\begin{aligned}
+  \mathbb{E}\left[\hat{\beta}\mid\mathbf{X}\right]
+  &amp;=\left(\mathbf{X}^{T}\Sigma^{-1}\mathbf{X}\right)^{-1}\mathbf{X}^{T}\Sigma^{-1}\mathbb{E}\left[\mathbf{y}\mid\mathbf{X}\right]\\
+  &amp;=\left(\mathbf{X}^{T}\Sigma^{-1}\mathbf{X}\right)^{-1}\mathbf{X}^{T}\Sigma^{-1}\mathbf{X}\beta\\
+  &amp;=\left(\mathbf{X}^{T}\Sigma^{-1}\mathbf{X}\right)^{-1}\left(\mathbf{X}^{T}\Sigma^{-1}\mathbf{X}\right)\beta\\
+  &amp;=\beta
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>conditional variance:</p>
+
+\[\begin{aligned}
+  \mathrm{Var}\left[\hat{\beta}\mid\mathbf{X}\right]
+  &amp;=\mathrm{Var}\left[\left(\mathbf{X}^{T}\Sigma^{-1}\mathbf{X}\right)^{-1}\mathbf{X}^{T}\Sigma^{-1}\mathbf{y}\mid\mathbf{X}\right]\\
+  &amp;=\left(\mathbf{X}^{T}\Sigma^{-1}\mathbf{X}\right)^{-1}\mathbf{X}^{T}\Sigma^{-1}\mathrm{Var}\left[\mathbf{y}\mid\mathbf{X}\right]\left[\left(\mathbf{X}^{T}\Sigma^{-1}\mathbf{X}\right)^{-1}\mathbf{X}^{T}\Sigma^{-1}\right]^{T}\\
+  &amp;=\left(\mathbf{X}^{T}\Sigma^{-1}\mathbf{X}\right)^{-1}\mathbf{X}^{T}\Sigma^{-1}\Sigma\Sigma^{-1}\mathbf{X}\left(\mathbf{X}^{T}\Sigma^{-1}\mathbf{X}\right)^{-1}\quad(\because(\Sigma^{-1})^{T}=\Sigma^{-1})\\
+  &amp;=\left(\mathbf{X}^{T}\Sigma^{-1}\mathbf{X}\right)^{-1}\left(\mathbf{X}^{T}\Sigma^{-1}\mathbf{X}\right)\left(\mathbf{X}^{T}\Sigma^{-1}\mathbf{X}\right)^{-1}\\
+  &amp;=\left(\mathbf{X}^{T}\Sigma^{-1}\mathbf{X}\right)^{-1}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h3 id="ols"><span class="me-2">OLS</span><a href="#ols" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p><strong>OLS(<code class="language-plaintext highlighter-rouge">O</code>rdinary <code class="language-plaintext highlighter-rouge">L</code>east <code class="language-plaintext highlighter-rouge">S</code>quares)</strong>: 오차항의 유클리드 거리의 자승, 즉 오차항의 자승을 최소화하는 계수 벡터의 해</p>
+
+\[\begin{aligned}
+  \hat{\beta}
+  &amp;=\mathrm{arg}\min_{\beta}{\Vert\mathbf{y}-\mathbf{X}\beta\Vert^{2}}\\
+  &amp;=\left(\mathbf{X}^{T}\mathbf{X}\right)^{-1}\mathbf{X}^{T}\mathbf{y}\quad\mathrm{s.t.}\quad\varepsilon\sim\mathcal{N}(0,\sigma^{2}\mathbf{I})
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>conditional expectation:</p>
+
+\[\begin{aligned}
+  \mathbb{E}\left[\hat{\beta}\mid\mathbf{X}\right]
+  &amp;=\left(\mathbf{X}^{T}\mathbf{X}\right)^{-1}\mathbf{X}^{T}\mathbb{E}\left[\mathbf{y}\mid\mathbf{X}\right]\\
+  &amp;=\left(\mathbf{X}^{T}\mathbf{X}\right)^{-1}\mathbf{X}^{T}\mathbf{X}\beta\\
+  &amp;=\left(\mathbf{X}^{T}\mathbf{X}\right)^{-1}\left(\mathbf{X}^{T}\mathbf{X}\right)\beta\\
+  &amp;=\beta
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>conditional variance:</p>
+
+\[\begin{aligned}
+  \mathrm{Var}\left[\hat{\beta}\mid\mathbf{X}\right]
+  &amp;=\mathrm{Var}\left[\left(\mathbf{X}^{T}\mathbf{X}\right)^{-1}\mathbf{X}^{T}\mathbf{y}\mid\mathbf{X}\right]\\
+  &amp;=\left(\mathbf{X}^{T}\mathbf{X}\right)^{-1}\mathbf{X}^{T}\mathrm{Var}\left[\mathbf{y}\mid\mathbf{X}\right]\left[\left(\mathbf{X}^{T}\mathbf{X}\right)^{-1}\mathbf{X}^{T}\right]^{T}\\
+  &amp;=\sigma^{2}\left(\mathbf{X}^{T}\mathbf{X}\right)^{-1}\mathbf{X}^{T}\mathbf{X}\left(\mathbf{X}^{T}\mathbf{X}\right)^{-1}\\
+  &amp;=\sigma^{2}\left(\mathbf{X}^{T}\mathbf{X}\right)^{-1}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h2 id="error-term-problem"><span class="me-2">Error Term Problem</span><a href="#error-term-problem" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<ul>
+  <li>
+    <p>오차항의 공분산 구조가 등분산 가정과 자기상관 없음 가정을 만족하지 못한다고 하자:</p>
+
+\[\varepsilon\mid\mathbf{X}\sim\mathcal{N}(0,\Sigma),\quad\Sigma\ne\sigma^{2}\mathbf{I}\]
+  </li>
+  <li>
+    <p>OLS 는 여전히 선형불편추정량임:</p>
+
+\[\begin{aligned}
+  \mathbb{E}\left[\hat{\beta}\mid\mathbf{X}\right]
+  &amp;=\left(\mathbf{X}^{T}\mathbf{X}\right)^{-1}\mathbf{X}^{T}\mathbb{E}\left[\mathbf{y}\mid\mathbf{X}\right]\\
+  &amp;=\left(\mathbf{X}^{T}\mathbf{X}\right)^{-1}\mathbf{X}^{T}\mathbf{X}\beta\\
+  &amp;=\left(\mathbf{X}^{T}\mathbf{X}\right)^{-1}\left(\mathbf{X}^{T}\mathbf{X}\right)\beta\\
+  &amp;=\beta
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>OLS 의 조건부 분산:</p>
+
+\[\begin{aligned}
+  \mathrm{Var}\left[\hat{\beta}\mid\mathbf{X}\right]
+  &amp;=\mathrm{Var}\left[\left(\mathbf{X}^{T}\mathbf{X}\right)^{-1}\mathbf{X}^{T}\mathbf{y}\mid\mathbf{X}\right]\\
+  &amp;=\left(\mathbf{X}^{T}\mathbf{X}\right)^{-1}\mathbf{X}^{T}\mathrm{Var}\left[\mathbf{y}\mid\mathbf{X}\right]\left[\left(\mathbf{X}^{T}\mathbf{X}\right)^{-1}\mathbf{X}^{T}\right]^{T}\\
+  &amp;=\left(\mathbf{X}^{T}\mathbf{X}\right)^{-1}\mathbf{X}^{T}\Sigma\mathbf{X}\left(\mathbf{X}^{T}\mathbf{X}\right)^{-1}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>OLS 는 최소분산성을 만족할 수 없음:</p>
+
+\[\underbrace{\left(\mathbf{X}^{T}\Sigma^{-1}\mathbf{X}\right)^{-1}}_{\text{GLS Variance}}\le\underbrace{\left(\mathbf{X}^{T}\mathbf{X}\right)^{-1}\mathbf{X}^{T}\Sigma\mathbf{X}\left(\mathbf{X}^{T}\mathbf{X}\right)^{-1}}_{\text{OLS Variance}}\]
+  </li>
+</ul>
 
   </div>
 
@@ -4967,6 +5220,11 @@
               
 
 
+
+  <section id="toc-wrapper" class="d-none ps-0 pe-4">
+    <h2 class="panel-heading ps-3 mb-2">Contents</h2>
+    <nav id="toc"></nav>
+  </section>
 
 
             
@@ -9901,9 +10159,16 @@
 
   
 
+  
+    
+
+    
+
+  
 
 
-  <script src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.11/dayjs.min.js,npm/dayjs@1.11.11/locale/en.min.js,npm/dayjs@1.11.11/plugin/relativeTime.min.js,npm/dayjs@1.11.11/plugin/localizedFormat.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.11/dayjs.min.js,npm/dayjs@1.11.11/locale/en.min.js,npm/dayjs@1.11.11/plugin/relativeTime.min.js,npm/dayjs@1.11.11/plugin/localizedFormat.min.js,npm/tocbot@4.27.20/dist/tocbot.min.js"></script>
 
 
 
