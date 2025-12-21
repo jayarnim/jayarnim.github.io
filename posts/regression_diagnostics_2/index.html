@@ -769,7 +769,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="517 words"
+  title="519 words"
 >
   <em>2 min</em> read</span>
 
@@ -794,10 +794,12 @@
   <li>
     <p><code class="language-plaintext highlighter-rouge">A.2</code> <strong>오차항의 이분산성 문제(Hetero-Scedasticity Problem)</strong>: 오차항의 등분산 가정이 위배됨에 따라 계수 벡터의 최소자승추정량이 효율추정량이 될 수 없는 문제</p>
 
-\[\exists i\ne j:\mathrm{Var}\left[\varepsilon_{i}\mid\mathbf{X}\right]\ne\mathrm{Var}\left[\varepsilon_{j}\mid\mathbf{X}\right]\\
+\[\begin{aligned}
+\exists i\ne j:\mathrm{Var}\left[\varepsilon_{i}\mid\mathbf{X}\right]\ne\mathrm{Var}\left[\varepsilon_{j}\mid\mathbf{X}\right]\\
 \Updownarrow\\
 \mathrm{Var}\left[\varepsilon\mid\mathbf{X}\right]
-=\mathrm{diag}(\sigma_{1}^{2},\cdots,\sigma_{N}^{2})\ne\sigma^{2}\mathbf{I}\]
+=\mathrm{diag}(\sigma_{1}^{2},\cdots,\sigma_{N}^{2})\ne\sigma^{2}\mathbf{I}
+\end{aligned}\]
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">A.3</code> <strong>오차항의 자기상관 문제(Auto-Correlation Problem)</strong>: 오차항의 자기상관이 존재함에 따라 계수 벡터의 최소자승추정량이 효율추정량이 될 수 없는 문제</p>
