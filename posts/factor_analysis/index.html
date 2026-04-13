@@ -625,6 +625,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -632,6 +643,49 @@
   
   
 
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
   
 
   
@@ -737,9 +791,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="855 words"
+  title="1033 words"
 >
-  <em>4 min</em> read</span>
+  <em>5 min</em> read</span>
 
         </div>
       </div>
@@ -752,7 +806,7 @@
 
 <ul>
   <li>
-    <p><strong>요인 분석(Factor Analysis)</strong>: 측정변수들은 기존에는 고나찰되지 않았으나 의미 있는 소수의 핵심 요인(Latent Factor)으로 요약하여 차원을 축소하는 방법</p>
+    <p><strong>요인 분석(Factor Analysis)</strong>: 기존에는 관찰되지 않았으나 의미 있는 소수의 핵심 요인(Latent Factor)으로 측정 변수들을 요약하여 차원을 축소하는 방법</p>
 
     <ul>
       <li><strong>탐색적 요인 분석(Exploratory Factor Analysis)</strong>: 사전 가정 없이 측정변수와 잠재변수 간 관계를 탐색하는 방법</li>
@@ -822,6 +876,129 @@
   </li>
 </ul>
 
+<h2 id="em-algorithm"><span class="me-2">EM algorithm</span><a href="#em-algorithm" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<h3 id="q-function"><span class="me-2">Q function</span><a href="#q-function" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p>목적 함수(완전 데이터 로그 우도):</p>
+
+\[\begin{aligned}
+  \log{p(X\mid\Lambda,\Psi)}
+  :=\log{\int_{i}{p(x_{i},f_{i}\mid\Lambda,\Psi)}{\mathrm{d}F}}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>잠재요인 $F$ 의 사후 확률 분포 $q$ 정의:</p>
+
+\[\begin{aligned}
+  q(F)
+  :=p(F\mid X,\Lambda,\Psi)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>목적 함수의 기대값 변환:</p>
+
+\[\begin{aligned}
+  \log{p(X\mid\Lambda,\Psi)}
+  &amp;=\log{\int_{i}{\frac{p(x_{i},f_{i}\mid\Lambda,\Psi)}{q(f_{i})}\cdot q(f_{i})}{\mathrm{d}F}}\\
+  &amp;=\log{\mathbb{E}_{q(F)}\left[\frac{p(X,F\mid\Lambda,\Psi)}{q(F)}\right]}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>젠센 부등식에 의하여 좌변의 하한값을 Q 함수로 정리할 수 있음:</p>
+
+\[\begin{aligned}
+  \log{\mathbb{E}_{q(F)}\left[\frac{p(X,F\mid\Lambda,\Psi)}{q(F)}\right]}
+  &amp;\ge\mathbb{E}_{q(F)}\left[\log{\frac{p(X,F\mid\Lambda,\Psi)}{q(F)}}\right]\\
+  &amp;=\underbrace{\mathbb{E}_{q(F)}\left[\log{p(X,F\mid\Lambda,\Psi)}\right]}_{=:Q(\Lambda,\Psi)}-\underbrace{\mathbb{E}_{q(F)}\left[\log{q(F)}\right]}_{=:H(q)}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h3 id="e-step"><span class="me-2">E step</span><a href="#e-step" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p>잠재요인의 사후 확률 분포:</p>
+
+\[\begin{aligned}
+  q(F)
+  :&amp;=p(F\mid X,\Lambda,\Psi)\\
+  &amp;\propto p(X\mid F,\Lambda,\Psi)p(F)
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>prior of latent factor:</p>
+
+\[\begin{aligned}
+  p(F)
+  =\mathcal{N}(0,\mathbf{I})\quad\because\mathrm{def}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>likelihood:</p>
+
+\[\begin{aligned}
+  p(X\mid F,\Lambda,\Psi)
+  =\mathcal{N}(\Lambda F,\Psi)\quad\because F,\Lambda,U\sim\mathcal{N}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>posterior update:</p>
+
+\[\begin{aligned}
+  q(F)
+  &amp;=\mathcal{N}(m,V)\\
+  m
+  &amp;=V\Lambda^{T}\Psi^{-1}X\\
+  V
+  &amp;=(I+\Lambda^{T}\Psi^{-1}\Lambda)^{-1}
+  \end{aligned}\]
+  </li>
+</ul>
+
+<h3 id="m-step"><span class="me-2">M step</span><a href="#m-step" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p>최대 로그 우도 추정:</p>
+
+\[\begin{aligned}
+  \Lambda^{*},\Psi^{*}
+  &amp;=\mathrm{arg}\max{Q(\Lambda,\Psi)}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>definition:</p>
+
+\[\begin{aligned}
+  M
+  &amp;:=\mathbb{E}\left[F\mid X\right]\in\mathbb{R}^{N\times K}\\
+  R
+  &amp;:=\mathbb{E}\left[F^{T}F\mid X\right]\in\mathbb{R}^{K\times K}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>lambda update:</p>
+
+\[\begin{aligned}
+  \Lambda^{*}
+  &amp;=X^{T}M R^{-1}\in\mathbb{R}^{P\times K}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>psi update:</p>
+
+\[\begin{aligned}
+  \Psi^{*}
+  &amp;=\mathrm{diag}\left[\frac{1}{n}\left(X-M\left(\Lambda^{*}\right)^{T}\right)^{T}\left(X-M\left(\Lambda^{*}\right)^{T}\right)\right]\in\mathbb{R}^{P\times K}
+  \end{aligned}\]
+  </li>
+</ul>
+
 <h2 id="factor-score-estimation"><span class="me-2">factor score estimation</span><a href="#factor-score-estimation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
@@ -835,8 +1012,6 @@
     <p>definition:</p>
 
 \[\begin{aligned}
-  X
-  &amp;=\Lambda F+U\\
   \hat{F}
   &amp;=\mathbb{E}\left[F\mid X\right]
   \end{aligned}\]
@@ -5643,7 +5818,7 @@
   "
 >
   <p>©
-    <time>2025</time>
+    <time>2026</time>
 
     
       <a href="https://github.com/jayarnim">jayarnim</a>.
