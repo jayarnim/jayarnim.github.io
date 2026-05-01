@@ -10,7 +10,7 @@ description: >-
     (1) “Statistics (2018-1)” by Prof. Sang Ah Lee, Dept. of Economics, College of Economics & Commerce, Kookmin Univ. <br>
     (2) "Statistical Models and Application (2024-1)" by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-    path: /_post_refer_img/2.STATS/2.statistics/Thumbnail.png
+    path: /assets/img/posts/2.STATS/2.statistics/Thumbnail.png
 ---
 
 ## What? Statistics
@@ -93,11 +93,11 @@ image:
 
     - **평균 vs. 중위수** : 관측치에 이상치가 포함되어 있거나, 분포가 지나치게 비대칭일 경우, 중위수가 대표값으로서 선호됨
 
-        ![01](/_post_refer_img/2.STATS/2.statistics/01-01.png){: width="100%"}
+        ![01](/assets/img/posts/2.STATS/2.statistics/01-01.png){: width="100%"}
 
 - **사분위수(Quartile; $Q_i$)** : 모든 관측치를 크기에 따라 오름차순으로 정렬했을 때, 하위 25%($Q_1$), 하위 50%($Q_2$), 하위 75%($Q_3$)에 해당하는 값
 
-    ![02](/_post_refer_img/2.STATS/2.statistics/01-02.png){: width="100%"}
+    ![02](/assets/img/posts/2.STATS/2.statistics/01-02.png){: width="100%"}
 
 ### 변이 측도
 
@@ -137,7 +137,7 @@ image:
 
 - **경험 법칙(Empirical Rule)** : 관측치 분포가 종 모양의 대칭 형태를 띠는 경우, 실증적으로 획득된 분포에 대한 일반적인 원칙이 성립함
 
-    ![03](/_post_refer_img/2.STATS/2.statistics/01-03.jpg){: width="100%"}
+    ![03](/assets/img/posts/2.STATS/2.statistics/01-03.jpg){: width="100%"}
 
     - $(\mu - 1\sigma, \mu + 1\sigma)$ 에는 관측치의 약 68%가 존재함
     - $(\mu - 2\sigma, \mu + 2\sigma)$ 에는 관측치의 약 95%가 존재함
@@ -145,7 +145,7 @@ image:
 
 - **사분위수 범위를 활용한 이상치 판별**
 
-    ![04](/_post_refer_img/2.STATS/2.statistics/01-04.png){: width="100%"}
+    ![04](/assets/img/posts/2.STATS/2.statistics/01-04.png){: width="100%"}
 
     - **이상치 판단 기준으로서 상한선 및 하한선 설정**
         - 상한선 : $Q_{3}+1.5\cdot\text{IQR}$
@@ -186,53 +186,53 @@ image:
 
 - **Box Plot** : 사분위수를 기준으로 데이터의 대략적인 분포를 나타낸 그래프
 
-    ![05](/_post_refer_img/2.STATS/2.statistics/01-05.png){: width="100%"}
+    ![05](/assets/img/posts/2.STATS/2.statistics/01-05.png){: width="100%"}
 
 - **Histogram** : 데이터 범위를 동일 간격 구간으로 나누어 해당 구간에 위치한 데이터 갯수를 나타낸 그래프
 
-    ![06](/_post_refer_img/2.STATS/2.statistics/01-06.png){: width="100%"}
+    ![06](/assets/img/posts/2.STATS/2.statistics/01-06.png){: width="100%"}
 
     - **Density Estimate** : 커널밀도추정법을 통해 히스토그램을 연속된 곡선으로 나타낸 그래프
 
-        ![07](/_post_refer_img/2.STATS/2.statistics/01-07.png){: width="100%"}
+        ![07](/assets/img/posts/2.STATS/2.statistics/01-07.png){: width="100%"}
 
 - **Q-Q Normality Plot** : 데이터 분포 형태가 정규 분포에 얼마나 근접한지 나타내는 그래프
 
-    ![08](/_post_refer_img/2.STATS/2.statistics/01-08.png){: width="100%"}
+    ![08](/assets/img/posts/2.STATS/2.statistics/01-08.png){: width="100%"}
 
 ### 수치형 변수 간 관계
 
 - **히트 맵(Heatmap)** : 두 변수 간 상관관계가 강할수록 채도를 짙게 나타낸 그래프
 
-    ![09](/_post_refer_img/2.STATS/2.statistics/01-09.png){: width="100%"}
+    ![09](/assets/img/posts/2.STATS/2.statistics/01-09.png){: width="100%"}
 
 - **산점도(Scatter Plot)**
 
-    ![10](/_post_refer_img/2.STATS/2.statistics/01-10.png){: width="100%"}
+    ![10](/assets/img/posts/2.STATS/2.statistics/01-10.png){: width="100%"}
 
 ### 범주형 변수
 
 - **도수분포표(Frequency Table)** : 각 범주에 해당하는 관측치 갯수를 요약한 표
 
-    ![11](/_post_refer_img/2.STATS/2.statistics/01-11.png){: width="100%"}
+    ![11](/assets/img/posts/2.STATS/2.statistics/01-11.png){: width="100%"}
 
 - **Bar Plot** : 도수분포표의 값을 막대 높이로 나타낸 그래프
 
-    ![12](/_post_refer_img/2.STATS/2.statistics/01-12.png){: width="100%"}
+    ![12](/assets/img/posts/2.STATS/2.statistics/01-12.png){: width="100%"}
 
 - **Pie Chart** : 도수분포표의 빈도 비율을 부채꼴 모양으로 나타낸 그래프
 
-    ![13](/_post_refer_img/2.STATS/2.statistics/01-13.png){: width="100%"}
+    ![13](/assets/img/posts/2.STATS/2.statistics/01-13.png){: width="100%"}
 
 ### 범주형 변수 간 관계
 
 - **분할표(Cross Table)** : 두 범주형 변수에 의해 생성되는 범주별 빈도수를 요약한 표
 
-    ![14](/_post_refer_img/2.STATS/2.statistics/01-14.png){: width="100%"}
+    ![14](/assets/img/posts/2.STATS/2.statistics/01-14.png){: width="100%"}
 
 - **Mosaic Plot** : 분할표에서 각 범주의 비율을 상자의 너비와 높이로 나타낸 그래프
 
-    ![15](/_post_refer_img/2.STATS/2.statistics/01-15.png){: width="100%"}
+    ![15](/assets/img/posts/2.STATS/2.statistics/01-15.png){: width="100%"}
 
 -----
 

@@ -6,7 +6,7 @@ categories: [5.BAYES, 3.bayes applications]
 tags: [bayesian, design of experiments, did]
 math: true
 image:
-    path: /_post_refer_img/5.BAYES/3.application/Thumbnail.jpg
+    path: /assets/img/posts/5.BAYES/3.application/Thumbnail.jpg
 ---
 
 ## DiD

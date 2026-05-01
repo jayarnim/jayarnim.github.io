@@ -8,7 +8,7 @@ math: true
 description: >-
   Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-  path: /_post_refer_img/3.ML/1.supervised_learning/Thumbnail.jpg
+  path: /assets/img/posts/3.ML/1.supervised_learning/Thumbnail.jpg
 ---
 
 ## Decision Tree
@@ -16,7 +16,7 @@ image:
 
 - **결정 트리(Decision Tree)**: 순도(Uniformity)를 최대로 가져가는 이진 판별 규칙들로 구성된 수형도(Tree)를 세우고 관측치를 분류하는 알고리즘
 
-    ![02](/_post_refer_img/3.ML/1.supervised_learning/05-02.png){: width="100%"}
+    ![02](/assets/img/posts/3.ML/1.supervised_learning/05-02.png){: width="100%"}
 
     - **루트 노드(Root Node)** : 깊이가 $0$ 인 꼭대기 노드로서 최상위 노드
     - **결정 노드(Decision Node)** : 규칙 조건
@@ -30,11 +30,11 @@ image:
 
     - **판별 규칙** : 어떤 분기에서 **하나의 설명변수를 사용하여** 생성한 분할 조건
 
-        ![03](/_post_refer_img/3.ML/1.supervised_learning/05-03.png){: width="100%"}
+        ![03](/assets/img/posts/3.ML/1.supervised_learning/05-03.png){: width="100%"}
 
     - **순도(Purity)** : 어떤 노드에 속한 관측치들이 동일한 범주에 속하는 정도
 
-        ![04](/_post_refer_img/3.ML/1.supervised_learning/05-04.jpeg){: width="100%"}
+        ![04](/assets/img/posts/3.ML/1.supervised_learning/05-04.jpeg){: width="100%"}
 
         - 순도를 정확히 측정하기 어려우므로 그 대리변수로서 불순도(Impurity)를 사용함
 
@@ -101,7 +101,7 @@ image:
 ## Pruning
 -----
 
-![05](/_post_refer_img/3.ML/1.supervised_learning/05-05.png){: width="100%"}
+![05](/assets/img/posts/3.ML/1.supervised_learning/05-05.png){: width="100%"}
 
 - **가지치기(Pruning)** : 자세하게 구분된 영역을 통합함으로써 과적합을 방지하는 기법으로서, Full Tree 를 생성하여 모든 노드에 대하여 비용 복잡도 지수를 계산하고, 그 값이 가장 낮은 노드에 대하여 가지치기를 반복적으로 수행하면서 최적의 가지치기 강도 $\alpha$ 하 트리를 도출함
 

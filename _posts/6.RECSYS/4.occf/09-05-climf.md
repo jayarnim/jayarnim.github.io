@@ -11,7 +11,7 @@ description: >-
     <a href="https://doi.org/10.1145/2365952.2365981">Climf: learning to maximize reciprocal rank with collaborative less-is-more filtering.</a><br>
     In Proceedings of the sixth ACM conference on Recommender systems (pp. 139-146).
 image:
-    path: /_post_refer_img/6.RECSYS/4.occf/Thumbnail.jpg
+    path: /assets/img/posts/6.RECSYS/4.occf/Thumbnail.jpg
 ---
 
 ## CLiMF

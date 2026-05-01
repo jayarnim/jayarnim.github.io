@@ -8,7 +8,7 @@ math: true
 description: >-
     Based on the lecture "Microeconomics (2017-1)" by Prof. Jin Woo Park, Dept. of Economics, College of Economics & Commerce, Kookmin Univ.
 image:
-    path: /_post_refer_img/7.ECONOMICS/2.microeconomics/Thumbnail.jpg
+    path: /assets/img/posts/7.ECONOMICS/2.microeconomics/Thumbnail.jpg
 ---
 
 ## What? Microeconomics
@@ -58,7 +58,7 @@ image:
 
 - **균형(Equilibrium)** : 자원의 교환 가치를 낮추려는 힘과 높이려는 힘이 맞아떨어져서 외부 교란 요인이 없는 한 유지되는 상태
 
-    ![03](/_post_refer_img/7.ECONOMICS/2.microeconomics/01-03.png){: width="100%"}
+    ![03](/assets/img/posts/7.ECONOMICS/2.microeconomics/01-03.png){: width="100%"}
 
     - **존재성** : 균형이 존재하는 성질
     - **유용성** : 균형이 적을수록 유용한 성질
@@ -67,7 +67,7 @@ image:
 ## Market Demand
 -----
 
-![01](/_post_refer_img/7.ECONOMICS/2.microeconomics/01-01.jpg){: width="100%"}
+![01](/assets/img/posts/7.ECONOMICS/2.microeconomics/01-01.jpg){: width="100%"}
 
 ### Determinants
 
@@ -161,7 +161,7 @@ image:
 ## Market Supply
 -----
 
-![02](/_post_refer_img/7.ECONOMICS/2.microeconomics/01-02.jpg){: width="100%"}
+![02](/assets/img/posts/7.ECONOMICS/2.microeconomics/01-02.jpg){: width="100%"}
 
 ### Determinants
 

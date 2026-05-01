@@ -8,13 +8,13 @@ math: true
 description: >-
     Based on the lecture “Mathematics for Artificial Intelligence (2022-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data & Management, College of Business Administration, Kookmin Univ.
 image:
-    path: /_post_refer_img/1.MATH/2.calculus/Thumbnail.jpg
+    path: /assets/img/posts/1.MATH/2.calculus/Thumbnail.jpg
 ---
 
 ## Integration
 -----
 
-![01](/_post_refer_img/1.MATH/2.calculus/05-01.jpeg){: width="100%"}
+![01](/assets/img/posts/1.MATH/2.calculus/05-01.jpeg){: width="100%"}
 
 - **미분(Differentiation)**: $F(x)$ 를 $\Delta x$ 단위로 쪼개는 방법
 

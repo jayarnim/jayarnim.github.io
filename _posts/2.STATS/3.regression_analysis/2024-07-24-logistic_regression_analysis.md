@@ -11,7 +11,7 @@ description: >-
     (2) “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ. <br>
     (3) "Statistical Models and Application (2024-1)" by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-    path: /_post_refer_img/2.STATS/3.regression_analysis/Thumbnail.jpg
+    path: /assets/img/posts/2.STATS/3.regression_analysis/Thumbnail.jpg
 ---
 
 ## Prerequisite
@@ -49,7 +49,7 @@ image:
 
 - **로지스틱 회귀 모형(Logistic Regression)** : 범주형 반응변수에 대한 회귀 모형
 
-    ![01](/_post_refer_img/2.STATS/3.regression_analysis/10-01.png){: width="100%"}
+    ![01](/assets/img/posts/2.STATS/3.regression_analysis/10-01.png){: width="100%"}
 
     $$
     P(y^{(i)}=1)

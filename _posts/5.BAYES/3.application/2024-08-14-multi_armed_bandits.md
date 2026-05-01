@@ -8,7 +8,7 @@ math: true
 description: >-
     Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data & Management, College of Business Administration, Kookmin Univ.
 image:
-    path: /_post_refer_img/5.BAYES/3.application/Thumbnail.jpg
+    path: /assets/img/posts/5.BAYES/3.application/Thumbnail.jpg
 ---
 
 ## What? Multi-Armed Bandits
@@ -16,13 +16,13 @@ image:
 
 - **Multi-Armed Bandits Problem** : 보상 확률을 알 수 없는 여러 선택지 중 하나를 선택하는 문제
 
-    ![01](/_post_refer_img/5.BAYES/3.application/03-01.png){: width="100%"}
+    ![01](/assets/img/posts/5.BAYES/3.application/03-01.png){: width="100%"}
 
     > $n$ 개의 슬롯 머신이 각각 특정한 확률분포를 따르는 보상을 돌려준다고 하자. 즉, 슬롯 머신이 돌려주는 보상 금액은 동일하되, 보상 받을 확률은 다르다. 단, 슬롯 머신의 보상 확률은 알려져 있지 않다. 어떤 슬롯 머신을 고르는 것이 이득일까?
 
 - **A/B Test vs. MAB**
 
-    ![02](/_post_refer_img/5.BAYES/3.application/03-02.PNG){: width="100%"}
+    ![02](/assets/img/posts/5.BAYES/3.application/03-02.PNG){: width="100%"}
 
     - **A/B Test** : 탐색 후 그 결과를 100% 활용하는 불연속적인(Discrete) 방법
 
@@ -34,7 +34,7 @@ image:
 
 - **Selection Issue** : Exploration-Exploitation Trade-off
 
-    ![04](/_post_refer_img/5.BAYES/3.application/03-03.PNG){: width="100%"}
+    ![04](/assets/img/posts/5.BAYES/3.application/03-03.PNG){: width="100%"}
 
     > 만약 적당히 좋은 결과를 돌려주는 슬롯 머신을 찾아냈다면, 그 결과를 유지하기 위해 그 슬롯 머신을 활용할 것인가(Exploitation) 아니면 더 좋은 결과를 얻을 수 있다는 희망으로 다른 슬롯 머신을 탐색할 것인가(Exploration)?
 
@@ -80,7 +80,7 @@ image:
     \beta &= \beta_0 - n + X
     \end{aligned}$$
 
-![05](/_post_refer_img/5.BAYES/3.application/03-04.png){: width="100%"}
+![05](/assets/img/posts/5.BAYES/3.application/03-04.png){: width="100%"}
 
 ### Extra Selection Algorithms
 

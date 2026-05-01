@@ -8,7 +8,7 @@ math: true
 description: >-
     Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data & Management, College of Business Administration, Kookmin Univ.
 image:
-    path: /_post_refer_img/5.BAYES/1.basic/Thumbnail.jpeg
+    path: /assets/img/posts/5.BAYES/1.basic/Thumbnail.jpeg
 ---
 
 ## Epistemology

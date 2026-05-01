@@ -8,7 +8,7 @@ math: true
 description: >-
     Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-    path: /_post_refer_img/4.MODALITY/1.nlp/Thumbnail.png
+    path: /assets/img/posts/4.MODALITY/1.nlp/Thumbnail.png
 ---
 
 ## Topic Model
@@ -46,7 +46,7 @@ image:
 
 - **특이값 분해(Singular Value Decomposition; SVD)** : 차원의 크기가 $n \times d$ 인 임의의 행렬 $\mathbb{A}$ 를 세 개의 행렬의 곱으로 분해하는 방법
 
-    ![04](/_post_refer_img/4.MODALITY/1.nlp/07-01.png){: width="100%"}
+    ![04](/assets/img/posts/4.MODALITY/1.nlp/07-01.png){: width="100%"}
 
 - **$$\mathbf{U} \in \mathbb{R}^{n \times k}$$ : 직교 정규 행렬(Ortho-normal Matrix)**
     - 열벡터 $\mathbf{u}_{i} \in \mathbf{U}$ 는 행렬 $\mathbf{A} \cdot \mathbf{A}^{T}$ 의 고유벡터(Eigen Vector)임

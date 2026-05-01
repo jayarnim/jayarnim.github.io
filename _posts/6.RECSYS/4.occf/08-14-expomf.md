@@ -11,7 +11,7 @@ description: >-
     <a href="https://doi.org/10.1145/2872427.2883090">Modeling user exposure in recommendation.</a><br>
     In Proceedings of the 25th international conference on World Wide Web (pp. 951-961).
 image:
-    path: /_post_refer_img/6.RECSYS/4.occf/Thumbnail.jpg
+    path: /assets/img/posts/6.RECSYS/4.occf/Thumbnail.jpg
 ---
 
 ## Previous Research

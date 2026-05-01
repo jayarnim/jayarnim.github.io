@@ -8,7 +8,7 @@ math: true
 description: >-
     Based on the lecture “Mathematics for Artificial Intelligence (2022-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data & Management, College of Business Administration, Kookmin Univ.
 image:
-    path: /_post_refer_img/1.MATH/1.linear_algebra/Thumbnail.png
+    path: /assets/img/posts/1.MATH/1.linear_algebra/Thumbnail.png
 ---
 
 ## Linear Equation
@@ -93,7 +93,7 @@ image:
 
 - **정해(uniquely determined)**: 선형연립방정식의 계수 행렬 $$\mathbf{A} \in \mathbb{R}^{N \times N}$$ 에 대하여 그 역행렬이 존재하면 단 하나의 해가 존재함
 
-    ![01](/_post_refer_img/1.MATH/1.linear_algebra/03-01.jpg){: width="100%"}
+    ![01](/assets/img/posts/1.MATH/1.linear_algebra/03-01.jpg){: width="100%"}
 
     $$\begin{aligned}
     \exists \mathbf{A}^{-1} \Leftrightarrow \forall \mathbf{b} \in \mathbb{R}^{P}, \exists ! \mathbf{x} \in \mathbb{R}^{P} : \mathbf{A}\mathbf{x}=\mathbf{b}
@@ -106,7 +106,7 @@ image:
 
 - **불능(inconsistent)**: 해를 구할 수 없는 상태로서, 계수 행렬 $$\mathbf{A}=\begin{bmatrix}\mathbf{a}_{1} & \mathbf{a}_{2} & \cdots & \mathbf{a}_{P}\end{bmatrix}^{T}$$ 가 선형 종속이고, 동시에 $$\mathbf{b}$$ 가 선형 독립인 경우
 
-    ![02](/_post_refer_img/1.MATH/1.linear_algebra/03-02.jpg){: width="100%"}
+    ![02](/assets/img/posts/1.MATH/1.linear_algebra/03-02.jpg){: width="100%"}
 
     $$\begin{gathered}
     \mathrm{rank}(\mathbf{A})<P
@@ -117,7 +117,7 @@ image:
 
 - **부정(indeterminate)**: 해가 무수히 많아 하나로 정할 수 없는 상태로서, 계수 행렬 $$\mathbf{A}=\begin{bmatrix}\mathbf{a}_{1} & \mathbf{a}_{2} & \cdots & \mathbf{a}_{P}\end{bmatrix}^{T}$$ 가 선형 종속이고, 동시에 $$\mathbf{b}$$ 도 선형 종속인 경우
 
-    ![03](/_post_refer_img/1.MATH/1.linear_algebra/03-03.jpg){: width="100%"}
+    ![03](/assets/img/posts/1.MATH/1.linear_algebra/03-03.jpg){: width="100%"}
 
     $$\begin{gathered}
     \mathrm{rank}(\mathbf{A})<P

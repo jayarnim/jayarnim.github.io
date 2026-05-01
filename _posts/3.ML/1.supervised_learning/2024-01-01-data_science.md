@@ -8,7 +8,7 @@ math: true
 description: >-
     Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-    path: /_post_refer_img/3.ML/1.supervised_learning/Thumbnail.jpg
+    path: /assets/img/posts/3.ML/1.supervised_learning/Thumbnail.jpg
 ---
 
 ## Data-Driven Decision Making
@@ -92,20 +92,20 @@ image:
 - **지도학습(Supervised Learning)** : 정답 세트가 존재하는 데이터를 활용하는 학습 방법
     - **판별 분석(Classificaiton Analysis)** : 범주형 값을 가지는 종속변수를 예측하는 방법론
 
-        ![02](/_post_refer_img/3.ML/1.supervised_learning/01-02.png){: width="100%"}
+        ![02](/assets/img/posts/3.ML/1.supervised_learning/01-02.png){: width="100%"}
 
     - **회귀 분석(Regression Analysis)** : 수치형 값을 가지는 종속변수를 예측하는 방법론
 
-        ![03](/_post_refer_img/3.ML/1.supervised_learning/01-03.png){: width="100%"}
+        ![03](/assets/img/posts/3.ML/1.supervised_learning/01-03.png){: width="100%"}
 
 - **비지도학습(Unsupervised Learning)** : 정답 세트가 존재하지 않는 데이터를 활용하는 학습 방법
     - **군집화(Clustering)** : 유사한 개체들의 집단을 만든 후 새 개체가 어떤 집단과 유사한지 예측하는 방법론
 
-        ![04](/_post_refer_img/3.ML/1.supervised_learning/01-04.png){: width="100%"}
+        ![04](/assets/img/posts/3.ML/1.supervised_learning/01-04.png){: width="100%"}
 
     - **차원축소(Dimensionality Reduction)** : 고차원 데이터를 저차원 데이터로 변환하는 방법론
 
-        ![05](/_post_refer_img/3.ML/1.supervised_learning/01-05.png){: width="100%"}
+        ![05](/assets/img/posts/3.ML/1.supervised_learning/01-05.png){: width="100%"}
 
 ## Data Preprocessing
 -----
@@ -124,7 +124,7 @@ image:
 
 ### Process
 
-![01](/_post_refer_img/3.ML/1.supervised_learning/01-01.jpg){: width="100%"}
+![01](/assets/img/posts/3.ML/1.supervised_learning/01-01.jpg){: width="100%"}
 
 - **Data Integration** : 동일한 단위, 양식으로 데이터를 결합하는 절차
 

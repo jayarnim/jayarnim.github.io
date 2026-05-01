@@ -12,7 +12,7 @@ description: >-
     In international conference on machine learning (pp. 1050-1059).</br>
     PMLR.
 image:
-    path: /_post_refer_img/5.BAYES/3.application/Thumbnail.jpg
+    path: /assets/img/posts/5.BAYES/3.application/Thumbnail.jpg
 ---
 
 ## Monte Carlo Dropout
@@ -41,7 +41,7 @@ image:
 
 - **`MC Dropout`(`M`onte-`C`arlo Dropout)**: 드롭아웃이 적용된 인공신경망의 가우시안 프로세스의 유한 차원 근사임을 증명하여 결정론적 신경망과 동일한 비용으로 불확실성 모델링이 가능함을 확인함
 
-    ![01](/_post_refer_img/5.BAYES/3.application/09-01.png){: width="100%"}
+    ![01](/assets/img/posts/5.BAYES/3.application/09-01.png){: width="100%"}
 
 ## 1 layer nn analysis
 -----

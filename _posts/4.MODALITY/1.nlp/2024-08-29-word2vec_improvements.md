@@ -8,7 +8,7 @@ math: true
 description: >-
     Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-    path: /_post_refer_img/4.MODALITY/1.nlp/Thumbnail.png
+    path: /assets/img/posts/4.MODALITY/1.nlp/Thumbnail.png
 ---
 
 ## Fast-Text
@@ -24,7 +24,7 @@ image:
 
 - **`EXAMPLE` "eating"**
 
-    ![07](/_post_refer_img/4.MODALITY/1.nlp/04-07.jpg){: width="100%"}
+    ![07](/assets/img/posts/4.MODALITY/1.nlp/04-07.jpg){: width="100%"}
 
     - Character $n$-grams of `eating`
 
@@ -82,7 +82,7 @@ image:
 
 - **SVD 를 활용하여 고차원 문제 보완**
 
-    ![01](/_post_refer_img/4.MODALITY/1.nlp/04-01.png){: width="100%"}
+    ![01](/assets/img/posts/4.MODALITY/1.nlp/04-01.png){: width="100%"}
 
     $$\begin{aligned}
     \mathbf{X}_{N \times N}
@@ -97,7 +97,7 @@ image:
 
 - **GloVe(`Glo`bal `Ve`ctors for Word Representation)** : 단어 간 전역적 통계 정보를 활용하여 단어를 임베딩하는 방법론
 
-    ![06](/_post_refer_img/4.MODALITY/1.nlp/04-06.png){: width="100%"}
+    ![06](/assets/img/posts/4.MODALITY/1.nlp/04-06.png){: width="100%"}
 
     - 중심 단어 $i$ 와 주변 단어 $j$ 간 임베딩 벡터의 내적값이 동시 발생 확률이 되도록 학습함
 
@@ -137,15 +137,15 @@ image:
 
 - **ELMo(`E`mbeddings from `L`anguage `Mo`del)** : 방대한 텍스트 데이터로 사전 훈련된 LSTM 기반 언어 모형 BiLM 을 활용하는 단어 임베딩 방법론
 
-    ![09](/_post_refer_img/4.MODALITY/1.nlp/04-02.png){: width="100%"}
+    ![09](/assets/img/posts/4.MODALITY/1.nlp/04-02.png){: width="100%"}
 
 - **BiLM(`Bi`directional `L`anguage `M`odel)** : 문장 시퀀스를 순방향, 역방향으로 각각 학습하는 LSTM 기반 언어 모형
 
-    ![11](/_post_refer_img/4.MODALITY/1.nlp/04-04.jpg){: width="100%"}
+    ![11](/assets/img/posts/4.MODALITY/1.nlp/04-04.jpg){: width="100%"}
 
 - **Forward Path**
 
-    ![10](/_post_refer_img/4.MODALITY/1.nlp/04-03.png){: width="100%"}
+    ![10](/assets/img/posts/4.MODALITY/1.nlp/04-03.png){: width="100%"}
 
     1. **Multi-Layer LSTM**
 
@@ -167,7 +167,7 @@ image:
 
 - **ELMo Representation**
 
-    ![12](/_post_refer_img/4.MODALITY/1.nlp/04-05.png){: width="100%"}
+    ![12](/assets/img/posts/4.MODALITY/1.nlp/04-05.png){: width="100%"}
 
     $$\begin{aligned}
     \mathbf{w}_{t}

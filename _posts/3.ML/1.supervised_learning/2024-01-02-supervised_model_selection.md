@@ -8,7 +8,7 @@ math: true
 description: >-
   Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-  path: /_post_refer_img/3.ML/1.supervised_learning/Thumbnail.jpg
+  path: /assets/img/posts/3.ML/1.supervised_learning/Thumbnail.jpg
 ---
 
 ## Classification Metrics
@@ -16,7 +16,7 @@ image:
 
 ### Confusion Matrix
 
-![01](/_post_refer_img/3.ML/1.supervised_learning/02-01.png){: width="100%"}
+![01](/assets/img/posts/3.ML/1.supervised_learning/02-01.png){: width="100%"}
 
 - **`TP`(True Positive)** : 긍정으로 예측한 것(Possitive) 중 옳게 예측한(True) 항목
 - **`TN`(True Negative)** : 부정인 것(Negative) 중 옳게 예측한(True) 항목
@@ -63,7 +63,7 @@ image:
 
 - **ROC Curve(`R`eceiver `O`perating `C`haracteristic Curve)** : $\text{FPR}$ 값에 따른 $\text{TPR}$ 의 변화 추이를 나타낸 곡선
 
-    ![02](/_post_refer_img/3.ML/1.supervised_learning/02-02.png){: width="100%"}
+    ![02](/assets/img/posts/3.ML/1.supervised_learning/02-02.png){: width="100%"}
 
 - **AUROC(`A`rea `U`nder ROC)** : ROC Curve 아래 면적
 
@@ -102,7 +102,7 @@ image:
 ## Regression Metrics
 -----
 
-![03](/_post_refer_img/3.ML/1.supervised_learning/02-03.jpg){: width="100%"}
+![03](/assets/img/posts/3.ML/1.supervised_learning/02-03.jpg){: width="100%"}
 
 - **AE(`A`verage `E`rror)** : 오차의 합계로서 오차의 방향에 따라 크기가 상쇄되어 계산될 수 있음
 
@@ -148,7 +148,7 @@ image:
 
 - **문제점** : 과적합 현상
 
-    ![04](/_post_refer_img/3.ML/1.supervised_learning/02-04.png){: width="100%"}
+    ![04](/assets/img/posts/3.ML/1.supervised_learning/02-04.png){: width="100%"}
 
     - **과대적합(Overfitting)** : 모델이 일반적이지 않은, 즉 훈련 관측치에서만 포착되는 노이즈나 이상치까지 학습하여 신규 관측치에 대해서는 제대로 기능하지 못하는 상태
 
@@ -156,7 +156,7 @@ image:
 
 - **해결 방법** : $E_{\text{GEN}}$ 최소화
 
-    ![05](/_post_refer_img/3.ML/1.supervised_learning/02-05.png){: width="100%"}
+    ![05](/assets/img/posts/3.ML/1.supervised_learning/02-05.png){: width="100%"}
 
     - **Training Error** : Training Data Set 에 대한 오차
 
@@ -188,9 +188,9 @@ image:
 
 - **LOOCV(Leave-One-Out Cross Validation)** : $n$ 개의 표본을 $n-1$ 개의 `training` 과 $1$ 개의 `validation` 으로 나누어 $n$ 번 학습하는 방식
 
-    ![08](/_post_refer_img/3.ML/1.supervised_learning/02-08.png){: width="100%"}
+    ![08](/assets/img/posts/3.ML/1.supervised_learning/02-08.png){: width="100%"}
 
 
 - **k-Fold Cross Validation** : $n$ 개의 표본을 $k$ 개의 데이터 세트로 나누고, $k-1$ 개는 `training` 으로, $1$ 개는 `validation` 으로 구분하여 $k$ 번 학습하는 방식
     
-    ![09](/_post_refer_img/3.ML/1.supervised_learning/02-09.png){: width="100%"}
+    ![09](/assets/img/posts/3.ML/1.supervised_learning/02-09.png){: width="100%"}

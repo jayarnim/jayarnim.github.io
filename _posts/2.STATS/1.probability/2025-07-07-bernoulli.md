@@ -11,7 +11,7 @@ description: >-
     (2) "Statistical Models and Application (2024-1)" by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ. <br>
     (3) “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data & Management, College of Business Administration, Kookmin Univ.
 image:
-    path: /_post_refer_img/2.STATS/1.probability/Thumbnail.jpg
+    path: /assets/img/posts/2.STATS/1.probability/Thumbnail.jpg
 ---
 
 ## Bernoulli
@@ -111,7 +111,7 @@ image:
 ## Binomial
 -----
 
-![02](/_post_refer_img/2.STATS/1.probability/07-01.png){: width="100%"}
+![02](/assets/img/posts/2.STATS/1.probability/07-01.png){: width="100%"}
 
 - **이항 분포(Binomial Distribution)**: 베르누이 분포의 실행 횟수를 일반화한 분포로서, $n$ 번의 베르누이 시행에서 성공 횟수를 나타내는 분포
 

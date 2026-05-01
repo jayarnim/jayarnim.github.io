@@ -8,7 +8,7 @@ math: true
 description: >-
     Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-    path: /_post_refer_img/3.ML/2.clustering/Thumbnail.jpg
+    path: /assets/img/posts/3.ML/2.clustering/Thumbnail.jpg
 ---
 
 ## Cluster Analysis
@@ -16,7 +16,7 @@ image:
 
 - **군집 분석(Cluster Analysis)**: 표본을 관측치 간 유사성과 상이성을 계산하여 군집 내 응집도를 최대화하는 동시에 군집 간 분리도를 최대화하는 $k$ 개의 군집으로 분할하는 작업
 
-    ![01](/_post_refer_img/3.ML/2.clustering/01-02.png){: width="100%"}
+    ![01](/assets/img/posts/3.ML/2.clustering/01-02.png){: width="100%"}
 
     >Cluster analysis or clustering is the task of grouping a set of objects in such a way that objects in the same group are more similar to each other than to those in other groups. (by.Wikipedia)
 

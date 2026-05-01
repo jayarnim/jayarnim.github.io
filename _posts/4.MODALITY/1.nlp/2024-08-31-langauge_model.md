@@ -8,7 +8,7 @@ math: true
 description: >-
     Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-    path: /_post_refer_img/4.MODALITY/1.nlp/Thumbnail.png
+    path: /assets/img/posts/4.MODALITY/1.nlp/Thumbnail.png
 ---
 
 ## Language Model
@@ -68,14 +68,14 @@ image:
 
 - **How to Generate a Context Vector for $w_{t+1}$**
 
-    ![03](/_post_refer_img/4.MODALITY/1.nlp/06-03.png){: width="100%"}
+    ![03](/assets/img/posts/4.MODALITY/1.nlp/06-03.png){: width="100%"}
 
     - **NNLM** : $t$ 번째까지 등장한 단어 벡터들의 결합(Concatenation)으로 생성
     - **RNNLM** : $t$ 번째까지 등장한 단어 벡터들을 RNN 계열 레이어에 순차 입력하여 생성
 
 ### NNLM
 
-![01](/_post_refer_img/4.MODALITY/1.nlp/06-01.png){: width="100%"}
+![01](/assets/img/posts/4.MODALITY/1.nlp/06-01.png){: width="100%"}
 
 - **`INPUT` → `PROJECTION`**
     - Projection : $$\mathbf{w}_{i} = \mathbf{x}_{i} \cdot \mathbf{W}$$
@@ -97,7 +97,7 @@ image:
 
 ### RNNLM
 
-![02](/_post_refer_img/4.MODALITY/1.nlp/06-02.png){: width="100%"}
+![02](/assets/img/posts/4.MODALITY/1.nlp/06-02.png){: width="100%"}
 
 - **`INPUT` → `PROJECTION`**
 

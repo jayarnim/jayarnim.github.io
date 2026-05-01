@@ -8,12 +8,12 @@ math: true
 description: >-
     Based on the lecture “Mathematics for Artificial Intelligence (2022-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data & Management, College of Business Administration, Kookmin Univ.
 image:
-    path: /_post_refer_img/1.MATH/2.calculus/Thumbnail.jpg
+    path: /assets/img/posts/1.MATH/2.calculus/Thumbnail.jpg
 ---
 
 - **극점(Extremum)**: 함수 $f:X \to Y$ 에 대하여 함수값 $y=f(x)$ 의 국소적인 최대 혹은 최소 지점
 
-    ![01](/_post_refer_img/1.MATH/2.calculus/03-01.png){: width="100%"}
+    ![01](/assets/img/posts/1.MATH/2.calculus/03-01.png){: width="100%"}
 
 - **극대점(Local Maximum)**: 주위 모든 점의 함수값 이상의 함수값을 가지는 지점으로서, 함수 $f$ 가 구간 $[a,b]$ 에서 미분 가능하고, $x=c\in[a,b]$ 에서 극대값을 가지면 다음을 만족함
 
@@ -34,7 +34,7 @@ image:
 ## Taylor Polynomial
 -----
 
-![02](/_post_refer_img/1.MATH/2.calculus/03-02.png){: width="100%"}
+![02](/assets/img/posts/1.MATH/2.calculus/03-02.png){: width="100%"}
 
 - **테일러 다항식(Taylor Polynomial)** : $x=a$ 에서 미분 가능한 함수 $f:X \to Y$ 에 대하여, $f$ 와 $x=a$ 에서 근사하는 $n$ 차 함수
 

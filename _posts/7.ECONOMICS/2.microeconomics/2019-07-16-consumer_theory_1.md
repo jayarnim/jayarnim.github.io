@@ -8,7 +8,7 @@ math: true
 description: >-
     Based on the lecture "Microeconomics (2017-1)" by Prof. Jin Woo Park, Dept. of Economics, College of Economics & Commerce, Kookmin Univ.
 image:
-    path: /_post_refer_img/7.ECONOMICS/2.microeconomics/Thumbnail.jpg
+    path: /assets/img/posts/7.ECONOMICS/2.microeconomics/Thumbnail.jpg
 ---
 
 ## Utility
@@ -75,7 +75,7 @@ image:
 
 - **무차별곡선(Indifference curve)** : 재화 $X,Y$ 에 대하여, 동일한(무차별한) 효용 수준을 누릴 수 있는 상품묶음 $(X, Y)$ 의 집합
 
-    ![01](/_post_refer_img/7.ECONOMICS/2.microeconomics/02-01.png){: width="100%"}
+    ![01](/assets/img/posts/7.ECONOMICS/2.microeconomics/02-01.png){: width="100%"}
 
     $$
     U(x,y)=u_{i}
@@ -114,7 +114,7 @@ image:
 ## Budget Constraint
 -----
 
-![02](/_post_refer_img/7.ECONOMICS/2.microeconomics/02-02.png){: width="100%"}
+![02](/assets/img/posts/7.ECONOMICS/2.microeconomics/02-02.png){: width="100%"}
 
 - **예산선(Budget Line)** : 주어진 예산($M$)과 가격 상황($P_{X}, P_{Y}$)에 맞게 취득할 수 있는 상품묶음들의 집합
 
@@ -135,7 +135,7 @@ image:
 ## Utility Maximization under Budget Constraint
 -----
 
-![03](/_post_refer_img/7.ECONOMICS/2.microeconomics/02-03.png){: width="100%"}
+![03](/assets/img/posts/7.ECONOMICS/2.microeconomics/02-03.png){: width="100%"}
 
 $$
 \max{U(x,y)} \quad \text{s.t.} \; x \cdot P_{X} + y \cdot P_{Y} \le M

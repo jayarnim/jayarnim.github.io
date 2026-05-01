@@ -8,7 +8,7 @@ math: true
 description: >-
     Based on the lecture “Mathematics for Artificial Intelligence (2022-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data & Management, College of Business Administration, Kookmin Univ.
 image:
-    path: /_post_refer_img/1.MATH/1.linear_algebra/Thumbnail.png
+    path: /assets/img/posts/1.MATH/1.linear_algebra/Thumbnail.png
 ---
 
 ## Linear Transformation
@@ -28,7 +28,7 @@ image:
 ## Example
 -----
 
-![01](/_post_refer_img/1.MATH/1.linear_algebra/04-01.png){: width="100%"}
+![01](/assets/img/posts/1.MATH/1.linear_algebra/04-01.png){: width="100%"}
 
 - 단위 행렬 $$\mathbf{I} \in \mathbb{R}^{2}$$ 는 벡터 공간의 기저 벡터 $$\mathbf{e}_{1},\mathbf{e}_{2}$$ 들의 집합임
 
@@ -122,7 +122,7 @@ image:
 
 - **행렬식(Determinant)**: 정방행렬 $$\mathbf{A} \in \mathbb{R}^{N \times N}$$ 으로 선형 변환함에 따른 좌표계 단위 면적(혹은 부피)의 변화량
 
-    ![02](/_post_refer_img/1.MATH/1.linear_algebra/04-02.png){: width="100%"}
+    ![02](/assets/img/posts/1.MATH/1.linear_algebra/04-02.png){: width="100%"}
 
     $$\begin{aligned}
     \vert\mathrm{det}(\mathbf{A}) \vert

@@ -8,7 +8,7 @@ math: true
 description: >-
     Based on the lecture “Mathematics for Artificial Intelligence (2022-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data & Management, College of Business Administration, Kookmin Univ.
 image:
-    path: /_post_refer_img/1.MATH/2.calculus/Thumbnail.jpg
+    path: /assets/img/posts/1.MATH/2.calculus/Thumbnail.jpg
 ---
 
 ## Limit & Continuity
@@ -44,7 +44,7 @@ f(a)=\lim_{x \to a}{f(x)}, \quad \forall a \in \mathcal{X}
 ## Natural Logarithm
 -----
 
-![02](/_post_refer_img/1.MATH/2.calculus/02-02.svg){: width="100%"}
+![02](/assets/img/posts/1.MATH/2.calculus/02-02.svg){: width="100%"}
 
 - **자연로그(Natural Logarithm)**: 함수 $$g(x)=1/x$$ 의 면적(정적분)에 관한 함수
 

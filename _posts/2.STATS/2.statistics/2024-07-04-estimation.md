@@ -10,7 +10,7 @@ description: >-
     (1) “Statistics (2018-1)” by Prof. Sang Ah Lee, Dept. of Economics, College of Economics & Commerce, Kookmin Univ. <br>
     (2) "Statistical Models and Application (2024-1)" by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-    path: /_post_refer_img/2.STATS/2.statistics/Thumbnail.png
+    path: /assets/img/posts/2.STATS/2.statistics/Thumbnail.png
 ---
 
 ## Point Estimator
@@ -51,7 +51,7 @@ image:
 ## Confidence Intervals
 -----
 
-![01](/_post_refer_img/2.STATS/2.statistics/04-01.png){: width="100%"}
+![01](/assets/img/posts/2.STATS/2.statistics/04-01.png){: width="100%"}
 
 - **신뢰 구간(Confidence Intervals)** : 신뢰 가능한 수준 하에서 모수를 포함할 수 있다고 추정되는 구간으로서 신뢰수준을 담보한 **구간 추정량(Interval Estimator)**
 

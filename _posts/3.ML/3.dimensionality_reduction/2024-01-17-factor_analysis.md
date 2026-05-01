@@ -8,7 +8,7 @@ math: true
 description: >-
     Based on the lecture "Statistical Models and Application (2024-1)" by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-    path: /_post_refer_img/3.ML/3.dimensionality_reduction/Thumbnail.jpg
+    path: /assets/img/posts/3.ML/3.dimensionality_reduction/Thumbnail.jpg
 ---
 
 ## factor analysis

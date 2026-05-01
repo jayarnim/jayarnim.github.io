@@ -6,13 +6,13 @@ categories: [0.AI DEV. ENV., 1.GIT]
 tags: [DVCS, GIT]
 math: true
 image:
-  path: /_post_refer_img/0.ENV/1.GIT/Thumbnail.png
+  path: /assets/img/posts/0.ENV/1.GIT/Thumbnail.png
 ---
 
 ## `staged` 파일 임시 저장하기
 -----
 
-![01](/_post_refer_img/0.ENV/1.GIT/03-01.jpg){: width="100%"}
+![01](/assets/img/posts/0.ENV/1.GIT/03-01.jpg){: width="100%"}
 
 ### 임시 저장 목록 조회하기
 

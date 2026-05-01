@@ -8,7 +8,7 @@ math: true
 description: >-
     Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-    path: /_post_refer_img/4.MODALITY/1.nlp/Thumbnail.png
+    path: /assets/img/posts/4.MODALITY/1.nlp/Thumbnail.png
 ---
 
 ## Regular Expression
@@ -143,15 +143,15 @@ for result in results:
 
 1. **`2efC` 매칭**
 
-    ![03](/_post_refer_img/4.MODALITY/1.nlp/01-03.png){: width="100%"}
+    ![03](/assets/img/posts/4.MODALITY/1.nlp/01-03.png){: width="100%"}
 
 2. **`1efG` 매칭**
 
-    ![04](/_post_refer_img/4.MODALITY/1.nlp/01-04.png){: width="100%"}
+    ![04](/assets/img/posts/4.MODALITY/1.nlp/01-04.png){: width="100%"}
 
 3. **추가 매칭되는 문자열 없음**
 
-    ![05](/_post_refer_img/4.MODALITY/1.nlp/01-05.png){: width="100%"}
+    ![05](/assets/img/posts/4.MODALITY/1.nlp/01-05.png){: width="100%"}
 
 ### Excluding the Prior Matched
 
@@ -168,11 +168,11 @@ for result in results:
 
 1. **`2efC` 매칭**
 
-    ![01](/_post_refer_img/4.MODALITY/1.nlp/01-01.png){: width="100%"}
+    ![01](/assets/img/posts/4.MODALITY/1.nlp/01-01.png){: width="100%"}
 
 2. **먼저 매칭된 문자열을 제외하고 탐색하므로 `CefG` 는 포함되지 않음**
 
-    ![02](/_post_refer_img/4.MODALITY/1.nlp/01-02.png){: width="100%"}
+    ![02](/assets/img/posts/4.MODALITY/1.nlp/01-02.png){: width="100%"}
 
 ### Greedy
 
@@ -189,11 +189,11 @@ for result in results:
 
 - **If Python is not Greedy**
 
-    ![06](/_post_refer_img/4.MODALITY/1.nlp/01-06.png){: width="100%"}
+    ![06](/assets/img/posts/4.MODALITY/1.nlp/01-06.png){: width="100%"}
 
 - **But Python is Greedy**
 
-    ![07](/_post_refer_img/4.MODALITY/1.nlp/01-07.png){: width="100%"}
+    ![07](/assets/img/posts/4.MODALITY/1.nlp/01-07.png){: width="100%"}
 
 ## Exploration
 -----
@@ -211,7 +211,7 @@ for result in results:
         print(result)
     ```
 
-    ![09](/_post_refer_img/4.MODALITY/1.nlp/01-09.png){: width="100%"}
+    ![09](/assets/img/posts/4.MODALITY/1.nlp/01-09.png){: width="100%"}
 
 - **긍정형 후방 탐색 `(?<=A)B`** : Pattern `A` 의 끝점 이후 지점에서 Pattern `B` 를 탐색함
 
@@ -226,7 +226,7 @@ for result in results:
         print(result)
     ```
 
-    ![08](/_post_refer_img/4.MODALITY/1.nlp/01-08.png){: width="100%"}
+    ![08](/assets/img/posts/4.MODALITY/1.nlp/01-08.png){: width="100%"}
 
 - **부정형 전방 탐색 `B(?!A)`** : Pattern `A` 의 시작점을 제외한 지점에서 Pattern `B` 를 탐색함
 
@@ -241,7 +241,7 @@ for result in results:
         print(result)
     ```
 
-    ![11](/_post_refer_img/4.MODALITY/1.nlp/01-11.png){: width="100%"}
+    ![11](/assets/img/posts/4.MODALITY/1.nlp/01-11.png){: width="100%"}
 
 - **부정형 후방 탐색 `(?<!A)B`** : Pattern `A` 의 끝점을 제외한 지점에서 Pattern `B` 를 탐색함
 
@@ -256,7 +256,7 @@ for result in results:
         print(result)
     ```
 
-    ![10](/_post_refer_img/4.MODALITY/1.nlp/01-10.png){: width="100%"}
+    ![10](/assets/img/posts/4.MODALITY/1.nlp/01-10.png){: width="100%"}
 
 -----
 

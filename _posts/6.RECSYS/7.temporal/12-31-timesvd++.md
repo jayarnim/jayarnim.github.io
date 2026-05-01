@@ -12,7 +12,7 @@ description: >-
     <li><strong>Data Set</strong>: <a href="https://www.kaggle.com/datasets/netflix-inc/netflix-prize-data"><code>Netflix Prize</code></a></li>
     </ul>
 image:
-    path: /_post_refer_img/RecommenderSystem/Thumbnail.jpg
+    path: /assets/img/posts/RecommenderSystem/Thumbnail.jpg
 ---
 
 ## Prerequisite

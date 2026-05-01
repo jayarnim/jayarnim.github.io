@@ -6,7 +6,7 @@ categories: [5.BAYES, 4.stochastic process]
 tags: [Bayesian, Stochastic Process, Time Series]
 math: true
 image:
-    path: /_post_refer_img/5.BAYES/4.stochastic_process/Thumbnail.jpg
+    path: /assets/img/posts/5.BAYES/4.stochastic_process/Thumbnail.jpg
 ---
 
 ## Stochastic Process

@@ -8,7 +8,7 @@ math: true
 description: >-
     Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-    path: /_post_refer_img/4.MODALITY/1.nlp/Thumbnail.png
+    path: /assets/img/posts/4.MODALITY/1.nlp/Thumbnail.png
 ---
 
 ## Text Analytics

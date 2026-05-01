@@ -10,7 +10,7 @@ description: >-
     (1) “Recommendation System Design (2024-1)” by Prof. Ha Myung Park, Dept. of Artificial Intelligence. College of SW, Kookmin Univ. <br>
     (2) "Recommender System (2024-2)" by Prof. Hyun Sil Moon, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-    path: /_post_refer_img/6.RECSYS/2.mlp/Thumbnail.jpg
+    path: /assets/img/posts/6.RECSYS/2.mlp/Thumbnail.jpg
 ---
 
 ## Learning Objectives
@@ -73,7 +73,7 @@ image:
 ## How to Modeling
 -----
 
-![01](/_post_refer_img/6.RECSYS/2.mlp/05-01.png){: width="100%"}
+![01](/assets/img/posts/6.RECSYS/2.mlp/05-01.png){: width="100%"}
 
 - `DDFL` is `MeFL` & `MaFL` Ensemble:
 
@@ -93,7 +93,7 @@ image:
 
 ### MeFL
 
-![02](/_post_refer_img/6.RECSYS/2.mlp/05-02.png){: width="100%"}
+![02](/assets/img/posts/6.RECSYS/2.mlp/05-02.png){: width="100%"}
 
 - Conversion Transformation:
 
@@ -147,7 +147,7 @@ image:
 
 ### MaFL
 
-![03](/_post_refer_img/6.RECSYS/2.mlp/05-03.png){: width="100%"}
+![03](/assets/img/posts/6.RECSYS/2.mlp/05-03.png){: width="100%"}
 
 - History Embedding:
 

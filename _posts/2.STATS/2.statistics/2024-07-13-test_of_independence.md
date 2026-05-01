@@ -10,7 +10,7 @@ description: >-
     (1) “Statistics (2018-1)” by Prof. Sang Ah Lee, Dept. of Economics, College of Economics & Commerce, Kookmin Univ. <br>
     (2) "Statistical Models and Application (2024-1)" by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-    path: /_post_refer_img/2.STATS/2.statistics/Thumbnail.png
+    path: /assets/img/posts/2.STATS/2.statistics/Thumbnail.png
 ---
 
 ## Test of Independence

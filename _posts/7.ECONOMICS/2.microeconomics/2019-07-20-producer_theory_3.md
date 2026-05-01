@@ -8,7 +8,7 @@ math: true
 description: >-
     Based on the lecture "Microeconomics (2017-1)" by Prof. Jin Woo Park, Dept. of Economics, College of Economics & Commerce, Kookmin Univ.
 image:
-    path: /_post_refer_img/7.ECONOMICS/2.microeconomics/Thumbnail.jpg
+    path: /assets/img/posts/7.ECONOMICS/2.microeconomics/Thumbnail.jpg
 ---
 
 ## Joint Production
@@ -22,7 +22,7 @@ image:
 
 - **생산변환곡선(Product Transformation Curve)** : 재화 $X,Y$ 에 대하여, 생산하는데 동일한 비용($Z$)이 요구되는 상품묶음 $(X,Y)$ 의 집합
 
-    ![01](/_post_refer_img/7.ECONOMICS/2.microeconomics/06-01.png){: width="100%"}
+    ![01](/assets/img/posts/7.ECONOMICS/2.microeconomics/06-01.png){: width="100%"}
 
 - **한계생산변환율(Marginal Rate of Product Transformation; MRPT)** : 재화 $X,Y$ 에 대하여, 동일한 비용 수준에서 특정 재화를 한 단위 추가 생산하기 위해 포기해야 하는 다른 재화의 공급분
 
@@ -46,7 +46,7 @@ image:
 ## Revenue Constraint
 -----
 
-![02](/_post_refer_img/7.ECONOMICS/2.microeconomics/06-02.png){: width="100%"}
+![02](/assets/img/posts/7.ECONOMICS/2.microeconomics/06-02.png){: width="100%"}
 
 - **한계수익불변 하 등수익곡선(Iso-Revenue Curve subject to Constant Marginal Revenue)** : 공급 시 동일한 수익을 얻을 수 있는 상품묶음의 조합
 
@@ -73,7 +73,7 @@ image:
 ## Cost Minimization under Revenue Constraint
 -----
 
-![03](/_post_refer_img/7.ECONOMICS/2.microeconomics/06-03.png){: width="100%"}
+![03](/assets/img/posts/7.ECONOMICS/2.microeconomics/06-03.png){: width="100%"}
 
 $$
 \min{Z} \quad \text{s.t.} \; X \cdot P_{X} + Y \cdot P_{Y} \le R

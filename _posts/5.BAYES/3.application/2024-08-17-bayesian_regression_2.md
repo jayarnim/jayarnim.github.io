@@ -8,11 +8,11 @@ math: true
 description: >-
     Based on the lecture “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data & Management, College of Business Administration, Kookmin Univ.
 image:
-    path: /_post_refer_img/5.BAYES/3.application/Thumbnail.jpg
+    path: /assets/img/posts/5.BAYES/3.application/Thumbnail.jpg
 ---
 
 <div style="text-align: center;">
-    <img src="/_post_refer_img/5.BAYES/3.application/06-01.png" alt="01" width="100%">
+    <img src="/assets/img/posts/5.BAYES/3.application/06-01.png" alt="01" width="100%">
     <p><em>Bayesian Regression Model</em></p>
 </div>
 

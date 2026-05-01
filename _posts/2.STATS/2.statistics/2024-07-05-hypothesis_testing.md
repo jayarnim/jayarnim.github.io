@@ -10,7 +10,7 @@ description: >-
     (1) “Statistics (2018-1)” by Prof. Sang Ah Lee, Dept. of Economics, College of Economics & Commerce, Kookmin Univ. <br>
     (2) "Statistical Models and Application (2024-1)" by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-    path: /_post_refer_img/2.STATS/2.statistics/Thumbnail.png
+    path: /assets/img/posts/2.STATS/2.statistics/Thumbnail.png
 ---
 
 ## Hypothesis Testing
@@ -33,7 +33,7 @@ image:
 
 - **양측검정(Two-Sided Test)** : 귀무가설에 대한 기각역을 양측에 설정하는 검정
 
-    ![02](/_post_refer_img/2.STATS/2.statistics/05-02.jpeg){: width="100%"}
+    ![02](/assets/img/posts/2.STATS/2.statistics/05-02.jpeg){: width="100%"}
 
     $$\begin{aligned}
     H_0&:\;\mu=70,\\
@@ -43,7 +43,7 @@ image:
 - **단측검정(One-Sided Test)** : 귀무가설에 대한 기각역을 단측에만 설정하는 검정
     - **우측검정** : 기각역을 우측에만 설정하는 검정
 
-        ![03](/_post_refer_img/2.STATS/2.statistics/05-03.jpeg){: width="100%"}
+        ![03](/assets/img/posts/2.STATS/2.statistics/05-03.jpeg){: width="100%"}
 
         $$\begin{aligned}
         H_0&:\;\mu \le 70,\\
@@ -52,7 +52,7 @@ image:
 
     - **좌측검정** : 기각역을 좌측에만 설정하는 검정
 
-        ![04](/_post_refer_img/2.STATS/2.statistics/05-04.jpeg){: width="100%"}
+        ![04](/assets/img/posts/2.STATS/2.statistics/05-04.jpeg){: width="100%"}
 
         $$\begin{aligned}
         H_0&:\;\mu=70,\\
@@ -62,11 +62,11 @@ image:
 ## Error
 -----
 
-![05](/_post_refer_img/2.STATS/2.statistics/05-05.png){: width="100%"}
+![05](/assets/img/posts/2.STATS/2.statistics/05-05.png){: width="100%"}
 
 - **오류(Error)** : 사실과 다르게 판단함
 
-    ![06](/_post_refer_img/2.STATS/2.statistics/05-06.png){: width="100%"}
+    ![06](/assets/img/posts/2.STATS/2.statistics/05-06.png){: width="100%"}
 
     - **제1종 오류(Type 1 Error)** : 귀무가설이 참일 때 귀무가설을 기각하는 오류
     - **제1종 오류(Type 2 Error)** : 귀무가설이 거짓일 때 귀무가설을 기각하지 않는 오류
@@ -96,7 +96,7 @@ image:
 
 - **검정통계량(Test Statistic)** : 귀무가설이 참이라고 가정했을 때 얻은 결과
 
-    ![08](/_post_refer_img/2.STATS/2.statistics/05-08.png){: width="100%"}
+    ![08](/assets/img/posts/2.STATS/2.statistics/05-08.png){: width="100%"}
 
     $$\begin{aligned}
     Z
@@ -126,7 +126,7 @@ image:
 
 - **유의확률(Significance Probability Value)** : 검정통계량($Z$)보다 극단적인 결과($Y$)가 관측될 확률로서, 표본이 귀무가설과 양립하는 정도
 
-    ![09](/_post_refer_img/2.STATS/2.statistics/05-09.jpg){: width="100%"}
+    ![09](/assets/img/posts/2.STATS/2.statistics/05-09.jpg){: width="100%"}
 
     $$\begin{aligned}
     \mathrm{p-value}

@@ -8,7 +8,7 @@ math: true
 description: >-
     Based on the lecture "Applied Microeconomics (2018-2)" by Prof. Jin Woo Park, Dept. of Economics, College of Economics & Commerce, Kookmin Univ.
 image:
-    path: /_post_refer_img/7.ECONOMICS/2.microeconomics/Thumbnail.jpg
+    path: /assets/img/posts/7.ECONOMICS/2.microeconomics/Thumbnail.jpg
 ---
 
 ## Pareto Efficiency
@@ -49,12 +49,12 @@ image:
     $$
 
     <div style="text-align: center;">
-        <img src="/_post_refer_img/7.ECONOMICS/2.microeconomics/09-01.png" alt="01" width="100%">
+        <img src="/assets/img/posts/7.ECONOMICS/2.microeconomics/09-01.png" alt="01" width="100%">
         <p><em>생산요소 $L,K$ 제약 하 재화 $X,Y$ 에 대한 생산의 계약곡선</em></p>
     </div>
 
     <div style="text-align: center;">
-        <img src="/_post_refer_img/7.ECONOMICS/2.microeconomics/09-02.png" alt="02" width="100%">
+        <img src="/assets/img/posts/7.ECONOMICS/2.microeconomics/09-02.png" alt="02" width="100%">
         <p><em>상품 공간 상에 표현된 재화 $X,Y$ 에 대한 생산의 계약곡선으로서<br>생산가능경계(Production Possibility Frontier; PPF)</em></p>
     </div>
 
@@ -65,7 +65,7 @@ image:
     $$
 
     <div style="text-align: center;">
-        <img src="/_post_refer_img/7.ECONOMICS/2.microeconomics/09-03.png" alt="03" width="100%">
+        <img src="/assets/img/posts/7.ECONOMICS/2.microeconomics/09-03.png" alt="03" width="100%">
         <p><em>부존자원 $X,Y$ 제약 하 경제주체 $A,B$ 에 대한 교환의 계약곡선</em></p>
     </div>
 
@@ -76,12 +76,12 @@ image:
     $$
 
     <div style="text-align: center;">
-        <img src="/_post_refer_img/7.ECONOMICS/2.microeconomics/09-05.png" alt="05" width="100%">
+        <img src="/assets/img/posts/7.ECONOMICS/2.microeconomics/09-05.png" alt="05" width="100%">
         <p><em>총체적 효율성 하에서는 재화 간 한계생산변환율과 경제주체별 재화 간 한계대체율이 일치함</em></p>
     </div>
 
     <div style="text-align: center;">
-        <img src="/_post_refer_img/7.ECONOMICS/2.microeconomics/09-04.png" alt="04" width="100%">
+        <img src="/assets/img/posts/7.ECONOMICS/2.microeconomics/09-04.png" alt="04" width="100%">
         <p><em>주어진 자원들과 기술 수준에서 달성 가능한 최대 효용 조합으로서<br>효용가능경계(Utility Possibility Frontier; UPF)</em></p>
     </div>
 
@@ -104,7 +104,7 @@ image:
     SW=U_{A}+U_{B}
     $$
 
-    ![06](/_post_refer_img/7.ECONOMICS/2.microeconomics/09-06.png){: width="100%"}
+    ![06](/assets/img/posts/7.ECONOMICS/2.microeconomics/09-06.png){: width="100%"}
 
 - **롤스 사회후생함수(Rawlsian Social Welfare Function)** : 최소 수혜자의 최대 이익
 
@@ -114,7 +114,7 @@ image:
     SW=\min{\left[U_{A},U_{B}\right]}
     $$
 
-    ![07](/_post_refer_img/7.ECONOMICS/2.microeconomics/09-07.png){: width="100%"}
+    ![07](/assets/img/posts/7.ECONOMICS/2.microeconomics/09-07.png){: width="100%"}
 
 - **(실질적) 평등주의 사회후생함수(Egalitarian Social Welfare Function)** : 한계효용의 평등
 
@@ -124,7 +124,7 @@ image:
     SW=\left(U_A\right)^{\alpha} \cdot \left(U_B\right)^{1-\alpha}
     $$
 
-    ![08](/_post_refer_img/7.ECONOMICS/2.microeconomics/09-08.png){: width="100%"}
+    ![08](/assets/img/posts/7.ECONOMICS/2.microeconomics/09-08.png){: width="100%"}
 
 ### Impossibility Theorem
 

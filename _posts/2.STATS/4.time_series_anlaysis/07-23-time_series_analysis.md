@@ -8,5 +8,5 @@ math: true
 description: >-
     Based on the lecture "Statistical Models and Application (2024-1)" by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-    path: /_post_refer_img/2.STATS/4.time_series_analysis/Thumbnail.jpg
+    path: /assets/img/posts/2.STATS/4.time_series_analysis/Thumbnail.jpg
 ---

@@ -11,7 +11,7 @@ description: >-
     (2) "Statistical Models and Application (2024-1)" by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ. <br>
     (3) “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data & Management, College of Business Administration, Kookmin Univ.
 image:
-  path: /_post_refer_img/2.STATS/1.probability/Thumbnail.jpg
+  path: /assets/img/posts/2.STATS/1.probability/Thumbnail.jpg
 ---
 
 

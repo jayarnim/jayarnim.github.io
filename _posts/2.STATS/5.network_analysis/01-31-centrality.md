@@ -8,7 +8,7 @@ math: true
 description: >-
     Based on the lecture “Social Media Analytics (2023-2)” by Prof. Byoung Gu Choi, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-    path: /_post_refer_img/2.STATS/5.network_analysis/Thumbnail.jpg
+    path: /assets/img/posts/2.STATS/5.network_analysis/Thumbnail.jpg
 ---
 
 ## What? Centrality

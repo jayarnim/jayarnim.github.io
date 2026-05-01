@@ -8,7 +8,7 @@ math: true
 description: >-
     Based on the lecture “Social Media Analytics (2023-2)” by Prof. Byoung Gu Choi, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-    path: /_post_refer_img/2.STATS/5.network_analysis/Thumbnail.jpg
+    path: /assets/img/posts/2.STATS/5.network_analysis/Thumbnail.jpg
 ---
 
 ## 정의
@@ -51,7 +51,7 @@ image:
 
 ### 그래프
 
-![01](/_post_refer_img/2.STATS/4.network_analysis/01-01.jpg){: width="100%"}
+![01](/assets/img/posts/2.STATS/4.network_analysis/01-01.jpg){: width="100%"}
 
 - 방향 네트워크의 경우 연결 방향을 화살표로 표기함
 - 계량 네트워크의 경우 연결 강도를 숫자로 표기함

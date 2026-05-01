@@ -8,7 +8,7 @@ math: true
 description: >-
     Based on the lecture "Microeconomics (2017-1)" by Prof. Jin Woo Park, Dept. of Economics, College of Economics & Commerce, Kookmin Univ.
 image:
-    path: /_post_refer_img/7.ECONOMICS/2.microeconomics/Thumbnail.jpg
+    path: /assets/img/posts/7.ECONOMICS/2.microeconomics/Thumbnail.jpg
 ---
 
 ## Revenue
@@ -43,7 +43,7 @@ image:
 
 ### $\max{TR}$
 
-![03](/_post_refer_img/7.ECONOMICS/2.microeconomics/05-03.png){: width="100%"}
+![03](/assets/img/posts/7.ECONOMICS/2.microeconomics/05-03.png){: width="100%"}
 
 $$\begin{aligned}
 \frac{\partial TR(Q \vert \alpha, \beta)}{\partial Q}
@@ -53,7 +53,7 @@ $$\begin{aligned}
 &= 0
 \end{aligned}$$
 
-![04](/_post_refer_img/7.ECONOMICS/2.microeconomics/05-04.png){: width="100%"}
+![04](/assets/img/posts/7.ECONOMICS/2.microeconomics/05-04.png){: width="100%"}
 
 $$
 \therefore \hat{Q} = \text{arg}\max{TR(Q \vert \alpha, \beta)} \quad \text{for} \; \varepsilon_{P}=1
@@ -64,8 +64,8 @@ $$
 
 ### Short-Term Cost
 
-![05](/_post_refer_img/7.ECONOMICS/2.microeconomics/05-05.png){: width="100%"}
-![06](/_post_refer_img/7.ECONOMICS/2.microeconomics/05-06.png){: width="100%"}
+![05](/assets/img/posts/7.ECONOMICS/2.microeconomics/05-05.png){: width="100%"}
+![06](/assets/img/posts/7.ECONOMICS/2.microeconomics/05-06.png){: width="100%"}
 
 - **단기총비용(Short-Term Total Cost; STC)** : 개별생산자가 재화를 총 $Q$ 단위 공급하기 위해 지불해야 하는 비용
 
@@ -96,8 +96,8 @@ $$
 
 - **장기평균비용(Long-Term Average Cost; LAC)** : 각 생산량 수준($Q$)에서 단기평균비용이 최저인 점들의 집합
 
-    ![07](/_post_refer_img/7.ECONOMICS/2.microeconomics/05-07.png){: width="100%"}
-    ![08](/_post_refer_img/7.ECONOMICS/2.microeconomics/05-08.png){: width="100%"}
+    ![07](/assets/img/posts/7.ECONOMICS/2.microeconomics/05-07.png){: width="100%"}
+    ![08](/assets/img/posts/7.ECONOMICS/2.microeconomics/05-08.png){: width="100%"}
 
     $$
     LAC(Q)=\min_{K}{SAC(Q \vert K)}
@@ -106,8 +106,8 @@ $$
 - **장기한계비용(Long-Term Marginal Cost; LMC)** : 각 생산량 수준($Q$)에서 채택된 단기평균비용곡선에 대응하는 단기한계비용곡선 점들의 집합
 
 
-    ![09](/_post_refer_img/7.ECONOMICS/2.microeconomics/05-09.png){: width="100%"}
-    ![10](/_post_refer_img/7.ECONOMICS/2.microeconomics/05-10.png){: width="100%"}
+    ![09](/assets/img/posts/7.ECONOMICS/2.microeconomics/05-09.png){: width="100%"}
+    ![10](/assets/img/posts/7.ECONOMICS/2.microeconomics/05-10.png){: width="100%"}
 
     $$\begin{aligned}
     LMC(Q)&= SMC\left(Q \vert \hat{K} \right)\\
@@ -117,9 +117,9 @@ $$
 ## Profit Maximization
 -----
 
-![11](/_post_refer_img/7.ECONOMICS/2.microeconomics/05-11.png){: width="100%"}
-![02](/_post_refer_img/7.ECONOMICS/2.microeconomics/05-02.png){: width="100%"}
-![12](/_post_refer_img/7.ECONOMICS/2.microeconomics/05-12.png){: width="100%"}
+![11](/assets/img/posts/7.ECONOMICS/2.microeconomics/05-11.png){: width="100%"}
+![02](/assets/img/posts/7.ECONOMICS/2.microeconomics/05-02.png){: width="100%"}
+![12](/assets/img/posts/7.ECONOMICS/2.microeconomics/05-12.png){: width="100%"}
 
 - **양의 이윤을 극대화하는 생산량 도출**
 

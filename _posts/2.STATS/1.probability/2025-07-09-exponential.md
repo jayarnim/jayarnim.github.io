@@ -11,13 +11,13 @@ description: >-
     (2) "Statistical Models and Application (2024-1)" by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ. <br>
     (3) “Bayesian Modeling (2024-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data & Management, College of Business Administration, Kookmin Univ.
 image:
-  path: /_post_refer_img/2.STATS/1.probability/Thumbnail.jpg
+  path: /assets/img/posts/2.STATS/1.probability/Thumbnail.jpg
 ---
 
 ## Exponential
 -----
 
-![01](/_post_refer_img/2.STATS/1.probability/09-01.png){: width="100%"}
+![01](/assets/img/posts/2.STATS/1.probability/09-01.png){: width="100%"}
 
 - **지수 분포(Exponential Distribution)**: 포아송 과정에서 두 사건 사이 대기시간을 나타내는 분포
 
@@ -65,7 +65,7 @@ image:
 ## Gamma
 -----
 
-![02](/_post_refer_img/2.STATS/1.probability/09-02.png){: width="100%"}
+![02](/assets/img/posts/2.STATS/1.probability/09-02.png){: width="100%"}
 
 - **감마 분포(Gamma Distribution)**: 지수 분포의 사건 발생 횟수를 일반화한 분포로서, 양의 누적 물리량을 나타내는 분포
 

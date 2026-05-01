@@ -8,7 +8,7 @@ math: true
 description: >-
     Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-    path: /_post_refer_img/3.ML/2.clustering/Thumbnail.jpg
+    path: /assets/img/posts/3.ML/2.clustering/Thumbnail.jpg
 ---
 
 ## Hierarchical Clustering
@@ -18,11 +18,11 @@ image:
 
 - **덴드로그램(Dendrogram)**: 결합 혹은 분할하는 순서를 나타내는 계층적 트리모형
 
-    ![01](/_post_refer_img/3.ML/2.clustering/04-01.png){: width="100%"}
+    ![01](/assets/img/posts/3.ML/2.clustering/04-01.png){: width="100%"}
 
 - **종류**
 
-    ![02](/_post_refer_img/3.ML/2.clustering/04-02.png){: width="100%"}
+    ![02](/assets/img/posts/3.ML/2.clustering/04-02.png){: width="100%"}
 
     - **상향식 군집화(Agglomerative Clustering)** : 개별 개체들을 유사한 개체/군집과 계층적으로 통합해가는 방식
     - **하향식 군집화(Divisive Clustering)** : 표본을 유의미하게 구분되는 지점마다 계층적으로 분할해가는 방식

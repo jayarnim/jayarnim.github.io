@@ -8,7 +8,7 @@ math: true
 description: >-
     Based on the lecture "Microeconomics (2017-1)" by Prof. Jin Woo Park, Dept. of Economics, College of Economics & Commerce, Kookmin Univ.
 image:
-    path: /_post_refer_img/7.ECONOMICS/2.microeconomics/Thumbnail.jpg
+    path: /assets/img/posts/7.ECONOMICS/2.microeconomics/Thumbnail.jpg
 ---
 
 ## Production
@@ -46,7 +46,7 @@ image:
 
 - **등량 곡선(Isoquant Curve)** : 노동 투입량을 X축으로, 자본 투입량을 Y축으로 하는 좌표평면 위에 생산량이 무차별한 요소조합을 이은 곡선
 
-    ![01](/_post_refer_img/7.ECONOMICS/2.microeconomics/04-01.png){: width="100%"}
+    ![01](/assets/img/posts/7.ECONOMICS/2.microeconomics/04-01.png){: width="100%"}
 
     $$
     Q_K = F(L, K)
@@ -62,7 +62,7 @@ image:
 
 - **생산요소의 생산력**
 
-    ![02](/_post_refer_img/7.ECONOMICS/2.microeconomics/04-02.png){: width="100%"}
+    ![02](/assets/img/posts/7.ECONOMICS/2.microeconomics/04-02.png){: width="100%"}
 
     - **노동의 총생산(Total Production of Labor; $TP_L$)** : 노동을 $L$ 단위 투입했을 때 가능한 생산량
 
@@ -101,7 +101,7 @@ image:
 ## Cost Constraint
 -----
 
-![03](/_post_refer_img/7.ECONOMICS/2.microeconomics/04-03.png){: width="100%"}
+![03](/assets/img/posts/7.ECONOMICS/2.microeconomics/04-03.png){: width="100%"}
 
 - **등비용곡선(Iso-Cost Curve)** : 주어진 비용($C$)과 요소가격 상황($P_L=w,P_K=v$)에 맞게 취득할 수 있는 요소조합의 집합
 
@@ -122,7 +122,7 @@ image:
 ## Output Maximization under Cost Constraint
 -----
 
-![04](/_post_refer_img/7.ECONOMICS/2.microeconomics/04-04.png){: width="100%"}
+![04](/assets/img/posts/7.ECONOMICS/2.microeconomics/04-04.png){: width="100%"}
 
 $$
 \max{Q_S} \quad \text{s.t.} \; x \cdot P_{X} + y \cdot P_{Y} \le M

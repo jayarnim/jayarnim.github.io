@@ -8,18 +8,18 @@ math: true
 description: >-
     Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-    path: /_post_refer_img/3.ML/3.dimensionality_reduction/Thumbnail.jpg
+    path: /assets/img/posts/3.ML/3.dimensionality_reduction/Thumbnail.jpg
 ---
 
 - **차원의 저주(Curse of Dimensionality)** : 고차원일수록 관측치 간 거리가 기하급수적으로 멀어짐에 따라 차원별 학습 가능한 관측치가 희소해져서 알고리즘이 제대로 학습하지 못하는 현상
 
-    ![01](/_post_refer_img/3.ML/3.dimensionality_reduction/01-01.png){: width="100%"}
+    ![01](/assets/img/posts/3.ML/3.dimensionality_reduction/01-01.png){: width="100%"}
 
 - **다양체 가설(Manifold Hypothesis)**
 
     > Many high-dimensional data sets that occur in the real world actually lie along low-dimensional latent manifolds inside that high-dimensional space.
 
-    ![02](/_post_refer_img/3.ML/3.dimensionality_reduction/01-02.jpeg){: width="100%"}
+    ![02](/assets/img/posts/3.ML/3.dimensionality_reduction/01-02.jpeg){: width="100%"}
 
 - **차원 선택(Feature Selection)** : 유효한 차원을 선별하는 방법
     - **Filtering Approach**

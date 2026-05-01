@@ -6,7 +6,7 @@ categories: [0.AI DEV. ENV., 1.GIT]
 tags: [DVCS, GIT]
 math: true
 image:
-  path: /_post_refer_img/0.ENV/1.GIT/Thumbnail.png
+  path: /assets/img/posts/0.ENV/1.GIT/Thumbnail.png
 ---
 
 
@@ -52,20 +52,20 @@ git diff <COMMIT-1>..<COMMIT-2>
 
 - **커밋 전환의 이해**
 
-    ![01](/_post_refer_img/0.ENV/1.GIT/04-01.jpg){: width="100%"}
+    ![01](/assets/img/posts/0.ENV/1.GIT/04-01.jpg){: width="100%"}
 
     - 커밋을 이동하는 것은 변수 `HEAD` 가 가리키는 커밋을 변경하는 작업임
 
 - **변수 `HEAD` 의 이해**
 
-    ![02](/_post_refer_img/0.ENV/1.GIT/04-02.jpg){: width="100%"}
+    ![02](/assets/img/posts/0.ENV/1.GIT/04-02.jpg){: width="100%"}
 
     - 변수 `HEAD` 는 현재 체크인하고 있는 브랜치를 가리키고, 각 브랜치는 마지막 커밋을 가리킴
     - 즉, 변수 `HEAD` 는 현재 체크인하고 있는 브랜치를 참조하여 마지막 커밋을 간접으로 가리키게 됨
 
 - **DETACHED HEAD**
 
-    ![03](/_post_refer_img/0.ENV/1.GIT/04-03.jpg){: width="100%"}
+    ![03](/assets/img/posts/0.ENV/1.GIT/04-03.jpg){: width="100%"}
 
     - **정의** : `HEAD` 가 브랜치를 참조하지 않고 커밋을 직접 가리키는 상태
 
@@ -120,7 +120,7 @@ git cherry-pick <OPTION>
 
 ### 커밋 되돌리기
 
-![04](/_post_refer_img/0.ENV/1.GIT/04-04.jpg){: width="100%"}
+![04](/assets/img/posts/0.ENV/1.GIT/04-04.jpg){: width="100%"}
 
 ```
 git revert <COMMIT-HASH>
@@ -130,7 +130,7 @@ git revert <COMMIT-HASH>
 
 ### 커밋 삭제하기
 
-![05](/_post_refer_img/0.ENV/1.GIT/04-05.jpg){: width="100%"}
+![05](/assets/img/posts/0.ENV/1.GIT/04-05.jpg){: width="100%"}
 
 ```
 git reset <OPTION> <COMMIT-HASH>
@@ -140,7 +140,7 @@ git reset <OPTION> <COMMIT-HASH>
 
 - `<OPTION>`
 
-    ![06](/_post_refer_img/0.ENV/1.GIT/04-06.jpg){: width="100%"}
+    ![06](/assets/img/posts/0.ENV/1.GIT/04-06.jpg){: width="100%"}
 
     - `--hard` : `HEAD` 를 해당 커밋으로 되돌리고, 파일의 `modified` 및 `staged` 상태를 해제하고, 해당 커밋 이후에 기록된 커밋을 삭제함
     - `--mixed` : `HEAD` 를 해당 커밋으로 되돌리고, 파일의 `modified` 및 `staged` 상태를 유지하되, 해당 커밋 이후에 기록된 커밋을 삭제함

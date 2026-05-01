@@ -8,7 +8,7 @@ math: true
 description: >-
     Based on the lecture “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-  path: /_post_refer_img/5.BAYES/3.application/Thumbnail.jpg
+  path: /assets/img/posts/5.BAYES/3.application/Thumbnail.jpg
 ---
 
 ## Naive Bayes
@@ -16,7 +16,7 @@ image:
 
 - **나이브 베이즈(Naive Bayes)**: 베이즈 정리에 기초하여 관측치의 범주를 판별하는 알고리즘
 
-    ![01](/_post_refer_img/5.BAYES/3.application/04-01.png){: width="100%"}
+    ![01](/assets/img/posts/5.BAYES/3.application/04-01.png){: width="100%"}
 
 - Class Conditional Independent Assumption:
 

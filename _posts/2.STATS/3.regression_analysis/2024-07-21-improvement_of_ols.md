@@ -11,13 +11,13 @@ description: >-
     (2) “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ. <br>
     (3) "Statistical Models and Application (2024-1)" by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-    path: /_post_refer_img/2.STATS/3.regression_analysis/Thumbnail.jpg
+    path: /assets/img/posts/2.STATS/3.regression_analysis/Thumbnail.jpg
 ---
 
 ## Bias-Variance Trade-off
 -----
 
-![03](/_post_refer_img/2.STATS/3.regression_analysis/07-03.png){: width="100%"}
+![03](/assets/img/posts/2.STATS/3.regression_analysis/07-03.png){: width="100%"}
 
 - **Notation**
     - $Y$ : 실제 관측치
@@ -64,7 +64,7 @@ image:
 
 - Bias-Variance Trade-off:
 
-    ![04](/_post_refer_img/2.STATS/3.regression_analysis/07-04.png){: width="100%"}
+    ![04](/assets/img/posts/2.STATS/3.regression_analysis/07-04.png){: width="100%"}
 
     - `Bias` is the `underfitting` problem that occurs when a model does not sufficiently learn the patterns of the training data.
     - `Variance` is the `overfitting` problem that occurs when a model adapts too much to the training data.
@@ -152,7 +152,7 @@ image:
 
 - **p-norm** : $n$ 차원 벡터 $\mathbf{x}=\begin{pmatrix}x_{1}&x_{2}&\cdots&x_{n}\end{pmatrix}$ 의 크기를 정의하는 방법
 
-    ![01](/_post_refer_img/2.STATS/3.regression_analysis/07-01.png){: width="100%"}
+    ![01](/assets/img/posts/2.STATS/3.regression_analysis/07-01.png){: width="100%"}
 
     $$
     \Vert x \Vert _{p}=(\vert x_{1} \vert ^{p}+ \vert x_{2} \vert ^{p}+\cdots+ \vert x_{n} \vert ^{p})^{\frac{1}{p}}
@@ -160,7 +160,7 @@ image:
 
 - **가중치 규제(Weight Regulation)** : 회귀계수 최적값을 탐색함에 있어 회귀계수 벡터 $\beta$ 의 크기에 제약을 두는 기법
 
-    ![02](/_post_refer_img/2.STATS/3.regression_analysis/07-02.png){: width="100%"}
+    ![02](/assets/img/posts/2.STATS/3.regression_analysis/07-02.png){: width="100%"}
 
     $$\begin{aligned}
     \hat{\beta}

@@ -8,7 +8,7 @@ math: true
 description: >-
     Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-    path: /_post_refer_img/4.MODALITY/1.nlp/Thumbnail.png
+    path: /assets/img/posts/4.MODALITY/1.nlp/Thumbnail.png
 ---
 
 ## Representation Methods
@@ -18,7 +18,7 @@ image:
 
 - **희소 표현(Sparse Representation)** : 하나의 단어를 하나의 차원으로 하는 $n$ 차원 공간에 단어를 표현하는 방법
 
-    ![01](/_post_refer_img/4.MODALITY/1.nlp/03-01.png){: width="100%"}
+    ![01](/assets/img/posts/4.MODALITY/1.nlp/03-01.png){: width="100%"}
 
     $$\begin{aligned}
     \text{Dog}&=\begin{pmatrix} 1 & 0 & 0 & 0 & 0 & \cdots \end{pmatrix}\\
@@ -62,7 +62,7 @@ image:
 
 - **`EXAMPLE` "The fat cat sat on the mat"** (Where Window Size is 2)
 
-    ![04](/_post_refer_img/4.MODALITY/1.nlp/03-04.png){: width="100%"}
+    ![04](/assets/img/posts/4.MODALITY/1.nlp/03-04.png){: width="100%"}
 
 - **Annotation**
     - $\omega$ : Context Window Size
@@ -75,7 +75,7 @@ image:
 
 ### CBOW
 
-![02](/_post_refer_img/4.MODALITY/1.nlp/03-02.png){: width="100%"}
+![02](/assets/img/posts/4.MODALITY/1.nlp/03-02.png){: width="100%"}
 
 - **`INPUT` → `PROJECTION`**
 
@@ -102,7 +102,7 @@ image:
 
 ### Skip-Gram
 
-![03](/_post_refer_img/4.MODALITY/1.nlp/03-03.png){: width="100%"}
+![03](/assets/img/posts/4.MODALITY/1.nlp/03-03.png){: width="100%"}
 
 - **`INPUT` → `PROJECTION`**
 
@@ -131,11 +131,11 @@ image:
 
 - 이진 분류 문제로 전환하기 위한 **입력과 레이블 변화**
 
-    ![05](/_post_refer_img/4.MODALITY/1.nlp/03-05.png){: width="100%"}
+    ![05](/assets/img/posts/4.MODALITY/1.nlp/03-05.png){: width="100%"}
 
 - **Negative Sampling**
 
-    ![06](/_post_refer_img/4.MODALITY/1.nlp/03-06.png){: width="100%"}
+    ![06](/assets/img/posts/4.MODALITY/1.nlp/03-06.png){: width="100%"}
 
     - $k$ 번째 단어가 샘플링될 확률
 
@@ -149,7 +149,7 @@ image:
 
 - **Optimization**
 
-    ![07](/_post_refer_img/4.MODALITY/1.nlp/03-07.png){: width="100%"}
+    ![07](/assets/img/posts/4.MODALITY/1.nlp/03-07.png){: width="100%"}
 
     $$\begin{aligned}
     \hat{\mathbf{W}}, \hat{\mathbf{V}}

@@ -11,7 +11,7 @@ description: >-
     (2) “Intro. to Machine Learning (2023-2)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ. <br>
     (3) "Statistical Models and Application (2024-1)" by Prof. Yeo Jin Chung, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-    path: /_post_refer_img/2.STATS/3.regression_analysis/Thumbnail.jpg
+    path: /assets/img/posts/2.STATS/3.regression_analysis/Thumbnail.jpg
 ---
 
 ## What? Multiple Linear Regression
@@ -19,7 +19,7 @@ image:
 
 - **정의** : 설명변수가 여러 개인(Multi-Variate) 선형 회귀 모형(Linear Regression Model)
 
-    ![01](/_post_refer_img/2.STATS/3.regression_analysis/02-01.png){: width="100%"}
+    ![01](/assets/img/posts/2.STATS/3.regression_analysis/02-01.png){: width="100%"}
 
     $$
     y^{(k)}=\beta_{0}+\beta_{1}x_{1}^{(k)}+\beta_{2}x_{2}^{(k)}+\cdots+\beta_{p}x_{p}^{(k)}+\varepsilon^{(k)}
@@ -27,7 +27,7 @@ image:
 
 - **vs. Simple Linear Regression**
 
-    ![02](/_post_refer_img/2.STATS/3.regression_analysis/02-02.jpeg){: width="100%"}
+    ![02](/assets/img/posts/2.STATS/3.regression_analysis/02-02.jpeg){: width="100%"}
 
     - **Simple Linear Regression**
 

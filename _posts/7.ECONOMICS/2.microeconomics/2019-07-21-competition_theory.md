@@ -8,7 +8,7 @@ math: true
 description: >-
     Based on the lecture "Microeconomics (2017-1)" by Prof. Jin Woo Park, Dept. of Economics, College of Economics & Commerce, Kookmin Univ.
 image:
-    path: /_post_refer_img/7.ECONOMICS/2.microeconomics/Thumbnail.jpg
+    path: /assets/img/posts/7.ECONOMICS/2.microeconomics/Thumbnail.jpg
 ---
 
 ## Assumption
@@ -34,13 +34,13 @@ image:
 
 - **완전탄력적 수요곡선(Perfectly Elastic Demand Curve)** : 개별생산자가 단독으로 직면하는 시장수요곡선
 
-    ![01](/_post_refer_img/7.ECONOMICS/2.microeconomics/07-01.png){: width="100%"}
+    ![01](/assets/img/posts/7.ECONOMICS/2.microeconomics/07-01.png){: width="100%"}
 
     > 소비자는 가격 수용자로서, 가격의 특정 수준에 대하여 수요량을 조절함으로써 영향력을 행사할 수 없음. 따라서 개별생산자가 단독으로 직면하는 시장수요곡선은 균형가격에서 수평선(완전탄력적인 곡선)이 됨.
 
 - **평균비용곡선의 극소점을 상회하는 수준의 한계비용곡선(Marginal Cost Curve above the Minimum Point of the Average Cost Curve)** : 개별공급곡선
 
-    ![02](/_post_refer_img/7.ECONOMICS/2.microeconomics/07-02.png){: width="100%"}
+    ![02](/assets/img/posts/7.ECONOMICS/2.microeconomics/07-02.png){: width="100%"}
 
     > 생산자는 가격 수용자로서, 주어진 가격 하 양의 이윤을 보장받을 수 있는 상태에서 이윤을 극대화하는 생산량을 공급함. 따라서 생산자들의 개별공급곡선은 한계비용곡선 중 평균비용곡선의 극소점을 상회하는 수준이 됨.
 
@@ -78,17 +78,17 @@ image:
 > 균형가격이 평균비용곡선의 극소점을 상회하는 수준에서 형성되었다고 가정하자.<br>균형공급량 $Q_A$ 은 한계수익곡선 $MR(Q)$ 과 한계비용곡선 $MC(Q)$ 이 일치하는 공급량임.<br>총수익 $TR(Q)$ 은 평균수익 $AR=P$ 과 균형공급량 $Q_A$ 을 곱한 값임.<br>총비용 $TC(Q)$ 은 균형공급량에서의 평균비용 $AC(Q_A)$ 과 균형공급량 $Q_A$ 을 곱한 값임.<br>총이윤 $\pi(Q)$ 은 총수익 $TR(Q_A)$ 에서 총비용 $TC(Q_A)$ 을 뺀 값임.<br>총수익이 총비용보다 크므로($TR(Q_A)>TC(Q_A)$) 양의 이윤이 발생함($\pi(Q_A)>0$).
 
 <div style="text-align: center;">
-    <img src="/_post_refer_img/7.ECONOMICS/2.microeconomics/07-03.png" alt="03" width="100%">
+    <img src="/assets/img/posts/7.ECONOMICS/2.microeconomics/07-03.png" alt="03" width="100%">
     <p><em>$TR(Q_A)=P \times Q_A$</em></p>
 </div>
 
 <div style="text-align: center;">
-    <img src="/_post_refer_img/7.ECONOMICS/2.microeconomics/07-04.png" alt="04" width="100%">
+    <img src="/assets/img/posts/7.ECONOMICS/2.microeconomics/07-04.png" alt="04" width="100%">
     <p><em>$TC(Q_A)=AC(Q_A) \times Q_A$</em></p>
 </div>
 
 <div style="text-align: center;">
-    <img src="/_post_refer_img/7.ECONOMICS/2.microeconomics/07-05.png" alt="05" width="100%">
+    <img src="/assets/img/posts/7.ECONOMICS/2.microeconomics/07-05.png" alt="05" width="100%">
     <p><em>$\pi(Q_A)=TR(Q_A)-TC(Q_A)>0$</em></p>
 </div>
 
@@ -97,17 +97,17 @@ image:
 > 균형가격이 평균비용곡선의 극소점을 하회하는 수준에서 형성되었다고 가정하자.<br>균형공급량 $Q_B$ 은 한계수익곡선 $MR(Q)$ 과 한계비용곡선 $MC(Q)$ 이 일치하는 공급량임.<br>총수익 $TR(Q)$ 은 평균수익 $AR=P$ 과 균형공급량 $Q_B$ 을 곱한 값임.<br>총비용 $TC(Q)$ 은 균형공급량에서의 평균비용 $AC(Q_B)$ 과 균형공급량 $Q_B$ 을 곱한 값임.<br>총이윤 $\pi(Q)$ 은 총수익 $TR(Q_B)$ 에서 총비용 $TC(Q_B)$ 을 뺀 값임.<br>총수익이 총비용보다 작으므로($TR(Q_B)<TC(Q_B)$) 음의 이윤이 발생함($\pi(Q_B)<0$).
 
 <div style="text-align: center;">
-    <img src="/_post_refer_img/7.ECONOMICS/2.microeconomics/07-06.png" alt="06" width="100%">
+    <img src="/assets/img/posts/7.ECONOMICS/2.microeconomics/07-06.png" alt="06" width="100%">
     <p><em>$TR(Q_B)=P \times Q_B$</em></p>
 </div>
 
 <div style="text-align: center;">
-    <img src="/_post_refer_img/7.ECONOMICS/2.microeconomics/07-07.png" alt="07" width="100%">
+    <img src="/assets/img/posts/7.ECONOMICS/2.microeconomics/07-07.png" alt="07" width="100%">
     <p><em>$TC(Q_B)=AC(Q_B) \times Q_B$</em></p>
 </div>
 
 <div style="text-align: center;">
-    <img src="/_post_refer_img/7.ECONOMICS/2.microeconomics/07-08.png" alt="08" width="100%">
+    <img src="/assets/img/posts/7.ECONOMICS/2.microeconomics/07-08.png" alt="08" width="100%">
     <p><em>$\pi(Q_B)=TR(Q_B)-TC(Q_B)<0$</em></p>
 </div>
 
@@ -120,17 +120,17 @@ image:
 > 균형가격이 평균고정비용곡선의 극소점을 하회하는 가격수준에서 형성되었다고 가정하자.<br>총비용 $TC(Q)$ 을 총가변비용 $TVC(Q)$ 과 총고정비용 $TFC(Q)$ 으로 세분화할 수 있음.<br>총고정비용 $TFC(Q)$ 은 균형공급량에서의 평균고정비용 $AFC(Q_C)$ 과 균형공급량 $Q_C$ 를 곱한 값임.<br>총수익이 총고정비용보다 작으므로($TR(Q_C)<TFC(Q_C)$) 생산을 지속해도 총고정비용을 회수할 수 없음.<br>따라서 균형가격이 평균고정비용곡선의 극소점을 하회하는 수준에서 형성되는 경우($P<AFC(Q)$) 생산을 중단하는 것이 유리함.
 
 <div style="text-align: center;">
-    <img src="/_post_refer_img/7.ECONOMICS/2.microeconomics/07-09.png" alt="09" width="100%">
+    <img src="/assets/img/posts/7.ECONOMICS/2.microeconomics/07-09.png" alt="09" width="100%">
     <p><em>$TR(Q_C)=P \times Q_C$</em></p>
 </div>
 
 <div style="text-align: center;">
-    <img src="/_post_refer_img/7.ECONOMICS/2.microeconomics/07-11.png" alt="11" width="100%">
+    <img src="/assets/img/posts/7.ECONOMICS/2.microeconomics/07-11.png" alt="11" width="100%">
     <p><em>$TC(Q_C)=TVC(Q_C)+TFC(Q_C)$</em></p>
 </div>
 
 <div style="text-align: center;">
-    <img src="/_post_refer_img/7.ECONOMICS/2.microeconomics/07-12.png" alt="12" width="100%">
+    <img src="/assets/img/posts/7.ECONOMICS/2.microeconomics/07-12.png" alt="12" width="100%">
     <p><em>$TR(Q_C)<TFC(Q_C)$</em></p>
 </div>
 
@@ -139,17 +139,17 @@ image:
 > 균형가격이 평균고정비용곡선의 극소점을 상회하는 가격수준에서 형성되었다고 가정하자.<br>총비용 $TC(Q)$ 을 총가변비용 $TVC(Q)$ 과 총고정비용 $TFC(Q)$ 으로 세분화할 수 있음.<br>총고정비용 $TFC(Q)$ 은 균형공급량에서의 평균고정비용 $AFC(Q_C)$ 과 균형공급량 $Q_C$ 를 곱한 값임.<br>총수익이 총고정비용보다 크므로($TR(Q_C)>TFC(Q_C)$) 생산을 지속하면 총고정비용을 회수할 수 있음.<br>따라서 균형가격이 평균고정비용곡선의 극소점을 상회하는 수준에서 형성되는 경우($P>AFC(Q)$) 생산을 중단하는 것이 불리함.
 
 <div style="text-align: center;">
-    <img src="/_post_refer_img/7.ECONOMICS/2.microeconomics/07-13.png" alt="13" width="100%">
+    <img src="/assets/img/posts/7.ECONOMICS/2.microeconomics/07-13.png" alt="13" width="100%">
     <p><em>$TR(Q_D)=P \times Q_D$</em></p>
 </div>
 
 <div style="text-align: center;">
-    <img src="/_post_refer_img/7.ECONOMICS/2.microeconomics/07-15.png" alt="15" width="100%">
+    <img src="/assets/img/posts/7.ECONOMICS/2.microeconomics/07-15.png" alt="15" width="100%">
     <p><em>$TC(Q_D)=TVC(Q_D)+TFC(Q_D)$</em></p>
 </div>
 
 <div style="text-align: center;">
-    <img src="/_post_refer_img/7.ECONOMICS/2.microeconomics/07-16.png" alt="16" width="100%">
+    <img src="/assets/img/posts/7.ECONOMICS/2.microeconomics/07-16.png" alt="16" width="100%">
     <p><em>$TR(Q_D)>TFC(Q_D)$</em></p>
 </div>
 
@@ -160,21 +160,21 @@ image:
 
 - $P>\min{AC} \Rightarrow \pi>0$ : 잠재적 생산자가 시장에 진입하여 시장공급곡선이 우측으로 이동함에 따라 균형가격이 하락함
 
-    ![17](/_post_refer_img/7.ECONOMICS/2.microeconomics/07-17.png){: width="100%"}
+    ![17](/assets/img/posts/7.ECONOMICS/2.microeconomics/07-17.png){: width="100%"}
 
 - $P<\min{AC} \Rightarrow \pi<0$ : 시장에 진입해 있는 생산자가 퇴출되어 시장공급곡선이 좌측으로 이동함에 따라 균형가격이 상승함
 
-    ![18](/_post_refer_img/7.ECONOMICS/2.microeconomics/07-18.png){: width="100%"}
+    ![18](/assets/img/posts/7.ECONOMICS/2.microeconomics/07-18.png){: width="100%"}
 
 - $P=\min{AC} \Rightarrow \pi=0$ : 균형가격은 생산자 진입 및 퇴출에 따라 등락을 반복하다가 점차 이윤이 발생하지 않는 수준으로 수렴함
 
-    ![19](/_post_refer_img/7.ECONOMICS/2.microeconomics/07-19.png){: width="100%"}
+    ![19](/assets/img/posts/7.ECONOMICS/2.microeconomics/07-19.png){: width="100%"}
 
 ### 개별공급곡선의 장기화
 
 - **장기평균비용(Long-Term Average Cost; LAC)** : 각 생산량 수준($Q$)에서 단기평균비용이 최저인 점들의 집합
 
-    ![20](/_post_refer_img/7.ECONOMICS/2.microeconomics/07-20.png){: width="100%"}
+    ![20](/assets/img/posts/7.ECONOMICS/2.microeconomics/07-20.png){: width="100%"}
 
     $$
     LAC(Q)=\min_{K}{SAC(Q \vert K)}
@@ -182,7 +182,7 @@ image:
 
 - **장기한계비용(Long-Term Marginal Cost; LMC)** : 각 생산량 수준($Q$)에서 채택된 단기평균비용곡선에 대응하는 단기한계비용곡선 점들의 집합
 
-    ![21](/_post_refer_img/7.ECONOMICS/2.microeconomics/07-21.png){: width="100%"}
+    ![21](/assets/img/posts/7.ECONOMICS/2.microeconomics/07-21.png){: width="100%"}
 
     $$\begin{aligned}
     LMC(Q)&= SMC\left(Q \vert \hat{K} \right)\\
@@ -191,12 +191,12 @@ image:
 
 - **장기개별공급곡선(Long-Term Individual Supply Curve)** : 장기평균비용곡선의 극소점을 상회하는 수준의 장기한계비용곡선
 
-    ![22](/_post_refer_img/7.ECONOMICS/2.microeconomics/07-22.png){: width="100%"}
+    ![22](/assets/img/posts/7.ECONOMICS/2.microeconomics/07-22.png){: width="100%"}
 
 ### 장기 균형
 
-![23](/_post_refer_img/7.ECONOMICS/2.microeconomics/07-23.png){: width="100%"}
-![24](/_post_refer_img/7.ECONOMICS/2.microeconomics/07-24.png){: width="100%"}
+![23](/assets/img/posts/7.ECONOMICS/2.microeconomics/07-23.png){: width="100%"}
+![24](/assets/img/posts/7.ECONOMICS/2.microeconomics/07-24.png){: width="100%"}
 
 - $P(=AR)=LAC \Rightarrow \pi=0$
 

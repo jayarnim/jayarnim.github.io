@@ -8,7 +8,7 @@ math: true
 description: >-
     Based on the lecture “Text Analytics (2024-1)” by Prof. Je Hyuk Lee, Dept. of Data Science, The Grad. School, Kookmin Univ.
 image:
-    path: /_post_refer_img/4.MODALITY/1.nlp/Thumbnail.png
+    path: /assets/img/posts/4.MODALITY/1.nlp/Thumbnail.png
 ---
 
 ## Attention is all you need
@@ -18,14 +18,14 @@ image:
 
 - **TOTAL ARCHITECTURE** : SEQ2SEQ 의 `ENCODER`-`DECODER` 구조를 따름
 
-    ![02](/_post_refer_img/4.MODALITY/1.nlp/10-03.png){: width="100%"}
+    ![02](/assets/img/posts/4.MODALITY/1.nlp/10-03.png){: width="100%"}
 
     - **`ENCODER`** : Natural Language Understanding & Feature Extraction
     - **`DECODER`** : Natural Language Generation
 
 - **Transformer Application**
 
-    ![06](/_post_refer_img/4.MODALITY/1.nlp/10-06.png){: width="100%"}
+    ![06](/assets/img/posts/4.MODALITY/1.nlp/10-06.png){: width="100%"}
 
     - **BERT(`B`idirectional `E`ncoder `R`epresentations from `T`ransformers)** : LLM, Transformer Encoder Application
     - **GPT(`G`enerative `P`re-`T`raining)** : GM, Transformer Decoder Application
@@ -33,7 +33,7 @@ image:
 ## Core Techs
 -----
 
-![03](/_post_refer_img/4.MODALITY/1.nlp/10-02.png){: width="100%"}
+![03](/assets/img/posts/4.MODALITY/1.nlp/10-02.png){: width="100%"}
 
 - **Token Embedding** : 입력 문장 내 단어들 각각의 정보를 표현하는 벡터를 생성함
 
@@ -87,7 +87,7 @@ $$\begin{aligned}
 
 - **FUNCTION**
 
-    ![01](/_post_refer_img/4.MODALITY/1.nlp/10-01.png){: width="100%"}
+    ![01](/assets/img/posts/4.MODALITY/1.nlp/10-01.png){: width="100%"}
 
     $$\begin{aligned}
     PE(POS,2i)&=\sin{\frac{POS}{10000^{2i/d}}}\\
@@ -100,7 +100,7 @@ $$\begin{aligned}
 
 - **PERIODICITY**
 
-    ![01](/_post_refer_img/4.MODALITY/1.nlp/10-05.png){: width="100%"}
+    ![01](/assets/img/posts/4.MODALITY/1.nlp/10-05.png){: width="100%"}
 
     $$\begin{aligned}
     \begin{pmatrix}\sin{\frac{POS+K}{10000^{2i/d}}} \\ \cos{\frac{POS+K}{10000^{2i/d}}}\end{pmatrix}
@@ -115,7 +115,7 @@ $$\begin{aligned}
 ## Single Layers
 -----
 
-![04](/_post_refer_img/4.MODALITY/1.nlp/10-04.png){: width="100%"}
+![04](/assets/img/posts/4.MODALITY/1.nlp/10-04.png){: width="100%"}
 
 ### Encoder Layer
 

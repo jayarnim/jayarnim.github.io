@@ -8,7 +8,7 @@ math: true
 description: >-
     Based on the lecture “Mathematics for Artificial Intelligence (2022-1)” by Prof. Yeo Jin Chung, Dept. of AI, Big Data & Management, College of Business Administration, Kookmin Univ.
 image:
-    path: /_post_refer_img/1.MATH/2.calculus/Thumbnail.jpg
+    path: /assets/img/posts/1.MATH/2.calculus/Thumbnail.jpg
 ---
 
 ## Partial Derivative
@@ -16,7 +16,7 @@ image:
 
 - 2변수함수 $$y=f(x,z)$$ 는 $XYZ$-공간에서의 곡면임
 
-    ![05](/_post_refer_img/1.MATH/2.calculus/04-05.png){: width="100%"}
+    ![05](/assets/img/posts/1.MATH/2.calculus/04-05.png){: width="100%"}
 
     $$\begin{aligned}
     \left\{(x,y,z) \mid (x,z) \in D(f)\right\}
@@ -69,7 +69,7 @@ image:
 
 - **그라디언트(Gradient)**: $N$ 변수함수 $y=f(x_{1},x_{2},\cdots,x_{N})$ 에 대하여 각 변수에 대한 일계편도함수로 구성된 벡터
 
-    ![08](/_post_refer_img/1.MATH/2.calculus/04-08.png){: width="100%"}
+    ![08](/assets/img/posts/1.MATH/2.calculus/04-08.png){: width="100%"}
 
     $$\begin{aligned}
     \nabla f
@@ -91,7 +91,7 @@ image:
 
 - **극점(Local Extremum Point)** : 임계점 중에서 극값을 갖는 지점으로서, $f$ 의 임계점 $(a,b)$ 의 모든 열린 근방 $(x,z)$ 에 대하여 다음 중 하나만을 만족하는 경우
 
-    ![06](/_post_refer_img/1.MATH/2.calculus/04-06.png){: width="100%"}
+    ![06](/assets/img/posts/1.MATH/2.calculus/04-06.png){: width="100%"}
 
     $$\begin{cases}
     f(a,b) \leq f(x,z) \quad &\text{maximum}\\
@@ -100,7 +100,7 @@ image:
 
 - **안장점(Saddle Point)** : 임계점 중에서 극값을 갖지 않는 점으로서, 어떤 측면에서는 극소값이 되고, 동시에 다른 측면에서는 극대값이 되는 지점
 
-    ![07](/_post_refer_img/1.MATH/2.calculus/04-07.png){: width="100%"}
+    ![07](/assets/img/posts/1.MATH/2.calculus/04-07.png){: width="100%"}
 
     $$\begin{aligned}
     f(a,b) \leq f(x,z) \quad \text{and} \quad f(a,b) \geq f(x,z)
