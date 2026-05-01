@@ -37,14 +37,14 @@
 <link rel="canonical" href="https://jayarnim.github.io/posts/ae/" />
 <meta property="og:url" content="https://jayarnim.github.io/posts/ae/" />
 <meta property="og:site_name" content="Data Scientist" />
-<meta property="og:image" content="https://jayarnim.github.io/_post_refer_img/3.ML/4.neural_networks/Thumbnail.jpg" />
+<meta property="og:image" content="https://jayarnim.github.io/assets/img/posts/3.ML/4.neural_networks/Thumbnail.jpg" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-01-25T00:00:00+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://jayarnim.github.io/_post_refer_img/3.ML/4.neural_networks/Thumbnail.jpg" />
+<meta property="twitter:image" content="https://jayarnim.github.io/assets/img/posts/3.ML/4.neural_networks/Thumbnail.jpg" />
 <meta property="twitter:title" content="AutoEncoder" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-01-25T00:00:00+09:00","datePublished":"2024-01-25T00:00:00+09:00","description":"AutoEncoder","headline":"AutoEncoder","image":"https://jayarnim.github.io/_post_refer_img/3.ML/4.neural_networks/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/ae/"},"url":"https://jayarnim.github.io/posts/ae/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-01-25T00:00:00+09:00","datePublished":"2024-01-25T00:00:00+09:00","description":"AutoEncoder","headline":"AutoEncoder","image":"https://jayarnim.github.io/assets/img/posts/3.ML/4.neural_networks/Thumbnail.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://jayarnim.github.io/posts/ae/"},"url":"https://jayarnim.github.io/posts/ae/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -977,7 +977,7 @@
         
 
         <div class="mt-3 mb-3">
-          <a href="/_post_refer_img/3.ML/4.neural_networks/Thumbnail.jpg" class="popup img-link preview-img shimmer"><img src="/_post_refer_img/3.ML/4.neural_networks/Thumbnail.jpg"  alt="Preview Image" width="1200" height="630"  loading="lazy"></a></div>
+          <a href="/assets/img/posts/3.ML/4.neural_networks/Thumbnail.jpg" class="popup img-link preview-img shimmer"><img src="/assets/img/posts/3.ML/4.neural_networks/Thumbnail.jpg"  alt="Preview Image" width="1200" height="630"  loading="lazy"></a></div>
       
 
       <div class="d-flex justify-content-between">
@@ -1036,7 +1036,7 @@
   <li>
     <p><strong>오토인코더(<code class="language-plaintext highlighter-rouge">A</code>uto<code class="language-plaintext highlighter-rouge">E</code>ncoder; AE)</strong> : 입력 데이터를 압축시켜 저차원 특징 공간으로 축소한 후, 이를 다시 확장하여 원본으로 복원하는 인공신경망 아키텍처</p>
 
-    <p><a href="/_post_refer_img/3.ML/4.neural_networks/04-01.png" class="popup img-link  shimmer"><img src="/_post_refer_img/3.ML/4.neural_networks/04-01.png" alt="01" width="100%" loading="lazy"></a></p>
+    <p><a href="/assets/img/posts/3.ML/4.neural_networks/04-01.png" class="popup img-link  shimmer"><img src="/assets/img/posts/3.ML/4.neural_networks/04-01.png" alt="01" width="100%" loading="lazy"></a></p>
 
 \[X \xrightarrow{\text{Encoder}} Z \xrightarrow{\text{Decoder}} \hat{X}\]
   </li>
@@ -1082,12 +1082,12 @@
   <li>
     <p><strong>적층 오토인코더(Stacked AutoEncoder or Deep AutoEncoder)</strong> : 입력층과 잠재공간, 잠재공간과 출력층 사이에 여러 장의 은닉층을 추가함으로써 기본 오토인코더보다 복잡하고 비선형적인 데이터 패턴을 잘 포착하도록 함</p>
 
-    <p><a href="/_post_refer_img/3.ML/4.neural_networks/04-02.png" class="popup img-link  shimmer"><img src="/_post_refer_img/3.ML/4.neural_networks/04-02.png" alt="02" width="100%" loading="lazy"></a></p>
+    <p><a href="/assets/img/posts/3.ML/4.neural_networks/04-02.png" class="popup img-link  shimmer"><img src="/assets/img/posts/3.ML/4.neural_networks/04-02.png" alt="02" width="100%" loading="lazy"></a></p>
   </li>
   <li>
     <p><strong>희소 오토인코더(<code class="language-plaintext highlighter-rouge">S</code>parse <code class="language-plaintext highlighter-rouge">A</code>uto<code class="language-plaintext highlighter-rouge">E</code>ncoder; SAE)</strong> : 입력 데이터를 고차원으로 확장했다가 본래 차원으로 축소하는 과정을 통해 저차원에서는 발견하기 어려운 잠재 정보나 패턴을 포착하도록 함</p>
 
-    <p><a href="/_post_refer_img/3.ML/4.neural_networks/04-03.png" class="popup img-link  shimmer"><img src="/_post_refer_img/3.ML/4.neural_networks/04-03.png" alt="03" width="100%" loading="lazy"></a></p>
+    <p><a href="/assets/img/posts/3.ML/4.neural_networks/04-03.png" class="popup img-link  shimmer"><img src="/assets/img/posts/3.ML/4.neural_networks/04-03.png" alt="03" width="100%" loading="lazy"></a></p>
 
     <ul>
       <li>
@@ -1117,7 +1117,7 @@
   <li>
     <p><strong>잡음 제거 오토인코더(<code class="language-plaintext highlighter-rouge">D</code>enoising <code class="language-plaintext highlighter-rouge">A</code>uto<code class="language-plaintext highlighter-rouge">E</code>ncoder; DAE)</strong> : 원본 데이터에 잡음을 추가하여 입력한 후, 원본을 복원함으로써 잡음에 대한 강건성을 확보하고 데이터의 본질적인 특징에 집중할 수 있도록 함</p>
 
-    <p><a href="/_post_refer_img/3.ML/4.neural_networks/04-04.png" class="popup img-link  shimmer"><img src="/_post_refer_img/3.ML/4.neural_networks/04-04.png" alt="04" width="100%" loading="lazy"></a></p>
+    <p><a href="/assets/img/posts/3.ML/4.neural_networks/04-04.png" class="popup img-link  shimmer"><img src="/assets/img/posts/3.ML/4.neural_networks/04-04.png" alt="04" width="100%" loading="lazy"></a></p>
 
     <ul>
       <li>
