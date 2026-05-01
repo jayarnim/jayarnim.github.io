@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-gem "sass-embedded", "~> 1.97.3"
+gem "sass-embedded", "~> 1.99.0"
 gem "jekyll-sass-converter", "~> 3.0.0"
 
 source "https://rubygems.org"
