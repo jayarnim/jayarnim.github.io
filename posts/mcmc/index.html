@@ -1356,6 +1356,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -1463,9 +1474,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1541 words"
+  title="1814 words"
 >
-  <em>8 min</em> read</span>
+  <em>10 min</em> read</span>
 
         </div>
       </div>
@@ -1615,15 +1626,39 @@
 
 <h2 id="evaluation-process-loo"><span class="me-2">Evaluation Process: LOO</span><a href="#evaluation-process-loo" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
+<h3 id="metric"><span class="me-2">Metric</span><a href="#metric" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
 <ul>
   <li>
-    <p>ELPD(<code class="language-plaintext highlighter-rouge">E</code>xpected <code class="language-plaintext highlighter-rouge">L</code>og <code class="language-plaintext highlighter-rouge">P</code>ointwise <code class="language-plaintext highlighter-rouge">P</code>redictive <code class="language-plaintext highlighter-rouge">D</code>ensity):</p>
+    <p><strong>LPD(<code class="language-plaintext highlighter-rouge">L</code>og <code class="language-plaintext highlighter-rouge">P</code>redictive <code class="language-plaintext highlighter-rouge">D</code>ensity)</strong>: 훈련 시 학습한 관측치에 대한 적합도</p>
 
 \[\begin{aligned}
-  ELPD
+  \mathrm{LPD}
+  &amp;=\sum_{i=1}^{N}{\log{p(y_{i}\mid y_{\forall})}}\\
+  \underbrace{p(y_{i}\mid y_{\forall})}_{\text{posterior pred.}}
+  &amp;=\int{\underbrace{p(y_{i}\mid\theta)}_{\text{likelihood}}\underbrace{p(\theta\mid y_{\forall})}_{\text{posterior}}}{\mathrm{d}\theta}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>ELPD(<code class="language-plaintext highlighter-rouge">E</code>xpected <code class="language-plaintext highlighter-rouge">L</code>og <code class="language-plaintext highlighter-rouge">P</code>redictive <code class="language-plaintext highlighter-rouge">D</code>ensity)</strong>: 훈련 시 학습하지 않은 관측치에 대한 예측 성능</p>
+
+\[\begin{aligned}
+  \mathrm{ELPD}
   &amp;=\sum_{i=1}^{N}{\log{p(y_{i}\mid y_{-i})}}\\
   \underbrace{p(y_{i}\mid y_{-i})}_{\text{posterior pred.}}
   &amp;=\int{\underbrace{p(y_{i}\mid\theta)}_{\text{likelihood}}\underbrace{p(\theta\mid y_{-i})}_{\text{posterior}}}{\mathrm{d}\theta}
+  \end{aligned}\]
+  </li>
+  <li>
+    <p><strong>유효 파라미터 수(Effective <code class="language-plaintext highlighter-rouge">P</code>arameter Count)</strong>: 미관측 데이터 셋을 확인하였을 때 성능 개선폭으로서 과적합을 나타냄</p>
+
+    <blockquote>
+      <p>파라미터 수 $K$ 가 훈련 관측치 수 $N$ 만큼 있다고 가정하자. 파라미터 하나당 관측치 하나를 직접 설명할 때 관측 데이터 셋 적합도가 최대가 될 것임. 이는 전체 모형이 일반화된 패턴을 전혀 포착하지 못하고 있는 과적합 상태가 됨. 따라서 모형의 적합도와 예측 성능 간 차이는 모형이 특정 관측치를 직접 맞추기 위해 실제로 사용한 자유도(복잡도)가 됨. 이는 모형이 데이터 셋에 적합되기 위해 추가 작동된(유효한) 파라미터 수로 해석할 수 있음.</p>
+    </blockquote>
+
+\[\begin{aligned}
+  p
+  &amp;=\mathrm{LPD}-\mathrm{ELPD}
   \end{aligned}\]
   </li>
 </ul>
