@@ -1064,6 +1064,148 @@
     <!-- combine -->
     
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
 
   
 
@@ -1170,6 +1312,17 @@
       
         
         
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
       
 
       
@@ -1310,9 +1463,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1330 words"
+  title="1541 words"
 >
-  <em>7 min</em> read</span>
+  <em>8 min</em> read</span>
 
         </div>
       </div>
@@ -1565,7 +1718,47 @@
   <li>
     <p>파레토 지수의 역수 $k=1/\alpha$ 가 작을수록 특정 관측치를 설명하지 못하는 파라미터 샘플이 소수임을 의미함:</p>
 
-    <p><a href="/assets/img/posts/5.BAYES/2.posterior/02-07.png" class="popup img-link  shimmer"><img src="/assets/img/posts/5.BAYES/2.posterior/02-07.png" alt="06" width="100%" loading="lazy"></a></p>
+    <p><a href="/assets/img/posts/5.BAYES/2.posterior/02-07.png" class="popup img-link  shimmer"><img src="/assets/img/posts/5.BAYES/2.posterior/02-07.png" alt="07" width="100%" loading="lazy"></a></p>
+  </li>
+</ul>
+
+<h3 id="probability-integral-transform"><span class="me-2">Probability Integral Transform</span><a href="#probability-integral-transform" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li>
+    <p><strong>확률 적분 변환(<code class="language-plaintext highlighter-rouge">P</code>robability <code class="language-plaintext highlighter-rouge">I</code>ntegral <code class="language-plaintext highlighter-rouge">T</code>ransform)</strong>: 관측값이 모형의 사후 예측 분포 안에서 어디쯤 위치하는지 측정하는 지표</p>
+
+\[\begin{aligned}
+  F(y_{i})
+  &amp;=\mathrm{Pr}(y_{i}^{(\mathrm{rep})}\le y_{i}\mid y_{-i}), \quad y_{i}^{(\mathrm{rep})}\sim\mathcal{N}(\mu_{i},\sigma_{i}^{2})
+  \end{aligned}\]
+  </li>
+  <li>
+    <p>확률변수 표준화:</p>
+
+\[z_{i}
+  :=\frac{y_{i}-\mu_{i}}{\sigma_{i}}\sim\mathcal{N}(0,1^{2})\]
+  </li>
+  <li>
+    <p>누적 분포 함수 표준화:</p>
+
+\[F(y_{i})\longrightarrow\Phi\left(\frac{y_{i}-\mu_{i}}{\sigma_{i}}\right)\]
+  </li>
+  <li>
+    <p>표준 정규 분포의 누적 분포 함수값:</p>
+
+    <p><a href="/assets/img/posts/5.BAYES/2.posterior/02-08.png" class="popup img-link  shimmer"><img src="/assets/img/posts/5.BAYES/2.posterior/02-08.png" alt="08" width="100%" loading="lazy"></a></p>
+
+    <ul>
+      <li>$y=\mu\to\Phi(0)=0$</li>
+      <li>$y&gt;\mu\to\Phi\approx 1$</li>
+      <li>$y&lt;\mu\to\Phi\approx 0$</li>
+    </ul>
+  </li>
+  <li>
+    <p>모형이 과신할수록($\sigma\downarrow$) 표준화된 관측값은 사후 예측 분포의 평균($0$)보다 극단적으로 크거나($\Phi\approx 1$) 극단적으로 작을 수 있어($\Phi\approx 0$) PIT 곡선이 $\cup$ 형태가 됨. 반대로 모형이 불확실성을 높게 잡을수록($\sigma\uparrow$) 표준화된 관측값은 사후 예측 분포의 평균($0$) 근처에 위치할 가능성이 높아($\Phi(0)=0$) PIT 곡선이 $\cap$ 형태가 됨:</p>
+
+    <p><a href="/assets/img/posts/5.BAYES/2.posterior/02-09.png" class="popup img-link  shimmer"><img src="/assets/img/posts/5.BAYES/2.posterior/02-09.png" alt="09" width="100%" loading="lazy"></a></p>
   </li>
 </ul>
 
