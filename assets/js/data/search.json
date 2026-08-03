@@ -596,23 +596,6 @@
   },
   
   {
-    "title": "Gaussian Mixture Model",
-    "url": "/posts/gmm/",
-    "categories": "5.BAYES, 3.bayes applications",
-    "tags": "bayesian, clustering, mle, em algorithm, latent factor, gaussian distribution, mixture distribution",
-    "date": "2024-08-18 00:00:00 +0900",
-    
-
-
-
-
-
-    
-    "snippet": "",
-    "content": ""
-  },
-  
-  {
     "title": "Bayesian Regression (2) Subjective Prior",
     "url": "/posts/bayesian_regression_2/",
     "categories": "5.BAYES, 3.bayes applications",
