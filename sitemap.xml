@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://jayarnim.github.io/posts/thoughts/</loc>
+<lastmod>2019-07-01T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>https://jayarnim.github.io/posts/liberalism/</loc>
+<lastmod>2019-07-02T00:00:00+09:00</lastmod>
+</url>
+<url>
 <loc>https://jayarnim.github.io/posts/what_micro/</loc>
 <lastmod>2019-07-15T00:00:00+09:00</lastmod>
 </url>
@@ -554,21 +562,24 @@
 </url>
 <url>
 <loc>https://jayarnim.github.io/categories/</loc>
-<lastmod>2026-08-03T21:34:01+09:00</lastmod>
+<lastmod>2026-08-20T15:14:03+09:00</lastmod>
 </url>
 <url>
 <loc>https://jayarnim.github.io/tags/</loc>
-<lastmod>2026-08-03T21:34:01+09:00</lastmod>
+<lastmod>2026-08-20T15:14:03+09:00</lastmod>
 </url>
 <url>
 <loc>https://jayarnim.github.io/archives/</loc>
-<lastmod>2026-08-03T21:34:01+09:00</lastmod>
+<lastmod>2026-08-20T15:14:03+09:00</lastmod>
 </url>
 <url>
 <loc>https://jayarnim.github.io/</loc>
 </url>
 <url>
 <loc>https://jayarnim.github.io/tags/economics/</loc>
+</url>
+<url>
+<loc>https://jayarnim.github.io/tags/thoughts/</loc>
 </url>
 <url>
 <loc>https://jayarnim.github.io/tags/microeconomics/</loc>
@@ -1052,6 +1063,9 @@
 </url>
 <url>
 <loc>https://jayarnim.github.io/categories/7-economics/</loc>
+</url>
+<url>
+<loc>https://jayarnim.github.io/categories/1-economic-thoughts/</loc>
 </url>
 <url>
 <loc>https://jayarnim.github.io/categories/2-microeconomics/</loc>
