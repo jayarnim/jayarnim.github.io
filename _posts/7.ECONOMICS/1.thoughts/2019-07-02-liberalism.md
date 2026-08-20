@@ -95,6 +95,8 @@ image:
 
 ## (참고) 노동시장
 
+### 노동자
+
 - 시간당 임금 $w$ 이 주어졌을 때, 노동자는 가용한 시간 $T$ 안에서 여가 시간 $H$ 과 노동 시간 $L$ 을 선택하여야 함:
 
     $$
@@ -111,8 +113,10 @@ image:
 - (시간 제약 하) 노동자가 효용을 극대화한 상태에서는 총 여가 시간(Hours of Leisure)의 화폐 단위당 한계효용과 소비의 한계효용이 일치함:
 
     $$
-    \frac{MU_{H}^{(i)}}{w}
-    =MU_{C}^{(i)}
+    \frac{MU_{H}^{(i)}}{MU_{C}^{(i)}}
+    =w
+    \Longleftrightarrow\frac{MU_{H}^{(i)}}{w}
+    =\frac{MU_{C}^{(i)}}{1}
     $$
 
 - 노동자 간 한계대체율(marginal rate of substitution)은 교환 가치를 매개로 일치함:
@@ -122,6 +126,8 @@ image:
     =w
     =MRS_{H,C}^{(j)}
     $$
+
+### 생산자
 
 - 생산자가 생산비용을 극소화한 상태에서 두 재화의 한계변환율(marginal rate of transformation)은 두 재화의 생산비용(marginal cost)의 비율과 일치함:
 
@@ -146,6 +152,8 @@ image:
     =MRTS_{L,K}^{(Y)}
     $$
 
+### 시장 균형
+
 - 따라서 노동시장에서 한계대체율(marginal rate of substitution)과 한계기술대체율(marginal rate of technical substitution)은 노동의 교환 가치를 매개로 일치함:
 
     $$
@@ -155,6 +163,8 @@ image:
     $$
 
 ## (참고) 자본시장
+
+### 자본가
 
 - 2기간 모형을 가정하자. 자본가는 두 기간의 자원 범위 $(1+r)Y_{0}+Y_{1}$ 안에서 현재와 미래의 소비 $C_{0},C_{1}$ 를 선택하여야 함:
 
@@ -175,7 +185,9 @@ image:
 - (소득 제약 하) 자본가가 효용을 극대화한 상태에서는 두 재화 간 화폐 단위 당 한계효용이 일치함:
 
     $$
-    \frac{MU_{C_{0}}^{(i)}}{1+r}
+    \frac{MU_{C_{0}}^{(i)}}{MU_{C_{1}}^{(i)}}
+    =1+r
+    \Longleftrightarrow\frac{MU_{C_{0}}^{(i)}}{1+r}
     =\frac{MU_{C_{1}}^{(i)}}{1}
     $$
 
@@ -186,6 +198,8 @@ image:
     =1+r
     =MRS_{C_{0},C_{1}}^{(j)}
     $$
+
+### 생산자
 
 - 생산자가 생산비용을 극소화한 상태에서 두 재화의 한계변환율(marginal rate of transformation)은 두 재화의 생산비용(marginal cost)의 비율과 일치함:
 
@@ -210,7 +224,9 @@ image:
     =MRTS_{L,K}^{(Y)}
     $$
 
-- 따라서 자본시장에서 한계대체율(marginal rate of substitution)과 한계기술대체율(marginal rate of technical substitution)은 총수익률을 매개로 일치함:
+### 시장 균형
+
+- 따라서 자본시장에서 한계대체율(marginal rate of substitution)과 한계기술대체율(marginal rate of technical substitution)은 자본의 교환 가치를 매개로 일치함:
 
     $$
     MRS_{C_{0},C_{1}}
