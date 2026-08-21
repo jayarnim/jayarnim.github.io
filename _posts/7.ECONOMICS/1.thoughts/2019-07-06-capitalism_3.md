@@ -56,7 +56,7 @@ image:
 
 - **(참고) 존 스튜어트 밀(John Stuart Mill), 생산비가치설(cost-of-production theory of value)**:
     - 데이비드 리카도(David Ricardo)의 투하노동가치설(Labor Embodied Theory of Value)은 자본(capital)을 간접 노동으로서 과거로부터 축적되어 온 노동(accumulated labour)에 불과하다고 간주함
-    - 존 스튜어트 밀(John Stuart Mill)은 생산비가치설(cost-of-production theory of value)을 통해 투하노동량에 의한 가치 결정과 생산비가 일치하지 않는다는 점을 지적하고, 투하노동량이 동일하더라도 생산물에 따라 투하된 자본의 크기와 회수 기간이 다름을 밝힘
+    - 존 스튜어트 밀(John Stuart Mill)은 투하노동량에 의한 가치 결정과 생산비가 일치하지 않는다는 점을 지적하고, 투하노동량이 동일하더라도 생산물에 따라 투하된 자본의 크기와 회수 기간이 다를 수 있음을 규명함
 
 - **임금생계비설(Subsistence Theory of Wages)**: 임금(노동의 자연가격)은 생계비에 의해 결정된다는 가설
     - 토머스 맬서스(Thomas Malthus)의 인구론(Principle of Population)을 수용하여 임금이 생계비 이상으로 오르면 인구 증가에 따른 노동의 과잉 공급으로 인하여 최저 생계비 수준으로 조정된다고 봄
