@@ -67,6 +67,10 @@ image:
     - **상업자본주의(Merchant Capitalism)**: 부는 화폐(e.g. 금, 은)의 수량
     - **산업자본주의(Industrial Capitalism)**: 부는 생산물의 수량
 
+- **자본축적론(Theory of Capital Accumulation)**: 경제성장론(Theory of Economic Growth)으로서 저축과 투자를 통해 자본을 늘려 노동 생산성을 높이고 경제 성장을 이루어야 한다고 주장하였으며, 이후 토머스 맬서스(Thomas Malthus)에 의하여 유효 수요(Effective Demand) 개념이 보충됨
+
+    >분업 $to$ 생산력 향상 $to$ 생산물 증가 $to$ 자본 축적량 증가 $to$ (노동 수요 증가에 따른) 임금 상승 $to$ (임금이 생계비 이상으로 상승할 경우) 인구 증가 $to$ (노동 공급 증가에 따른) 임금 하락
+
 - **분업론(Division of Labor)**: 개인이 타인의 욕망을 충족시켜주기 위하여 노동력을 제공할 수 있음을 자기애에 기초하여 규명함으로써 분업이 가능함을 입증하고, 이 분업이 노동생산성을 향상시킨다는 것을 주장함
 
     >"우리가 도축업자와 양조업자와 제빵사에게 저녁 식사를 기대할 수 있는 이유는 그들이 우리에게 자비심을 베풀어서가 아니라, 우리가 그들에게 보상을 제공하기 때문이다. 분업의 동기는 나의 자기애를 호소하지 않고 상대방의 자기애에 호소함으로써 나에게 필요한 것을 취할 수 있는 데 있다. 오로지 거지만이 타인의 자비심에 의존하여 살아간다."
@@ -85,6 +89,7 @@ image:
         - 가치를 생산의 시각에서 정의하는 관점으로, 이후 데이비드 리카도(David Ricardo)를 거쳐 카를 마르크스(Karl Marx)의 노동가치설(Labor Theory of Value)과 존 스튜어트 밀(John Stuart Mill)의 생산비가치설(Cost-of-Production Theory of Value)로 계승됨
 
     - **가치구성설(Adding-Up Theory of Value)**: 자연 가격(Natural Price)은 상품 단위당 필요한 임금(노동자; 생계비), 이윤(자본가; 경영 및 자본 투자 보상), 지대(지주; 순수 잉여)의 자연율(평균 수준)으로 구성된다는 가설
+
         >"현대 경제에서는 노동이 더 이상 유일한 생산요소가 아니므로 제품 생산에 투입된 노동량(투하 노동, Labor Embodied)과 해당 제품으로 교환 가능한 노동량(총부가가치; 지배 노동, Labor Commanded)이 일치하지 않는다."
 
         - 가치를 교환의 시각에서 정의하는 관점으로, 이후 토머스 맬서스(Thomas Malthus)를 거쳐 한계혁명(Marginal Revolution)을 통해 한계 효용 가치 이론(Marginal Utility Theory of Value)으로 발전함
