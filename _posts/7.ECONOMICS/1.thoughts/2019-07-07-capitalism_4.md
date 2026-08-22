@@ -50,6 +50,9 @@ image:
 
 - **케인즈 혁명(Keynesian Revolution)**: 존 메이너드 케인스(John Maynard Keynes)에 의하여 정부의 적극적 개입이 정당화된 거시경제학의 패러다임 전환 사건으로서, 생산물시장의 유효 수요 이론(Theory of Effective Demand)과 화폐시장의 유동성 선호 이론(Liquidity Preference Theory)을 통해 보이지 않는 손(Invisible Hand)이 단기에는 작동하지 않을 수 있음을 규명함
 
+- **먼델-플레밍 모형(Mundell-Fleming Model)**: 폐쇄 경제의 균형을 논하였던 IS-LM 모형을 개방 경제로 확장한 모형으로 신고전파종합의 경기 변동 모형임
+    - **IS-LM 모형**: 생산물시장의 저축과 투자가 균형을 이루고(IS 곡선), 화폐시장의 화폐수요와 화폐공급이 균형을 이루는(LM 곡선) 동시에 두 시장이 균형을 이루는 지점(IS-LM)에서 국민소득(Y)과 이자율(r)이 결정됨을 규명한 모형
+
 - **존 힉스(John Hicks)**: 존 메이너드 케인스(John Maynard Keynes)의 일반이론을 수리 모형(IS-LM 모형)으로 체계화하여 정부 개입(재정 정책과 통화 정책) 효과를 설명하였음
 
 - **폴 새뮤얼슨(Paul Samuelson)**: 신고전학파(Neoclassical Economics)의 장기 균형 이론과 존 힉스(John Hicks) 등에 의해 체계화된 존 메이너드 케인스(John Maynard Keynes)의 단기 변동 이론을 종합하고 이를 수리 모형으로 체계화하였음
