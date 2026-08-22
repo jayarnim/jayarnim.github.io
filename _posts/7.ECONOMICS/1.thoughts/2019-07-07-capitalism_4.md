@@ -38,7 +38,7 @@ image:
 
 - **금융자본주의(Finance Capitalism)**: 산업이 점차 거대해지면서 기업들이 대규모 자금을 필요로 하게 되고, 이에 따라 은행 등 금융 자본(Financial Capital)이 산업 자본(Industrial Capital)을 지배하게 되었음
 
-- **한계 혁명(Marginal Revolution)**: 윌리엄 스탠리 제본스(William Stanley Jevons), 카를 멩거(Carl Menger), 레옹 왈라스(Léon Walras)에 의해 가치론의 패러다임이 전환된 사건으로서, 고전학파(Classical Economics)가 가치를 생산비라는 객관적 개념으로 정립했다면, 이후부터는 주관적 만족감이라는 주관적 개념으로 정착됨
+- **한계 혁명(Marginal Revolution)**: 윌리엄 스탠리 제본스(William Stanley Jevons), 카를 멩거(Carl Menger), 레옹 왈라스(Léon Walras)에 의해 가치론의 패러다임이 전환된 사건으로서, 고전학파(Classical Economics)가 가치를 생산비라는 객관적 개념으로 정립했다면, 이후부터는 만족감이라는 주관적 개념으로 정착됨
 
 - **앨프리드 마셜(Alfred Marshall)**: 한계 효용 가치 이론(Marginal Utility Theory of Value)에 기초하여 마셜의 가위(Marshall's Scissors)를 완성하였음
 
