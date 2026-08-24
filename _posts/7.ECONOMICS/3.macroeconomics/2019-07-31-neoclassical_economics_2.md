@@ -8,7 +8,7 @@ math: true
 description: >-
     Based on the lecture "Macroeconomics (2017-1)" by Prof. Hyun Hak Kim, Dept. of Economics, College of Economics & Commerce, Kookmin Univ.
 image:
-    path: /assets/img/posts/Economics/3.macroeconomics/Thumbnail.jpg
+    path: /assets/img/posts/7.ECONOMICS/3.macroeconomics/Thumbnail.jpg
 ---
 
 ## 화폐시장
