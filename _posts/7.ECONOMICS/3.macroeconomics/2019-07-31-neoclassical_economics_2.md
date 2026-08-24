@@ -3,7 +3,7 @@ order: 3
 title: Neoclassical Economics (2) Money Market
 date: 2019-07-31
 categories: [7.ECONOMICS, 3.macroeconomics]
-tags: [economics, macroeconomics, classical economics]
+tags: [economics, macroeconomics, neoclassical economics]
 math: true
 description: >-
     Based on the lecture "Macroeconomics (2017-1)" by Prof. Hyun Hak Kim, Dept. of Economics, College of Economics & Commerce, Kookmin Univ.
@@ -13,9 +13,9 @@ image:
 
 ## 화폐시장
 
-- **화폐(Money)**: 즉시 결제 가능한 자산의 저량으로서, 필요의 이중일치를 생략하기 위한 목적에서 등장하였으며, 가치의 척도로서, 교환의 매개 수단으로서, 그리고 가치의 저장 수단으로서 기능함
+- **화폐시장(Money Market)**: 화폐가 교환의 매개체로서 유통되는 시장으로서, 중앙은행(Central Bank)에 의하여 외생적으로 결정되는 통화량(Money Supply)과 실물 거래 규모에 비례하여 결정되는 민간부문의 화폐수요(Money Demend)가 일치하는 수준에서 **화폐의 가치(물가; Price)가 결정됨**
 
-- **화폐시장(Money Market)**: 화폐가 교환의 매개체로서 유통되는 시장으로서, 중앙은행(Central Bank)에 의하여 외생적으로 결정되는 통화량(Money Supply)과 실물 거래 규모에 비례하여 결정되는 민간부문의 화폐수요(Money Demend)가 일치하는 수준에서 화폐의 가치(물가; Price)가 결정되고 이에 따라 명목이자율(Nominal Interest Rate; $i$)이 조정됨
+    - **화폐(Money)**: 즉시 결제 가능한 자산의 저량으로서, 필요의 이중일치를 생략하기 위한 목적에서 등장하였으며, 신고전학파에서는 **화폐수요가 오로지 거래적 동기에 의해서만 발생한다고 가정함**
 
 ## 공급 부문
 

@@ -1,6 +1,6 @@
 ---
 order: 4
-title: Keynesian Economics (1) IS-LM Model
+title: Keynesian Economics (1) Keynesian Cross Model
 date: 2019-08-01
 categories: [7.ECONOMICS, 3.macroeconomics]
 tags: [economics, macroeconomics, keynesian economics]
