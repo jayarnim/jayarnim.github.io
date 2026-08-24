@@ -80,7 +80,7 @@ image:
         =\sum_{i=1}^{n-1}{P_{i}S_{i}}
         \end{gathered}$$
 
-## (참고) 신고전학파 시장 구분
+### (참고) 신고전학파 시장 구분
 
 - **생산요소시장(Factor Market)**: 노동(Labor)과 자본(Capital)의 균형 가격 하에서 투입량이 결정되고, 이에 따라 최종적으로 **생산량(Gross Domestic Product)**이 결정되는 시장
 
@@ -124,6 +124,22 @@ image:
     $$
 
 - **유동성 선호 이론(Liquidity Preference Theory)**: 단기적으로는 물가(Price)가 경직되어 있으며, 화폐시장(Money Market)에서 결정되는 것은 물가(Price)가 아니라 명목이자율(Nominal Interest Rate)임
+
+    $$
+    \frac{M_{S}}{P}
+    =L(Y,i)
+    $$
+
+### (참고) 케인지언 시장 구분
+
+- **생산물시장(Goods Market)**: 유효수요(Effective Demand)가 **총공급(Aggregate Supply; AS)의 적정 수준을 결정하는 시장**으로서, 가격의 하방 경직성으로 인하여 유효수요(Effective Demand)는 화폐시장에서 결정된 명목이자율(Nominal Interest Rate)의 영향을 받음
+
+    $$
+    AS
+    =AD
+    $$
+
+- **화폐시장(Money Market)**: 중앙은행의 통화량(Money Supply)과 민간 부문의 유동성 선호(Liquidity Preference)에 의하여 **명목이자율(Nominal Interest Rate)이 결정되는 시장**
 
     $$
     \frac{M_{S}}{P}
