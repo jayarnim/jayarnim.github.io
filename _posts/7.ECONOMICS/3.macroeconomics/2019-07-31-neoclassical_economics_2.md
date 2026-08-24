@@ -15,11 +15,11 @@ image:
 
 - **화폐(Money)**: 즉시 결제 가능한 자산의 저량으로서, 필요의 이중일치를 생략하기 위한 목적에서 등장하였으며, 가치의 척도로서, 교환의 매개 수단으로서, 그리고 가치의 저장 수단으로서 기능함
 
-- **화폐시장(Money Market)**: 화폐를 거래하는 시장으로서, 명목이자율(Nominal Interest Rate)을 화폐 단위당 시장 가격으로 하여 중앙은행(Central Bank)이 공급하고 민간부문(Private Sector)이 수요함
+- **화폐시장(Money Market)**: 화폐가 교환의 매개체로서 유통되는 시장으로서, 중앙은행(Central Bank)에 의하여 외생적으로 결정되는 통화량(Money Supply)과 실물 거래 규모에 비례하여 결정되는 민간부문의 화폐수요(Money Demend)가 일치하는 수준에서 화폐의 가치(물가; Price)가 결정되고 이에 따라 명목이자율(Nominal Interest Rate; $i$)이 조정됨
 
 ## 공급 부문
 
-- **통화량(Money Supply; $M_{S}$)**: 시중에 유통되고 있는 화폐량
+- **통화량(Money Supply; $M_{S}$)**: 시중에 유통되고 있는 화폐량으로서 중앙은행에 의하여 외생적으로 결정됨
 
     $$
     M_{S}
@@ -72,14 +72,14 @@ image:
 
 ## 수요 부문
 
-- **화폐수요(Money Demand, $M_{D}$)**: 교환적 동기에 의하여 민간부문에서 명목소득 중 화폐로 보유하고자 하는 수량
+- **화폐수요(Money Demand, $M_{D}$)**: 교환적 동기에 의하여 민간부문에서 명목소득($PY$) 중 화폐로 보유하고자 하는 수량으로서 실물 거래 규모($PY$)에 비례하여 결정됨
 
     $$\begin{aligned}
     M_{D}
     &=k\cdot PY,\quad 0<k<1
     \end{aligned}$$
 
-- **화폐 유통 속도(Velocity of Money; $V=1/k$)**: 화폐수요계수의 역수로서 화폐 단위당 평균 사용 횟수를 나타내며, 생산량(Output)을 통화량(Nominal Money Supply)으로 나눈 값
+- **화폐 유통 속도(Velocity of Money; $V=1/k$)**: 화폐수요계수(Marshallian k; $k$)의 역수로서 화폐 단위당 평균 사용 횟수를 나타내며, 생산량(Output)을 통화량(Nominal Money Supply)으로 나눈 값
 
     $$
     V
