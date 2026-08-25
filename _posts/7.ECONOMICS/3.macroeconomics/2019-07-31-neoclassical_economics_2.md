@@ -116,6 +116,7 @@ image:
     g(M\overline{V})
     &=g(M)+g(\overline{V})\\
     &=m+0\\
+    \\
     g(PY)
     &=g(P)+g(Y)\\
     &=\pi+g(Y)\\
