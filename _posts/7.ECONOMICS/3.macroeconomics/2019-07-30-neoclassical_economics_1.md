@@ -1,6 +1,6 @@
 ---
 order: 2
-title: Classical Economics (1) Real Market
+title: Neoclassical Economics (1) Real Market
 date: 2019-07-30
 categories: [7.ECONOMICS, 3.macroeconomics]
 tags: [economics, macroeconomics, neoclassical economics]
