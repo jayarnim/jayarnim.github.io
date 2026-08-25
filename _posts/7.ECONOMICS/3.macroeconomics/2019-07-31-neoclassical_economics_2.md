@@ -84,7 +84,7 @@ image:
     &=k\cdot PY,\quad 0<k<1
     \end{aligned}$$
 
-- **화폐 유통 속도(Velocity of Money; $V=1/k$)**: 화폐수요계수(Marshallian k; $k$)의 역수로서 화폐 단위당 평균 사용 횟수를 나타내며, 생산량(Output)을 통화량(Nominal Money Supply)으로 나눈 값
+- **화폐 유통 속도(Velocity of Money; $V=1/k$)**: 화폐수요계수(Marshallian k; $k$)의 역수로서 화폐 단위당 평균 사용 횟수를 나타내며, 생산량(Output)을 통화량(Nominal Money Supply)으로 나눈 값이며, 통상적으로는 관습에 의하여 일정하다고 가정함
 
     $$
     V
@@ -107,7 +107,7 @@ image:
     =PY
     $$ 
 
-- **화폐수량설(Quantity Theory of Money)**: 화폐 유통 속도($V$)는 관습에 의하여 일정하다고 가정하고, 총생산($Y$)은 외생 변수라 가정하였을 때, 통화량($M$)의 증가가 물가($P$)의 상승을 야기한다는 가설
+- **화폐수량설(Quantity Theory of Money)**: 총생산($Y$)이 외생적으로 주어졌을 때, 통화량($M$)의 증가가 물가($P$)의 상승을 야기한다는 가설로서, 신고전학파는 이 가설을 근거로 **중앙은행의 통화 정책(Monetary Policy)이 실질 변수(Real Variables)에 영향을 미치지 못하고 명목 변수(Nominal Variables)만 변화시킨다고** 보았음
 
     $$\begin{aligned}
     g(M\overline{V})
