@@ -18,7 +18,7 @@ image:
 - **국민소득 삼면 등가의 원칙(Three Aspects of National Income Identity)**: 국민소득을 생산, 분배 및 지출의 어느 측면에서 측정하더라도 그 가치가 동일하다는 원칙
 
     $$
-    D=Y=E
+    D\equiv Y\equiv E
     $$
 
 - **생산국민소득(Gross Domestic Product; GDP)**: 국내 경제주체들이 생산한 부가가치의 총합으로서 국내총생산
@@ -30,17 +30,17 @@ image:
 
 - **분배국민소득(Gross Domestic Income; GDI)**: 국내 경제주체들이 생산 과정에 참여한 댓가(요소소득)의 총합으로서 국내총소득
 
-    $$
+    $$\begin{aligned}
     D
-    =w\cdot L+v\cdot K+\pi
-    $$
+    =C+\underbrace{S+T}_{\substack{\text{국민소득 순환 과정 중}\\\text{유출되는 항목}}}
+    \end{aligned}$$
 
 - **지출국민소득(Gross Domestic Expenditure; GDE)**: 국내 경제주체들이 생산된 총부가가치에 지출한 총합으로서 국내총지출
 
-    $$
+    $$\begin{aligned}
     E
-    =C+I+G
-    $$
+    =C+\underbrace{I+G}_{\substack{\text{국민소득 순환 과정 중}\\\text{유입되는 항목}}}
+    \end{aligned}$$
 
 ## 신고전학파
 
@@ -100,7 +100,7 @@ image:
 
     $$\begin{gathered}
     Y
-    =C+I+G
+    \equiv C+I+G
     \end{gathered}$$
 
 - **화폐시장(Money Market)**: 중앙은행의 통화량(Money Supply)과 민간 부문의 거래적 동기(Transaction Motive)에 의하여 **물가(Price)**가 결정되는 시장

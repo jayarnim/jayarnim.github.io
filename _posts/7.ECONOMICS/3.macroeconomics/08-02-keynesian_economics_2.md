@@ -1,6 +1,6 @@
 ---
 order: 5
-title: Keynesian Economics (2) AD-AS Model
+title: Keynesian Economics (2) Money Market
 date: 2019-08-02
 categories: [7.ECONOMICS, 3.macroeconomics]
 tags: [economics, macroeconomics, keynesian economics]

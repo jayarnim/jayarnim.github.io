@@ -13,6 +13,14 @@ image:
 
 ## 가정
 
+- 생산요소(Factor)가 노동(Labor)과 자본(Capital)만 존재한다고 가정하였을 때, 분배 부문을 노동재의 요소소득, 자본재의 요소소득 및 이윤의 합계로 재구성할 수 있음:
+
+    $$\begin{aligned}
+    D
+    &=C+S+T\\
+    &=w\cdot L+v\cdot K+\pi
+    \end{aligned}$$
+
 - **오일러의 정리(Euler's theorem)**: 생산함수가 규모수익불변(Constant Returns to Scale; CRS)이면, 즉 규모에 따라 증가하거나 감소하는 비율이 달라지지 않고 일정하다면(1차 동차함수), 그 생산함수는 각 생산요소의 한계효과와 그 생산요소 투입량의 합계로써 표현될 수 있음
 
     $$\begin{aligned}
@@ -47,8 +55,8 @@ image:
 - **생산요소시장(Factor Market)**: 노동(Labor)과 자본(Capital)의 균형 가격 하에서 투입량이 결정되고, 이에 따라 최종적으로 **생산량(Gross Domestic Product)이 결정되는 시장**
 
     $$
-    Y
-    =D
+    C+S+T
+    =Y
     $$
 
 - **대부자금시장(Loanable Funds Market)**: 저축(Saving)과 투자(Invest)의 균형점에서 **실질이자율(Real Interest Rate)이 결정되는 시장**
@@ -62,7 +70,7 @@ image:
 
         $$\begin{aligned}
         \overline{S}
-        &=Y-(C+G_{0})
+        &=D-(C+G_{0})
         \end{aligned}$$
 
     - **투자(Invest; $I$)**: 대부자금시장의 수요 부문으로서, 실질이자율(Real Interest Rate)에 대하여 음의 상관관계를 가지는 함수로써 표현됨
@@ -75,7 +83,7 @@ image:
 - **생산물시장(Goods Market)**: 공급 부문에서 결정된 생산량이 **시장 청산(Market Clearing)되는 시장**으로서, 총수요(Aggregate Demand; AD)는 총공급(Aggregate Supply; AS)에 의하여 결정됨
 
     $$
-    \underbrace{D=f(L,K)}_{\text{요소시장에서 공급량 결정}}=Y=\underbrace{C+I+G=E}_{\text{생산물시장에서 공급량 청산}}
+    \underbrace{D=C+S+T}_{\text{요소시장에서 공급량 결정}}\equiv Y\equiv\underbrace{C+I+G=E}_{\text{생산물시장에서 공급량 청산}}
     $$
 
 ## 정부지출 확대 정책의 구축효과

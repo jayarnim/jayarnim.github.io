@@ -1,7 +1,7 @@
 ---
-order: 4
-title: Keynesian Economics (1) IS-LM Model
-date: 2019-08-01
+order: 6
+title: Keynesian Economics (3) AD-AS Model
+date: 2019-08-03
 categories: [7.ECONOMICS, 3.macroeconomics]
 tags: [economics, macroeconomics, keynesian economics]
 math: true
