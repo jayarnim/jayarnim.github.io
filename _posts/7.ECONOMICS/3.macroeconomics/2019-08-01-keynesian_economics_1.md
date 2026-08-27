@@ -116,7 +116,7 @@ image:
     Y^{\prime}
     &=\frac{C_{0}+I_{0}+G_{0}+\Delta G-MPC\cdot\overline{T}}{1-MPC}\\
     &=\frac{C_{0}+I_{0}+G_{0}-MPC\cdot\overline{T}}{1-MPC}+\frac{\Delta G}{1-MPC}\\
-    &=Y^{*}+\underbrace{\frac{1}{1-MPC}}_{\text{정부지출의 승수 효과}}\cdot\Delta G
+    &=Y^{*}+\underbrace{\frac{1}{1-MPC}}_{\text{정부지출의 승수효과}}\cdot\Delta G
     \end{aligned}
     \end{gathered}$$
 
@@ -130,7 +130,7 @@ image:
     Y^{\prime}
     &=\frac{C_{0}+I_{0}+G_{0}-MPC\left(\overline{T}-\Delta T\right)}{1-MPC}\\
     &=\frac{C_{0}+I_{0}+G_{0}-MPC\cdot\overline{T}}{1-MPC}+\frac{MPC\cdot\Delta T}{1-MPC}\\
-    &=Y^{*}+\underbrace{\frac{MPC}{1-MPC}}_{\text{조세의 승수 효과}}\cdot\Delta T
+    &=Y^{*}+\underbrace{\frac{MPC}{1-MPC}}_{\text{조세의 승수효과}}\cdot\Delta T
     \end{aligned}
     \end{gathered}$$
 
