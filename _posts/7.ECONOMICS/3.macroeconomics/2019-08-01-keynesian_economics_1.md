@@ -165,7 +165,7 @@ image:
 - 실질이자율에 대하여 정리:
 
     $$\begin{aligned}
-    r
-    &=-\frac{1-MPC}{b}Y+\frac{C_{0}+I_{0}+G_{0}-MPC\cdot\overline{T}}{b},
+    Y
+    &=-\frac{b}{1-MPC}r+\frac{C_{0}+I_{0}+G_{0}-MPC\cdot\overline{T}}{1-MPC},
     \quad\text{where}\quad S=I
     \end{aligned}$$

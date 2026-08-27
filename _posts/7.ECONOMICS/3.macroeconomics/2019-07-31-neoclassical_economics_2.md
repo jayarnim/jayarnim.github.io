@@ -83,10 +83,10 @@ image:
 
     $$\begin{aligned}
     M_{D}
-    &=k\cdot PY,\quad 0<k<1
+    &=\frac{1}{\overline{V}}\cdot PY,\quad 0<k<1
     \end{aligned}$$
 
-- **화폐 유통 속도(Velocity of Money; $V=1/k$)**: 화폐수요계수(Marshallian k; $k$)의 역수로서 화폐 단위당 평균 사용 횟수를 나타내며, 생산량(Output)을 통화량(Nominal Money Supply)으로 나눈 값이며, 통상적으로는 관습에 의하여 일정하다고 가정함
+- **화폐 유통 속도(Velocity of Money; $V$)**: 화폐수요계수(Marshallian k; $k$)의 역수로서 화폐 단위당 평균 사용 횟수를 나타내며, 생산량(Output)을 통화량(Nominal Money Supply)으로 나눈 값이며, 통상적으로는 관습에 의하여 일정하다고 가정함
 
     $$
     V
