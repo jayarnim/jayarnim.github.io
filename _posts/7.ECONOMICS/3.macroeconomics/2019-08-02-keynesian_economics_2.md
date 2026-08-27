@@ -74,7 +74,7 @@ image:
 - (참고) **통화 정책(Monetary Policy)**: 통화 공급량을 증가시키거나 감소시킴으로써 동일 국민소득 수준 하에서의 **명목이자율 수준을 조정하는 정책**으로, 명목이자율을 매개로 실질이자율을 조정하는 것을 최종 목표로 함
 
     $$
-    i=r+\pi^{e},\quad\pi^{e}=0\quad\text{where}\quad \mathrm{Short-Run}
+    i=r,\quad\because\pi^{e}=0\quad\text{where}\quad \mathrm{Short-Run}
     $$
 
     - **통화 긴축 정책(Monetary Tightening)**: 통화량을 줄여서($M\downarrow$) LM 곡선을 좌측으로 이동시킴으로써 동일 국민소득 수준 하에서 명목이자율 수준을 높이는 정책
