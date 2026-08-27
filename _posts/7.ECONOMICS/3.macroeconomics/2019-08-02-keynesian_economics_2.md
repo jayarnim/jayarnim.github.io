@@ -114,7 +114,7 @@ image:
     $$\begin{aligned}
     Y
     =\frac{MV}{P}
-    =\frac{1}{k}\cdot\frac{M}{\overline{P}}
+    =\frac{1}{k}\cdot\frac{M}{P}
     \end{aligned}$$
 
 - **유동성 함정(Liquidity Trap)**: 화폐의 명목이자율탄력성이 매우 높을 경우($h\to\infty$) LM 곡선이 수평이 되는 현상
