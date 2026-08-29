@@ -88,7 +88,7 @@ image:
 
 ## 정부지출 확대 정책의 구축효과
 
-- **구축효과(Crowding-Out Effect)**: 정부지출을 늘려서 총수요(Aggregate Demand; AD)를 조정하려는 **재정 정책(Fiscal Policy)은 대부자금시장을 위축시킬 뿐** 가치 규모를 확대할 수 없음
+- **구축효과(Crowding-Out Effect)**: **정부지출이 민간투자를 밀어내는 효과로서**, 정부지출을 늘려서 총수요(Aggregate Demand; AD)를 조정하려는 **재정 정책(Fiscal Policy)은 대부자금시장을 위축시킬 뿐** 가치 규모를 확대할 수 없음을 시사함
 
 - 정부지출을 늘렸다고 하자:
 
